@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 19/08/2026
+**Status:** ⬜ iniciada  
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
@@ -59,39 +59,42 @@ Uma hipótese explicitada é melhor do que uma suposição escondida.
 
 | Nome completo | Matrícula | GitHub |
 |---|---:|---|
-| {{...}} | {{...}} | {{...}} |
+| Lucas Tonoli Cabral Duarte | 24.123.032-5 | Cabral100 
+| Guilherme Morais Escudeiro | 24.123.005-1 | GMEscudeiro 
+| Pedro Henrique Ferreira Valim | 24.123.048-1 | PedroHValim 
+
 
 ## 0.2 Título atual do TCC
 
-{{...}}
+Detecção Automatizada do Ácaro da Leprose na Citricultura via Redes Neurais Convolucionais em Dispositivos Móveis  
 
 ## 0.3 Orientador(a)
 
-{{...}}
+Plinio Thomaz Aquino Junior 
 
 ## 0.4 Qual é o resultado principal atualmente previsto no TCC?
 
 Marque e descreva:
 
-- [ ] sistema/aplicação interativa;
-- [ ] algoritmo;
-- [ ] modelo de IA/ML/LLM;
-- [ ] biblioteca/API/framework;
-- [ ] análise de dataset;
-- [ ] estudo/benchmark/avaliação experimental;
-- [ ] infraestrutura/backend;
-- [ ] componente embarcado/IoT;
-- [ ] outro: {{...}}.
+- [ X ] sistema/aplicação interativa;
+- [ X ] algoritmo;
+- [ X ] modelo de IA/ML/LLM;
+- [ X ] biblioteca/API/framework;
+- [ X ] análise de dataset;
+- [ X ] estudo/benchmark/avaliação experimental;
+- [ X ] infraestrutura/backend;
+- [ X ] componente embarcado/IoT;
+- [ ? ] outro: {{...}}.
 
-**Descrição:** {{...}}
+**Descrição:** Utilizaremos visão computacional para a detecção do ácaro da leprose, a partir de um dataset desenvolvido pelo grupo com imagens do ácaro.
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
-- [ ] Sim, a interface já faz parte do TCC.
+- [ X ] Sim, a interface já faz parte do TCC.
 - [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
 - [ ] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** {{...}}
+**Explique o que está formalmente previsto no TCC:** Está previsto ter um sistema visual para que o usuário final possa marcar o ácaro a partir de um dispositivo mobile e poder utilizar o sistema de geolocalização ao marcar essa praga em campo.
 
 > Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
 
@@ -101,25 +104,23 @@ Marque e descreva:
 
 ## 1.1 Explique o TCC em uma frase, sem citar linguagem de programação, framework ou banco de dados.
 
-{{...}}
+Detecção de ácaros da leprose em laranjas
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-{{[F/H/?] ...}}
+F - Dificuldade de detecção do ácaro da leprose em citros
+F - Não existir um dataset com ácaros de citros.
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
-Complete, se ajudar:
-
-> “Nosso TCC produz, melhora, analisa ou permite `{{capacidade}}`.”
-
-Exemplos: otimizar consultas; classificar imagens; detectar anomalias; comparar modelos; identificar padrões; prever demanda; analisar desempenho; gerar resumos; recomendar configurações.
-
-{{...}}
+Nosso TCC permite detectar o ácaro da leprose através de visão computacional e prover um sistema de geolocalização para o usuário final
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-{{[F/H/?] ...}}
+F - Trabalhadores rurais comuns poderão detectar as pragas sem necessariamente um "Pragueiro" - especialista em detecção de pragas
+F - Menor esforço físico na detecção de pragas
+F - Auxílio no gerenciamento de infestações de pragas em campo com a geolocalização
+H - Disponibilização do Dataset do ácaro
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
