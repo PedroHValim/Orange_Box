@@ -55,7 +55,9 @@ Escreva **um parágrafo curto e concreto** explicando: quem é o usuário escolh
 Evite começar pela tecnologia.
 
 > **Estrutura sugerida:** “`{{tipo de usuário}}` precisa `{{objetivo}}` em `{{contexto}}`. Atualmente enfrenta `{{problema/limitação}}` e utiliza `{{processo/alternativa atual}}`. O tema do TCC investiga `{{contribuição técnica}}`. Para fins da disciplina de IHC, será explorada uma interface que permita `{{forma de uso da contribuição}}`.”
-
+--------------------------------------------------
+> O trabalhador rural precisa identificar o Ácaro-da-leprose em cenários de controles de pragas. Atualmente o usuário enfrenta uma limitação de conhecimento sobre o assunto incrementado com o cansaço visual da atividade de identificação em campo que utiliza uma lente macro 10x para a detecção manual do ácaro de forma espaçada no talhão. O tema do TCC investiga habilitar um mecanismo de identificação de Ácaro-da-leprose através de visão computacional. Para fins da disciplina de IHC, será explorada uma interface que permita ao usuário obter resultados da detecção de praga de forma intuitiva e também gerenciar pontos de infestações da mesma.
+--------------------------------------------------
 Se alguma afirmação ainda não estiver sustentada por evidência, registre-a como hipótese na [Entrega 1](docs/01_conhecendo_o_problema.md).
 
 ## Por que pensar em interface mesmo em TCCs técnicos?
