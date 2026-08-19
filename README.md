@@ -17,31 +17,33 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 ## Identificação
 
-**Título do projeto de IHC:** {{TÍTULO DO PROJETO}}  
-**TCC/projeto de origem:** {{TÍTULO ORIGINAL DO TCC}}  
-**Orientador(a):** {{NOME}}  
+**Título do projeto de IHC:** Orange_Box  
+**TCC/projeto de origem:** Detecção Automatizada do Ácaro da Leprose na Citricultura via Redes Neurais Convolucionais em Dispositivos Móveis  
+**Orientador(a):** Plinio Thomaz Aquino Junior 
 **Disciplina:** Interação Humano-Computador  
-**Instituição:** {{INSTITUIÇÃO}}  
-**Semestre:** {{ANO/SEMESTRE}}
+**Instituição:** Fundação Educacional Inaciana Padra de Saboia de Medeiros (FEI) 
+**Semestre:** 2026/8º semestre
 
 ### Equipe
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| {{Nome 1}} | {{matrícula}} | {{@usuario}} | {{...}} |
-| {{Nome 2}} | {{matrícula}} | {{@usuario}} | {{...}} |
+| Lucas Tonoli Cabral Duarte | 24.123.032-5 | uniflduarte@fei.edu.br
+| Guilherme Morais Escudeiro | 24.123.005-1 | unifgescudeiro@fei.edu.br 
+| Pedro Henrique Ferreira Valim | 24.123.048-1 | unifpvalim@fei.edu.br
+
 
 ## Relação entre TCC e projeto de IHC
 
 | Item | Descrição |
 |---|---|
-| Tema central do TCC | {{...}} |
-| Resultado técnico esperado do TCC | {{algoritmo, estudo, sistema, modelo, análise, API...}} |
-| O TCC já previa interface? | sim / não / parcialmente |
-| Capacidade técnica que pode gerar valor para pessoas | {{...}} |
-| Usuário principal adotado em IHC | {{...}} |
-| Objetivo principal desse usuário | {{...}} |
-| Interface/recorte explorado na disciplina | {{...}} |
+| Tema central do TCC |Detecção Automatizada do Ácaro da Leprose na Citricultura via Redes Neurais Convolucionais em Dispositivos Móveis|
+| Resultado técnico esperado do TCC | Um sistema capaz de identificar o ácaro da leprose na citricultura a partir de um dataset próprio |
+| O TCC já previa interface? | sim |
+| Capacidade técnica que pode gerar valor para pessoas | Nosso TCC permite detectar o ácaro da leprose através visão computacional |
+| Usuário principal adotado em IHC | Trabalhador rural, Proprietários de fazenda e Técnicos Agrícolas|
+| Objetivo principal desse usuário | Obter resultado da detcção e Gerenciar pontos de infestação da praga |
+| Interface/recorte explorado na disciplina | Para fins da disciplina de IHC, será projetada uma interface que permite os integrantes de uma fazenda utilizar o sistema de identificação de praga para obter resultado da detcção e gerenciar pontos de infestação da praga, no contexto de controle de pragos.|
 | Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
