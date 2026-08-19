@@ -28,9 +28,9 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
-| Lucas Tonoli Cabral Duarte | 24.123.032-5 | uniflduarte@fei.edu.br
-| Guilherme Morais Escudeiro | 24.123.005-1 | unifgescudeiro@fei.edu.br 
-| Pedro Henrique Ferreira Valim | 24.123.048-1 | unifpvalim@fei.edu.br
+| Lucas Tonoli Cabral Duarte | 24.123.032-5 | Cabral100 | Responsabilidade principal |
+| Guilherme Morais Escudeiro | 24.123.005-1 | GMEscudeiro | Responsabilidade principal |
+| Pedro Henrique Ferreira Valim | 24.123.048-1 | PedroHValim | Responsabilidade principal |
 
 
 ## Relação entre TCC e projeto de IHC
@@ -44,7 +44,7 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 | Usuário principal adotado em IHC | Trabalhador rural, Proprietários de fazenda e Técnicos Agrícolas|
 | Objetivo principal desse usuário | Obter resultado da detcção e Gerenciar pontos de infestação da praga |
 | Interface/recorte explorado na disciplina | Para fins da disciplina de IHC, será projetada uma interface que permite os integrantes de uma fazenda utilizar o sistema de identificação de praga para obter resultado da detcção e gerenciar pontos de infestação da praga, no contexto de controle de pragos.|
-| Relação com o escopo formal do TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra |
+| Relação com o escopo formal do TCC | parte prevista / protótipo demonstrativo |
 
 > **Importante:** a tabela acima explica a relação entre os dois trabalhos. Ela não altera o compromisso formal do TCC.
 
