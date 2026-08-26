@@ -129,8 +129,7 @@ Nosso TCC permite detectar o ácaro da leprose através de visão computacional 
 | Protocolo padronizado de captura óptica para alvos sub-milimétricos | Guia prático para o produtor escolher a combinação smartphone + lente macro adequada em campo |
 | Comparação sistemática entre YOLO26n, YOLO26s e YOLOv8n | Orientar a escolha de arquiteturas leves em outras aplicações de Edge AI agrícola sem GPU dedicada |
 | Exportação do modelo para TensorFlow Lite embarcado em smartphone (52 ms/imagem, offline) | Aplicativo de inspeção assistida por IA funcionando sem internet em áreas rurais |
-| Módulo de geolocalização via metadados EXIF (RMSE de 4,64 m) | Aplicação de defensivos em taxa variável, reduzindo custo e impacto ambiental |
-| Sistema de mapeamento de focos e zonas de risco adjacentes | Suporte à tomada de decisão para tratamento localizado em vez de pulverização uniforme do talhão |
+| Sistema de mapeamento de focos e zonas de risco adjacentes através da geolocalização via metadados EXIF | Suporte à tomada de decisão para tratamento localizado em vez de pulverização uniforme do talhão, reduzindo custo e impacto ambiental |
 
 ---
 
@@ -164,7 +163,7 @@ Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIG
 - **[F]** As pessoas da fazenda já usam celular no dia a dia, mas não necessariamente têm prática com aplicativos técnicos.
 - **[F]** O trabalho de campo é feito ao ar livre, muitas vezes com pouco ou nenhum sinal de internet.
 - **[F]** Existe urgência: quanto mais tempo demora para perceber o problema, maior o prejuízo.
-- **[H14]** É provável que nem todos tenham o mesmo nível de leitura/familiaridade com tecnologia, então a interface precisa ser simples e visual.
+- **[H02]** É provável que nem todos tenham o mesmo nível de leitura/familiaridade com tecnologia, então a interface precisa ser simples e visual.
 - **[?]** Ainda não sabemos o nível real de conhecimento digital dessas pessoas nem se há alguma necessidade especial de acessibilidade.
 
 ---
@@ -180,8 +179,8 @@ Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIG
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
 | A01 | Verificar os frutos em busca de sinais da praga | Pessoas que trabalham na fazenda | Alta — precisa ser repetida com frequência | **[F]** O trabalho descreve a inspeção como atividade recorrente |
-| A02 | Decidir onde e quando aplicar o produto de controle | Dono/gestor da fazenda | Média — depende do resultado da inspeção | **[H15]** Ainda não confirmado quem exatamente toma essa decisão no dia a dia |
-| A03 | Acompanhar se o problema está se espalhando pela propriedade | Dono/gestor da fazenda | Contínua, ao longo do tempo | **[H16]** Ainda não confirmado como esse acompanhamento é feito hoje |
+| A02 | Decidir onde e quando aplicar o produto de controle | Dono/gestor da fazenda | Média — depende do resultado da inspeção | **[H06]** Ainda não confirmado quem exatamente toma essa decisão no dia a dia |
+| A03 | Acompanhar se o problema está se espalhando pela propriedade | Dono/gestor da fazenda | Contínua, ao longo do tempo | **[H08]** Ainda não confirmado como esse acompanhamento é feito hoje |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
@@ -189,7 +188,7 @@ Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIG
 
 ## 3.4 Qual parece mais crítica? Que consequência existe se for mal executada?
 
-**[H17]** Decidir onde aplicar o produto de controle (A02) parece a mais crítica: se for mal feita, o produtor gasta dinheiro à toa em áreas sem problema ou deixa a praga se espalhar em áreas que precisavam de atenção.
+**[H06]** Decidir onde aplicar o produto de controle (A02) parece a mais crítica: se for mal feita, o produtor gasta dinheiro à toa em áreas sem problema ou deixa a praga se espalhar em áreas que precisavam de atenção.
 
 ---
 
@@ -240,7 +239,7 @@ Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIG
 
 ## 5.4 Existem fatores sociais ou organizacionais?
 
-**[H20]** Provavelmente existe diferença entre quem faz a inspeção no campo e quem decide o que fazer com o resultado (ex.: trabalhador informa, dono/gestor decide), mas isso ainda não foi confirmado.
+**[F]** Não necessariamente quem faz a inspeção no campo é quem decide o que fazer com o resultado (ex.: trabalhador informa, dono/gestor decide), confirmado pelo estudo em campo.
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
 
@@ -323,7 +322,6 @@ Conseguir saber, de forma rápida e simples, se há sinal da praga no fruto e on
 | Comparação de resultados | não | Não identificado como necessidade nesta etapa | — |
 | Explicabilidade/detalhamento | talvez | Entender por que o app marcou aquele ponto | **[H27]** |
 | Administração/configurações globais | não | Fora do foco do usuário de campo | — |
-| Usuários/perfis/permissões | talvez | Diferenciar quem inspeciona de quem decide | **[H20]** |
 | CRUD de entidade do domínio | não | Não identificado como necessidade nesta etapa | — |
 | Auditoria/logs | talvez | Registrar onde e quando cada inspeção ocorreu | **[H21]** |
 | Alertas/ocorrências | sim | Avisar sobre pontos de risco na propriedade | **[F]** |
@@ -363,7 +361,6 @@ Conseguir saber, de forma rápida e simples, se há sinal da praga no fruto e on
 |---|---|---|---|
 | H14 | As pessoas da fazenda têm pouca familiaridade com aplicativos técnicos | Define o quanto a interface precisa ser simples | Entrega 3/7 |
 | H16 | O dono/gestor é quem acompanha a evolução do problema na propriedade | Define quem realmente usaria o mapa de risco | Entrega 3/7 |
-| H20 | Existe diferença entre quem inspeciona e quem decide | Pode exigir perfis diferentes dentro do app | Entrega 3 |
 | H21 | Existe necessidade de guardar histórico das inspeções | Pode justificar uma tela de histórico | Entrega 5/7 |
 
 Registrar em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
@@ -383,7 +380,7 @@ Registrar em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 | Qual é o contexto de uso? | Campo aberto, sol, pouca internet, pouco tempo por planta |
 | Que interface/recorte será explorado? | Captura da foto, resultado da detecção e mapa de pontos de risco |
 | Como a interface se relaciona ao TCC? | Já fazia parte do TCC |
-| Quais pontos ainda são hipóteses? | H14, H16, H20, H21 |
+| Quais pontos ainda são hipóteses? | H14, H16, H21 |
 
 ### Delimitação
 
