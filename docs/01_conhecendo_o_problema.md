@@ -1,7 +1,7 @@
 # Entrega 1 — Conhecendo o projeto, o usuário e o problema
 
 **Data:** 19/08/2026
-**Status:** ⬜ iniciada  
+**Status:** 🟨 em andamento 
 **Responsabilidade:** 1 solução consolidada por equipe
 
 ## Objetivo da atividade
