@@ -90,6 +90,58 @@ Baixas opções de navegações entre as interfaces; Grande quantidade de dados 
 | Uma interface completa e em certa forma não poluída visualmente | Isso pode ser observado através das funcionalidade que nos trazem muitas informações relevantes para o negócio e também através dos relatos que podem ser visualizados acima, alguns usuários trazem um excesso de informação na tela assim como outros dizem ser 'clean' e de fácil compreensão. | Isso implica diretamente no nosso projeto pensando na _feature_ de **geolocalização** para interpretação do comportamento das pragas, infestações e pontos estratégicos para aplicação de produtos agrícolas.  |
 | Facilidade de navegação pela plataforma e aplicações conjuntas | Aqui conseguimos perceber isso observando as imagens atreladas no documento, todas as interfaces tem poucos botões e os relatórios são gerados no mesmo menu do monitoramento. Também foi um ponto relatado pelos usuários. | Novamente aqui é muito bom para entendermos como gerar os relatórios das pragas para que os gestores consigam analisar e gerar insights para agir sobre. |
 
+### Análise C02 — Plantix
+
+**Autor(a):** Guilherme Morais Escudeiro — 24.123.005-1
+**Tipo:** direto 
+**Link oficial:** https://plantix.net/pt/  
+**Data de acesso:** 02/09/2026
+
+#### Contexto e proposta
+
+Aplicativo mobile que ajuda agricultores e jardineiros a diagnosticar doenças, pragas e deficiências nutricionais em plantas através de fotos tiradas pelo celular
+
+#### Funcionalidades relevantes
+
+| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+|---|---|---|---|
+| Diagnóstico por foto | O usuário tira uma foto da planta doente e recebe o identificação do problema em segundos  | `../assets/02_concorrencia/plantix_diagnostico.webp` | Para tirar a foto, o app utiliza interface similar a interface padrão dos OSes dos celulares populares (aumenta a facilidade do uso), incluindo uma funcionalidade que fornece feedback em tempo real se o enquadramento está bom antes de tirar a foto. |
+| Tratamentos recomendados | O aplicativo recomenda tratamentos convencionais e métodos de controle preventivo da doença identificada | `../assets/02_concorrencia/...` | O app permite ouvir o texto das recomendações dadas, algo que apoia o usuário com dificuldade de leitura. |
+| Alerta de doenças próximas | Utilizando sua localização, o aplicativo fornece alertas de doenças próximas identificadas em sua região. | `../assets/02_concorrencia/...` | {{...}} |
+
+#### Experiência do usuário e opiniões
+
+O aplicativo possui uma nota média de 4,6 estrelas na Play Store, analisando as avaliações do app, encontram-se as seguintes opiniões:
+
+Elogios:
+- Eficácia no aprendizado agrícola: Profissionais da área relatam que o app ajuda no dia a dia do campo e funciona como uma excelente ferramenta de aprendizado prático.
+- Precisão do diagnóstico por imagem: Os usuários destacam a rapidez e a assertividade da inteligência artificial ao detectar mais de 400 a 780 tipos de danos e pragas em segundos através de uma simples foto.
+- Utilidade dos recursos extras: A calculadora de fertilizantes, os alertas locais de doenças e a previsão do tempo integrada recebem avaliações muito positivas por auxiliarem no gerenciamento completo da lavoura.
+- Rede social interna: A seção de comunidade é elogiada por permitir a troca de ideias e experiências diretamente com outros agricultores e especialistas do setor.
+
+Críticas:
+- Limitações na interação social: Há reclamações de que a aba da comunidade carece de recursos básicos de redes sociais, como a impossibilidade de buscar perfis de membros específicos, ver quem seguiu você ou interagir por mensagens diretas privadas.
+- Restrição de culturas: Usuários focados em jardinagem doméstica apontam que o catálogo de diagnóstico é estrito a 30 grandes culturas comerciais (como milho, soja e tomate), deixando a desejar para plantas ornamentais comuns.
+- Preocupações com privacidade de dados: A seção de segurança de dados gera ressalvas de alguns usuários na Play Store, já que o aplicativo exige o compartilhamento de informações como localização aproximada, atividade do app e IDs do dispositivo com terceiros.
+
+
+#### Preço/modelo de negócio
+
+O aplicativo é gratuito, porém, quando o app diagnostica uma praga, ele recomenda produtos (defensivos químicos ou biológicos) e conecta o produtor a lojas e fornecedores locais. A empresa recebe comissões pelas vendas geradas por meio dessa integração.
+Além disso, utilizando o mesmo ecossistema do aplicativo, a empresa oferece soluções B2B focadas no mercado agrícola, como licenciamento do software para ser integrado em outras soluções, e o uso dos dados gerados pelo aplicativo para que as empresas entendam o comportamento agrícola regional.
+
+#### Padrões e tendências percebidos
+
+{{...}}
+
+#### Pontos positivos, limitações e lições
+
+| Ponto | Evidência | Implicação para nosso projeto |
+|---|---|---|
+| Acessibilidade para usuários com dificuldade de leitura | {{...}} | Adicionar opção de audio para explicação da doença pode ajudar nosso projeto à atingir uma maior gama de usuários. |
+| Acessibilidade para usuários com dificuldade de leitura | {{...}} | Adicionar opção de audio para explicação da doença pode ajudar nosso projeto à atingir uma maior gama de usuários. |
+| Acessibilidade para usuários com dificuldade de leitura | {{...}} | Adicionar opção de audio para explicação da doença pode ajudar nosso projeto à atingir uma maior gama de usuários. |
+
 ## 3. Softwares que o público-alvo usa no cotidiano
 
 Analise interfaces que moldam a expectativa do público, mesmo que não sejam concorrentes.
