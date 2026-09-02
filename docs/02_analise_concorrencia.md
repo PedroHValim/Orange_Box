@@ -142,6 +142,49 @@ Além disso, utilizando o mesmo ecossistema do aplicativo, a empresa oferece sol
 | Acessibilidade para usuários com dificuldade de leitura | {{...}} | Adicionar opção de audio para explicação da doença pode ajudar nosso projeto à atingir uma maior gama de usuários. |
 | Acessibilidade para usuários com dificuldade de leitura | {{...}} | Adicionar opção de audio para explicação da doença pode ajudar nosso projeto à atingir uma maior gama de usuários. |
 
+### Análise C03 — OneSoil Platform 
+
+**Autor(a):** Lucas Tonoli Cabral Duarte R.A: 24.123.032-5  
+**Tipo:** análogo  
+**Link oficial:** https://onesoil.ai/pt/solutions/farmers  
+**Data de acesso:** 02/09/2026
+
+#### Contexto e proposta
+
+ É uma plataforma global de agricultura de precisão que utiliza imagens de satélite e inteligência artificial para simplificar o gerenciamento de lavouras.
+
+#### Funcionalidades relevantes
+
+| Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
+|---|---|---|---|
+| Mapeamento | Dividir o talhão em regiões de alto, médio e baixo potencial de rendimento para planejar onde investir mais insumos |`../assets/Mapeamento_OneSoil.jfif`|A interface do mapa deve garantir alta densidade de informação visual e baixo esforço cognitivo: os talhões precisam ter delimitações gráficas distintas e carregamento de imagem de satélite em alta resolução, permitindo ao usuário navegar via geolocalização sem ambiguidades. |
+| Criação de mapas de precisão | Cria arquivos de configuração para que os tratores e pulverizadores apliquem quantidades diferentes de fertilizantes ou sementes em cada ponto do campo de acordo com a necessidade | `../assets/Mapa_OneSoil.jfif`| A criação desses mapas de precisão deve garantir alta qualidade de informação visual de modo a ser específico ao mostrar as informações necessárias para cada um dos mapas|
+|Inspeção de Campo Otimizada| Direciona a equipe de campo exatamente para os pontos críticos da lavoura, economizando tempo de inspeção. |`../assets/Interface_OneSoil.png`| A interface de inspeção é otimizada para dispositivos móveis com alto contraste para visualização sob luz solar direta. O aplicativo permite o registro rápido de pragas e fotos com poucos cliques, oferecendo navegação por GPS em tempo real e funcionamento 100% offline |
+
+
+#### Experiência do usuário e opiniões
+
+- "Experimentei várias aplicações para mapas VRA, e a OneSoil destaca-se. A qualidade dos mapas VRA para a aplicação de azoto é a melhor entre as outras aplicações que experimentei. Tornou-se uma ferramenta indispensável."
+- "A OneSoil é uma plataforma que permite aos produtores tomar decisões informadas sem esforço, com uma utilização simples e interativa. O seu design intuitivo e as informações de dados abrangentes transformaram o nosso processo de tomada de decisões."
+- "A poupança é substancial. A OneSoil ajudou-nos a poupar 11 USD por hectare com a aplicação de taxa variável. Esta solução económica não só impulsionou os nossos resultados, como também promoveu práticas agrícolas sustentáveis."
+  
+#### Preço/modelo de negócio
+
+Uso para agricultores: As ferramentas básicas de monitoramento de lavouras via satélite, índices de vegetação (NDVI) e histórico de campos são gratuitas no aplicativo e na web.
+Para empresas e parceiros: Soluções corporativas, de revenda de insumos ou pacotes voltados para prestadores de serviços agrícolas possuem preços sob consulta, disponíveis mediante solicitação direta no site oficial.
+
+#### Padrões e tendências percebidos
+
+- Há um padrão de mapeamento de talhões com informações relevantes onde, para que ele funcione, seguem um padrão automatizado baseado em inteligência artificial e imagens de satélite.
+- Há um padrão de interface de inspeção onde, para que ele funcione, seguem um padrão de interface limpa, com pouca poluição visual e poucos caminhos até chegar à funcionalidade requisitada e utilizam inteligência artificial para funcionalidade de inspeção
+
+#### Pontos positivos, limitações e lições
+
+| Ponto | Evidência | Implicação para nosso projeto |
+|---|---|---|
+| Facilidade de visualizar mapas | A evidência disso são os relatos positivos apresentados no site e a funcionalidade apresentada nas fotos | Isso implica diretamente no nosso sistema de monitoramento e mapeamento a partir de inteligência artificial e imagens de satélite |
+| Facilidade ao usar o app |A evidência dessa facilidade está nos relatos dos clientes que já utilizaram o app e nas fotos que há na internet sobre | Isso implica diretamente no nosso app, onde utiliza uma interface característica para trabalhadores rurais utilizando inteligência artificial |
+
 ## 3. Softwares que o público-alvo usa no cotidiano
 
 Analise interfaces que moldam a expectativa do público, mesmo que não sejam concorrentes.
