@@ -105,9 +105,9 @@ Aplicativo mobile que ajuda agricultores e jardineiros a diagnosticar doenças, 
 
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Diagnóstico por foto | O usuário tira uma foto da planta doente e recebe o identificação do problema em segundos  | `../assets/02_concorrencia/plantix_diagnostico.webp` | Para tirar a foto, o app utiliza interface similar a interface padrão dos OSes dos celulares populares (aumenta a facilidade do uso), incluindo uma funcionalidade que fornece feedback em tempo real se o enquadramento está bom antes de tirar a foto. |
-| Tratamentos recomendados | O aplicativo recomenda tratamentos convencionais e métodos de controle preventivo da doença identificada | `../assets/02_concorrencia/...` | O app permite ouvir o texto das recomendações dadas, algo que apoia o usuário com dificuldade de leitura. |
-| Alerta de doenças próximas | Utilizando sua localização, o aplicativo fornece alertas de doenças próximas identificadas em sua região. | `../assets/02_concorrencia/...` | {{...}} |
+| Diagnóstico por foto | O usuário tira uma foto da planta doente e recebe o identificação do problema em segundos  | ![Diagnóstico Plantix](../assets/02_concorrencia/plantix_diagnostico.webp) | Para tirar a foto, o app utiliza interface similar a interface padrão dos OSes dos celulares populares (aumenta a facilidade do uso), incluindo uma funcionalidade que fornece feedback em tempo real se o enquadramento está bom antes de tirar a foto. |
+| Tratamentos recomendados | O aplicativo recomenda tratamentos convencionais e métodos de controle preventivo da doença identificada | ![Culturas suportadas Plantix](../assets/02_concorrencia/plantix_quantidade_culturas.png) | O app permite ouvir o texto das recomendações dadas, algo que apoia o usuário com dificuldade de leitura. |
+| Alerta de doenças próximas | Utilizando sua localização, o aplicativo fornece alertas de doenças próximas identificadas em sua região. | ![Alertas de doenças Plantix](../assets/02_concorrencia/plantix_alertas_doencas.webp) | O alerta é regional (por área), não pontual — diferente da geolocalização por GPS individual de árvore/talhão que estamos propondo, o que é um diferencial relevante do nosso projeto. |
 
 #### Experiência do usuário e opiniões
 
@@ -154,12 +154,11 @@ Além disso, utilizando o mesmo ecossistema do aplicativo, a empresa oferece sol
  É uma plataforma global de agricultura de precisão que utiliza imagens de satélite e inteligência artificial para simplificar o gerenciamento de lavouras.
 
 #### Funcionalidades relevantes
-
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Mapeamento | Dividir o talhão em regiões de alto, médio e baixo potencial de rendimento para planejar onde investir mais insumos |`../assets/Mapeamento_OneSoil.jfif`|A interface do mapa deve garantir alta densidade de informação visual e baixo esforço cognitivo: os talhões precisam ter delimitações gráficas distintas e carregamento de imagem de satélite em alta resolução, permitindo ao usuário navegar via geolocalização sem ambiguidades. |
-| Criação de mapas de precisão | Cria arquivos de configuração para que os tratores e pulverizadores apliquem quantidades diferentes de fertilizantes ou sementes em cada ponto do campo de acordo com a necessidade | `../assets/Mapa_OneSoil.jfif`| A criação desses mapas de precisão deve garantir alta qualidade de informação visual de modo a ser específico ao mostrar as informações necessárias para cada um dos mapas|
-|Inspeção de Campo Otimizada| Direciona a equipe de campo exatamente para os pontos críticos da lavoura, economizando tempo de inspeção. |`../assets/Interface_OneSoil.png`| A interface de inspeção é otimizada para dispositivos móveis com alto contraste para visualização sob luz solar direta. O aplicativo permite o registro rápido de pragas e fotos com poucos cliques, oferecendo navegação por GPS em tempo real e funcionamento 100% offline |
+| Mapeamento | Dividir o talhão em regiões de alto, médio e baixo potencial de rendimento para planejar onde investir mais insumos | ![Mapeamento OneSoil](../assets/02_concorrencia/Mapa_OneSoil.jfif) | A interface do mapa deve garantir alta densidade de informação visual e baixo esforço cognitivo: os talhões precisam ter delimitações gráficas distintas e carregamento de imagem de satélite em alta resolução, permitindo ao usuário navegar via geolocalização sem ambiguidades. |
+| Criação de mapas de precisão | Cria arquivos de configuração para que os tratores e pulverizadores apliquem quantidades diferentes de fertilizantes ou sementes em cada ponto do campo de acordo com a necessidade | ![Mapa OneSoil](../assets/02_concorrencia/Mapeamento_OneSoil.jfif) | A criação desses mapas de precisão deve garantir alta qualidade de informação visual de modo a ser específico ao mostrar as informações necessárias para cada um dos mapas |
+| Inspeção de Campo Otimizada | Direciona a equipe de campo exatamente para os pontos críticos da lavoura, economizando tempo de inspeção. | ![Interface OneSoil](../assets/02_concorrencia/Interface_OneSoil.png) | A interface de inspeção é otimizada para dispositivos móveis com alto contraste para visualização sob luz solar direta. O aplicativo permite o registro rápido de pragas e fotos com poucos cliques, oferecendo navegação por GPS em tempo real e funcionamento 100% offline |
 
 
 #### Experiência do usuário e opiniões
@@ -199,36 +198,42 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 
 | Padrão observado | Produto(s) | Para qual tarefa serve | Vantagem percebida | Risco/limitação | Aplicável ao nosso escopo? |
 |---|---|---|---|---|---|
-| dashboard | {{...}} | {{...}} | {{...}} | {{...}} | sim/não/talvez |
-| relatório | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| histórico + filtros | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| administração/CRUD | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| comparação de resultados | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| Mapa com zonas de risco/potencial coloridas | C01 (FieldView), C03 (OneSoil) | Orientar visualmente onde agir no talhão | Alta densidade de informação com baixo esforço cognitivo | Pode poluir a tela se houver muitos dados sobrepostos (relatado por usuários do C01) | Sim, é exatamente o que o módulo de mapeamento do talhão do projeto faz |
+| Relatório automático comparativo | C01 (FieldView) | Cruzar dados e gerar insight de negócio (ex: rendimento por variedade) | Visão rápida sem sair da tela do mapa | Pode ficar denso com muitos dados acumulados | Talvez, poderia comparar zonas de infestação/tratamento ao longo do tempo |
+| Histórico + filtro por talhão | C01 (FieldView) | Focar a visualização em uma área específica | Facilita visão múltipla sem poluição | Usuários relatam que o menu de filtros fica longo e poluído | Sim, com cuidado — aplicar filtro simples por talhão/data, evitando o erro relatado no C01 |
+| Feedback de enquadramento em tempo real na captura de foto | C02 (Plantix) | Garantir que a foto tirada tenha qualidade suficiente para o diagnóstico por IA | Reduz fotos inutilizáveis, aumenta taxa de acerto do modelo | Depende de boa iluminação | Sim — essencial, já que o ácaro é sub-milimétrico e exige distância focal e foco precisos (AE/AF Lock) |
+| Administração/CRUD | Não observado claramente em C01/C02/C03 | — | — | — | Não parece um padrão relevante para o público final (trabalhador de campo) |
 
 > O objetivo não é concluir “todo concorrente tem dashboard, então teremos um”. O padrão só será adotado se apoiar uma tarefa rastreável.
 
 ## 4. Síntese comparativa da equipe
 
-| Critério | C01 | C02 | C03 | Oportunidade para o projeto |
+| Critério | C01 (FieldView) | C02 (Plantix) | C03 (OneSoil) | Oportunidade para o projeto |
 |---|---|---|---|---|
-| Navegação |  |  |  |  |
-| Feedback/estado |  |  |  |  |
-| Prevenção/recuperação de erro |  |  |  |  |
-| Terminologia |  |  |  |  |
-| Acessibilidade |  |  |  |  |
-| Eficiência |  |  |  |  |
+| Navegação | Poucos botões, mapas lado a lado, poucos direcionamentos de tela | Fluxo curto: abrir câmera → foto → resultado | Navegação simples entre mapeamento e inspeção | Manter fluxo de poucos toques entre "abrir app → foto → resultado geolocalizado" |
+| Feedback/estado | Mapas de biomassa atualizados detectam anomalias visualmente | Feedback em tempo real do enquadramento antes de capturar | Cores indicam potencial de rendimento por região do talhão | Dar feedback imediato sobre qualidade/distância do enquadramento, crítico para captura de alvo sub-milimétrico |
+| Prevenção/recuperação de erro | Travamento de foco/exposição; funcionamento offline evita perda de dados | Guia visual evita fotos mal enquadradas | Não relatado claramente | Aplicar AE/AF Lock e orientar a distância mínima de foco, conforme protocolo de captura do TCC |
+| Terminologia | Termos técnicos agronômicos (híbrido, taxa variável) | Linguagem simples voltada ao leigo | Mistura termos técnicos com simples | Priorizar linguagem simples, como o Plantix, dado o público de trabalhadores de campo |
+| Acessibilidade | Alto contraste para uso sob luz solar direta | Leitura em áudio das recomendações | Alto contraste também citado | Combinar alto contraste + leitura em áudio |
+| Eficiência | Poucos cliques, menu inicial enxuto | Diagnóstico em segundos | Navegação rápida entre funcionalidades | Minimizar etapas entre captura e resultado georreferenciado, replicando eficiência dos três |
 
 ## 5. Recomendações derivadas
 
-Liste recomendações com origem explícita.
-
-- **RC01:** {{recomendação}} — derivada de {{C01/C02/evidência}}.
-- **RC02:** {{...}}
+- **RC01:** A interface de captura deve fornecer feedback em tempo real sobre qualidade/distância do enquadramento antes de registrar a foto derivada de C02 e do protocolo de captura (AE/AF Lock) definido no TCC.
+- **RC02:** Priorizar alto contraste visual e fontes grandes para uso sob luz solar direta em campo — derivada de C01 e C03.
+- **RC03:** Oferecer leitura em áudio de diagnósticos/informações, derivada de C02, para ampliar acessibilidade a usuários com dificuldade de leitura.
+- **RC04:** Garantir funcionamento 100% offline com sincronização posterior, derivada de C03 e da arquitetura de Edge Computing (TensorFlow Lite) do projeto.
+- **RC05:** Gerar mapas de foco de infestação e zona de risco adjacente (não apenas pontos isolados), derivada de C01 e C03, e diretamente do módulo de geolocalização via EXIF do TCC.
+- **RC06:** Evitar poluição visual em telas com muitos dados, derivada da crítica de usuários do C01 sobre menu de filtros longo.
+- **RC07:** Ser transparente sobre o uso de dados de localização coletados via GPS/EXIF, derivada da crítica de privacidade relatada em C02.
 
 ## Referências
 
-{{fontes dos produtos, avaliações e literatura}}
-
+- Climate FieldView (Bayer). Disponível em: https://climate.com/pt-br.html
+- Plantix. Disponível em: https://plantix.net/pt/
+- Avaliações de usuários — Google Play Store (Plantix)
+- OneSoil Platform. Disponível em: https://onesoil.ai/pt/solutions/farmers
+  
 ## Checklist
 
 - [ ] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
