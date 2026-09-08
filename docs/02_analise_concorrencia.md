@@ -29,12 +29,12 @@ A pergunta é: **“que convenções esse perfil já conhece para executar taref
 Retome o mapa inicial de alternativas e produtos citado na Entrega 1. Aqui a equipe deixa de trabalhar apenas com impressão inicial e passa a **investigar sistematicamente** cada solução.
 
 | Softwares Mercado | Tipo | Razão | Status inicial | Decisão nesta entrega |
-|Bayer - Field View Ferramenta | Análogo | Software renomado no mercado, com objetivos similares à certa parte da nossa interface | F | Analisar |
+|---|---|---|---|---|
+| Bayer - Field View | Análogo | Software renomado no mercado, com objetivos similares à certa parte da nossa interface | F | Analisar |
 | John Deere Operations Center | Análogo | Software que traz uma grande visualização do que acontece no talhão. | F | Analisar |
 | Croptimus™ Platform | Concorrente | Software muito semelhante com as intenções do que temos na interface prevista, assim como os objetivos do produto. | F | Analisar |
 | Plantix | Concorrente | Software mobile com características muito similares ao que pretendemos utilizar, utiliza visão computacional e traz um layout interessante para isso. | F | Analisar |
 | OneSoil Platform | Ferramenta Cotidiana | Software mobile sem objetivo específico bastante utilizado na comunidade agrícola, a ideia é extrair um estilo geral padrão, com navegação entre as utilidades/telas. | F | Analisar |
-| {{...}} | concorrente / análogo / ferramenta cotidiana / processo manual | {{...}} | F / H / ? | analisar / descartar com justificativa |
 
 Se uma hipótese da Entrega 1 for confirmada ou refutada durante esta análise, atualize `H01`, `H02`... em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -187,11 +187,13 @@ Para empresas e parceiros: Soluções corporativas, de revenda de insumos ou pac
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
-Analise interfaces que moldam a expectativa do público, mesmo que não sejam concorrentes.
-
 | Software | Por que o público usa | Padrões relevantes | Prints | O que aprender |
 |---|---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{link local}} | {{...}} |
+| WhatsApp | Principal canal de comunicação no campo — envio de fotos de pragas/doenças para agrônomos, grupos de cooperativa, áudios em vez de texto | Botão de câmera em destaque, envio de áudio com um toque, preview de imagem antes de enviar, indicadores de status (enviado/lido) | {{link local}} | O hábito de mandar áudio em vez de digitar reforça a importância de leitura/gravação em voz no nosso app; preview de foto antes de confirmar envio é um padrão já internalizado que podemos reaproveisar na tela de captura |
+| Google Maps / Waze | Navegação até talhões, fornecedores, cooperativas; alguns usam para localizar pontos dentro da própria propriedade | Marcação de pin em localização específica, zoom por gesto, alto contraste em modo satélite, ícones grandes tocáveis | {{link local}} | O padrão de "marcar um pino no mapa e adicionar uma nota/foto" é praticamente idêntico à funcionalidade de geolocalização por talhão que estamos propondo — usuário já sabe interagir com esse modelo |
+| Aplicativo bancário (ex: apps de cooperativas de crédito rural, Nubank) | Pagamentos, financiamento agrícola, Pix para fornecedores | Fluxos curtos e lineares (poucos passos até confirmar ação), biometria/senha simples, linguagem direta sem jargão técnico | {{link local}} | Reforça a expectativa de fluxos curtos e diretos (poucos toques até o resultado), mesmo em tarefas "sérias"; usuário já espera confirmação clara após uma ação |
+| Aplicativo de previsão do tempo (ex: Climatempo) | Decisão de quando pulverizar, colher ou irrigar depende diretamente da previsão | Ícones grandes e universais (sol, chuva), informação resumida no topo da tela, alertas push para eventos críticos | {{link local}} | Uso de ícones universais em vez de texto extenso é um padrão a seguir para diagnósticos rápidos; alertas push já são esperados quando há "risco" (ex: praga detectada perto) |
+| YouTube | Fonte de aprendizado prático informal — tutoriais de manejo, aplicação de defensivos, uso de máquinas | Busca por vídeo curto, reprodução em tela cheia, uso de legendas/áudio como reforço | {{link local}} | Reforça a hipótese de que conteúdo em áudio/vídeo é mais acessível que texto longo para esse público — relevante para as recomendações de tratamento do nosso app |
 
 ## 3.1 Padrões de interface relevantes ao escopo de IHC
 
