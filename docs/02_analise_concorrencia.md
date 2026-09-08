@@ -132,15 +132,16 @@ Além disso, utilizando o mesmo ecossistema do aplicativo, a empresa oferece sol
 
 #### Padrões e tendências percebidos
 
-{{...}}
+- A interface de captura de foto replica a câmera nativa do sistema operacional, reduzindo a curva de aprendizado, reaproveitando modelos mentais já consolidados pelo usuário.
+- O resultado do diagnóstico aparece de forma rápida e direta ("problema identificado em segundos"), evitando sobrecarga cognitiva num momento em que o usuário está no campo e quer uma resposta objetiva.
 
 #### Pontos positivos, limitações e lições
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
-| Acessibilidade para usuários com dificuldade de leitura | {{...}} | Adicionar opção de audio para explicação da doença pode ajudar nosso projeto à atingir uma maior gama de usuários. |
-| Acessibilidade para usuários com dificuldade de leitura | {{...}} | Adicionar opção de audio para explicação da doença pode ajudar nosso projeto à atingir uma maior gama de usuários. |
-| Acessibilidade para usuários com dificuldade de leitura | {{...}} | Adicionar opção de audio para explicação da doença pode ajudar nosso projeto à atingir uma maior gama de usuários. |
+| Acessibilidade para usuários com dificuldade de leitura | O app permite ouvir o texto das recomendações de tratamento, atendendo usuários com dificuldade de leitura ou em contexto de "mãos ocupadas" no campo.| Adicionar opção de áudio para explicação da doença pode ampliar a acessibilidade do nosso app, especialmente para uso em campo, onde ler a tela nem sempre é prático. |
+| Feedback em tempo real na captura de imagem | O app fornece indicação visual se o enquadramento da foto está adequado antes da captura, prevenindo erros de diagnóstico por imagem ruim. | Implementar feedback similar (ex: indicador de foco, distância ou iluminação) pode reduzir erros de captura e aumentar a confiabilidade do diagnóstico no nosso app. |
+| Desalinhamento entre modelo mental do usuário e funcionalidade social oferecida | Usuários criticam a ausência de recursos básicos esperados de redes sociais (buscar perfis, seguir, mensagens diretas) na comunidade do app. | Caso implementemos funcionalidades sociais/comunitárias, é importante alinhar com convenções já conhecidas pelo usuário. |
 
 ### Análise C03 — OneSoil Platform 
 
