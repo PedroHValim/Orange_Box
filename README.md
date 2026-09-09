@@ -1,4 +1,4 @@
-# Projeto de Interação Humano-Computador (IHC)
+# Projeto de Interação Humano-Computador (IHC) - EQUIPE 01 
 
 > **Template acadêmico para documentação do projeto no GitHub.**  
 > Substitua todo texto entre `{{...}}`, remova exemplos que não se aplicam e mantenha evidências no próprio repositório sempre que possível.
@@ -17,7 +17,7 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 
 ## Identificação
 
-**Título do projeto de IHC:** Orange_Box  
+**Título do projeto de IHC:** Orange_Box - 
 **TCC/projeto de origem:** Detecção Automatizada do Ácaro da Leprose na Citricultura via Redes Neurais Convolucionais em Dispositivos Móveis  
 **Orientador(a):** Plinio Thomaz Aquino Junior 
 **Disciplina:** Interação Humano-Computador  
