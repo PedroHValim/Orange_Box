@@ -1,7 +1,7 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 09/09/2026 
+**Status:** 🟨 em andamento
 **Responsabilidade:** 1 persona por integrante; 1 mapa de empatia, 1 contexto de uso consolidado e 1 jornada por equipe (salvo orientação diferente do docente).
 
 ## Objetivo da atividade
@@ -28,36 +28,46 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 | Item da Entrega 1 | Status inicial | Evidência disponível agora | Como será tratado nesta entrega |
 |---|---|---|---|
-| {{usuário/objetivo/característica/H01...}} | F / H / ? | {{...}} | incorporar / manter como hipótese / descartar / investigar |
+| Pessoas que trabalham na fazenda | F | [F31] | incorporar |
+| Dono/gestor da fazenda | F | [H19] | incorporar |
+| Verificar os frutos em busca de sinais da praga | F | [F16] O trabalho descreve a inspeção como atividade recorrente | incorporar |
+| Decidir onde e quando aplicar o produto de controle | F | [H04] Ainda não confirmado quem exatamente toma essa decisão no dia a dia | incorporar |
+| Acompanhar se o problema está se espalhando pela propriedade | F | [H05] Ainda não confirmado como esse acompanhamento é feito hoje | incorporar |
+| As pessoas da fazenda já usam celular no dia a dia, mas não necessariamente têm prática com aplicativos técnicos. | F | [F12] | incorporar |
+| O trabalho de campo é feito ao ar livre, muitas vezes com pouco ou nenhum sinal de internet. | F | [F13] | incorporar |
+
+
 
 ## 1. Personas
 
-### Persona P01 — {{nome fictício}}
+### Persona P01 — Jaime Carteiro
 
-**Autor(a):** {{nome — matrícula}}  
-**Tipo:** primária / secundária  
-**Base de evidências:** entrevista / questionário / literatura / observação / proto-persona a validar / combinação  
+**Autor(a):** Pedro Henrique Ferreira Valim - 24.123.048-1
+**Tipo:** primária  
+**Base de evidências:** entrevista / observação   
 **Hipóteses da Entrega 1 relacionadas:** {{H01, H02 ou —}}
 
 ![Persona P01](../assets/03_personas/persona_p01.svg)
 
 | Campo | Descrição |
 |---|---|
-| Faixa etária / contexto relevante | {{somente o que impacta o uso}} |
-| Ocupação/papel | {{...}} |
-| Conhecimento do domínio | {{...}} |
-| Experiência tecnológica | {{...}} |
-| Objetivos | {{...}} |
-| Necessidades | {{...}} |
-| Dores/frustrações | {{...}} |
-| Motivadores | {{...}} |
-| Restrições/acessibilidade | {{...}} |
-| Ambiente típico de uso | {{...}} |
-| Comportamentos relevantes | {{...}} |
+| contexto relevante | Figura com responsabilidade de gestão em uma fazenda (Dono/Gerentes/etc). |
+| Ocupação/papel | Dono da Fazenda |
+| Conhecimento do domínio | Administrativo |
+| Experiência tecnológica | Pouco |
+| Objetivos | Entender pontos de infestações para tomadas de decisões |
+| Necessidades | Obter dados que reflitam pontos de infestações de praga |
+| Dores/frustrações | Dependência do profissional 'pragueiro' para detecção e mapeamento de pragas.  |
+| Motivadores | Falta de autonomia na detecção de pragas e monitoramento de pontos de infestações. |
+| Restrições/acessibilidade | Falta de conhecimento para identificação de praga aumentada quando falamos de um software que não enfrenta dificuldades 'humanas'. |
+| Ambiente típico de uso | Fazenda e escritório |
+| Comportamentos relevantes | Administrar e observar as métricas apontadas pelo aplicativo, gerando insights de níveis macro. |
 
 **Decisões de design influenciadas por P01:**
 
-- {{...}}
+- Interface com características 'clean' e objetivas.
+- Diferentes visões de mapas e pontos de infestações.
+- Menu lateral de métricas e dados mais especificados sobre os resultados obtidos em campo.
 
 > Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
 
