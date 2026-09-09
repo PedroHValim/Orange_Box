@@ -8,16 +8,16 @@ Para projetos cujo TCC não previa interface, esta matriz é especialmente impor
 
 | Elemento | Registro da equipe | Evidência/justificativa | Estado |
 |---|---|---|---|
-| Tema do TCC | {{...}} | {{documento/TCC}} | definido |
-| Resultado técnico esperado | {{algoritmo, análise, sistema, modelo, API...}} | {{...}} | definido |
-| O TCC previa interface? | sim / não / parcialmente | {{...}} | definido |
-| Capacidade/contribuição central | {{o que a tecnologia permite}} | {{...}} | definido |
-| Possíveis beneficiários/stakeholders | {{...}} | {{fonte ou hipótese}} | F / H / ? |
-| Usuário escolhido para IHC | {{...}} | {{por que esse perfil}} | F / H / ? |
-| Objetivo principal do usuário | {{...}} | {{...}} | F / H / ? |
-| Contexto de uso adotado | {{...}} | {{...}} | F / H / ? |
+| Tema do TCC | Detecção Automatizada do Ácaro da Leprose na Citricultura via Redes Neurais Convolucionais em Dispositivos Móveis | TCC | definido |
+| Resultado técnico esperado | Sistema/Modelo | N/A | definido |
+| O TCC previa interface? | Sim | TCC  | definido |
+| Capacidade/contribuição central | Monitoramento com geolocalização de infestações de pragas e fácil acesso a detecção de pragas. | TCC | definido |
+| Possíveis beneficiários/stakeholders | Trabalhadores rurais - Desde donos a funcionário agrícolas. | F |
+| Usuário escolhido para IHC | Funcionários agrícolas | usuários que podem tomar atitudes de acordo com os dados observados na interface | F |
+| Objetivo principal do usuário | Identificar áreas de infestações de pragas, tomando atitudes de acordo com o diagnóstico e também poder detectar a própria praga através da interface. | TCC | F |
+| Contexto de uso adotado | Atividades em campo com os perfis de usuários citados | Visita a fazenda Frutas Scholl | F  |
 | Interface/recorte de IHC | {{...}} | {{como deriva dos itens acima}} | proposta / revisada |
-| Relação com o TCC | parte prevista / extensão conceitual / protótipo demonstrativo / outra | {{...}} | definido |
+| Relação com o TCC | parte prevista | TCC | definido |
 
 > Se o escopo de IHC mudar ao longo do semestre, preserve a decisão anterior no histórico e registre **qual evidência motivou a mudança**.
 
