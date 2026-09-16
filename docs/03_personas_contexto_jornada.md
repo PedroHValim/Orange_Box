@@ -137,12 +137,21 @@ P01 decide com base em dados agregados, no escritório, pouco exposto ao campo, 
 
 ## 2. Mapa de empatia — equipe
 
-**Persona escolhida:** {{P01}}  
-**Justificativa:** {{por que esse perfil é relevante}}
+**Persona escolhida:** P02, Antônio Ferreira  
+**Justificativa:** P02 é a persona prioritária da equipe (ver Síntese das personas), pois é quem executa a interação de captura de imagem e recebe o resultado da detecção, fluxo definido como escopo de IHC na Entrega 1. Entender profundamente seu contexto emocional e físico é o que mais influencia decisões de interface do fluxo principal.
 
 ![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
 
-Documente também em texto: o que vê; ouve; diz/faz; pensa/sente; dores; ganhos. Diferencie **evidência** de **hipótese**.
+| Dimensão | Descrição | Status |
+|---|---|---|
+| O que vê | Fileiras extensas de árvores a percorrer; frutos pequenos, com sinais de praga difíceis de enxergar a olho nu; sol forte incidindo sobre a plantação; ausência de barras de sinal no celular | [F19], [F21], [F23], [F13] |
+| O que ouve | Orientação do dono/gestor sobre quais áreas priorizar na inspeção do dia; comentários de colegas sobre trechos já percorridos ou focos encontrados anteriormente | [H21] |
+| O que diz/faz | Percorre a plantação a pé, de árvore em árvore, verificando fruto por fruto; hoje usa lupa no processo manual; passa a usar o celular para fotografar cada fruto suspeito; informa os achados ao dono/gestor, mas não decide a ação de controle | [F18], [F22], [F24] |
+| O que pensa/sente | No início do percurso, disposição e rotina conhecida; ao longo do dia, cansaço crescente e receio de deixar um foco passar despercebido justamente nos últimos pés de laranja; ansiedade breve na espera pelo resultado da análise; alívio quando não há sinal de praga, atenção redobrada quando há | [F21], [H08], jornada (etapas 1, 3, 4) |
+| Dores | Trabalho cansativo, repetitivo e demorado sob sol forte; risco de erro por fadiga no fim do percurso; possível impedimento do uso do app por falta de internet; insegurança por pouca familiaridade com aplicativos técnicos | [F19], [H08], [F13], [H03] |
+| Ganhos | Resultado confiável e imediato, sem depender de lupa ou de um especialista externo; menor esforço físico e visual na detecção; sensação de dever cumprido ao concluir e sincronizar o percurso; sentir que contribui diretamente para evitar prejuízo na safra | P02 (objetivos/necessidades), [F04], jornada (etapa 6) |
+
+> Itens marcados apenas com `[H]`/hipótese (ex.: o que ouve, de quem exatamente vêm as orientações) ainda não foram confirmados em campo e devem ser validados na Entrega 7.
 
 ## 3. Contexto de uso, consolidação
 
