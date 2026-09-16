@@ -102,7 +102,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - Alto contraste visual para uso sob luz solar direta.
 - Possível leitura em voz de instruções simples, para reduzir dependência de leitura em tela.
   
-### Persona P03, Agrônomo da propriedade
+### Persona P03, Marcelo Fidalgo
 
 **Autor(a):** Guilherme Morais Escudeiro - 24.123.005-1  
 **Tipo:** secundária  
