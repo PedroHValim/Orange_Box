@@ -35,6 +35,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 | Acompanhar se o problema está se espalhando pela propriedade | F | [H05] Ainda não confirmado como esse acompanhamento é feito hoje | incorporar |
 | As pessoas da fazenda já usam celular no dia a dia, mas não necessariamente têm prática com aplicativos técnicos. | F | [F12] | incorporar |
 | O trabalho de campo é feito ao ar livre, muitas vezes com pouco ou nenhum sinal de internet. | F | [F13] | incorporar |
+| Agrônomo da propriedade participa da definição do período de coleta de dados, junto à equipe | F | [F08] | incorporar |
 
 
 
@@ -101,11 +102,38 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 - Alto contraste visual para uso sob luz solar direta.
 - Possível leitura em voz de instruções simples, para reduzir dependência de leitura em tela.
   
-> Repita para P02, P03... Cada integrante deve produzir ao menos uma persona.
+### Persona P03, Agrônomo da propriedade
+
+**Autor(a):** Guilherme Morais Escudeiro - 24.123.005-1  
+**Tipo:** secundária  
+**Base de evidências:** fato (participação confirmada na definição do período de coleta) + hipótese (extensão do papel para validação técnica dos resultados)  
+**Hipóteses da Entrega 1 relacionadas:** H04, H07
+
+![Persona P03](../assets/03_personas/persona_p03.svg)
+
+| Campo | Descrição |
+|---|---|
+| contexto relevante | Profissional de agronomia que presta consultoria técnica à propriedade, com formação especializada em fitossanidade e manejo de citros; não está presente no dia a dia do campo. |
+| Ocupação/papel | Agrônomo consultor da propriedade |
+| Conhecimento do domínio | Alto conhecimento técnico/científico sobre pragas, fitossanidade e manejo de citros |
+| Experiência tecnológica | Moderada, usa e-mail, planilhas e relatórios técnicos; pouco contato com aplicativos de campo |
+| Objetivos | Validar tecnicamente os focos de infestação identificados e recomendar o manejo mais adequado (produto, dose, período de aplicação) |
+| Necessidades | Acesso a dados históricos e geolocalizados das inspeções, com detalhe técnico suficiente para embasar um parecer |
+| Dores/frustrações | Hoje recebe informações informais e incompletas do campo (relatos verbais, fotos soltas sem contexto), o que dificulta um diagnóstico preciso e a comparação ao longo do tempo |
+| Motivadores | Emitir recomendações tecnicamente embasadas, evitando aplicação incorreta ou desnecessária de defensivos |
+| Restrições/acessibilidade | Não acompanha a propriedade presencialmente no dia a dia; depende inteiramente dos dados repassados pelo aplicativo para decidir remotamente |
+| Ambiente típico de uso | Escritório próprio ou de outra propriedade, consultando remotamente os dados enviados pela equipe de campo, com visitas técnicas pontuais |
+| Comportamentos relevantes | Analisa o histórico de ocorrências e a distribuição espacial dos focos antes de emitir um parecer técnico, cruzando dados de diferentes inspeções ao longo do tempo |
+
+**Decisões de design influenciadas por P03:**
+
+- Histórico de inspeções com filtro por período e localização, não apenas o resultado mais recente.
+- Visualização detalhada dos metadados de cada detecção (data, geolocalização, imagem original) para suportar parecer técnico remoto.
+- Diferenciação clara entre "sinal detectado pela IA" e "confirmação/validação humana", para rastrear os casos que passaram por análise especializada.
 
 ### Síntese das personas
 
-P01 decide com base em dados agregados, no escritório, pouco exposto ao campo, P02 coleta a informação direto na plantação, sob sol, sem internet. São papéis complementares, não sobrepostos. A persona prioritária é P02, pois é quem realiza a interação de captura e recebe o resultado, fluxo definido como escopo de IHC na Entrega 1. P01 permanece como usuário secundário, do mapa e relatório.
+P01 decide com base em dados agregados, no escritório, pouco exposto ao campo, P02 coleta a informação direto na plantação, sob sol, sem internet, e P03 interpreta remotamente o histórico técnico para validar o diagnóstico e recomendar o manejo. São papéis complementares, não sobrepostos. A persona prioritária é P02, pois é quem realiza a interação de captura e recebe o resultado, fluxo definido como escopo de IHC na Entrega 1. P01 e P03 permanecem como usuários secundários, do mapa, relatório e histórico técnico.
 
 ## 2. Mapa de empatia — equipe
 
