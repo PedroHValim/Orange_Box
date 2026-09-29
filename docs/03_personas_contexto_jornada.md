@@ -43,12 +43,14 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ### Persona P01, Jaime Carteiro
 
-**Autor(a):** Pedro Henrique Ferreira Valim - 24.123.048-1
+**Autor(a):** Pedro Henrique Ferreira Valim - 24.123.048-1  
 **Tipo:** primária  
 **Base de evidências:** entrevista / observação   
-**Hipóteses da Entrega 1 relacionadas:** {{H01, H02 ou —}}
+**Hipóteses da Entrega 1 relacionadas:** H04, H05, H21
 
-![Persona P01](../assets/03_personas/persona_p01.svg)
+![Persona P01](../assets/03_personas/persona_01.jpeg)
+
+*Imagem ilustrativa gerada por IA (thispersondoesnotexist.com); não retrata uma pessoa real.*
 
 | Campo | Descrição |
 |---|---|
@@ -77,7 +79,9 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 **Base de evidências:** hipótese (a validar em entrevista/observação de campo)  
 **Hipóteses da Entrega 1 relacionadas:** H03, H09, H20
 
-![Persona P02](../assets/03_personas/persona_p02.svg)
+![Persona P02](../assets/03_personas/persona_02.jpeg)
+
+*Imagem ilustrativa gerada por IA (thispersondoesnotexist.com); não retrata uma pessoa real.*
 
 | Campo | Descrição |
 |---|---|
@@ -105,11 +109,13 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 ### Persona P03, Marcelo Fidalgo
 
 **Autor(a):** Guilherme Morais Escudeiro - 24.123.005-1  
-**Tipo:** secundária  
+**Tipo:** primária  
 **Base de evidências:** fato (participação confirmada na definição do período de coleta) + hipótese (extensão do papel para validação técnica dos resultados)  
 **Hipóteses da Entrega 1 relacionadas:** H04, H07
 
-![Persona P03](../assets/03_personas/persona_p03.svg)
+![Persona P03](../assets/03_personas/persona_03.jpeg)
+
+*Imagem ilustrativa gerada por IA (thispersondoesnotexist.com); não retrata uma pessoa real.*
 
 | Campo | Descrição |
 |---|---|
@@ -133,37 +139,35 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 
 ### Síntese das personas
 
-P01 decide com base em dados agregados, no escritório, pouco exposto ao campo, P02 coleta a informação direto na plantação, sob sol, sem internet, e P03 interpreta remotamente o histórico técnico para validar o diagnóstico e recomendar o manejo. São papéis complementares, não sobrepostos. A persona prioritária é P02, pois é quem realiza a interação de captura e recebe o resultado, fluxo definido como escopo de IHC na Entrega 1. P01 e P03 permanecem como usuários secundários, do mapa, relatório e histórico técnico.
+P01 decide com base em dados agregados, no escritório, pouco exposto ao campo, P02 coleta a informação direto na plantação, sob sol, sem internet, e P03 interpreta remotamente o histórico técnico para validar o diagnóstico e recomendar o manejo. São papéis complementares, não sobrepostos, e as três personas são **primárias**, pois todas interagem diretamente com o aplicativo: P02 no fluxo de captura, P01 no mapa e nas métricas, P03 no histórico técnico. Entre elas, P02 é a prioridade do fluxo principal, pois é quem realiza a interação de captura e recebe o resultado, fluxo definido como escopo de IHC na Entrega 1.
 
 ## 2. Mapa de empatia — equipe
 
 **Persona escolhida:** P02, Antônio Ferreira  
 **Justificativa:** P02 é a persona prioritária da equipe (ver Síntese das personas), pois é quem executa a interação de captura de imagem e recebe o resultado da detecção, fluxo definido como escopo de IHC na Entrega 1. Entender profundamente seu contexto emocional e físico é o que mais influencia decisões de interface do fluxo principal.
 
-![Mapa de empatia](../assets/03_personas/mapa_empatia.svg)
+![Mapa de empatia — P02, Antônio Ferreira](../assets/03_personas/mapa_de_empatia.png)
 
 | Dimensão | Descrição | Status |
 |---|---|---|
-| O que vê | Fileiras extensas de árvores a percorrer; frutos pequenos, com sinais de praga difíceis de enxergar a olho nu; sol forte incidindo sobre a plantação; ausência de barras de sinal no celular | [F19], [F21], [F23], [F13] |
-| O que ouve | Orientação do dono/gestor sobre quais áreas priorizar na inspeção do dia; comentários de colegas sobre trechos já percorridos ou focos encontrados anteriormente | [H21] |
-| O que diz/faz | Percorre a plantação a pé, de árvore em árvore, verificando fruto por fruto; hoje usa lupa no processo manual; passa a usar o celular para fotografar cada fruto suspeito; informa os achados ao dono/gestor, mas não decide a ação de controle | [F18], [F22], [F24] |
-| O que pensa/sente | No início do percurso, disposição e rotina conhecida; ao longo do dia, cansaço crescente e receio de deixar um foco passar despercebido justamente nos últimos pés de laranja; ansiedade breve na espera pelo resultado da análise; alívio quando não há sinal de praga, atenção redobrada quando há | [F21], [H08], jornada (etapas 1, 3, 4) |
-| Dores | Trabalho cansativo, repetitivo e demorado sob sol forte; risco de erro por fadiga no fim do percurso; possível impedimento do uso do app por falta de internet; insegurança por pouca familiaridade com aplicativos técnicos | [F19], [H08], [F13], [H03] |
-| Ganhos | Resultado confiável e imediato, sem depender de lupa ou de um especialista externo; menor esforço físico e visual na detecção; sensação de dever cumprido ao concluir e sincronizar o percurso; sentir que contribui diretamente para evitar prejuízo na safra | P02 (objetivos/necessidades), [F04], jornada (etapa 6) |
-
-> Itens marcados apenas com `[H]`/hipótese (ex.: o que ouve, de quem exatamente vêm as orientações) ainda não foram confirmados em campo e devem ser validados na Entrega 7.
+| O que vê | No trabalho: fileiras extensas de árvores a percorrer; frutos pequenos, com sinais de praga difíceis de enxergar a olho nu; sol forte incidindo sobre a plantação; ausência de barras de sinal no celular. No cotidiano: colegas que trabalham há anos reconhecendo a praga "no olho"; propriedades vizinhas que já tiveram prejuízo com pragas; o celular usado para fotos e mensagens, mas não para aplicativos técnicos | [F19], [F21], [F23], [F13], [F12]; cotidiano: hipótese |
+| O que ouve | Orientação do dono/gestor sobre quais áreas priorizar na inspeção do dia; comentários de colegas sobre trechos já percorridos ou focos encontrados anteriormente; conversas e mensagens (grupos de WhatsApp da fazenda/região, rádio) sobre pragas e perdas de safra em outras propriedades | hipótese |
+| O que diz/faz | Percorre a plantação a pé, de árvore em árvore, verificando fruto por fruto; hoje usa lupa no processo manual; passa a usar o celular para fotografar cada fruto suspeito; informa os achados ao dono/gestor, mas não decide a ação de controle; comenta com os colegas onde "achou bicho" e troca fotos pelo celular | [F18], [F22], [F24]; conversa com colegas: hipótese |
+| O que pensa/sente | "Será que deixei passar algum pé?"; no início do percurso, disposição e rotina conhecida; ao longo do dia, cansaço crescente e receio de deixar um foco passar despercebido justamente nos últimos pés de laranja; ansiedade breve na espera pelo resultado da análise; alívio quando não há sinal de praga, atenção redobrada quando há. Fora da tarefa: preocupação em ser visto como alguém de confiança pelo patrão e em manter o emprego; deseja um trabalho menos desgastante | [F19], [F21], [H08]; preocupações pessoais: hipótese |
+| Dores | Trabalho cansativo, repetitivo e demorado sob sol forte; risco de erro por fadiga no fim do percurso; possível impedimento do uso do app por falta de internet; insegurança por pouca familiaridade com aplicativos técnicos; medo de ser responsabilizado se um foco passar despercebido | [F19], [H08], [F13], [H03], [F25]; responsabilização: hipótese |
+| Ganhos | Resultado confiável e imediato, sem depender de lupa ou de um especialista externo; menor esforço físico e visual na detecção; para ele, sucesso é concluir a rota sem deixar foco passar e ter o trabalho reconhecido; sensação de dever cumprido ao concluir e sincronizar o percurso; sentir que contribui diretamente para evitar prejuízo na safra | [F03], [F04], [F14], [F15]; reconhecimento: hipótese |
 
 ## 3. Contexto de uso, consolidação
 
 | Dimensão | Descrição | Implicação de design |
 |---|---|---|
-| Usuários | P02 (trabalhador de campo/pragueiro) como usuário primário do fluxo de captura, P01 (dono/gestor) como usuário do mapa/relatório. | Interface precisa comportar dois níveis de uso, operacional e rápido em campo, e analítico em consulta no escritório. |
-| Tarefas | A01, verificar frutos em busca de sinais da praga (P02), A02, decidir onde/quando aplicar controle (P01), A03, acompanhar disseminação do problema (P01). | Fluxo de captura precisa ser curto e direto, fluxo de mapa precisa sustentar comparação ao longo do tempo. |
+| Usuários | Três personas primárias: P02 (trabalhador de campo/pragueiro) no fluxo de captura, P01 (dono/gestor) no mapa/métricas, P03 (agrônomo consultor) no histórico técnico e validação remota. | Interface precisa comportar níveis de uso distintos: operacional e rápido em campo, analítico em consulta no escritório e técnico/detalhado para o parecer remoto. |
+| Tarefas | A01, verificar frutos em busca de sinais da praga (P02), A02, decidir onde/quando aplicar controle (P01, com recomendação de P03), A03, acompanhar disseminação do problema (P01, P03). | Fluxo de captura precisa ser curto e direto, fluxo de mapa e histórico precisa sustentar comparação ao longo do tempo. |
 | Equipamentos | Smartphone com câmera, eventualmente com lente macro acoplada. | Botões grandes e alcançáveis com uma mão, app deve tolerar variação de hardware entre dispositivos. |
-| Ambiente físico | Campo aberto, sol forte, calor, deslocamento constante entre árvores, pouco tempo por planta. | Alto contraste, textos curtos, pouca dependência de leitura extensa. |
-| Ambiente social/organizacional | Quem inspeciona nem sempre é quem decide a ação, há uma etapa de comunicação entre P02 e P01. | App precisa deixar claro o repasse da informação, como alerta visível para o gestor, sem exigir decisão do trabalhador de campo. |
+| Ambiente físico | Campo aberto, sol forte, calor, deslocamento constante entre árvores, pouco tempo por planta [F21], [F23]. Piso de terra irregular entre as fileiras; iluminação variando entre sol direto (reflexo na tela) e sombra das copas; obstáculos como galhos e frutos em alturas diferentes; mãos possivelmente sujas ou suadas (hipótese). P01 e P03 usam o app em escritório, sob condições controladas. | Alto contraste, textos curtos, pouca dependência de leitura extensa, alvos de toque grandes e operação com uma mão. |
+| Ambiente social/organizacional | Quem inspeciona nem sempre é quem decide a ação, há uma etapa de comunicação entre P02, P01 e P03 [F24]. Em campo, o trabalhador tende a seguir a rota orientada pelo gestor, trabalhar em ritmo contínuo e trocar informações com colegas sobre focos encontrados (hipótese). | App precisa deixar claro o repasse da informação, como alerta visível para o gestor e dados acessíveis ao agrônomo, sem exigir decisão do trabalhador de campo. |
 | Papéis/permissões/governança | Ainda não confirmado se haverá diferenciação formal de perfil/login entre trabalhador e gestor. | Lacuna a investigar nas próximas entregas, relacionada a H21. |
-| Volume de dados/histórico | Inspeções são recorrentes ao longo do ano, necessidade de histórico ainda é hipótese. | Justifica prototipar uma versão simples de histórico/mapa acumulado, relacionado a H09. |
+| Volume de dados/histórico | Inspeções são recorrentes ao longo do ano [F16], necessidade de histórico ainda é hipótese, reforçada pela necessidade de P03. | Justifica prototipar uma versão simples de histórico/mapa acumulado, relacionado a H09 e H22. |
 
 ---
 
@@ -171,24 +175,26 @@ P01 decide com base em dados agregados, no escritório, pouco exposto ao campo, 
 
 **Persona:** P02, Antônio Ferreira  
 **Objetivo da jornada:** Inspecionar os frutos da propriedade e reportar, de forma confiável, se há sinais da praga em cada ponto percorrido.  
-**Início e fim da jornada:** Começa ao chegar na propriedade para iniciar a rota de inspeção do dia, termina ao encerrar o percurso e sincronizar os dados quando há conexão.
+**Início e fim da jornada:** Começa no primeiro contato com o aplicativo (recebê-lo e usá-lo pela primeira vez) e segue pela rota de inspeção do dia; termina ao encerrar o percurso e ter a confirmação de que os dados foram sincronizados quando há conexão.
 
 | Etapa | Situação/ação | Objetivo | Pensamento/emoção | Dor | Oportunidade de design | Evidência |
 |---|---|---|---|---|---|---|
-| 1 | Chega à propriedade e inicia o percurso de inspeção entre as árvores | Começar a rota do dia | Disposição no início, rotina já conhecida | Percurso longo pela frente, calor já presente | Indicar de forma simples por onde continuar, se houver histórico de rota | F21, H09 |
-| 2 | Posiciona o smartphone sobre o fruto para capturar a imagem | Obter uma foto de qualidade suficiente para a detecção | Concentração, incerteza sobre o enquadramento | Dificuldade de manter distância/foco adequados sem apoio de lupa | Feedback visual em tempo real de enquadramento e distância antes da captura | F22, RC01, Entrega 2 |
-| 3 | Aguarda o resultado da análise diretamente no app | Saber se há sinal da praga naquele ponto | Ansiedade breve pela resposta | Falta de internet poderia impedir o resultado | Processamento offline, resposta em poucos segundos | F13, RC04, Entrega 2 |
-| 4 | Vê o resultado indicado na tela | Confirmar se precisa agir ou seguir em frente | Alívio ou atenção, conforme o resultado | Texto técnico demais poderia confundir | Resultado com ícone ou cor de leitura rápida | H03, RC02, Entrega 2 |
-| 5 | Segue para a próxima árvore repetindo o processo | Cobrir o máximo de pontos possível no tempo disponível | Cansaço crescente ao longo do dia | Fadiga aumenta risco de pular pontos ou apressar a captura | Fluxo com o mínimo de toques entre foto e resultado | F18, F19, H08 |
-| 6 | Ao final do percurso, ou quando há sinal, o app sincroniza os dados com o servidor central | Repassar os achados para quem decide | Sensação de dever cumprido | Não saber se a sincronização realmente ocorreu | Indicação clara de status de sincronização | F24, RC04, Entrega 2 |
+| 0 | Recebe o aplicativo instalado no celular e é orientado pelo gestor a usá-lo na inspeção | Entender como usar o app sem atrasar o trabalho | "Mais uma coisa no celular... será que é difícil?"; desconfiança e insegurança | Pouca familiaridade com aplicativos técnicos | Primeiro uso guiado, curto e visual, levando direto à captura | F12, H03, H20 |
+| 1 | Chega à propriedade e inicia o percurso de inspeção entre as árvores | Começar a rota do dia | "Hoje é mais um dia de rota"; disposição, rotina já conhecida | Percurso longo pela frente, calor já presente | Indicar de forma simples por onde continuar, se houver histórico de rota | F21, H09 |
+| 2 | Posiciona o smartphone sobre o fruto para capturar a imagem | Obter uma foto de qualidade suficiente para a detecção | "Será que essa foto ficou boa?"; concentração, incerteza | Dificuldade de manter distância/foco adequados sem apoio de lupa | Feedback visual em tempo real de enquadramento e distância antes da captura | F22, RC01, Entrega 2 |
+| 3 | Aguarda o resultado da análise diretamente no app | Saber se há sinal da praga naquele ponto | "Tem bicho ou não tem?"; ansiedade breve | Falta de internet poderia impedir o resultado | Processamento offline, resposta em poucos segundos | F13, RC04, Entrega 2 |
+| 4 | Vê o resultado indicado na tela | Confirmar se precisa agir ou seguir em frente | "Posso seguir" ou "preciso avisar o patrão"; alívio ou atenção | Texto técnico demais poderia confundir | Resultado com ícone ou cor de leitura rápida | H03, RC02, Entrega 2 |
+| 5 | Segue para a próxima árvore repetindo o processo | Cobrir o máximo de pontos possível no tempo disponível | "Falta muito ainda?"; cansaço crescente | Fadiga aumenta risco de pular pontos ou apressar a captura | Fluxo com o mínimo de toques entre foto e resultado | F18, F19, H08 |
+| 6 | Ao final do percurso, ou quando há sinal, o app sincroniza os dados com o servidor central | Repassar os achados para quem decide | "Será que chegou lá?"; dever cumprido, com dúvida sobre o envio | Não saber se a sincronização realmente ocorreu | Indicação clara de status de sincronização | F24, RC04, Entrega 2 |
 
 ---
 
 ## Síntese
 
 - O fluxo de captura, feedback de enquadramento, resultado imediato e sincronização posterior precisa aparecer nos cenários e no modelo de tarefas da Entrega 5.
-- O repasse de informação entre P02 e P01, já que quem inspeciona nem sempre decide, deve virar um requisito explícito de fluxo, não só de tela.
-- As hipóteses H03, H09 e H21 seguem em aberto e devem orientar a investigação da Entrega 7.
+- O repasse de informação entre P02, P01 e P03, já que quem inspeciona nem sempre decide, deve virar um requisito explícito de fluxo, não só de tela.
+- O primeiro uso do app (etapa 0 da jornada) e o feedback não punitivo, vindos do mapa de empatia, devem ser considerados na prototipação.
+- As hipóteses H03, H09 e H21, além da camada social do mapa de empatia, seguem em aberto e devem orientar a investigação da Entrega 7.
 
 ## Checklist
 
@@ -199,6 +205,6 @@ P01 decide com base em dados agregados, no escritório, pouco exposto ao campo, 
 - [x] Objetivos e dores têm consequência para o design.
 - [x] Contexto de uso está coerente com a Entrega 1.
 - [x] Em TCC sem interface original, a persona possui relação explícita com a contribuição técnica.
-- [ ] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
+- [x] Papéis administrativos, técnicos e decisórios só foram criados quando possuem objetivos/tarefas diferentes.
 - [x] Jornada possui etapas, dores e oportunidades e não é apenas wireflow.
 - [ ] IDs das personas foram adicionados à rastreabilidade.
