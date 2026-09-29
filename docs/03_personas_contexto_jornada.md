@@ -48,7 +48,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 **Base de evidências:** entrevista / observação   
 **Hipóteses da Entrega 1 relacionadas:** H04, H05, H21
 
-![Persona P01](../assets/03_personas/persona_01.jpeg)
+<img src="../assets/03_personas/persona_01.jpeg" alt="Persona P01" width="220">
 
 *Imagem ilustrativa gerada por IA (thispersondoesnotexist.com); não retrata uma pessoa real.*
 
@@ -79,7 +79,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 **Base de evidências:** hipótese (a validar em entrevista/observação de campo)  
 **Hipóteses da Entrega 1 relacionadas:** H03, H09, H20
 
-![Persona P02](../assets/03_personas/persona_02.jpeg)
+<img src="../assets/03_personas/persona_02.jpeg" alt="Persona P02" width="220">
 
 *Imagem ilustrativa gerada por IA (thispersondoesnotexist.com); não retrata uma pessoa real.*
 
@@ -113,7 +113,7 @@ Antes de criar personas, retome os tipos de usuários, características relevant
 **Base de evidências:** fato (participação confirmada na definição do período de coleta) + hipótese (extensão do papel para validação técnica dos resultados)  
 **Hipóteses da Entrega 1 relacionadas:** H04, H07
 
-![Persona P03](../assets/03_personas/persona_03.jpeg)
+<img src="../assets/03_personas/persona_03.jpeg" alt="Persona P03" width="220">
 
 *Imagem ilustrativa gerada por IA (thispersondoesnotexist.com); não retrata uma pessoa real.*
 
