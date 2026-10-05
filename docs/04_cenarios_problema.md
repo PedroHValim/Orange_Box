@@ -68,6 +68,64 @@ Quais tarefas merecem análise? Quais informações precisam ser coletadas? **N�
 
 ---
 
+## Cenário C02 — Inspeção manual de frutos com lupa, sob fadiga e sem registro do percurso
+
+**Autor(a):** Lucas Tonoli Cabral Duarte - 24.123.032-5  
+**Persona(s) relacionada(s):** P02 (Antônio Ferreira, trabalhador de campo / pragueiro)  
+**Necessidade relacionada:** Confirmação clara e imediata se há ou não sinal de praga, sem depender de lupa ou de um especialista externo (necessidade registrada na Entrega 3, persona P02)  
+**Situação concreta da Entrega 1 relacionada:** seção 4.5 (H08 — trabalhador cansado que passa rápido pelos últimos pés e deixa um foco passar), com apoio das seções 4.1 e 4.2 (F18, F19 — inspeção a pé, com lupa, cansativa e sem cobertura total)  
+**Hipóteses ainda presentes:** H08, H09
+
+### 1. Cenário inicial
+
+Antônio é trabalhador de uma fazenda de citros e faz a inspeção de pragas nos pomares. No começo do dia, o dono da fazenda diz quais áreas ele deve percorrer. Antônio sai a pé entre as fileiras, escolhe alguns frutos em cada árvore e, com uma lupa de bolso, examina a casca de cada um à procura do ácaro.
+
+O ácaro é minúsculo, tem a cor parecida com a da casca e se esconde nas irregularidades do fruto. Antônio precisa aproximar bem a lupa, girar o fruto e repetir isso em muitas árvores, com o sol forte batendo e pouco tempo por planta. Com o passar das horas, a vista cansa e a atenção cai. Às vezes ele vê um ponto escuro e não tem certeza se é o ácaro ou só uma marca da casca.
+
+Quando acha algo suspeito, ele avisa o dono, mas não é ele quem decide o que fazer. Ao final do dia, como não há registro de quais árvores foram vistas, ele fica com a dúvida se deixou algum pé passar, principalmente os últimos do percurso.
+
+### 2. Questões de refinamento
+
+| # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
+|---|---|---|---|
+| Q1 | Quantas árvores e quantos frutos Antônio inspeciona por dia, e quanto tempo gasta em cada planta? | O cenário fala em "muitas árvores" e "pouco tempo", mas sem números não dá para dimensionar o esforço nem o peso da fadiga descrita em [F19] | Entrevista/observação com pragueiro; protocolo de inspeção do Fundecitrus |
+| Q2 | Como Antônio decide se um ponto escuro na casca é o ácaro ou outra coisa? O que ele faz quando fica em dúvida? | Mostra onde nasce o erro de julgamento, que o cenário só sugere | Entrevista com pragueiro; observação de uma rota de inspeção |
+| Q3 | Como e com que informação ele avisa o dono de um achado (conversa, mensagem, foto)? | Define o que se perde entre quem encontra e quem decide, relacionado a [F24] | Entrevista com pragueiro e com o dono da propriedade |
+| Q4 | Como ele controla quais árvores já foram inspecionadas? Existe algum registro do percurso? | Revela se a dúvida "deixei passar um pé?" tem causa concreta, ligada a [H08]/[H09] | Entrevista com pragueiro; observação |
+| Q5 | O que acontece quando ele acha um foco, ou quando um foco passa despercebido e só aparece depois? | Mostra a consequência real da ruptura e quem arca com ela, relacionado a [F20]/[F25] | Relato de caso passado com pragueiro e dono |
+
+### 3. Cenário refinado
+
+Antônio é trabalhador de uma fazenda de citros e faz a inspeção de pragas nos pomares. No começo do dia, o dono da fazenda diz quais áreas ele deve percorrer. **[NOVO: a inspeção se repete ao longo do ano, em ciclos de cerca de 14 dias.]** Antônio sai a pé entre as fileiras, **[NOVO: caminhando pelo talhão em zigue-zague e, nas áreas que o dono indicou, escolhe de três a cinco frutos por árvore inspecionada]** e, com uma lupa de bolso **[NOVO: de aumento 10x, segura o fruto com uma mão e a lupa com a outra, examinando a superfície inteira e girando o fruto para não deixar nenhuma parte sem ver. Quando não há frutos no ponto adequado, ele olha os ramos mais internos, nos primeiros 30 cm a partir da ponta.]**
+
+O ácaro é minúsculo, tem a cor parecida com a da casca e se esconde nas irregularidades do fruto. Antônio precisa aproximar bem a lupa, girar o fruto e repetir isso em muitas árvores, com o sol forte batendo e pouco tempo por planta. Com o passar das horas, a vista cansa e a atenção cai. **[NOVO: a luz muda ao longo do dia, entre sol direto e sombra das copas, e isso atrapalha a visão pela lupa.]** Às vezes ele vê um ponto escuro e não tem certeza se é o ácaro ou só uma marca da casca. **[NOVO: nessas horas ele costuma repetir o exame no mesmo fruto, chamar um colega mais experiente para olhar ou, se ainda tem dúvida, tirar uma foto com o celular para mostrar depois ao dono. A foto geralmente sai sem indicar de qual árvore ou talhão veio.]**
+
+Quando acha algo suspeito, ele avisa o dono, **[NOVO: pessoalmente ou por mensagem no celular, dizendo mais ou menos onde estava, de memória,]** mas não é ele quem decide o que fazer. Ao final do dia, como não há registro de quais árvores foram vistas, ele fica com a dúvida se deixou algum pé passar, principalmente os últimos do percurso. **[NOVO: ele só tem a própria memória e o que combinou com o dono para saber onde passou. Se um foco passa despercebido e aparece depois, a falha tende a recair sobre quem inspecionou aquela área, o que aumenta o receio de errar.]**
+
+> **Nota de rastreabilidade:** os trechos **[NOVO]** se apoiam em duas fontes. O protocolo de inspeção (lupa 10x, três a cinco frutos por planta, caminhamento em zigue-zague, ramos nos primeiros 30 cm, ciclo de cerca de 14 dias, variação de luz e fadiga ocular) vem da literatura já citada no TCC (Fundecitrus; Bassanezi, 2019) e é coerente com [F16], [F18] e [F19] da Entrega 1. Já o comportamento de Antônio nas dúvidas (repetir o exame, chamar colega, foto sem local, aviso de memória, cobrança por foco perdido) e a ausência de registro do percurso são **hipóteses plausíveis**, construídas a partir de [H08], [H09] e do mapa de empatia da Entrega 3 (itens marcados como hipótese). Elas ainda **não foram validadas com um pragueiro real** e devem ser confirmadas ou corrigidas na investigação de campo da Entrega 7.
+
+### 4. Elementos extraídos
+
+| Elemento | Evidência no cenário |
+|---|---|
+| Ator(es) | Antônio (trabalhador de campo/pragueiro, P02); dono/gestor da propriedade (P01), que orienta a rota e recebe os achados; colegas de campo, consultados nas dúvidas |
+| Objetivo(s) | Verificar os frutos em busca de sinais da praga e avisar quem decide, sem deixar nenhum foco passar |
+| Contexto | Pomar a céu aberto, sol forte, deslocamento a pé entre árvores, pouco tempo por planta, rotina repetida ao longo do ano, comunicação com o dono por conversa ou mensagem |
+| Recursos/informações | Lupa de bolso 10x, orientação do dono sobre a rota, memória do percurso, celular usado para fotos e mensagens |
+| Ações | Percorrer o talhão; escolher frutos; examinar a casca com a lupa; repetir o exame ou chamar colega em caso de dúvida; fotografar; avisar o dono |
+| Problemas/rupturas | Ácaro pequeno e camuflado; fadiga visual; luz variável; dúvida entre ácaro e marca da casca; foto e aviso sem localização precisa; nenhum registro de onde já passou |
+| Consequências | Foco que passa despercebido no fim do percurso; informação imprecisa chegando a quem decide; receio de ser responsabilizado; inspeção menos confiável do que o protocolo prevê |
+
+### 5. Implicações para as próximas entregas
+
+- Vale analisar, na modelagem de tarefas, a tarefa "decidir se o que vejo é praga" separada de "percorrer a rota" e de "avisar o dono". Cada uma tem rupturas diferentes.
+- É preciso levantar com um pragueiro real quantos frutos e árvores ele inspeciona por dia, quanto tempo gasta por planta, como decide nas dúvidas e quanto a variação de luz atrapalha, sem ainda desenhar telas.
+- É preciso investigar como o achado chega hoje ao dono (canal, informação enviada, atraso). Isso se conecta ao C03: as "fotos soltas sem contexto" que o Marcelo recebe nascem justamente dessa etapa.
+- Vale checar se a falta de registro do percurso ([H09]) é uma dor real para o pragueiro ou só uma hipótese da equipe, e se o receio de ser responsabilizado aparece de fato nos relatos.
+- As hipóteses H08 e H09 ficam diretamente reforçadas por este cenário e devem ser priorizadas na investigação de campo da Entrega 7.
+
+---
+
 ## Cenário C03 — Parecer técnico remoto sem contexto suficiente sobre o foco de infestação
 
 **Autor(a):** Guilherme Morais Escudeiro - 24.123.005-1  
