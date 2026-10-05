@@ -47,7 +47,7 @@ Antônio (P02) recebe do dono as áreas que deve percorrer, caminha entre as ár
 
 ### Diagrama
 
-![HTA T01](../assets/05_tarefas/hta_t01.svg)
+![HTA T01](../assets/05_tarefas/hta_t01.png)
 
 ### Decomposição e planos
 
@@ -125,7 +125,7 @@ O modelo mostra a relação temporal entre as tarefas de Antônio e as do sistem
 
 ### Diagrama
 
-![CTT T03](../assets/05_tarefas/ctt_t03.svg)
+![CTT T03](../assets/05_tarefas/ctt_t03.png)
 
 
 ### Legenda e relações temporais usadas
