@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="880" viewBox="0 0 1680 880">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="840.0" y="34.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#24292f">CTT — T07 Validar detecções da IA (P03)</text>
+<text x="840.0" y="56.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#57606a">Autor: Guilherme Morais Escudeiro — 24.123.005-1</text>
+<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="1200" cy="113" rx="20" ry="11"/><circle cx="1192" cy="106" r="8"/><circle cx="1206" cy="104" r="10"/></g><ellipse cx="1200" cy="113" rx="19" ry="10" fill="#8250df22"/>
+<text x="1200" y="156.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Validar detecções pendentes</text>
+<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="870" cy="233" rx="20" ry="11"/><circle cx="862" cy="226" r="8"/><circle cx="876" cy="224" r="10"/></g><ellipse cx="870" cy="233" rx="19" ry="10" fill="#8250df22"/>
+<text x="870" y="276.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Validar detecção*</text>
+<rect x="1510" y="219" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="1514" y="223" width="6" height="5" fill="#0969da"/><rect x="1523" y="223" width="6" height="5" fill="#0969da"/><rect x="1532" y="223" width="6" height="5" fill="#0969da"/><rect x="1541" y="223" width="6" height="5" fill="#0969da"/><rect x="1514" y="232" width="6" height="5" fill="#0969da"/><rect x="1523" y="232" width="6" height="5" fill="#0969da"/><rect x="1532" y="232" width="6" height="5" fill="#0969da"/><rect x="1541" y="232" width="6" height="5" fill="#0969da"/>
+<text x="1530" y="276.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Encerrar revisão</text>
+<rect x="110" y="359" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="114" y="363" width="6" height="5" fill="#0969da"/><rect x="123" y="363" width="6" height="5" fill="#0969da"/><rect x="132" y="363" width="6" height="5" fill="#0969da"/><rect x="141" y="363" width="6" height="5" fill="#0969da"/><rect x="114" y="372" width="6" height="5" fill="#0969da"/><rect x="123" y="372" width="6" height="5" fill="#0969da"/><rect x="132" y="372" width="6" height="5" fill="#0969da"/><rect x="141" y="372" width="6" height="5" fill="#0969da"/>
+<text x="130" y="408.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Selecionar detecção</text>
+<text x="130" y="424.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">pendente</text>
+<rect x="362" y="356" width="36" height="24" rx="2" fill="#bc4c0022" stroke="#bc4c00" stroke-width="1.5"/><line x1="380" y1="380" x2="380" y2="385" stroke="#bc4c00" stroke-width="1.5"/><line x1="371" y1="385" x2="389" y2="385" stroke="#bc4c00" stroke-width="1.5"/>
+<text x="380" y="408.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Exibir foto, confiança</text>
+<text x="380" y="424.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">da IA e localização</text>
+<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="650" cy="373" rx="20" ry="11"/><circle cx="642" cy="366" r="8"/><circle cx="656" cy="364" r="10"/></g><ellipse cx="650" cy="373" rx="19" ry="10" fill="#8250df22"/>
+<text x="650" y="416.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Analisar evidências</text>
+<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="1250" cy="373" rx="20" ry="11"/><circle cx="1242" cy="366" r="8"/><circle cx="1256" cy="364" r="10"/></g><ellipse cx="1250" cy="373" rx="19" ry="10" fill="#8250df22"/>
+<text x="1250" y="416.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Registrar veredito</text>
+<rect x="1522" y="356" width="36" height="24" rx="2" fill="#bc4c0022" stroke="#bc4c00" stroke-width="1.5"/><line x1="1540" y1="380" x2="1540" y2="385" stroke="#bc4c00" stroke-width="1.5"/><line x1="1531" y1="385" x2="1549" y2="385" stroke="#bc4c00" stroke-width="1.5"/>
+<text x="1540" y="408.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Marcar como “validado</text>
+<text x="1540" y="424.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">por humano”</text>
+<g fill="#1a7f3722" stroke="#1a7f37" stroke-width="1.5"><circle cx="470" cy="502" r="7"/><path d="M 456 525 Q 470 504 484 525 Z"/></g>
+<text x="470" y="556.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Examinar a imagem</text>
+<rect x="630" y="499" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="634" y="503" width="6" height="5" fill="#0969da"/><rect x="643" y="503" width="6" height="5" fill="#0969da"/><rect x="652" y="503" width="6" height="5" fill="#0969da"/><rect x="661" y="503" width="6" height="5" fill="#0969da"/><rect x="634" y="512" width="6" height="5" fill="#0969da"/><rect x="643" y="512" width="6" height="5" fill="#0969da"/><rect x="652" y="512" width="6" height="5" fill="#0969da"/><rect x="661" y="512" width="6" height="5" fill="#0969da"/>
+<text x="650" y="556.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">[Ampliar imagem]</text>
+<rect x="820" y="499" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="824" y="503" width="6" height="5" fill="#0969da"/><rect x="833" y="503" width="6" height="5" fill="#0969da"/><rect x="842" y="503" width="6" height="5" fill="#0969da"/><rect x="851" y="503" width="6" height="5" fill="#0969da"/><rect x="824" y="512" width="6" height="5" fill="#0969da"/><rect x="833" y="512" width="6" height="5" fill="#0969da"/><rect x="842" y="512" width="6" height="5" fill="#0969da"/><rect x="851" y="512" width="6" height="5" fill="#0969da"/>
+<text x="840" y="548.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">[Consultar histórico</text>
+<text x="840" y="564.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">do ponto]</text>
+<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="1110" cy="513" rx="20" ry="11"/><circle cx="1102" cy="506" r="8"/><circle cx="1116" cy="504" r="10"/></g><ellipse cx="1110" cy="513" rx="19" ry="10" fill="#8250df22"/>
+<text x="1110" y="556.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Escolher veredito</text>
+<rect x="1400" y="499" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="1404" y="503" width="6" height="5" fill="#0969da"/><rect x="1413" y="503" width="6" height="5" fill="#0969da"/><rect x="1422" y="503" width="6" height="5" fill="#0969da"/><rect x="1431" y="503" width="6" height="5" fill="#0969da"/><rect x="1404" y="512" width="6" height="5" fill="#0969da"/><rect x="1413" y="512" width="6" height="5" fill="#0969da"/><rect x="1422" y="512" width="6" height="5" fill="#0969da"/><rect x="1431" y="512" width="6" height="5" fill="#0969da"/>
+<text x="1420" y="548.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">[Anotar observação</text>
+<text x="1420" y="564.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">técnica]</text>
+<rect x="940" y="639" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="944" y="643" width="6" height="5" fill="#0969da"/><rect x="953" y="643" width="6" height="5" fill="#0969da"/><rect x="962" y="643" width="6" height="5" fill="#0969da"/><rect x="971" y="643" width="6" height="5" fill="#0969da"/><rect x="944" y="652" width="6" height="5" fill="#0969da"/><rect x="953" y="652" width="6" height="5" fill="#0969da"/><rect x="962" y="652" width="6" height="5" fill="#0969da"/><rect x="971" y="652" width="6" height="5" fill="#0969da"/>
+<text x="960" y="696.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Confirmar</text>
+<rect x="1090" y="639" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="1094" y="643" width="6" height="5" fill="#0969da"/><rect x="1103" y="643" width="6" height="5" fill="#0969da"/><rect x="1112" y="643" width="6" height="5" fill="#0969da"/><rect x="1121" y="643" width="6" height="5" fill="#0969da"/><rect x="1094" y="652" width="6" height="5" fill="#0969da"/><rect x="1103" y="652" width="6" height="5" fill="#0969da"/><rect x="1112" y="652" width="6" height="5" fill="#0969da"/><rect x="1121" y="652" width="6" height="5" fill="#0969da"/>
+<text x="1110" y="696.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Rejeitar</text>
+<rect x="1250" y="639" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="1254" y="643" width="6" height="5" fill="#0969da"/><rect x="1263" y="643" width="6" height="5" fill="#0969da"/><rect x="1272" y="643" width="6" height="5" fill="#0969da"/><rect x="1281" y="643" width="6" height="5" fill="#0969da"/><rect x="1254" y="652" width="6" height="5" fill="#0969da"/><rect x="1263" y="652" width="6" height="5" fill="#0969da"/><rect x="1272" y="652" width="6" height="5" fill="#0969da"/><rect x="1281" y="652" width="6" height="5" fill="#0969da"/>
+<text x="1270" y="688.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Solicitar nova</text>
+<text x="1270" y="704.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">foto ao campo</text>
+<line x1="1200" y1="172" x2="1200" y2="192" stroke="#57606a" stroke-width="1.3"/>
+<line x1="870" y1="192" x2="1530" y2="192" stroke="#57606a" stroke-width="1.3"/>
+<line x1="870" y1="192" x2="870" y2="208" stroke="#57606a" stroke-width="1.3"/>
+<line x1="1530" y1="192" x2="1530" y2="208" stroke="#57606a" stroke-width="1.3"/>
+<rect x="1176.0" y="218" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
+<text x="1200.0" y="234.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[&gt;</text>
+<line x1="870" y1="292" x2="870" y2="332" stroke="#57606a" stroke-width="1.3"/>
+<line x1="130" y1="332" x2="1540" y2="332" stroke="#57606a" stroke-width="1.3"/>
+<line x1="130" y1="332" x2="130" y2="348" stroke="#57606a" stroke-width="1.3"/>
+<line x1="380" y1="332" x2="380" y2="348" stroke="#57606a" stroke-width="1.3"/>
+<line x1="650" y1="332" x2="650" y2="348" stroke="#57606a" stroke-width="1.3"/>
+<line x1="1250" y1="332" x2="1250" y2="348" stroke="#57606a" stroke-width="1.3"/>
+<line x1="1540" y1="332" x2="1540" y2="348" stroke="#57606a" stroke-width="1.3"/>
+<rect x="231.0" y="358" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
+<text x="255.0" y="374.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[]&gt;&gt;</text>
+<rect x="491.0" y="358" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
+<text x="515.0" y="374.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">&gt;&gt;</text>
+<rect x="926.0" y="358" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
+<text x="950.0" y="374.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">&gt;&gt;</text>
+<rect x="1371.0" y="358" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
+<text x="1395.0" y="374.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[]&gt;&gt;</text>
+<line x1="650" y1="432" x2="650" y2="472" stroke="#57606a" stroke-width="1.3"/>
+<line x1="470" y1="472" x2="840" y2="472" stroke="#57606a" stroke-width="1.3"/>
+<line x1="470" y1="472" x2="470" y2="488" stroke="#57606a" stroke-width="1.3"/>
+<line x1="650" y1="472" x2="650" y2="488" stroke="#57606a" stroke-width="1.3"/>
+<line x1="840" y1="472" x2="840" y2="488" stroke="#57606a" stroke-width="1.3"/>
+<rect x="536.0" y="498" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
+<text x="560.0" y="514.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">|||</text>
+<rect x="721.0" y="498" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
+<text x="745.0" y="514.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">|||</text>
+<line x1="1250" y1="432" x2="1250" y2="472" stroke="#57606a" stroke-width="1.3"/>
+<line x1="1110" y1="472" x2="1420" y2="472" stroke="#57606a" stroke-width="1.3"/>
+<line x1="1110" y1="472" x2="1110" y2="488" stroke="#57606a" stroke-width="1.3"/>
+<line x1="1420" y1="472" x2="1420" y2="488" stroke="#57606a" stroke-width="1.3"/>
+<rect x="1241.0" y="498" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
+<text x="1265.0" y="514.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[]&gt;&gt;</text>
+<line x1="1110" y1="572" x2="1110" y2="612" stroke="#57606a" stroke-width="1.3"/>
+<line x1="960" y1="612" x2="1270" y2="612" stroke="#57606a" stroke-width="1.3"/>
+<line x1="960" y1="612" x2="960" y2="628" stroke="#57606a" stroke-width="1.3"/>
+<line x1="1110" y1="612" x2="1110" y2="628" stroke="#57606a" stroke-width="1.3"/>
+<line x1="1270" y1="612" x2="1270" y2="628" stroke="#57606a" stroke-width="1.3"/>
+<rect x="1011.0" y="638" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
+<text x="1035.0" y="654.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[]</text>
+<rect x="1166.0" y="638" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
+<text x="1190.0" y="654.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[]</text>
+<rect x="25" y="780" width="1630" height="95" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
+<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="60" cy="815" rx="20" ry="11"/><circle cx="52" cy="808" r="8"/><circle cx="66" cy="806" r="10"/></g><ellipse cx="60" cy="815" rx="19" ry="10" fill="#8250df22"/>
+<text x="90" y="816.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a">abstrata</text>
+<g fill="#1a7f3722" stroke="#1a7f37" stroke-width="1.5"><circle cx="250" cy="804" r="7"/><path d="M 236 827 Q 250 806 264 827 Z"/></g>
+<text x="280" y="816.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a">usuário</text>
+<rect x="420" y="801" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="424" y="805" width="6" height="5" fill="#0969da"/><rect x="433" y="805" width="6" height="5" fill="#0969da"/><rect x="442" y="805" width="6" height="5" fill="#0969da"/><rect x="451" y="805" width="6" height="5" fill="#0969da"/><rect x="424" y="814" width="6" height="5" fill="#0969da"/><rect x="433" y="814" width="6" height="5" fill="#0969da"/><rect x="442" y="814" width="6" height="5" fill="#0969da"/><rect x="451" y="814" width="6" height="5" fill="#0969da"/>
+<text x="470" y="816.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a">interação</text>
+<rect x="612" y="798" width="36" height="24" rx="2" fill="#bc4c0022" stroke="#bc4c00" stroke-width="1.5"/><line x1="630" y1="822" x2="630" y2="827" stroke="#bc4c00" stroke-width="1.5"/><line x1="621" y1="827" x2="639" y2="827" stroke="#bc4c00" stroke-width="1.5"/>
+<text x="660" y="816.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a">sistema/aplicação</text>
+<text x="820" y="806.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">&gt;&gt;  habilitação</text>
+<text x="960" y="806.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">[]&gt;&gt;  habilitação c/ passagem de informação</text>
+<text x="1300" y="806.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">|||  concorrência</text>
+<text x="1450" y="806.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">[]  escolha</text>
+<text x="820" y="836.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">[&gt;  desabilitação</text>
+<text x="960" y="836.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">T*  iteração</text>
+<text x="1100" y="836.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">[T]  opcional</text>
+</svg>
