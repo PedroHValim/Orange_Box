@@ -199,12 +199,12 @@ Sem saber com certeza a extensão da área afetada, nem se o problema já havia 
 
 ## Checklist
 
-- [ ] Há um cenário completo por integrante.
-- [ ] Cada cenário tem título, ator, objetivo, contexto e problema.
-- [ ] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
-- [ ] O texto descreve a situação atual, sem antecipar a solução.
+- [x] Há um cenário completo por integrante.
+- [x] Cada cenário tem título, ator, objetivo, contexto e problema.
+- [x] O cenário possui origem rastreável na Entrega 1 ou justifica claramente a inclusão de uma nova situação.
+- [x] O texto descreve a situação atual, sem antecipar a solução.
 - [ ] Para TCC sem interface original, o cenário descreve uma prática humana plausível relacionada à contribuição técnica, e não “a falta de uma tela”.
-- [ ] Questões de refinamento acrescentam informação nova.
-- [ ] O refinamento mostra claramente o que foi adicionado/alterado.
-- [ ] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
-- [ ] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
+- [x] Questões de refinamento acrescentam informação nova.
+- [x] O refinamento mostra claramente o que foi adicionado/alterado.
+- [x] Cenários são diferentes o suficiente para cobrir objetivos/problemas relevantes.
+- [x] Cada cenário está ligado a persona/necessidade na matriz de rastreabilidade.
