@@ -22,50 +22,62 @@ A interface da disciplina aparecerá somente depois, nos cenários de interaçã
 
 Se o integrante escolher um novo problema/situação, explique por que ele passou a ser relevante e indique a evidência que motivou sua inclusão.
 
-## Cenário C01 — {{título}}
+## Cenário C01 — Planejamento do manejo sem visão consolidada da propriedade ao longo dos ciclos
 
-**Autor(a):** {{nome — matrícula}}  
-**Persona(s) relacionada(s):** {{P01}}  
-**Necessidade relacionada:** {{R01}}  
-**Situação concreta da Entrega 1 relacionada:** {{seção 4.4 / H01 / outra ou “nova situação justificada”}}  
-**Hipóteses ainda presentes:** {{H01, H02 ou —}}
+**Autor(a):** Pedro Henrique Ferreira Valim - 24.123.048-1  
+**Persona(s) relacionada(s):** P01 (Jaime Carteiro, dono da fazenda)  
+**Necessidade relacionada:** Acesso a dados confiáveis sobre os focos de infestação para orientar as ações de manejo (necessidade registrada na Entrega 3, persona P01)  
+**Situação concreta da Entrega 1 relacionada:** seção 3.4 (H06: decidir onde aplicar o produto de controle é a atividade mais crítica), com apoio das seções 3.2 (A02 e A03: decidir onde e quando aplicar; acompanhar se o problema se espalha), 5.4 (F24: quem inspeciona não é quem decide) e 9.1 (H19: hoje não há registro visual organizado dos focos)  
+**Hipóteses ainda presentes:** H04, H05, H06, H09, H21
 
 ### 1. Cenário inicial
 
-{{narrativa}}
+Jaime é dono de uma fazenda de citros e cuida da parte administrativa e estratégica da propriedade. Ele conhece pouco a praga e depende do pragueiro para saber se há infestação e onde. A cada ciclo de inspeção, o pragueiro percorre os talhões e, ao final, avisa Jaime de forma verbal ou por mensagem, dizendo mais ou menos o que viu.
+
+Jaime precisa decidir onde aplicar o produto de controle, em que ordem e com que urgência, e também quanto reservar de orçamento e mão de obra para isso. Mas o que chega até ele é uma impressão geral ("tem uns focos no fundo da fazenda"), sem um quadro do que está acontecendo em cada talhão. Ele não sabe se aquela área já teve problema em ciclos anteriores nem se a infestação está crescendo, estável ou diminuindo.
+
+Como não sabe identificar a praga sozinho, Jaime não tem como conferir o que ouve. Se o pragueiro não pôde passar em alguma área, ou se passou rápido, ele não fica sabendo. No fim, planeja o manejo da propriedade com base em impressão, e não em dados.
 
 ### 2. Questões de refinamento
 
-Use os tipos de questões/taxonomia definidos na aula. As perguntas devem revelar informações **ainda ausentes** do cenário, não repetir o que já foi respondido.
-
 | # | Questão | Por que precisa ser respondida | Fonte/forma de obter resposta |
 |---|---|---|---|
-| Q1 | {{...}} | {{...}} | {{...}} |
+| Q1 | Como Jaime recebe hoje o resultado de cada ciclo de inspeção (conversa, mensagem, relatório) e com que nível de detalhe? | Mostra o que se perde entre quem inspeciona e quem decide, relacionado a [F24] | Entrevista com o dono da propriedade |
+| Q2 | Que decisões ele toma a partir desse resultado (onde aplicar, em que ordem, quando, quanto comprar de produto, quantas pessoas alocar)? | Define o que o gestor realmente precisa enxergar, em vez de supor o que ele "deveria" querer | Entrevista com o dono; relato de uma decisão recente |
+| Q3 | Ele consegue comparar o ciclo atual com os anteriores? Como sabe se a praga está avançando e se a última aplicação funcionou? | Revela se a falta de histórico é uma dor real, relacionado a [H05] e [H09] | Entrevista; observação de como guarda ou perde as informações |
+| Q4 | Quantos pragueiros atendem a propriedade e o que acontece quando um deles não está disponível? | Dimensiona a dependência descrita na persona e o peso da escassez de pragueiros | Entrevista com o dono e com o pragueiro |
+| Q5 | Como ele sabe quais talhões foram de fato inspecionados em um ciclo? | Mostra se ele consegue diferenciar "sem praga" de "ninguém passou", ligado ao C02 | Entrevista com o dono e com o pragueiro |
 
 ### 3. Cenário refinado
 
-Reescreva o cenário incorporando as respostas. Marque o conteúdo novo de forma consistente (por exemplo, `**[NOVO: ...]**`).
+Jaime é dono de uma fazenda de citros e cuida da parte administrativa e estratégica da propriedade. Ele conhece pouco a praga e depende do pragueiro para saber se há infestação e onde. **[NOVO: a propriedade conta com poucos pragueiros disponíveis, e a inspeção se repete em ciclos de cerca de 14 dias.]** A cada ciclo de inspeção, o pragueiro percorre os talhões e, ao final, avisa Jaime **[NOVO: pessoalmente ou por mensagem no celular, e quase sempre de memória]**, dizendo mais ou menos o que viu.
 
-{{narrativa refinada}}
+Jaime precisa decidir onde aplicar o produto de controle, em que ordem e com que urgência, e também quanto reservar de orçamento e mão de obra para isso. **[NOVO: essa decisão é tomada a cada ciclo, geralmente no escritório da propriedade, e ele só vai ao talhão quando fica inseguro.]** Mas o que chega até ele é uma impressão geral ("tem uns focos no fundo da fazenda"), sem um quadro do que está acontecendo em cada talhão. Ele não sabe se aquela área já teve problema em ciclos anteriores nem se a infestação está crescendo, estável ou diminuindo. **[NOVO: ele guarda o histórico apenas na memória e em conversas antigas, e por isso também não consegue dizer se a última aplicação surtiu efeito.]**
+
+Como não sabe identificar a praga sozinho, Jaime não tem como conferir o que ouve. Se o pragueiro não pôde passar em alguma área, ou se passou rápido, ele não fica sabendo. **[NOVO: quando o pragueiro está indisponível, o ciclo atrasa ou é feito com menos cobertura, e o Jaime só percebe isso depois.]** No fim, planeja o manejo da propriedade com base em impressão, e não em dados. **[NOVO: ele não consegue priorizar os talhões com segurança nem justificar para si mesmo quanto precisa gastar naquele ciclo.]**
+
+> **Nota de rastreabilidade:** o ponto de que quem inspeciona não é quem decide vem de [F24], que é fato. Os demais trechos **[NOVO]** são **hipóteses plausíveis**, construídas a partir da persona P01 e das hipóteses [H04], [H05], [H06], [H09] e [H21] da Entrega 1. Elas ainda **não foram validadas com um dono de fazenda real** e devem ser confirmadas ou corrigidas na investigação de campo da Entrega 7.
 
 ### 4. Elementos extraídos
 
 | Elemento | Evidência no cenário |
 |---|---|
-| Ator(es) | {{...}} |
-| Objetivo(s) | {{...}} |
-| Contexto | {{...}} |
-| Recursos/informações | {{...}} |
-| Ações | {{...}} |
-| Problemas/rupturas | {{...}} |
-| Consequências | {{...}} |
+| Ator(es) | Jaime (dono/gestor, P01); pragueiro (P02), fonte da informação; agrônomo consultor (P03), eventualmente consultado |
+| Objetivo(s) | Planejar onde, em que ordem e com que orçamento aplicar o manejo, com base em dados confiáveis |
+| Contexto | Escritório da propriedade, com visitas eventuais ao talhão; decisão a cada ciclo de cerca de 14 dias; informação chegando por terceiros |
+| Recursos/informações | Relato verbal ou mensagem do pragueiro, memória de quem esteve em campo, conversas antigas |
+| Ações | Receber o aviso do ciclo; decidir onde e quando aplicar; reservar orçamento e mão de obra; ir ao talhão quando fica inseguro |
+| Problemas/rupturas | Ausência de visão por talhão e de histórico entre ciclos; impossibilidade de conferir o que ouve; dependência de poucos pragueiros; não saber o que foi inspecionado |
+| Consequências | Priorização e orçamento baseados em impressão; não saber se a aplicação anterior funcionou; ciclos com cobertura reduzida sem que ele perceba |
 
 ### 5. Implicações para as próximas entregas
 
-Quais tarefas merecem análise? Quais informações precisam ser coletadas? **Não desenhe a solução ainda.**
-
-> Repita para C02, C03... com autoria individual.
-
+- Vale analisar, na modelagem de tarefas, "entender a situação geral da propriedade" como tarefa própria de P01, separada de "capturar a praga" (P02) e de "emitir parecer" (P03). Cada uma tem rupturas diferentes.
+- É preciso levantar com um dono real quais decisões ele toma a partir da informação (onde aplicar, em que ordem, quando, orçamento) e que tipo de visão o ajudaria em cada uma, sem ainda desenhar telas.
+- Vale checar se a comparação entre ciclos é uma necessidade real ou só uma hipótese da equipe, e qual intervalo de tempo faz sentido acompanhar.
+- Convém investigar o que dá confiança ao Jaime num alerta, já que ele não sabe validar a praga sozinho. Isso conecta com o C02: ele precisa saber se "sem alerta" significa "inspecionado e limpo" ou "ninguém passou".
+- Fica em aberto onde está a fronteira entre mostrar o dado e recomendar uma ação, já que isso pode invadir o papel do agrônomo (P03), tratado no C03.
+- As hipóteses H04, H05, H06, H09 e H21 ficam diretamente reforçadas por este cenário e devem ser priorizadas na investigação de campo da Entrega 7.
 ---
 
 ## Cenário C02 — Inspeção manual de frutos com lupa, sob fadiga e sem registro do percurso
