@@ -26,10 +26,10 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 
 ### Funcionalidade — Pedro
 
-**Funcionalidade:** {{...}}<br>
-**Personas:** {{...}}<br>
-**Cenários/tarefas cobertos:** {{...}}<br>
-**Objetivos principais:** {{...}}
+**Funcionalidade:** revisão do resultado do ciclo, avaliação da evolução dos talhões e registro da decisão de manejo.<br> 
+**Persona:** P01 — Jaime Carteiro, dono da fazenda.<br> 
+**Cenários/tarefas cobertos:** C01; T09 — revisar o resultado do ciclo e decidir se confia nele; T08 — avaliar a evolução de um talhão entre ciclos; T04 — planejar o manejo do ciclo (passos 1, 2, 3, 4 e 5).<br> 
+**Objetivos principais:** conferir a cobertura do ciclo antes dos resultados, mostrar onde estão os focos e como evoluem, dar ao gestor evidência que ele consiga avaliar sem conhecimento técnico, permitir pedir parecer ou reinspeção e registrar a decisão do ciclo.
 
 ## 1.1 Possíveis famílias de interface
 
@@ -42,7 +42,14 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 
 **Guilherme:** {{...}}
 
-**Pedro:** {{...}}
+**Pedro:**
+
+- **Visão geral:** resumo do ciclo e cobertura da propriedade por talhão.
+- **Alertas/ocorrências:** aviso de ciclo concluído.
+- **Resultados:** talhões com focos, em mapa e em lista ordenada.
+- **Explicabilidade/detalhamento:** fotos, grau de confiança e local de cada talhão.
+- **Histórico/comparação:** evolução do talhão entre ciclos e última aplicação.
+- **Encaminhamento e registro:** pedido de parecer ou reinspeção, decisão do ciclo e repasse.
 
 ## 2. Fluxos escolhidos
 
@@ -51,7 +58,8 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 | Lucas | PF01 | Fotografar o fruto, interpretar e registrar o resultado — T02. | Tarefa frequente, sujeita a erros de captura e interpretação. |
 | Lucas | PF02 | Conferir a rota e o envio dos achados — T01/T03. | Reduz dúvidas sobre pontos esquecidos e registros não enviados. |
 | Guilherme | {{...}} | {{...}} | {{...}} |
-| Pedro | {{...}} | {{...}} | {{...}} |
+| Pedro | PF05 | Revisar o resultado do ciclo, conferir a cobertura e decidir se confia — T09 (e T04, passos 1 e 2.3). | Sem a cobertura, o gestor não diferencia "sem praga" de "ninguém passou" [H09], e ele não valida a praga sozinho. |
+| Pedro | PF06 | Avaliar a evolução de um talhão e registrar a decisão do ciclo — T08 e T04 (passos 2.2, 3, 4 e 5). | Decidir onde aplicar é a atividade mais crítica do gestor [H06] e depende de saber se a praga avança e se a última aplicação funcionou. |
 
 ## 3. Telas e estados
 
@@ -92,10 +100,17 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 
 | Tela/estado | Conteúdo previsto | Controles e mudanças de estado |
 |---|---|---|
-| {{...}} | {{...}} | {{...}} |
+| G01 | Resumo do ciclo concluído: data, quantos talhões foram inspecionados e quantos têm focos. | Ver cobertura → G02. |
+| G02 | Cobertura do ciclo: talhões inspecionados e não inspecionados, bem diferenciados de "sem focos". | Pedir nova inspeção dos talhões não cobertos (confirma e permanece em G02); continuar → G03. |
+| G03 | Talhões com focos, em mapa e em lista ordenada por gravidade e tendência. | Selecionar talhão → G04; encerrar revisão → G07; voltar → G02. |
+| G04 | Detalhe do talhão no ciclo: fotos, grau de confiança em linguagem simples (sem números técnicos), local e aviso se a cobertura do talhão foi incompleta. | Aceitar como confiável, marcar para parecer do agrônomo ou pedir reinspeção → G05; ver evolução → G06; voltar → G03. |
+| G05 | Confirmação da posição registrada para o talhão (confiável, parecer pedido ou reinspeção pedida). | Próximo talhão → G03; encerrar revisão → G07. |
+| G06 | Evolução do talhão por ciclo (avançando, estável ou recuando), com a última aplicação marcada. Avisa quando algum ciclo comparado teve cobertura incompleta. | Ver cobertura dos ciclos comparados → G02; voltar → G04. |
+| G07 | Decisão do ciclo: talhões com a posição registrada e escolha de onde e quando aplicar, com urgência. | Registrar decisão → G08; voltar → G03. |
+| G08 | Confirmação da decisão registrada e do repasse a quem aplica o produto. | Repassar; tentar novamente após falha. |
 
-**Caminho principal:** {{...}}<br>
-**Erros e retornos:** {{...}}
+**Caminho principal:** G01 → G02 → G03 → G04 → G05 → G03 (próximo talhão) → G07 → G08. O desvio G04 → G06 → G04 corresponde à avaliação da evolução (T08).<br>
+**Erros e retornos:** talhão sem inspeção permite pedir nova inspeção em G02 sem sair da tela; cobertura incompleta aparece em G04 e G06 e impede que a comparação pareça conclusiva; a dúvida do gestor leva a "parecer do agrônomo" ou "reinspeção", e não bloqueia o fluxo; encerrar a revisão a qualquer momento mantém as posições já registradas; falha no repasse mantém a decisão salva para nova tentativa.
 
 ![Protótipo](../assets/06_prototipos/prototipo_fluxo_03.svg)
 
@@ -134,15 +149,19 @@ As observações reais serão preenchidas após a simulação.
 
 ### Funcionalidade — Pedro
 
-**Situação:** {{...}}<br>
-**Condutor:** {{...}}<br>
-**Participante:** {{...}}<br>
-**Data da simulação:** {{...}}<br>
-**Roteiro:** {{...}}
+**Situação:** pendente, após desenhar as telas.<br>
+**Condutor:** Pedro.<br>
+**Participante:** a definir (pessoa que não participou da elaboração das telas).<br>
+**Data da simulação:** a definir.
+
+**Roteiro:** pedir que a pessoa, no papel de dono da fazenda, abra o resumo do ciclo, diga quais talhões não foram inspecionados, escolha um talhão com foco, explique se confia no resultado e por quê, compare com o ciclo anterior, registre a posição do talhão e a decisão do ciclo e repasse a decisão.
 
 | Observação | Tela/ação | Evidência | Consequência para o design |
 |---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+| A verificar: diferença entre "sem focos" e "não inspecionado". | G01/G02 — conferir a cobertura. | Registrar como a pessoa descreve um talhão sem inspeção. | Revisar rótulos, cores e textos da cobertura. |
+| A verificar: compreensão da confiança do resultado. | G04 — decidir se confia. | Registrar o que a pessoa usa para decidir (fotos, grau de confiança, local). | Ajustar a forma de mostrar evidência e confiança. |
+| A verificar: leitura da evolução entre ciclos. | G06 — avaliar tendência e última aplicação. | Registrar se a pessoa conclui "avançando", "estável" ou "recuando" e se nota a cobertura incompleta. | Revisar a forma de mostrar a comparação e o aviso de cobertura. |
+| A verificar: diferença entre registrada e repassada. | G08 — registrar e repassar. | Registrar se a pessoa sabe se a decisão chegou a quem aplica. | Revisar legendas e mensagens de estado. |
 
 ## 5. Alterações após a simulação
 
