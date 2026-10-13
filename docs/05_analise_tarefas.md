@@ -32,9 +32,12 @@ Um CRUD pode gerar tarefas relevantes, mas “cadastrar usuário” só merece m
 | T01 | Inspecionar a rota do dia e repassar os achados (HTA) | P02 / C02 | Frequência alta: a inspeção se repete ao longo do ano, em ciclos de cerca de 14 dias [F16], [F17]. Criticidade alta: um foco que passa despercebido continua se espalhando [F20], [F25] | Lucas Tonoli Cabral Duarte - 24.123.032-5 |
 | T02 | Verificar um fruto e encaminhar o resultado (GOMS) | P02 / C02 | Frequência muito alta: repetida a cada fruto de cada árvore da rota [F16], [F17]. Criticidade alta: é onde o foco é detectado ou passa despercebido [F19], [F20] | Lucas Tonoli Cabral Duarte - 24.123.032-5 |
 | T03 | Inspecionar a rota do dia e repassar os achados (CTT) | P02 / C02 | Frequência alta e criticidade alta, como em T01 | Lucas Tonoli Cabral Duarte - 24.123.032-5 |
+| T04 | Planejar o manejo do ciclo: decidir onde aplicar, quando e com que orçamento (HTA) | P01 / C01 | Frequência: a cada ciclo de inspeção, de cerca de 14 dias (valor do protocolo citado no C02, a confirmar com um dono real) [H05]. Criticidade **alta**: decidir onde aplicar é a atividade mais crítica [H06]; uma decisão errada gera gasto em área sem problema ou foco que se espalha [F20], [F25] | Pedro Henrique Ferreira Valim - 24.123.048-1 |
 | T05 | Emitir parecer técnico sobre um foco de infestação | P03 / C03 | Algumas vezes por mês; **crítica** (erro gera aplicação em área errada ou atraso de dias) | Guilherme Morais Escudeiro |
 | T06 | Localizar no histórico as inspeções de um talhão | P03 / C03 | Sempre que um parecer é emitido; **alta** (base da comparação temporal) | Guilherme Morais Escudeiro |
 | T07 | Validar (confirmar/rejeitar) uma detecção da IA | P03 / C03 | A cada detecção positiva; **alta** (separa "sinal da IA" de "confirmação humana") | Guilherme Morais Escudeiro |
+| T08 | Avaliar a evolução de um talhão entre ciclos (GOMS) | P01 / C01 | A cada ciclo, para os talhões de interesse [H05]; **alta** (base para saber se a praga avança e se a última aplicação funcionou [H09], [H22]). | Pedro Henrique Ferreira Valim - 24.123.048-1 |
+| T09 | Revisar o resultado do ciclo e decidir se confia nele (CTT) | P01 / C01 | A cada ciclo; **alta** (Jaime não valida a praga sozinho e precisa diferenciar "sem alerta" de "ninguém passou" [H09]) | Pedro Henrique Ferreira Valim - 24.123.048-1 |
 
 > Priorize tarefas necessárias para que o usuário alcance objetivos centrais. Não desperdice a modelagem em ações triviais isoladas, como “clicar em login”, se o objetivo relevante é maior. Da mesma forma, não modele o funcionamento interno do algoritmo como se fosse uma tarefa humana.
 
@@ -289,6 +292,155 @@ Marcelo revisa as detecções positivas geradas pela IA em campo e decide, para 
 - **Candidatos ao protótipo e ao teste de usabilidade:** o fluxo *alerta → detecção → histórico do ponto → veredito* (T07 + M3 do T06), por concentrar a principal dor do C03 em poucas telas.
 - **Hipóteses que continuam abertas:** H04, H07 e H21 (ver C03); frequência real dos pareceres e metadados mínimos exigidos por um agrônomo, a validar na Entrega 7.
 
+
+## Modelagens de Pedro Henrique Ferreira Valim — P01 / C01
+ 
+As três modelagens abaixo partem do cenário C01 (Entrega 4) e da persona P01, Jaime Carteiro, dono da fazenda. Ele não inspeciona nem valida a praga: decide, a cada ciclo, onde aplicar o manejo e com que orçamento, a partir do que chega do campo. As tarefas descrevem o que o gestor faz com os **resultados** da detecção, e não o funcionamento interno da rede neural. Elas se encaixam nas dos colegas: o que P02 captura em T01 a T03 é o que P01 revisa aqui, e o parecer que P03 emite em T05 volta para P01 como entrada da decisão.
+ 
+---
+ 
+## HTA — T04 Planejar o manejo do ciclo
+ 
+**Autor(a):** Pedro Henrique Ferreira Valim — 24.123.048-1
+ 
+### Descrição da tarefa
+ 
+- **Objetivo:** decidir onde aplicar o produto de controle, quando e com que orçamento e mão de obra, com base nos resultados do ciclo de inspeção, e deixar a decisão registrada e repassada a quem executa.
+- **Ponto de início:** Jaime fica sabendo que o ciclo de inspeção terminou. Hoje isso chega por conversa ou mensagem do pragueiro; no escopo de IHC, chegaria como aviso do próprio sistema.
+- **Conclusão esperada:** a decisão do ciclo fica registrada e chega a quem aplica o produto [H02].
+- **Contexto:** escritório da propriedade, com visitas eventuais ao talhão (persona P01); baixo conhecimento técnico para identificar a praga; decisão repetida a cada ciclo. Quem inspeciona não é quem decide [F24].
+A tarefa é descrita no nível do que P01 faz ao usar a contribuição do TCC, sem desenhar telas. Parte da sequência vem de hipóteses ainda não validadas com um dono de fazenda real ([H04], [H05], [H06], [H09], [H21]) e será confirmada na Entrega 7.
+ 
+### Diagrama
+ 
+![HTA T04](../assets/05_tarefas/hta_t04_(1).dot)
+ 
+*Fonte editável: `hta_t04.dot` (Graphviz).*
+ 
+### Decomposição e planos
+ 
+| ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
+|---|---|---|---|
+| 0 | Planejar o manejo do ciclo | 1 > 2 > 3 > 4 > 5 | A decisão é a atividade mais crítica de P01 [H06] e quem inspeciona nem sempre decide [F24]: a tarefa só se completa quando a decisão chega a quem executa |
+| 1 | Receber o resultado do ciclo | 1.1 > 1.2 > se há talhão sem inspeção: 1.3 | Hoje o resultado chega por relato verbal ou mensagem, quase sempre de memória (C01, Q1) |
+| 1.1 | Saber que o ciclo foi concluído | — | Sem aviso estruturado, Jaime depende de o pragueiro lembrar de avisar; o aviso do ciclo evita esperar pelo relato |
+| 1.2 | Conferir quais talhões foram inspecionados | — | Hoje ele não diferencia "sem praga" de "ninguém passou" (C01, Q5; C02, [H09]): a cobertura precisa aparecer antes da leitura dos resultados |
+| 1.3 | Pedir nova inspeção dos talhões não cobertos | Só se 1.2 mostrar talhão sem inspeção | Depende de poucos pragueiros (C01, Q4): o pedido precisa ser direto e não virar mais uma conversa solta |
+| 2 | Entender a situação da propriedade | 2.1 > 2.2 > 2.3 | Do geral para o específico: primeiro onde estão os focos, depois como evoluíram, por fim se os dados merecem confiança |
+| 2.1 | Identificar os talhões com focos | — | Falta um quadro por talhão [H19]; a leitura precisa ser objetiva e sem exigir conhecimento técnico (persona P01) |
+| 2.2 | Comparar com os ciclos anteriores | — | Hoje o histórico fica só na memória e em conversas antigas [H05], [H09]; detalhado no GOMS T08 |
+| 2.3 | Avaliar se confia nos dados | — | Jaime não valida a praga sozinho (persona P01): o alerta precisa mostrar o que foi detectado e com que confiança, em linguagem simples; detalhado no CTT T09 |
+| 3 | Priorizar os talhões | 3.1 > se a dúvida persistir: 3.2 | Hoje ele não consegue priorizar com segurança (C01, cenário refinado) |
+| 3.1 | Ordenar os talhões por gravidade e tendência | — | Decisão em aberto: mostrar só o dado ou também sugerir uma ordem. Sugerir pode invadir o papel do agrônomo (P03) |
+| 3.2 | Pedir parecer do agrônomo (P03) | Só quando a dúvida persiste após 2.3 | É o ponto em que a tarefa T05 de Guilherme começa. O pedido deve levar o talhão e o motivo da dúvida, para P03 não partir do zero (C03) |
+| 4 | Decidir o manejo | 4.1 > 4.2 > 4.3 | A área vem primeiro porque ela determina urgência e custo; o erro de aplicar em área maior que a necessária acontece em 4.1 [H06] |
+| 4.1 | Definir onde aplicar | — | A decisão é de Jaime, embora [H04] ainda não confirme quem decide no dia a dia; a escolha por talhão deve partir do mesmo mapa usado para entender a situação |
+| 4.2 | Definir quando e com que urgência | — | Depende da tendência (2.2) e do tempo que a praga leva para se espalhar [F14] |
+| 4.3 | Estimar orçamento e mão de obra | — | Fora do escopo da interface: é julgamento administrativo de Jaime. O sistema apenas fornece a área e o número de talhões envolvidos, e por isso o passo não foi decomposto |
+| 5 | Registrar e repassar a decisão | 5.1 > 5.2 | Sem registro, a decisão não vira histórico para o ciclo seguinte [H22] |
+| 5.1 | Registrar a decisão do ciclo | — | Permite saber, no ciclo seguinte, se a aplicação funcionou (liga com T08) |
+| 5.2 | Repassar a quem executa a aplicação | — | Quem aplica pode não ser quem usa o app [H02]: o repasse precisa ser explícito |
+ 
+**Verificação do HTA:**
+ 
+- **O objetivo 0 representa uma meta do usuário?** Sim. É a meta de P01 registrada na persona e na Entrega 1 (A02, [F15]): proteger a produção, gastando menos e agindo no lugar certo. Não é "usar o app".
+- **As subtarefas são necessárias e suficientes?** Cobrem o ciclo do C01: receber, entender, priorizar, decidir e registrar. Ficaram de fora a captura da imagem (P02, T01 a T03), a validação técnica da detecção (P03, T07) e a aplicação do produto no campo.
+- **Os planos indicam ordem, alternativa, repetição ou condição?** Sim. Ordem (1 > 2 > 3 > 4 > 5 e dentro de cada bloco), condição em 1.3 (só com talhão sem inspeção) e em 3.2 (só se a dúvida persistir). A repetição por ciclo está no contexto da tarefa, e não dentro do diagrama.
+- **A decomposição parou em nível útil para projeto de interação?** Parou nas operações que viram decisões de interface (conferir cobertura, comparar ciclos, avaliar confiança, ordenar, repassar). A 4.3 não foi decomposta por ser julgamento administrativo, sem interação a projetar.
+---
+ 
+## GOMS — T08 Avaliar a evolução de um talhão entre ciclos
+ 
+**Autor(a):** Pedro Henrique Ferreira Valim — 24.123.048-1
+ 
+O modelo é um recorte da subtarefa 2.2 do HTA T04. Ele supõe a interface proposta no escopo de IHC, com visão de mapa, lista de talhões e histórico por talhão (decisões de design de P01 na Entrega 3). Esses elementos são hipóteses de solução, e não requisitos: "dashboard" e "histórico" aparecem como "talvez" na seção 8 da Entrega 1 ([H14], [H15]), e a comparação entre ciclos ainda precisa ser confirmada com um dono real. O nível de detalhe dos operadores é de ações de interface (CMN-GOMS), como no T06.
+ 
+### Goal
+ 
+`G0: Saber, para o talhão X, se a infestação está avançando, estável ou recuando entre ciclos, e se a última aplicação funcionou`
+ 
+- `G1: Obter a comparação do talhão X entre o ciclo atual e os anteriores`
+- `G2: Interpretar a tendência`
+### Métodos, operadores e regras de seleção
+ 
+- **Method M1 (G1, pelo mapa, comparando ciclos):**
+  - Operators:
+    1. abrir a visão de mapa da propriedade;
+    2. selecionar o ciclo atual;
+    3. alternar para o ciclo anterior (ou ativar a comparação entre os dois);
+    4. perceber a mudança dos pontos no talhão X e nos vizinhos.
+- **Method M2 (G1, pela evolução do talhão):**
+  - Operators:
+    1. abrir o talhão X (no mapa ou na lista);
+    2. abrir a evolução do talhão por ciclo;
+    3. perceber a variação de um ciclo para o outro.
+- **Method M3 (G1, pela lista de talhões ordenada por variação):**
+  - Operators:
+    1. abrir a lista de talhões;
+    2. ordenar por variação entre ciclos;
+    3. localizar o talhão X;
+    4. perceber a variação do talhão X.
+- **Method M4 (G2, leitura direta):**
+  - Operators: perceber a tendência (avançando, estável ou recuando); relacionar com a última aplicação feita no talhão; decidir a conclusão.
+- **Method M5 (G2, leitura com verificação de cobertura):**
+  - Operators: perceber que um dos ciclos comparados teve cobertura incompleta ou detecções de baixa confiança; abrir a cobertura dos ciclos comparados; decidir se a comparação é válida; só então concluir ou marcar o talhão como inconclusivo.
+- **Selection Rule SR1 (G1):** usar **M3** quando Jaime começa o planejamento sem um talhão em mente e quer um panorama dos candidatos; usar **M1** quando quer ver se a praga está se espalhando para os vizinhos (atividade A03); usar **M2** quando já tem o talhão X em mente, por exemplo para conferir se a última aplicação funcionou. *Hipótese a validar na Entrega 7: qual dos três é o ponto de partida mais comum.*
+- **Selection Rule SR2 (G2):** usar **M4** quando o talhão foi inspecionado por inteiro nos ciclos comparados e a variação é clara; usar **M5** quando há cobertura incompleta, detecção de baixa confiança ou variação pequena e ambígua.
+**Observações de design a partir do modelo:**
+ 
+- M2 tem o menor número de operadores, mas exige que Jaime já saiba qual talhão olhar. M3 serve ao panorama e é o caminho natural no início do planejamento (HTA 3.1).
+- M1 depende de o mapa mostrar dois ciclos de forma comparável. Se ele só mostrar o ciclo atual, o caminho vira alternar telas e confiar na memória, que é o problema do C01.
+- M5 acrescenta passos, mas protege de uma conclusão errada: sem a cobertura, "recuou" pode significar apenas "ninguém passou". A cobertura precisa estar a um toque da comparação, e não numa área separada.
+- Os três métodos de G1 terminam na mesma informação. O resultado deve ser idêntico independentemente do caminho, para não gerar dúvida sobre qual leitura está certa.
+- Não foram estimados tempos (KLM), apenas a estrutura de metas, métodos e regras.
+---
+ 
+## CTT — T09 Revisar o resultado do ciclo e decidir se confia nele
+ 
+**Autor(a):** Pedro Henrique Ferreira Valim — 24.123.048-1
+ 
+### Descrição
+ 
+Ao fim de cada ciclo, Jaime revisa o resultado antes de decidir o manejo. Como não sabe identificar a praga, ele não valida a detecção: confere o que foi inspecionado e, talhão a talhão, decide se aceita o resultado como confiável, se pede o parecer do agrônomo ou se pede uma nova inspeção. O modelo é um recorte das subtarefas 1 e 2.3 do HTA T04. A revisão é iterativa (um talhão por vez) e pode ser encerrada a qualquer momento.
+ 
+### Diagrama
+ 
+![CTT T09](../assets/05_tarefas/ctt_t09_revisar_ciclo.svg)
+ 
+*Fonte editável: `ctt_t09_revisar_ciclo.dot` (Graphviz).*
+ 
+### Legenda e relações temporais usadas
+ 
+| Operador/relação | Significado no diagrama | Exemplo no modelo |
+|---|---|---|
+| `>>` (habilitação) | A tarefa da direita só começa quando a da esquerda termina | *Receber aviso de ciclo concluído* `>>` *Verificar a cobertura do ciclo* `>>` *Revisar talhão* |
+| `[]>>` (habilitação com passagem de informação) | A tarefa da direita só começa quando a da esquerda termina e recebe dela um dado | *Selecionar talhão* passa o talhão escolhido para *Exibir detecções, confiança e fotos*; *Escolher posição* passa a decisão para *Registrar posição* |
+| `*` (iteração) | A tarefa se repete até a condição de parada | *Revisar talhão\** se repete para cada talhão com detecção |
+| `[>` (desabilitação) | A tarefa da direita interrompe e encerra a da esquerda | *Encerrar revisão* interrompe o ciclo *Revisar talhão\** a qualquer momento |
+| `\|\|\|` (concorrência independente) | As tarefas podem ser feitas em qualquer ordem ou intercaladas | Examinar fotos e confiança `\|\|\|` consultar o histórico do talhão |
+| `[]` (escolha) | Apenas uma das alternativas é executada | *Aceitar como confiável* `[]` *Marcar para parecer do agrônomo* `[]` *Pedir reinspeção do talhão* |
+| `[T]` (opcional) | A tarefa pode ser omitida | *[Pedir nova inspeção dos talhões não cobertos]*, *[Consultar histórico do talhão]* |
+ 
+**Tipos de tarefa (formato e cor do nó):** hexágono cinza = abstrata; retângulo amarelo = usuário; retângulo arredondado verde = sistema; elipse laranja = interação.
+ 
+- **Abstratas:** *Revisar o resultado do ciclo*, *Verificar a cobertura do ciclo*, *Revisar talhão\**, *Avaliar evidências*, *Escolher posição sobre o talhão*. São decompostas em subtarefas.
+- **Usuário:** *Perceber talhões sem inspeção*, *Examinar fotos e confiança*, atividades cognitivas de leitura e julgamento.
+- **Interação:** *[Pedir nova inspeção dos talhões não cobertos]*, *Selecionar talhão*, *[Consultar histórico do talhão]*, *Aceitar como confiável*, *Marcar para parecer do agrônomo (P03)*, *Pedir reinspeção do talhão (P02)*, *Encerrar revisão*.
+- **Sistema/aplicação:** *Receber aviso de ciclo concluído*, *Exibir talhões inspecionados e não inspecionados*, *Exibir detecções, confiança e fotos*, *Registrar posição sobre o talhão*.
+**Leitura do modelo e implicações:**
+ 
+- A cobertura (*Verificar a cobertura do ciclo*) é habilitada antes da revisão dos talhões (`>>`). É nesse ponto que Jaime diferencia "sem alerta" de "ninguém passou" (C01, Q5), e isso depende do que P02 registra em campo (C02, [H09]).
+- Em *Avaliar evidências*, a concorrência indica que fotos, confiança e histórico do talhão precisam estar acessíveis na mesma tela. Como Jaime não consegue conferir a praga sozinho, é o histórico que lhe permite dizer "esse ponto já tinha problema antes".
+- *Escolher posição* tem três saídas. *Marcar para parecer do agrônomo* leva ao T07 de P03 (validar a detecção) e *Pedir reinspeção do talhão* leva ao T01 de P02. Jaime decide em quem confiar, e não se a praga existe. Se o fluxo não tornar essas duas saídas fáceis, ele tende a aceitar tudo ou a duvidar de tudo.
+- A desabilitação por *Encerrar revisão* exige que a posição de cada talhão seja salva ao ser registrada: o que já foi revisado não pode se perder se Jaime interromper a sessão.
+- Não há tarefa de P02 ou P03 dentro do modelo: elas aparecem como destino das duas saídas, mas são modeladas em T01 a T03 e T05 a T07. A repetição de *Revisar talhão\** não tem número fixo de voltas: ela termina quando todos os talhões com detecção foram revisados ou quando Jaime escolhe *Encerrar revisão*. A disponibilidade do pragueiro para uma reinspeção (C01, Q4) fica fora do modelo.
+---
+ 
+### Síntese das modelagens de P01
+ 
+- **Requisitos que surgem:** aviso de ciclo concluído; cobertura do ciclo visível antes dos resultados; visão por talhão com tendência entre ciclos; evidência e grau de confiança em linguagem simples; pedido de parecer (P03) e de reinspeção (P02) a partir do próprio fluxo; registro da decisão por ciclo.
+- **Candidatos ao protótipo e ao teste de usabilidade:** o fluxo *aviso do ciclo → cobertura → revisão por talhão → posição* (T09) combinado com a comparação entre ciclos (M3 e M2 do T08), por concentrar a principal dor do C01 em poucas telas.
+- **Hipóteses que continuam abertas:** H04, H05, H06, H09 e H21 (ver C01); se a comparação entre ciclos é necessidade real, qual intervalo de tempo faz sentido e o que dá confiança a Jaime num alerta, a validar na Entrega 7.
 
 ## Síntese da equipe
 
