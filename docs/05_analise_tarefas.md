@@ -313,7 +313,7 @@ A tarefa é descrita no nível do que P01 faz ao usar a contribuição do TCC, s
  
 ### Diagrama
  
-![HTA T04](../assets/05_tarefas/hta_t04_(1).dot)
+![HTA T04](../assets/05_tarefas/hta_t04.png)
  
 *Fonte editável: `hta_t04.dot` (Graphviz).*
  
@@ -445,6 +445,12 @@ Ao fim de cada ciclo, Jaime revisa o resultado antes de decidir o manejo. Como n
 ## Síntese da equipe
 
 Quais problemas de interação, oportunidades e requisitos apareceram a partir das modelagens? Quais tarefas irão para o protótipo e para o teste de usabilidade?
+
+**Contribuição do Pedro (P01):**
+ 
+- **Problemas de interação:** resultado do ciclo sem aviso nem cobertura, o que impede diferenciar "sem praga" de "ninguém passou" (1.1, 1.2); comparação entre ciclos sem histórico (2.2); confiança num alerta sem conhecimento técnico para conferi-lo (2.3); fronteira indefinida entre mostrar o dado e sugerir uma ordem de prioridade (3.1); decisão que não fica registrada nem chega com clareza a quem aplica (5.1, 5.2).
+- **Requisitos que emergiram:** aviso de ciclo concluído; cobertura visível antes dos resultados; visão por talhão com tendência entre ciclos; evidência e confiança em linguagem simples; caminhos para pedir parecer e reinspeção sem sair do fluxo; registro da decisão por ciclo.
+- **Para o protótipo e o teste de usabilidade:** o fluxo "aviso do ciclo → cobertura → revisão por talhão → posição" (T09) e a comparação entre ciclos (T08). A síntese final da equipe deve cruzá-los com a cobertura e a reinspeção de P02 e com o parecer e a validação de P03.
 
 **Contribuição do Lucas (P02):**
 
