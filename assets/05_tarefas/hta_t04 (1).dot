@@ -1,0 +1,38 @@
+digraph HTA_T04 {
+  graph [rankdir=LR, splines=polyline, nodesep=0.18, ranksep=0.9, fontname="Helvetica", bgcolor="white", pad=0.3];
+  node  [shape=box, style="rounded,filled", fillcolor="#F4F7FB", color="#33506E", fontname="Helvetica", fontsize=11, margin="0.12,0.08"];
+  edge  [color="#33506E", arrowhead=none];
+
+  n0 [label=<<B>0</B><BR/>Planejar o manejo do ciclo<BR/><FONT POINT-SIZE="9" COLOR="#8A3B00">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4 &gt; 5</FONT>>, fillcolor="#DCE8F5", fontsize=12];
+
+  n1 [label=<<B>1</B><BR/>Receber o resultado<BR/>do ciclo<BR/><FONT POINT-SIZE="9" COLOR="#8A3B00">Plano 1: 1.1 &gt; 1.2 &gt;<BR/>se há talhão sem inspeção: 1.3</FONT>>];
+  n2 [label=<<B>2</B><BR/>Entender a situação<BR/>da propriedade<BR/><FONT POINT-SIZE="9" COLOR="#8A3B00">Plano 2: 2.1 &gt; 2.2 &gt; 2.3</FONT>>];
+  n3 [label=<<B>3</B><BR/>Priorizar os talhões<BR/><FONT POINT-SIZE="9" COLOR="#8A3B00">Plano 3: 3.1 &gt;<BR/>se a dúvida persistir: 3.2</FONT>>];
+  n4 [label=<<B>4</B><BR/>Decidir o manejo<BR/><FONT POINT-SIZE="9" COLOR="#8A3B00">Plano 4: 4.1 &gt; 4.2 &gt; 4.3</FONT>>];
+  n5 [label=<<B>5</B><BR/>Registrar e repassar<BR/>a decisão<BR/><FONT POINT-SIZE="9" COLOR="#8A3B00">Plano 5: 5.1 &gt; 5.2</FONT>>];
+
+  n11 [label=<<B>1.1</B><BR/>Saber que o ciclo<BR/>foi concluído>];
+  n12 [label=<<B>1.2</B><BR/>Conferir quais talhões<BR/>foram inspecionados>];
+  n13 [label=<<B>1.3</B><BR/>Pedir nova inspeção<BR/>dos talhões não cobertos>];
+
+  n21 [label=<<B>2.1</B><BR/>Identificar os talhões<BR/>com focos>];
+  n22 [label=<<B>2.2</B><BR/>Comparar com os<BR/>ciclos anteriores>];
+  n23 [label=<<B>2.3</B><BR/>Avaliar se confia<BR/>nos dados>];
+
+  n31 [label=<<B>3.1</B><BR/>Ordenar os talhões por<BR/>gravidade e tendência>];
+  n32 [label=<<B>3.2</B><BR/>Pedir parecer do<BR/>agrônomo (P03)>];
+
+  n41 [label=<<B>4.1</B><BR/>Definir onde<BR/>aplicar>];
+  n42 [label=<<B>4.2</B><BR/>Definir quando<BR/>e com que urgência>];
+  n43 [label=<<B>4.3</B><BR/>Estimar orçamento<BR/>e mão de obra>];
+
+  n51 [label=<<B>5.1</B><BR/>Registrar a decisão<BR/>do ciclo>];
+  n52 [label=<<B>5.2</B><BR/>Repassar a quem<BR/>executa a aplicação>];
+
+  n0 -> {n1 n2 n3 n4 n5};
+  n1 -> {n11 n12 n13};
+  n2 -> {n21 n22 n23};
+  n3 -> {n31 n32};
+  n4 -> {n41 n42 n43};
+  n5 -> {n51 n52};
+}

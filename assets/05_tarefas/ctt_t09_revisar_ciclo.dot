@@ -1,0 +1,44 @@
+digraph CTT_T09 {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.75, fontname="Helvetica", bgcolor="white", pad=0.3, newrank=true];
+  node  [fontname="Helvetica", fontsize=11, style="filled", color="#33506E", margin="0.12,0.07"];
+  edge  [fontname="Helvetica", fontsize=10, color="#9AA9B8", arrowhead=none];
+
+  // tipos: abstrata = hexagono; usuario = retangulo; sistema = retangulo arredondado; interacao = elipse
+  R   [shape=hexagon, fillcolor="#E4E9F0", label="Revisar o resultado\ndo ciclo"];
+
+  A   [shape=box, style="rounded,filled", fillcolor="#DDF0E0", label="Receber aviso de\nciclo concluído"];
+  B   [shape=hexagon, fillcolor="#E4E9F0", label="Verificar a\ncobertura do ciclo"];
+  C   [shape=hexagon, fillcolor="#E4E9F0", label="Revisar talhão *"];
+  D   [shape=ellipse, fillcolor="#FCE8D2", label="Encerrar revisão"];
+
+  B1  [shape=box, style="rounded,filled", fillcolor="#DDF0E0", label="Exibir talhões inspecionados\ne não inspecionados"];
+  B2  [shape=box, fillcolor="#FFF4C7", label="Perceber talhões\nsem inspeção"];
+  B3  [shape=ellipse, fillcolor="#FCE8D2", label="[Pedir nova inspeção\ndos talhões não cobertos]"];
+
+  C1  [shape=ellipse, fillcolor="#FCE8D2", label="Selecionar talhão"];
+  C2  [shape=box, style="rounded,filled", fillcolor="#DDF0E0", label="Exibir detecções,\nconfiança e fotos"];
+  C3  [shape=hexagon, fillcolor="#E4E9F0", label="Avaliar evidências"];
+  C4  [shape=hexagon, fillcolor="#E4E9F0", label="Escolher posição\nsobre o talhão"];
+  C5  [shape=box, style="rounded,filled", fillcolor="#DDF0E0", label="Registrar posição\nsobre o talhão"];
+
+  C31 [shape=box, fillcolor="#FFF4C7", label="Examinar fotos\ne confiança"];
+  C32 [shape=ellipse, fillcolor="#FCE8D2", label="[Consultar histórico\ndo talhão]"];
+
+  C41 [shape=ellipse, fillcolor="#FCE8D2", label="Aceitar como\nconfiável"];
+  C42 [shape=ellipse, fillcolor="#FCE8D2", label="Marcar para parecer\ndo agrônomo (P03)"];
+  C43 [shape=ellipse, fillcolor="#FCE8D2", label="Pedir reinspeção\ndo talhão (P02)"];
+
+  // arvore (pai -> filhos)
+  R -> {A B C D};
+  B -> {B1 B2 B3};
+  C -> {C1 C2 C3 C4 C5};
+  C3 -> {C31 C32};
+  C4 -> {C41 C42 C43};
+
+  // operadores temporais entre irmaos (mesmo nivel, da esquerda para a direita)
+  { rank=same; A -> B [label=">>", color="#33506E", fontcolor="#8A3B00", constraint=false]; B -> C [label=">>", color="#33506E", fontcolor="#8A3B00", constraint=false]; C -> D [label="[>", color="#33506E", fontcolor="#8A3B00", constraint=false]; }
+  { rank=same; B1 -> B2 [label=">>", color="#33506E", fontcolor="#8A3B00"]; B2 -> B3 [label=">>", color="#33506E", fontcolor="#8A3B00"]; }
+  { rank=same; C1 -> C2 [label="[]>>", color="#33506E", fontcolor="#8A3B00"]; C2 -> C3 [label=">>", color="#33506E", fontcolor="#8A3B00"]; C3 -> C4 [label=">>", color="#33506E", fontcolor="#8A3B00"]; C4 -> C5 [label="[]>>", color="#33506E", fontcolor="#8A3B00"]; }
+  { rank=same; C31 -> C32 [label="|||", color="#33506E", fontcolor="#8A3B00"]; }
+  { rank=same; C41 -> C42 [label="[]", color="#33506E", fontcolor="#8A3B00"]; C42 -> C43 [label="[]", color="#33506E", fontcolor="#8A3B00"]; }
+}
