@@ -458,6 +458,12 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 - **Requisitos que emergiram:** feedback de enquadramento antes da captura; leitura rápida do resultado sob sol; funcionamento sem internet; registro automático do local; indicação clara de cobertura e de status de envio.
 - **Para o protótipo e o teste de usabilidade:** o ciclo "Verificar fruto" (captura, resultado, encaminhamento) e o fechamento do percurso (cobertura e envio). A síntese final da equipe deve juntar isto com as tarefas de P01 e P03.
 
+**Contribuição do Guilherme (P03):**
+
+- **Problemas de interação:** alerta que não leva direto ao foco (1); local, data e árvore das fotos dependentes da memória de quem estava em campo (2.1, 2.2); comparação com inspeções anteriores sem histórico por local (2.3, T06); risco de viés de confirmação ao ver a avaliação da IA antes da análise (T07); área de aplicação estimada sem base nos pontos confirmados (4.1); parecer que se perde em mensagens soltas e não chega com clareza ao gestor (5.3).
+- **Requisitos que emergiram:** alerta que abre o talhão do foco; metadados gravados automaticamente na captura; histórico acessível a partir da própria detecção (M3); veredito humano registrado separado do resultado da IA; pedido de nova foto direcionado a um ponto; delimitação da área só com pontos confirmados; parecer vinculado aos pontos e repassado ao gestor.
+- **Para o protótipo e o teste de usabilidade:** o fluxo "alerta → detecção → histórico do ponto → veredito" (T07 + M3 do T06) e o fechamento "área → parecer → repasse" (T05). A síntese final da equipe deve cruzá-los com o pedido de parecer de P01 e com a rota de P02, que recebe os pedidos de nova foto.
+
 ## Checklist
 
 - [x] Cada integrante produziu ao menos 1 HTA, 1 GOMS e 1 CTT.
