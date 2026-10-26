@@ -22,7 +22,7 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 **Funcionalidade:** validação remota das detecções da IA e emissão do parecer técnico sobre o foco.<br>
 **Persona:** P03 — Marcelo Fidalgo, agrônomo consultor.<br>
 **Cenários/tarefas cobertos:** C03; T07 — validar (confirmar/rejeitar) as detecções da IA; T06 — localizar no histórico as inspeções do talhão (método M3, a partir da detecção); T05 — emitir parecer técnico sobre o foco (passos 1 a 5).<br>
-**Objetivos principais:** levar o alerta direto ao foco, reunir foto original, local, data e histórico do ponto na mesma tela, separar "sinal da IA" de "confirmação humana", permitir pedir nova foto ao campo e registrar um parecer vinculado aos pontos avaliados e repassado ao gestor.
+**Objetivos principais:** levar o alerta direto ao foco, reunir foto original, data, autor e talhão da detecção, dar acesso ao histórico do talhão, separar "sinal da IA" de "confirmação humana", permitir pedir nova foto ao campo e registrar um parecer vinculado aos pontos avaliados e repassado ao gestor.
 
 ### Funcionalidade — Pedro
 
@@ -42,11 +42,11 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 
 **Guilherme:**
 
-- **Alertas/ocorrências:** pedidos de parecer e detecções novas por propriedade atendida.
-- **Resultados:** pontos com detecção do talhão em mapa, com situação de cada um (pendente, confirmado, rejeitado, aguardando nova foto).
-- **Explicabilidade/detalhamento:** foto original ampliável, data, hora, árvore, localização e avaliação da IA.
-- **Histórico/comparação:** detecções anteriores do mesmo ponto e do talhão, com filtro de período.
-- **Encaminhamento e registro:** veredito por detecção, pedido de nova foto ao campo, área de aplicação, parecer e repasse ao gestor.
+- **Alertas/ocorrências:** pedidos de parecer por propriedade atendida, com a situação de cada pedido (pendente ou concluído).
+- **Resultados:** pontos com detecção do talhão em mapa, com a situação de cada um (pendente ou analisado).
+- **Explicabilidade/detalhamento:** foto original, data, hora, quem fotografou, talhão e avaliação da IA.
+- **Histórico/comparação:** detecções anteriores do talhão, com data e quantidade de ácaros.
+- **Encaminhamento e registro:** veredito por detecção (aprovar, rejeitar ou pedir nova foto), área de aplicação, parecer com produto, dose e período, e repasse ao gestor.
 
 **Pedro:**
 
@@ -70,7 +70,7 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 
 ## 3. Telas e estados
 
-**Desenho do protótipo em papel:** pendente. As telas abaixo representam o planejamento.
+**Desenho do protótipo em papel:** concluído na parte de Guilherme (fotos ao fim da seção); pendente nas partes de Lucas e Pedro, cujas telas abaixo ainda representam o planejamento.
 
 ### Funcionalidade — Lucas
 
@@ -96,21 +96,23 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 
 | Tela/estado | Conteúdo previsto | Controles e mudanças de estado |
 |---|---|---|
-| A01 | Pedidos de parecer (vindos de G04) e detecções novas, agrupados por propriedade e talhão, com quantidade de pontos pendentes. | Abrir pedido → A02 (direto no talhão do foco); buscar no histórico → A05. |
-| A02 | Mapa do talhão com os pontos com detecção, a situação de cada um (pendente, confirmado, rejeitado, aguardando nova foto) e marca nos pontos que já tiveram detecção antes. Contagem de pontos por situação. | Selecionar ponto → A03; ver histórico do talhão → A05; emitir parecer → A06; encerrar revisão → A01 (progresso salvo). |
-| A03 | Detecção do ponto: foto original ampliável, data, hora, árvore, localização e, na mesma tela, as detecções anteriores do ponto. A avaliação da IA fica recolhida ("ver avaliação da IA") até Marcelo decidir abrir. Campo opcional de observação técnica. | Confirmar ou rejeitar → A02 (ponto marcado "validado por humano" e próximo pendente destacado); pedir nova foto → A04; ver histórico completo → A05; voltar → A02. |
-| A04 | Pedido de nova foto: ponto e árvore já preenchidos, motivo (foto desfocada, outra face do fruto, frutos vizinhos) e prazo desejado. | Enviar → A02 (ponto "aguardando nova foto"; o pedido aparece na rota do trabalhador em P01); cancelar → A03. |
-| A05 | Histórico de detecções em lista única, com filtros de período e talhão. Aberto a partir de A03 já filtrado pelo ponto (M3), de A02 pelo talhão (M1) ou de A01 sem filtro (M2). | Alterar filtros (permanece em A05); abrir detecção → A03; voltar → tela de origem. |
-| A06 | Delimitação da área sobre o mapa, mostrando apenas os pontos confirmados; produto, dose e período em campos livres (o sistema só registra). Aviso quando ainda há pontos pendentes ou aguardando nova foto. | Continuar → A07; voltar → A02 para validar o restante. |
-| A07 | Parecer: texto técnico, resumo da área, pontos vinculados listados automaticamente e destinatário (gestor). | Enviar → A08; voltar → A06. |
-| A08 | Situação do parecer: "registrado" e "entregue ao gestor" mostrados separadamente. | Tentar novamente após falha; voltar → A01. |
+| A01 | Pedidos de parecer (vindos de G04) por propriedade, com a situação de cada pedido ("pendente" ou "concluído"). | Abrir pedido → A02 (direto no talhão do foco). |
+| A02 | Detecções no talhão: mapa do talhão com os pontos com detecção e legenda da situação de cada ponto (○ pendente, ● analisado). | Selecionar ponto → A03; emitir parecer → A06; histórico → A05. |
+| A03 | Detecção do ponto: foto original, data e hora, quem fotografou, talhão e grau de assertividade da IA. | Aprovar ou rejeitar → A02 (ponto passa a "analisado"); pedir nova foto → A02 (pedido enviado à rota do trabalhador, sem tela própria; o ponto continua "pendente" até a nova foto ser avaliada); voltar → A02. |
+| A05 | Histórico de detecções do talhão em lista, com data e quantidade de ácaros encontrados. | Voltar → A02. |
+| A06 | Área de aplicação: mapa do talhão com os pontos analisados; Marcelo toca no mapa para desenhar a área. | Continuar → A07; voltar → A02. |
+| A07 | Parecer: texto técnico e campos livres de produto, dose e período (o sistema só registra). | Enviar → A01 (pedido passa a "concluído"); voltar → A06. |
 
-**Caminho principal:** A01 → A02 → A03 → A02 (repete por ponto) → A06 → A07 → A08. Os desvios A03 → A05 → A03 (histórico, T06) e A03 → A04 → A02 (nova foto) cobrem as tarefas opcionais e a terceira saída do veredito no CTT T07.<br>
-**Erros e retornos:** encerrar a revisão a qualquer momento mantém os vereditos já registrados; foto insuficiente leva ao pedido de nova foto em vez de forçar confirmar ou rejeitar; pontos pendentes não bloqueiam o parecer, mas geram aviso em A06; falha no envio mantém o parecer registrado para nova tentativa.
+**Caminho principal:** A01 → A02 → A03 → A02 (repete por ponto) → A06 → A07 → A01. O desvio A02 → A05 → A02 cobre a consulta ao histórico (T06), e o pedido de nova foto em A03 cobre a terceira saída do veredito no CTT T07.<br>
+**Erros e retornos:** foto insuficiente leva ao pedido de nova foto em vez de forçar aprovar ou rejeitar; todas as telas permitem voltar à anterior sem perder o que já foi preenchido. O protótipo não representa falha no envio do parecer, já que a tela A08 foi retirada.
 
-**Informações importantes:** distinguir "detectado pela IA" de "validado por humano" em todas as telas. Ocultar a avaliação da IA até Marcelo pedir é uma decisão a testar, por causa do possível viés de confirmação apontado no CTT T07.
+**Alterações em relação ao planejamento:** as telas A04 (pedido de nova foto) e A08 (situação do parecer) foram retiradas no desenho, por serem consideradas redundantes. O pedido de nova foto virou um botão direto em A03, ao lado de aprovar e rejeitar, sem formulário de motivo e prazo. A situação do parecer passa a aparecer na própria lista de pedidos (A01), que mostra o pedido como "concluído" após o envio. Os demais identificadores foram mantidos para não quebrar as referências nas outras entregas.
 
-![Protótipo](../assets/06_prototipos/prototipo_fluxo_02.svg)
+**Informações importantes:** distinguir "detectado pela IA" de "validado por humano" em todas as telas.
+
+![Protótipo — A01, A02 e A03](../assets/06_prototipos/prototipo_fluxo_2-1.jpeg)
+
+![Protótipo — A06, A07 e A05](../assets/06_prototipos/prototipo_fluxo_2-2.jpeg)
 
 ### Funcionalidade — Pedro
 
@@ -153,20 +155,19 @@ As observações reais serão preenchidas após a simulação.
 
 ### Funcionalidade — Guilherme
 
-**Situação:** pendente, após desenhar as telas.<br>
+**Situação:** telas desenhadas; simulação pendente.<br>
 **Condutor:** Guilherme.<br>
 **Participante:** a definir (pessoa que não participou da elaboração das telas).<br>
 **Data da simulação:** a definir.
 
-**Roteiro:** pedir que a pessoa, no papel de agrônomo consultor, abra o pedido de parecer recebido, diga quantos pontos do talhão ainda precisam ser avaliados, abra um ponto, diga se ele já teve detecção antes, decida entre confirmar, rejeitar ou pedir nova foto e explique por quê, peça uma nova foto de um ponto com imagem ruim, delimite a área de aplicação e envie o parecer ao gestor.
+**Roteiro:** pedir que a pessoa, no papel de agrônomo consultor, abra o pedido de parecer recebido, abra um ponto do talhão, decida entre aprovar, rejeitar ou pedir nova foto e explique por quê, consulte o histórico do talhão, delimite a área de aplicação, preencha o parecer e envie ao gestor, e diga em seguida se o parecer foi entregue.
 
 | Observação | Tela/ação | Evidência | Consequência para o design |
 |---|---|---|---|
-| A verificar: chegada direta ao foco. | A01/A02 — abrir o pedido e encontrar os pontos pendentes. | Registrar se a pessoa procura o talhão ou já reconhece os pontos pendentes no mapa. | Revisar o agrupamento dos alertas e as marcas de situação no mapa. |
-| A verificar: uso do histórico na mesma tela. | A03 — dizer se o ponto já teve detecção. | Registrar se a pessoa usa o histórico da própria tela ou vai para A05. | Ajustar o destaque do histórico do ponto. |
-| A verificar: momento de consultar a avaliação da IA. | A03 — veredito. | Registrar se a pessoa abre a avaliação da IA antes ou depois de decidir, e se sente falta dela. | Decidir se a avaliação da IA fica visível desde o início. |
-| A verificar: diferença entre pendente e aguardando nova foto. | A02/A04 — pedir nova foto. | Registrar como a pessoa descreve o ponto após o pedido. | Revisar legendas e mensagens de estado. |
-| A verificar: diferença entre registrado e entregue. | A08 — enviar o parecer. | Registrar se a pessoa sabe se o parecer chegou ao gestor. | Revisar mensagens de envio. |
+| A verificar: chegada direta ao foco. | A01/A02 — abrir o pedido e encontrar os pontos no mapa. | Registrar se a pessoa reconhece os pontos com detecção no mapa. | Revisar o agrupamento dos pedidos e as marcas no mapa. |
+| A verificar: influência da assertividade da IA. | A03 — aprovar, rejeitar ou pedir nova foto. | Registrar se a pessoa decide pela foto ou apenas pelo percentual da IA. | Decidir se a avaliação da IA fica visível desde o início ou recolhida. |
+| A verificar: uso do histórico. | A02/A05 — consultar o histórico do talhão. | Registrar se a pessoa encontra o histórico e o relaciona ao ponto avaliado. | Ajustar o acesso ao histórico (a partir do talhão ou do ponto). |
+| A verificar: situação do parecer após o envio. | A07/A01 — enviar o parecer. | Registrar se a pessoa entende que "concluído" em A01 significa que o parecer chegou ao gestor. | Avaliar se é preciso voltar a mostrar a situação do envio separadamente. |
 
 ### Funcionalidade — Pedro
 
@@ -208,7 +209,7 @@ As observações reais serão preenchidas após a simulação.
 
 ## Checklist
 
-**Situação referente ao planejamento da parte de Lucas. A consolidação da equipe permanece pendente.**
+**Situação referente ao planejamento da parte de Lucas. A parte de Guilherme já tem o protótipo em papel desenhado, mas ainda sem simulação. A consolidação da equipe permanece pendente.**
 
 - [x] O escopo planejado do protótipo cobre tarefas relevantes da Entrega 5.
 - [x] Cada tela/estado planejado pode ser justificado por uma tarefa, decisão ou informação necessária.
