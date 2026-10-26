@@ -89,7 +89,7 @@ O questionário de Lucas coleta a perspectiva do trabalhador. Informações sobr
 |---|---|---|---|
 | O próprio usuário | Formação, tempo de atuação como consultor, quantidade de propriedades atendidas e se o atendimento é remoto, presencial ou misto. | H04; C03 Q1; persona P03 (atende várias propriedades, não está no campo). | Definir se a interface precisa agrupar alertas por propriedade (A01) e se o uso principal será no escritório ou em visita. |
 | Relação com tecnologia | Dispositivos usados para trabalhar (computador, celular, tablet), ferramentas atuais (WhatsApp, e-mail, planilhas, sistemas de gestão agrícola), uso de mapas digitais e conexão no escritório e em visitas. | H20 (aplicada ao agrônomo); persona P03 (experiência tecnológica moderada). | Definir plataforma do fluxo do agrônomo (Entrega 8), densidade de informação por tela e se o mapa é um recurso familiar ou precisa de apoio. |
-| Conhecimento do domínio | Sinais que usa para confirmar o ácaro e a leprose em uma foto, limitações de diagnóstico por imagem e quando exige ver o fruto pessoalmente. Opinião sobre usar um sinal automático (IA) como triagem. | H07; CTT T07 (confirmar, rejeitar ou pedir nova foto; possível viés de confirmação). | Definir o que a tela de detecção (A03) precisa mostrar, quais motivos oferecer no pedido de nova foto (A04) e se a avaliação da IA aparece antes ou depois do veredito. |
+| Conhecimento do domínio | Sinais que usa para confirmar o ácaro e a leprose em uma foto, limitações de diagnóstico por imagem e quando exige ver o fruto pessoalmente. Opinião sobre usar um sinal automático (IA) como triagem. | H07; CTT T07 (confirmar, rejeitar ou pedir nova foto; possível viés de confirmação). | Definir o que a tela de detecção (A03) precisa mostrar, se o pedido de nova foto (botão em A03) basta sem informar motivo e se a avaliação da IA aparece antes ou depois do veredito. |
 | Conhecimento das tarefas | Como recebe hoje os relatos de campo, frequência, informações mínimas para um parecer, como compara com inspeções anteriores, como delimita a área de aplicação, como registra e repassa a recomendação e quanto tempo passa entre o achado e o parecer. | H07, H21, H22; C03 Q1–Q5; HTA T05, GOMS T06 (SR1: o agrônomo sabe o nome/código do talhão?). | Confirmar a ordem do HTA T05, a regra de seleção do GOMS T06 (M1/M2/M3), os metadados mínimos da detecção e o conteúdo do parecer (A06/A07). |
 | Motivações e valores | O que considera um parecer bem fundamentado, responsabilidade técnica pela recomendação, receios sobre decisões baseadas em IA e condições para confiar em dados enviados pelo campo. | H07; persona P03 (motivador: evitar aplicação incorreta ou desnecessária). | Definir como separar "detectado pela IA" de "validado por humano", que registro de autoria o parecer precisa ter e o que aumenta ou reduz a confiança no sistema. |
 
@@ -504,16 +504,16 @@ Resposta: ____
 - Fazer uma análise temática simples: marcar trechos com códigos ligados aos cinco grupos da aula e às hipóteses (H04, H07, H21, H22), e agrupar códigos repetidos entre participantes.
 - Para a pergunta 17, contar quantas vezes cada informação aparece entre as cinco mais importantes, apenas como indicação de prioridade (amostra pequena).
 - Registrar divergências entre participantes, sem forçar consenso, e comparar com o que os trabalhadores relatam no questionário de Lucas (perguntas 15 e 16) sobre o repasse dos achados.
-- Ligar cada achado a uma decisão de design e a uma tela do protótipo (A01–A08), e marcar no `RASTREABILIDADE.md` se a hipótese ficou sustentada, refutada, refinada ou aberta.
+- Ligar cada achado a uma decisão de design e a uma tela do protótipo (A01–A03 e A05–A07), e marcar no `RASTREABILIDADE.md` se a hipótese ficou sustentada, refutada, refinada ou aberta.
 
 | Hipótese/lacuna | Perguntas | Decisão de design relacionada |
 |---|---|---|
-| H04 (quem decide no dia a dia) | 2, 11 | Destinatário do parecer e papel do agrônomo no fluxo (A07, A08). |
+| H04 (quem decide no dia a dia) | 2, 11 | Destinatário do parecer e papel do agrônomo no fluxo (A07). |
 | H07 (informação necessária para decidir) | 5, 6, 12, 17 | Conteúdo mínimo da tela de detecção (A03) e metadados gravados na captura. |
-| H21 (quem acompanha a evolução) | 10, 11 | Repasse do parecer ao gestor e situação "registrado" × "entregue" (A08). |
-| H22 (necessidade de histórico) | 8, 10 | Histórico do ponto na tela da detecção (A03) e histórico com filtros (A05). |
+| H21 (quem acompanha a evolução) | 10, 11 | Repasse do parecer ao gestor e situação do pedido na lista (A01). |
+| H22 (necessidade de histórico) | 8, 10 | Decidir se o histórico precisa aparecer na tela da detecção (A03) ou se basta o histórico do talhão (A05). |
 | C03 Q1 e Q4 (frequência e atraso) | 5, 7 | Prioridade do fluxo do agrônomo e criticidade de T05 na Entrega 8. |
-| C03 Q2 e Q3 (informação mínima e como supre a falta) | 6, 7 | Motivos do pedido de nova foto (A04) e alternativa de visita. |
+| C03 Q2 e Q3 (informação mínima e como supre a falta) | 6, 7 | Pedido de nova foto (A03) e alternativa de visita. |
 | C03 Q5 (consequência de decidir mal) | 9 | Delimitação da área só com pontos confirmados (A06). |
 | GOMS T06, regra SR1 | 4, 8 | Se o histórico deve permitir busca por nome do talhão (M2) ou priorizar o mapa (M1) e o atalho a partir da detecção (M3). |
 | CTT T07, viés de confirmação | 15 | Mostrar a avaliação da IA antes ou depois do veredito (A03). |
