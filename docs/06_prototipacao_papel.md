@@ -90,7 +90,7 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 
 **Informações importantes:** distinguir “salvo no celular” de “enviado”. Ausência de sinal na foto não significa que toda a árvore esteja livre da praga.
 
-![Protótipo](../assets/06_prototipos/prototipo_fluxo_01.svg)
+![Protótipo](../assets/06_prototipos/Tela1-Tela2.jpeg)
 
 ### Funcionalidade — Guilherme
 
@@ -130,7 +130,7 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 **Caminho principal:** G01 → G02 → G03 → G04 → G05 → G03 (próximo talhão) → G07 → G08. O desvio G04 → G06 → G04 corresponde à avaliação da evolução (T08).<br>
 **Erros e retornos:** talhão sem inspeção permite pedir nova inspeção em G02 sem sair da tela; cobertura incompleta aparece em G04 e G06 e impede que a comparação pareça conclusiva; a dúvida do gestor leva a "parecer do agrônomo" ou "reinspeção", e não bloqueia o fluxo; encerrar a revisão a qualquer momento mantém as posições já registradas; falha no repasse mantém a decisão salva para nova tentativa.
 
-![Protótipo](../assets/06_prototipos/prototipo_fluxo_03.svg)
+![Protótipo](../assets/06_prototipos/Tela3.jpeg)
 
 ## 4. Simulação / walkthrough
 
@@ -140,8 +140,8 @@ A simulação deverá envolver uma pessoa que não participou da elaboração da
 
 **Situação:** pendente, após desenhar as telas.<br>
 **Condutor:** Lucas.<br>
-**Participante:** {{...}}<br>
-**Data da simulação:** {{...}}
+**Participante:** a definir (pessoa que não participou da elaboração das telas).<br>
+**Data da simulação:** a definir.
 
 **Roteiro:** pedir que a pessoa fotografe um fruto, interprete o resultado, salve sem internet, confira a rota e verifique o envio quando a conexão retornar.
 
