@@ -1,7 +1,7 @@
 # Entrega 7 — Coleta de dados, necessidades e aspectos éticos
 
 **Data:** 11/10/2026<br>
-**Status:** 🟨 em andamento — planejamento de Lucas preparado; formulário online e coleta pendentes.
+**Status:** 🟨 em andamento — planejamentos preparados; formulário online e coleta pendentes.
 
 ## Objetivo da atividade
 
