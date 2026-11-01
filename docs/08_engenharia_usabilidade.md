@@ -1,100 +1,120 @@
 # Entrega 8 — Ciclo de vida e engenharia de usabilidade
 
-**Data:** {{dd/mm/aaaa}}  
-**Status:** ⬜ não iniciada  
+**Data:** 01/11/2026  
+**Status:** 🟨 em andamento 
 **Responsabilidade:** 1 solução por equipe
 
 ## Objetivo da atividade
 
-Transformar o conhecimento acumulado sobre usuários, tarefas, plataforma e contexto em princípios e **metas de usabilidade verificáveis**, mantendo o caráter iterativo do projeto.
+Transformar o conhecimento acumulado sobre usuários, tarefas, plataforma e contexto em princípios e metas de usabilidade verificáveis, mantendo o caráter iterativo do projeto.
 
 ## Delimitação do sistema interativo
 
-Antes das características da plataforma, separe:
-
 | Camada | O que pertence ao projeto | O que será avaliado em IHC |
 |---|---|---|
-| contribuição técnica do TCC | {{algoritmo/modelo/API/análise...}} | desempenho técnico não é substituído pelo teste de IHC |
-| camada de interação da disciplina | Fluxo do agrônomo (P03): pedidos de parecer e detecções novas, mapa do talhão com a situação de cada ponto, tela da detecção com histórico do ponto, veredito (confirmar, rejeitar, pedir nova foto), histórico, delimitação da área, parecer e repasse ao gestor (A01–A03 e A05–A07 da Entrega 6). | compreensão, eficácia, eficiência, satisfação, erros, acessibilidade etc. |
-| integrações/dados simulados | Fluxo do agrônomo (P03): detecções, fotos, localização e histórico dos pontos; envio do pedido de nova foto à rota do trabalhador (P02); recebimento do pedido de parecer vindo do gestor (P01) e entrega do parecer ao gestor. | As detecções serão fictícias ou retiradas de imagens do dataset do TCC, com o resultado da IA definido pela equipe. Falhas de envio e atrasos serão simulados por estados prontos no Figma. O teste avalia a interação, não a qualidade das detecções. |
+| Contribuição técnica do TCC | Dataset, modelo de detecção do ácaro em imagens, processamento no dispositivo móvel e associação dos achados à localização. | O teste de IHC não substitui a avaliação da precisão, do desempenho ou da qualidade técnica do modelo. |
+| Camada de interação — trabalhador (P02)  | Rota do dia, orientação de captura, análise, resultado, registro do local, cobertura da rota e situação do envio (P01–P07 da Entrega 6). | Compreensão, conclusão da tarefa, tempo, erros, recuperação e facilidade percebida durante a inspeção. |
+| Camada de interação — agrônomo (P03) | Pedidos de parecer e novas detecções, mapa do talhão, foto e histórico do ponto, veredito, delimitação da área, parecer e repasse ao gestor (A01–A07 da Entrega 6). | Compreensão, eficácia, eficiência, satisfação, erros e acessibilidade na análise técnica. |
+| Integrações e dados simulados | Fotos, resultados da IA, localização, histórico, pedido de nova foto e envio dos registros ou do parecer. | Os resultados e as falhas podem ser apresentados por estados preparados no protótipo. O participante será informado de que são simulados. |
 
-Em um protótipo de disciplina, é aceitável simular processamento ou resultados quando a implementação técnica não estiver integrada, desde que isso seja declarado e a simulação seja suficiente para avaliar a interação.
+**Fluxo de P02:** a captura, a análise e o salvamento serão simulados mesmo sem internet. “Salvo no celular” e “enviado ao gestor” são estados distintos. A ausência de sinal em uma foto não comprova que a árvore esteja livre da praga.
 
-**Fluxo do agrônomo (P03):** as telas citadas nesta entrega seguem a numeração do protótipo em papel (Entrega 6), mas descrevem o protótipo que será avaliado no Figma (Entrega 11). O histórico do ponto na tela da detecção, com o atalho "ver histórico deste ponto" (A03/F03), os filtros de período e local do histórico (A05/F05) e o aviso de que o parecer não substitui o receituário agronômico (A07/F07) não foram desenhados no papel, mas fazem parte do MoLIC M01 (S3, S5 e S7) e entram no Figma. As metas que dependem deles, como a MU06, valem para o protótipo do Figma.
+**Fluxo de P03:** as telas citadas seguem a numeração do protótipo em papel, mas descrevem o protótipo a ser avaliado no Figma (Entrega 11). O atalho “ver histórico deste ponto”, os filtros de período e local e o aviso sobre o receituário agronômico serão incluídos no Figma. As metas dependentes desses elementos valem para essa versão.
 
 ## 1. Características da plataforma
 
-| Característica | Descrição | Consequência para IHC |
-|---|---|---|
-| Software | Fluxo do agrônomo (P03): aplicação web acessada pelo navegador, com conta do agrônomo vinculada às propriedades que atende; os dados vêm do servidor que recebe as inspeções sincronizadas pelo celular de P02. Plataforma proposta a partir da persona (trabalho no escritório, uso de e-mail e planilhas), a confirmar com a pergunta 3 da entrevista I02. | O agrônomo não precisa instalar nada. A interface segue padrões web conhecidos (lista, mapa, filtros, botões com rótulo) para reduzir o aprendizado. |
-| Hardware/dispositivos | Fluxo do agrônomo (P03): computador ou notebook com tela de 13" ou mais; uso eventual em tablet ou celular durante visitas (hipótese). | A tela da detecção (A03) mostra foto ampliável, metadados e histórico do ponto lado a lado, atendendo à concorrência do CTT T07. Em telas menores, o histórico passa para baixo da foto, sem mudar de tela. |
-| Capacidades | Fluxo do agrônomo (P03): tela grande para comparar fotos; mapa da propriedade com talhões e pontos geolocalizados; ampliação da foto original; filtros por período e local; registro do veredito por ponto; parecer com os pontos vinculados automaticamente. | Reduz a reconstrução do contexto relatada no C03 (fotos soltas, local de memória). Pelo GOMS T06, o atalho "ver histórico deste ponto" (M3) fica na própria tela da detecção. |
-| Restrições | Fluxo do agrônomo (P03): a validação depende da qualidade da foto feita em campo; o agrônomo não examina o fruto pessoalmente; o sistema não recomenda produto nem dose. | A saída "pedir nova foto" (botão em A03) evita forçar confirmar ou rejeitar. Produto, dose e período são campos livres: o sistema apenas registra o julgamento do agrônomo (HTA T05, 4.2). |
-| Conectividade/latência | Fluxo do agrônomo (P03): escritório com internet estável (hipótese); as fotos só chegam depois que o celular de P02 sincroniza, o que pode levar horas. | Mostrar a data e hora da captura e da sincronização, para o agrônomo saber se o dado é recente, e manter pendentes os pontos com pedido de nova foto ainda não atendido. |
-| Segurança/privacidade | Fluxo do agrônomo (P03): fotos e coordenadas revelam a localização e a situação sanitária da propriedade; o parecer identifica o profissional responsável. | Acesso apenas às propriedades atendidas pelo agrônomo; autoria e data do veredito e do parecer sempre visíveis; mapas não expostos publicamente. |
-| Volume de dados/histórico | Fluxo do agrônomo (P03): ciclos de cerca de 14 dias ao longo do ano [F16], várias propriedades por agrônomo e vários pontos por talhão; centenas de detecções por propriedade em um ano (estimativa a confirmar). | Histórico em lista única com filtros de período e local (A05), período padrão das últimas 8 semanas e ordenação da mais recente para a mais antiga. A mesma lista é aberta a partir de A01, A02 ou A03, já filtrada conforme a origem (GOMS T06). |
-| Tempo de processamento | Fluxo do agrônomo (P03): a detecção já chega processada do celular; o que leva tempo é carregar o mapa e as fotos originais e enviar o parecer. | Indicador de carregamento no mapa e na foto; envio do parecer com o pedido marcado como "concluído" em A01 e, em caso de falha, nova tentativa em A07 sem perder o texto. |
-| Papéis/permissões | Fluxo do agrônomo (P03): o agrônomo valida detecções e emite parecer; o gestor (P01) pede parecer e recebe a recomendação; o trabalhador (P02) recebe o pedido de nova foto na rota. | Apenas o agrônomo registra veredito. O sistema mostra quem pediu o parecer e para quem ele vai, para que o repasse seja explícito (síntese da Entrega 3). Não há tela de administração de usuários neste recorte. |
+| Característica | Fluxo do trabalhador — P02 | Fluxo do agrônomo — P03 | Consequência para IHC |
+|---|---|---|---|
+| Software | Aplicativo móvel de inspeção previsto no TCC. | Aplicação web proposta para uso no escritório; hipótese a confirmar na Entrega 7. | P02 precisa de fluxo curto de captura; P03 precisa de lista, mapa e histórico organizados. |
+| Hardware/dispositivos | Smartphone com câmera e eventual lente macro, conforme o equipamento de captura. | Computador ou notebook; uso em tablet ou celular durante visitas é hipótese. | Botão de captura grande para P02; foto e contexto ampliáveis para P03. |
+| Capacidades | Fotografar, analisar, apresentar resultado e registrar o ponto. | Visualizar detecções, foto original, mapa, histórico, veredito e parecer. | Mostrar o resultado da IA separado da confirmação humana. |
+| Restrições | Sol forte, deslocamento, pouco tempo por fruto e fotos que podem sair sem nitidez. | O agrônomo depende da qualidade e do contexto das fotos enviadas pelo campo. | P02 pode ajustar ou refazer a foto; P03 pode pedir outra foto quando a informação for insuficiente. |
+| Conectividade/latência | A conexão pode faltar no pomar; os registros aguardam sincronização. | As fotos podem chegar horas após a captura, quando P02 recuperar conexão. | Exibir estados de salvamento e envio para P02; mostrar a P03 horários de captura e sincronização. |
+| Segurança/privacidade | Foto e localização podem revelar dados da propriedade e a atividade do trabalhador. | Mapa, fotos e parecer podem identificar a propriedade e o profissional responsável. | Informar a finalidade do registro, limitar acesso e mostrar a autoria necessária ao parecer. |
+| Volume de dados/histórico | Inspeções se repetem em muitas árvores e em diferentes dias. | Há pontos de diferentes talhões e ciclos a consultar. | P02 distingue registrados e pendentes; P03 acessa histórico com filtros por local e período. |
+| Tempo de processamento | O resultado precisa aparecer durante a inspeção; o tempo real depende do dispositivo. | A detecção já chega processada; mapa, fotos e envio do parecer podem demorar. | Mostrar estados de análise e carregamento, com recuperação após falhas. |
+| Papéis/permissões | P02 registra e repassa achados; não decide sozinho o manejo. | P03 valida e emite parecer; P01 solicita ou recebe a recomendação. | Explicitar destinatário, estado do repasse e diferença entre detecção e veredito. Não há tela administrativa neste recorte. |
+
+**Hipóteses de plataforma a confirmar:** dispositivos disponíveis, estabilidade da conexão, volume real de registros, forma de comunicação entre papéis e necessidade de histórico. As características propostas não devem ser apresentadas como fatos observados com usuários.
 
 ## 2. Princípios gerais do projeto
 
-Inclua apenas normas, leis, padrões e princípios realmente relevantes, explicando **como** afetam o projeto. Não transforme esta seção em lista de links.
-
 | Princípio/norma | Aplicabilidade ao contexto | Decisão/requisito decorrente | Fonte |
 |---|---|---|---|
-| Contexto de uso | Fluxo do agrônomo (P03): decide a distância, dependendo do que o campo registra, e atende várias propriedades (P03, C03). | Alertas agrupados por propriedade e talhão (A01); entrada direta no foco; local, data, hora e árvore gravados automaticamente na captura, sem depender da memória de quem fotografou. | Entregas 1/3 |
-| LGPD, se aplicável | Fluxo do agrônomo (P03): o sistema guarda dados pessoais do agrônomo (autoria do parecer) e do trabalhador (quem fez a foto), além da localização da propriedade, que pode identificar o dono. | Coletar apenas o necessário para rastrear quem validou e quem fotografou; restringir o acesso às propriedades atendidas; no parecer, mostrar apenas nome e função. | Lei nº 13.709/2018 (LGPD), art. 6º (finalidade, necessidade, segurança) |
-| Acessibilidade | Fluxo do agrônomo (P03): aplicação web em que a situação dos pontos no mapa seria difícil de distinguir só por cor (daltonismo, monitores ruins). | Situação dos pontos indicada por cor e símbolo (○ pendente, ● confirmado, × rejeitado, contorno tracejado = detecção anterior); contraste mínimo de 4,5:1 para texto; alvos de pelo menos 24 × 24 px; texto alternativo na foto com ponto, árvore e data. | WCAG 2.2: 1.4.1, 1.4.3, 2.5.8 e 1.1.1 |
-| Responsabilidade técnica pela recomendação de defensivos | Fluxo do agrônomo (P03): a prescrição de agrotóxicos é feita por receituário agronômico emitido por profissional legalmente habilitado. | O parecer do sistema registra a recomendação, mas não substitui o receituário agronômico; isso fica explícito em A07, e o sistema não sugere produto nem dose. | Lei nº 14.785/2023 (substituiu a Lei nº 7.802/1989) |
+| Contexto de uso — P02 | Inspeção a pé no pomar, sob sol e com conexão instável. | Poucos passos, instruções curtas, controle da rota e continuidade offline. | Entregas 1, 3 e 5 |
+| Contexto de uso — P03 | Análise à distância, dependente do que o campo registrou. | Organizar pedidos por propriedade e talhão; permitir abrir diretamente a foto e o contexto do ponto. | Personas e cenário C03 |
+| Prevenção e recuperação de erros | Foto inadequada, dúvida sobre o resultado, falta de GPS e falhas de envio ou carregamento. | Permitir refazer a foto, registrar local manualmente, pedir nova foto e tentar reenviar sem perder dados. | Entregas 5 e 6 |
+| Privacidade e minimização | Localização, fotos e autoria podem identificar pessoas e propriedades. | Registrar apenas os dados necessários; informar a finalidade; limitar acesso às propriedades e pessoas envolvidas. | LGPD, art. 6º |
+| Acessibilidade | Uso sob luz forte em P02; estados do mapa que não devem depender só de cor em P03. | Combinar texto, símbolos e cor; buscar contraste mínimo de 4,5:1 para texto comum e tamanho adequado para os controles. | WCAG 2.2: 1.4.1, 1.4.3 e 2.5.8 |
+| Responsabilidade pelo parecer | A recomendação de manejo é uma decisão técnica do profissional habilitado. | O sistema registra o parecer; não sugere automaticamente produto ou dose. Informar que o parecer na interface não substitui o receituário agronômico aplicável. | Requisito do fluxo P03; legislação pertinente ao receituário |
 
 ## 3. Metas de usabilidade
 
-Usabilidade deve ser discutida **no contexto de uso**. Metas quantitativas devem dizer o que será medido, em qual tarefa, com qual população e qual limite será considerado aceitável.
+As metas serão avaliadas no contexto das tarefas. Seus limites são **propostas iniciais**, a revisar após um piloto, sem alterar retroativamente os critérios de um teste já realizado.
 
 ### 3.1 Metas qualitativas
 
 | Meta | Para quem/tarefa | Evidência desejada | Justificativa |
 |---|---|---|---|
-| Compreensão da diferença entre "detectado pela IA" e "validado por humano" | P03 / T07 (A02, A03) | O participante explica com as próprias palavras que um ponto confirmado passou pela sua análise e um pendente ainda não. | Principal decisão de design de P03 (Entrega 3) e base do dimensionamento da área. |
-| Compreensão do que acontece após pedir nova foto | P03 / T07 (A02, A03) | Após pedir nova foto, o participante explica que o ponto continua pendente porque espera a nova foto do campo. | O ponto não tem situação própria de "aguardando"; é preciso verificar se isso não leva a pedir a mesma foto duas vezes. |
-| Compreensão da situação do parecer após o envio | P03 / T05 (A07, A01) | O participante diz, a partir de "concluído" em A01, se o parecer já chegou ao gestor, e o que fazer em caso de falha. | Hoje o parecer se perde em mensagens soltas (C03). |
-| Confiança no contexto reunido | P03 / T05 e T06 (A03, A05) | O participante declara ter informação suficiente para decidir ou, quando não tem, usa o pedido de nova foto em vez de decidir sem certeza. | Dor central do C03 (decidir sem local, data e histórico). |
-| Percepção de que a avaliação da IA não atrapalha o julgamento | P03 / T07 (A03) | Relato do participante sobre quando abriu a avaliação da IA e se sentiu falta dela antes. | Decisão a testar, ligada ao possível viés de confirmação (CTT T07). |
+| Entender o resultado sem atribuir certeza indevida à IA. | P02 / T02 | O participante explica que “sinal suspeito” requer confirmação e que “nenhum sinal nesta foto” não garante árvore livre. | Evita interpretação incorreta durante a inspeção. |
+| Recuperar-se de foto inadequada ou resultado inconclusivo. | P02 / T02 | O participante ajusta ou refaz a captura e continua na mesma rota. | O enquadramento é um ponto crítico da tarefa. |
+| Distinguir cobertura e situação do envio. | P02 / T01 e T03 | O participante aponta o que falta inspecionar e explica se o registro está salvo ou já foi enviado. | Quem registra nem sempre é quem recebe e decide. |
+| Compreender a diferença entre “detectado pela IA” e “validado por humano”. | P03 / T07 | O participante explica que o ponto confirmado passou pela avaliação humana e o pendente ainda não. | A distinção sustenta o parecer técnico. |
+| Compreender o pedido de nova foto. | P03 / T07 | O participante entende que o ponto permanece pendente enquanto aguarda a nova foto. | Evita pedidos duplicados ou decisão sem dados suficientes. |
+| Compreender a situação do parecer. | P03 / T05 | O participante identifica se o parecer foi enviado e o que fazer diante de falha. | O repasse ao gestor precisa ser explícito. |
+| Avaliar se o contexto é suficiente. | P03 / T05 e T06 | O participante usa foto, local e histórico ou pede nova foto quando necessário. | Responde à dificuldade de decidir com fotos soltas e sem contexto. |
+| Perceber se o resultado da IA interfere no julgamento. | P03 / T07 | O participante relata quando consultou a avaliação da IA e como a utilizou. | Permite revisar a ordem de apresentação das informações. |
 
 ### 3.2 Metas quantitativas
 
-| ID | Dimensão | Métrica | Tarefa/escopo | Meta | Como medir | Justificativa |
+**Condições para MU01–MU03:** participantes do perfil P02; cenário e resultados simulados iguais para todos; amostra inicialmente planejada de três participantes. Registrar separadamente qualquer ajuda fornecida pelo avaliador.
+
+| ID | Dimensão | Métrica | Tarefa/escopo | Meta proposta | Como medir | Justificativa |
 |---|---|---|---|---|---|---|
-| MU01 | eficácia | taxa de conclusão sem ajuda | T01 | ≥ {{x}}% | teste observado | {{...}} |
-| MU02 | eficiência | tempo mediano | T02 | ≤ {{tempo}} | cronômetro/log | {{...}} |
-| MU03 | satisfação | escala pós-tarefa | T01–T03 | ≥ {{valor}} | questionário | {{...}} |
-| MU04 | eficácia | conclusão sem ajuda do fluxo completo: abrir o pedido, validar os 5 pontos pendentes do talhão, delimitar a área e enviar o parecer | T07 + T05 (A01 → A07) | todos os participantes concluem; no máximo 1 precisa de 1 dica | teste observado, registrando pedidos de ajuda | Fluxo central de P03 e candidato ao teste (síntese da Entrega 5). Com 3 participantes finais (Entrega 14), a meta é expressa em número de pessoas, e não em porcentagem. |
-| MU05 | eficácia (erro) | pontos não confirmados (pendentes, inclusive com pedido de nova foto, ou rejeitados) incluídos na área de aplicação | T05, passo 4.1 (A06) | 0 ocorrências | conferência da área delimitada ao fim da tarefa | O erro relatado no C03 (aplicar em área maior que a afetada) ocorre nessa etapa. |
-| MU06 | eficiência | tempo para responder "este ponto já teve detecção antes?" a partir da tela da detecção | T06, método M3 (A03) | mediana ≤ 20 s | cronômetro, da exibição de A03 até a resposta verbal | O GOMS T06 indica M3 como o caminho mais curto; tempo alto indica histórico do ponto pouco visível. |
-| MU07 | eficiência | tempo total do fluxo para um talhão com 5 pontos pendentes | T07 + T05 (A01 → A07) | mediana ≤ 8 min | cronômetro | Hoje reunir o contexto por telefone pode levar horas ou dias (C03); o fluxo deve caber em uma sessão curta de trabalho. |
-| MU08 | eficácia (compreensão) | participantes que identificam corretamente a situação do parecer após o envio, inclusive na falha simulada | T05, passo 5.3 (A07, A01) | todos os participantes | pergunta pós-tarefa e observação | Parecer que não chega ao gestor não gera manejo (síntese da Entrega 3). |
-| MU09 | satisfação | Single Ease Question (SEQ, 1 a 7) após cada tarefa | T05, T06 e T07 | média ≥ 5,5 em cada tarefa | questionário pós-tarefa | Escala curta, adequada a poucas tarefas e poucos participantes. |
+| MU01 | Eficácia | Participantes que fotografam, salvam um achado e identificam um ponto pendente sem ajuda. | P02 / T01–T03; P01 → P06 | 3 de 3 participantes planejados. | Observação de conclusão, erros e pedidos de ajuda. | Reúne captura, registro e controle da rota. |
+| MU02 | Eficiência | Tempo da abertura da câmera até a confirmação de registro salvo no celular. | P02 / T02; P02 → P05 | Mediana ≤ 60 segundos. | Cronômetro; incluir ajustes e repetição da foto, excluindo espera artificial de processamento. | O ciclo é repetido muitas vezes. |
+| MU03 | Satisfação | Facilidade percebida em escala de 1 (muito difícil) a 7 (muito fácil), após cada fluxo. | P02 / PF01 e PF02 | Mediana ≥ 5 em cada fluxo. | Pergunta pós-tarefa aplicada separadamente. | Uma tarefa concluída ainda pode ter sido difícil. |
+| MU04 | Eficácia | Conclusão sem ajuda do fluxo: abrir pedido, validar cinco pontos, delimitar área e enviar parecer. | P03 / T07 + T05; A01 → A07 | Todos concluem; no máximo um participante precisa de uma dica. | Teste observado, registrando ajuda e conclusão. | Fluxo central de P03. |
+| MU05 | Eficácia: erro | Pontos pendentes ou rejeitados incluídos indevidamente na área de aplicação. | P03 / T05, passo 4.1; A06 | Zero ocorrência. | Conferir a delimitação ao final da tarefa. | Evita dimensionar uma área maior com base em pontos não confirmados. |
+| MU06 | Eficiência | Tempo para responder “este ponto já teve detecção antes?” a partir da tela da detecção. | P03 / T06, método M3; A03 | Mediana ≤ 20 segundos. | Cronômetro da exibição de A03 até a resposta. | Verifica se o histórico do ponto está acessível. |
+| MU07 | Eficiência | Tempo total do fluxo para um talhão com cinco pontos pendentes. | P03 / T07 + T05; A01 → A07 | Mediana ≤ 8 minutos. | Cronômetro do início até a confirmação de envio. | O fluxo deve caber em uma sessão curta de trabalho. |
+| MU08 | Eficácia: compreensão | Participantes que identificam corretamente a situação do parecer, inclusive após falha simulada. | P03 / T05; A07 e A01 | Todos os participantes. | Observação e pergunta pós-tarefa. | Um parecer não enviado não pode parecer concluído. |
+| MU09 | Satisfação | Nota de facilidade, de 1 a 7, após cada tarefa. | P03 / T05, T06 e T07 | Média ≥ 5,5 em cada tarefa. | Pergunta pós-tarefa. | Permite comparar a dificuldade percebida nas tarefas técnicas. |
 
-### 3.3 Priorização das metas (se exigida na disciplina)
+**Critério de conclusão:** o avaliador deverá registrar também os casos em que a pessoa termina a tarefa por tentativa e erro ou com ajuda. A conclusão isolada não demonstra que a interação foi clara.
 
-Se o professor solicitar porcentagens que somem 100%, trate-as como **peso de prioridade**, não como métrica de usabilidade.
+### 3.3 Priorização das metas
+
+Se o professor solicitar porcentagens que somem 100%, elas representarão **peso de prioridade**, não resultado medido.
 
 | Meta | Peso de prioridade | Justificativa |
 |---|---:|---|
-| MU01 | {{...}}% | {{...}} |
-| **Total** | **100%** | |
+| MU01 — conclusão do fluxo de P02 | 20% | Evitar perda de achados e confusão na rota. |
+| MU02 — tempo da captura | 10% | Tarefa repetida em muitos frutos. |
+| MU03 — facilidade percebida por P02 | 5% | Ajuda a avaliar a continuidade do uso. |
+| MU04 — conclusão do fluxo de P03 | 20% | Integra validação e parecer. |
+| MU05 — erro na área delimitada | 15% | Erro com consequência relevante no manejo. |
+| MU06 — acesso ao histórico | 10% | Informação necessária à análise do ponto. |
+| MU07 — tempo do fluxo de P03 | 10% | Mede o esforço da sessão completa. |
+| MU08 — compreensão do envio | 5% | Evita parecer de conclusão falsa. |
+| MU09 — facilidade percebida por P03 | 5% | Identifica dificuldades nas tarefas técnicas. |
+| **Total** | **100%** | **Distribuição proposta para a solução integrada.** |
 
 ## 4. Como o ciclo será iterado
 
-Explique que artefatos serão revisitados após protótipos e avaliações.
+1. **Após a Entrega 7:** revisar hipóteses sobre familiaridade digital, rotina de inspeção, controle da rota, necessidade de histórico e responsabilidades de cada perfil.
+2. **Após o protótipo em papel e o walkthrough:** corrigir mensagens e caminhos em que as pessoas hesitarem, errarem ou não entenderem o resultado e o envio.
+3. **Na Entrega 11:** integrar os fluxos de P02 e P03 ao protótipo avaliável, mantendo explícitos os estados simulados.
+4. **Nas Entregas 12–14:** aplicar tarefas equivalentes aos perfis correspondentes, medir MU01–MU09 e registrar também erros e comentários.
+5. **Após cada avaliação:** relacionar problema observado, evidência, alteração realizada e meta afetada. Revisitar protótipo, descrições das tarefas e metas quando os dados justificarem.
 
 ## Checklist
 
-- [ ] Capacidades e restrições têm impacto de IHC explicitado.
-- [ ] Está claro o limite entre contribuição técnica do TCC e camada interativa da disciplina.
-- [ ] Resultados/processamento simulados no protótipo foram explicitados.
-- [ ] Metas de usabilidade avaliam a interação, não substituem métricas técnicas do TCC.
-- [ ] Normas/princípios estão contextualizados, não apenas copiados.
-- [ ] Metas quantitativas são mensuráveis e associadas a tarefas/público.
-- [ ] Eficácia, eficiência e satisfação são consideradas quando pertinentes.
-- [ ] Metas poderão ser verificadas nas Entregas 12–14.
+- [x] Capacidades e restrições têm impacto de IHC explicitado.
+- [x] Está claro o limite entre contribuição técnica do TCC e camada interativa da disciplina.
+- [x] Resultados e processamento simulados no protótipo foram explicitados.
+- [x] Metas de usabilidade avaliam a interação, sem substituir métricas técnicas do TCC.
+- [x] Normas e princípios estão contextualizados.
+- [x] Metas quantitativas são mensuráveis e associadas a tarefas e públicos.
+- [x] Eficácia, eficiência e satisfação foram consideradas.
+- [ ] Metas verificadas nas Entregas 12–14 — avaliação ainda pendente.
