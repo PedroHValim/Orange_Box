@@ -1,7 +1,7 @@
 # Entrega 10 — MoLIC
 
 **Data:** 01/11/2026<br>
-**Status:** 🟨 em andamento — conversa M02 especificada; diagramas e consolidação pendentes.<br>
+**Status:** 🟨 em andamento — conversa M02 especificada e diagrama inserido; M01, M03 e consolidação pendentes.<br>
 **Responsabilidade:** 1 solução completa por integrante.
 
 ## Objetivo da atividade
@@ -52,13 +52,13 @@ Modelar a interação como conversa entre usuário e preposto do designer, inclu
 
 ### Diagrama
 
-O arquivo abaixo é o **local reservado** para o diagrama. Desenhá-lo com a notação MoLIC e a legenda apresentadas na aula, usando a especificação das cenas e transições que segue.
+Diagrama desenhado com a notação MoLIC e a legenda apresentadas na aula, a partir da especificação das cenas e transições abaixo.
 
-![MoLIC M02](../assets/10_molic/molic_m02.svg)
+![MoLIC M02](../assets/10_molic/molic_m02.png)
 
-**Fonte editável:** {{inserir link do arquivo .drawio ou outro formato editável após desenhar M02}}
+**Fonte editável:** {{inserir link do arquivo .drawio ou .svg editável de M02}}
 
-### Cenas, processamento e encerramentos para desenhar
+### Cenas, processamento e encerramentos desenhados
 
 | Elemento | Tópico ou função na conversa | Conteúdo que precisa aparecer |
 |---|---|---|
@@ -121,7 +121,7 @@ As cenas representam **assuntos da conversa**. P01–P07, da Entrega 6, podem aj
 - [x] A especificação modela a conversa com o usuário, não o interior do algoritmo.
 - [x] Processamento, registro e envio incluem retornos e falhas relevantes.
 
-**Situação de M02:** a especificação textual está pronta; os itens referentes ao **desenho** permanecem abertos até a criação e conferência do SVG editável.
+**Situação de M02:** a especificação textual está pronta e o diagrama foi inserido como imagem (`molic_m02.png`); permanecem abertos o link da fonte editável e a conferência final do diagrama em tamanho normal no GitHub.
 
 ## M03 — {{objetivo do gestor}}
 
