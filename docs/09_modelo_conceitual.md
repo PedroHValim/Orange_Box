@@ -241,8 +241,6 @@ Os três mapas individuais foram integrados sob um objetivo comum: **controlar o
 
 **Pontos em aberto:** L4 e L5 chegam à rota de P02, mas o CI02 ainda não mostra como um pedido de reinspeção ou de nova foto aparece para o trabalhador; o MoLIC M02 deve representar essa entrada. A hipótese H04 (quem decide a aplicação) pode mudar o destino de L6.
 
-Os mapas individuais lado a lado continuam disponíveis em [mapa_objetivos.svg](../assets/09_modelo_conceitual/mapa_objetivos.svg).
-
 ### Dicionário de objetivos
 
 | ID | Objetivo | Persona(s) | Cenário(s) | Prioridade |
