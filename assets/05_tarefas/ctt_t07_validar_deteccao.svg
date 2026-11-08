@@ -1,104 +1,272 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1680" height="880" viewBox="0 0 1680 880">
-<rect width="100%" height="100%" fill="#ffffff"/>
-<text x="840.0" y="34.3" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="bold" fill="#24292f">CTT — T07 Validar detecções da IA (P03)</text>
-<text x="840.0" y="56.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#57606a">Autor: Guilherme Morais Escudeiro — 24.123.005-1</text>
-<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="1200" cy="113" rx="20" ry="11"/><circle cx="1192" cy="106" r="8"/><circle cx="1206" cy="104" r="10"/></g><ellipse cx="1200" cy="113" rx="19" ry="10" fill="#8250df22"/>
-<text x="1200" y="156.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Validar detecções pendentes</text>
-<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="870" cy="233" rx="20" ry="11"/><circle cx="862" cy="226" r="8"/><circle cx="876" cy="224" r="10"/></g><ellipse cx="870" cy="233" rx="19" ry="10" fill="#8250df22"/>
-<text x="870" y="276.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Validar detecção*</text>
-<rect x="1510" y="219" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="1514" y="223" width="6" height="5" fill="#0969da"/><rect x="1523" y="223" width="6" height="5" fill="#0969da"/><rect x="1532" y="223" width="6" height="5" fill="#0969da"/><rect x="1541" y="223" width="6" height="5" fill="#0969da"/><rect x="1514" y="232" width="6" height="5" fill="#0969da"/><rect x="1523" y="232" width="6" height="5" fill="#0969da"/><rect x="1532" y="232" width="6" height="5" fill="#0969da"/><rect x="1541" y="232" width="6" height="5" fill="#0969da"/>
-<text x="1530" y="276.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Encerrar revisão</text>
-<rect x="110" y="359" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="114" y="363" width="6" height="5" fill="#0969da"/><rect x="123" y="363" width="6" height="5" fill="#0969da"/><rect x="132" y="363" width="6" height="5" fill="#0969da"/><rect x="141" y="363" width="6" height="5" fill="#0969da"/><rect x="114" y="372" width="6" height="5" fill="#0969da"/><rect x="123" y="372" width="6" height="5" fill="#0969da"/><rect x="132" y="372" width="6" height="5" fill="#0969da"/><rect x="141" y="372" width="6" height="5" fill="#0969da"/>
-<text x="130" y="408.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Selecionar detecção</text>
-<text x="130" y="424.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">pendente</text>
-<rect x="362" y="356" width="36" height="24" rx="2" fill="#bc4c0022" stroke="#bc4c00" stroke-width="1.5"/><line x1="380" y1="380" x2="380" y2="385" stroke="#bc4c00" stroke-width="1.5"/><line x1="371" y1="385" x2="389" y2="385" stroke="#bc4c00" stroke-width="1.5"/>
-<text x="380" y="408.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Exibir foto, confiança</text>
-<text x="380" y="424.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">da IA e localização</text>
-<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="650" cy="373" rx="20" ry="11"/><circle cx="642" cy="366" r="8"/><circle cx="656" cy="364" r="10"/></g><ellipse cx="650" cy="373" rx="19" ry="10" fill="#8250df22"/>
-<text x="650" y="416.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Analisar evidências</text>
-<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="1250" cy="373" rx="20" ry="11"/><circle cx="1242" cy="366" r="8"/><circle cx="1256" cy="364" r="10"/></g><ellipse cx="1250" cy="373" rx="19" ry="10" fill="#8250df22"/>
-<text x="1250" y="416.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Registrar veredito</text>
-<rect x="1522" y="356" width="36" height="24" rx="2" fill="#bc4c0022" stroke="#bc4c00" stroke-width="1.5"/><line x1="1540" y1="380" x2="1540" y2="385" stroke="#bc4c00" stroke-width="1.5"/><line x1="1531" y1="385" x2="1549" y2="385" stroke="#bc4c00" stroke-width="1.5"/>
-<text x="1540" y="408.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Marcar como “validado</text>
-<text x="1540" y="424.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">por humano”</text>
-<g fill="#1a7f3722" stroke="#1a7f37" stroke-width="1.5"><circle cx="470" cy="502" r="7"/><path d="M 456 525 Q 470 504 484 525 Z"/></g>
-<text x="470" y="556.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Examinar a imagem</text>
-<rect x="630" y="499" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="634" y="503" width="6" height="5" fill="#0969da"/><rect x="643" y="503" width="6" height="5" fill="#0969da"/><rect x="652" y="503" width="6" height="5" fill="#0969da"/><rect x="661" y="503" width="6" height="5" fill="#0969da"/><rect x="634" y="512" width="6" height="5" fill="#0969da"/><rect x="643" y="512" width="6" height="5" fill="#0969da"/><rect x="652" y="512" width="6" height="5" fill="#0969da"/><rect x="661" y="512" width="6" height="5" fill="#0969da"/>
-<text x="650" y="556.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">[Ampliar imagem]</text>
-<rect x="820" y="499" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="824" y="503" width="6" height="5" fill="#0969da"/><rect x="833" y="503" width="6" height="5" fill="#0969da"/><rect x="842" y="503" width="6" height="5" fill="#0969da"/><rect x="851" y="503" width="6" height="5" fill="#0969da"/><rect x="824" y="512" width="6" height="5" fill="#0969da"/><rect x="833" y="512" width="6" height="5" fill="#0969da"/><rect x="842" y="512" width="6" height="5" fill="#0969da"/><rect x="851" y="512" width="6" height="5" fill="#0969da"/>
-<text x="840" y="548.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">[Consultar histórico</text>
-<text x="840" y="564.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">do ponto]</text>
-<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="1110" cy="513" rx="20" ry="11"/><circle cx="1102" cy="506" r="8"/><circle cx="1116" cy="504" r="10"/></g><ellipse cx="1110" cy="513" rx="19" ry="10" fill="#8250df22"/>
-<text x="1110" y="556.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Escolher veredito</text>
-<rect x="1400" y="499" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="1404" y="503" width="6" height="5" fill="#0969da"/><rect x="1413" y="503" width="6" height="5" fill="#0969da"/><rect x="1422" y="503" width="6" height="5" fill="#0969da"/><rect x="1431" y="503" width="6" height="5" fill="#0969da"/><rect x="1404" y="512" width="6" height="5" fill="#0969da"/><rect x="1413" y="512" width="6" height="5" fill="#0969da"/><rect x="1422" y="512" width="6" height="5" fill="#0969da"/><rect x="1431" y="512" width="6" height="5" fill="#0969da"/>
-<text x="1420" y="548.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">[Anotar observação</text>
-<text x="1420" y="564.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">técnica]</text>
-<rect x="940" y="639" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="944" y="643" width="6" height="5" fill="#0969da"/><rect x="953" y="643" width="6" height="5" fill="#0969da"/><rect x="962" y="643" width="6" height="5" fill="#0969da"/><rect x="971" y="643" width="6" height="5" fill="#0969da"/><rect x="944" y="652" width="6" height="5" fill="#0969da"/><rect x="953" y="652" width="6" height="5" fill="#0969da"/><rect x="962" y="652" width="6" height="5" fill="#0969da"/><rect x="971" y="652" width="6" height="5" fill="#0969da"/>
-<text x="960" y="696.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Confirmar</text>
-<rect x="1090" y="639" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="1094" y="643" width="6" height="5" fill="#0969da"/><rect x="1103" y="643" width="6" height="5" fill="#0969da"/><rect x="1112" y="643" width="6" height="5" fill="#0969da"/><rect x="1121" y="643" width="6" height="5" fill="#0969da"/><rect x="1094" y="652" width="6" height="5" fill="#0969da"/><rect x="1103" y="652" width="6" height="5" fill="#0969da"/><rect x="1112" y="652" width="6" height="5" fill="#0969da"/><rect x="1121" y="652" width="6" height="5" fill="#0969da"/>
-<text x="1110" y="696.5" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Rejeitar</text>
-<rect x="1250" y="639" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="1254" y="643" width="6" height="5" fill="#0969da"/><rect x="1263" y="643" width="6" height="5" fill="#0969da"/><rect x="1272" y="643" width="6" height="5" fill="#0969da"/><rect x="1281" y="643" width="6" height="5" fill="#0969da"/><rect x="1254" y="652" width="6" height="5" fill="#0969da"/><rect x="1263" y="652" width="6" height="5" fill="#0969da"/><rect x="1272" y="652" width="6" height="5" fill="#0969da"/><rect x="1281" y="652" width="6" height="5" fill="#0969da"/>
-<text x="1270" y="688.4" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">Solicitar nova</text>
-<text x="1270" y="704.7" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#24292f">foto ao campo</text>
-<line x1="1200" y1="172" x2="1200" y2="192" stroke="#57606a" stroke-width="1.3"/>
-<line x1="870" y1="192" x2="1530" y2="192" stroke="#57606a" stroke-width="1.3"/>
-<line x1="870" y1="192" x2="870" y2="208" stroke="#57606a" stroke-width="1.3"/>
-<line x1="1530" y1="192" x2="1530" y2="208" stroke="#57606a" stroke-width="1.3"/>
-<rect x="1176.0" y="218" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
-<text x="1200.0" y="234.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[&gt;</text>
-<line x1="870" y1="292" x2="870" y2="332" stroke="#57606a" stroke-width="1.3"/>
-<line x1="130" y1="332" x2="1540" y2="332" stroke="#57606a" stroke-width="1.3"/>
-<line x1="130" y1="332" x2="130" y2="348" stroke="#57606a" stroke-width="1.3"/>
-<line x1="380" y1="332" x2="380" y2="348" stroke="#57606a" stroke-width="1.3"/>
-<line x1="650" y1="332" x2="650" y2="348" stroke="#57606a" stroke-width="1.3"/>
-<line x1="1250" y1="332" x2="1250" y2="348" stroke="#57606a" stroke-width="1.3"/>
-<line x1="1540" y1="332" x2="1540" y2="348" stroke="#57606a" stroke-width="1.3"/>
-<rect x="231.0" y="358" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
-<text x="255.0" y="374.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[]&gt;&gt;</text>
-<rect x="491.0" y="358" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
-<text x="515.0" y="374.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">&gt;&gt;</text>
-<rect x="926.0" y="358" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
-<text x="950.0" y="374.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">&gt;&gt;</text>
-<rect x="1371.0" y="358" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
-<text x="1395.0" y="374.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[]&gt;&gt;</text>
-<line x1="650" y1="432" x2="650" y2="472" stroke="#57606a" stroke-width="1.3"/>
-<line x1="470" y1="472" x2="840" y2="472" stroke="#57606a" stroke-width="1.3"/>
-<line x1="470" y1="472" x2="470" y2="488" stroke="#57606a" stroke-width="1.3"/>
-<line x1="650" y1="472" x2="650" y2="488" stroke="#57606a" stroke-width="1.3"/>
-<line x1="840" y1="472" x2="840" y2="488" stroke="#57606a" stroke-width="1.3"/>
-<rect x="536.0" y="498" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
-<text x="560.0" y="514.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">|||</text>
-<rect x="721.0" y="498" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
-<text x="745.0" y="514.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">|||</text>
-<line x1="1250" y1="432" x2="1250" y2="472" stroke="#57606a" stroke-width="1.3"/>
-<line x1="1110" y1="472" x2="1420" y2="472" stroke="#57606a" stroke-width="1.3"/>
-<line x1="1110" y1="472" x2="1110" y2="488" stroke="#57606a" stroke-width="1.3"/>
-<line x1="1420" y1="472" x2="1420" y2="488" stroke="#57606a" stroke-width="1.3"/>
-<rect x="1241.0" y="498" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
-<text x="1265.0" y="514.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[]&gt;&gt;</text>
-<line x1="1110" y1="572" x2="1110" y2="612" stroke="#57606a" stroke-width="1.3"/>
-<line x1="960" y1="612" x2="1270" y2="612" stroke="#57606a" stroke-width="1.3"/>
-<line x1="960" y1="612" x2="960" y2="628" stroke="#57606a" stroke-width="1.3"/>
-<line x1="1110" y1="612" x2="1110" y2="628" stroke="#57606a" stroke-width="1.3"/>
-<line x1="1270" y1="612" x2="1270" y2="628" stroke="#57606a" stroke-width="1.3"/>
-<rect x="1011.0" y="638" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
-<text x="1035.0" y="654.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[]</text>
-<rect x="1166.0" y="638" width="48" height="22" rx="4" fill="#ffffff" stroke="#d0d7de"/>
-<text x="1190.0" y="654.2" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#24292f">[]</text>
-<rect x="25" y="780" width="1630" height="95" rx="6" fill="#f6f8fa" stroke="#d0d7de"/>
-<g fill="#8250df22" stroke="#8250df" stroke-width="1.5"><ellipse cx="60" cy="815" rx="20" ry="11"/><circle cx="52" cy="808" r="8"/><circle cx="66" cy="806" r="10"/></g><ellipse cx="60" cy="815" rx="19" ry="10" fill="#8250df22"/>
-<text x="90" y="816.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a">abstrata</text>
-<g fill="#1a7f3722" stroke="#1a7f37" stroke-width="1.5"><circle cx="250" cy="804" r="7"/><path d="M 236 827 Q 250 806 264 827 Z"/></g>
-<text x="280" y="816.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a">usuário</text>
-<rect x="420" y="801" width="40" height="24" rx="3" fill="#0969da22" stroke="#0969da" stroke-width="1.5"/><rect x="424" y="805" width="6" height="5" fill="#0969da"/><rect x="433" y="805" width="6" height="5" fill="#0969da"/><rect x="442" y="805" width="6" height="5" fill="#0969da"/><rect x="451" y="805" width="6" height="5" fill="#0969da"/><rect x="424" y="814" width="6" height="5" fill="#0969da"/><rect x="433" y="814" width="6" height="5" fill="#0969da"/><rect x="442" y="814" width="6" height="5" fill="#0969da"/><rect x="451" y="814" width="6" height="5" fill="#0969da"/>
-<text x="470" y="816.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a">interação</text>
-<rect x="612" y="798" width="36" height="24" rx="2" fill="#bc4c0022" stroke="#bc4c00" stroke-width="1.5"/><line x1="630" y1="822" x2="630" y2="827" stroke="#bc4c00" stroke-width="1.5"/><line x1="621" y1="827" x2="639" y2="827" stroke="#bc4c00" stroke-width="1.5"/>
-<text x="660" y="816.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#57606a">sistema/aplicação</text>
-<text x="820" y="806.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">&gt;&gt;  habilitação</text>
-<text x="960" y="806.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">[]&gt;&gt;  habilitação c/ passagem de informação</text>
-<text x="1300" y="806.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">|||  concorrência</text>
-<text x="1450" y="806.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">[]  escolha</text>
-<text x="820" y="836.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">[&gt;  desabilitação</text>
-<text x="960" y="836.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">T*  iteração</text>
-<text x="1100" y="836.2" text-anchor="start" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#24292f">[T]  opcional</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.43.0 (0)
+ -->
+<!-- Title: CTT_T07 Pages: 1 -->
+<svg width="1280pt" height="544pt"
+ viewBox="0.00 0.00 1279.93 543.97" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(21.6 522.37)">
+<title>CTT_T07</title>
+<polygon fill="white" stroke="transparent" points="-21.6,21.6 -21.6,-522.37 1258.33,-522.37 1258.33,21.6 -21.6,21.6"/>
+<text text-anchor="start" x="8" y="-484.97" font-family="Helvetica,sans-Serif" font-weight="bold" font-size="16.00">CTT — T07 Validar detecções da IA (P03)</text>
+<text text-anchor="start" x="8" y="-472.97" font-family="Helvetica,sans-Serif" font-size="11.00">Autor: Guilherme Morais Escudeiro — 24.123.005&#45;1 · hexágono = abstrata; retângulo = usuário; retângulo arredondado = sistema; elipse = interação</text>
+<!-- R -->
+<g id="node1" class="node">
+<title>R</title>
+<polygon fill="#e4e9f0" stroke="#33506e" points="499.85,-438.01 452.39,-465.53 357.46,-465.53 310,-438.01 357.46,-410.49 452.39,-410.49 499.85,-438.01"/>
+<text text-anchor="middle" x="404.92" y="-441.21" font-family="Helvetica,sans-Serif" font-size="11.00">Validar detecções</text>
+<text text-anchor="middle" x="404.92" y="-429.21" font-family="Helvetica,sans-Serif" font-size="11.00">pendentes</text>
+</g>
+<!-- X -->
+<g id="node2" class="node">
+<title>X</title>
+<polygon fill="#fff4c7" stroke="#33506e" points="268.92,-355.25 88.92,-355.25 88.92,-309.25 268.92,-309.25 268.92,-355.25"/>
+<text text-anchor="middle" x="178.92" y="-341.45" font-family="Helvetica,sans-Serif" font-size="11.00">Receber do dono a notícia de</text>
+<text text-anchor="middle" x="178.92" y="-329.45" font-family="Helvetica,sans-Serif" font-size="11.00">ocorrência ou iniciar revisão</text>
+<text text-anchor="middle" x="178.92" y="-317.45" font-family="Helvetica,sans-Serif" font-size="11.00">prevista (evento externo)</text>
+</g>
+<!-- R&#45;&gt;X -->
+<g id="edge1" class="edge">
+<title>R&#45;&gt;X</title>
+<path fill="none" stroke="#9aa9b8" d="M352.79,-413.08C314.86,-395.66 263.88,-372.25 226.94,-355.29"/>
+</g>
+<!-- V -->
+<g id="node3" class="node">
+<title>V</title>
+<polygon fill="#e4e9f0" stroke="#33506e" points="491.52,-332.25 448.22,-350.25 361.63,-350.25 318.33,-332.25 361.63,-314.25 448.22,-314.25 491.52,-332.25"/>
+<text text-anchor="middle" x="404.92" y="-329.45" font-family="Helvetica,sans-Serif" font-size="11.00">Validar detecção *</text>
+</g>
+<!-- R&#45;&gt;V -->
+<g id="edge2" class="edge">
+<title>R&#45;&gt;V</title>
+<path fill="none" stroke="#9aa9b8" d="M404.92,-410.29C404.92,-391.44 404.92,-366.73 404.92,-350.44"/>
+</g>
+<!-- E -->
+<g id="node4" class="node">
+<title>E</title>
+<ellipse fill="#fce8d2" stroke="#33506e" cx="609.92" cy="-332.25" rx="68.71" ry="18"/>
+<text text-anchor="middle" x="609.92" y="-329.45" font-family="Helvetica,sans-Serif" font-size="11.00">Encerrar revisão</text>
+</g>
+<!-- R&#45;&gt;E -->
+<g id="edge3" class="edge">
+<title>R&#45;&gt;E</title>
+<path fill="none" stroke="#9aa9b8" d="M454.81,-411.76C493.92,-391.96 547.05,-365.07 579.88,-348.45"/>
+</g>
+<!-- X&#45;&gt;V -->
+<g id="edge17" class="edge">
+<title>X&#45;&gt;V</title>
+<path fill="none" stroke="#33506e" d="M269.22,-332.25C285.33,-332.25 302.07,-332.25 318.08,-332.25"/>
+<text text-anchor="middle" x="293.52" y="-338.25" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#8a3b00">&gt;&gt;</text>
+</g>
+<!-- V&#45;&gt;E -->
+<g id="edge18" class="edge">
+<title>V&#45;&gt;E</title>
+<path fill="none" stroke="#33506e" d="M491.57,-332.25C508.07,-332.25 525.13,-332.25 540.99,-332.25"/>
+<text text-anchor="middle" x="516.4" y="-338.25" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#8a3b00">[&gt;</text>
+</g>
+<!-- S -->
+<g id="node5" class="node">
+<title>S</title>
+<ellipse fill="#fce8d2" stroke="#33506e" cx="91.92" cy="-230.21" rx="91.85" ry="24.08"/>
+<text text-anchor="middle" x="91.92" y="-233.41" font-family="Helvetica,sans-Serif" font-size="11.00">Selecionar detecção</text>
+<text text-anchor="middle" x="91.92" y="-221.41" font-family="Helvetica,sans-Serif" font-size="11.00">pendente</text>
+</g>
+<!-- V&#45;&gt;S -->
+<g id="edge4" class="edge">
+<title>V&#45;&gt;S</title>
+<path fill="none" stroke="#9aa9b8" d="M357.05,-315.95C300.87,-297.99 207.87,-268.27 148.27,-249.22"/>
+</g>
+<!-- D -->
+<g id="node6" class="node">
+<title>D</title>
+<path fill="#ddf0e0" stroke="#33506e" d="M356.42,-248.21C356.42,-248.21 245.42,-248.21 245.42,-248.21 239.42,-248.21 233.42,-242.21 233.42,-236.21 233.42,-236.21 233.42,-224.21 233.42,-224.21 233.42,-218.21 239.42,-212.21 245.42,-212.21 245.42,-212.21 356.42,-212.21 356.42,-212.21 362.42,-212.21 368.42,-218.21 368.42,-224.21 368.42,-224.21 368.42,-236.21 368.42,-236.21 368.42,-242.21 362.42,-248.21 356.42,-248.21"/>
+<text text-anchor="middle" x="300.92" y="-233.41" font-family="Helvetica,sans-Serif" font-size="11.00">Exibir foto, confiança</text>
+<text text-anchor="middle" x="300.92" y="-221.41" font-family="Helvetica,sans-Serif" font-size="11.00">da IA e localização</text>
+</g>
+<!-- V&#45;&gt;D -->
+<g id="edge5" class="edge">
+<title>V&#45;&gt;D</title>
+<path fill="none" stroke="#9aa9b8" d="M386.81,-313.82C367.72,-295.46 337.84,-266.72 318.83,-248.43"/>
+</g>
+<!-- A -->
+<g id="node7" class="node">
+<title>A</title>
+<polygon fill="#e4e9f0" stroke="#33506e" points="600.27,-230.21 554.6,-248.21 463.25,-248.21 417.57,-230.21 463.25,-212.21 554.6,-212.21 600.27,-230.21"/>
+<text text-anchor="middle" x="508.92" y="-227.41" font-family="Helvetica,sans-Serif" font-size="11.00">Analisar evidências</text>
+</g>
+<!-- V&#45;&gt;A -->
+<g id="edge6" class="edge">
+<title>V&#45;&gt;A</title>
+<path fill="none" stroke="#9aa9b8" d="M423.04,-313.82C442.13,-295.46 472.01,-266.72 491.02,-248.43"/>
+</g>
+<!-- G -->
+<g id="node8" class="node">
+<title>G</title>
+<polygon fill="#e4e9f0" stroke="#33506e" points="822.06,-230.21 778.99,-248.21 692.86,-248.21 649.79,-230.21 692.86,-212.21 778.99,-212.21 822.06,-230.21"/>
+<text text-anchor="middle" x="735.92" y="-227.41" font-family="Helvetica,sans-Serif" font-size="11.00">Registrar veredito</text>
+</g>
+<!-- V&#45;&gt;G -->
+<g id="edge7" class="edge">
+<title>V&#45;&gt;G</title>
+<path fill="none" stroke="#9aa9b8" d="M453.76,-316.49C516.43,-297.55 624.52,-264.88 687.15,-245.95"/>
+</g>
+<!-- S&#45;&gt;D -->
+<g id="edge19" class="edge">
+<title>S&#45;&gt;D</title>
+<path fill="none" stroke="#33506e" d="M183.9,-230.21C200.54,-230.21 217.62,-230.21 233.41,-230.21"/>
+<text text-anchor="middle" x="208.64" y="-236.21" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#8a3b00">[]&gt;&gt;</text>
+</g>
+<!-- D&#45;&gt;A -->
+<g id="edge20" class="edge">
+<title>D&#45;&gt;A</title>
+<path fill="none" stroke="#33506e" d="M368.46,-230.21C384.11,-230.21 401.03,-230.21 417.53,-230.21"/>
+<text text-anchor="middle" x="393.09" y="-236.21" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#8a3b00">&gt;&gt;</text>
+</g>
+<!-- A&#45;&gt;G -->
+<g id="edge21" class="edge">
+<title>A&#45;&gt;G</title>
+<path fill="none" stroke="#33506e" d="M600.27,-230.21C616.53,-230.21 633.43,-230.21 649.55,-230.21"/>
+<text text-anchor="middle" x="624.98" y="-236.21" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#8a3b00">&gt;&gt;</text>
+</g>
+<!-- A1 -->
+<g id="node9" class="node">
+<title>A1</title>
+<polygon fill="#fff4c7" stroke="#33506e" points="191.42,-145.12 62.42,-145.12 62.42,-109.12 191.42,-109.12 191.42,-145.12"/>
+<text text-anchor="middle" x="126.92" y="-124.32" font-family="Helvetica,sans-Serif" font-size="11.00">Examinar a imagem</text>
+</g>
+<!-- A&#45;&gt;A1 -->
+<g id="edge8" class="edge">
+<title>A&#45;&gt;A1</title>
+<path fill="none" stroke="#9aa9b8" d="M455.41,-215.05C386.11,-196.71 265.44,-164.78 191.23,-145.14"/>
+</g>
+<!-- A2 -->
+<g id="node10" class="node">
+<title>A2</title>
+<ellipse fill="#fce8d2" stroke="#33506e" cx="315.92" cy="-127.12" rx="74.58" ry="18"/>
+<text text-anchor="middle" x="315.92" y="-124.32" font-family="Helvetica,sans-Serif" font-size="11.00">[Ampliar imagem]</text>
+</g>
+<!-- A&#45;&gt;A2 -->
+<g id="edge9" class="edge">
+<title>A&#45;&gt;A2</title>
+<path fill="none" stroke="#9aa9b8" d="M476.18,-212.06C439.62,-192.91 380.95,-162.18 345.65,-143.69"/>
+</g>
+<!-- A3 -->
+<g id="node11" class="node">
+<title>A3</title>
+<ellipse fill="#fce8d2" stroke="#33506e" cx="529.92" cy="-127.12" rx="89.61" ry="24.08"/>
+<text text-anchor="middle" x="529.92" y="-130.32" font-family="Helvetica,sans-Serif" font-size="11.00">[Consultar histórico</text>
+<text text-anchor="middle" x="529.92" y="-118.32" font-family="Helvetica,sans-Serif" font-size="11.00">do ponto]</text>
+</g>
+<!-- A&#45;&gt;A3 -->
+<g id="edge10" class="edge">
+<title>A&#45;&gt;A3</title>
+<path fill="none" stroke="#9aa9b8" d="M512.49,-212.06C515.95,-195.39 521.24,-169.94 525.08,-151.43"/>
+</g>
+<!-- G1 -->
+<g id="node12" class="node">
+<title>G1</title>
+<polygon fill="#e4e9f0" stroke="#33506e" points="812.69,-127.12 770.8,-145.12 687.04,-145.12 645.16,-127.12 687.04,-109.12 770.8,-109.12 812.69,-127.12"/>
+<text text-anchor="middle" x="728.92" y="-124.32" font-family="Helvetica,sans-Serif" font-size="11.00">Escolher veredito</text>
+</g>
+<!-- G&#45;&gt;G1 -->
+<g id="edge11" class="edge">
+<title>G&#45;&gt;G1</title>
+<path fill="none" stroke="#9aa9b8" d="M734.74,-212.06C733.45,-193.47 731.41,-163.98 730.12,-145.36"/>
+</g>
+<!-- G2 -->
+<g id="node13" class="node">
+<title>G2</title>
+<path fill="#ddf0e0" stroke="#33506e" d="M995.42,-145.12C995.42,-145.12 874.42,-145.12 874.42,-145.12 868.42,-145.12 862.42,-139.12 862.42,-133.12 862.42,-133.12 862.42,-121.12 862.42,-121.12 862.42,-115.12 868.42,-109.12 874.42,-109.12 874.42,-109.12 995.42,-109.12 995.42,-109.12 1001.42,-109.12 1007.42,-115.12 1007.42,-121.12 1007.42,-121.12 1007.42,-133.12 1007.42,-133.12 1007.42,-139.12 1001.42,-145.12 995.42,-145.12"/>
+<text text-anchor="middle" x="934.92" y="-130.32" font-family="Helvetica,sans-Serif" font-size="11.00">Marcar como</text>
+<text text-anchor="middle" x="934.92" y="-118.32" font-family="Helvetica,sans-Serif" font-size="11.00">&quot;validado por humano&quot;</text>
+</g>
+<!-- G&#45;&gt;G2 -->
+<g id="edge12" class="edge">
+<title>G&#45;&gt;G2</title>
+<path fill="none" stroke="#9aa9b8" d="M769.68,-212.06C806.39,-193.42 864.69,-163.8 901.33,-145.19"/>
+</g>
+<!-- G3 -->
+<g id="node14" class="node">
+<title>G3</title>
+<ellipse fill="#fce8d2" stroke="#33506e" cx="1146.92" cy="-127.12" rx="89.61" ry="24.08"/>
+<text text-anchor="middle" x="1146.92" y="-130.32" font-family="Helvetica,sans-Serif" font-size="11.00">[Anotar observação</text>
+<text text-anchor="middle" x="1146.92" y="-118.32" font-family="Helvetica,sans-Serif" font-size="11.00">técnica]</text>
+</g>
+<!-- G&#45;&gt;G3 -->
+<g id="edge13" class="edge">
+<title>G&#45;&gt;G3</title>
+<path fill="none" stroke="#9aa9b8" d="M788.81,-216.2C863.94,-197.72 1001.39,-163.92 1082.41,-143.99"/>
+</g>
+<!-- A1&#45;&gt;A2 -->
+<g id="edge22" class="edge">
+<title>A1&#45;&gt;A2</title>
+<path fill="none" stroke="#33506e" d="M191.44,-127.12C207.48,-127.12 224.81,-127.12 241.29,-127.12"/>
+<text text-anchor="middle" x="216.4" y="-133.12" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#8a3b00">|||</text>
+</g>
+<!-- A2&#45;&gt;A3 -->
+<g id="edge23" class="edge">
+<title>A2&#45;&gt;A3</title>
+<path fill="none" stroke="#33506e" d="M390.47,-127.12C406.39,-127.12 423.37,-127.12 439.81,-127.12"/>
+<text text-anchor="middle" x="415.29" y="-133.12" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#8a3b00">|||</text>
+</g>
+<!-- G1&#45;&gt;G2 -->
+<g id="edge24" class="edge">
+<title>G1&#45;&gt;G2</title>
+<path fill="none" stroke="#33506e" d="M812.71,-127.12C829.09,-127.12 846.13,-127.12 862.11,-127.12"/>
+<text text-anchor="middle" x="837.61" y="-133.12" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#8a3b00">[]&gt;&gt;</text>
+</g>
+<!-- G11 -->
+<g id="node15" class="node">
+<title>G11</title>
+<ellipse fill="#fce8d2" stroke="#33506e" cx="594.92" cy="-24.04" rx="46.22" ry="18"/>
+<text text-anchor="middle" x="594.92" y="-21.24" font-family="Helvetica,sans-Serif" font-size="11.00">Confirmar</text>
+</g>
+<!-- G1&#45;&gt;G11 -->
+<g id="edge14" class="edge">
+<title>G1&#45;&gt;G11</title>
+<path fill="none" stroke="#9aa9b8" d="M706.19,-108.98C680.66,-89.71 639.59,-58.73 615.13,-40.29"/>
+</g>
+<!-- G12 -->
+<g id="node16" class="node">
+<title>G12</title>
+<ellipse fill="#fce8d2" stroke="#33506e" cx="728.92" cy="-24.04" rx="38.56" ry="18"/>
+<text text-anchor="middle" x="728.92" y="-21.24" font-family="Helvetica,sans-Serif" font-size="11.00">Rejeitar</text>
+</g>
+<!-- G1&#45;&gt;G12 -->
+<g id="edge15" class="edge">
+<title>G1&#45;&gt;G12</title>
+<path fill="none" stroke="#9aa9b8" d="M728.92,-108.98C728.92,-90.39 728.92,-60.89 728.92,-42.27"/>
+</g>
+<!-- G13 -->
+<g id="node17" class="node">
+<title>G13</title>
+<ellipse fill="#fce8d2" stroke="#33506e" cx="900.92" cy="-24.04" rx="84.29" ry="24.08"/>
+<text text-anchor="middle" x="900.92" y="-27.24" font-family="Helvetica,sans-Serif" font-size="11.00">Solicitar nova foto</text>
+<text text-anchor="middle" x="900.92" y="-15.24" font-family="Helvetica,sans-Serif" font-size="11.00">ao campo</text>
+</g>
+<!-- G1&#45;&gt;G13 -->
+<g id="edge16" class="edge">
+<title>G1&#45;&gt;G13</title>
+<path fill="none" stroke="#9aa9b8" d="M758.1,-108.98C787.72,-91.57 833.61,-64.6 865.34,-45.95"/>
+</g>
+<!-- G2&#45;&gt;G3 -->
+<g id="edge25" class="edge">
+<title>G2&#45;&gt;G3</title>
+<path fill="none" stroke="#33506e" d="M1007.59,-127.12C1023.53,-127.12 1040.59,-127.12 1057.11,-127.12"/>
+<text text-anchor="middle" x="1032.27" y="-133.12" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#8a3b00">|||</text>
+</g>
+<!-- G11&#45;&gt;G12 -->
+<g id="edge26" class="edge">
+<title>G11&#45;&gt;G12</title>
+<path fill="none" stroke="#33506e" d="M641.04,-24.04C657.09,-24.04 674.91,-24.04 690.29,-24.04"/>
+<text text-anchor="middle" x="665.71" y="-30.04" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#8a3b00">[]</text>
+</g>
+<!-- G12&#45;&gt;G13 -->
+<g id="edge27" class="edge">
+<title>G12&#45;&gt;G13</title>
+<path fill="none" stroke="#33506e" d="M767.52,-24.04C782.18,-24.04 799.51,-24.04 816.75,-24.04"/>
+<text text-anchor="middle" x="792.12" y="-30.04" font-family="Helvetica,sans-Serif" font-size="10.00" fill="#8a3b00">[]</text>
+</g>
+</g>
 </svg>

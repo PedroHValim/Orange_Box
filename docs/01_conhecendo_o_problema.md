@@ -4,7 +4,7 @@
 **Status:** 🟩 concluída
 **Responsabilidade:** 1 solução consolidada por equipe
 
-> **Nota sobre esta versão:** os IDs de Fatos `[F]` e Hipóteses `[H]` foram renumerados sequencialmente, na ordem em que aparecem no texto (F01 → F31 e H01 → H22). O ID `H01` usado no exemplo do enunciado (abaixo) **não foi alterado**, pois é apenas um modelo ilustrativo do formato, não uma hipótese da equipe.
+> **Nota sobre esta versão (revisada após feedback do professor):** a classificação `[F]`/`[H]`/`[?]` foi auditada item a item. Afirmações sobre comportamento de usuários, benefícios esperados e necessidades ainda não investigadas foram rebaixadas para hipótese (`[H]`), recebendo IDs novos a partir de `H23`; os IDs de fatos remanescentes foram mantidos (por isso há lacunas na sequência `F`). Para eliminar a colisão de identificadores, usamos prefixos distintos: **`F`** = fatos, **`H`** = hipóteses, **`A`** = atividades e **`FN`** = funcionalidades (antes `F01`–`F03` na seção 9.2). O ID `H01` do exemplo do enunciado (abaixo) é apenas ilustrativo.
 
 ## Objetivo da atividade
 
@@ -85,17 +85,23 @@ Marque e descreva:
 - [x] estudo/benchmark/avaliação experimental;
 - [x] infraestrutura/backend;
 - [x] componente embarcado/IoT;
-- [ ] outro: {{...}}.
+- [x] outro: {{...}}.
 
 **Descrição:** Utilizaremos visão computacional para a detecção do ácaro da leprose, a partir de um dataset desenvolvido pelo grupo com imagens do ácaro.
+
+**Resultados efetivamente produzidos pelo TCC (marcados acima):** (1) o dataset de imagens do ácaro e sua análise; (2) o modelo de detecção treinado; (3) o estudo comparativo entre arquiteturas (YOLO26n, YOLO26s, YOLOv8n) e do protocolo de captura; (4) a aplicação móvel com detecção embarcada e geolocalização.
+
+**Não marcados, por serem meios e não resultados:** algoritmo (o treinamento usa algoritmos existentes), biblioteca/API/framework (apenas utilizados), infraestrutura/backend (o processamento é local, no dispositivo) e componente embarcado/IoT (o smartphone é a plataforma de execução do modelo, o que não torna o TCC um projeto de IoT).
 
 ## 0.5 O TCC já previa desenvolvimento de interface com usuário?
 
 - [x] Sim, a interface já faz parte do TCC.
-- [ ] Parcialmente; existe alguma interação, mas ainda não está bem definida.
-- [ ] Não. O TCC é predominantemente técnico e não previa interface.
+- [x] Parcialmente; existe alguma interação, mas ainda não está bem definida.
+- [x] Não. O TCC é predominantemente técnico e não previa interface.
 
-**Explique o que está formalmente previsto no TCC:** Está previsto ter um sistema visual para que o usuário final possa marcar o ácaro a partir de um dispositivo mobile e poder utilizar o sistema de geolocalização ao marcar essa praga em campo.
+**Explique o que está formalmente previsto no TCC:** Está previsto ter um sistema visual para que o usuário final possa, a partir de um dispositivo mobile, capturar a imagem do fruto, obter a detecção do ácaro e utilizar o sistema de geolocalização para registrar o local da ocorrência em campo.
+
+**Divisão de responsabilidade entre pessoa e sistema (a ser confirmada):** o TCC prevê detecção **automática** pela visão computacional; portanto, entendemos que a pessoa **captura** a imagem e o sistema **detecta e marca** o ácaro (a "marcação" da ocorrência é feita pelo sistema, não desenhada manualmente pelo usuário). Permanecem **em aberto** [?]: se a pessoa precisa confirmar ou corrigir a detecção, e se existe validação humana antes de uma ocorrência alimentar o mapa (ver H27).
 
 > Esta resposta serve para separar o compromisso do TCC do projeto da disciplina. Mesmo quando a opção for **não**, a equipe irá definir uma interface para exercitar IHC.
 
@@ -109,8 +115,13 @@ Detecção de ácaros da leprose em laranjas.
 
 ## 1.2 Qual situação, atividade ou problema do mundo real motivou o TCC?
 
-- **[F01]** Dificuldade de detecção do ácaro da leprose em citros.
-- **[F02]** Não existir um dataset com ácaros de citros.
+**Problema humano / da atividade (domínio):**
+
+- **[F01]** Dificuldade de detecção do ácaro da leprose em citros: praga muito pequena, inspeção visual com lupa, esforço e cobertura limitada da amostragem (fonte: TCC).
+
+**Lacuna científica/técnica (necessária para viabilizar o TCC, mas não é um problema do usuário):**
+
+- **[F02]** Não existir um dataset com ácaros de citros (fonte: TCC).
 
 ## 1.3 Qual é a **capacidade/contribuição central** produzida pelo TCC?
 
@@ -118,10 +129,12 @@ Nosso TCC permite detectar o ácaro da leprose através de visão computacional 
 
 ## 1.4 O que se espera que esteja diferente **para pessoas, organizações ou processos** se essa contribuição for bem-sucedida?
 
-- **[F03]** Trabalhadores rurais comuns poderão detectar as pragas sem necessariamente um "pragueiro" — especialista em detecção de pragas.
-- **[F04]** Menor esforço físico na detecção de pragas.
-- **[F05]** Auxílio no gerenciamento de infestações de pragas em campo com a geolocalização.
-- **[H01]** Disponibilização do dataset do ácaro.
+> Os itens abaixo são **benefícios esperados** da solução. Só poderão ser confirmados com evidência de uso; por isso são hipóteses, não fatos.
+
+- **[H23]** Trabalhadores rurais sem a especialização de um "pragueiro" conseguiriam realizar a detecção com apoio do aplicativo.
+- **[H24]** A detecção assistida exigiria menor esforço físico do que a inspeção manual com lupa.
+- **[H25]** A geolocalização auxiliaria o gerenciamento de infestações em campo.
+- **[H01]** Disponibilização do dataset do ácaro (contribuição técnica prevista no TCC).
 
 ## 1.5 O que é mérito técnico/científico do TCC e o que seria uma possível aplicação prática?
 
@@ -141,30 +154,36 @@ Nosso TCC permite detectar o ácaro da leprose através de visão computacional 
 
 Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIGINAL` e prossiga para 2.2.
 
-**[F06]** Essa interface final é destinada a **qualquer pessoa que atue na operação da fazenda** — não a um perfil único e especializado — já que o próprio TCC justifica a escolha do smartphone por sua alta capilaridade, baixo custo relativo e facilidade de operação pelo produtor rural no campo. Isso inclui, entre outros: pragueiros, donos/gestores da propriedade e trabalhadores rurais em geral.
+- **[F06]** O TCC justifica a escolha do smartphone por sua alta capilaridade, baixo custo relativo e suposta facilidade de operação pelo produtor rural no campo (fonte: TCC). Isso é uma **decisão formal do TCC** sobre o dispositivo, e não evidência de quem, de fato, usará a interface.
+- **[H26]** Os perfis que poderiam interagir diretamente são pessoas diferentes, com atividades distintas: (a) quem **executa a inspeção** em campo (pragueiro ou trabalhador rural treinado) e (b) quem **acompanha e decide** o manejo (dono/gestor, possivelmente com o agrônomo). Não assumimos que "qualquer pessoa da fazenda" seja usuária direta; isso precisa ser investigado (ver seção 10).
 
 ## 2.2 Quem poderia usar, configurar, administrar, operar, interpretar ou tomar decisões a partir da contribuição técnica?
 
 | Perfil | Relação com a contribuição | O que faria | Status/evidência |
 |---|---|---|---|
-| Pessoas que trabalham na fazenda (pragueiros, dono/gestor da propriedade, trabalhadores rurais, etc.) | Usuários diretos do aplicativo final | Capturam imagens do fruto com a câmera do smartphone, visualizam detecções e o mapa de focos/zonas de risco, e usam essa informação para orientar o manejo (ex.: aplicação localizada de acaricida) | **[F07]** O TCC justifica o uso do smartphone pela facilidade de operação em campo e cita o suporte à decisão sobre aplicação localizada de defensivos |
-| Agrônomo da propriedade | Participa da definição do período de coleta de dados | Define, junto à equipe, o período de maior atividade populacional do ácaro para orientar a coleta em campo | **[F08]** O TCC relata que o período de coleta foi definido em conjunto com o agrônomo responsável pela propriedade parceira |
-| Equipe técnica/pesquisadores (autores) | Responsáveis pelo desenvolvimento do modelo e do pipeline | Treinam o modelo, ajustam hiperparâmetros, comparam arquiteturas (TCC 1 e TCC 2) | **[F09]** Descrito nas etapas de treinamento e comparação de modelos ao longo do TCC |
+| **Inspetor de campo** (pragueiro ou trabalhador rural que percorre a plantação) | Provável usuário direto da captura e do resultado da detecção | Percorre a plantação, observa os frutos (hoje com lupa) e, na solução, capturaria a imagem e veria o resultado | **[F07]** O TCC descreve a inspeção por pessoa treinada e justifica o smartphone para uso em campo. **[H26]** Se a mesma pessoa que inspeciona usaria o aplicativo ainda precisa ser confirmado |
+| **Responsável pelo manejo** (dono/gestor; possivelmente agrônomo) | Possível usuário do acompanhamento espacial e decisor da intervenção | Interpretaria as ocorrências e decidiria se, onde e quando aplicar o produto | **[H04]/[H21]** Quem decide e quem usaria o mapa não foi confirmado |
+
+**Atores do desenvolvimento do TCC (não são, por esse motivo, usuários ou stakeholders da interface):**
+
+| Papel | Participação na pesquisa | Relação com a interface |
+|---|---|---|
+| Agrônomo da propriedade parceira | **[F08]** Definiu, com a equipe, o período de coleta de dados | Pode vir a ser stakeholder relevante da solução, mas isso depende do seu papel real no processo de inspeção/manejo — **[?]** a investigar |
+| Equipe técnica/pesquisadores (autores) | **[F09]** Treinam e avaliam o modelo | Desenvolvedores; **não** são usuários da interface do projeto de IHC |
 
 ## 2.3 Existem pessoas afetadas que não usariam a interface diretamente?
 
 | Stakeholder | Como é afetado | Usa interface? | Status/evidência |
 |---|---|---|---|
-| Empresas e indústrias que compram a laranja/suco | Ganham ou perdem dependendo de quanto a safra é afetada pela praga | Não | **[F10]** O trabalho menciona a importância econômica da citricultura para o país |
 | Trabalhadores que aplicam o produto de controle no campo (quando não são os mesmos que usam o app) | Passam a aplicar o produto apenas em pontos específicos, em vez de na fazenda toda | Não | **[H02]** Consequência provável da aplicação localizada, ainda não confirmada com essas pessoas |
-| Vizinhança/meio ambiente ao redor da propriedade | Recebe menos produto químico se a aplicação passar a ser localizada | Não | **[F11]** O trabalho menciona redução do impacto ambiental como benefício esperado |
-| Consumidor final da fruta/suco | Pode ser afetado indiretamente por preço ou disponibilidade do produto | Não | **[?]** Não é discutido no trabalho, é apenas um efeito possível de mercado |
+
+> Stakeholders excessivamente indiretos (empresas compradoras, consumidor final, vizinhança/meio ambiente) foram **removidos da tabela** por não ajudarem a tomar decisões de IHC. Permanece como contexto apenas que o TCC cita a importância econômica da citricultura **[F10]** e a redução de impacto ambiental como benefício esperado **[F11]**.
 
 ## 2.4 Que características desses perfis podem influenciar a interação?
 
-- **[F12]** As pessoas da fazenda já usam celular no dia a dia, mas não necessariamente têm prática com aplicativos técnicos.
-- **[F13]** O trabalho de campo é feito ao ar livre, muitas vezes com pouco ou nenhum sinal de internet.
-- **[F14]** Existe urgência: quanto mais tempo demora para perceber o problema, maior o prejuízo.
+- **[H28]** As pessoas da fazenda usam celular no dia a dia, mas não necessariamente têm prática com aplicativos técnicos (a decompor em: que aplicativos usam, com que frequência, que tarefas fazem sem ajuda, que vocabulário conhecem — ver H20).
+- **[F13]** O trabalho de campo é feito ao ar livre, muitas vezes com pouco ou nenhum sinal de internet (fonte: TCC).
+- **[F14]** Quanto mais tempo demora para perceber o problema, maior o prejuízo (fonte: TCC).
 - **[H03]** É provável que nem todos tenham o mesmo nível de leitura/familiaridade com tecnologia, então a interface precisa ser simples e visual.
 - **[?]** Ainda não sabemos o nível real de conhecimento digital dessas pessoas nem se há alguma necessidade especial de acessibilidade.
 
@@ -174,15 +193,24 @@ Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIG
 
 ## 3.1 O que o usuário está tentando conseguir no mundo real?
 
-**[F15]** Proteger a produção de laranja, evitando que a praga se espalhe, gastando menos com produtos de controle e agindo antes que o prejuízo seja grande.
+**Propósito organizacional (resultado desejado da atividade agrícola) — [F15]:** proteger a produção de laranja, evitando que a praga se espalhe e agindo antes que o prejuízo seja grande.
+
+Esse propósito é amplo demais para orientar a interação. Os objetivos concretos, por papel, são:
+
+| Papel | Objetivo que precisa alcançar na atividade | Status |
+|---|---|---|
+| Inspetor de campo | Saber se há sinal da praga no fruto que está inspecionando e registrar essa ocorrência | **[H29]** A confirmar na investigação |
+| Responsável pelo manejo | Compreender onde estão as ocorrências para decidir se, onde e quando intervir | **[H21]** A confirmar na investigação |
+
+"Usar a câmera", "ver o mapa" ou "usar IA" são **meios** de interação, não objetivos.
 
 ## 3.2 Quais são as atividades mais importantes?
 
 | ID | Atividade/objetivo | Quem realiza | Frequência/criticidade inicial | Status/evidência |
 |---|---|---|---|---|
-| A01 | Verificar os frutos em busca de sinais da praga | Pessoas que trabalham na fazenda | Alta — precisa ser repetida com frequência | **[F16]** O trabalho descreve a inspeção como atividade recorrente |
-| A02 | Decidir onde e quando aplicar o produto de controle | Dono/gestor da fazenda | Média — depende do resultado da inspeção | **[H04]** Ainda não confirmado quem exatamente toma essa decisão no dia a dia |
-| A03 | Acompanhar se o problema está se espalhando pela propriedade | Dono/gestor da fazenda | Contínua, ao longo do tempo | **[H05]** Ainda não confirmado como esse acompanhamento é feito hoje |
+| A01 | Verificar os frutos em busca de sinais da praga | Inspetor de campo (pragueiro/trabalhador treinado) | Alta — precisa ser repetida com frequência | **[F16]** O trabalho descreve a inspeção como atividade recorrente |
+| A02 | Decidir onde e quando aplicar o produto de controle | Responsável pelo manejo (dono/gestor; agrônomo?) | Média — depende do resultado da inspeção | **[H04]** Ainda não confirmado quem exatamente toma essa decisão no dia a dia |
+| A03 | Acompanhar se o problema está se espalhando pela propriedade | Responsável pelo manejo (a confirmar) | Contínua, ao longo do tempo | **[H05]** Ainda não confirmado como esse acompanhamento é feito hoje |
 
 ## 3.3 Qual atividade parece mais frequente? Por quê?
 
@@ -198,7 +226,17 @@ Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIG
 
 ## 4.1 Como essas atividades são realizadas hoje?
 
-**[F18]** Hoje a verificação é feita por uma pessoa treinada, que percorre a plantação a pé e observa os frutos com uma lupa, sem apoio de tecnologia.
+**Até encontrar a praga — [F18]:** hoje a verificação é feita por uma pessoa treinada, que percorre a plantação a pé e observa os frutos com uma lupa, sem apoio de tecnologia.
+
+**Depois que a praga é encontrada — lacuna de conhecimento.** O TCC descreve a busca visual, mas não o que acontece em seguida. Todos os pontos abaixo são `[?]` e devem guiar a investigação (Entregas 3 e 7):
+
+- [?] A ocorrência é anotada? Onde (papel, planilha, mapa, WhatsApp, memória, sistema agrícola)? Que informação é registrada?
+- [?] Como a posição é identificada hoje (árvore, linha, talhão, área, outra referência do domínio)? Qual unidade faz sentido para a decisão?
+- [?] A quem a ocorrência é comunicada e como? Há confirmação por outro profissional?
+- [?] Quem reúne os resultados de diferentes inspeções e como são consolidados?
+- [?] Quem decide a intervenção e com base em quais informações?
+
+Enquanto essas respostas não existirem, a inspeção individual está bem justificada, mas o mapa e a decisão de manejo ainda são **hipótese de trabalho** (H21).
 
 ## 4.2 O que é difícil, demorado, confuso, repetitivo, arriscado ou pouco transparente?
 
@@ -237,11 +275,13 @@ Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIG
 
 ## 5.3 Existem condições físicas relevantes?
 
-**[F23]** Sol forte, calor, pouca ou nenhuma internet, pessoa caminhando entre as árvores, pouco tempo disponível por planta.
+- **[F23a]** Ambiente ao ar livre e pouca ou nenhuma internet (fonte: TCC).
+- **[H30]** Sol forte, calor, pessoa caminhando entre as árvores e pouco tempo disponível por planta são condições prováveis de interação, mas ainda não foram observadas.
+- **[?]** Condições reais de captura: iluminação, posição do fruto, movimentação, uso de lente macro, manipulação simultânea do celular.
 
 ## 5.4 Existem fatores sociais ou organizacionais?
 
-**[F24]** Não necessariamente quem faz a inspeção no campo é quem decide o que fazer com o resultado (ex.: trabalhador informa, dono/gestor decide), confirmado pelo estudo em campo.
+**[H04]** Não necessariamente quem faz a inspeção no campo é quem decide o que fazer com o resultado (ex.: trabalhador informa, dono/gestor decide). Não há evidência direta na documentação do TCC; precisa ser confirmado com pessoas da fazenda.
 
 ## 5.5 Existe necessidade de histórico, rastreabilidade ou auditoria?
 
@@ -287,21 +327,26 @@ Se não houver interface prevista no TCC, escreva `NÃO SE APLICA AO ESCOPO ORIG
 
 ## 7.1 Caminho escolhido
 
-**Caminho A — TCC já possui interface.** O trabalho já prevê um aplicativo com câmera que detecta a praga e mostra o resultado, além de um mapa com os pontos de risco na propriedade. Esse fluxo (capturar foto → ver resultado → ver mapa) é o recorte relevante para a disciplina.
+**Caminho A — TCC já possui interface.** O trabalho já prevê um aplicativo com câmera que detecta a praga e mostra o resultado, além de geolocalização/mapeamento dos focos. Para a disciplina, o recorte é organizado em dois fluxos distintos:
+
+- **Fluxo 1 — Inspeção (recorte principal, melhor fundamentado):** capturar foto → ver resultado da detecção → registrar a ocorrência.
+- **Fluxo 2 — Acompanhamento espacial e decisão (hipótese de trabalho, não solução congelada):** consultar a distribuição das ocorrências para decidir onde agir. Será mantido apenas na medida em que a investigação (H21, H22) demonstrar quem o usa e para qual decisão. A capacidade técnica de gerar um mapa não é, por si, evidência de que o usuário precise dele.
 
 ## 7.2 Qual perfil será priorizado no projeto de IHC?
 
-Pessoas que trabalham na fazenda de forma geral (pragueiros, dono/gestor, trabalhadores rurais).
+**Inspetor de campo** — a pessoa que percorre a plantação e inspeciona os frutos (pragueiro ou trabalhador rural treinado para a atividade).
 
-**Por que esse perfil foi escolhido?** Porque são elas que vão realmente segurar o celular, tirar a foto e usar o resultado no dia a dia.
+**Por que esse perfil foi escolhido?** Pela **atividade** que será estudada (inspeção, A01), que é a mais frequente **[F17]** e a mais bem documentada **[F18]**–**[F19]**, e não apenas por ser quem segura o celular. O **responsável pelo manejo** (dono/gestor/agrônomo) permanece como **perfil secundário**, a ser diferenciado do inspetor e investigado a partir da atividade A02/A03; não será fundido ao inspetor em uma única persona.
 
 ## 7.3 Qual objetivo desse usuário será priorizado?
 
-Conseguir saber, de forma rápida e simples, se há sinal da praga no fruto e onde estão os pontos de atenção na propriedade.
+**Objetivo prioritário (inspetor de campo):** conseguir saber, durante a inspeção, se há sinal da praga no fruto e registrar a ocorrência (H29).
+
+**Objetivo do perfil secundário (responsável pelo manejo), a investigar:** compreender a distribuição das ocorrências para priorizar uma ação (H21). Os dois objetivos pertencem a papéis possivelmente distintos e não são reunidos numa única frase.
 
 ## 7.4 Que interface será explorada na disciplina?
 
-> Para fins da disciplina de IHC, será projetada uma interface que permita a **pessoas que trabalham na fazenda** utilizar **a câmera com detecção automática da praga e o mapa de pontos de risco** para **agir a tempo e no lugar certo**, no contexto de **inspeção da plantação em campo, muitas vezes sem internet e com pouco tempo disponível**.
+> Para fins da disciplina de IHC, será projetada uma interface que permita ao **inspetor de campo** utilizar **a câmera com detecção automática da praga** para **saber se há sinal da praga no fruto e registrar a ocorrência**, no contexto de **inspeção da plantação em campo, com pouca ou nenhuma internet**; a visualização espacial das ocorrências para o responsável pelo manejo será explorada como hipótese de trabalho, condicionada à investigação de H21 e H22.
 
 ## 7.5 Qual é a relação dessa interface com o TCC?
 
@@ -318,15 +363,15 @@ Conseguir saber, de forma rápida e simples, se há sinal da praga no fruto e on
 | Dashboard/visão geral | talvez | Ver rapidamente a situação geral da fazenda | **[H14]** |
 | Configuração/parametrização | não | Não há necessidade clara identificada até agora | — |
 | Entrada/upload/seleção de dados | sim | Capturar a foto do fruto para análise | **[F27]** |
-| Acompanhamento de processamento | sim | Saber que a foto está sendo analisada | **[F28]** |
-| Relatório/resultados | sim | Mostrar se foi encontrada a praga e onde | **[F29]** |
+| Acompanhamento de processamento | talvez | Saber que a foto está sendo analisada; o TCC informa processamento muito rápido (52 ms), então pode bastar feedback imediato da ação, sem etapa específica de espera | **[H31]** |
+| Relatório/resultados | sim | Mostrar se foi encontrada a praga e onde | **[F29]** (resultado da detecção é parte do que o TCC produz) |
 | Histórico com busca/filtros | talvez | Ver inspeções e ocorrências anteriores | **[H15]** |
 | Comparação de resultados | não | Não identificado como necessidade nesta etapa | — |
 | Explicabilidade/detalhamento | talvez | Entender por que o app marcou aquele ponto | **[H16]** |
 | Administração/configurações globais | não | Fora do foco do usuário de campo | — |
 | CRUD de entidade do domínio | não | Não identificado como necessidade nesta etapa | — |
 | Auditoria/logs | talvez | Registrar onde e quando cada inspeção ocorreu | **[H17]** |
-| Alertas/ocorrências | sim | Avisar sobre pontos de risco na propriedade | **[F30]** |
+| Alertas/ocorrências | talvez | Avisar sobre pontos de risco na propriedade; necessidade ainda não demonstrada (o mapa pode existir sem alertas) | **[H32]** |
 | Ajuda/documentação | talvez | Orientar quem não está acostumado com o app | **[H18]** |
 
 ---
@@ -337,17 +382,18 @@ Conseguir saber, de forma rápida e simples, se há sinal da praga no fruto e on
 
 | Benefício esperado | Problema/necessidade | Usuário | Status/evidência |
 |---|---|---|---|
-| Identificar a praga de forma mais rápida e simples que a inspeção manual | A inspeção manual é lenta, cansativa e pode falhar | Pessoas que trabalham na fazenda | **[F31]** |
+| Identificar a praga de forma mais rápida e simples que a inspeção manual | A inspeção manual é lenta, cansativa e pode falhar | Pessoas que trabalham na fazenda | **[H33]** (benefício esperado; "mais simples" é resultado de qualidade de uso, a ser avaliado) |
 | Saber onde estão os pontos de risco na propriedade | Hoje não há registro visual organizado dos focos | Dono/gestor da fazenda | **[H19]** |
 
 ## 9.2 Que ações o usuário deverá conseguir realizar?
 
-> ⚠️ **Nota:** os IDs abaixo (`F01`–`F03`) são de **funcionalidades**, numeração independente dos Fatos `[F01]`–`[F31]` usados no resto do documento. 
+> Os IDs de funcionalidades usam o prefixo **`FN`**, distinto dos fatos (`F`), hipóteses (`H`) e atividades (`A`).
+
 | ID | O usuário precisa conseguir... | Para alcançar... | Prioridade inicial |
 |---|---|---|---|
-| F01 | Tirar uma foto do fruto com a câmera | Saber se há sinal da praga | alta |
-| F02 | Ver o resultado da análise de forma simples | Decidir se precisa agir | alta |
-| F03 | Ver os pontos de risco em um mapa da propriedade | Priorizar onde agir | média |
+| FN01 | Tirar uma foto do fruto com a câmera | Saber se há sinal da praga | alta |
+| FN02 | Ver o resultado da análise de forma simples | Decidir se precisa agir | alta |
+| FN03 | Ver as ocorrências em um mapa da propriedade (hipótese de trabalho, depende de H21/H22) | Priorizar onde agir | média |
 
 ## 9.3 Tecnologias/restrições já definidas no TCC
 
@@ -362,9 +408,12 @@ Conseguir saber, de forma rápida e simples, se há sinal da praga no fruto e on
 
 | ID | Hipótese/dúvida | Por que importa | Como poderá ser investigada |
 |---|---|---|---|
-| H20 | As pessoas da fazenda têm pouca familiaridade com aplicativos técnicos | Define o quanto a interface precisa ser simples | Entrega 3/7 |
-| H21 | O dono/gestor é quem acompanha a evolução do problema na propriedade | Define quem realmente usaria o mapa de risco | Entrega 3/7 |
-| H22 | Existe necessidade de guardar histórico das inspeções | Pode justificar uma tela de histórico | Entrega 5/7 |
+| H20 | As pessoas da fazenda têm pouca familiaridade com aplicativos técnicos (decompor: quais apps usam, frequência, tarefas sem ajuda, vocabulário, dificuldades) | Define o quanto a interface precisa ser simples | Entrega 3/7 |
+| H21 | O dono/gestor é quem acompanha a evolução do problema na propriedade e usaria o mapa | Define quem realmente usaria o mapa; pode ser interação distinta da captura | Entrega 3/7 |
+| H22 | Existe necessidade de guardar histórico das inspeções (quem consulta, para qual decisão, período, detalhe) | Pode justificar uma tela de histórico | Entrega 5/7 |
+| H26 | Inspetor de campo e responsável pelo manejo são pessoas/papéis diferentes | Define usuário prioritário e personas | Entrega 3/7 |
+| H27 | Pode ser necessário confirmação/correção humana da detecção antes de a ocorrência alimentar o mapa; falsos positivos e negativos têm consequências distintas | Define divisão pessoa × IA e a confiança no resultado | Entrega 4/5/7 |
+| [?] | O que acontece depois que a praga é encontrada (registro, comunicação, consolidação, decisão, unidade espacial) | Justifica (ou não) o mapa e o fluxo de decisão | Entrega 3/4/7 |
 
 Registrar em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
@@ -374,20 +423,20 @@ Registrar em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 
 | Pergunta | Síntese atual |
 |---|---|
-| Qual é a contribuição central do TCC? | Um sistema que detecta automaticamente a praga por foto e mostra onde estão os pontos de risco na propriedade |
+| Qual é a contribuição central do TCC? | Um sistema que detecta automaticamente a praga por foto e registra a localização das ocorrências (mapeamento) |
 | O TCC já previa interface? | Sim, um aplicativo com câmera e um mapa |
-| Quem é o usuário prioritário de IHC? | Pessoas que trabalham na fazenda (pragueiros, dono/gestor, trabalhadores rurais) |
-| O que ele precisa alcançar? | Saber rápido se há praga e onde agir |
-| Qual problema/atividade será estudado? | A inspeção dos frutos e a decisão de onde agir |
+| Quem é o usuário prioritário de IHC? | Inspetor de campo (pragueiro/trabalhador treinado); responsável pelo manejo como perfil secundário a investigar |
+| O que ele precisa alcançar? | Saber, durante a inspeção, se há sinal da praga no fruto e registrar a ocorrência |
+| Qual problema/atividade será estudado? | A inspeção dos frutos (A01); decisão de manejo (A02/A03) como hipótese a investigar |
 | Como isso acontece hoje? | De forma manual, com lupa e sem apoio de tecnologia |
 | Qual é o contexto de uso? | Campo aberto, sol, pouca internet, pouco tempo por planta |
-| Que interface/recorte será explorado? | Captura da foto, resultado da detecção e mapa de pontos de risco |
+| Que interface/recorte será explorado? | Captura da foto e resultado da detecção (principal); mapa de ocorrências como hipótese de trabalho |
 | Como a interface se relaciona ao TCC? | Já fazia parte do TCC |
-| Quais pontos ainda são hipóteses? | H20, H21, H22 |
+| Quais pontos ainda são hipóteses? | H20, H21, H22, H26, H27 e o processo pós-detecção |
 
 ### Delimitação
 
-**Dentro do escopo de IHC:** captura da foto, exibição do resultado e visualização do mapa de risco
+**Dentro do escopo de IHC:** captura da foto e exibição do resultado (principal); visualização espacial das ocorrências (condicionada a H21/H22)
 **Fora do escopo de IHC:** treinamento do modelo, comparação entre arquiteturas, infraestrutura de servidor
 **Dentro do escopo formal do TCC:** todo o pipeline de detecção, dataset e geolocalização
 **Interface da disciplina será implementada no TCC?** não definido
@@ -411,28 +460,28 @@ Registrar em [`../RASTREABILIDADE.md`](../RASTREABILIDADE.md).
 # 13. Relação com INOVA e comunicação do projeto
 
 1. **Problema/atividade humana:** Hoje, encontrar uma praga muito pequena na plantação de laranja depende de inspeção manual, lenta e sujeita a falhas.
-2. **Contribuição técnica do TCC:** Um sistema que usa a câmera do celular e inteligência artificial para detectar a praga automaticamente e marcar onde estão os pontos de risco.
-3. **Como uma pessoa poderia utilizar essa contribuição:** Tirando uma foto do fruto com o celular e vendo na hora, em um mapa simples, se e onde precisa agir na propriedade.
+2. **Contribuição técnica do TCC:** Um sistema que usa a câmera do celular e inteligência artificial para detectar a praga automaticamente e registrar onde ocorreu.
+3. **Como uma pessoa poderia utilizar essa contribuição:** Tirando uma foto do fruto com o celular e vendo na hora o resultado da detecção; a visualização das ocorrências em mapa é uma possibilidade ainda em investigação.
 
 ---
 
 # Checklist de qualidade
 
-- [ ] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
-- [ ] A equipe declarou se o TCC já previa interface.
-- [ ] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
-- [ ] A interface de IHC não foi apresentada como obrigação automática do TCC.
-- [ ] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
-- [ ] Usuários diretos e stakeholders foram diferenciados.
-- [ ] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
-- [ ] Objetivo do usuário não foi confundido com objetivo do projeto.
-- [ ] Processo/problema atual foi descrito antes da solução.
-- [ ] Existe situação concreta de uso/problema.
-- [ ] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
-- [ ] Mercado/alternativas existentes foram levantados inicialmente.
-- [ ] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
-- [ ] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
-- [ ] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
-- [ ] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
-- [ ] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
-- [ ] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.
+- [x] Está clara a diferença entre tema do TCC, escopo formal do TCC e escopo de IHC.
+- [x] A equipe declarou se o TCC já previa interface.
+- [x] Se não previa, foi derivado um usuário plausível e um objetivo de uso.
+- [x] A interface de IHC não foi apresentada como obrigação automática do TCC.
+- [x] A contribuição do TCC foi descrita sem começar por tecnologias de implementação.
+- [x] Usuários diretos e stakeholders foram diferenciados.
+- [x] Foram considerados profissionais que configuram, administram, interpretam ou decidem, quando pertinente.
+- [x] Objetivo do usuário não foi confundido com objetivo do projeto.
+- [x] Processo/problema atual foi descrito antes da solução.
+- [x] Existe situação concreta de uso/problema.
+- [x] Contexto físico, social/organizacional, dispositivos e consequências de erro foram considerados.
+- [x] Mercado/alternativas existentes foram levantados inicialmente.
+- [x] Possibilidades como dashboard, relatório, histórico, filtros e CRUD foram tratadas como hipóteses de solução, não como requisitos automáticos.
+- [x] Cada possibilidade de interface tem um objetivo/tarefa que poderia justificá-la.
+- [x] Afirmações relevantes estão marcadas `[F]`, `[H]` ou `[?]`.
+- [x] Hipóteses prioritárias receberam IDs e foram para a rastreabilidade.
+- [x] O recorte de IHC é viável para modelar, prototipar e avaliar no semestre.
+- [x] A equipe consegue explicar problema humano → contribuição computacional → forma de uso.

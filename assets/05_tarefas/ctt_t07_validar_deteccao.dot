@@ -1,0 +1,39 @@
+digraph CTT_T07 {
+  graph [rankdir=TB, splines=true, nodesep=0.35, ranksep=0.75, fontname="Helvetica", bgcolor="white", pad=0.3, newrank=true, labelloc=t, labeljust=l, fontsize=16, label=<<B>CTT — T07 Validar detecções da IA (P03)</B><BR ALIGN="LEFT"/><FONT POINT-SIZE="11">Autor: Guilherme Morais Escudeiro — 24.123.005-1 · hexágono = abstrata; retângulo = usuário; retângulo arredondado = sistema; elipse = interação</FONT><BR ALIGN="LEFT"/>>];
+  node  [fontname="Helvetica", fontsize=11, style="filled", color="#33506E", margin="0.12,0.07"];
+  edge  [fontname="Helvetica", fontsize=10, color="#9AA9B8", arrowhead=none];
+
+  R  [shape=hexagon, fillcolor="#E4E9F0", label="Validar detecções\npendentes"];
+  X  [shape=box, fillcolor="#FFF4C7", label="Receber do dono a notícia de\nocorrência ou iniciar revisão\nprevista (evento externo)"];
+  V  [shape=hexagon, fillcolor="#E4E9F0", label="Validar detecção *"];
+  E  [shape=ellipse, fillcolor="#FCE8D2", label="Encerrar revisão"];
+
+  S  [shape=ellipse, fillcolor="#FCE8D2", label="Selecionar detecção\npendente"];
+  D  [shape=box, style="rounded,filled", fillcolor="#DDF0E0", label="Exibir foto, confiança\nda IA e localização"];
+  A  [shape=hexagon, fillcolor="#E4E9F0", label="Analisar evidências"];
+  G  [shape=hexagon, fillcolor="#E4E9F0", label="Registrar veredito"];
+
+  A1 [shape=box, fillcolor="#FFF4C7", label="Examinar a imagem"];
+  A2 [shape=ellipse, fillcolor="#FCE8D2", label="[Ampliar imagem]"];
+  A3 [shape=ellipse, fillcolor="#FCE8D2", label="[Consultar histórico\ndo ponto]"];
+
+  G1 [shape=hexagon, fillcolor="#E4E9F0", label="Escolher veredito"];
+  G2 [shape=box, style="rounded,filled", fillcolor="#DDF0E0", label="Marcar como\n\"validado por humano\""];
+  G3 [shape=ellipse, fillcolor="#FCE8D2", label="[Anotar observação\ntécnica]"];
+
+  G11 [shape=ellipse, fillcolor="#FCE8D2", label="Confirmar"];
+  G12 [shape=ellipse, fillcolor="#FCE8D2", label="Rejeitar"];
+  G13 [shape=ellipse, fillcolor="#FCE8D2", label="Solicitar nova foto\nao campo"];
+
+  R -> {X V E};
+  V -> {S D A G};
+  A -> {A1 A2 A3};
+  G -> {G1 G2 G3};
+  G1 -> {G11 G12 G13};
+
+  { rank=same; X -> V [label=">>", color="#33506E", fontcolor="#8A3B00", constraint=false]; V -> E [label="[>", color="#33506E", fontcolor="#8A3B00", constraint=false]; }
+  { rank=same; S -> D [label="[]>>", color="#33506E", fontcolor="#8A3B00"]; D -> A [label=">>", color="#33506E", fontcolor="#8A3B00"]; A -> G [label=">>", color="#33506E", fontcolor="#8A3B00"]; }
+  { rank=same; A1 -> A2 [label="|||", color="#33506E", fontcolor="#8A3B00"]; A2 -> A3 [label="|||", color="#33506E", fontcolor="#8A3B00"]; }
+  { rank=same; G1 -> G2 [label="[]>>", color="#33506E", fontcolor="#8A3B00"]; G2 -> G3 [label="|||", color="#33506E", fontcolor="#8A3B00"]; }
+  { rank=same; G11 -> G12 [label="[]", color="#33506E", fontcolor="#8A3B00"]; G12 -> G13 [label="[]", color="#33506E", fontcolor="#8A3B00"]; }
+}

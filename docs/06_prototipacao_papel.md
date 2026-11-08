@@ -8,6 +8,10 @@
 
 Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir → simular → observar → revisar**.
 
+> **Estado real da entrega (revisado após feedback do professor).** Esta entrega está **incompleta e permanece "em andamento"**. Foi concluído o **construir** parcial (protótipo em papel de Guilherme; telas parciais de Lucas e Pedro) e o **planejamento** da simulação. **Não** foram executados o **simular**, o **observar** nem o **revisar**: nenhuma simulação ocorreu, não há participante, data nem observação real, e o item 5 não pode ser preenchido sem elas. **Nenhum problema foi inventado** para preencher as lacunas. As telas descritas na seção 3 são **planejamento do protótipo**; só valem como protótipo quando existir o desenho correspondente, identificado pelo mesmo ID.
+>
+> **Pendências para concluir:** (1) desenhar e identificar as telas P01–P07 (Lucas) e G01–G08 (Pedro); (2) executar ao menos uma simulação por fluxo com pessoa que não o desenhou; (3) fotografar a versão testada antes de alterá-la; (4) preencher os itens 4 e 5 com o observado; (5) produzir a versão revisada; (6) marcar os três últimos itens do checklist e mudar o status para concluída.
+
 ## 1. Escopo do protótipo
 
 ### Funcionalidade — Lucas
@@ -70,7 +74,15 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 
 ## 3. Telas e estados
 
-**Desenho do protótipo em papel:** concluído na parte de Guilherme (fotos ao fim da seção); pendente nas partes de Lucas e Pedro, cujas telas abaixo ainda representam o planejamento.
+**Distinção planejamento × protótipo produzido.**
+
+| Fluxo | Estados planejados | Estados materializados em imagem | Situação |
+|---|---|---|---|
+| Lucas (PF01/PF02) | P01–P07 | `Tela1-Tela2.jpeg` mostra só captura e apresentação de resultado (aprox. P02 e P04); **P01, P03, P05, P06 e P07 não existem como desenho**; a correspondência entre imagem e ID não está marcada | **Parcial.** Falta desenhar rota do dia, análise, confirmação do registro, pontos registrados/pendentes e situação do envio; e rotular cada desenho com seu ID |
+| Guilherme (PF03/PF04) | A01, A02, A03, A05, A06, A07 | `prototipo_fluxo_2-1.jpeg` (A01, A02, A03) e `prototipo_fluxo_2-2.jpeg` (A06, A07, A05) | **Materializado**, ainda sem simulação |
+| Pedro (PF05/PF06) | G01–G08 | `Tela3.jpeg` mostra só parte (resultados, status, autor/horário, pedidos); **o fluxo completo não é simulável** | **Parcial.** Faltam resumo do ciclo, cobertura/talhões não inspecionados, detalhe do talhão com evidências, evolução, registro de posição e decisão, e estado do repasse |
+
+**Regra para concluir:** toda tela descrita deve existir em papel, com o mesmo ID escrito no desenho; os caminhos e os estados de erro/retorno descritos precisam poder ser percorridos durante o walkthrough, sem depender do texto do relatório. As imagens abaixo devem ser rotuladas (P01…, G01…) nos próprios desenhos.
 
 ### Funcionalidade — Lucas
 
@@ -89,7 +101,6 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 **Erros e retornos:** foto inadequada exige ajuste; resultado inconclusivo permite refazer; falta de GPS permite identificar o local manualmente; falha no envio mantém os registros salvos para nova tentativa.
 
 **Informações importantes:** distinguir “salvo no celular” de “enviado”. Ausência de sinal na foto não significa que toda a árvore esteja livre da praga.
-
 ![Protótipo](../assets/06_prototipos/Tela1-Tela2.jpeg)
 
 ### Funcionalidade — Guilherme
@@ -109,6 +120,10 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 **Alterações em relação ao planejamento:** as telas A04 (pedido de nova foto) e A08 (situação do parecer) foram retiradas no desenho, por serem consideradas redundantes. O pedido de nova foto virou um botão direto em A03, ao lado de aprovar e rejeitar, sem formulário de motivo e prazo. A situação do parecer passa a aparecer na própria lista de pedidos (A01), que mostra o pedido como "concluído" após o envio. Os demais identificadores foram mantidos para não quebrar as referências nas outras entregas.
 
 **Informações importantes:** distinguir "detectado pela IA" de "validado por humano" em todas as telas.
+
+> **Decisões de desenho ainda não testadas:** o percentual de "assertividade" da IA (ex.: "97%") em A03; o uso de mapa; os símbolos ○/●; os estados "pendente/analisado"; os campos de produto, dose e período; os rótulos de aprovar/rejeitar/pedir nova foto.
+>
+> **Dependência de hipótese:** este fluxo parte da hipótese (P03 é proto-persona; H04, H07, H21) de que o agrônomo revisa detecções individualmente, aprova/rejeita, pede nova foto, consulta histórico, delimita área, registra produto/dose/período e envia parecer. O walkthrough com um colega testa **compreensibilidade do protótipo**, **não valida** que essa seja a atividade real de um agrônomo; isso depende da Entrega 7.
 
 ![Protótipo — A01, A02 e A03](../assets/06_prototipos/prototipo_fluxo_2-1.jpeg)
 
@@ -136,6 +151,37 @@ Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir
 
 A simulação deverá envolver uma pessoa que não participou da elaboração das telas. Um colega pode participar desta iteração formativa, sem substituir os participantes finais da Entrega 14.
 
+> **Situação: plano de walkthrough, não walkthrough executado.** As tabelas abaixo registram **o que será observado**. Nenhum dado de simulação existe ainda.
+
+### Protocolo de condução (vale para os três fluxos)
+
+- **Apresentar objetivos, não instruções de clique.** Errado: "Aqui você deve clicar para ver o histórico." Certo: "Você quer verificar se já ocorreram detecções anteriores neste talhão. O que faria?"
+- **Não explicar nem defender a tela** antes de o participante agir; observar o participante tentando compreender.
+- **Registrar evidência observável**, nunca opinião genérica ("gostou", "achou intuitivo"). Exemplos válidos: tentou tocar em outro elemento; demorou para achar o histórico; interpretou "pendente" como envio pendente e não análise pendente; não percebeu que podia voltar; confundiu "sem foco" com "não inspecionado"; disse que 97% significa diagnóstico confirmado; procurou confirmação de envio e não achou.
+- **Fotografar a versão testada** antes de qualquer alteração.
+- Se nenhum problema for encontrado, analisar criticamente: é incomum que fluxos complexos sejam compreendidos sem dúvida em baixa fidelidade.
+
+### Modelo de registro (um por simulação realizada)
+
+| Campo | Registro |
+|---|---|
+| Condutor / Participante / Data | (preencher) |
+| Tarefa solicitada (como objetivo) | |
+| O que tentou fazer | |
+| Onde hesitou | |
+| Onde interpretou corretamente | |
+| Onde pediu ajuda | |
+| Erros ou dúvidas | |
+| Evidência observada | |
+| Implicação para o protótipo | |
+
+### Questões específicas a observar (não presumir a resposta)
+
+- **Percentual de assertividade da IA (A03, G04):** ajuda, confunde, induz confiança excessiva, é entendido como probabilidade, substitui a análise da imagem? Candidato a comparar versões (mostrar, ocultar, recolher); mostrar não é automaticamente melhor.
+- **P02:** distingue "salvo localmente" de "enviado"? interpreta "sem sinal na foto" como "árvore sem praga"?
+- **P03:** distingue resultado da IA de validação humana? entende a consequência de aprovar, rejeitar e pedir nova foto? encontra o histórico e entende quando o parecer foi entregue?
+- **P01:** distingue "não inspecionado" de "sem foco"? avalia o ciclo sem conhecimento agronômico? encontra histórico/comparação sem ajuda? entende "pedido de nova foto" e "reinspeção" como coisas distintas?
+
 ### Funcionalidade — Lucas
 
 **Situação:** pendente, após desenhar as telas.<br>
@@ -155,7 +201,7 @@ As observações reais serão preenchidas após a simulação.
 
 ### Funcionalidade — Guilherme
 
-**Situação:** telas desenhadas; simulação pendente.<br>
+**Situação:** telas desenhadas; **simulação não realizada**.<br>
 **Condutor:** Guilherme.<br>
 **Participante:** a definir (pessoa que não participou da elaboração das telas).<br>
 **Data da simulação:** a definir.
@@ -187,6 +233,8 @@ As observações reais serão preenchidas após a simulação.
 
 ## 5. Alterações após a simulação
 
+> **Pendente para os três fluxos.** Este item só pode ser preenchido **depois** de simulações reais e deve registrar apenas dificuldades **efetivamente observadas** (antes → problema observado → depois → justificativa baseada na observação), não problemas que "provavelmente" aconteceriam. As alterações já feitas por decisão da própria equipe no desenho de Guilherme (retirada de A04 e A08, descritas na seção 3) são **decisões de projeto, não resultado de simulação**, e por isso não entram aqui.
+
 ### Funcionalidade — Lucas
 
 **Pendente:** preencher após o teste, relacionando cada alteração a uma dificuldade realmente observada.
@@ -209,12 +257,14 @@ As observações reais serão preenchidas após a simulação.
 
 ## Checklist
 
-**Situação referente ao planejamento da parte de Lucas. A parte de Guilherme já tem o protótipo em papel desenhado, mas ainda sem simulação. A consolidação da equipe permanece pendente.**
+**Os três últimos itens permanecem desmarcados de propósito: refletem o estado real (walkthrough não executado, revisão não realizada, protótipo não consolidado). A entrega não deve ser considerada concluída enquanto isso não mudar.**
 
 - [x] O escopo planejado do protótipo cobre tarefas relevantes da Entrega 5.
 - [x] Cada tela/estado planejado pode ser justificado por uma tarefa, decisão ou informação necessária.
 - [x] O projeto não criou dashboard/CRUD/login apenas para parecer “completo”.
 - [x] Telas/estados estão numerados e têm caminhos de navegação indicados na documentação.
+- [x] Placeholder `prototipo_fluxo_01.svg` removido de `assets/06_prototipos/`.
+- [x] Rastreabilidade atualizada (`RASTREABILIDADE.md`, seção 6).
 - [ ] Há pelo menos uma simulação/walkthrough documentado.
 - [ ] Críticas não foram apenas listadas: geraram decisão de revisão.
 - [ ] O protótipo em papel foi elaborado e permanece em baixa fidelidade; detalhes visuais não mascaram problemas de fluxo.

@@ -1,0 +1,38 @@
+digraph H {
+graph [rankdir=LR, splines=polyline, nodesep=0.2, ranksep=0.8, fontname="Helvetica", bgcolor="white", pad=0.3, labelloc=t, labeljust=l, fontsize=16, label=<<B>HTA — T05 Emitir parecer técnico sobre um foco de infestação</B>>];
+node [shape=box, style="rounded,filled", fillcolor="#F4F7FB", color="#33506E", fontname="Helvetica", fontsize=11, margin="0.12,0.08"];
+edge [color="#33506E", arrowhead=none];
+n0 [label=<<B>0</B> Emitir parecer técnico sobre o foco relatado<BR/><FONT POINT-SIZE="9" COLOR="#8A3B00">Plano 0: 1 &gt; 2 &gt; 3 &gt; 4 &gt; 5</FONT>>, fillcolor="#DCE8F5"];
+n1 [label=<<U><B>1</B> Receber o alerta do foco</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n0 -> n1;
+n2 [label=<<B>2</B> Reunir o contexto do foco<BR/><FONT POINT-SIZE="9" COLOR="#8A3B00">Plano 2: 2.1 &gt; 2.2 &gt; 2.3</FONT>>, fillcolor="#DCE8F5"];
+n0 -> n2;
+n2_1 [label=<<U><B>2.1</B> Localizar o ponto/talhão no mapa</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n2 -> n2_1;
+n2_2 [label=<<U><B>2.2</B> Examinar fotos originais e metadados</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n2 -> n2_2;
+n2_3 [label=<<U><B>2.3</B> Comparar com inspeções anteriores do mesmo ponto</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n2 -> n2_3;
+n3 [label=<<B>3</B> Avaliar a extensão da área afetada<BR/><FONT POINT-SIZE="9" COLOR="#8A3B00">Plano 3: 3.1 &gt; 3.2</FONT>>, fillcolor="#DCE8F5"];
+n0 -> n3;
+n3_1 [label=<<U><B>3.1</B> Contar árvores/pontos com detecção</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n3 -> n3_1;
+n3_2 [label=<<U><B>3.2</B> Verificar se o foco é novo ou recorrente</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n3 -> n3_2;
+n4 [label=<<B>4</B> Definir o manejo<BR/><FONT POINT-SIZE="9" COLOR="#8A3B00">Plano 4: 4.1 &gt; 4.2 &gt; 4.3</FONT>>, fillcolor="#DCE8F5"];
+n0 -> n4;
+n4_1 [label=<<U><B>4.1</B> Delimitar a área de aplicação</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n4 -> n4_1;
+n4_2 [label=<<U><B>4.2</B> Escolher produto e dose</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n4 -> n4_2;
+n4_3 [label=<<U><B>4.3</B> Definir o período de aplicação</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n4 -> n4_3;
+n5 [label=<<B>5</B> Registrar e enviar a recomendação<BR/><FONT POINT-SIZE="9" COLOR="#8A3B00">Plano 5: 5.1 &gt; 5.2 &gt; 5.3</FONT>>, fillcolor="#DCE8F5"];
+n0 -> n5;
+n5_1 [label=<<U><B>5.1</B> Redigir o parecer técnico</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n5 -> n5_1;
+n5_2 [label=<<U><B>5.2</B> Vincular o parecer aos pontos avaliados</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n5 -> n5_2;
+n5_3 [label=<<U><B>5.3</B> Enviar ao dono/gestor (P01)</U>>, peripheries=2, fillcolor="#FFFFFF"];
+n5 -> n5_3;
+}

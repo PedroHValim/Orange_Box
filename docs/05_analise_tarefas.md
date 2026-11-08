@@ -172,7 +172,21 @@ As três modelagens abaixo partem do cenário C03 (Entrega 4) e da persona P03, 
 
 ![HTA T05](../assets/05_tarefas/hta_t05.png)
 
+*Notação: caixas de **dupla borda e texto sublinhado** (grifadas) são operações-folha (sem decomposição); caixas azuis com "Plano" são tarefas decompostas, e os planos usam sempre os números completos dos filhos. Fonte editável em `.dot` (Graphviz).*
+
+
 ### Decomposição e planos
+
+> **Dependência de hipótese:** T05 pressupõe que o agrônomo valide focos e emita parecer a distância (P03 é proto-persona; H04, H07, H21). Se o papel real for diferente, T05, T06 e T07 devem ser revisados na Entrega 7.
+
+**Tarefa 0 (campos obrigatórios):**
+
+| Campo | Conteúdo |
+|---|---|
+| Objetivo | Emitir parecer técnico sobre o foco relatado |
+| **Input** | Alerta/relato de que há detecções novas em uma propriedade atendida (hoje: ligação do dono e fotos soltas) |
+| **Feedback** | Recomendação registrada, vinculada aos pontos avaliados, e confirmação de que foi enviada ao dono/gestor |
+| **Plano** | 1 > 2 > 3 > 4 > 5 |
 
 | ID | Objetivo/operação | Plano/ordem | Problema ou decisão de design observada |
 |---|---|---|---|
@@ -209,39 +223,46 @@ As três modelagens abaixo partem do cenário C03 (Entrega 4) e da persona P03, 
 
 A tarefa é um recorte da subtarefa 2.3 do HTA T05. O modelo supõe a interface proposta no escopo de IHC, com mapa de focos e histórico com filtros (decisões de design de P03 na Entrega 3). O nível de detalhe dos operadores é de ações de interface (CMN-GOMS).
 
-### Goal
+### Estrutura (GOAL / METHOD / SELECTION RULE / operadores)
 
-`G0: Encontrar todas as detecções registradas no talhão X nas últimas N semanas, para comparar com o foco atual`
+```
+GOAL 0: Encontrar todas as detecções registradas no talhão X nas últimas N semanas,
+        para comparar com o foco atual
+│
+└── GOAL 1: Obter a lista de detecções anteriores do local/período de interesse
+    ├── SELECTION RULE 1: usar METHOD 1.C quando a busca nasce de um alerta que Marcelo
+    │      está avaliando naquele momento (caso típico do C03); usar METHOD 1.A quando
+    │      sabe ONDE está o problema mas não reconhece o nome/código do talhão; usar
+    │      METHOD 1.B quando busca um PERÍODO específico ou compara vários talhões
+    │
+    ├── METHOD 1.A (localizar pelo mapa)
+    │     1. abrir a visão de mapa da propriedade
+    │     2. perceber a posição do talhão X no mapa
+    │     3. apontar e tocar/clicar no talhão X
+    │     4. perceber a lista de pontos com detecção do talhão
+    │     5. ajustar o intervalo de datas para as últimas N semanas
+    │     6. perceber e ler a lista de detecções resultante          ← verificação
+    │
+    ├── METHOD 1.B (localizar pelo histórico com filtros)
+    │     1. abrir a tela de histórico de inspeções
+    │     2. selecionar o filtro de período e informar as últimas N semanas
+    │     3. selecionar o filtro de local e escolher o talhão X na lista
+    │     4. confirmar os filtros
+    │     5. perceber e ler a lista de detecções resultante          ← verificação
+    │
+    └── METHOD 1.C (navegar a partir do alerta atual)
+          1. abrir a detecção recebida no alerta
+          2. acionar "ver histórico deste ponto/talhão"
+          3. perceber e ler a lista de detecções anteriores do mesmo local   ← verificação
+```
 
-### Métodos, operadores e regras de seleção
-
-- **Method M1: localizar pelo mapa** (parte do *onde*)
-  - Operators:
-    1. abrir a visão de mapa da propriedade;
-    2. perceber a posição do talhão X no mapa;
-    3. apontar e tocar/clicar no talhão X;
-    4. perceber a lista de pontos com detecção do talhão;
-    5. ajustar o intervalo de datas para as últimas N semanas;
-    6. perceber e ler a lista de detecções resultante.
-- **Method M2: localizar pelo histórico com filtros** (parte do *quando*)
-  - Operators:
-    1. abrir a tela de histórico de inspeções;
-    2. selecionar o filtro de período e informar as últimas N semanas;
-    3. selecionar o filtro de local e escolher o talhão X na lista;
-    4. confirmar os filtros;
-    5. perceber e ler a lista de detecções resultante.
-- **Method M3: navegar a partir do alerta atual** (parte do foco que está sendo avaliado)
-  - Operators:
-    1. abrir a detecção recebida no alerta;
-    2. acionar "ver histórico deste ponto/talhão";
-    3. perceber e ler a lista de detecções anteriores do mesmo local.
-- **Selection Rule SR1:** usar **M3** quando a busca nasce de um alerta que Marcelo está avaliando naquele momento (caso típico do C03); usar **M1** quando ele sabe *onde* está o problema mas não reconhece o nome/código do talhão; usar **M2** quando busca um *período* específico ou vai comparar vários talhões no mesmo intervalo.
+*(O GOAL 1 foi explicitado: antes o modelo saltava de G0 para três Methods. M1/M2/M3 passam a 1.A/1.B/1.C.)*
 
 **Observações de design a partir do modelo:**
 
-- M3 tem o menor número de operadores e cobre o caso mais frequente. Por isso, o atalho "ver histórico deste ponto" deve estar na própria tela da detecção.
-- M1 depende de o talhão ser reconhecível no mapa. Rótulos e limites dos talhões precisam ser visíveis sem zoom excessivo.
-- M2 exige que Marcelo saiba o nome/código do talhão. Isso é hipótese: ele atende a várias propriedades e pode não memorizar a nomenclatura de cada uma (validar na Entrega 7).
+- O METHOD 1.C tem o menor número de operadores e cobre o caso mais frequente. Por isso, o atalho "ver histórico deste ponto" deve estar na própria tela da detecção.
+- O METHOD 1.A depende de o talhão ser reconhecível no mapa. Rótulos e limites dos talhões precisam ser visíveis sem zoom excessivo.
+- O METHOD 1.B exige que Marcelo saiba o nome/código do talhão. Isso é hipótese: ele atende a várias propriedades e pode não memorizar a nomenclatura de cada uma (validar na Entrega 7).
 - Os três métodos terminam no mesmo formato de lista. O resultado deve ser idêntico independentemente do caminho, para não gerar dúvida sobre "qual lista está certa".
 
 ---
@@ -252,11 +273,13 @@ A tarefa é um recorte da subtarefa 2.3 do HTA T05. O modelo supõe a interface 
 
 ### Descrição
 
-Marcelo revisa as detecções positivas geradas pela IA em campo e decide, para cada uma, se confirma, rejeita ou pede uma nova foto. A tarefa responde à decisão de design de P03 que separa claramente "sinal detectado pela IA" de "confirmação/validação humana". Ela alimenta a subtarefa 3 do HTA T05: só focos confirmados entram no dimensionamento da área. A revisão é iterativa (várias detecções por sessão) e pode ser encerrada a qualquer momento.
+Marcelo (proto-persona P03, papel ainda a validar) revisa as detecções positivas geradas pela IA em campo e decide, para cada uma, se confirma, rejeita ou pede uma nova foto. A tarefa responde à decisão de design de P03 que separa claramente "sinal detectado pela IA" de "confirmação/validação humana". Ela alimenta a subtarefa 3 do HTA T05: só focos confirmados entram no dimensionamento da área. A revisão é iterativa (várias detecções por sessão) e pode ser encerrada a qualquer momento.
 
 ### Diagrama
 
 ![CTT T07](../assets/05_tarefas/ctt_t07_validar_deteccao.svg)
+
+*Fonte editável: `ctt_t07_validar_deteccao.dot` (Graphviz). Foi acrescentado o nó externo "Receber do dono a notícia de ocorrência ou iniciar revisão prevista", que motiva Marcelo a entrar no sistema (a origem real é hipótese a validar: H04, H07).*
 
 ### Legenda e relações temporais usadas
 
@@ -273,7 +296,7 @@ Marcelo revisa as detecções positivas geradas pela IA em campo e decide, para 
 **Tipos de tarefa no modelo:**
 
 - **Abstratas:** *Validar detecções pendentes*, *Validar detecção\**, *Analisar evidências*, *Registrar veredito*, *Escolher veredito*. São decompostas em subtarefas.
-- **Usuário:** *Examinar a imagem*, atividade cognitiva de julgamento técnico sem interação com o sistema.
+- **Usuário:** *Receber do dono a notícia de ocorrência ou iniciar revisão prevista* (evento externo), *Examinar a imagem*, atividade cognitiva de julgamento técnico sem interação com o sistema.
 - **Interação:** *Selecionar detecção pendente*, *[Ampliar imagem]*, *[Consultar histórico do ponto]*, *Confirmar*, *Rejeitar*, *Solicitar nova foto ao campo*, *[Anotar observação técnica]*, *Encerrar revisão*.
 - **Sistema/aplicação:** *Exibir foto, confiança da IA e localização*, *Marcar como "validado por humano"*.
 
@@ -288,8 +311,8 @@ Marcelo revisa as detecções positivas geradas pela IA em campo e decide, para 
 
 ### Síntese das modelagens de P03
 
-- **Requisitos que surgem:** geolocalização e metadados gravados automaticamente na captura; histórico acessível a partir da detecção (M3); veredito humano registrado separado do resultado da IA; pedido de nova foto direcionado a um ponto específico.
-- **Candidatos ao protótipo e ao teste de usabilidade:** o fluxo *alerta → detecção → histórico do ponto → veredito* (T07 + M3 do T06), por concentrar a principal dor do C03 em poucas telas.
+- **Oportunidades de design / candidatos (não requisitos confirmados; dependem da validação de P03):** geolocalização e metadados gravados automaticamente na captura; histórico acessível a partir da detecção (M3); veredito humano registrado separado do resultado da IA; pedido de nova foto direcionado a um ponto específico.
+- **Candidatos ao protótipo e ao teste de usabilidade:** o fluxo *alerta → detecção → histórico do ponto → veredito* (T07 + METHOD 1.C do T06), por concentrar a principal dor do C03 em poucas telas.
 - **Hipóteses que continuam abertas:** H04, H07 e H21 (ver C03); frequência real dos pareceres e metadados mínimos exigidos por um agrônomo, a validar na Entrega 7.
 
 
@@ -444,6 +467,8 @@ Ao fim de cada ciclo, Jaime revisa o resultado antes de decidir o manejo. Como n
 
 ## Síntese da equipe
 
+> **Classificação das saídas.** Nenhuma lista abaixo contém requisitos confirmados por usuários reais. Cada item é **requisito sustentado** (apenas se vier do TCC, ex.: funcionamento offline, processamento rápido, geolocalização), **oportunidade de design**, **candidato a protótipo** ou **hipótese a validar** (a maior parte, pois deriva de P01/P03, proto-personas, e dos cenários hipotéticos). T04–T09 só devem ir ao protótipo depois da validação da Entrega 7.
+
 Quais problemas de interação, oportunidades e requisitos apareceram a partir das modelagens? Quais tarefas irão para o protótipo e para o teste de usabilidade?
 
 **Contribuição do Pedro (P01):**
@@ -461,8 +486,8 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 **Contribuição do Guilherme (P03):**
 
 - **Problemas de interação:** alerta que não leva direto ao foco (1); local, data e árvore das fotos dependentes da memória de quem estava em campo (2.1, 2.2); comparação com inspeções anteriores sem histórico por local (2.3, T06); risco de viés de confirmação ao ver a avaliação da IA antes da análise (T07); área de aplicação estimada sem base nos pontos confirmados (4.1); parecer que se perde em mensagens soltas e não chega com clareza ao gestor (5.3).
-- **Requisitos que emergiram:** alerta que abre o talhão do foco; metadados gravados automaticamente na captura; histórico acessível a partir da própria detecção (M3); veredito humano registrado separado do resultado da IA; pedido de nova foto direcionado a um ponto; delimitação da área só com pontos confirmados; parecer vinculado aos pontos e repassado ao gestor.
-- **Para o protótipo e o teste de usabilidade:** o fluxo "alerta → detecção → histórico do ponto → veredito" (T07 + M3 do T06) e o fechamento "área → parecer → repasse" (T05). A síntese final da equipe deve cruzá-los com o pedido de parecer de P01 e com a rota de P02, que recebe os pedidos de nova foto.
+- **Oportunidades de design / hipóteses a validar (não requisitos confirmados):** alerta que abre o talhão do foco; metadados gravados automaticamente na captura; histórico acessível a partir da própria detecção (M3); veredito humano registrado separado do resultado da IA; pedido de nova foto direcionado a um ponto; delimitação da área só com pontos confirmados; parecer vinculado aos pontos e repassado ao gestor.
+- **Para o protótipo e o teste de usabilidade:** o fluxo "alerta → detecção → histórico do ponto → veredito" (T07 + METHOD 1.C do T06) e o fechamento "área → parecer → repasse" (T05). A síntese final da equipe deve cruzá-los com o pedido de parecer de P01 e com a rota de P02, que recebe os pedidos de nova foto.
 
 ## Checklist
 
@@ -473,6 +498,9 @@ Quais problemas de interação, oportunidades e requisitos apareceram a partir d
 - [x] GOMS distingue Goals, Operators, Methods e Selection Rules.
 - [x] CTT usa operadores temporais e tipos de tarefa coerentes.
 - [x] Há texto explicando cada diagrama.
-- [ ] Tarefas estão ligadas a cenários/personas na rastreabilidade.
+- [x] Tarefas estão ligadas a cenários/personas na rastreabilidade (`RASTREABILIDADE.md`, seção 6).
+- [x] HTA: tarefa 0 com Input, Feedback e Plano; todas as decompostas na tabela; folhas grifadas; planos com números completos.
+- [x] GOMS: GOAL 0/GOAL 1 explícitos, indentação hierárquica e último operador de verificação.
+- [x] CTT: nó de ação externa que motiva o uso (T03, T07, T09).
 - [x] Em TCC técnico, as tarefas descrevem o que a pessoa faz com a contribuição/resultados, não passos internos do código.
 - [x] CRUDs, relatórios, filtros e atividades administrativas foram escolhidos por relevância ao objetivo do usuário.
