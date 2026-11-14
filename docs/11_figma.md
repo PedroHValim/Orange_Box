@@ -1,7 +1,7 @@
 # Entrega 11 — Protótipo no Figma
 
 **Data:** 14/11/2026  
-**Status:** 🟨 em andamento — telas do perfil de inspeção documentadas; faltam as capturas do perfil administrador e a revisão da equipe.  
+**Status:** 🟨 em andamento — telas principais dos dois perfis documentadas; faltam capturas de detalhes e estados e a revisão da equipe.  
 **Responsabilidade:** 1 protótipo integrado por equipe cobrindo os fluxos MoLIC. Se a turma exigir divisão individual, identifique o responsável por cada fluxo/tela.
 
 ## Objetivo da atividade
@@ -20,12 +20,12 @@ A equipe não produziu um protótipo no Figma. A interação foi materializada d
 
 ## Cobertura MoLIC → Figma
 
-Como não há Figma, a tabela relaciona cada MoLIC às telas do aplicativo. As telas F01 a F05 têm captura nesta entrega; as demais estão listadas em “Capturas que faltam”.
+Como não há Figma, a tabela relaciona cada MoLIC às telas do aplicativo. As telas F01 a F06 têm captura nesta entrega; as demais estão listadas em “Capturas que faltam”.
 
 | MoLIC | Objetivo | Fluxo/telas no aplicativo | Estados de erro/recuperação | Responsável |
 |---|---|---|---|---|
 | M02 — Inspecionar a rota e repassar os achados | O01–O05 | `F01 → F02 → F03`, com consulta a `F04` e `F05` | Na câmera: confiança baixa, localização desativada e falha ao salvar a imagem, com mensagem e nova tentativa. Sem captura nesta entrega. | {{Lucas}} |
-| M03 — Revisar o ciclo e decidir o manejo por talhão | O06–O11 | `F01 → Relatórios → F04 → F03`. A aba Relatórios só aparece no perfil administrador e ainda não tem captura. | Não há estados de falha específicos do gestor no aplicativo. As diferenças em relação ao M03 estão registradas na Entrega 12. | Pedro |
+| M03 — Revisar o ciclo e decidir o manejo por talhão | O06–O11 | `F01 → F06 → F04 → F03`. A aba Relatórios (F06) só aparece no perfil administrador. | Não há estados de falha específicos do gestor no aplicativo. As diferenças em relação ao M03 estão registradas na Entrega 12. | Pedro |
 | M01 — {{objetivo do agrônomo}} | {{IDs}} | O aplicativo não tem perfil de agrônomo. | {{...}} | {{Guilherme}} |
 
 ## Catálogo de telas/estados
@@ -70,9 +70,17 @@ Como não há Figma, a tabela relaciona cada MoLIC às telas do aplicativo. As t
 **Signos principais:** nome do usuário, “Perfil de inspeção”, resumo da fazenda (8 talhões, 8 inspeções e 64 pragas) e descrição do que o perfil permite fazer.  
 **Origem no MoLIC:** apoio a M02 e M03; não corresponde a uma cena específica.
 
+### F06 — Relatórios (perfil administrador)
+
+![F06](../assets/11_figma/f06_relatorios.jpeg)
+
+**Objetivo do usuário:** entender a situação da fazenda no período e decidir a próxima ação.  
+**Signos principais:** filtro de talhões e período (“Todos os talhões · 30 dias”), “Detecções confirmadas” com a variação em relação ao período anterior, indicadores de talhões críticos, reentrada bloqueada e reinspeções vencidas, e o gráfico “Detecções por talhão”, seguido da lista de talhões com contagem.  
+**Origem no MoLIC:** M03, cenas S1 (conhecer o ciclo), S3 (escolher o talhão) e S5 (acompanhar a evolução); O06, O07 e O09.
+
 ### Capturas que faltam
 
-- **Relatórios (perfil administrador):** situação do período, detecções por talhão, pulverização e exportação em PDF. É a tela central do fluxo de P01.
+- **Restante da aba Relatórios:** lista completa de talhões, seção de pulverização e carência, armadilhas e o botão de exportar o relatório em PDF.
 - **Detalhe do talhão no mapa:** resumo do talhão e registro de pulverização.
 - **Detalhe da inspeção:** foto ampliada e talhão associado.
 - **Estados da câmera:** detecção com confiança, “Imagem capturada” e as mensagens de confiança baixa e de localização desativada.
@@ -100,20 +108,21 @@ Verificação feita apenas pelas capturas, sem teste com tecnologias assistivas.
 
 ## Pontos observados nas capturas
 
-- O Mapa mostra “Total de pragas: 25”, e a Conta mostra “64 pragas” para a mesma fazenda. Pela leitura do código, o Mapa conta apenas as detecções posteriores à última pulverização de cada talhão. A diferença deve ser avaliada na inspeção heurística (Entrega 12, QA17).
+- O Mapa mostra “Total de pragas: 25”, enquanto a Conta mostra “64 pragas” e a aba Relatórios mostra “64 detecções confirmadas” para a mesma fazenda. Pela leitura do código, o Mapa conta apenas as detecções posteriores à última pulverização de cada talhão. A diferença deve ser avaliada na inspeção heurística (Entrega 12, QA17).
 - A foto do perfil não aparece na tela Conta (círculo vazio).
+- Na aba Relatórios, as cores do gráfico “Detecções por talhão” (azul, verde, vermelho, roxo e outras) identificam talhões, e não o nível de cada um. O vermelho do gráfico pode ser lido como talhão crítico, embora o indicador mostre zero talhões críticos.
 
 ## Checklist
 
 - [ ] Link do Figma está acessível. — não se aplica: o protótipo é o aplicativo; o repositório é público.
 - [x] Há screenshots representativos no repositório.
-- [ ] Todos os MoLIC relevantes estão cobertos. — M02 coberto; M03 parcialmente; M01 sem perfil no aplicativo.
+- [ ] Todos os MoLIC relevantes estão cobertos. — M02 e M03 cobertos pelas telas principais; M01 sem perfil no aplicativo.
 - [ ] Estados de erro, feedback e recuperação foram prototipados. — existem no aplicativo, mas ainda sem captura.
 - [ ] Terminologia/signos são consistentes com Entrega 9. — a conferir pela equipe.
 - [x] Componentes equivalentes se comportam de forma consistente.
 - [ ] Fluxos críticos são clicáveis do início ao fim. — a conferir no aparelho.
 - [ ] O protótipo está pronto para inspeção e testes, sem “links mortos” nas tarefas avaliadas. — a conferir no piloto da Entrega 12.
-- [ ] Dashboards, relatórios, históricos, filtros, administração e CRUDs presentes possuem justificativa rastreável. — faltam as telas do perfil administrador.
+- [ ] Dashboards, relatórios, históricos, filtros, administração e CRUDs presentes possuem justificativa rastreável. — faltam as capturas de filtros, exportação e detalhe do talhão.
 - [ ] Estados de vazio, processamento, erro e recuperação foram considerados quando pertinentes.
 - [x] Resultados técnicos são apresentados de forma interpretável para o perfil de usuário.
 - [x] A equipe distingue no protótipo o que é interação simulada e o que é funcionalidade técnica realmente integrada, quando necessário. — conta de teste e dados marcados como “EXEMPLO”.
