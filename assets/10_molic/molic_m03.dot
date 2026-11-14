@@ -1,0 +1,98 @@
+// MoLIC M03 — Revisar o ciclo e decidir o manejo por talhão (P01 / CI01)
+// Gerar: dot -Tsvg molic_m03.dot -o molic_m03.svg ; dot -Tpng -Gdpi=110 molic_m03.dot -o molic_m03.png
+digraph M03 {
+  graph [rankdir=TB, fontname="Helvetica", fontsize=13, nodesep=0.7, ranksep=0.75, splines=spline,
+         labelloc=t, label="MoLIC M03 — Revisar o ciclo e decidir o manejo por talhão (P01, CI01)\n ", bgcolor="white"];
+  node  [fontname="Helvetica", fontsize=11];
+  edge  [fontname="Helvetica", fontsize=10, color="#222222", arrowsize=0.8];
+
+  // abertura e encerramentos
+  ini  [shape=circle, style=filled, fillcolor=black, label="", width=0.28, fixedsize=true];
+  fimOK  [shape=doublecircle, style=filled, fillcolor=black, label="", width=0.2, fixedsize=true,
+          xlabel="Encerramento:\ndecisão registrada\ne repassada"];
+  fimPend [shape=doublecircle, style=filled, fillcolor=black, label="", width=0.2, fixedsize=true,
+          xlabel="Encerramento com pendência:\nrevisão interrompida ou\ndecisão ainda não repassada"];
+
+  // cenas
+  node [shape=plain];
+  S1 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
+     <tr><td><b>S1 — Conhecer o ciclo</b></td></tr><hr/>
+     <tr><td align="left">d: data do ciclo, talhões inspecionados<br align="left"/>e talhões com focos<br align="left"/></td></tr></table>>];
+  S2 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
+     <tr><td><b>S2 — Conferir a cobertura</b></td></tr><hr/>
+     <tr><td align="left">d: talhão inspecionado, não inspecionado<br align="left"/>ou com cobertura incompleta<br align="left"/>d: não inspecionado não significa sem focos<br align="left"/></td></tr></table>>];
+  S3 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
+     <tr><td><b>S3 — Escolher o talhão</b></td></tr><hr/>
+     <tr><td align="left">d: talhões com focos, em ordem de<br align="left"/>gravidade e tendência (dado, não recomendação)<br align="left"/>d: posição já registrada em cada talhão<br align="left"/></td></tr></table>>];
+  S4 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
+     <tr><td><b>S4 — Avaliar o talhão</b></td></tr><hr/>
+     <tr><td align="left">d: fotos, local e confiança do resultado<br align="left"/>d: o sistema não confirma a praga<br align="left"/>d: aviso se a cobertura foi incompleta<br align="left"/></td></tr></table>>];
+  S5 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
+     <tr><td><b>S5 — Acompanhar a evolução</b></td></tr><hr/>
+     <tr><td align="left">d: avançando, estável ou recuando<br align="left"/>d: última aplicação marcada<br align="left"/>d: aviso se um ciclo comparado teve<br align="left"/>cobertura incompleta<br align="left"/></td></tr></table>>];
+  S6 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
+     <tr><td><b>S6 — Confirmar a posição</b></td></tr><hr/>
+     <tr><td align="left">d: posição do talhão: confiável, parecer<br align="left"/>do agrônomo pedido ou reinspeção pedida<br align="left"/></td></tr></table>>];
+  S7 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
+     <tr><td><b>S7 — Decidir o manejo do ciclo</b></td></tr><hr/>
+     <tr><td align="left">d: talhões e suas posições; talhões sem posição<br align="left"/>u: onde, quando e com que urgência aplicar<br align="left"/></td></tr></table>>];
+  S8 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
+     <tr><td><b>S8 — Conferir o repasse</b></td></tr><hr/>
+     <tr><td align="left">d: decisão registrada, repassada<br align="left"/>ou com falha no repasse<br align="left"/>d: destinatário (quem aplica)<br align="left"/></td></tr></table>>];
+
+  // processamentos do sistema (caixa preta)
+  node [shape=box, style=filled, fillcolor=black, label="", width=0.3, height=0.3, fixedsize=true];
+  P1; P2; P3; P4;
+
+  // acessos ubíquos
+  node [shape=box, style="rounded,filled", fillcolor="#D9D9D9", fixedsize=false, width=0, height=0, fontsize=10];
+  U1 [label="acesso ubíquo\n(S3 a S7)"];
+  U2 [label="acesso ubíquo\n(S2 a S7)"];
+
+  // caminho principal
+  ini -> S1 [label=" u: ver o resultado do ciclo"];
+  S1 -> S2 [label=" u: conferir a cobertura"];
+  S2 -> S3 [label=" u: ver os talhões com focos"];
+  S3 -> S4 [label=" u: abrir um talhão"];
+  S4 -> P2 [label=" u: registrar posição (confiável,\n parecer do agrônomo ou reinspeção)"];
+  P2 -> S6 [label=" d: posição registrada"];
+  S6 -> S3 [label=" u: próximo talhão"];
+  S6 -> S7 [label=" u: encerrar a revisão"];
+  S3 -> S7 [label=" u: encerrar a revisão"];
+  S7 -> P3 [label=" u: registrar a decisão"];
+  P3 -> S8 [label=" d: decisão registrada"];
+  S8 -> P4 [label=" u: repassar a quem aplica"];
+  P4 -> fimOK [label=" d: decisão repassada"];
+
+  // alternativas
+  S2 -> P1 [label=" u: pedir nova inspeção\n do talhão não coberto"];
+  P1 -> S2 [label=" d: pedido registrado"];
+  S4 -> S5 [label=" u: ver a evolução"];
+  S5 -> S4 [label=" u: voltar ao talhão"];
+  S7 -> S3 [label=" u: voltar aos talhões"];
+  S8 -> S7 [label=" u: alterar a decisão\n (antes de repassar)"];
+  S8 -> fimPend [label=" u: sair sem repassar"];
+  U1 -> S2 [label=" u: ver a cobertura do ciclo"];
+  U2 -> fimPend [label=" u: interromper a revisão\n d: o que foi registrado fica salvo"];
+
+  // rupturas e recuperação (tracejado)
+  edge [style=dashed, color="#B00020", fontcolor="#B00020"];
+  P1 -> S2 [label=" d: pedido não registrado;\n tente novamente"];
+  P2 -> S4 [label=" d: posição não salva;\n tente novamente"];
+  P3 -> S7 [label=" d: decisão não registrada;\n tente novamente"];
+  P4 -> S8 [label=" d: falha no repasse; a decisão\n continua registrada"];
+
+  // legenda
+  subgraph cluster_leg {
+    label="Legenda"; fontsize=11; color="#888888"; style=rounded;
+    node [shape=plain, style="", fontsize=10];
+    leg [label=<<table border="0" cellspacing="2" cellpadding="2">
+      <tr><td align="left">● ponto de abertura　◉ ponto de encerramento</td></tr>
+      <tr><td align="left">caixa arredondada: cena (tópico e diálogos)</td></tr>
+      <tr><td align="left">■ processamento do sistema</td></tr>
+      <tr><td align="left">caixa cinza: acesso ubíquo</td></tr>
+      <tr><td align="left">u: fala do usuário　d: fala do preposto do designer</td></tr>
+      <tr><td align="left">seta contínua: transição　<font color="#B00020">seta tracejada: recuperação de ruptura</font></td></tr>
+    </table>>];
+  }
+}
