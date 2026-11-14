@@ -1,6 +1,6 @@
 # Entrega 10 — MoLIC
 
-**Data:** 01/11/2026<br>
+**Data:** 14/11/2026<br>
 **Status:** 🟨 em andamento — conversas M02 e M03 especificadas e diagramas inseridos; M01 e consolidação pendentes.<br>
 **Responsabilidade:** 1 solução completa por integrante.
 
