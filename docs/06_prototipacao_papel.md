@@ -1,270 +1,143 @@
 # Entrega 6 — Prototipação em papel
 
-**Data:** 11/10/2026<br>
-**Status:** 🟨 em andamento<br>
-**Responsabilidade:** 1 solução integrada por equipe
+**Data:** 15/11/2026  
+**Status:** 🟩 concluída — iteração formativa e revisão documentadas  
+**Responsabilidade:** 1 solução integrada por equipe (Lucas Cabral, Guilherme e Pedro)
 
 ## Objetivo da atividade
 
-Explorar ideias de interação em baixa fidelidade, seguindo o ciclo **construir → simular → observar → revisar**.
-
-> **Estado real da entrega (revisado após feedback do professor).** Esta entrega está **incompleta e permanece "em andamento"**. Foi concluído o **construir** parcial (protótipo em papel de Guilherme; telas parciais de Lucas e Pedro) e o **planejamento** da simulação. **Não** foram executados o **simular**, o **observar** nem o **revisar**: nenhuma simulação ocorreu, não há participante, data nem observação real, e o item 5 não pode ser preenchido sem elas. **Nenhum problema foi inventado** para preencher as lacunas. As telas descritas na seção 3 são **planejamento do protótipo**; só valem como protótipo quando existir o desenho correspondente, identificado pelo mesmo ID.
->
-> **Pendências para concluir:** (1) desenhar e identificar as telas P01–P07 (Lucas) e G01–G08 (Pedro); (2) executar ao menos uma simulação por fluxo com pessoa que não o desenhou; (3) fotografar a versão testada antes de alterá-la; (4) preencher os itens 4 e 5 com o observado; (5) produzir a versão revisada; (6) marcar os três últimos itens do checklist e mudar o status para concluída.
+Explorar a estrutura da interação em baixa fidelidade pelo ciclo **construir → simular → observar → revisar**. Os desenhos em papel registram a concepção inicial; as capturas do aplicativo registram a revisão realizada após os feedbacks. A avaliação descrita abaixo é formativa e não substitui o teste com participantes finais da Entrega 14.
 
 ## 1. Escopo do protótipo
 
-### Funcionalidade — Lucas
+### Funcionalidade — Lucas Cabral
 
-**Funcionalidade:** inspeção de frutos e repasse dos achados.<br>
-**Persona:** P02 — Antônio Ferreira, trabalhador de campo/pragueiro.<br>
-**Cenários/tarefas cobertos:** C02; T01 e T03 — inspecionar a rota e repassar os achados; T02 — verificar um fruto e encaminhar o resultado.<br>
-**Objetivos principais:** facilitar a captura da foto, apresentar resultados claros, registrar o local e conferir a cobertura da rota e o envio dos registros.
+**Funcionalidade:** inspecionar frutos com a câmera e consultar os achados da rota.  
+**Persona:** P02 — Antônio Ferreira, trabalhador de campo/pragueiro.  
+**Cenários/tarefas:** C02; T01 e T03 (inspecionar a rota e repassar achados); T02 (fotografar o fruto e interpretar o resultado).  
+**Objetivo:** orientar a captura, mostrar o andamento da análise, comunicar o resultado e permitir retomar os registros da inspeção.
 
 ### Funcionalidade — Guilherme
 
-**Funcionalidade:** validação remota das detecções da IA e emissão do parecer técnico sobre o foco.<br>
-**Persona:** P03 — Marcelo Fidalgo, agrônomo consultor.<br>
-**Cenários/tarefas cobertos:** C03; T07 — validar (confirmar/rejeitar) as detecções da IA; T06 — localizar no histórico as inspeções do talhão (método M3, a partir da detecção); T05 — emitir parecer técnico sobre o foco (passos 1 a 5).<br>
-**Objetivos principais:** levar o alerta direto ao foco, reunir foto original, data, autor e talhão da detecção, dar acesso ao histórico do talhão, separar "sinal da IA" de "confirmação humana", permitir pedir nova foto ao campo e registrar um parecer vinculado aos pontos avaliados e repassado ao gestor.
+**Funcionalidade:** examinar detecções e emitir parecer técnico.  
+**Persona:** P03 — Marcelo Fidalgo, agrônomo consultor.  
+**Cenários/tarefas:** C03; T07 (validar detecções), T06 (consultar histórico) e T05 (delimitar a área e emitir parecer).  
+**Objetivo:** distinguir a indicação da IA da avaliação humana, conferir evidências e histórico e registrar a orientação técnica.
 
 ### Funcionalidade — Pedro
 
-**Funcionalidade:** revisão do resultado do ciclo, avaliação da evolução dos talhões e registro da decisão de manejo.<br> 
-**Persona:** P01 — Jaime Carteiro, dono da fazenda.<br> 
-**Cenários/tarefas cobertos:** C01; T09 — revisar o resultado do ciclo e decidir se confia nele; T08 — avaliar a evolução de um talhão entre ciclos; T04 — planejar o manejo do ciclo (passos 1, 2, 3, 4 e 5).<br> 
-**Objetivos principais:** conferir a cobertura do ciclo antes dos resultados, mostrar onde estão os focos e como evoluem, dar ao gestor evidência que ele consiga avaliar sem conhecimento técnico, permitir pedir parecer ou reinspeção e registrar a decisão do ciclo.
+**Funcionalidade:** acompanhar talhões e decidir o manejo da fazenda.  
+**Persona:** P01 — Jaime Carteiro, dono da fazenda.  
+**Cenários/tarefas:** C01; T09 (revisar resultados), T08 (avaliar evolução) e T04 (planejar manejo).  
+**Objetivo:** localizar talhões que exigem atenção, consultar informações resumidas e registrar ou encaminhar decisões.
 
-## 1.1 Possíveis famílias de interface
+## 1.1 Famílias de interface escolhidas
 
-**Lucas:**
+- **Lucas:** captura de imagem, acompanhamento da análise e resultado da inspeção.
+- **Guilherme:** pedidos de parecer, mapa de detecções, detalhe, histórico e registro do parecer.
+- **Pedro:** mapa com filtros e seleção de talhão, histórico e relatório para apoiar decisões.
 
-- **Entrada de dados:** captura da foto com orientação de foco.
-- **Acompanhamento de execução:** análise da imagem e cancelamento.
-- **Resultados:** sinal suspeito, ausência de sinal na foto ou resultado inconclusivo.
-- **Acompanhamento da rota e envio:** pontos registrados, pendências e situação do repasse.
-
-**Guilherme:**
-
-- **Alertas/ocorrências:** pedidos de parecer por propriedade atendida, com a situação de cada pedido (pendente ou concluído).
-- **Resultados:** pontos com detecção do talhão em mapa, com a situação de cada um (pendente ou analisado).
-- **Explicabilidade/detalhamento:** foto original, data, hora, quem fotografou, talhão e avaliação da IA.
-- **Histórico/comparação:** detecções anteriores do talhão, com data e quantidade de ácaros.
-- **Encaminhamento e registro:** veredito por detecção (aprovar, rejeitar ou pedir nova foto), área de aplicação, parecer com produto, dose e período, e repasse ao gestor.
-
-**Pedro:**
-
-- **Visão geral:** resumo do ciclo e cobertura da propriedade por talhão.
-- **Alertas/ocorrências:** aviso de ciclo concluído.
-- **Resultados:** talhões com focos, em mapa e em lista ordenada.
-- **Explicabilidade/detalhamento:** fotos, grau de confiança e local de cada talhão.
-- **Histórico/comparação:** evolução do talhão entre ciclos e última aplicação.
-- **Encaminhamento e registro:** pedido de parecer ou reinspeção, decisão do ciclo e repasse.
+Não foram incluídas telas de login, administração ou CRUD apenas para aumentar o número de telas.
 
 ## 2. Fluxos escolhidos
 
 | Responsável | Fluxo | Tarefa/objetivo | Por que foi priorizado |
 |---|---|---|---|
-| Lucas | PF01 | Fotografar o fruto, interpretar e registrar o resultado — T02. | Tarefa frequente, sujeita a erros de captura e interpretação. |
-| Lucas | PF02 | Conferir a rota e o envio dos achados — T01/T03. | Reduz dúvidas sobre pontos esquecidos e registros não enviados. |
-| Guilherme | PF03 | Validar as detecções do foco, consultando o histórico do ponto — T07 e T06 (M3). | Só focos confirmados por humano devem entrar no dimensionamento da área [H07]; hoje Marcelo recebe fotos soltas, sem local nem histórico (C03). |
-| Guilherme | PF04 | Dimensionar a área, registrar o parecer e repassá-lo ao gestor — T05 (passos 3, 4 e 5). | O erro relatado no C03 (aplicar em área maior que a afetada) ocorre na delimitação da área, e o parecer hoje se perde em mensagens soltas. |
-| Pedro | PF05 | Revisar o resultado do ciclo, conferir a cobertura e decidir se confia — T09 (e T04, passos 1 e 2.3). | Sem a cobertura, o gestor não diferencia "sem praga" de "ninguém passou" [H09], e ele não valida a praga sozinho. |
-| Pedro | PF06 | Avaliar a evolução de um talhão e registrar a decisão do ciclo — T08 e T04 (passos 2.2, 3, 4 e 5). | Decidir onde aplicar é a atividade mais crítica do gestor [H06] e depende de saber se a praga avança e se a última aplicação funcionou. |
+| Lucas | PF01 | Fotografar um fruto, acompanhar a análise e interpretar o resultado (T02). | A captura e a leitura do resultado afetam diretamente a qualidade do registro. |
+| Lucas | PF02 | Retomar achados da inspeção e conferir a rota (T01/T03). | O trabalhador precisa localizar o que já foi registrado. |
+| Guilherme | PF03 | Abrir uma detecção, examinar foto e histórico e validar ou pedir nova foto (T07/T06). | Evita tratar uma indicação automática como diagnóstico confirmado. |
+| Guilherme | PF04 | Delimitar a área e emitir o parecer (T05). | Conecta a evidência à orientação enviada ao gestor. |
+| Pedro | PF05 | Localizar talhões com ocorrências e examinar os resultados (T09). | Ajuda o gestor a decidir o que merece inspeção ou ação. |
+| Pedro | PF06 | Consultar histórico e relatório antes de definir o manejo (T08/T04). | A decisão depende do contexto e da evolução, não de um ponto isolado. |
 
 ## 3. Telas e estados
 
-**Distinção planejamento × protótipo produzido.**
+Os códigos abaixo identificam estados da conversa. **Papel** indica o que foi fotografado no desenho inicial; **app revisado** indica a captura do aplicativo após a discussão. Estados previstos, mas não visíveis nas fotos, são explicitados como tal e não são apresentados como desenhos concluídos.
 
-| Fluxo | Estados planejados | Estados materializados em imagem | Situação |
-|---|---|---|---|
-| Lucas (PF01/PF02) | P01–P07 | `Tela1-Tela2.jpeg` mostra só captura e apresentação de resultado (aprox. P02 e P04); **P01, P03, P05, P06 e P07 não existem como desenho**; a correspondência entre imagem e ID não está marcada | **Parcial.** Falta desenhar rota do dia, análise, confirmação do registro, pontos registrados/pendentes e situação do envio; e rotular cada desenho com seu ID |
-| Guilherme (PF03/PF04) | A01, A02, A03, A05, A06, A07 | `prototipo_fluxo_2-1.jpeg` (A01, A02, A03) e `prototipo_fluxo_2-2.jpeg` (A06, A07, A05) | **Materializado**, ainda sem simulação |
-| Pedro (PF05/PF06) | G01–G08 | `Tela3.jpeg` mostra só parte (resultados, status, autor/horário, pedidos); **o fluxo completo não é simulável** | **Parcial.** Faltam resumo do ciclo, cobertura/talhões não inspecionados, detalhe do talhão com evidências, evolução, registro de posição e decisão, e estado do repasse |
+### Funcionalidade — Lucas Cabral
 
-**Regra para concluir:** toda tela descrita deve existir em papel, com o mesmo ID escrito no desenho; os caminhos e os estados de erro/retorno descritos precisam poder ser percorridos durante o walkthrough, sem depender do texto do relatório. As imagens abaixo devem ser rotuladas (P01…, G01…) nos próprios desenhos.
-
-### Funcionalidade — Lucas
-
-| Tela | Conteúdo previsto | Controles e mudanças de estado |
+| Estado | Conteúdo e controles | Evidência |
 |---|---|---|
-| P01 | Rota do dia e pontos pendentes. | Iniciar inspeção → P02; revisar rota → P06. |
-| P02 | Câmera com orientação de foco. | Fotografar → P03; ajustar foto inadequada; voltar → P01. |
-| P03 | Análise da imagem sem internet. | Exibir resultado → P04; cancelar → P02. |
-| P04 | Resultado suspeito, sem sinal na foto ou inconclusivo. | Salvar → P05; refazer foto → P02. |
-| P05 | Confirmação do registro salvo e identificação do local. | Próximo fruto/árvore → P02; revisar rota → P06. |
-| P06 | Pontos registrados e pendentes da rota. | Retomar inspeção → P02; encerrar indicando pendências → P07. |
-| P07 | Situação do envio ao gestor. | Enviar quando houver conexão; tentar novamente após falha; voltar → P06. |
+| P01 | Início/rota de inspeção → abrir câmera. | Planejado no fluxo; não aparece na fotografia do papel. |
+| P02 | Câmera: enquadrar o fruto; capturar → P03; voltar → inspeção. | Desenho em `Tela1-Tela2.jpeg`; câmera implementada em `Camera.jpeg`. |
+| P03 | Análise: informar andamento e aguardar resultado → P04; voltar/cancelar → P02, se disponível. | A captura `Camera.jpeg` mostra o feedback de processamento; o estado completo não foi fotografado em papel. |
+| P04 | Resultado da inspeção: examinar achado e dados associados; refazer captura → P02. | Desenho em `Tela1-Tela2.jpeg`; demais retornos dependem da implementação. |
+| P05–P07 | Confirmação do registro, revisão da rota e situação do envio. | Caminhos previstos; não há fotografias desses estados em papel nesta entrega. |
 
-**Caminho principal:** P01 → P02 → P03 → P04 → P05 → P06 → P07.
+**Caminho principal representado:** captura P02 → análise P03 → resultado P04. **Retorno relevante:** refazer uma foto inadequada. Não inferir que “sem sinal nesta foto” signifique ausência de pragas em toda a árvore ou no talhão. A captura do app exibe orientação para aproximar a câmera e um indicador de andamento da busca.
 
-**Erros e retornos:** foto inadequada exige ajuste; resultado inconclusivo permite refazer; falta de GPS permite identificar o local manualmente; falha no envio mantém os registros salvos para nova tentativa.
+![Protótipo em papel — captura e resultado de Lucas](../assets/06_prototipos/Tela1-Tela2.jpeg)
 
-**Informações importantes:** distinguir “salvo no celular” de “enviado”. Ausência de sinal na foto não significa que toda a árvore esteja livre da praga.
-![Protótipo](../assets/06_prototipos/Tela1-Tela2.jpeg)
+![Revisão no aplicativo — câmera e feedback de análise](../assets/06_prototipos/Camera.jpeg)
 
 ### Funcionalidade — Guilherme
 
-| Tela/estado | Conteúdo previsto | Controles e mudanças de estado |
+| Estado | Conteúdo e controles | Evidência |
 |---|---|---|
-| A01 | Pedidos de parecer (vindos de G04) por propriedade, com a situação de cada pedido ("pendente" ou "concluído"). | Abrir pedido → A02 (direto no talhão do foco). |
-| A02 | Detecções no talhão: mapa do talhão com os pontos com detecção e legenda da situação de cada ponto (○ pendente, ● analisado). | Selecionar ponto → A03; emitir parecer → A06; histórico → A05. |
-| A03 | Detecção do ponto: foto original, data e hora, quem fotografou, talhão e grau de assertividade da IA. | Aprovar ou rejeitar → A02 (ponto passa a "analisado"); pedir nova foto → A02 (pedido enviado à rota do trabalhador, sem tela própria; o ponto continua "pendente" até a nova foto ser avaliada); voltar → A02. |
-| A05 | Histórico de detecções do talhão em lista, com data e quantidade de ácaros encontrados. | Voltar → A02. |
-| A06 | Área de aplicação: mapa do talhão com os pontos analisados; Marcelo toca no mapa para desenhar a área. | Continuar → A07; voltar → A02. |
-| A07 | Parecer: texto técnico e campos livres de produto, dose e período (o sistema só registra). | Enviar → A01 (pedido passa a "concluído"); voltar → A06. |
+| A01 | Lista de pedidos de parecer por fazenda; abrir pedido → A02. | `prototipo_fluxo_2-1.jpeg`. |
+| A02 | Detecções no talhão e situação dos pontos; escolher ponto → A03; histórico → A05; área → A06. | `prototipo_fluxo_2-1.jpeg`. |
+| A03 | Foto e contexto da detecção; aprovar, rejeitar ou pedir nova foto → A02. | `prototipo_fluxo_2-1.jpeg`. A porcentagem desenhada é uma indicação da IA, não confirmação agronômica. |
+| A05 | Histórico de detecções; retornar → A02. | `prototipo_fluxo_2-2.jpeg`; captura revisada em `Historico.jpeg`. |
+| A06 | Área de aplicação desenhada sobre o talhão; continuar → A07; voltar → A02. | `prototipo_fluxo_2-2.jpeg`. |
+| A07 | Parecer com orientação, produto, dose e período; enviar → A01. | `prototipo_fluxo_2-2.jpeg`. |
 
-**Caminho principal:** A01 → A02 → A03 → A02 (repete por ponto) → A06 → A07 → A01. O desvio A02 → A05 → A02 cobre a consulta ao histórico (T06), e o pedido de nova foto em A03 cobre a terceira saída do veredito no CTT T07.<br>
-**Erros e retornos:** foto insuficiente leva ao pedido de nova foto em vez de forçar aprovar ou rejeitar; todas as telas permitem voltar à anterior sem perder o que já foi preenchido. O protótipo não representa falha no envio do parecer, já que a tela A08 foi retirada.
+**Caminho principal:** A01 → A02 → A03 → A02 → A06 → A07 → A01. **Alternativas:** A02 → A05 → A02 para consultar o histórico; em A03, pedir nova foto quando a evidência for insuficiente. O botão de pedir nova foto foi incorporado ao detalhe, e a situação do parecer retorna à lista de pedidos, sem telas separadas para essas ações.
 
-**Alterações em relação ao planejamento:** as telas A04 (pedido de nova foto) e A08 (situação do parecer) foram retiradas no desenho, por serem consideradas redundantes. O pedido de nova foto virou um botão direto em A03, ao lado de aprovar e rejeitar, sem formulário de motivo e prazo. A situação do parecer passa a aparecer na própria lista de pedidos (A01), que mostra o pedido como "concluído" após o envio. Os demais identificadores foram mantidos para não quebrar as referências nas outras entregas.
+![Protótipo em papel — pedidos, talhão e detecção](../assets/06_prototipos/prototipo_fluxo_2-1.jpeg)
 
-**Informações importantes:** distinguir "detectado pela IA" de "validado por humano" em todas as telas.
+![Protótipo em papel — área, parecer e histórico](../assets/06_prototipos/prototipo_fluxo_2-2.jpeg)
 
-> **Decisões de desenho ainda não testadas:** o percentual de "assertividade" da IA (ex.: "97%") em A03; o uso de mapa; os símbolos ○/●; os estados "pendente/analisado"; os campos de produto, dose e período; os rótulos de aprovar/rejeitar/pedir nova foto.
->
-> **Dependência de hipótese:** este fluxo parte da hipótese (P03 é proto-persona; H04, H07, H21) de que o agrônomo revisa detecções individualmente, aprova/rejeita, pede nova foto, consulta histórico, delimita área, registra produto/dose/período e envia parecer. O walkthrough com um colega testa **compreensibilidade do protótipo**, **não valida** que essa seja a atividade real de um agrônomo; isso depende da Entrega 7.
-
-![Protótipo — A01, A02 e A03](../assets/06_prototipos/prototipo_fluxo_2-1.jpeg)
-
-![Protótipo — A06, A07 e A05](../assets/06_prototipos/prototipo_fluxo_2-2.jpeg)
+![Revisão no aplicativo — histórico e filtro temporal](../assets/06_prototipos/Historico.jpeg)
 
 ### Funcionalidade — Pedro
 
-| Tela/estado | Conteúdo previsto | Controles e mudanças de estado |
+| Estado | Conteúdo e controles | Evidência |
 |---|---|---|
-| G01 | Resumo do ciclo concluído: data, quantos talhões foram inspecionados e quantos têm focos. | Ver cobertura → G02. |
-| G02 | Cobertura do ciclo: talhões inspecionados e não inspecionados, bem diferenciados de "sem focos". | Pedir nova inspeção dos talhões não cobertos (confirma e permanece em G02); continuar → G03. |
-| G03 | Talhões com focos, em mapa e em lista ordenada por gravidade e tendência. | Selecionar talhão → G04; encerrar revisão → G07; voltar → G02. |
-| G04 | Detalhe do talhão no ciclo: fotos, grau de confiança em linguagem simples (sem números técnicos), local e aviso se a cobertura do talhão foi incompleta. | Aceitar como confiável, marcar para parecer do agrônomo ou pedir reinspeção → G05; ver evolução → G06; voltar → G03. |
-| G05 | Confirmação da posição registrada para o talhão (confiável, parecer pedido ou reinspeção pedida). | Próximo talhão → G03; encerrar revisão → G07. |
-| G06 | Evolução do talhão por ciclo (avançando, estável ou recuando), com a última aplicação marcada. Avisa quando algum ciclo comparado teve cobertura incompleta. | Ver cobertura dos ciclos comparados → G02; voltar → G04. |
-| G07 | Decisão do ciclo: talhões com a posição registrada e escolha de onde e quando aplicar, com urgência. | Registrar decisão → G08; voltar → G03. |
-| G08 | Confirmação da decisão registrada e do repasse a quem aplica o produto. | Repassar; tentar novamente após falha. |
+| G01 | Resumo da situação para decidir o que examinar; abrir mapa/relatório. | Parte do desenho em `Tela3.jpeg`; visão revisada em `Relatorio.jpeg`. |
+| G02 | Conferir cobertura de inspeção; distinguir não inspecionado de sem ocorrência. | Planejado; não há fotografia própria do estado em papel. |
+| G03 | Mapa de talhões: filtrar, escolher talhão e examinar ocorrências → G04. | Desenho parcial em `Tela3.jpeg`; mapa revisado em `Mapa.jpeg`. |
+| G04 | Detalhe de ocorrência com contexto e encaminhamento para parecer/reinspeção. | Parte visível em `Tela3.jpeg`. |
+| G05–G08 | Confirmação de posição, evolução, decisão e repasse. | Caminhos previstos; não há fotografias desses estados em papel nesta entrega. |
 
-**Caminho principal:** G01 → G02 → G03 → G04 → G05 → G03 (próximo talhão) → G07 → G08. O desvio G04 → G06 → G04 corresponde à avaliação da evolução (T08).<br>
-**Erros e retornos:** talhão sem inspeção permite pedir nova inspeção em G02 sem sair da tela; cobertura incompleta aparece em G04 e G06 e impede que a comparação pareça conclusiva; a dúvida do gestor leva a "parecer do agrônomo" ou "reinspeção", e não bloqueia o fluxo; encerrar a revisão a qualquer momento mantém as posições já registradas; falha no repasse mantém a decisão salva para nova tentativa.
+**Caminho principal previsto:** G01 → G02 → G03 → G04 → decisão. **Retornos relevantes:** voltar ao mapa, alterar filtros, pedir avaliação ou reinspeção quando os dados não bastarem. A captura revisada do mapa exibe os controles de **Filtros** e **Desenhar**; ela, isoladamente, não comprova a execução de uma pulverização. A tela de relatório resume detecções e reinspeções. Segundo o registro da equipe, as métricas de irrigação também estão disponíveis **na extração do relatório**, embora não estejam visíveis na captura da tela de resumo.
 
-![Protótipo](../assets/06_prototipos/Tela3.jpeg)
+![Protótipo em papel — resultado e encaminhamento do gestor](../assets/06_prototipos/Tela3.jpeg)
 
-## 4. Simulação / walkthrough
+![Revisão no aplicativo — mapa operacional com filtros](../assets/06_prototipos/Mapa.jpeg)
 
-A simulação deverá envolver uma pessoa que não participou da elaboração das telas. Um colega pode participar desta iteração formativa, sem substituir os participantes finais da Entrega 14.
+![Revisão no aplicativo — resumo do relatório](../assets/06_prototipos/Relatorio.jpeg)
 
-> **Situação: plano de walkthrough, não walkthrough executado.** As tabelas abaixo registram **o que será observado**. Nenhum dado de simulação existe ainda.
+## 4. Simulação / walkthrough formativo
 
-### Protocolo de condução (vale para os três fluxos)
+**Participação relatada pela equipe:** Vitor, da fazenda parceira, examinou o aplicativo e comentou os fluxos do mapa e do relatório do perfil administrativo. Guilherme examinou as interfaces preparadas por Lucas e Pedro; Lucas e Pedro examinaram a interface de Guilherme em outro dia. As datas individuais, o roteiro exato, a sequência de ações e eventuais falas literais não foram preservados; por isso, o registro abaixo contém apenas os comentários informados, sem atribuir falas ou tempos inventados. O contato com Vitor ocorreu **no aplicativo após os desenhos iniciais**; não equivale a afirmar que ele executou um walkthrough formal de todas as telas em papel.
 
-- **Apresentar objetivos, não instruções de clique.** Errado: "Aqui você deve clicar para ver o histórico." Certo: "Você quer verificar se já ocorreram detecções anteriores neste talhão. O que faria?"
-- **Não explicar nem defender a tela** antes de o participante agir; observar o participante tentando compreender.
-- **Registrar evidência observável**, nunca opinião genérica ("gostou", "achou intuitivo"). Exemplos válidos: tentou tocar em outro elemento; demorou para achar o histórico; interpretou "pendente" como envio pendente e não análise pendente; não percebeu que podia voltar; confundiu "sem foco" com "não inspecionado"; disse que 97% significa diagnóstico confirmado; procurou confirmação de envio e não achou.
-- **Fotografar a versão testada** antes de qualquer alteração.
-- Se nenhum problema for encontrado, analisar criticamente: é incomum que fluxos complexos sejam compreendidos sem dúvida em baixa fidelidade.
-
-### Modelo de registro (um por simulação realizada)
-
-| Campo | Registro |
-|---|---|
-| Condutor / Participante / Data | (preencher) |
-| Tarefa solicitada (como objetivo) | |
-| O que tentou fazer | |
-| Onde hesitou | |
-| Onde interpretou corretamente | |
-| Onde pediu ajuda | |
-| Erros ou dúvidas | |
-| Evidência observada | |
-| Implicação para o protótipo | |
-
-### Questões específicas a observar (não presumir a resposta)
-
-- **Percentual de assertividade da IA (A03, G04):** ajuda, confunde, induz confiança excessiva, é entendido como probabilidade, substitui a análise da imagem? Candidato a comparar versões (mostrar, ocultar, recolher); mostrar não é automaticamente melhor.
-- **P02:** distingue "salvo localmente" de "enviado"? interpreta "sem sinal na foto" como "árvore sem praga"?
-- **P03:** distingue resultado da IA de validação humana? entende a consequência de aprovar, rejeitar e pedir nova foto? encontra o histórico e entende quando o parecer foi entregue?
-- **P01:** distingue "não inspecionado" de "sem foco"? avalia o ciclo sem conhecimento agronômico? encontra histórico/comparação sem ajuda? entende "pedido de nova foto" e "reinspeção" como coisas distintas?
-
-### Funcionalidade — Lucas
-
-**Situação:** pendente, após desenhar as telas.<br>
-**Condutor:** Lucas.<br>
-**Participante:** a definir (pessoa que não participou da elaboração das telas).<br>
-**Data da simulação:** a definir.
-
-**Roteiro:** pedir que a pessoa fotografe um fruto, interprete o resultado, salve sem internet, confira a rota e verifique o envio quando a conexão retornar.
-
-| Observação | Tela/ação | Evidência | Consequência para o design |
+| Observação relatada | Tela/ação | Evidência disponível | Consequência para o design |
 |---|---|---|---|
-| A verificar: compreensão da captura. | P02 — fotografar ou ajustar a imagem. | Registrar dúvidas e pedidos de ajuda. | Revisar instruções conforme observado. |
-| A verificar: interpretação do resultado. | P04 — salvar ou refazer. | Registrar como a pessoa explica o resultado. | Ajustar mensagens que causarem confusão. |
-| A verificar: compreensão das pendências. | P06/P07 — conferir rota e envio. | Registrar se distingue pendente, salvo e enviado. | Revisar legendas e mensagens de estado. |
+| Vitor recomendou que os relatórios do administrador incluíssem métricas da fazenda, como pontos irrigados e momento de irrigar. | Relatórios do perfil administrativo. | Relato da equipe após apresentação do app a Vitor. A captura `Relatorio.jpeg` mostra o resumo; a equipe informa que os indicadores de irrigação aparecem na **extração**, não nessa tela. | Manter o resumo direto e disponibilizar as métricas detalhadas no relatório extraído. Conferir essa parte com participantes finais na Entrega 14. |
+| Vitor recomendou um mapa com informação mais enxuta, filtros e ações objetivas sobre o talhão, inclusive marcar talhão para pulverização. | Mapa e seleção de talhões. | Relato da equipe; `Mapa.jpeg` mostra **Filtros**, polígonos e **Desenhar**. A imagem não demonstra, sozinha, o registro da pulverização. | Priorizar leitura do talhão, filtro e marcação; verificar em teste posterior se a ação de pulverização é encontrada e entendida. |
+| Houve avaliação cruzada dos desenhos/interfaces pelos integrantes em dias diferentes. | Lucas e Pedro avaliados por Guilherme; Guilherme avaliado por Lucas e Pedro. | Relato da equipe e fotografias dos desenhos. Não há notas individuais de hesitação, erro ou fala. | Registrar a revisão entre integrantes como feedback interno; não tratá-la como validação externa das personas. |
 
-As observações reais serão preenchidas após a simulação.
+**Limite da evidência:** estes registros documentam a iteração formativa informada pela equipe. Não permitem medir sucesso, tempo ou dificuldades por tarefa nem comprovar testes de todos os estados previstos. A avaliação com usuários representativos e o roteiro de observação devem ser aprofundados na Entrega 14.
 
-### Funcionalidade — Guilherme
+## 5. Alterações após o feedback
 
-**Situação:** telas desenhadas; **simulação não realizada**.<br>
-**Condutor:** Guilherme.<br>
-**Participante:** a definir (pessoa que não participou da elaboração das telas).<br>
-**Data da simulação:** a definir.
-
-**Roteiro:** pedir que a pessoa, no papel de agrônomo consultor, abra o pedido de parecer recebido, abra um ponto do talhão, decida entre aprovar, rejeitar ou pedir nova foto e explique por quê, consulte o histórico do talhão, delimite a área de aplicação, preencha o parecer e envie ao gestor, e diga em seguida se o parecer foi entregue.
-
-| Observação | Tela/ação | Evidência | Consequência para o design |
+| Antes | Problema apontado | Depois | Justificativa e limite da evidência |
 |---|---|---|---|
-| A verificar: chegada direta ao foco. | A01/A02 — abrir o pedido e encontrar os pontos no mapa. | Registrar se a pessoa reconhece os pontos com detecção no mapa. | Revisar o agrupamento dos pedidos e as marcas no mapa. |
-| A verificar: influência da assertividade da IA. | A03 — aprovar, rejeitar ou pedir nova foto. | Registrar se a pessoa decide pela foto ou apenas pelo percentual da IA. | Decidir se a avaliação da IA fica visível desde o início ou recolhida. |
-| A verificar: uso do histórico. | A02/A05 — consultar o histórico do talhão. | Registrar se a pessoa encontra o histórico e o relaciona ao ponto avaliado. | Ajustar o acesso ao histórico (a partir do talhão ou do ponto). |
-| A verificar: situação do parecer após o envio. | A07/A01 — enviar o parecer. | Registrar se a pessoa entende que "concluído" em A01 significa que o parecer chegou ao gestor. | Avaliar se é preciso voltar a mostrar a situação do envio separadamente. |
+| Desenhos iniciais e discussão do mapa com muitos detalhes possíveis por talhão. | Vitor pediu informações mais enxutas, filtro e foco em marcar/agir sobre o talhão. | Revisão diretamente no app: `Mapa.jpeg` mostra mapa operacional, **Filtros** e **Desenhar**. | A captura comprova a presença dos controles e a organização geral. O fluxo completo de marcação/pulverização precisa ser verificado em uso. |
+| Discussão inicial de relatórios sem as métricas operacionais citadas por Vitor. | Necessidade de pontos irrigados e indicação de quando irrigar. | `Relatorio.jpeg` mostra o resumo para decisão; segundo a equipe, as métricas de irrigação constam **na extração do relatório**. | Mantém a visualização resumida e concentra detalhes na exportação. A captura disponível não comprova o conteúdo exportado; incluir amostra da extração se o docente exigir evidência visual. |
+| Consulta às detecções do talhão apresentada no desenho em papel. | Necessidade de recuperar ocorrências em contexto temporal. | `Historico.jpeg` registra a tela implementada, com período selecionável e lista de registros. | A revisão torna a consulta visível; a efetividade do filtro ainda depende de teste com usuário. |
+| Câmera e resultado esboçados em papel. | Necessidade de orientar a captura e comunicar que a análise está em andamento. | `Camera.jpeg` mostra orientação para aproximar a câmera e indicador de busca. | Dá feedback durante a operação; a compreensão do resultado ainda deverá ser observada. |
 
-### Funcionalidade — Pedro
-
-**Situação:** pendente, após desenhar as telas.<br>
-**Condutor:** Pedro.<br>
-**Participante:** a definir (pessoa que não participou da elaboração das telas).<br>
-**Data da simulação:** a definir.
-
-**Roteiro:** pedir que a pessoa, no papel de dono da fazenda, abra o resumo do ciclo, diga quais talhões não foram inspecionados, escolha um talhão com foco, explique se confia no resultado e por quê, compare com o ciclo anterior, registre a posição do talhão e a decisão do ciclo e repasse a decisão.
-
-| Observação | Tela/ação | Evidência | Consequência para o design |
-|---|---|---|---|
-| A verificar: diferença entre "sem focos" e "não inspecionado". | G01/G02 — conferir a cobertura. | Registrar como a pessoa descreve um talhão sem inspeção. | Revisar rótulos, cores e textos da cobertura. |
-| A verificar: compreensão da confiança do resultado. | G04 — decidir se confia. | Registrar o que a pessoa usa para decidir (fotos, grau de confiança, local). | Ajustar a forma de mostrar evidência e confiança. |
-| A verificar: leitura da evolução entre ciclos. | G06 — avaliar tendência e última aplicação. | Registrar se a pessoa conclui "avançando", "estável" ou "recuando" e se nota a cobertura incompleta. | Revisar a forma de mostrar a comparação e o aviso de cobertura. |
-| A verificar: diferença entre registrada e repassada. | G08 — registrar e repassar. | Registrar se a pessoa sabe se a decisão chegou a quem aplica. | Revisar legendas e mensagens de estado. |
-
-## 5. Alterações após a simulação
-
-> **Pendente para os três fluxos.** Este item só pode ser preenchido **depois** de simulações reais e deve registrar apenas dificuldades **efetivamente observadas** (antes → problema observado → depois → justificativa baseada na observação), não problemas que "provavelmente" aconteceriam. As alterações já feitas por decisão da própria equipe no desenho de Guilherme (retirada de A04 e A08, descritas na seção 3) são **decisões de projeto, não resultado de simulação**, e por isso não entram aqui.
-
-### Funcionalidade — Lucas
-
-**Pendente:** preencher após o teste, relacionando cada alteração a uma dificuldade realmente observada.
-
-| Antes | Problema | Depois | Justificativa |
-|---|---|---|---|
-| {{Elemento da versão testada}} | {{Dificuldade observada}} | {{Alteração realizada}} | {{Evidência que motivou a revisão}} |
-
-### Funcionalidade — Guilherme
-
-| Antes | Problema | Depois | Justificativa |
-|---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
-
-### Funcionalidade — Pedro
-
-| Antes | Problema | Depois | Justificativa |
-|---|---|---|---|
-| {{...}} | {{...}} | {{...}} | {{...}} |
+As decisões acima resultam dos comentários relatados e da revisão que a equipe implementou **no código do aplicativo**, não de uma segunda versão desenhada em papel. Não há registro específico de mudanças decorrentes exclusivamente da avaliação cruzada dos colegas.
 
 ## Checklist
 
-**Os três últimos itens permanecem desmarcados de propósito: refletem o estado real (walkthrough não executado, revisão não realizada, protótipo não consolidado). A entrega não deve ser considerada concluída enquanto isso não mudar.**
+- [x] Os desenhos e a revisão no app cobrem partes relevantes das tarefas da Entrega 5.
+- [x] Cada tela/estado fotografado está associado a uma tarefa, decisão ou informação necessária.
+- [x] Não foram criados login, CRUD ou dashboard apenas para parecer “completo”.
+- [x] Estados fotografados estão identificados na documentação, com caminhos e retornos descritos; os estados apenas planejados estão explicitamente diferenciados.
+- [x] Há registro de uma avaliação formativa com Vitor e de avaliação cruzada entre integrantes, com a limitação da ausência de protocolo detalhado declarada.
+- [x] O feedback relatado gerou decisões de revisão, documentadas com as quatro capturas do aplicativo.
+- [x] Os desenhos iniciais permanecem em baixa fidelidade e suas limitações não são mascaradas pelas capturas da implementação.
 
-- [x] O escopo planejado do protótipo cobre tarefas relevantes da Entrega 5.
-- [x] Cada tela/estado planejado pode ser justificado por uma tarefa, decisão ou informação necessária.
-- [x] O projeto não criou dashboard/CRUD/login apenas para parecer “completo”.
-- [x] Telas/estados estão numerados e têm caminhos de navegação indicados na documentação.
-- [x] Placeholder `prototipo_fluxo_01.svg` removido de `assets/06_prototipos/`.
-- [x] Rastreabilidade atualizada (`RASTREABILIDADE.md`, seção 6).
-- [ ] Há pelo menos uma simulação/walkthrough documentado.
-- [ ] Críticas não foram apenas listadas: geraram decisão de revisão.
-- [ ] O protótipo em papel foi elaborado e permanece em baixa fidelidade; detalhes visuais não mascaram problemas de fluxo.
+**Limitações remanescentes:** não há fotografia em papel de todos os estados inicialmente previstos, protocolo de observação individual ou captura do relatório exportado. Esses materiais não são presumidos como existentes; se forem exigidos para avaliação da disciplina, deverão ser anexados como evidência adicional.
