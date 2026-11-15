@@ -1,7 +1,7 @@
 # Entrega 10 — MoLIC
 
 **Data:** 14/11/2026<br>
-**Status:** 🟨 em andamento — conversas M01, M02 e M03 especificadas e diagramas inseridos; consolidação feita; ajustes AJ1–AJ3 em M02 e M03 e itens de checklist pendentes.<br>
+**Status:** 🟨 em andamento — conversas M01, M02 e M03 especificadas e diagramas inseridos; consolidação feita; ajustes indicados em M02 e M03 e itens de checklist de M02 pendentes.<br>
 **Responsabilidade:** 1 solução completa por integrante.
 
 ## Objetivo da atividade
@@ -12,7 +12,7 @@ Modelar a interação como conversa entre usuário e preposto do designer, inclu
 
 **Autor(a):** Guilherme Morais Escudeiro — 24.123.005-1<br>
 **Cenário de interação de origem:** CI03<br>
-**Objetivo(s):** O12 — emitir parecer técnico sobre um foco de infestação; O13 — escolher o foco a avaliar; O14 — validar as detecções do talhão; O15 — consultar o histórico de detecções; O16 — pedir nova foto de um ponto ao campo; O17 — delimitar a área de aplicação; O18 — registrar e repassar o parecer ao gestor; O19 — acompanhar a situação dos pedidos de parecer.<br>
+**Objetivo(s):** O12 a O19<br>
 **Tarefa(s) relacionada(s):** T05, T06 (método M3) e T07<br>
 **Signos relevantes:** pedido de parecer, propriedade, talhão, solicitante, pontos pendentes, situação do pedido, ponto, situação da validação, detecção anterior, foto original, data e hora da captura, árvore, local do achado, detecções anteriores do ponto, detectado pela IA, avaliação da IA, veredito, validado por, observação técnica, pedido de nova foto, histórico de detecções, período, local do filtro, área de aplicação, produto, dose, período de aplicação, parecer técnico, pontos vinculados, destinatário do parecer
 
@@ -38,27 +38,29 @@ Se a coleta da Entrega 7 refutar H04 ou Q7, mudam o destinatário em P5 e o cont
 
 #### Caminho principal
 
-1. **Ponto de abertura → S1 (Escolher o foco a avaliar):** o preposto apresenta os pedidos de parecer e as detecções novas das propriedades atendidas, com propriedade, talhão, solicitante, pontos pendentes e situação do pedido (pendente ou concluído).
+1. **Ponto de abertura → S1 (Escolher o foco a avaliar):** `u: abrir pedidos de parecer` abre a conversa sobre o objetivo (`gco: Emitir parecer técnico`); o preposto apresenta os pedidos de parecer e as detecções novas das propriedades atendidas, com propriedade, talhão, solicitante, pontos pendentes e situação do pedido (pendente ou concluído).
 2. **S1 → S2 (Examinar o talhão):** `u: abrir pedido` leva direto ao talhão do foco; o preposto mostra o mapa com a situação de cada ponto, a marca de detecção anterior e a contagem por situação.
 3. **S2 → S3 (Validar a detecção):** `u: selecionar ponto`; o preposto mostra a foto original, data e hora da captura, árvore, local do achado e as detecções anteriores do ponto. Marcelo pode ampliar a foto, abrir a avaliação da IA (recolhida até ele pedir) e anotar uma observação técnica, em qualquer ordem, na mesma cena (concorrência do CTT T07).
 4. **S3 → P1 → S2:** `u: confirmar | rejeitar`; o sistema registra o veredito e responde `d: ponto validado por você; próximo pendente em destaque`. Os passos 3 e 4 se repetem para cada ponto pendente.
 5. **S2 → S6 (Delimitar a área de aplicação):** `u: emitir parecer`; o preposto mostra apenas os pontos confirmados e avisa se ainda há pontos pendentes. Marcelo delimita a área e informa produto, dose e período.
 6. **S6 → P4 → S7 (Redigir o parecer):** `u: continuar`; o sistema registra a área e apresenta o parecer com área, pontos vinculados e destinatário do parecer, além do aviso de que o parecer não substitui o receituário agronômico. Marcelo escreve o parecer técnico.
-7. **S7 → P5 → ponto de encerramento:** `u: enviar`; o sistema envia o parecer ao gestor e responde `d: parecer enviado ao gestor; pedido concluído em S1`. O objetivo está concluído, e a situação do parecer passa a aparecer na própria lista de pedidos (S1), sem cena própria.
+7. **S7 → P5 → ponto de encerramento:** `u: enviar`; o sistema envia o parecer ao gestor e responde `d: parecer enviado ao gestor; pedido concluído em S1`. A conversa sobre o objetivo é fechada (`gcc: Emitir parecer técnico`); o objetivo está concluído, e a situação do parecer passa a aparecer na própria lista de pedidos (S1), sem cena própria.
 
 #### Alternativas e rupturas
 
 | Situação | Onde ocorre | Como o usuário percebe | Caminho de recuperação/saída |
 |---|---|---|---|
 | Foto insuficiente para decidir | S3 | `d:` foto original e detecções anteriores não bastam para o julgamento de Marcelo | `u: pedir nova foto` → P2 → S2 com `d: pedido enviado ao campo; ponto continua pendente`; o pedido entra na rota de P02, sem formulário de motivo ou prazo. O ponto só sai de "pendente" quando a nova foto for avaliada. |
-| Revisão interrompida antes de validar todos os pontos | S2 | `d: vereditos registrados mantidos` | `u: encerrar revisão` → ponto de encerramento; ao voltar, S1 mostra os pontos ainda pendentes do talhão. |
+| Falha ao enviar o pedido de nova foto | P2 | `[RA] d: falha ao enviar o pedido de nova foto` | Volta a S3 com a detecção aberta, para pedir de novo; o ponto continua pendente. |
+| Falha ao registrar o veredito | P1 | `[RA] d: falha ao registrar o veredito` | Volta a S3 com o veredito e a observação técnica mantidos, para confirmar ou rejeitar de novo. |
+| Revisão interrompida antes de validar todos os pontos | S2 | Mapa com a situação de cada ponto (os vereditos já foram registrados em P1) | `u: encerrar revisão` → ponto de encerramento, sem `gcc`, pois o objetivo não foi concluído; ao voltar, S1 mostra os pontos ainda pendentes do talhão. |
 | Marcelo quer trocar de foco no meio da revisão | Qualquer cena | Lista de pedidos sempre acessível | Acesso ubíquo `u: ir para pedidos de parecer` → S1. Os vereditos já registrados em P1 ficam mantidos, e o pedido aberto continua com seus pontos pendentes. O acesso existe porque Marcelo atende várias propriedades e pode precisar priorizar outro pedido. |
-| Necessidade de comparar com inspeções anteriores além das três exibidas | S3, S2 ou qualquer cena | Detecções anteriores resumidas em S3 | `u: ver histórico deste ponto [filtro: ponto]` (M3) ou `u: ver histórico do talhão [filtro: talhão]` (M1) → S5; acesso ubíquo `u: buscar no histórico [sem filtro]` (M2). `u: abrir detecção` volta a S3. |
-| Filtro do histórico sem resultados | S5 → P3 | `d: nenhuma detecção no período; sugere ampliar o período` | Volta a S5 com os filtros mantidos para Marcelo ampliar o período ou trocar o local. |
+| Necessidade de comparar com inspeções anteriores além das três exibidas | S3, S2 ou qualquer cena | Detecções anteriores resumidas em S3 | `u: ver histórico deste ponto (filtro: ponto)` (M3) ou `u: ver histórico do talhão (filtro: talhão)` (M1) → S5; acesso ubíquo `u: buscar no histórico (sem filtro)` (M2). `u: abrir detecção` volta a S3. |
+| Filtro do histórico sem resultados | S5 → P3 | `[RA] d: nenhuma detecção no período; sugere ampliar o período` | Volta a S5 com os filtros mantidos para Marcelo ampliar o período ou trocar o local. |
 | Pontos pendentes ao delimitar a área | S6 | `d:` aviso de pontos pendentes (não bloqueia) | `u: voltar e validar o restante` → S2, ou seguir com os pontos já confirmados. |
-| Área sem nenhum ponto confirmado ou produto, dose ou período vazios | S6 → P4 | `d: nenhum ponto confirmado na área ou produto/dose/período vazios` | Volta a S6 com o que já foi preenchido mantido, para corrigir a área ou completar os campos. |
+| Área sem nenhum ponto confirmado ou produto, dose ou período vazios | S6 → P4 | `[RA] d: nenhum ponto confirmado na área ou produto/dose/período vazios` | Volta a S6 com o que já foi preenchido mantido, para corrigir a área ou completar os campos. |
 | Marcelo quer rever a área antes de enviar | S7 | Resumo da área e dos pontos vinculados no parecer | `u: voltar` → S6, sem perder o texto do parecer. |
-| Falha no envio do parecer ao gestor | S7 → P5 | `d: falha no envio; parecer mantido para reenviar` | Volta a S7 com o texto mantido; `u: enviar` → P5 de novo. O pedido continua "pendente" em S1 até o envio dar certo. |
+| Falha no envio do parecer ao gestor | S7 → P5 | `[RA] d: falha no envio; parecer mantido para reenviar` | Volta a S7 com o texto mantido; `u: enviar` → P5 de novo. O pedido continua "pendente" em S1 até o envio dar certo. |
 
 ### Checklist específico de modelagem
 
@@ -71,7 +73,7 @@ Se a coleta da Entrega 7 refutar H04 ou Q7, mudam o destinatário em P5 e o cont
 - [x] Acessos ubíquos/atalhos só aparecem quando semanticamente justificáveis.
 - [x] O diagrama cobre caminhos alternativos importantes, e não apenas o “happy path”.
 - [x] Nomes de objetivos, tópicos e signos são coerentes com a Entrega 9.
-- [ ] O diagrama é legível em tamanho normal no GitHub.
+- [x] O diagrama é legível em tamanho normal no GitHub.
 - [x] O MoLIC representa a conversa usuário–sistema, não o fluxo interno do algoritmo.
 - [x] Processamento, filtros, administração, relatórios e históricos incluem retornos/rupturas quando relevantes.
 
@@ -236,53 +238,29 @@ As cenas representam **assuntos da conversa**. G01–G08, da Entrega 6, podem aj
 
 ## Consolidação da equipe
 
-A consolidação compara os três diagramas entre si e com as ligações L1–L7 e o vocabulário fixado na Entrega 9 (seção 4). Quando a Entrega 9 já resolvia a dúvida, a decisão a reaproveita; quando a consolidação exige mudar um diagrama, o ajuste fica registrado para o autor em “Ajustes pendentes nos diagramas”.
-
 ### Cobertura dos objetivos
 
 | Objetivo | MoLIC que cobre | Lacunas/duplicidades | Decisão |
 |---|---|---|---|
-| O01 — inspecionar pontos da rota | M02 (S1) | Os pedidos de reinspeção (M03) e de nova foto (M01) devem chegar à rota (L4, L5), mas o S1 de M02 não os mostra. | Os dois pedidos entram na rota como *ponto planejado* com a origem indicada (“reinspeção pedida pelo gestor” ou “nova foto pedida pelo agrônomo”). Ajuste AJ1 em M02. |
+| O01 — inspecionar pontos da rota | M02 (S1) | Os pedidos de reinspeção (M03) e de nova foto (M01) devem chegar à rota (L4, L5), mas o S1 de M02 não os mostra. | Os dois pedidos entram na rota como *ponto planejado* com a origem indicada (“reinspeção pedida pelo gestor” ou “nova foto pedida pelo agrônomo”). Ajuste no S1 de M02 (Lucas). |
 | O02 — obter foto analisável | M02 (S2) | Nenhuma. | Manter. |
 | O03 — entender resultado da foto | M02 (S3) | Três nomes para indicações diferentes: “resultado da foto” (M02), “avaliação da IA” (M01) e “veredito” (M01). | Resolvido pela Entrega 9: *resultado da foto* e *avaliação da IA* são indicações da IA; só o *veredito* é validação humana. Os diagramas já seguem essa separação. |
 | O04 — registrar achado e local | M02 (S4, S5) | Quais dados do registro M01 e M03 recebem. | Foto, resultado da foto, data e hora da captura e local do achado (com a origem do local). M01 os mostra em S3; M03, em S4. Nenhum ajuste. |
 | O05 — confirmar repasse | M02 (S7) | “Enviado” (M02) parecido com “repassada” (M03) e “parecer enviado” (M01). | Resolvido pelo vocabulário da Entrega 9: *envio* (trabalhador → sistema), *parecer* (agrônomo → gestor) e *repasse* (gestor → quem aplica). Os diagramas já usam os três termos assim. |
 | O06 — saber o que o ciclo cobriu | M03 (S2) | “Pendente” (M02) e “não inspecionado” (M03) parecem a mesma situação. | Não são: *pendente* é a situação de um **ponto** na rota; *não inspecionado* é a cobertura de um **talhão**. Proposta: o talhão fica “não inspecionado” se nenhum ponto teve registro e “cobertura incompleta” se parte dos pontos ficou pendente. Nenhum ajuste de diagrama. |
 | O07 — avaliar o resultado de um talhão | M03 (S4) | “Confiança do resultado” (M03) e “avaliação da IA” (M01) descrevem a indicação da IA para perfis diferentes. | Manter os dois nomes, como na Entrega 9: o gestor vê a confiança em linguagem simples; o agrônomo vê a intensidade do sinal e a região do fruto. Nenhum dos dois é validação. |
-| O08 — registrar a posição de cada talhão | M03 (S4, S6) | “Parecer do agrônomo” chega a M01 como *pedido de parecer* (S1, com solicitante) — coberto. “Reinspeção” não aparece em M02 (ver O01). M03 usa “nova inspeção” em S2 e “reinspeção” em S4 para o mesmo pedido. | Usar só “reinspeção”, como no vocabulário da Entrega 9. Ajuste AJ3 em M03; chegada à rota pelo ajuste AJ1. |
+| O08 — registrar a posição de cada talhão | M03 (S4, S6) | “Parecer do agrônomo” chega a M01 como *pedido de parecer* (S1, com solicitante) — coberto. “Reinspeção” não aparece em M02 (ver O01). M03 usa “nova inspeção” em S2 e “reinspeção” em S4 para o mesmo pedido. | Usar só “reinspeção”, como no vocabulário da Entrega 9. Ajuste em S2 de M03 (Pedro); a chegada à rota segue a decisão de O01. |
 | O09 — acompanhar a evolução do talhão | M03 (S5) | Sobreposição com o histórico de M01 (L7). | Mesma base de registros, duas apresentações: M03 mostra a *tendência do talhão* entre ciclos; M01 mostra a lista do *histórico de detecções* por ponto ou talhão. Nenhum ajuste. |
-| O10 — decidir o manejo do ciclo | M03 (S7) | O parecer enviado por M01 (P5) deveria apoiar a decisão (L6), mas nenhuma cena de M03 mostra o parecer recebido. | Em M03, o talhão com posição “parecer do agrônomo pedido” mostra “aguardando parecer” ou o parecer recebido (área, produto, dose, período e texto), e S7 o apresenta como entrada da decisão, sem decidir pelo gestor. Ajuste AJ2 em M03. Depende de H04. |
+| O10 — decidir o manejo do ciclo | M03 (S7) | O parecer enviado por M01 (P5) deveria apoiar a decisão (L6), mas nenhuma cena de M03 mostra o parecer recebido. | Em M03, o talhão com posição “parecer do agrônomo pedido” mostra “aguardando parecer” ou o parecer recebido (área, produto, dose, período e texto), e S7 o apresenta como entrada da decisão, sem decidir pelo gestor. Ajuste em M03 (Pedro). Depende de H04. |
 | O11 — confirmar o repasse da decisão | M03 (S8) | Nome próximo de “situação do envio” (M02). | Resolvido pelo vocabulário (ver O05). |
-| O12 — emitir parecer técnico sobre um foco | M01 | Objetivo de topo; cobre S1 a S7. | Manter. |
-| O13 — escolher o foco a avaliar | M01 (S1 → S2) | Origem do item em S1: pedido de parecer do gestor (L3) ou detecção nova enviada pelo trabalhador (L2). | Nome “pedido de parecer” já unificado na Entrega 9 e usado por M01 e M03. Nenhum ajuste. |
-| O14 — validar as detecções do talhão | M01 (S2 ↔ S3, P1) | — | Manter. |
-| O15 — consultar o histórico de detecções | M01 (S5, P3) | Ver O09. | Ver O09. |
-| O16 — pedir nova foto ao campo | M01 (S3 → P2) | Parecido com a reinspeção pedida pelo gestor. | São pedidos diferentes (Entrega 9): nova foto é de um **ponto**, pedida pelo agrônomo; reinspeção é de um **talhão**, pedida pelo gestor. Na rota aparecem do mesmo modo, com a origem indicada (ajuste AJ1). |
-| O17 — delimitar a área de aplicação | M01 (S6, P4) | Produto, dose e período dependem de Q7 do C03. | Manter, como hipótese registrada em M01. |
-| O18 — registrar e repassar o parecer ao gestor | M01 (S7, P5) | Ver O10. | Ver O10 (ajuste AJ2). |
-| O19 — acompanhar a situação dos pedidos | M01 (S1, P5) | A situação do parecer aparece na lista de pedidos (S1), não em cena própria. | Manter, como no protótipo em papel (Entrega 6), e verificar no teste se “concluído” basta para saber que o parecer chegou ao gestor. |
-
-### Ligações entre os fluxos
-
-| Ligação (Entrega 9) | Saída | Chegada | Situação |
-|---|---|---|---|
-| L1 — achados enviados formam a cobertura do ciclo | M02, S7 | M03, S1 e S2 | Representada. |
-| L2 — achados enviados chegam ao agrônomo como detecções novas | M02, S7 | M01, S1 | Representada. |
-| L3 — posição “parecer do agrônomo” gera o pedido de parecer | M03, S4 → S6 | M01, S1 | Representada. |
-| L4 — posição “reinspeção” entra na rota | M03, S4 → S6 | M02, S1 | **Só a saída.** Ajuste AJ1. |
-| L5 — pedido de nova foto entra na rota | M01, S3 → P2 | M02, S1 | **Só a saída.** Ajuste AJ1. |
-| L6 — parecer apoia a decisão do ciclo | M01, S7 → P5 | M03, S7 | **Só a saída.** Ajuste AJ2. |
-| L7 — histórico e evolução usam os mesmos registros | M01, S5 | M03, S5 | Representada (ver O09). |
-
-### Ajustes pendentes nos diagramas
-
-| ID | MoLIC | Ajuste | Responsável |
-|---|---|---|---|
-| AJ1 | M02 | Em S1, mostrar os pedidos de reinspeção e de nova foto como pontos planejados com a origem indicada (L4, L5). | Lucas |
-| AJ2 | M03 | Mostrar “aguardando parecer” ou o parecer recebido nos talhões com essa posição e apresentar o parecer em S7 como entrada da decisão (L6). | Pedro |
-| AJ3 | M03 | Trocar “nova inspeção” por “reinspeção” em S2 e no processamento após S2. | Pedro |
-
-Além desses ajustes, ainda faltam itens dos checklists individuais: a fonte editável e a notação de processamento de M02 e a conferência dos três diagramas em tamanho normal no GitHub. A consolidação estará fechada quando AJ1–AJ3 forem feitos e esses itens marcados.
+| O12 | M01 | Objetivo de topo; cobre S1 a S7. | Manter. |
+| O13 | M01 (S1 → S2) | Origem do item em S1: pedido de parecer do gestor (L3) ou detecção nova enviada pelo trabalhador (L2). | Nome “pedido de parecer” já unificado na Entrega 9 e usado por M01 e M03. Nenhum ajuste. |
+| O14 | M01 (S2 ↔ S3, P1) | — | Manter. |
+| O15 | M01 (S5, P3) | Histórico também usado pelo gestor na evolução do talhão (O09). | Mesma base de registros: M01 mostra a lista de detecções por ponto ou talhão; a tendência por talhão fica em M03. |
+| O16 | M01 (S3 → P2) | Parecido com a reinspeção pedida pelo gestor. | São pedidos diferentes (Entrega 9): nova foto é de um **ponto**, pedida pelo agrônomo; reinspeção é de um **talhão**, pedida pelo gestor. Na rota aparecem do mesmo modo, com a origem indicada (ver O01). |
+| O17 | M01 (S6, P4) | Produto, dose e período dependem de Q7 do C03. | Manter, como hipótese registrada em M01. |
+| O18 | M01 (S7, P5) | O parecer é entrada da decisão do gestor (O10). | Manter; o parecer recebido deve aparecer no fluxo do gestor (ver O10). |
+| O19 | M01 (S1, P5) | A situação do parecer aparece na lista de pedidos (S1), não em cena própria. | Manter, como no protótipo em papel (Entrega 6), e verificar no teste se “concluído” basta para saber que o parecer chegou ao gestor. |
 
 ### Preparação para o Figma
 
@@ -301,8 +279,8 @@ Além desses ajustes, ainda faltam itens dos checklists individuais: a fonte edi
 **Estados de Guilherme, derivados de M01 (fluxo do agrônomo):**
 
 - **S1:** lista de pedidos de parecer e detecções novas, com a situação de cada pedido (pendente ou concluído); estado vazio (nenhum pedido ou detecção nova).
-- **S2:** mapa do talhão com legenda das situações; estado após veredito (ponto validado e próximo pendente em destaque); estado após pedido de nova foto (pedido enviado; ponto continua pendente); confirmação de encerramento da revisão.
-- **S3:** detecção com foto, metadados e detecções anteriores; foto ampliada; avaliação da IA recolhida e aberta.
+- **S2:** mapa do talhão com legenda das situações; estado após veredito (ponto validado e próximo pendente em destaque); estado após pedido de nova foto (pedido enviado; ponto continua pendente); retorno à revisão com os vereditos já registrados.
+- **S3:** detecção com foto, metadados e detecções anteriores; foto ampliada; avaliação da IA recolhida e aberta; falha ao registrar o veredito ou ao enviar o pedido de nova foto, com nova tentativa.
 - **S5:** histórico filtrado por ponto, por talhão e sem filtro; estado sem resultados com sugestão de ampliar o período.
 - **S6:** delimitação da área com aviso de pendências; erro de área sem ponto confirmado ou campos vazios.
 - **S7:** parecer com área, pontos vinculados, destinatário do parecer e aviso sobre o receituário agronômico; falha no envio com o texto mantido para reenviar.
@@ -321,7 +299,7 @@ Além desses ajustes, ainda faltam itens dos checklists individuais: a fonte edi
 - Decisão do ciclo com todos os talhões posicionados ou com pendências — S7.
 - Decisão registrada, repassada ou com falha no repasse — S8.
 
-Antes de produzir o Figma, conferir se cada estado possui uma conversa ou ruptura correspondente no MoLIC. A equipe não produziu Figma (ver Entrega 11): os estados de M02 e M03 devem ser conferidos no aplicativo, e os de M01, nas telas FA01–FA07. Os ajustes AJ1 e AJ2 acrescentam estados: ponto planejado com origem do pedido (M02, S1) e talhão aguardando parecer ou com parecer recebido (M03).
+Antes de produzir o Figma, conferir se cada estado possui uma conversa ou ruptura correspondente no MoLIC.
 
 ## Erros frequentes a evitar
 
