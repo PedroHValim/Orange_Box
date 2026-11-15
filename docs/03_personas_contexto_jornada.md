@@ -1,133 +1,100 @@
 # Entrega 3 — Personas, mapa de empatia, contexto de uso e jornada
 
 **Data:** 09/09/2026  
-**Status:** 🟨 em revisão  
-**Responsabilidade:** 1 persona por integrante; mapa de empatia, contexto de uso e jornada consolidados pela equipe.
+**Status:** 🟩 concluído como modelagem inicial; personas ainda dependem de validação com usuários  
+**Responsabilidade:** uma persona por integrante; mapa de empatia, contexto e jornada consolidados pela equipe.
 
 ## Objetivo da atividade
 
-Representar os usuários e seu contexto para orientar decisões de interação. As informações ainda não verificadas com usuários reais permanecem identificadas como hipóteses.
-
-## Entradas da Entrega 1
-
-| Item | Situação nesta entrega |
-|---|---|
-| Inspetor de campo realiza inspeções recorrentes | Base para P02; o uso efetivo do aplicativo por esse perfil ainda deve ser validado. |
-| Dono/gestor acompanha os resultados e decide o manejo | Hipótese representada em P01. |
-| Agrônomo interpreta dados e orienta decisões | Papel operacional ainda não confirmado; representado provisoriamente em P03. |
-| Campo com conexão limitada | Restrição registrada no TCC e relevante para o fluxo de captura. |
-
-> P01, P02 e P03 são **proto-personas**. Idades, histórias pessoais, hábitos e sentimentos não foram obtidos por entrevistas e não devem ser apresentados como fatos observados.
+Representar os objetivos, tarefas e restrições dos perfis envolvidos na inspeção de citros. Nenhuma das personas abaixo corresponde a uma pessoa entrevistada. Identidade, trajetória e comportamentos não sustentados pelo TCC são **hipóteses de proto-personas**.
 
 ## 1. Personas
 
+| ID | Persona | Autor | Papel e prioridade |
+|---|---|---|---|
+| P01 | Jaime Carteiro | Pedro Henrique Ferreira Valim | Responsável pelo manejo; secundária e a validar. |
+| P02 | Antônio Ferreira | Lucas Tonoli Cabral Duarte — 24.123.032-5 | Inspetor de campo; primária para o fluxo de captura. |
+| P03 | Marcelo Fidalgo | Guilherme Morais Escudeiro | Agrônomo consultor; secundária e a validar. |
+
 ### P01 — Jaime Carteiro
 
-**Autor:** Pedro Henrique Ferreira Valim — 24.123.048-1  
-**Tipo:** secundária; proto-persona a validar.  
-**Papel:** dono/gestor de fazenda de citros.  
-**Objetivo:** compreender os focos identificados e decidir as prioridades de manejo.  
-**Necessidade:** distinguir áreas examinadas de áreas não examinadas e interpretar resultados por talhão.  
-**Hipóteses:** consulta mapas e histórico, recebe os achados do trabalhador e decide onde aplicar o produto. A divisão real dessas responsabilidades precisa ser investigada.
-
-<img src="../assets/03_personas/persona_01.jpeg" alt="Persona P01" width="220">
-
-*Imagem ilustrativa; não representa participante da pesquisa.*
+Jaime representa o possível responsável por receber informações do campo e decidir o manejo. A necessidade de cobertura, histórico e comparação entre ciclos ainda depende de confirmar seu papel e as decisões que realmente toma. Sua descrição não constitui evidência de entrevista ou observação.
 
 ### P02 — Antônio Ferreira
 
 **Autor:** Lucas Tonoli Cabral Duarte — 24.123.032-5  
-**Tipo:** primária; proto-persona a validar.  
-**Origem:** procedimento de inspeção descrito no TCC e hipóteses H03, H09 e H20.
+**Tipo:** primária para o fluxo de inspeção  
+**Base:** procedimento de inspeção descrito no TCC e hipóteses da Entrega 1; não houve entrevista com Antônio.
 
-<img src="../assets/03_personas/persona_02.jpeg" alt="Persona P02" width="220">
-
-*Imagem ilustrativa; não representa participante da pesquisa.*
+![Persona P02](../assets/03_personas/persona_02.jpeg)
 
 | Campo | Descrição |
 |---|---|
 | Papel | Trabalhador de campo que inspeciona frutos em busca de sinais da praga. |
-| Conhecimento | Experiência prática de inspeção; grau de familiaridade com aplicativos técnicos ainda não verificado. |
-| Objetivo | Examinar os frutos com rapidez e interpretar corretamente a indicação recebida. |
-| Necessidades | Obter uma imagem utilizável, entender o resultado e saber o que fazer quando houver dúvida. |
-| Contexto | Deslocamento entre árvores, uso do celular ao ar livre e conexão possivelmente indisponível. |
-| Dores | Inspeção manual repetitiva e cansativa; possibilidade de perder um foco ou ter dúvida sobre um sinal. |
-| Papel na decisão | Sua participação no repasse dos achados é hipótese; não se deve presumir que ele decide o manejo. |
-| Identidade ilustrativa | Idade, trajetória profissional e hábitos específicos atribuídos a Antônio são hipóteses, não dados coletados. |
+| Conhecimento | Experiência prática de campo; grau de conhecimento técnico e digital a confirmar. |
+| Objetivo | Examinar frutos de forma rápida e confiável e compreender o significado da indicação obtida. |
+| Necessidades | Capturar imagem utilizável, reconhecer dúvida ou erro e saber se um achado foi registrado ou comunicado. |
+| Restrições conhecidas | Trabalho em campo aberto e possibilidade de conexão ausente ou instável. |
+| Restrições hipotéticas | Reflexo do sol na tela, cansaço, mãos ocupadas e dificuldade com aplicativos técnicos; verificar com usuários. |
+| Local de uso | Pomar, durante deslocamento entre árvores. |
+| Papel na decisão | A hipótese é que ele informa o achado e outra pessoa decide o manejo; confirmar essa divisão. |
 
-**Consequências para o design a investigar:**
-
-- Apoio para obter uma foto adequada, conforme as exigências técnicas da captura.
-- Resultado curto e compreensível, que diferencie “sem sinal nesta imagem” de “área sem praga”.
-- Caminho para repetir a foto ou registrar dúvida.
-- Funcionamento da análise no dispositivo sem depender de internet.
-- Necessidade real de registrar localização, cobertura da rota e confirmação de envio.
+**Decisões de interação candidatas:** orientação de captura, resultado curto que não dependa apenas de cor, indicação de incerteza e distinção entre registro local e envio. Leitura em áudio e acompanhamento de rota continuam alternativas a testar, não requisitos confirmados.
 
 ### P03 — Marcelo Fidalgo
 
-**Autor:** Guilherme Morais Escudeiro — 24.123.005-1  
-**Tipo:** secundária; proto-persona a validar.  
-**Papel hipotético:** agrônomo consultor que examina os achados e orienta o manejo.  
-**Objetivo hipotético:** reunir evidências suficientes para emitir parecer técnico.  
-**Lacuna:** a participação de um agrônomo no período de coleta do TCC não confirma que exista um consultor remoto no processo cotidiano da propriedade.
+Marcelo representa um possível agrônomo que interpreta evidências de campo e emite parecer. O TCC registra participação de um agrônomo na definição de um período de coleta, mas isso **não confirma** que exista consultoria remota, validação individual de detecções ou emissão de parecer no fluxo operacional da propriedade. Esse papel deverá ser investigado.
 
-<img src="../assets/03_personas/persona_03.jpeg" alt="Persona P03" width="220">
+### Classificação das personas
 
-*Imagem ilustrativa; não representa participante da pesquisa.*
-
-### Síntese das personas
-
-P02 é o foco principal da interação de captura e leitura do resultado. P01 e P03 representam possíveis necessidades posteriores de decisão e interpretação técnica. A existência, a divisão de responsabilidades e a necessidade de interfaces próprias para esses dois papéis devem ser verificadas na coleta.
+P02 orienta inicialmente o design porque a captura em campo é o fluxo principal da contribuição técnica e possui restrições próprias. P01 e P03 têm objetivos diferentes, mas suas rotinas e a necessidade de interfaces específicas permanecem hipóteses.
 
 ## 2. Mapa de empatia — P02
 
+**Legenda:** 🟦 sustentado pelo TCC; 🟨 hipótese a investigar. A tabela é a referência textual; a imagem é ilustrativa.
+
 ![Mapa de empatia — P02](../assets/03_personas/mapa_de_empatia.png)
 
-| Dimensão | Registro |
+| Dimensão | Conteúdo |
 |---|---|
-| Vê | **Fato do TCC:** frutos e sinais difíceis de observar; inspeção em campo. **Hipótese:** reflexo do sol na tela e uso cotidiano de mensagens no celular. |
-| Ouve | **Hipótese:** orientações do responsável pela área e relatos de colegas. |
-| Diz/faz | **Fato:** percorre a plantação e examina frutos. **Hipótese:** fotografa frutos suspeitos e comunica achados ao gestor. |
-| Pensa/sente | **Hipótese:** dúvida diante de marcas no fruto e preocupação em concluir a inspeção. Não há relato de participante que confirme sentimentos específicos. |
-| Dores | **Fato:** inspeção manual cansativa e demorada; possibilidade de conexão limitada. **Hipótese:** incerteza sobre cobertura e envio dos achados. |
-| Ganhos | **Hipótese:** interpretar o resultado rapidamente e evitar retrabalho. |
-
-> **Pendência gráfica:** a imagem do mapa de empatia ainda precisa distinguir visualmente fatos e hipóteses. A tabela acima já faz essa distinção.
+| Vê | 🟦 Frutos e sinais difíceis de observar; plantação a céu aberto e conexão limitada. 🟨 Reflexo intenso na tela e colegas trocando fotos ou mensagens. |
+| Ouve | 🟨 Orientações sobre a área a percorrer e relatos de colegas. Confirmar quem dá essas orientações. |
+| Diz/faz | 🟦 Percorre a plantação e examina frutos com lupa no processo manual. 🟨 Registra fotos e comunica achados a outra pessoa. |
+| Pensa/sente | 🟦 A inspeção manual é cansativa e demorada. 🟨 Pode sentir dúvida diante de um ponto suspeito e receio de deixar uma área sem exame. |
+| Dores | 🟦 Esforço da inspeção manual e falta de internet em parte do campo. 🟨 Dúvida sobre qualidade da foto, cobertura da rota e entrega do aviso. |
+| Ganhos | 🟦 Identificar cedo um foco pode reduzir prejuízos. 🟨 Menos retrabalho e mais segurança de que o achado foi compreendido. |
 
 ## 3. Contexto de uso
 
-| Dimensão | Contexto e implicação |
-|---|---|
-| Usuário prioritário | P02 executa a inspeção. O fluxo deve considerar uma atividade repetida muitas vezes durante o percurso. |
-| Equipamento | Smartphone com câmera; verificar se há lente/acessório exigido pelo protocolo técnico. |
-| Ambiente | Pomar ao ar livre, deslocamento, iluminação variável e conexão limitada. |
-| Tarefa | Capturar imagem, obter indicação e decidir se segue, repete a captura ou comunica uma suspeita. |
-| Organização | Quem define a área, recebe o achado e toma a decisão de manejo ainda precisa ser confirmado. |
-| Dados | Necessidade de histórico, rota formal, sincronização e permissões permanece hipótese. |
+| Dimensão | Descrição | Implicação de design |
+|---|---|---|
+| Usuário principal | P02 durante a inspeção. | Apoiar captura e interpretação sem exigir longa navegação. |
+| Equipamento | Smartphone com câmera previsto no TCC. | Considerar tela pequena, enquadramento e gesto de captura. |
+| Ambiente | Campo aberto, deslocamento e conexão limitada. | Testar legibilidade, operação rápida e tratamento de ausência de conexão. |
+| Organização | Divisão entre inspetor, gestor e agrônomo ainda não confirmada. | Não presumir permissões, alertas e repasses automáticos. |
+| Dados | Inspeção recorrente; necessidade de histórico e mapa a investigar. | Prototipar apenas o que apoiar tarefas verificáveis. |
 
 ## 4. Jornada de P02
 
-**Objetivo:** examinar os frutos e comunicar achados, quando isso fizer parte do processo real de trabalho.
+**Objetivo:** examinar os frutos e compreender o que fazer diante de uma indicação ou dúvida. A jornada inclui a situação anterior e o resultado posterior ao uso.
 
-| Etapa | Ação/necessidade | Problema ou pergunta | Oportunidade a validar |
+| Etapa | Ação/situação | Dor ou dúvida | Oportunidade a testar |
 |---|---|---|---|
-| Antes | Receber a área a examinar e preparar-se para o campo. | Quem define a área e como ela é comunicada? | Indicação simples da área, se houver rota formal. |
-| Captura | Posicionar o celular e obter uma foto utilizável. | Distância, foco, iluminação e enquadramento podem comprometer a análise. | Orientação de captura e possibilidade de refazer. |
-| Análise | Aguardar a indicação no próprio dispositivo. | Não depender de sinal de internet. | Feedback de processamento, caso a espera seja perceptível. |
-| Interpretação | Entender o que a indicação significa. | Um resultado da imagem não equivale a diagnóstico de todo o talhão. | Linguagem curta, indicação de incerteza e próximo passo. |
-| Continuação | Seguir para outro fruto ou examinar novamente. | A tarefa é repetitiva e ocorre sob restrições de tempo. | Reduzir etapas desnecessárias. |
-| Depois | Encerrar o percurso e, se aplicável, repassar os achados. | Cobertura, canal e confirmação de recebimento não foram confirmados. | Investigar registro e status de envio. |
+| Antes | Recebe uma área para inspecionar, se essa divisão de trabalho se confirmar. | Não saber como comprovar cobertura. | Identificar a área e o que falta examinar. |
+| Preparação | Abre o recurso de captura no celular. | Não conhecer o funcionamento da interface. | Orientação breve no primeiro uso. |
+| Captura | Posiciona o celular e fotografa um fruto. | Foto sem foco ou enquadramento adequado. | Feedback de captura compreensível. |
+| Processamento | Aguarda a indicação. | Conexão indisponível ou ausência de estado visível. | Processar offline e comunicar o estado. |
+| Resultado | Interpreta sinal, ausência de sinal ou resultado inconclusivo. | Confundir “sem sinal na foto” com ausência da praga no talhão. | Explicar o alcance e a incerteza do resultado. |
+| Continuação | Examina outro fruto ou repete uma foto duvidosa. | Retrabalho e fadiga. | Caminho curto para continuar ou repetir. |
+| Depois | Verifica o que registrou e se algum achado chegou ao destinatário, caso exista esse repasse. | Confundir “salvo no celular” com “enviado”. | Estados distintos de registro e envio. |
 
-## Síntese
-
-O fluxo prioritário para as próximas entregas é **captura → análise local → interpretação → continuação ou nova captura**. Rota, histórico, repasse e confirmação de recebimento permanecem hipóteses a investigar com os perfis envolvidos.
+As etapas de rota, repasse e sincronização são hipóteses de design. A Entrega 7 deverá investigar se correspondem ao trabalho real.
 
 ## Checklist
 
-- [x] Há uma proto-persona identificada por integrante.
-- [x] P02 possui objetivos, contexto e consequências para o design.
-- [x] O texto diferencia dados do TCC e hipóteses.
-- [x] O contexto e a jornada incluem a atividade antes e depois do uso.
-- [ ] A imagem do mapa de empatia distingue fatos e hipóteses.
-- [ ] A participação de P01 e P03 no processo real foi confirmada.
-- [ ] Os vínculos foram conferidos em `RASTREABILIDADE.md`.
+- [x] Existe uma persona por integrante.
+- [x] P02 tem objetivo, tarefa, ambiente e restrições que influenciam o design.
+- [x] Fatos e hipóteses foram distinguidos.
+- [x] O mapa de empatia distingue a origem das afirmações na tabela.
+- [x] A jornada inclui antes, durante e depois do uso.
+- [x] P01–P03 e seus vínculos constam em `../RASTREABILIDADE.md`.
