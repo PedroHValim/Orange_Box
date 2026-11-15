@@ -1,5 +1,180 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="360" viewBox="0 0 960 360">
-<rect width="100%" height="100%" fill="#f6f8fa" stroke="#8c959f" stroke-width="4"/>
-<text x="480" y="165" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#24292f">PLACEHOLDER DE ARTEFATO</text>
-<text x="480" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#57606a">Substitua este arquivo pela evidência real da equipe.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="1250" viewBox="0 0 1640 1250">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="820" y="40" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="bold" fill="#222" text-anchor="middle">M01 — Emitir parecer técnico sobre um foco</text>
+<g transform="translate(0,50)">
+<rect x="90" y="80" width="310" height="140" rx="16" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="245.0" y="102" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">S1 · Escolher o foco a avaliar</text>
+<line x1="90" y1="112" x2="400" y2="112" stroke="#222" stroke-width="1"/>
+<text x="102" y="132" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d+u: pedidos de parecer {propriedade,</text>
+<text x="102" y="149" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">   talhão, solicitante, pontos pendentes,</text>
+<text x="102" y="166" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">   situação do pedido}</text>
+<text x="102" y="183" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d+u: detecções novas sem pedido</text>
+<rect x="530" y="80" width="400" height="140" rx="16" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="730.0" y="102" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">S2 · Examinar o talhão</text>
+<line x1="530" y1="112" x2="930" y2="112" stroke="#222" stroke-width="1"/>
+<text x="542" y="132" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d: mapa do talhão {ponto, situação do ponto,</text>
+<text x="542" y="149" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">   detecção anterior}</text>
+<text x="542" y="166" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d: contagem de pontos por situação</text>
+<rect x="1130" y="80" width="380" height="140" rx="16" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="1320.0" y="102" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">S5 · Consultar o histórico</text>
+<line x1="1130" y1="112" x2="1510" y2="112" stroke="#222" stroke-width="1"/>
+<text x="1142" y="132" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">u: período, local</text>
+<text x="1142" y="149" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d: histórico de detecções {data, ponto,</text>
+<text x="1142" y="166" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">   resultado, situação}</text>
+<rect x="530" y="380" width="400" height="190" rx="16" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="730.0" y="402" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">S3 · Validar a detecção</text>
+<line x1="530" y1="412" x2="930" y2="412" stroke="#222" stroke-width="1"/>
+<text x="542" y="432" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d: foto original, data e hora da captura,</text>
+<text x="542" y="449" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">   árvore, localização</text>
+<text x="542" y="466" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d: detecções anteriores do ponto</text>
+<text x="542" y="483" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">u: ampliar foto</text>
+<text x="542" y="500" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d+u: avaliação da IA (recolhida até pedir)</text>
+<text x="542" y="517" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">u: observação técnica (opcional)</text>
+<rect x="530" y="690" width="400" height="160" rx="16" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="730.0" y="712" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">S6 · Delimitar a área de aplicação</text>
+<line x1="530" y1="722" x2="930" y2="722" stroke="#222" stroke-width="1"/>
+<text x="542" y="742" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d: pontos confirmados do talhão</text>
+<text x="542" y="759" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d: aviso de pontos pendentes (não bloqueia)</text>
+<text x="542" y="776" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">u: área de aplicação</text>
+<text x="542" y="793" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">u: produto, dose, período de aplicação</text>
+<rect x="1190" y="690" width="330" height="150" rx="16" fill="#fff" stroke="#222" stroke-width="1.6"/>
+<text x="1355.0" y="712" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#222" text-anchor="middle">S7 · Redigir o parecer</text>
+<line x1="1190" y1="722" x2="1520" y2="722" stroke="#222" stroke-width="1"/>
+<text x="1202" y="742" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d: área de aplicação, pontos vinculados,</text>
+<text x="1202" y="759" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">   destinatário</text>
+<text x="1202" y="776" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">u: parecer técnico</text>
+<text x="1202" y="793" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#222" text-anchor="start">d: aviso: não substitui o receituário</text>
+<circle cx="40" cy="150" r="10" fill="#111"/>
+<path d="M50,150 L88,150" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="88.0,150.0 78.0,154.5 78.0,145.5" fill="#222"/>
+<rect x="150" y="14" width="190" height="34" rx="10" fill="#d9d9d9" stroke="#777"/>
+<text x="245.0" y="35.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#333" text-anchor="middle">acesso ubíquo</text>
+<path d="M245,48 L245,78" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="245.0,78.0 240.5,68.0 249.5,68.0" fill="#222"/>
+<text x="255" y="66" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: ir para pedidos de parecer</text>
+<rect x="1225" y="14" width="190" height="34" rx="10" fill="#d9d9d9" stroke="#777"/>
+<text x="1320.0" y="35.0" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#333" text-anchor="middle">acesso ubíquo</text>
+<path d="M1320,48 L1320,78" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="1320.0,78.0 1315.5,68.0 1324.5,68.0" fill="#222"/>
+<text x="1330" y="66" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: buscar no histórico [sem filtro]</text>
+<circle cx="730" cy="34" r="12" fill="#fff" stroke="#111" stroke-width="2"/>
+<circle cx="730" cy="34" r="7" fill="#111"/>
+<path d="M730,80 L730,48" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="730.0,48.0 734.5,58.0 725.5,58.0" fill="#222"/>
+<text x="746" y="30" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: encerrar revisão</text>
+<text x="746" y="44" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">d: vereditos registrados mantidos</text>
+<path d="M400,130 L528,130" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="528.0,130.0 518.0,134.5 518.0,125.5" fill="#222"/>
+<text x="408" y="122" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: abrir pedido</text>
+<text x="408" y="148" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">[talhão do foco]</text>
+<path d="M930,115 L1128,115" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="1128.0,115.0 1118.0,119.5 1118.0,110.5" fill="#222"/>
+<text x="940" y="107" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: ver histórico do talhão</text>
+<text x="940" y="133" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">[filtro: talhão]</text>
+<path d="M610,220 L610,378" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="610.0,378.0 605.5,368.0 614.5,368.0" fill="#222"/>
+<text x="602" y="300" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="end">u: selecionar</text>
+<text x="602" y="314" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="end">ponto</text>
+<path d="M720,380 L720,222" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="720.0,222.0 724.5,232.0 715.5,232.0" fill="#222"/>
+<text x="728" y="300" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: voltar</text>
+<path d="M850,380 L850,322" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="850.0,322.0 854.5,332.0 845.5,332.0" fill="#222"/>
+<rect x="838" y="300" width="24" height="20" fill="#111"/>
+<text x="850" y="314" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#fff" text-anchor="middle">P1</text>
+<path d="M850,300 L850,222" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="850.0,222.0 854.5,232.0 845.5,232.0" fill="#222"/>
+<text x="870" y="345" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: confirmar | rejeitar</text>
+<text x="860" y="250" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">d: ponto validado</text>
+<text x="860" y="264" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">por você; próximo</text>
+<text x="860" y="278" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">pendente em destaque</text>
+<path d="M528,440 L445,440 L445,322" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="445.0,322.0 449.5,332.0 440.5,332.0" fill="#222"/>
+<text x="437" y="400" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="end">u: pedir nova foto</text>
+<rect x="433" y="300" width="24" height="20" fill="#111"/>
+<text x="445" y="314" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#fff" text-anchor="middle">P2</text>
+<path d="M457,302 L528,205" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="528.0,205.0 525.7,215.7 518.5,210.4" fill="#222"/>
+<text x="452" y="240" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="end">d: pedido enviado ao campo;</text>
+<text x="452" y="254" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="end">ponto continua pendente</text>
+<path d="M932,430 L1250,430 L1250,222" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="1250.0,222.0 1254.5,232.0 1245.5,232.0" fill="#222"/>
+<text x="1040" y="422" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: ver histórico deste ponto</text>
+<text x="1040" y="446" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">[filtro: ponto]</text>
+<path d="M1300,222 L1300,480 L932,480" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="932.0,480.0 942.0,475.5 942.0,484.5" fill="#222"/>
+<text x="1040" y="498" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: abrir detecção</text>
+<path d="M1400,222 L1400,268" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="1400.0,268.0 1395.5,258.0 1404.5,258.0" fill="#222"/>
+<rect x="1388" y="270" width="24" height="20" fill="#111"/>
+<text x="1400" y="284" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#fff" text-anchor="middle">P3</text>
+<path d="M1412,276 L1470,276 L1470,222" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="1470.0,222.0 1474.5,232.0 1465.5,232.0" fill="#222"/>
+<path d="M1400,290 L1400,320 L1560,320 L1560,150 L1512,150" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="7,5"/>
+<polygon points="1512.0,150.0 1522.0,145.5 1522.0,154.5" fill="#222"/>
+<text x="1392" y="248" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="end">u: aplicar filtros</text>
+<text x="1478" y="246" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">d: detecções</text>
+<text x="1478" y="260" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">do filtro</text>
+<text x="1410" y="338" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">d: nenhuma detecção no período;</text>
+<text x="1410" y="352" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">sugere ampliar o período</text>
+<path d="M930,190 L1000,190 L1000,720 L932,720" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="932.0,720.0 942.0,715.5 942.0,724.5" fill="#222"/>
+<text x="992" y="610" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="end">u: emitir parecer</text>
+<path d="M932,760 L1030,760 L1030,205 L932,205" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="932.0,205.0 942.0,200.5 942.0,209.5" fill="#222"/>
+<text x="1038" y="650" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: voltar e validar</text>
+<text x="1038" y="664" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">o restante</text>
+<path d="M932,815 L1088,815" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="1088.0,815.0 1078.0,819.5 1078.0,810.5" fill="#222"/>
+<rect x="1088" y="805" width="24" height="20" fill="#111"/>
+<text x="1100" y="819" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#fff" text-anchor="middle">P4</text>
+<path d="M1112,815 L1188,815" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="1188.0,815.0 1178.0,819.5 1178.0,810.5" fill="#222"/>
+<text x="940" y="807" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: continuar</text>
+<text x="1118" y="790" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="normal" fill="#222" text-anchor="start">d: área</text>
+<text x="1118" y="804" font-family="Arial, Helvetica, sans-serif" font-size="10" font-weight="normal" fill="#222" text-anchor="start">registrada</text>
+<path d="M1100,825 L1100,900 L800,900 L800,852" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="7,5"/>
+<polygon points="800.0,852.0 804.5,862.0 795.5,862.0" fill="#222"/>
+<text x="810" y="918" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">d: nenhum ponto confirmado na área ou</text>
+<text x="810" y="932" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">produto/dose/período vazios</text>
+<path d="M1210,840 L1210,960 L640,960 L640,852" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="640.0,852.0 644.5,862.0 635.5,862.0" fill="#222"/>
+<text x="650" y="978" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: voltar</text>
+<path d="M1355,840 L1355,908" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="1355.0,908.0 1350.5,898.0 1359.5,898.0" fill="#222"/>
+<rect x="1343" y="910" width="24" height="20" fill="#111"/>
+<text x="1355" y="924" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="#fff" text-anchor="middle">P5</text>
+<text x="1365" y="870" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">u: enviar</text>
+<path d="M1355,930 L1355,1001" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="1355.0,1001.0 1350.5,991.0 1359.5,991.0" fill="#222"/>
+<text x="1363" y="960" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">d: parecer enviado ao gestor;</text>
+<text x="1363" y="974" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">pedido concluído em S1</text>
+<path d="M1367,920 L1490,920 L1490,842" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="7,5"/>
+<polygon points="1490.0,842.0 1494.5,852.0 1485.5,852.0" fill="#222"/>
+<text x="1498" y="870" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">d: falha no envio;</text>
+<text x="1498" y="884" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">parecer mantido</text>
+<text x="1498" y="898" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">para reenviar</text>
+<circle cx="1355" cy="1015" r="12" fill="#fff" stroke="#111" stroke-width="2"/>
+<circle cx="1355" cy="1015" r="7" fill="#111"/>
+<text x="1375" y="1019" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">objetivo concluído</text>
+<rect x="50" y="978" width="560" height="160" fill="#fafafa" stroke="#bbb"/>
+<text x="60" y="996" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="bold" fill="#222" text-anchor="start">Legenda (notação MoLIC)</text>
+<circle cx="70" cy="1018" r="10" fill="#111"/>
+<text x="90" y="1022" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">ponto de abertura</text>
+<circle cx="260" cy="1018" r="12" fill="#fff" stroke="#111" stroke-width="2"/>
+<circle cx="260" cy="1018" r="7" fill="#111"/>
+<text x="280" y="1022" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">ponto de encerramento</text>
+<rect x="60" y="1040" width="40" height="22" rx="8" fill="#fff" stroke="#222"/>
+<text x="110" y="1056" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">cena (tópico + diálogos d/u/d+u e {signos})</text>
+<rect x="62" y="1074" width="24" height="18" fill="#111"/>
+<text x="110" y="1088" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">processamento do sistema</text>
+<rect x="360" y="1072" width="60" height="22" rx="8" fill="#d9d9d9" stroke="#777"/>
+<text x="430" y="1088" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">acesso ubíquo</text>
+<path d="M60,1112 L100,1112" fill="none" stroke="#222" stroke-width="1.4"/>
+<polygon points="100.0,1112.0 90.0,1116.5 90.0,1107.5" fill="#222"/>
+<text x="110" y="1116" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">fala de transição (u: usuário, d: preposto do designer)</text>
+<path d="M60,1130 L100,1130" fill="none" stroke="#222" stroke-width="1.4" stroke-dasharray="7,5"/>
+<polygon points="100.0,1130.0 90.0,1134.5 90.0,1125.5" fill="#222"/>
+<text x="110" y="1134" font-family="Arial, Helvetica, sans-serif" font-size="11" font-weight="normal" fill="#222" text-anchor="start">fala de recuperação de ruptura</text>
+</g>
 </svg>
