@@ -71,6 +71,7 @@ O Climate FieldView é uma plataforma de **agricultura** digital que ajuda produ
 #### Experiência do usuário e opiniões
 
 Alguns relatos interessante sobre a interface da plataforma que podem nos guiar para um desenvolvimento mais preparado para o mercado são:
+
 - Design "Otimizado para Cabine" (Cab-Friendly): O aplicativo foi desenhado com botões grandes, poucos menus e fontes de alta legibilidade. --- Isso é muito interessante para os operadores de máquinas, que relatam fácil uso e visibilidade mesmo com condições não favoráveis para o uso.
 - Também foi muito falado sobre a facilidade para aprender a usar a plataforma, o menu inicial contém poucos botões, consequentemente tendo poucos direcionamentos de tela. Assim fica fácil mesmo para quem não tem tanta afinidade ficar acostumado com o software.
 - O ponto mais forte dos relatos são as visualizações de mapas lado a lado, tanto com mapas de volumes quanto com mapas de marcação, assim é interessante trazer insights como "Onde foi marcado o ponto, teve um aumento de concentração de pragas ou frutas mortas..."
@@ -122,16 +123,17 @@ Aplicativo mobile que ajuda agricultores e jardineiros a diagnosticar doenças, 
 O aplicativo possui uma nota média de 4,6 estrelas na Play Store, analisando as avaliações do app, encontram-se as seguintes opiniões:
 
 Elogios:
+
 - Eficácia no aprendizado agrícola: Profissionais da área relatam que o app ajuda no dia a dia do campo e funciona como uma excelente ferramenta de aprendizado prático.
 - Precisão do diagnóstico por imagem: Os usuários destacam a rapidez e a assertividade da inteligência artificial ao detectar mais de 400 a 780 tipos de danos e pragas em segundos através de uma simples foto.
 - Utilidade dos recursos extras: A calculadora de fertilizantes, os alertas locais de doenças e a previsão do tempo integrada recebem avaliações muito positivas por auxiliarem no gerenciamento completo da lavoura.
 - Rede social interna: A seção de comunidade é elogiada por permitir a troca de ideias e experiências diretamente com outros agricultores e especialistas do setor.
 
 Críticas:
+
 - Limitações na interação social: Há reclamações de que a aba da comunidade carece de recursos básicos de redes sociais, como a impossibilidade de buscar perfis de membros específicos, ver quem seguiu você ou interagir por mensagens diretas privadas.
 - Restrição de culturas: Usuários focados em jardinagem doméstica apontam que o catálogo de diagnóstico é estrito a 30 grandes culturas comerciais (como milho, soja e tomate), deixando a desejar para plantas ornamentais comuns.
 - Preocupações com privacidade de dados: A seção de segurança de dados gera ressalvas de alguns usuários na Play Store, já que o aplicativo exige o compartilhamento de informações como localização aproximada, atividade do app e IDs do dispositivo com terceiros.
-
 
 #### Preço/modelo de negócio
 
@@ -162,22 +164,22 @@ Além disso, utilizando o mesmo ecossistema do aplicativo, a empresa oferece sol
 
 #### Contexto e proposta
 
- É uma plataforma global de agricultura de precisão que utiliza imagens de satélite e inteligência artificial para simplificar o gerenciamento de lavouras.
+É uma plataforma global de agricultura de precisão que utiliza imagens de satélite e inteligência artificial para simplificar o gerenciamento de lavouras.
 
 #### Funcionalidades relevantes
+
 | Funcionalidade | Como é realizada | Evidência/print | Observação de IHC |
 |---|---|---|---|
-| Mapeamento | Dividir o talhão em regiões de alto, médio e baixo potencial de rendimento para planejar onde investir mais insumos | ![Mapeamento OneSoil](../assets/02_concorrencia/Mapa_OneSoil.jfif) | A interface do mapa deve garantir alta densidade de informação visual e baixo esforço cognitivo: os talhões precisam ter delimitações gráficas distintas e carregamento de imagem de satélite em alta resolução, permitindo ao usuário navegar via geolocalização sem ambiguidades. |
-| Criação de mapas de precisão | Cria arquivos de configuração para que os tratores e pulverizadores apliquem quantidades diferentes de fertilizantes ou sementes em cada ponto do campo de acordo com a necessidade | ![Mapa OneSoil](../assets/02_concorrencia/Mapeamento_OneSoil.jfif) | A criação desses mapas de precisão deve garantir alta qualidade de informação visual de modo a ser específico ao mostrar as informações necessárias para cada um dos mapas |
-| Inspeção de Campo Otimizada | Direciona a equipe de campo exatamente para os pontos críticos da lavoura, economizando tempo de inspeção. | ![Interface OneSoil](../assets/02_concorrencia/Interface_OneSoil.png) | A interface de inspeção é otimizada para dispositivos móveis com alto contraste para visualização sob luz solar direta. O aplicativo permite o registro rápido de pragas e fotos com poucos cliques, oferecendo navegação por GPS em tempo real e funcionamento 100% offline |
-
+| Mapeamento | Dividir o talhão em regiões de alto, médio e baixo potencial de rendimento para planejar onde investir mais insumos | ![Mapeamento OneSoil](../assets/02_concorrencia/Mapa_OneSoil.jfif) | O print mostra delimitação/representação espacial; não demonstra baixo esforço cognitivo nem qualidade da navegação em campo. Investigar se P02 reconhece a área e o ponto registrado. |
+| Criação de mapas de precisão | Cria arquivos de configuração para que os tratores e pulverizadores apliquem quantidades diferentes de fertilizantes ou sementes em cada ponto do campo de acordo com a necessidade | ![Mapa OneSoil](../assets/02_concorrencia/Mapeamento_OneSoil.jfif) | O mapa de produtividade pertence a outra tarefa. Diferenciar visualmente regiões só é útil se houver dado e decisão agronômica correspondentes no CYF. |
+| Notas no contexto do mapa | O print apresenta mapa, pins de notas, navegação inferior, ação central, lista de notas, busca, filtro, cartões com miniatura e ações de criar rota, compartilhar e editar. | ![Interface OneSoil](../assets/02_concorrencia/Interface_OneSoil.png) | Investigar como reencontrar um registro e relacioná-lo a uma área no CYF. O print não comprova poucos toques, rapidez, legibilidade sob sol, GPS em tempo real ou funcionamento offline. |
 
 #### Experiência do usuário e opiniões
 
 - "Experimentei várias aplicações para mapas VRA, e a OneSoil destaca-se. A qualidade dos mapas VRA para a aplicação de azoto é a melhor entre as outras aplicações que experimentei. Tornou-se uma ferramenta indispensável."
 - "A OneSoil é uma plataforma que permite aos produtores tomar decisões informadas sem esforço, com uma utilização simples e interativa. O seu design intuitivo e as informações de dados abrangentes transformaram o nosso processo de tomada de decisões."
 - "A poupança é substancial. A OneSoil ajudou-nos a poupar 11 USD por hectare com a aplicação de taxa variável. Esta solução económica não só impulsionou os nossos resultados, como também promoveu práticas agrícolas sustentáveis."
-  
+
 #### Preço/modelo de negócio
 
 Uso para agricultores: As ferramentas básicas de monitoramento de lavouras via satélite, índices de vegetação (NDVI) e histórico de campos são gratuitas no aplicativo e na web.
@@ -186,14 +188,16 @@ Para empresas e parceiros: Soluções corporativas, de revenda de insumos ou pac
 #### Padrões e tendências percebidos
 
 - Há um padrão de mapeamento de talhões com informações relevantes onde, para que ele funcione, seguem um padrão automatizado baseado em inteligência artificial e imagens de satélite.
-- Há um padrão de interface de inspeção onde, para que ele funcione, seguem um padrão de interface limpa, com pouca poluição visual e poucos caminhos até chegar à funcionalidade requisitada e utilizam inteligência artificial para funcionalidade de inspeção
+- Na interface observada, pins e lista mantêm a relação espacial com o mapa; busca, filtro e detalhe permitem recuperar uma nota. A necessidade de rota e compartilhamento para P02 continua hipótese, e a imagem não demonstra uso de IA para inspeção de pragas.
 
 #### Pontos positivos, limitações e lições
 
 | Ponto | Evidência | Implicação para nosso projeto |
 |---|---|---|
 | Facilidade de visualizar mapas | A evidência disso são os relatos positivos apresentados no site e a funcionalidade apresentada nas fotos | Isso implica diretamente no nosso sistema de monitoramento e mapeamento a partir de inteligência artificial e imagens de satélite |
-| Facilidade ao usar o app |A evidência dessa facilidade está nos relatos dos clientes que já utilizaram o app e nas fotos que há na internet sobre | Isso implica diretamente no nosso app, onde utiliza uma interface característica para trabalhadores rurais utilizando inteligência artificial |
+| Recuperação de notas por área | `Interface_OneSoil.png` mostra pins, busca, filtros, lista e detalhe da nota | Testar se o inspetor encontra a vistoria e reconhece sua localização; não afirmar facilidade antes de observar usuários. |
+
+**Limite das evidências de C03:** os depoimentos acima são alegações promocionais sem autoria, data ou endereço individual indicado neste documento; não demonstram economia, facilidade ou satisfação de usuários do CYF. A captura estática não prova operação offline, contraste em campo ou eficiência. As imagens de produtividade e taxa variável pertencem a outra tarefa agronômica e não devem ser interpretadas como mapa de risco de ácaros.
 
 ## 3. Softwares que o público-alvo usa no cotidiano
 
@@ -225,8 +229,8 @@ Registre somente padrões encontrados nas soluções analisadas e que possam ter
 | Feedback/estado | Mapas com camadas e cores (observado) | Moldura verde com "Boa foto" ou branca com "Enquadre bem os danos causados" antes da captura; "Detectando cultura" e "Carregamento em processo" depois; resultado com "detectado automaticamente" (telas de uso) | Cores indicam regiões do talhão (observado) | Feedback imediato da ação; qualidade/distância do enquadramento é necessidade do TCC (alvo sub-milimétrico) |
 | Prevenção/recuperação de erro | Não demonstrado nas imagens analisadas | Parcial: mensagem "Enquadre bem os danos causados" quando não há planta, botão "X" para cancelar o processamento e confirmação antes do tratamento; erro de foto ruim não capturado | Não relatado claramente | Sem aprendizado de concorrente aqui. O travamento de foco/exposição (AE/AF Lock) e a distância mínima de foco vêm exclusivamente do **protocolo de captura do TCC** |
 | Terminologia | Termos técnicos agronômicos (híbrido, taxa variável) | Mensagens curtas e diretas ("Detectando cultura", "Enquadre bem os danos causados", "Confirmar e ver tratamento") | Mistura termos técnicos com simples | Investigar o vocabulário real do público antes de fixar a linguagem |
-| Acessibilidade | Botões grandes/alta legibilidade (relato de usuários) | Botão "Ouvir" visível no resultado (tela de uso) | Alto contraste (descrição do produto) | Legibilidade sob sol e áudio são hipóteses a validar com o público; não são requisitos |
-| Eficiência | Menu inicial enxuto (relato) | Diagnóstico em segundos (alegação do fornecedor; não medido) | Registro rápido (descrição do produto) | Minimizar etapas entre captura e resultado é objetivo próprio; as alegações de eficiência dos concorrentes não foram verificadas |
+| Acessibilidade | Botões grandes/alta legibilidade (relato de usuários) | Botão "Ouvir" visível no resultado (tela de uso) | Legibilidade sob sol não demonstrada no print | Legibilidade sob sol e áudio são hipóteses a validar com o público; não são requisitos |
+| Eficiência | Menu inicial enxuto (relato) | Diagnóstico em segundos (alegação do fornecedor; não medido) | Tempo de registro não medido | Minimizar etapas entre captura e resultado é objetivo próprio; as alegações de eficiência dos concorrentes não foram verificadas |
 
 ## 5. Recomendações derivadas
 
@@ -238,7 +242,7 @@ Cada recomendação registra **evidência observada → aprendizado → implica�
 | RC01 | Dar apoio ao enquadramento/qualidade da captura antes de registrar a foto | **Mista:** (a) padrão do Plantix, **comprovado em telas de uso**: moldura que muda de cor e mensagem conforme o conteúdo da câmera; (b) restrições técnicas do TCC (alvo submilimétrico, foco, distância, AE/AF Lock). **Não** comprovado que o Plantix meça foco ou distância | `plantix_enquadramento.jpeg`, `plantix_sem_enquadramento.jpeg`; protocolo de captura do TCC | Candidata a validar com usuários (padrão observado; necessidade técnica reforçada pelo TCC) |
 | RC02 | Priorizar contraste e tamanho de elementos legíveis em campo aberto | Hipótese de design a partir de contexto de uso (H30) e relatos sobre FieldView/OneSoil | **Característica visível:** contraste, tamanho relativo, hierarquia. **Benefício esperado (não validado):** melhor legibilidade sob sol — exige teste, relato ou documentação | Candidata a validar com usuários |
 | RC03 | Investigar leitura em áudio de resultados | Botão "Ouvir" visível em `plantix_diagnostico.jpeg` (tela de uso). O que ele lê não aparece no print | Existência do recurso observada; **não há evidência de que o público do projeto precise**: investigar dificuldade de leitura, mãos ocupadas, atenção dividida, preferência | Candidata a validar (hipótese de necessidade; **não é funcionalidade obrigatória**) |
-| RC04 | Funcionamento offline | **Decisão técnica já existente no TCC** (TensorFlow Lite embarcado); OneSoil apenas reforça a coerência com produtos agrícolas | `Interface_OneSoil.png` não mostra offline; vem da descrição do produto. A **sincronização posterior** não estava prevista: registrada como hipótese nova | Reforça decisão já existente (offline); sincronização = candidata a validar |
+| RC04 | Funcionamento offline | **Decisão técnica já existente no TCC** (TensorFlow Lite embarcado); a alegação de offline do OneSoil não é comprovada pelo print | `Interface_OneSoil.png` não mostra offline; vem da descrição do produto. A **sincronização posterior** não estava prevista: registrada como hipótese nova | Reforça decisão já existente (offline); sincronização = candidata a validar |
 | RC05 | Adotar convenções de representação espacial (pontos, regiões, cores, camadas) quando justificadas pela tarefa | Observação dos prints de FieldView e OneSoil | Prints confirmam o uso recorrente de mapas, regiões, polígonos, zonas coloridas, pontos, filtros e camadas. **Retirada** a afirmação de "zona de risco adjacente": o padrão visual não justifica um modelo de propagação/risco. Representação adequada depende de usuário, tarefa, decisão e significado agronômico (a investigar) | Candidata a validar com usuários |
 | RC06 | Evitar poluição visual em telas com muitos dados | Prints de FieldView (muita informação simultânea) + crítica de usuários ao menu de filtros longo | `Mapa_Marcacao.webp`, `relatorio.webp`, relatos da Apple Store | **Adotar como diretriz** — a verificar nas telas de mapa dos protótipos (Entregas 6, 11 e 13) |
 | RC07 | Ser transparente sobre o uso de dados de localização | **Fonte:** críticas de usuários e política de dados do Plantix (Play Store), não os prints. **Aprendizado:** localização é dado sensível para parte dos usuários. **Implicação:** comunicar finalidade de coleta, armazenamento e compartilhamento | Avaliações do Plantix na Play Store | Adotar como diretriz (princípio de transparência) |
@@ -250,11 +254,11 @@ Cada recomendação registra **evidência observada → aprendizado → implica�
 - Avaliações de usuários — Google Play Store (Plantix)
 - Capturas de tela de uso do Plantix (`plantix_enquadramento.jpeg`, `plantix_sem_enquadramento.jpeg`, `plantix_processamento_1.jpeg`, `plantix_processamento_2.jpeg`, `plantix_diagnostico.jpeg`): obtidas em 08/11/2026 no dispositivo Samsung Galaxy S26 Ultra.
 - OneSoil Platform. Disponível em: https://onesoil.ai/pt/solutions/farmers
-  
+
 ## Checklist
 
 - [x] O mapa inicial de alternativas da Entrega 1 foi revisitado e aprofundado.
-- [x] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade quando surgiram evidências.
+- [ ] Hipóteses relevantes sobre mercado/padrões foram atualizadas na rastreabilidade. — a matriz não foi fornecida nesta revisão.
 - [x] Há pelo menos uma análise completa por integrante.
 - [x] Cada análise contém prints legíveis da interface.
 - [x] Prints mostram telas/estados relevantes, não apenas logos/homepage (C02/Plantix agora usa telas de uso reais; resta o FieldView Drive, material promocional, identificado como tal).
