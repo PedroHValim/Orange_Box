@@ -83,6 +83,8 @@ Os códigos abaixo identificam estados da conversa. **Papel** indica o que foi f
 
 **Caminho principal:** A01 → A02 → A03 → A02 → A06 → A07 → A01. **Alternativas:** A02 → A05 → A02 para consultar o histórico; em A03, pedir nova foto quando a evidência for insuficiente. O botão de pedir nova foto foi incorporado ao detalhe, e a situação do parecer retorna à lista de pedidos, sem telas separadas para essas ações.
 
+**Formato dos desenhos:** as telas A01–A07 seguem o formato do aplicativo de celular (tela em retrato), porque nesta entrega o fluxo de P03 ainda era tratado como parte do app usado em campo. Com essa divisão, A02 (talhão), A03 (detecção) e A05 (histórico) ficam em telas separadas, e comparar a foto com o histórico exige trocar de tela, o que contraria o CTT T07 (Entrega 5), segundo o qual imagem, zoom e histórico precisam estar acessíveis na mesma tela. Por isso, na Entrega 11 o fluxo passa para o layout de computador (ver `RASTREABILIDADE.md`, Registro de mudanças de escopo, 22/10/2026).
+
 ![Protótipo em papel — pedidos, talhão e detecção](../assets/06_prototipos/prototipo_fluxo_2-1.jpeg)
 
 ![Protótipo em papel — área, parecer e histórico](../assets/06_prototipos/prototipo_fluxo_2-2.jpeg)
