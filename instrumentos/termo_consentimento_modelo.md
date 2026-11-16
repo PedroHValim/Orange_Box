@@ -45,3 +45,44 @@ Declaro que recebi informações sobre a atividade, pude fazer perguntas e conco
 **Data:** ____/____/________
 
 > Antes da aplicação, confirmar com o docente o contato institucional, a forma de aceite e o prazo de descarte. Não marcar este termo como assinado antes da participação.
+
+---
+
+# Termo de consentimento — teste do protótipo do agrônomo (P03)
+
+**Projeto:** CYF (Clean Your Farm) — painel de apoio ao parecer técnico sobre o ácaro-da-leprose em citros  
+**Atividade:** teste de usabilidade de um protótipo no Figma  
+**Responsável pela sessão:** Guilherme Morais Escudeiro  
+**Contato institucional:** o mesmo indicado no termo acima
+
+## Convite e objetivo
+
+Você está sendo convidado(a) a participar de um teste de usabilidade. Queremos compreender como um agrônomo ou técnico agrícola consulta suspeitas do ácaro registradas pelo campo, registra sua decisão e envia uma orientação ao gestor da propriedade, usando um protótipo. **Estamos avaliando o protótipo, não o seu conhecimento técnico.**
+
+O teste não avaliará a precisão do modelo de detecção nem a correção agronômica de qualquer decisão.
+
+## O que será solicitado
+
+A sessão individual durará aproximadamente **35 minutos**, presencialmente ou por videochamada, no seu computador. Você realizará três tarefas curtas no protótipo e responderá perguntas breves sobre a facilidade de uso e sobre o que entendeu das telas.
+
+Todos os dados do protótipo são fictícios: fazenda, pontos, fotos e parecer. O parecer exibido não será enviado a ninguém e não vale como recomendação agronômica nem substitui o receituário agronômico. Não solicitaremos dados, fotografias ou nomes de propriedades, clientes ou colegas, e pedimos que você não os cite.
+
+## Registros
+
+- [x] Não haverá gravação de tela, áudio ou vídeo. Na sessão remota, a tela compartilhada será vista apenas ao vivo.
+
+A equipe fará anotações sobre o uso do protótipo, incluindo conclusão das tarefas, tempo, dificuldades e comentários. Apenas a equipe e o docente terão acesso às anotações individuais. Os resultados divulgados serão anônimos, identificados por códigos como A1, A2 e A3. As anotações individuais serão apagadas até 30 dias após o fim da disciplina; até lá, você pode pedir a exclusão informando seu código.
+
+## Privacidade e voluntariedade
+
+Não registraremos seu nome nas planilhas de resultados. Se a instituição exigir assinatura neste termo, ele será guardado separadamente das anotações identificadas por código. Sua participação é voluntária: você pode deixar de responder uma pergunta, interromper uma tarefa ou encerrar a sessão a qualquer momento, sem justificar.
+
+## Consentimento
+
+Declaro que recebi informações sobre a atividade, pude fazer perguntas e concordo em participar nos termos acima.
+
+**Código do participante:** A__  
+**Forma de aceite:** ( ) assinatura ( ) aceite verbal registrado pelo moderador (sessão remota)  
+**Data:** ____/____/________
+
+> Não marcar este termo como aceito antes da participação.

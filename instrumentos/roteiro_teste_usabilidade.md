@@ -57,7 +57,81 @@ Aplicar UT01, UT02 e UT03 **nessa ordem**. Ler uma instrução por vez. As expli
 - **UT03:** verificar se encontra a vistoria recente, interpreta o resultado como informação experimental e não presume que o registro já foi enviado.
 
 **Tarefas de Pedro (P01):** {{manter o roteiro UT09, UT08 e UT04 definido por Pedro na Entrega 12}}  
-**Tarefas de Guilherme (P03):** {{preencher por Guilherme}}
+**Tarefas de Guilherme (P03):** ver o roteiro P03 abaixo.
+
+### Roteiro P03 — agrônomo (Guilherme Morais Escudeiro)
+
+**Versão planejada:** protótipo web no Figma, telas FA01–FA07 (Entrega 11), aberto no modo de apresentação  
+**Aplicador:** Guilherme Morais Escudeiro, com um colega da equipe anotando  
+**Participantes planejados:** três (códigos A1–A3), mais um piloto que não integra os resultados  
+**Duração prevista por sessão:** cerca de 35 minutos  
+**Modalidade:** presencial ou remota (Google Meet), no computador do participante
+
+**Antes da sessão**
+
+1. Abrir o link do protótipo em janela anônima e confirmar que abre sem pedir permissão. Na sessão remota, enviar o link só depois do consentimento.
+2. Conferir conexão, navegador e tela; ajustar o protótipo à tela.
+3. Preparar a planilha de observação com o código A__ e a modalidade da sessão.
+4. Separar as instruções de UT06, UT07 e UT05, sem mostrar objetivos ocultos ou critérios de sucesso.
+5. Disponibilizar o termo de consentimento. **Não haverá gravação de tela, áudio ou vídeo**; na sessão remota, a tela compartilhada é vista ao vivo e não é gravada.
+
+**Restauração entre sessões:** reiniciar o protótipo; o Figma não guarda as escolhas do participante.
+
+**Abertura padronizada (ler ao participante)**
+
+> Obrigado por participar. Você realizará algumas tarefas em um protótipo de um painel para agrônomos, enquanto observamos se as informações e os caminhos de uso estão claros. Estamos avaliando o protótipo, não o seu conhecimento técnico. Todos os dados são fictícios: a fazenda, os pontos, a foto e o parecer. A foto é apenas uma figura ilustrativa, e o parecer que aparecer não será enviado a ninguém nem vale como recomendação agronômica. Algumas partes da tela não respondem ao clique, porque o protótipo não está completo; isso não é erro seu. Você pode fazer perguntas, pular uma tarefa ou encerrar a participação a qualquer momento. Não faremos gravações e não registraremos seu nome; pedimos que não cite clientes, propriedades ou colegas. Antes de começar, você gostaria de esclarecer algo?
+
+Obter o consentimento **antes** do pré-teste e das tarefas.
+
+**Perfil pré-teste — P03 (registrar apenas)**
+
+1. Formação: ( ) engenheiro(a) agrônomo(a) ( ) técnico(a) agrícola ( ) outra: ____
+2. Tempo de atuação com citros: ( ) menos de 2 anos ( ) 2 a 5 anos ( ) 6 a 10 anos ( ) mais de 10 anos
+3. Atendimento às propriedades: ( ) remoto ( ) presencial ( ) misto
+4. Número aproximado de propriedades atendidas: ( ) 1 ( ) 2 a 5 ( ) 6 a 10 ( ) mais de 10
+5. Como recebe hoje os relatos do campo? ( ) WhatsApp ( ) e-mail ( ) visita ( ) outro: ____
+6. Usa mapas digitais no trabalho? ( ) sim ( ) não
+
+**Classificação do perfil:** ( ) agrônomo/técnico que orienta manejo em citros ( ) participante substituto  
+Se a pessoa for substituta, registrar essa limitação na análise; não apresentá-la como agrônomo consultor.
+
+**Tarefas — aplicar UT06, UT07 e UT05 nessa ordem**
+
+| ID | Preparação pelo aplicador | Instrução ao participante | O moderador pode esclarecer | O moderador não deve dizer |
+|---|---|---|---|---|
+| UT06 | Navegar até FA03 (detecção do ponto 3) antes de ler a instrução. Iniciar o cronômetro quando a tela estiver visível. | “Esta é a suspeita registrada na árvore L3-27 de um pomar que você atende. Antes de decidir qualquer coisa, descubra se já apareceu suspeita do ácaro nesse mesmo local em outras vistorias, quando e o que foi concluído.” | Que “local” é o mesmo ponto da árvore L3-27. | Onde está o histórico, o nome do quadro “Detecções anteriores” ou o botão “Ver histórico deste ponto”. |
+| UT07 | Reiniciar o protótipo em FA01. | “Jaime, dono da Fazenda Boa Vista, pediu sua opinião sobre uma área onde o pessoal do campo encontrou suspeitas do ácaro. Vá até a suspeita da árvore L3-27 e deixe registrada a sua decisão. Considere que, na foto, você reconheceria lesões do ácaro.” | Que a foto é ilustrativa e que o julgamento já é dado pelo cenário. Se o participante clicar em outro ponto sem resposta, que só a árvore L3-27 pode ser aberta neste protótipo. | Qual pedido abrir, que deve clicar no ponto 3, o rótulo “Confirmar” ou se deve abrir a avaliação da IA. |
+| UT05 | Antes da instrução, dizer: “Considere que você já avaliou os outros locais dessa área.” | “Agora indique onde deve ser feito o controle, confira sua orientação e faça-a chegar a Jaime.” | Que a área e os campos já vêm preenchidos neste protótipo e que o participante pode apenas conferi-los. | Que deve clicar em “Emitir parecer”, “Continuar” ou “Enviar ao gestor”, ou quais pontos entram na área. |
+
+**Para o aplicador, sem leitura ao participante:**
+
+- **UT06:** resposta esperada: três ocorrências anteriores (31/10 confirmada, 17/10 rejeitada, 03/10 confirmada). Parar o cronômetro na resposta (MU06: mediana ≤ 20 s).
+- **UT07:** verificar se abre o pedido do Talhão T12, chega ao ponto 3 e o registra como confirmado. Anotar se e quando abre a avaliação da IA (QA20) e cliques sem efeito (à parte, sem contar como erro).
+- **UT05:** em FA06, perguntar: “Quais locais entram na área de controle?” (esperado: 2, 3 e 5, e não o 4). Após FA01C, perguntar: “Jaime já recebeu sua orientação? Como você sabe?”. O tempo de UT07 + UT05 é só referência (MU07 não avaliada).
+
+A sessão é encerrada se UT07 e UT05 somarem 16 minutos, e a tarefa em andamento é registrada como não concluída.
+
+**Durante cada tarefa:** mesma regra de ajuda da seção 5 (dica só após dois pedidos ou cerca de um minuto sem progresso), distinguindo dica de interação de intervenção técnica (link do Figma ou conexão da sessão remota). Observar especialmente:
+
+- diferença entre “detectado pela IA” e “validado por” na tela da detecção;
+- leitura dos símbolos e da legenda (○ pendente, ● confirmado, × rejeitado);
+- percepção do aviso de que o ponto 4 continua pendente em FA06 e FA07;
+- leitura do retorno “parecer enviado” e da situação do pedido em FA01.
+
+**Pós-tarefa:** após UT06, UT07 e UT05, perguntar “Quão fácil foi realizar esta tarefa?” (1 = muito difícil; 7 = muito fácil) e “O que facilitou ou dificultou?”. A média por tarefa é comparada com MU09 (≥ 5,5).
+
+**Encerramento — perguntas pós-teste (sem indicar a resposta esperada)**
+
+1. “Qual a diferença entre um local que você já avaliou e um que ainda não avaliou?”
+2. “O que acontece com o local da árvore L5-11, para o qual foi pedida outra foto?”
+3. “Quais locais entram na área de controle?”
+4. “Jaime já recebeu sua orientação? Como você sabe?”
+5. “Em que momento você olhou a avaliação automática? Com uma foto real, ela influenciaria sua decisão?”
+6. “Faltou alguma informação para decidir a distância?”
+
+Agradecer, informar o código A__ para eventual retirada dos dados (até 30 dias após o fim da disciplina) e completar a planilha com limitações de perfil, modalidade e protótipo.
+
+**Condições para a análise:** comparar os resultados com MU04–MU09 conforme as adaptações da Entrega 12. Não afirmar que foram avaliados a validação dos cinco pontos, o desenho da área, o tempo do fluxo com cinco pontos (MU07) ou a recuperação após falha no envio: essas partes não estão no protótipo.
 
 ## 5. Durante cada tarefa
 

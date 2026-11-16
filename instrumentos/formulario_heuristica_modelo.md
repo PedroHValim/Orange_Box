@@ -83,3 +83,72 @@ A nota deve ser justificada pela **consequência observada ou plausível na tare
 **Limitações da inspeção:** {{por exemplo, ausência de GPS, modelo indisponível ou teste fora do pomar}}
 
 > A inspeção heurística não substitui o teste com participantes. Atualizar este formulário com evidências reais antes de marcar sua execução como concluída na Entrega 12.
+
+---
+
+# Formulário de avaliação heurística — P03, fluxo do agrônomo (telas FA)
+
+**Avaliador:** Guilherme Morais Escudeiro  
+**Perfil/fluxo avaliado:** P03 — agrônomo; validação a distância, área de aplicação e parecer (MoLIC M01)  
+**Versão planejada:** protótipo no Figma, telas FA01–FA07 (Entrega 11)  
+**Versão efetivamente examinada:** Figma, versão de ____/____/________  
+**Data da inspeção:** ____/____/________  
+**Computador/navegador:** ____
+
+**Telas a examinar:** FA01 (pedidos de parecer), FA02 (mapa do talhão), FA03 (detecção do ponto), FA05 (histórico), FA06 (área de aplicação), FA07 (parecer técnico).
+
+**Estados a examinar:** FA01V (nenhum pedido), FA01C (parecer enviado), FA02V (ponto validado), FA02R (retorno à revisão), FA02N (nova foto pedida), FA03A (foto ampliada e avaliação da IA), FA03E (falha ao registrar), FA05V (nenhuma detecção), FA06E (área ou campos inválidos), FA07E (falha no envio).
+
+> Esta inspeção avalia a comunicação e o uso da interface. Não determina se a IA identifica corretamente o ácaro nem se o parecer é agronomicamente correto. Todos os dados do protótipo são fictícios.
+
+## Procedimento
+
+1. Registrar a versão do arquivo e o navegador.
+2. Percorrer UT06, UT07 e UT05 da Entrega 12 no modo de apresentação.
+3. Examinar os estados acima pelo modo de apresentação ou, quando não estiverem ligados no caminho do protótipo, diretamente no arquivo, anotando de qual forma cada um foi examinado.
+4. Para cada possível problema, anotar a tela, o que aparece e a consequência para a tarefa do agrônomo.
+5. Criar **um único ID para cada problema distinto** (VA01, VA02...), relacionado a uma ou mais heurísticas.
+6. Atribuir severidade considerando frequência provável, impacto na tarefa e recuperação.
+7. Separar limitações do protótipo (quadros sem ligação, figura no lugar da foto) de problemas de design.
+
+## Cobertura
+
+| H | Heurística | Fluxos/estados a examinar em P03 | Violação? | IDs dos problemas |
+|---:|---|---|---|---|
+| 1 | Visibilidade do status do sistema | Situação de cada ponto (○ ● ×) e contagem em FA02; retorno após veredito (FA02V) e após pedir nova foto (FA02N); situação do pedido em FA01 após o envio (FA01C). | sim / não / não examinado | |
+| 2 | Compatibilidade sistema–mundo real | Termos “pedido de parecer”, “veredito”, “detectado pela IA”, “validado por”, “sinal forte/fraco”, “área de aplicação” para um agrônomo. | sim / não / não examinado | |
+| 3 | Controle e liberdade do usuário | “Voltar ao mapa do talhão”, “Encerrar revisão”, “Voltar à área de aplicação”, “Voltar e validar o restante”, acesso a pedidos e histórico pelo menu. | sim / não / não examinado | |
+| 4 | Consistência e padrões | Mesmos símbolos e cores de situação em FA01, FA02, FA03, FA05 e FA06; mesma posição dos botões de voltar. | sim / não / não examinado | |
+| 5 | Prevenção de erros | Aviso de pontos pendentes em FA06 (não bloqueia); só pontos confirmados como base da área; aviso do receituário em FA07. | sim / não / não examinado | |
+| 6 | Reconhecimento em vez de memorização | Detecções anteriores na própria FA03; filtro do histórico visível em FA05; resumo do parecer em FA07. | sim / não / não examinado | |
+| 7 | Flexibilidade e eficiência de uso | Atalho “Ver histórico deste ponto”; próximo ponto pendente em destaque; histórico pelo menu (busca sem filtro). | sim / não / não examinado | |
+| 8 | Estética e design minimalista | Densidade de informação em FA03 e FA07; avaliação da IA recolhida; legibilidade das tabelas de FA01 e FA05. | sim / não / não examinado | |
+| 9 | Reconhecer, diagnosticar e recuperar erros | FA03E, FA06E e FA07E: texto do erro, campo indicado e dados mantidos. | sim / não / não examinado | |
+| 10 | Ajuda e documentação | Legenda fixa em FA02; subtítulos de cada tela; explicação do veredito em FA03. | sim / não / não examinado | |
+
+## Pontos de atenção para verificar
+
+Os itens abaixo **não são violações confirmadas**; vêm do planejamento (Entrega 12, QA21) e só recebem ID se a inspeção encontrar evidência.
+
+- O aviso de pontos pendentes em FA06 não bloqueia o avanço. Fica claro que esses pontos ficam fora da área?
+- A situação do parecer aparece só na lista de pedidos (FA01). Fica claro, após o envio, que o pedido passou a “concluído”?
+- A avaliação da IA fica recolhida em FA03. Quem quer consultá-la a encontra?
+- A delimitação da área depende do mouse. Há alternativa por teclado (marcar os pontos em lista)?
+- A situação dos pontos é legível sem depender da cor (símbolo e texto)?
+
+## Problemas encontrados
+
+| ID | H | Tela/estado | Ação/condição | Problema observado | Consequência para a tarefa | Evidência | Severidade 0–4 | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---|---|---:|---|---|
+| VA01 | | | | | | | | | |
+
+Escala de severidade: a mesma do formulário de P02 acima. Para P03, nota 4 inclui levar o agrônomo a considerar ponto não confirmado dentro da área ou a supor que um parecer não enviado chegou ao gestor.
+
+## Síntese após a inspeção
+
+**Estados examinados no modo de apresentação / só no arquivo:** ____  
+**Quantidade de problemas por severidade:** 0: __ · 1: __ · 2: __ · 3: __ · 4: __  
+**Problemas a observar durante UT06, UT07 e UT05:** ____  
+**Limitações da inspeção:** protótipo com quadros prontos, figura no lugar da foto, avaliador que participou do projeto das telas.
+
+> A inspeção heurística não substitui o teste com participantes.
