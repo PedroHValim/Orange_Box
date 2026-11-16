@@ -18,8 +18,8 @@ Os perfis de inspeção e de administrador não têm protótipo no Figma: a inte
 **Arquivo editável:** código-fonte em <https://github.com/Cabral100/App_Orange_Box>, pasta `ios-native/`.  
 **Última verificação de permissão:** 14/11/2026 (repositório público).
 
-**Protótipo do fluxo do agrônomo (M01, telas FA):** <https://www.figma.com/proto/gvxtwmmYvnJVONwUOHOMVD/Orange-Box?node-id=10-1255>  
-**Arquivo editável (FA):** <https://www.figma.com/design/gvxtwmmYvnJVONwUOHOMVD/Orange-Box?node-id=10-1255>  
+**Protótipo do fluxo do agrônomo (M01, telas FA):** <https://www.figma.com/proto/gvxtwmmYvnJVONwUOHOMVD/Orange-Box>  
+**Arquivo editável (FA):** <https://www.figma.com/design/gvxtwmmYvnJVONwUOHOMVD/Orange-Box>  
 **Última verificação de permissão (FA):** 15/11/2026
 
 > Teste o link em janela anônima. O avaliador deve conseguir abrir o protótipo sem solicitar permissão.
