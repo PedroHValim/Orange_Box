@@ -1,7 +1,7 @@
 # Entrega 13 — Avaliação de IHC por inspeção heurística
 
 **Data:** 14/11/2026  
-**Status:** 🟨 em andamento — inspeção de Pedro registrada; inspeções de Lucas e Guilherme e consolidação da equipe pendentes.  
+**Status:** 🟨 em andamento — inspeções de Pedro e Guilherme registradas; inspeção de Lucas e consolidação da equipe pendentes.  
 **Responsabilidade:** 1 avaliação completa por integrante, sobre todas as telas/estados relevantes do projeto.
 
 ## Objetivo da atividade
@@ -47,10 +47,10 @@ Em TCCs técnicos, observe especialmente se a interface comunica o estado do pro
 | Item | Definição |
 |---|---|
 | Versão avaliada | Aplicativo CYF (Clean Your Farm) para iPhone, pasta `ios-native/` de <https://github.com/Cabral100/App_Orange_Box>, commit `a36785f`, de 12/11/2026. |
-| Telas/estados | Acesso (F01), Câmera (F02), Histórico (F03), Mapa (F04), Conta (F05) e Relatórios (F06), da Entrega 11. Inspecionados também, pelo código: ajuda da câmera, confirmação “Imagem capturada”, associação da foto ao talhão, detalhe da inspeção, detalhe do talhão (pulverização e armadilha), filtros do Mapa, do Histórico e dos Relatórios, exportação em PDF e exclusões. |
-| Fluxos | M02 (perfil de inspeção) e M03 (perfil administrador). O aplicativo não tem perfil de agrônomo (M01). |
-| Dispositivo/viewport | iPhone, com capturas de 738 × 1600 px. |
-| Avaliadores | Pedro (A03); {{Lucas — A01}}; {{Guilherme — A02}}. |
+| Telas/estados | Acesso (F01), Câmera (F02), Histórico (F03), Mapa (F04), Conta (F05) e Relatórios (F06), da Entrega 11. Inspecionados também, pelo código: ajuda da câmera, confirmação “Imagem capturada”, associação da foto ao talhão, detalhe da inspeção, detalhe do talhão (pulverização e armadilha), filtros do Mapa, do Histórico e dos Relatórios, exportação em PDF e exclusões. Telas FA do fluxo do agrônomo no Figma (Entrega 11): FA01–FA03, FA05–FA07 e seus estados. |
+| Fluxos | M02 (perfil de inspeção) e M03 (perfil administrador). O aplicativo não tem perfil de agrônomo; M01 foi inspecionado nas telas FA do Figma. |
+| Dispositivo/viewport | iPhone, com capturas de 738 × 1600 px; telas FA em layout de computador, com capturas de cerca de 1140 × 710 px. |
+| Avaliadores | Pedro (A03); {{Lucas — A01}}; Guilherme Morais Escudeiro (A02). |
 
 ## 3. Procedimento individual
 
@@ -80,9 +80,62 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 {{Seções 4, 5 e 6 de Lucas.}}
 
-## Avaliador A02 — {{Guilherme}}
+## Avaliador A02 — Guilherme
 
-{{Seções 4, 5 e 6 de Guilherme.}}
+**Autor(a):** Guilherme Morais Escudeiro — 24.123.005-1
+
+**Como a inspeção foi feita:** sobre as telas FA do fluxo do agrônomo (M01), prototipadas no Figma e registradas na Entrega 11: FA01, FA01V, FA01C, FA02, FA02V, FA02R, FA02N, FA03, FA03A, FA03E, FA05, FA05V, FA06, FA06E, FA07 e FA07E. Primeiro o fluxo `FA01 → FA02 → FA03 → FA02V → FA06 → FA07 → FA01C` foi percorrido inteiro, com os desvios para FA05 e os estados de vazio e de falha; depois cada tela foi inspecionada de novo com H1–H10. Os dados das telas são fictícios e as interações são simuladas por links entre quadros, então a inspeção avaliou a interface proposta, e não o modelo de detecção. Os pontos da Entrega 12 reservados à inspeção de P03 (QA21) foram incluídos. IDs V01–V13 são deste avaliador.
+
+### 4. Matriz de cobertura das 10 heurísticas
+
+| Heurística | Telas/fluxos examinados | Houve violação? | IDs dos achados | Exemplo de boa prática se não violada |
+|---|---|---|---|---|
+| H1 | FA01, FA01C, FA02, FA02V, FA02N | sim | V01 |  |
+| H2 | FA01, FA03, FA06, FA07 | não |  | A árvore aparece como “L3-27 (linha 3, posição 27)” e a dose como “30 mL / 100 L de água”, na forma usada no pomar e na receita (ver seção 6). |
+| H3 | FA01C, FA02V, FA02R, FA03E, FA06, FA07E | sim | V02, V03, V13 |  |
+| H4 | FA02, FA02N, FA03, FA03E, FA05, FA06, FA07 | sim | V04, V05, V06, V07 |  |
+| H5 | FA02, FA06, FA07 | sim | V08 |  |
+| H6 | FA02, FA03, FA05, FA06 | sim | V09 |  |
+| H7 | FA02, FA03, FA05, FA06 | sim | V10 |  |
+| H8 | Todas as telas FA | não |  | FA01 mostra só o que serve para escolher o foco: local, solicitante, pontos pendentes, situação e uma ação por linha (ver seção 6). |
+| H9 | FA03E, FA05V, FA06E, FA07E | sim | V11 |  |
+| H10 | Todas as telas FA | sim | V12 |  |
+
+### 5. Declaração de violações
+
+| ID | Heurística | Tela/estado | Problema observado | Evidência | Severidade | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---:|---|---|
+| V01 | H1 | FA01C, linha do Talhão T12 | Depois do envio, o pedido do T12 aparece como “Concluído”, mas a coluna de pendentes mostra “1 · nova foto pedida”. A linha não tem mais botão para abrir o pedido; só “Parecer enviado em 15/11”. Quando a nova foto do Ponto 4 chegar, a lista não mostra onde ela vai aparecer nem que ainda há algo a avaliar. | ![V01](../assets/13_heuristica/a02_v01.png) | 3 | Ocorre sempre que o agrônomo envia o parecer com uma nova foto pedida, caso previsto no fluxo (FA06 deixa seguir com pendentes). O ponto pode ficar sem avaliação, e o próprio parecer depende dele (“se a detecção for confirmada, avalio ampliar a área”). | Separar a situação do parecer (“enviado”) da situação do pedido; manter o pedido “aguardando nova foto”, com ação para abrir, e avisar quando a foto chegar. |
+| V02 | H3 | FA01C, pedidos concluídos | Depois de enviado, o parecer não pode ser aberto, revisto nem complementado: as linhas concluídas (T12 e T03) mostram só a data do envio. | ![V02](../assets/13_heuristica/a02_v02.png) | 2 | Afeta todo parecer enviado; um erro de dose ou de área só pode ser corrigido por fora do sistema, e o agrônomo não consegue consultar o que mandou ao gestor. | Tornar a linha concluída clicável, mostrando o parecer enviado, com opção de enviar uma correção ou um complemento ao gestor. |
+| V03 | H3 | FA06, desenho da área de aplicação | A área é marcada clicando os vértices no mapa (“Clique no mapa para marcar os vértices da área”), mas não há controle para desfazer o último vértice, mover um vértice ou apagar o desenho. | ![V03](../assets/13_heuristica/a02_v03.png) | 2 | Ocorre em todo parecer com área; um clique errado obriga a refazer o desenho sem saber como, e a área calculada (1,8 ha) vai para o parecer. | Acrescentar “desfazer vértice” e “limpar desenho” junto ao mapa e permitir arrastar os vértices. |
+| V04 | H4 | FA03 e FA03E, veredito | Sem veredito escolhido, “Confirmar” aparece como botão cheio verde-escuro, igual a uma ação principal. Quando o veredito está selecionado (FA03E), “Confirmar · selecionado” aparece mais claro. O estilo de “selecionado” e “não selecionado” fica invertido, e só “Confirmar” recebe destaque entre as três opções. | ![V04](../assets/13_heuristica/a02_v04.png) | 2 | Aparece em toda validação de ponto; o agrônomo não sabe se já há uma escolha feita, e o destaque pode induzir à confirmação sem análise, o que leva o ponto para a área de aplicação. | Mostrar as três opções do veredito com o mesmo peso visual e usar um único estilo, claramente mais forte, para a opção selecionada. |
+| V05 | H4 | FA03 e FA05 | Em FA03 a avaliação da IA do ponto atual fica recolhida (“Abra só se quiser comparar com o seu julgamento”), mas na mesma tela as detecções anteriores mostram “IA: sinal fraco/forte”, e em FA05 a coluna “Avaliação da IA” aparece aberta em todas as linhas, inclusive na do ponto pendente. | ![V05](../assets/13_heuristica/a02_v05.png) | 2 | Ocorre em todo ponto com histórico; a decisão de recolher a avaliação perde efeito, e o agrônomo não sabe qual é a regra. Não impede a tarefa. | Adotar uma regra única: recolher a avaliação da IA também no histórico enquanto o ponto estiver pendente, ou exibi-la em todos os lugares. |
+| V06 | H4 | FA02N, mapa e lista do talhão | Na lista, o Ponto 4 aparece como “Nova foto pedida”; no mapa, ele tem o mesmo símbolo dos pendentes, a legenda não tem esse estado e o contador soma o ponto aos “2 pendentes”. | ![V06](../assets/13_heuristica/a02_v06.png) | 2 | Ocorre sempre que uma nova foto é pedida; olhando o mapa, o agrônomo tenta validar de novo um ponto que só pode ser avaliado quando a foto chegar. | Dar ao estado “nova foto pedida” símbolo próprio no mapa e na legenda e mostrá-lo separado no contador. |
+| V07 | H4 | FA06, ações de voltar | A tela tem “‹ Voltar ao mapa do talhão” no topo e “‹ Voltar” junto de “Continuar”, que levam ao mesmo lugar (FA02) com rótulos diferentes. Em FA07, o botão equivalente diz para onde vai (“Voltar à área de aplicação”). | ![V07](../assets/13_heuristica/a02_v07.png) | 1 | Não causa perda de dados; o agrônomo pode achar que “‹ Voltar” leva à última detecção aberta. | Usar o mesmo rótulo nos dois botões (“Voltar ao mapa do talhão”), como já ocorre em FA07, ou manter só um. |
+| V08 | H5 | FA02, início da revisão | “Emitir parecer” é o botão principal da tela e fica ativo com 5 pendentes e 0 confirmados. Com nenhum ponto confirmado, o avanço só leva ao erro “nenhum ponto confirmado na área” (FA06E). | ![V08](../assets/13_heuristica/a02_v08.png) | 2 | Ocorre no início de toda revisão; o erro é recuperável, mas o botão de maior destaque leva a um caminho que ainda não pode dar certo. | Desativar “Emitir parecer” enquanto não houver ponto confirmado, explicando o motivo ao lado (“confirme ao menos um ponto”). |
+| V09 | H6 | FA05, coluna “Local” | A coluna “Local” aparece cortada (“Talhão ’”, “Árvore L:”). Com o filtro de local ativo, o local aparece no filtro; ao tocar em “Remover filtros” ou abrir o histórico pelo menu, as linhas de talhões e propriedades diferentes não se distinguem. | ![V09](../assets/13_heuristica/a02_v09.png) | 2 | Ocorre em todo uso do histórico sem filtro de local; o agrônomo precisa abrir cada detecção para saber de onde ela é. | Dar à coluna largura suficiente para propriedade, talhão e árvore, ou quebrar em duas linhas sem cortar. |
+| V10 | H7 | FA03, “Ponto 3 de 5” | A tela informa a posição na sequência (“Ponto 3 de 5”), mas não oferece “próximo” nem “anterior”. Para cada ponto, o agrônomo volta ao mapa (FA02V) e clica no ponto seguinte. | ![V10](../assets/13_heuristica/a02_v10.png) | 2 | Repete-se a cada ponto de cada pedido; em talhões com muitos pontos, o vai e volta ocupa boa parte da tarefa. Para quem prefere ver o mapa, o caminho atual continua útil. | Acrescentar “Próximo pendente ›” e “‹ Anterior” em FA03 e, depois de registrar o veredito, oferecer a opção de seguir direto ao próximo ponto. |
+| V11 | H9 | FA03E e FA07E | As mensagens de falha (“Falha ao registrar o veredito…”, “Falha no envio…”) mantêm os dados e pedem nova tentativa, mas não dizem a causa (sem conexão, sessão expirada, erro do servidor) nem o que fazer se a nova tentativa falhar. | ![V11](../assets/13_heuristica/a02_v11.png) | 2 | Raro, mas quando ocorre o agrônomo só pode repetir a mesma ação; se a falha persistir, não sabe se o problema é dele ou do sistema. | Informar a causa em linguagem simples e uma saída alternativa, como “sem conexão; o veredito fica salvo e será enviado quando a conexão voltar”. |
+| V12 | H10 | FA03A, FA03 e FA05, “sinal forte/fraco” | A avaliação da IA usa “sinal forte” e “sinal fraco” sem explicar o que distingue um do outro nem o quanto cada um costuma acertar. Nenhuma tela FA tem ajuda ou explicação desses termos. | ![V12](../assets/13_heuristica/a02_v12.png) | 2 | Aparece em toda detecção e no histórico; o agrônomo conhece a praga, mas não o modelo, e pode dar à indicação mais ou menos peso do que ela merece. | Acrescentar um ícone de informação junto a “Avaliação da IA”, explicando em uma ou duas frases o que é sinal forte e fraco e lembrando que a validação é do agrônomo. |
+| V13 | H3 | FA02V e FA02, pontos já validados | Depois de registrado, o veredito não pode ser desfeito nem alterado: no protótipo, os pontos confirmados ou rejeitados não abrem de novo a tela da detecção, e a mensagem “Ponto 2 validado por você: confirmado” não oferece “desfazer”. | ![V13](../assets/13_heuristica/a02_v13.png) | 3 | Um clique errado em “Confirmar” põe o ponto na área de aplicação, e um clique errado em “Rejeitar” tira um foco real do parecer; ocorre em toda validação, e o agrônomo não tem como corrigir pela interface. | Oferecer “desfazer” na mensagem após o veredito e permitir reabrir um ponto validado para alterar o veredito até o envio do parecer, registrando quem alterou. |
+
+**Qualidade do relato:** o problema deve ser observável e localizado. Evite “interface confusa” sem dizer **o que**, **onde**, **quando** e **para quem**.
+
+### 6. Boas práticas — heurísticas não violadas (atividade didática)
+
+| Heurística sem violação | Exemplo no sistema | Evidência | Por que atende |
+|---|---|---|---|
+| H2 | A árvore aparece como “L3-27 (linha 3, posição 27)”, a dose como “30 mL / 100 L de água” e o aviso “o parecer não substitui o receituário agronômico” acompanha o envio. | ![FA03](../assets/11_figma/fa03_deteccao.png) ![FA07](../assets/11_figma/fa07_parecer.png) | Usa a forma como o agrônomo localiza a planta no pomar e escreve a dose, e não termos do sistema; o aviso segue a regra da profissão. |
+| H8 | FA01 mostra, para cada pedido, só propriedade e talhão, solicitante, pontos pendentes e situação, com uma única ação por linha. | ![FA01](../assets/11_figma/fa01_pedidos.png) | Nada compete com a escolha do foco; detalhes de cada ponto ficam para FA02 e FA03. |
+
+### Síntese individual — Guilherme
+
+- **Total:** 13 problemas: 2 de severidade 3, 10 de severidade 2 e 1 de severidade 1. Nenhum de severidade 4.
+- **Por heurística:** H4 com 4; H3 com 3; H1, H5, H6, H7, H9 e H10 com 1 cada. H2 e H8 sem violação.
+- **Padrão recorrente:** os estados intermediários do ponto e do pedido (“nova foto pedida”, parecer enviado com ponto pendente) não aparecem do mesmo modo em todas as telas (V01, V06), e a regra de mostrar a avaliação da IA não é a mesma em todo o fluxo (V04, V05).
+- **Prioridade antes do teste com usuários:** V01, por deixar um ponto do foco sem avaliação; V13, por não permitir corrigir um veredito errado; V04 e V05, por influenciarem o veredito, que é o centro de M01.
+- **Pontos QA21 da Entrega 12:** o aviso de pontos pendentes em FA06 aparece também em FA07 e não foi registrado como violação; a situação do parecer em FA01 gerou V01 e V02; a avaliação recolhida em FA03 é fácil de achar pelo botão, mas gerou V05; a lista de pontos marcáveis em FA06 existe como alternativa ao desenho, e o foco por teclado não pode ser conferido nas capturas.
+- **Limitação:** inspeção feita sobre as capturas das telas FA, com conferência no protótipo do Figma de que um ponto validado não pode ser reaberto (V13).
 
 ## Avaliador A03 — Pedro
 
@@ -159,13 +212,13 @@ Problemas iguais ou muito semelhantes encontrados por avaliadores diferentes dev
 
 ## Checklist
 
-- [ ] Cada integrante fez uma inspeção completa e identificada. — feita por Pedro; faltam Lucas e Guilherme.
+- [ ] Cada integrante fez uma inspeção completa e identificada. — feitas por Pedro e Guilherme; falta Lucas.
 - [ ] Todas as telas/estados relevantes foram examinados.
 - [ ] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes.
 - [x] A inspeção avaliou a interface/protótipo, não o mérito técnico do algoritmo/modelo.
 - [ ] H1–H10 aparecem na matriz de cobertura de cada avaliador.
-- [x] Parte de violações contém apenas violações, sem “forçar” exemplos. — parte de Pedro.
-- [ ] Todo problema tem print/localização e contexto. — na parte de Pedro, seis achados ainda sem captura.
-- [x] Severidade possui justificativa, não apenas número. — parte de Pedro.
+- [x] Parte de violações contém apenas violações, sem “forçar” exemplos. — partes de Pedro e Guilherme.
+- [ ] Todo problema tem print/localização e contexto. — na parte de Pedro, seis achados ainda sem captura; na de Guilherme, todos com captura.
+- [x] Severidade possui justificativa, não apenas número. — partes de Pedro e Guilherme.
 - [ ] Recomendação resolve a causa ou reduz o impacto.
 - [ ] Achados duplicados foram consolidados ao final.
