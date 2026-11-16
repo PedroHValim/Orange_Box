@@ -399,6 +399,7 @@ Relatos podem apoiar ou contrariar hipóteses, mas não comprovam relações de 
 **Objetivo:** entender como o agrônomo consultor recebe relatos de campo, decide se há foco, compara com inspeções anteriores, dimensiona a área e repassa a recomendação, e quais informações e garantias precisaria para confiar em uma detecção feita por IA.<br>
 **Público:** agrônomos(as) e técnicos(as) agrícolas que orientam o manejo de pragas em citros (perfil P03).<br>
 **Duração estimada:** 30 a 40 minutos.<br>
+**Situação da aplicação:** instrumento e formulário de registro prontos, mas **a entrevista não foi aplicada** e não será aplicada nesta disciplina. Por isso, P03 permanece como **proto-persona**: H04, H07, H21 e H22 continuam abertas, e as decisões do fluxo do agrônomo (Entregas 8 a 11) são hipóteses de trabalho, não necessidades confirmadas com agrônomos.<br>
 **Justificativa da técnica:** o público é pequeno, especializado e com agenda de campo, o que torna um questionário com muitas respostas pouco viável. As dúvidas do C03 (Q1–Q5) pedem relatos de casos concretos e explicações de raciocínio técnico ("como você decide a área?"), que só aparecem com perguntas de aprofundamento. A entrevista complementa o questionário de Lucas, que cobre o trabalhador de campo, e permite cruzar as duas visões sobre o repasse dos achados (H21).
 
 #### Procedimento padronizado de aplicação

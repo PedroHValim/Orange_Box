@@ -72,7 +72,7 @@
 
 # Planilha de observação — P03, agrônomo (Guilherme Morais Escudeiro)
 
-> Criar uma cópia para cada participante (A1–A3). Preencher os resultados somente durante ou após a sessão; não antecipar sucesso, erros ou notas.
+> Usar uma planilha para o participante final (A1, que aparece como U03 na Entrega 14) e outra, separada, para o piloto. Preencher os resultados somente durante ou após a sessão; não antecipar sucesso, erros ou notas.
 
 **Participante:** A__  
 **Perfil:** ( ) agrônomo/técnico que orienta manejo em citros ( ) substituto  
@@ -135,4 +135,4 @@ Iguais às de P02 acima, com estas diferenças: **impedimento técnico** é falh
 **Limitações do perfil, modalidade ou protótipo:** ____  
 **Problemas a agrupar na análise de MU04–MU09 (por tela FA01–FA07):** ____
 
-> As planilhas dos participantes A1–A3 devem permanecer separadas. Publicar no repositório apenas a síntese anônima, conforme o consentimento.
+> A planilha do participante (A1) e a do piloto devem permanecer separadas. Publicar no repositório apenas a síntese anônima, conforme o consentimento.

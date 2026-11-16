@@ -29,7 +29,7 @@ Leia obrigatoriamente o [Guia para definir o escopo de IHC a partir do tema do T
 | Nome completo | Matrícula | GitHub | Responsabilidade principal |
 |---|---:|---|---|
 | Lucas Tonoli Cabral Duarte | 24.123.032-5 | Cabral100 | Responsabilidade principal |
-| Guilherme Morais Escudeiro | 24.123.005-1 | GMEscudeiro | Responsabilidade principal |
+| Guilherme Morais Escudeiro | 24.123.005-1 | GMEscudeiro | Fluxo do agrônomo: persona P03, cenário C03, MoLIC M01 e protótipo FA no Figma |
 | Pedro Henrique Ferreira Valim | 24.123.048-1 | PedroHValim | Responsabilidade principal |
 
 
@@ -112,12 +112,12 @@ O protótipo de IHC pode, portanto, funcionar como uma demonstração do potenci
 | 6 | [Prototipação em papel](docs/06_prototipacao_papel.md) | 1 protótipo integrado por equipe | 🟩 concluído |
 | 7 | [Coleta de dados e aspectos éticos](docs/07_coleta_dados.md) | soluções individuais + técnicas distintas; questionário entre as técnicas | 🟨 |
 | 8 | [Ciclo de vida e engenharia de usabilidade](docs/08_engenharia_usabilidade.md) | 1 solução consolidada por equipe |  🟨 |
-| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos |  🟨 |
+| 9 | [Modelo conceitual e design centrado na comunicação](docs/09_modelo_conceitual.md) | soluções individuais + consolidação de objetivos/signos | 🟩 concluído |
 | 10 | [MoLIC](docs/10_molic.md) | 1 diagrama completo por integrante |  🟨 |
-| 11 | [Protótipo no Figma](docs/11_figma.md) | 1 protótipo integrado por equipe, cobrindo fluxos modelados | 🟨 |
+| 11 | [Protótipo no Figma](docs/11_figma.md) | 1 protótipo integrado por equipe, cobrindo fluxos modelados |🟩 concluído |
 | 12 | [Planejamento da avaliação — DECIDE](docs/12_planejamento_avaliacao.md) | 1 plano consolidado por equipe | 🟨 |
 | 13 | [Avaliação heurística](docs/13_avaliacao_heuristica.md) | 1 avaliação completa por integrante, todas as telas/estados e 10 heurísticas | 🟨 |
-| 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | avaliação consolidada; nº de participantes finais = nº de integrantes | ⬜ |
+| 14 | [Avaliação por observação de usuários](docs/14_observacao_usuario.md) | avaliação consolidada; nº de participantes finais = nº de integrantes | 🟨 |
 
 > Se o docente definir quantidade diferente para a turma/semestre, a orientação da disciplina prevalece.
 

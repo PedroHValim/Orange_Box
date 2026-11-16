@@ -63,7 +63,7 @@ Aplicar UT01, UT02 e UT03 **nessa ordem**. Ler uma instrução por vez. As expli
 
 **Versão planejada:** protótipo web no Figma, telas FA01–FA07 (Entrega 11), aberto no modo de apresentação  
 **Aplicador:** Guilherme Morais Escudeiro, com um colega da equipe anotando  
-**Participantes planejados:** três (códigos A1–A3), mais um piloto que não integra os resultados  
+**Participantes planejados:** um participante final (código A1; U03 na Entrega 14), mais um piloto que não integra os resultados  
 **Duração prevista por sessão:** cerca de 35 minutos  
 **Modalidade:** presencial ou remota (Google Meet), no computador do participante
 

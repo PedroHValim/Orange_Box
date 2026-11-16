@@ -196,11 +196,10 @@ Retorno de P4: “nenhum ponto confirmado na área” ou “produto, dose ou per
 
 ![FA07E](../assets/11_figma/fa07_falha.png)
 
-Falha em P5: “falha no envio; parecer mantido para reenviar”. O pedido continua “pendente” em FA01 até o envio dar certo.
+Falha em P5: “falha no envio; parecer mantido para reenviar”. O pedido continua “pendente” em FA01 até o envio dar certo. Este estado foi desenhado, mas não está ligado ao caminho navegável do protótipo: “Enviar ao gestor” leva direto a FA01C (ver Entrega 12, seção “Diferenças entre o planejado e o protótipo FA”).
 
 > FA04 (pedir nova foto) e FA08 (situação do parecer) foram retiradas, assim como A04 e A08 no protótipo em papel (Entrega 6): o pedido de nova foto é um botão em FA03, e a situação do parecer aparece em FA01.
 
-> Documente também estados que muitas equipes esquecem: carregamento, vazio, confirmação, sucesso, erro, permissão negada, cancelamento, desfazer/voltar quando aplicável.
 
 ## Sistema visual e consistência
 
@@ -224,10 +223,10 @@ Verificação feita apenas pelas capturas, sem teste com tecnologias assistivas.
 
 **Telas FA (web, WCAG 2.2).** Verificação feita no Figma, sem teste com tecnologias assistivas.
 
-- **Contraste (1.4.3):** textos e botões ficam entre 5,1:1 e 6,6:1 (cinza sobre fundo claro, verde, âmbar, vermelho e branco sobre verde). Exceção: o laranja das detecções (“com detecção anterior”, “Região indicada pela IA” e o rótulo da área de aplicação) tem 3,1:1 com o branco e não atinge 4,5:1. É um ponto a corrigir.
+- **Contraste (1.4.3):** textos e botões ficam entre 5,1:1 e 6,6:1 (cinza sobre fundo claro, verde, âmbar, vermelho e branco sobre verde). Exceção: o laranja das detecções (“com detecção anterior”, “Região indicada pela IA” e o rótulo da área de aplicação) tem 3,1:1 com o branco e não atinge 4,5:1. É um ponto a corrigir na próxima versão; foi mantido na versão usada no teste da Entrega 14, que é a mesma inspecionada na Entrega 13 (decisão de 15/11/2026, registrada em `RASTREABILIDADE.md`).
 - **Uso da cor (1.4.1):** a situação da validação e a situação do pedido aparecem com símbolo e texto, além da cor.
 - **Texto alternativo (1.1.1):** a foto traz uma legenda com data, hora e árvore (“Foto original · 14/11/2026 09:35 · Árvore L3-27”), que serve de base para o texto alternativo na implementação.
-- **Teclado e foco (2.1.1, 2.4.7):** veredito, enviar e os filtros do histórico têm ordem de foco definida e foco visível. A delimitação da área sobre o mapa depende do mouse; a alternativa por teclado é marcar os pontos confirmados na lista de FA06. Os controles seguem a ordem de leitura da tela; o estado de foco visível não foi desenhado no Figma.
+- **Teclado e foco (2.1.1, 2.4.7):** veredito, enviar e os filtros do histórico têm ordem de foco definida e foco visível. A delimitação da área sobre o mapa depende do mouse; a alternativa por teclado é marcar os pontos confirmados na lista de FA06. Os controles seguem a ordem de leitura da tela; o estado de foco visível não foi desenhado no Figma e fica para a próxima versão, pois o teste da Entrega 14 é feito com mouse.
 - **Tamanho de alvo (2.5.8):** botões e pontos do mapa com pelo menos 24 × 24 px.
 - **Identificação de erros (3.3.1):** FA03E, FA06E e FA07E dizem em texto o que falhou; em FA06E, o aviso nomeia os campos vazios, e eles aparecem com borda vermelha.
 
@@ -245,7 +244,7 @@ Verificação feita apenas pelas capturas, sem teste com tecnologias assistivas.
 - [x] Estados de erro, feedback e recuperação foram prototipados. — no aplicativo e nas telas FA (FA02V, FA02N, FA03E, FA05V, FA06E, FA07E).
 - [x] Terminologia/signos são consistentes com Entrega 9.
 - [x] Componentes equivalentes se comportam de forma consistente.
-- [x] Fluxos críticos são clicáveis do início ao fim. — aplicativo funcional e telas FA ligadas no protótipo do Figma.
+- [x] Fluxos críticos são clicáveis do início ao fim. — aplicativo funcional e caminho principal das telas FA ligado no protótipo do Figma; o estado de falha no envio (FA07E) está desenhado, mas fora do caminho navegável.
 - [x] O protótipo está pronto para inspeção e testes, sem “links mortos” nas tarefas avaliadas.
 - [x] Dashboards, relatórios, históricos, filtros, administração e CRUDs presentes possuem justificativa rastreável.
 - [x] Estados de vazio, processamento, erro e recuperação foram considerados quando pertinentes.

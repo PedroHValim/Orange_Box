@@ -73,7 +73,7 @@ O recrutamento deve considerar as tarefas que cada pessoa realmente desempenha. 
 | U02 | Gestor, proprietário ou responsável por acompanhar talhões e decidir ações na fazenda. | Tomar ou apoiar decisões com base em inspeções, ocorrências e relatórios. | **Pedro** | {{recrutamento pendente}} |
 | U03 | Engenheiro(a) agrônomo(a) ou técnico(a) agrícola que orienta o manejo de pragas em propriedades de citros (persona P03, cenário C03). | Ter 18 anos ou mais e ter emitido ou orientado recomendação de manejo de pragas em citros nos últimos 12 meses (critério da Entrega 12). Excluídos integrantes da equipe e quem ajudou a produzir as telas FA. Se não houver agrônomo acessível, o substituto (por exemplo, estudante de agronomia) é identificado como proxy e não apresentado como agrônomo consultor. | **Guilherme** | {{recrutamento pendente}} |
 
-**Limite de escopo:** a versão documentada na Entrega 11 não possui perfil próprio de agrônomo. Portanto, não afirmar que o fluxo M01 de emitir parecer foi testado no aplicativo se esse fluxo não existir na versão avaliada. Guilherme pode conduzir um participante em tarefas disponíveis de inspeção, histórico, mapa ou relatório e registrar a diferença em relação à persona ideal.
+**Limite de escopo:** o aplicativo avaliado não possui perfil próprio de agrônomo. Portanto, não afirmar que o fluxo M01 de emitir parecer foi testado no aplicativo: ele é testado apenas no protótipo FA do Figma (Entrega 11), conforme a decisão abaixo.
 
 **Decisão de Guilherme para U03:** o fluxo M01 é avaliado no protótipo FA do Figma, e não no aplicativo, conforme planejado na Entrega 12. Os resultados de U03 valem para o protótipo e não indicam que o aplicativo tem esse fluxo. Ficam sem teste com U03 a validação dos cinco pontos (só o ponto 3 abre), o desenho da área (vem pronto), o tempo do fluxo completo (MU07) e a recuperação após falha no envio.
 
@@ -186,6 +186,8 @@ O moderador lê apenas a instrução da tarefa. Os nomes de controles e os camin
 
 ### U03 — participante acompanhado por Guilherme
 
+> **Situação:** o piloto e a sessão de U03 **ainda não foram realizados**. Os campos abaixo serão preenchidos somente depois da sessão, com o que for efetivamente observado. O protótipo FA será testado na versão inspecionada na Entrega 13, sem as correções lá apontadas (Entrega 12, QA21).
+
 **Perfil resumido e justificativa do perfil:** {{formação, faixa de tempo de atuação com citros, tipo de atendimento e como recebe relatos do campo, conforme o pré-teste do roteiro P03, sem nome real}}  
 **Participante proxy?** {{não / sim; se sim, informar a experiência real e que as conclusões não equivalem às de um agrônomo consultor}}  
 **Data e ambiente:** {{data; presencial ou remota (Google Meet); conexão, tamanho da tela, interrupções}}  
@@ -254,7 +256,7 @@ A Entrega 13 contém problemas identificados por inspeção; a tabela abaixo só
 
 Preencher após consolidar U01–U03:
 
-1. **Metas atingidas:** {{MU01–MU04, com numerador/denominador e evidência de cada tarefa}}.
+1. **Metas atingidas:** {{MU01–MU04, com numerador/denominador e evidência de cada tarefa}}. Para U03 (Guilherme): {{QA04, QA05, QA06, QA08 e QA09 classificadas como atingida, parcialmente atingida, não atingida ou não avaliada, com o valor individual de U03; QA07 não avaliada (tempo só de referência); QA19 e QA20 resumidas como evidência qualitativa}}.
 2. **Problemas recorrentes e perfis afetados:** {{IDs AU__, tarefas e participantes}}.
 3. **O que surpreendeu a equipe:** {{resultado efetivamente observado, inclusive diferenças em relação à avaliação heurística}}.
 4. **Mudanças prioritárias:** {{ação, responsável e artefato a alterar}}.

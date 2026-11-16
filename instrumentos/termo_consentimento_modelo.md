@@ -71,7 +71,7 @@ Todos os dados do protótipo são fictícios: fazenda, pontos, fotos e parecer. 
 
 - [x] Não haverá gravação de tela, áudio ou vídeo. Na sessão remota, a tela compartilhada será vista apenas ao vivo.
 
-A equipe fará anotações sobre o uso do protótipo, incluindo conclusão das tarefas, tempo, dificuldades e comentários. Apenas a equipe e o docente terão acesso às anotações individuais. Os resultados divulgados serão anônimos, identificados por códigos como A1, A2 e A3. As anotações individuais serão apagadas até 30 dias após o fim da disciplina; até lá, você pode pedir a exclusão informando seu código.
+A equipe fará anotações sobre o uso do protótipo, incluindo conclusão das tarefas, tempo, dificuldades e comentários. Apenas a equipe e o docente terão acesso às anotações individuais. Os resultados divulgados serão anônimos, identificados por código (por exemplo, U03). As anotações individuais serão apagadas até 30 dias após o fim da disciplina; até lá, você pode pedir a exclusão informando seu código.
 
 ## Privacidade e voluntariedade
 
