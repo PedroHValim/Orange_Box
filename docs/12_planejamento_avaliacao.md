@@ -202,6 +202,6 @@ Os critérios abaixo são definidos antes da coleta. Cada perfil terá seus resu
 - [x] Dados ou processamentos simulados no protótipo estão declarados; falta conferir a preparação no piloto.
 - [x] Tarefas vêm de objetivos/cenários relevantes.
 - [x] Critérios de sucesso foram definidos antes da coleta.
-- [ ] Questões práticas e éticas estão resolvidas — confirmar participantes, iPhone, permissões, amostra de teste e restauração dos dados (P01 e P02), além do acesso ao Figma (P03).
+- [ ] Questões práticas e éticas estão resolvidas — confirmar participantes, iPhone, permissões, amostra de teste e restauração dos dados (P01 e P02). P03: acesso ao Figma confirmado em 16/11/2026 (link abre em janela anônima, sem pedir permissão).
 - [ ] Instrumentos estão prontos antes das Entregas 13 e 14 — P02 e P03 adaptados nos modelos; falta incorporar P01.
 - [x] O plano diz como os dados serão analisados e apresentados.
