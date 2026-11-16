@@ -1,223 +1,187 @@
 # Entrega 7 — Coleta de dados, necessidades e aspectos éticos
 
-**Data:** 11/10/2026<br>
-**Status:** 🟨 em andamento — instrumentos preparados; formulário da entrevista (I02) criado; falta o formulário online do questionário (I01).
+**Data:** 11/10/2026  
+**Revisão:** 16/11/2026  
+**Status:** 🟩 concluída — planejamento e instrumentos documentados; coleta e análise de respostas ainda não realizadas.
 
 ## Objetivo da atividade
 
-Identificar necessidades e requisitos de IHC por meio de dados sobre usuários, tecnologia, conhecimento do domínio, tarefas, motivações e valores.
-
-**Base:** material da aula de Barbosa e Silva (2010).
+Planejar a coleta de dados para compreender os usuários e definir requisitos de IHC. Os instrumentos investigam o próprio usuário, sua relação com tecnologia, conhecimento do domínio, tarefas, motivações e valores, conforme Barbosa e Silva (2010).
 
 ## Para escopos de IHC derivados de TCC técnico
 
-O TCC já prevê uma interface. Mesmo assim, a coleta verificará se as tarefas, necessidades e condições atribuídas às personas correspondem à prática dos usuários.
+O TCC já prevê uma interface, mas isso não comprova que os perfis e as tarefas imaginados correspondam à rotina das fazendas. Os instrumentos investigam quem realiza cada atividade, quais ferramentas usa atualmente, que informações consulta e quais decisões toma.
 
-Se não houver acesso ao público previsto, discutir alternativas com o docente e registrar as limitações. Participantes substitutos não serão apresentados como usuários reais do campo.
+Se o público profissional previsto não estiver acessível, a equipe discutirá alternativas com o docente e registrará a limitação. Um participante substituto não será apresentado como equivalente ao profissional real.
 
 ## Hipóteses e lacunas prioritárias herdadas da Entrega 1
 
 | ID | Hipótese/lacuna | Evidência atual | Decisão que depende da resposta | Prioridade |
 |---|---|---|---|---|
-| H02 | Quem aplica o produto de controle pode ser outra pessoa, que passaria a aplicar só em pontos específicos. | Consequência provável apontada na Entrega 1, sem coleta. | Repasse explícito da decisão a quem aplica. | Média |
-| H03/H20 | Os usuários possuem diferentes níveis de leitura e familiaridade com aplicativos técnicos. | Hipóteses utilizadas na persona P02, sem coleta direta. | Linguagem, instruções e necessidade de ajuda. | Alta |
-| H04 | Não está confirmado quem decide no dia a dia onde e quando aplicar o produto (dono/gestor ou agrônomo). | Cenários C01/C03 e HTA T04/T05 assumem que o agrônomo recomenda e o dono decide [F24]. | Destinatário do parecer e do repasse da decisão. | Alta |
-| H05 | Não está confirmado como o acompanhamento da evolução do problema é feito hoje. | Hipótese da Entrega 1, retomada no cenário C01. | Necessidade e intervalo da visão de evolução entre ciclos. | Média |
-| H06 | Decidir onde aplicar o produto parece a atividade mais crítica. | Argumento da Entrega 1, sem coleta. | Prioridade do fluxo de decisão do gestor. | Alta |
-| H07 | O profissional precisa saber se há sinais da praga, em quais pontos, com que intensidade e se a situação exige ação imediata. | Necessidades da persona P03 e respostas hipotéticas do cenário C03 (Q2). | Conteúdo mínimo da detecção validada a distância. | Alta |
-| H08 | O cansaço pode prejudicar a atenção durante a inspeção. | Situação hipotética retomada no cenário C02. | Quantidade de etapas e apoio à continuidade da tarefa. | Alta |
-| H09/H22 | Pode ser necessário registrar locais inspecionados e consultar inspeções anteriores. | Necessidades propostas, ainda não confirmadas; GOMS T06 usa o histórico como base da comparação temporal. | Controle da rota, cobertura do ciclo e eventual histórico. | Alta |
-| H13/H14 | Fotos, mapas simples, alertas e uma visão geral ajudam o dono a entender a situação. | Hipóteses da Entrega 1 usadas na persona P01, sem coleta. | Densidade da visão do gestor e uso do mapa. | Média |
-| H21 | O dono/gestor acompanha a evolução do problema na propriedade. | Hipótese sobre a divisão de responsabilidades. | Destinatários e conteúdo do repasse. | Alta |
+| H02 | Quem aplica o produto pode ser uma pessoa diferente de quem decide. | Hipótese da Entrega 1, sem coleta. | Como registrar e repassar a decisão. | Média |
+| H03/H20 | Os usuários podem ter diferentes níveis de leitura e familiaridade com aplicativos. | Hipóteses usadas nas personas, sem coleta direta. | Linguagem, ajuda e navegação. | Alta |
+| H04 | Não está confirmado quem decide onde e quando aplicar: gestor, agrônomo ou ambos. | Cenários C01/C03 e tarefas T04/T05. | Destinatário do parecer e divisão de responsabilidades. | Alta |
+| H05 | Não está confirmado como a evolução da praga é acompanhada hoje. | Hipótese retomada no cenário C01. | Necessidade de comparação entre ciclos. | Média |
+| H06 | Decidir onde aplicar parece ser a atividade mais crítica do gestor. | Argumento da Entrega 1, ainda não investigado com usuários. | Prioridade do fluxo de decisão. | Alta |
+| H07 | O agrônomo pode precisar de localização, intensidade e evidências para emitir parecer. | Necessidades atribuídas à persona P03. | Conteúdo mínimo da detecção e do parecer. | Alta |
+| H08 | O cansaço pode prejudicar a atenção durante a inspeção. | Situação hipotética do cenário C02. | Quantidade de etapas e apoio à continuidade. | Alta |
+| H09/H22 | Pode ser necessário registrar áreas inspecionadas e consultar inspeções anteriores. | Necessidades propostas nas entregas anteriores. | Cobertura, rota e histórico. | Alta |
+| H13/H14 | Fotos, mapa simples, alertas e visão geral podem ajudar o gestor. | Hipóteses utilizadas na persona P01. | Conteúdo e densidade da visão do gestor. | Média |
+| H21 | O gestor acompanha a evolução da situação na propriedade. | Hipótese sobre responsabilidades. | Conteúdo e destinatário do repasse. | Alta |
 
-Experiência no domínio, vocabulário, motivações e preferências de aprendizagem também serão investigados, pois influenciam a compreensão e o uso da interface.
+As hipóteses continuam abertas até a coleta e a análise. A existência de perguntas sobre elas não constitui validação.
 
 ## Parte A — necessidades e requisitos de IHC
 
-> **Responsabilidade:** solução individual por integrante.
+**Responsabilidade:** solução individual por integrante.
 
-### A01 — Lucas
+### A01 — Lucas Cabral
 
-**Autor(a):** Lucas — 24.123.032-5
+**Autor:** Lucas Tonoli Cabral Duarte — 24.123.032-5
 
 #### Que dados coletar?
 
-| Grupo da aula | Dado/informação | Hipótese/lacuna relacionada | Por que é necessário / decisão de design |
+| Grupo | Dado/informação | Hipótese/lacuna | Por que coletar e qual decisão pode afetar |
 |---|---|---|---|
 | O próprio usuário | Função, idioma de leitura e facilidade para compreender instruções. | H03 | Definir linguagem e quantidade de texto. |
-| Relação com tecnologia | Acesso ao celular, aplicativos utilizados, autonomia e conexão em campo. | H20; condições de uso ainda pouco detalhadas. | Definir navegação, ajuda e funcionamento offline. |
-| Conhecimento do domínio | Tempo de experiência, forma de aprendizagem e comportamento diante de dúvidas sobre a praga. | Lacuna complementar sobre o conhecimento prático de P02. | Definir explicações e comunicação da incerteza. |
-| Conhecimento das tarefas | Frequência, controle da rota, erros, consequências, histórico e repasse dos achados. | H08/H09/H21/H22 | Organizar o fluxo, prevenir erros e apoiar o registro. |
-| Motivações e valores | O que considera importante no trabalho, preferência de aprendizagem e condições para adotar uma ferramenta. | H03/H20; lacunas sobre aprendizagem e adoção. | Definir orientação inicial e prioridades da interface. |
+| Relação com tecnologia | Acesso ao celular, aplicativos usados, autonomia e conexão em campo. | H20 | Definir navegação, orientação e funcionamento sem conexão. |
+| Conhecimento do domínio | Experiência na inspeção, aprendizagem e reação quando há dúvida sobre uma praga. | Lacuna sobre P02. | Definir explicações e comunicação da incerteza. |
+| Conhecimento das tarefas | Frequência da inspeção, controle do percurso, erros, histórico e repasse. | H08/H09/H21/H22 | Organizar o fluxo e prevenir perda ou interpretação errada de registros. |
+| Motivações e valores | Prioridades no trabalho, preferência para aprender e condições de adoção. | H03/H20 | Definir orientação inicial e prioridades da interface. |
 
-Não serão solicitados sexo, renda ou identificação da propriedade, pois não há uma decisão de design definida que justifique esses dados neste recorte.
+Não serão solicitados sexo, renda ou nome da propriedade, pois não há decisão de design neste recorte que justifique esses dados.
 
 #### De quem coletar?
 
 | Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
 |---|---|---|
-| Trabalhador de campo/pragueiro. | Ter 18 anos ou mais e ter realizado inspeção de pragas em citros nos últimos 12 meses. | Usuário da captura e do registro; corresponde à persona P02. |
+| Trabalhador de campo/pragueiro. | Ter 18 anos ou mais e ter realizado inspeção de pragas em citros nos últimos 12 meses. | Usuário da captura e do registro; persona P02. |
 
-**Amostra planejada:** 5 a 8 participantes por conveniência, buscando diferentes tempos de experiência quando possível.<br>
-**Limitação:** levantamento exploratório, sem representatividade estatística.
+**Amostra planejada:** 5 a 8 pessoas por conveniência, com diferentes tempos de experiência quando possível. A amostra é exploratória, sem representatividade estatística.
 
-**Quem utilizará o sistema?** Trabalhadores na captura; gestores e agrônomos na consulta dos resultados, conforme as personas propostas.
+**Quem utilizará o sistema?** Trabalhadores na captura; gestores e agrônomos na consulta dos resultados, conforme as personas propostas.  
+**Quem será afetado?** Trabalhadores da inspeção, responsáveis pelo manejo e gestores.  
+**Quem decide objetivos e funcionalidades?** A equipe e o orientador definem o escopo, considerando os dados coletados.  
+**Quem definiu os processos apoiados?** Será investigado quem orienta a inspeção e o manejo em cada propriedade.
 
-**Quem será afetado?** Trabalhadores da inspeção, responsáveis pelo manejo e gestores da propriedade.
-
-**Quem decide os objetivos e funcionalidades?** A equipe do projeto e o orientador definem o escopo, considerando as necessidades levantadas com usuários e stakeholders.
-
-**Quem definiu os processos apoiados?** Será investigado quem orienta a inspeção e o manejo na propriedade. A participação de gestores e agrônomos não será presumida como igual em todos os locais.
-
-O questionário de Lucas coleta a perspectiva do trabalhador. Informações sobre outros papéis precisarão de confirmação com os próprios responsáveis.
+O questionário de Lucas reúne a perspectiva do trabalhador. As atribuições de outros papéis precisarão ser confrontadas com os próprios profissionais.
 
 #### Aspectos éticos
 
-- **Autonomia:** explicar o estudo, solicitar consentimento e permitir recusa, perguntas em branco ou desistência.
-- **Não maleficência:** evitar constrangimento e exposição profissional; não aplicar durante atividades de risco nem diante do supervisor.
-- **Beneficência:** buscar melhorias na inspeção, sem prometer benefícios individuais ou eficácia do aplicativo.
-- **Justiça e equidade:** convidar pessoas com diferentes experiências e oferecer leitura assistida, sem excluir quem tem dificuldade digital.
-- **Minimização e privacidade:** não solicitar nome, telefone, CPF, propriedade ou coordenadas; evitar identificação de colegas nos relatos.
-- **Gravação:** não haverá áudio, vídeo ou fotografias dos participantes.
-- **Consentimento:** registrar a concordância no formulário antes das perguntas; apresentar os cuidados ao docente antes da aplicação.
-- **Armazenamento:** usar códigos R01, R02 etc. e manter respostas individuais em pasta restrita à equipe e ao docente.
-- **Divulgação:** publicar apenas sínteses anônimas; não colocar respostas brutas no repositório público nem compartilhá-las com empregadores.
-- **Descarte:** apagar os dados brutos até 30 dias após o encerramento da disciplina, mantendo apenas a síntese anônima.
-- **Retirada:** enquanto existirem dados individuais, permitir a exclusão mediante o código do participante.
+A participação será voluntária, com consentimento antes das perguntas. A pessoa poderá pular questões ou desistir. A aplicação não deverá ocorrer durante atividade de risco nem diante de um supervisor, para reduzir constrangimento e receio de exposição profissional.
+
+Não serão pedidos nome, telefone, CPF, identificação da propriedade ou coordenadas. O instrumento orienta a não mencionar colegas ou empregadores nos relatos. Não haverá áudio, vídeo ou fotografia do participante. Respostas individuais receberão códigos `R01`, `R02` etc. e ficarão em pasta restrita à equipe e ao docente, fora do repositório público. Apenas sínteses anônimas serão divulgadas.
+
+Os dados brutos serão apagados até 30 dias após o encerramento da disciplina. Enquanto os registros individuais existirem, o participante poderá solicitar exclusão informando seu código. Não serão prometidos benefícios individuais nem eficácia do aplicativo.
 
 ### A02 — Guilherme
 
-**Autor(a):** Guilherme Morais Escudeiro — 24.123.005-1
+**Autor:** Guilherme Morais Escudeiro — 24.123.005-1
 
 #### Que dados coletar?
 
-| Grupo da aula | Dado/informação | Hipótese/lacuna relacionada | Por que é necessário / decisão de design |
+| Grupo | Dado/informação | Hipótese/lacuna | Por que coletar e qual decisão pode afetar |
 |---|---|---|---|
-| O próprio usuário | Formação, tempo de atuação como consultor, quantidade de propriedades atendidas e se o atendimento é remoto, presencial ou misto. | H04; C03 Q1; persona P03 (atende várias propriedades, não está no campo). | Definir se a interface precisa agrupar alertas por propriedade (A01) e se o uso principal será no escritório ou em visita. |
-| Relação com tecnologia | Dispositivos usados para trabalhar (computador, celular, tablet), ferramentas atuais (WhatsApp, e-mail, planilhas, sistemas de gestão agrícola), uso de mapas digitais e conexão no escritório e em visitas. | H20 (aplicada ao agrônomo); persona P03 (experiência tecnológica moderada). | Definir plataforma do fluxo do agrônomo (Entrega 8), densidade de informação por tela e se o mapa é um recurso familiar ou precisa de apoio. |
-| Conhecimento do domínio | Sinais que usa para confirmar o ácaro e a leprose em uma foto, limitações de diagnóstico por imagem e quando exige ver o fruto pessoalmente. Opinião sobre usar um sinal automático (IA) como triagem. | H07; CTT T07 (confirmar, rejeitar ou pedir nova foto; possível viés de confirmação). | Definir o que a tela de detecção (A03) precisa mostrar, se o pedido de nova foto (botão em A03) basta sem informar motivo e se a avaliação da IA aparece antes ou depois do veredito. |
-| Conhecimento das tarefas | Como recebe hoje os relatos de campo, frequência, informações mínimas para um parecer, como compara com inspeções anteriores, como delimita a área de aplicação, como registra e repassa a recomendação e quanto tempo passa entre o achado e o parecer. | H07, H21, H22; C03 Q1–Q5; HTA T05, GOMS T06 (SR1: o agrônomo sabe o nome/código do talhão?). | Confirmar a ordem do HTA T05, a regra de seleção do GOMS T06 (M1/M2/M3), os metadados mínimos da detecção e o conteúdo do parecer (A06/A07). |
-| Motivações e valores | O que considera um parecer bem fundamentado, responsabilidade técnica pela recomendação, receios sobre decisões baseadas em IA e condições para confiar em dados enviados pelo campo. | H07; persona P03 (motivador: evitar aplicação incorreta ou desnecessária). | Definir como separar "detectado pela IA" de "validado por humano", que registro de autoria o parecer precisa ter e o que aumenta ou reduz a confiança no sistema. |
+| O próprio usuário | Formação, experiência, propriedades atendidas e atendimento remoto ou presencial. | H04; C03. | Agrupamento dos pedidos e contexto de uso. |
+| Relação com tecnologia | Equipamentos, mensagens, planilhas, sistemas e mapas usados no trabalho. | H20. | Plataforma e apresentação das informações. |
+| Conhecimento do domínio | Evidências necessárias para confirmar sinais em uma foto e limites do diagnóstico remoto. | H07. | Detalhe da detecção e alternativa de pedir nova foto. |
+| Conhecimento das tarefas | Recebimento dos relatos, consulta ao histórico, delimitação da área e repasse do parecer. | H07/H21/H22. | Ordem e conteúdo do fluxo A01–A07. |
+| Motivações e valores | Responsabilidade técnica, confiança na IA e condições para considerar um parecer fundamentado. | H07. | Separar indicação automática de validação humana. |
 
 #### De quem coletar?
 
 | Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
 |---|---|---|
-| Engenheiro(a) agrônomo(a) ou técnico(a) agrícola que orienta o manejo de pragas em propriedades de citros. | Ter 18 anos ou mais e ter emitido ou orientado recomendação de manejo de pragas em citros nos últimos 12 meses. | Usuário da validação remota e do parecer; corresponde à persona P03. |
+| Agrônomo ou técnico agrícola que orienta manejo de pragas em citros. | Ter 18 anos ou mais e ter orientado manejo de pragas em citros nos últimos 12 meses. | Persona P03, prevista para a validação e o parecer. |
 
-**Amostra planejada:** 3 a 5 entrevistas por conveniência, buscando profissionais que atendam propriedades diferentes e com tempos de experiência distintos, quando possível.<br>
-**Limitação:** levantamento exploratório, sem representatividade estatística; o público é pequeno e especializado, e o acesso depende de indicação.
+**Amostra planejada:** 3 a 5 entrevistas por conveniência. O acesso a especialistas pode limitar a amostra.
 
-**Quem utilizará o sistema?** O agrônomo consultor (P03) na validação das detecções e no parecer; o trabalhador de campo (P02) na captura e ao atender pedidos de nova foto; o dono/gestor (P01) ao receber o parecer e decidir o manejo.<br>
-**Quem será afetado?** O dono/gestor, que paga pela aplicação e decide com base no parecer; os trabalhadores que aplicam o produto [H02]; o próprio agrônomo, que responde tecnicamente pela recomendação; e, indiretamente, o ambiente, pela quantidade de defensivo aplicada (C03).<br>
-**Quem decide os objetivos e funcionalidades?** A equipe e o orientador definem o escopo da disciplina, a partir das necessidades levantadas. O agrônomo participa como fonte de requisitos sobre o que é suficiente para um parecer, mas não como decisor do escopo.<br>
-**Quem definiu os processos apoiados?** Será investigado. A hipótese é que o protocolo de inspeção (intervalo de cerca de 14 dias, pontos amostrados) seja definido ou orientado pelo agrônomo junto ao dono [F08], [H04], e que a decisão final de aplicar seja do dono [F24]. A entrevista verifica essa divisão.
+**Quem utilizará o sistema?** O agrônomo na avaliação e no parecer; o trabalhador na captura; o gestor ao receber a orientação.  
+**Quem será afetado?** Esses profissionais, quem aplica o produto e, indiretamente, a propriedade e o ambiente.  
+**Quem decide objetivos e funcionalidades?** Equipe e orientador, informados pelas necessidades levantadas.  
+**Quem definiu os processos apoiados?** Ainda precisa ser investigado; a divisão entre agrônomo e gestor é uma hipótese.
 
 #### Aspectos éticos
 
-A coleta precisa considerar aspectos éticos porque envolve pessoas e relatos sobre a própria atuação profissional: o agrônomo descreve recomendações, erros e clientes, e esses dados poderiam expô-lo ou identificar propriedades. Os cuidados abaixo seguem os princípios apresentados na aula (Barbosa e Silva, 2010).
+A entrevista pode envolver relatos de recomendações, erros e clientes. O entrevistador perguntará sobre processos, sem procurar culpados ou solicitar nomes de propriedades. O participante poderá pular perguntas, interromper a entrevista e pedir a retirada dos dados pelo código `E__`.
 
-- **Autonomia:** explicar objetivo, duração e uso dos dados antes de começar; pedir consentimento explícito; permitir que o participante pule perguntas, interrompa a qualquer momento ou peça a exclusão das respostas.
-- **Não maleficência:** a entrevista pede relatos de recomendações que deram errado (C03 Q5), o que pode expor o profissional. Por isso: perguntar sobre situações, não sobre culpados; não pedir nome de clientes ou propriedades; deixar claro que o objetivo é entender o processo, não avaliar a competência técnica de quem responde.
-- **Beneficência:** o participante pode receber, se quiser, a síntese anônima dos resultados. Não serão prometidos benefícios individuais nem acesso ao aplicativo.
-- **Justiça e equidade:** oferecer a entrevista on-line ou presencial e em horário escolhido pelo participante, para não excluir quem tem agenda de campo.
-- **Minimização e privacidade:** sem nome, e-mail ou telefone no registro de respostas; o contato para agendar fica separado das respostas e é apagado após a entrevista. Relatos que permitam identificar uma propriedade serão generalizados ("uma propriedade de médio porte").
-- **Gravação:** gravação de áudio apenas se o participante autorizar à parte, só para conferir anotações. Sem autorização, o registro é feito por anotações do entrevistador no formulário. Não haverá vídeo nem fotos do participante.
-- **Fotos de frutos:** se o participante mostrar imagens de casos reais, elas não serão copiadas nem publicadas; anota-se apenas o que ele descreveu.
-- **Consentimento:** registrado na primeira seção do formulário de registro (aceite lido em voz alta e confirmado), antes de qualquer pergunta. Os cuidados serão apresentados ao docente antes da aplicação.
-- **Armazenamento:** respostas identificadas por códigos E01, E02 etc., em pasta restrita à equipe e ao docente. Áudios, quando houver, ficam fora do repositório e são apagados assim que as anotações forem conferidas (até 7 dias após a entrevista).
-- **Divulgação:** apenas sínteses anônimas no repositório público.
-- **Descarte:** dados brutos apagados até 30 dias após o encerramento da disciplina, mantendo apenas a síntese anônima.
-- **Retirada:** enquanto houver dados individuais, o participante pode pedir a exclusão informando o código recebido no fim da entrevista.
+O contato para agendamento será mantido separado das respostas e apagado após a entrevista. O áudio só será gravado com autorização específica; sem autorização, serão feitas anotações. Áudios autorizados serão apagados após conferência das anotações, em até sete dias. Respostas individuais permanecerão em pasta restrita à equipe e ao docente, e dados brutos serão apagados até 30 dias após o encerramento da disciplina. Somente sínteses anônimas serão publicadas.
 
 ### A03 — Pedro
 
-**Autor(a):** Pedro Henrique Ferreira Valim — 24.123.048-1
+**Autor:** Pedro Henrique Ferreira Valim — 24.123.048-1
 
 #### Que dados coletar?
 
-| Grupo da aula | Dado/informação | Hipótese/lacuna relacionada | Por que é necessário / decisão de design |
+| Grupo | Dado/informação | Hipótese/lacuna | Por que coletar e qual decisão pode afetar |
 |---|---|---|---|
-| O próprio usuário | Função (dono, gerente ou administrador), tempo de participação nas decisões de manejo, número aproximado de talhões (em faixas) e quem mais participa da decisão. | H04; H21; C01 Q4 (quantos pragueiros atendem a propriedade). | Definir se a visão do gestor atende uma pessoa que decide sozinha ou em conjunto, e se a visão por talhão deve privilegiar lista ou mapa conforme o porte. |
-| Relação com tecnologia | Equipamentos e ferramentas usados para acompanhar a propriedade (celular, computador, mensagens, planilhas, anotações em papel, mapas), frequência de ajuda ao usar um aplicativo novo, uso de mapas digitais e qualidade da internet onde revisa as informações. | H20/H03 (persona P01: pouca experiência tecnológica); H14 (visão geral); H13 (mapas simples, alertas e ícones). | Definir plataforma e densidade da visão do gestor (Entrega 8), se o mapa é um recurso familiar ou precisa de apoio e quanta orientação inicial é necessária. |
-| Conhecimento do domínio | Que sinais da praga reconhece sozinho, o que significa para ele "foco" e "talhão com problema", como avalia se um relato é confiável e o que consegue conferir sem ajuda. | Persona P01 (baixo conhecimento técnico; depende da confiabilidade do sistema); C01 Q1 e Q5; lacuna sobre vocabulário. | Definir o vocabulário dos rótulos, que evidência (foto, grau de confiança, local) ele consegue interpretar e como comunicar a incerteza (G04). |
-| Conhecimento das tarefas | Como o resultado do ciclo chega, o que consulta, como sabe quais áreas foram inspecionadas, se compara com ciclos anteriores e onde guarda o histórico, que decisões toma e em que ordem, o que faz quando fica inseguro, como repassa a decisão a quem aplica e o que acontece quando decide com informação incompleta. | H04, H05, H06, H09/H22, H21, H02; C01 Q1–Q5; HTA T04, GOMS T08 (SR1) e CTT T09. | Confirmar a ordem do HTA T04, a regra de seleção do GOMS T08 (M1/M2/M3), se a cobertura precisa vir antes dos resultados (G01/G02), as saídas de G04 e o registro e o repasse da decisão (G07/G08). |
-| Motivações e valores | O que mais pesa na decisão de manejo (custo, rapidez, segurança da produção, impacto ambiental, disponibilidade de pessoas), o que o levaria a confiar ou desconfiar de um alerta automático, se prefere só ver os dados ou receber uma sugestão de prioridade e o que o faria adotar ou abandonar uma ferramenta. | Persona P01 (motivador: autonomia na detecção e no monitoramento); fronteira entre dado e recomendação em aberto (HTA T04, passo 3.1); H20. | Definir se G03 apenas ordena por dado ou sugere prioridade, como apresentar a confiança do resultado e quais prioridades e barreiras de adoção orientam a interface. |
+| O próprio usuário | Função, experiência com decisões de manejo e porte aproximado da propriedade em faixas de talhões. | H04/H21. | Adequação da visão do gestor e divisão das decisões. |
+| Relação com tecnologia | Equipamentos, mensagens, planilhas, mapas e qualidade da conexão. | H03/H13/H14/H20. | Plataforma, densidade das telas e orientação inicial. |
+| Conhecimento do domínio | Significado de foco, confiança em relatos e informações que consegue conferir sozinho. | Lacuna da persona P01. | Linguagem e apresentação da evidência. |
+| Conhecimento das tarefas | Recebimento do ciclo, cobertura, comparação, decisão e repasse. | H02/H04/H05/H06/H09/H22. | Ordem das telas e caminhos de decisão. |
+| Motivações e valores | Peso do custo, rapidez, segurança da produção, ambiente e confiança na IA. | H06/H20. | Prioridades da interface e limites de recomendações automáticas. |
 
-Não serão solicitados nome, idade, sexo, renda, valores de orçamento, nome ou localização da propriedade, nem nomes de funcionários, pois não há decisão de design definida que justifique esses dados neste recorte. O número de talhões é pedido apenas em faixas, para decidir entre lista e mapa.
+Não serão solicitados nome, renda, orçamento, localização da propriedade ou nomes de funcionários. O número de talhões será perguntado apenas em faixas.
 
 #### De quem coletar?
 
 | Perfil/stakeholder | Critério de inclusão | Relação com persona/público |
 |---|---|---|
-| Dono, gerente ou administrador de propriedade de citros que participa da decisão de manejo de pragas. | Ter 18 anos ou mais e ter participado de alguma decisão de manejo de pragas em citros (aplicar ou não, onde ou quando) nos últimos 12 meses. | Usuário da revisão do ciclo, da evolução entre ciclos e do registro da decisão; corresponde à persona P01. |
+| Dono, gerente ou administrador de propriedade de citros. | Ter 18 anos ou mais e ter participado de decisão de manejo de pragas em citros nos últimos 12 meses. | Persona P01, responsável por acompanhar resultados e decidir ações. |
 
-**Amostra planejada:** 3 a 5 sessões por conveniência, em propriedades diferentes quando possível.<br>
-**Limitação:** levantamento exploratório, sem representatividade estatística. A observação de uma decisão real depende de coincidir com um ciclo (cerca de 14 dias), o que pode reduzir a amostra; por isso a ficha prevê também a modalidade retrospectiva, sempre registrada.
+**Amostra planejada:** 3 a 5 sessões por conveniência. A observação de uma decisão real depende de coincidir com o ciclo de inspeção; quando isso não ocorrer, a modalidade retrospectiva será identificada.
 
-**Quem utilizará o sistema?** O dono/gestor (P01), na revisão do ciclo, na avaliação da evolução e na decisão de manejo; o trabalhador de campo (P02), cujos registros alimentam o resultado e que atende pedidos de reinspeção; o agrônomo (P03), quando o gestor pede um parecer.<br>
-**Quem será afetado?** O próprio dono, que arca com o custo da aplicação e com a perda de safra; os trabalhadores que inspecionam, que passam a ter o percurso visível ao gestor e podem sentir isso como controle ou cobrança (o C02 já aponta o receio de ser responsabilizado); os pragueiros e outros prestadores, cuja intermediação pode diminuir [F03]; os trabalhadores que aplicam o produto [H02]; o agrônomo; e, indiretamente, o ambiente.<br>
-**Quem decide os objetivos e funcionalidades?** A equipe e o orientador definem o escopo da disciplina, a partir das necessidades levantadas. O dono é fonte de requisitos sobre as decisões que toma e a informação de que precisa, mas não decide o escopo.<br>
-**Quem definiu os processos apoiados?** Será investigado. A hipótese é que o ritmo de inspeção (cerca de 14 dias) e o protocolo sejam definidos ou orientados pelo agrônomo junto ao dono [F08], [H04], que a inspeção seja conduzida pelo pragueiro e que a decisão final de aplicar seja do dono [F24]. A observação verifica essa divisão e se ela muda entre propriedades.
-
-O instrumento de Pedro observa o gestor. A perspectiva do trabalhador (questionário de Lucas) e a do agrônomo (entrevista de Guilherme) serão cruzadas na análise, principalmente sobre quem decide e como o resultado chega ao gestor (H21).
+**Quem utilizará o sistema?** Gestor, trabalhador e, quando solicitado, agrônomo.  
+**Quem será afetado?** Quem inspeciona, decide, recomenda ou aplica o produto. A visibilidade do percurso de inspeção também pode ser percebida como cobrança pelo trabalhador.  
+**Quem decide objetivos e funcionalidades?** Equipe e orientador, informados pelos dados.  
+**Quem definiu os processos apoiados?** A coleta investigará a divisão real de responsabilidades.
 
 #### Aspectos éticos
 
-- **Autonomia:** explicar objetivo, duração e uso dos dados antes de começar; pedir consentimento explícito; permitir que o participante pule perguntas, peça para deixar de ser observado, interrompa a sessão ou solicite a exclusão das anotações.
-- **Não maleficência:** a sessão acompanha uma decisão real de negócio, que pode expor falhas, valores e conflitos com funcionários. Por isso: o observador não interfere, não opina sobre o manejo nem corrige o participante, para não influenciar uma decisão que afeta a safra e o ambiente; não são registrados valores de orçamento nem preços; perguntas de esclarecimento só vêm depois da decisão; o objetivo é entender o processo, não avaliar o participante.
-- **Outras pessoas presentes:** se o pragueiro, um funcionário ou o agrônomo participar da conversa, só será registrado o que disserem se concordarem em ser observados. Sem a concordância, registra-se apenas o que o participante faz e pergunta, sem anotar a fala dos outros, para não expor quem relata os achados.
-- **Beneficência:** o participante pode receber, se quiser, a síntese anônima dos resultados. Não serão prometidos benefícios individuais, eficácia do aplicativo nem acesso a ele.
-- **Justiça e equidade:** a sessão ocorre no local e horário escolhidos pelo participante, sem exigir familiaridade com tecnologia; é oferecida a alternativa retrospectiva ou on-line para quem não puder receber o observador.
-- **Segurança:** se a sessão incluir visita ao talhão, seguir as regras de segurança da propriedade e não atrapalhar a operação.
-- **Minimização e privacidade:** sem nome, e-mail, telefone, nome ou localização da propriedade e sem nomes de funcionários; o contato para agendar fica separado das anotações e é apagado após a sessão. Registrar apenas o tipo de material usado (por exemplo, "mensagem de celular" ou "planilha"), nunca o conteúdo identificável. Propriedades são generalizadas ("propriedade de médio porte").
-- **Gravação:** sem áudio, vídeo ou fotografias de pessoas, telas, documentos, mensagens ou do local. O registro é feito apenas por anotações do observador na ficha.
-- **Consentimento:** apresentação lida em voz alta e aceite confirmado e marcado na ficha antes de qualquer observação ou pergunta. Os cuidados serão apresentados ao docente antes da aplicação.
-- **Armazenamento:** fichas identificadas por códigos O01, O02 etc., em pasta restrita à equipe e ao docente, fora do repositório público.
-- **Divulgação:** apenas sínteses anônimas no repositório público; sem respostas brutas e sem compartilhamento com empregadores ou outros participantes.
-- **Descarte:** dados brutos apagados até 30 dias após o encerramento da disciplina, mantendo apenas a síntese anônima.
-- **Retirada:** enquanto houver dados individuais, o participante pode pedir a exclusão informando o código recebido ao fim da sessão.
+Observar uma decisão de manejo pode expor custos, falhas, mensagens e funcionários. O observador não fotografará telas, documentos ou pessoas, não gravará áudio ou vídeo e não anotará nomes ou valores de orçamento. Explicará a atividade, obterá consentimento, respeitará a recusa de terceiros presentes e não interferirá na decisão profissional.
+
+A ficha receberá código `O__` e ficará em pasta restrita à equipe e ao docente. Os dados publicados serão anônimos; os registros individuais serão apagados até 30 dias após o encerramento da disciplina. A pessoa poderá interromper a observação e solicitar a exclusão de seus registros enquanto estiverem armazenados.
 
 ## Parte B — ferramentas de coleta
 
-> Cada integrante deve preparar uma técnica diferente. Questionário deve estar entre as técnicas escolhidas.
+Cada integrante preparou uma técnica diferente: questionário, entrevista semiestruturada e observação contextual. Os instrumentos completos seguem abaixo. **Esta entrega documenta o planejamento; não apresenta respostas coletadas.**
 
 ### Instrumento I01 — Questionário
 
-**Autor(a):** Lucas — 24.123.032-5<br>
-**Técnica:** questionário com perguntas abertas e fechadas.<br>
-**Ferramenta prevista:** Google Forms.<br>
-**Link:** pendente — inserir após criar o formulário.<br>
-**Objetivo:** investigar os cinco grupos de dados da aula no contexto da inspeção de citros.<br>
-**Público:** trabalhadores de campo/pragueiros.<br>
+**Autor:** Lucas Tonoli Cabral Duarte — 24.123.032-5  
+**Técnica:** questionário com perguntas abertas e fechadas.  
+**Ferramenta:** cópia textual abaixo, aplicável em papel ou em formato digital, por autopreenchimento ou leitura assistida.  
+**Acesso ao instrumento:** cópia integral abaixo; **formulário online não criado**.  
+**Objetivo:** investigar os cinco grupos de dados da aula no contexto da inspeção de citros.  
+**Público:** trabalhadores de campo/pragueiros.  
 **Duração estimada:** 20 a 25 minutos.
 
-**Justificativa da técnica:** permite aplicar as mesmas perguntas aos participantes e comparar respostas. As perguntas abertas complementam as alternativas, mas não substituem a profundidade de entrevistas ou observações.
+**Justificativa:** perguntas padronizadas permitem comparar respostas de mais trabalhadores. As perguntas abertas oferecem contexto, embora não tenham a profundidade de uma entrevista.
 
 #### Procedimento padronizado de aplicação
 
-1. Criar o formulário online com o conteúdo abaixo, sem solicitar nome, e-mail ou login. Testar as perguntas e o encerramento para quem não consentir ou não atender aos critérios.
-2. Combinar um momento adequado, atribuir um código ao formulário e apresentar objetivos, duração, riscos e cuidados com os dados.
-3. Solicitar consentimento e verificar os critérios de inclusão. Sem consentimento ou elegibilidade, encerrar e não utilizar as respostas.
-4. Aplicar as perguntas na ordem, permitindo que sejam puladas. Na leitura assistida, ler exatamente o texto e as opções, sem sugerir respostas; registrar a modalidade.
-5. Encerrar agradecendo e informar o código para eventual retirada. Remover identificadores dos relatos e armazenar os dados em pasta restrita.
+1. Preparar uma cópia impressa ou digital do instrumento abaixo, sem solicitar nome, e-mail ou login. Conferir a sequência e o encerramento para quem não consentir ou não atender à triagem.
+2. Combinar um momento adequado e atribuir o código `R__` à cópia.
+3. Ler a apresentação, obter consentimento e verificar a triagem. Sem consentimento ou elegibilidade, encerrar sem usar respostas.
+4. Aplicar as perguntas na ordem e permitir questões em branco. Na leitura assistida, ler o texto e as opções exatamente como escritos, sem sugerir respostas.
+5. Agradecer, informar o código para eventual retirada, remover identificadores acidentais e guardar as respostas em local restrito.
 
-**Importância do protocolo:** padroniza a aplicação entre integrantes e reduz diferenças causadas pela maneira de explicar ou perguntar.
+O procedimento padroniza a aplicação mesmo quando integrantes diferentes auxiliam na leitura.
 
 #### Instrumento
 
-**Código:** R__<br>
-**Data:** ____<br>
-**Aplicador:** ____<br>
+**Código:** R__  
+**Data:** ____  
+**Aplicador:** ____  
 **Modalidade:** ( ) Autopreenchimento ( ) Leitura assistida
 
-**Apresentação:**
+Esses campos são preenchidos **no momento de cada aplicação**, não na preparação do instrumento. O código identifica a resposta sem publicar o nome do participante.
 
-“Somos estudantes e queremos compreender como acontece a inspeção de pragas em citros. A participação é voluntária e dura aproximadamente 20 a 25 minutos. Não haverá gravação nem solicitação do seu nome ou da propriedade. Você pode pular perguntas ou parar a qualquer momento. Relatos podem causar desconforto; não identifique colegas ou empregadores. As respostas individuais ficarão restritas à equipe e ao docente. Serão divulgadas apenas sínteses anônimas. Não há benefício direto garantido. Os dados brutos serão apagados até 30 dias após o encerramento da disciplina; até lá, você poderá solicitar a retirada pelo código do formulário.”
+**Apresentação ao participante:**
 
-**Consentimento:** concorda em participar?<br>
-( ) Sim<br>
-( ) Não — encerrar.
+> Somos estudantes e queremos compreender como acontece a inspeção de pragas em citros. A participação é voluntária e dura aproximadamente 20 a 25 minutos. Não haverá gravação nem solicitação do seu nome ou da propriedade. Você pode pular perguntas ou parar a qualquer momento. Não identifique colegas ou empregadores nos relatos. As respostas individuais ficarão restritas à equipe e ao docente; serão divulgadas apenas sínteses anônimas. Não há benefício direto garantido. Os dados brutos serão apagados até 30 dias após o encerramento da disciplina. Até lá, você poderá solicitar a retirada pelo código do formulário.
+
+**Consentimento:** concorda em participar? ( ) Sim ( ) Não — encerrar.
 
 **Triagem:**
 
@@ -228,522 +192,393 @@ Se alguma resposta for “Não”, agradecer e encerrar.
 
 ##### Bloco 1 — O próprio usuário
 
-**1. Qual é sua função no trabalho de inspeção?**
+**1. Qual é sua função no trabalho de inspeção?**  
+Resposta: ____
 
-Resposta: __________________________________
+**2. Em qual idioma prefere ler instruções?**  
+Resposta: ____
 
-**2. Em qual idioma prefere ler instruções?**
-
-Resposta: __________________________________
-
-**3. Como considera a leitura de instruções no celular?**
-
-( ) Muito fácil<br>
-( ) Fácil<br>
-( ) Nem fácil nem difícil<br>
-( ) Difícil<br>
-( ) Muito difícil<br>
-( ) Não utilizo/não sei avaliar
+**3. Como considera a leitura de instruções no celular?**  
+( ) Muito fácil ( ) Fácil ( ) Nem fácil nem difícil ( ) Difícil ( ) Muito difícil ( ) Não utilizo/não sei avaliar
 
 ##### Bloco 2 — Relação com tecnologia
 
-**4. Qual é seu acesso a um celular para o trabalho?**
+**4. Qual é seu acesso a um celular para o trabalho?**  
+( ) Uso um celular individual ( ) Uso um celular compartilhado ( ) Não tenho acesso ( ) Outra situação: ____
 
-( ) Uso um celular individual.<br>
-( ) Uso um celular compartilhado.<br>
-( ) Não tenho acesso.<br>
-( ) Outra situação: __________
-
-**5. Quais aplicativos costuma utilizar e para quê?**
-
-Resposta: __________________________________<br>
+**5. Quais aplicativos costuma utilizar e para quê?**  
+Resposta: ____  
 ( ) Não utilizo aplicativos.
 
-**6. Ao realizar uma tarefa nova no celular, com que frequência precisa de ajuda?**
+**6. Ao realizar uma tarefa nova no celular, com que frequência precisa de ajuda?**  
+( ) Nunca ( ) Raramente ( ) Às vezes ( ) Frequentemente ( ) Sempre ( ) Não utilizo celular
 
-( ) Nunca<br>
-( ) Raramente<br>
-( ) Às vezes<br>
-( ) Frequentemente<br>
-( ) Sempre<br>
-( ) Não utilizo celular.
-
-**7. Como é o acesso à internet durante a inspeção?**
-
-( ) Disponível na maior parte do percurso.<br>
-( ) Disponível somente em alguns pontos.<br>
-( ) Raramente disponível.<br>
-( ) Não há acesso.<br>
-( ) Não sei/não utilizo.
+**7. Como é o acesso à internet durante a inspeção?**  
+( ) Disponível na maior parte do percurso  
+( ) Disponível somente em alguns pontos  
+( ) Raramente disponível  
+( ) Não há acesso  
+( ) Não sei/não utilizo
 
 ##### Bloco 3 — Conhecimento do domínio
 
-**8. Há quanto tempo realiza inspeções de pragas?**
+**8. Há quanto tempo realiza inspeções de pragas?**  
+( ) Menos de 1 ano ( ) De 1 a 5 anos ( ) Mais de 5 anos
 
-( ) Menos de 1 ano<br>
-( ) De 1 a 5 anos<br>
-( ) Mais de 5 anos
+**9. Como aprendeu a identificar sinais de pragas? Marque as opções aplicáveis.**  
+[ ] Curso ou treinamento  
+[ ] Orientação de colegas  
+[ ] Experiência prática  
+[ ] Materiais de consulta  
+[ ] Outra forma: ____
 
-**9. Como aprendeu a identificar sinais de pragas? Marque as opções aplicáveis.**
-
-[ ] Curso ou treinamento.<br>
-[ ] Orientação de colegas.<br>
-[ ] Experiência prática.<br>
-[ ] Materiais de consulta.<br>
-[ ] Outra forma: __________
-
-**10. O que costuma fazer quando não tem certeza se encontrou uma praga?**
-
-Resposta: __________________________________
+**10. O que costuma fazer quando não tem certeza se encontrou uma praga?**  
+Resposta: ____
 
 ##### Bloco 4 — Conhecimento das tarefas
 
-**11. Com que frequência realiza inspeções e qual é o volume aproximado de um dia típico?**
+**11. Com que frequência realiza inspeções e qual é o volume aproximado de um dia típico?**  
+Frequência: ____  
+Árvores por dia: ____  
+Frutos por árvore: ____  
+( ) Não sei estimar o volume
 
-Frequência: __________<br>
-Árvores por dia: __________<br>
-Frutos por árvore: __________<br>
-( ) Não sei estimar o volume.
+**12. Como controla os locais já inspecionados e os que ainda faltam?**  
+Resposta: ____  
+( ) Não faço esse controle
 
-**12. Como controla os locais já inspecionados e os que ainda faltam?**
+**13. Lembra de alguma dificuldade ou erro durante a inspeção nos últimos três meses?**  
+( ) Sim ( ) Não ( ) Não lembro  
+Se sim: o que aconteceu? ____  
+Quais foram as consequências? ____  
+Como a situação foi resolvida? ____
 
-Resposta: __________________________________<br>
-( ) Não faço esse controle.
+**14. Nos últimos três meses, precisou consultar uma inspeção anterior?**  
+( ) Sim ( ) Não ( ) Não lembro  
+Se sim: para quê? ____  
+Quais informações procurou? ____  
+Conseguiu encontrá-las? ____
 
-**13. Lembra de alguma dificuldade ou erro durante a inspeção nos últimos três meses?**
+**15. Quando encontra algo suspeito, como faz o repasse?**  
+Para qual função/profissional informa? ____  
+Qual meio utiliza? ____  
+Como identifica o local do achado? ____  
+Como sabe que a informação chegou? ____  
+*Não informar nomes de pessoas ou da propriedade.*
 
-( ) Sim ( ) Não ( ) Não lembro
-
-Se sim:<br>
-O que aconteceu? __________<br>
-Quais foram as consequências? __________<br>
-Como a situação foi resolvida? __________
-
-**14. Nos últimos três meses, precisou consultar uma inspeção anterior?**
-
-( ) Sim ( ) Não ( ) Não lembro
-
-Se sim:<br>
-Para quê? __________<br>
-Quais informações procurou? __________<br>
-Conseguiu encontrá-las? __________
-
-**15. Quando encontra algo suspeito, como faz o repasse?**
-
-Para qual função/profissional informa? __________<br>
-Qual meio utiliza? __________<br>
-Como identifica o local do achado? __________<br>
-Como sabe que a informação chegou? __________
-
-Não informar nomes de pessoas ou da propriedade.
-
-**16. Quem acompanha a evolução dos achados e quem decide as ações?**
-
-Função de quem acompanha: __________<br>
-Função de quem decide: __________<br>
-( ) Não sei.
+**16. Quem acompanha a evolução dos achados e quem decide as ações?**  
+Função de quem acompanha: ____  
+Função de quem decide: ____  
+( ) Não sei
 
 **17. Imagine que um aplicativo apresente as mensagens abaixo. O que cada uma significa para você e o que faria em seguida?**
 
-- “Sinal suspeito”: __________________________
-- “Nenhum sinal nesta foto”: _________________
-- “Resultado inconclusivo”: __________________
+- “Sinal suspeito”: ____
+- “Nenhum sinal nesta foto”: ____
+- “Resultado inconclusivo”: ____
 
 ##### Bloco 5 — Motivações e valores
 
-**18. O que considera mais importante para realizar bem seu trabalho de inspeção?**
+**18. O que considera mais importante para realizar bem seu trabalho de inspeção?**  
+Resposta: ____
 
-Resposta: __________________________________
+**19. Como prefere aprender a usar uma ferramenta nova? Marque as opções aplicáveis.**  
+[ ] Explicação de outra pessoa  
+[ ] Demonstração prática  
+[ ] Instruções escritas  
+[ ] Vídeo ou áudio  
+[ ] Experimentando a ferramenta  
+[ ] Outra forma: ____
 
-**19. Como prefere aprender a usar uma ferramenta nova? Marque as opções aplicáveis.**
+**20. O que levaria você a utilizar ou deixar de utilizar uma nova ferramenta de inspeção?**  
+Resposta: ____
 
-[ ] Explicação de outra pessoa.<br>
-[ ] Demonstração prática.<br>
-[ ] Instruções escritas.<br>
-[ ] Vídeo ou áudio.<br>
-[ ] Experimentando a ferramenta.<br>
-[ ] Outra forma: __________
-
-**20. O que levaria você a utilizar ou deixar de utilizar uma nova ferramenta de inspeção?**
-
-Resposta: __________________________________
-
-**Comentário adicional opcional:** __________________________
+**Comentário adicional opcional:** ____
 
 #### Como os dados serão analisados
 
-- Contar as respostas fechadas, informando o total válido e as perguntas não respondidas.
-- Agrupar respostas abertas pelos cinco grupos da aula.
-- Identificar vocabulário recorrente, dificuldades, necessidades e divergências.
-- Relacionar cada achado a uma decisão de interface.
-- Tratar preferências de aprendizagem como preferências relatadas, não como capacidades fixas.
-- Registrar a amostra alcançada e suas limitações, sem generalizar para todos os trabalhadores.
+Contar as respostas fechadas com o número de respostas válidas e não respondidas; agrupar as respostas abertas pelos cinco grupos da aula; identificar vocabulário, dificuldades e divergências; relacionar achados a decisões de interface. As preferências de aprendizagem serão tratadas como preferências relatadas, não como capacidades fixas. O tamanho e as limitações da amostra serão informados.
 
-| Hipótese/lacuna | Perguntas | Decisão de design relacionada |
+| Hipótese/lacuna | Perguntas | Decisão relacionada |
 |---|---|---|
-| H03/H20 | 2–7, 17 e 19 | Linguagem, ajuda, navegação e orientação inicial. |
-| H08 | 11 e 13 | Redução de esforço e apoio à continuidade da inspeção. |
-| H09/H22 | 12 e 14 | Controle da cobertura e necessidade de histórico. |
-| H21 | 15 e 16 | Responsabilidades e repasse dos achados. |
-| Conhecimento do domínio | 8–10 | Explicações e alternativas diante de dúvidas. |
-| Motivações e valores | 18–20 | Prioridades de uso e barreiras à adoção. |
+| H03/H20 | 2–7, 17 e 19 | Linguagem, ajuda e orientação inicial. |
+| H08 | 11 e 13 | Redução de esforço na inspeção. |
+| H09/H22 | 12 e 14 | Cobertura e histórico. |
+| H21 | 15 e 16 | Repasse e divisão de responsabilidades. |
+| Conhecimento do domínio | 8–10 | Explicações diante de dúvidas. |
+| Motivações e valores | 18–20 | Prioridades e barreiras à adoção. |
 
-Relatos podem apoiar ou contrariar hipóteses, mas não comprovam relações de causa. Por exemplo, o questionário não demonstra sozinho que o cansaço causa perda de focos.
+O questionário não demonstra, sozinho, que o cansaço causa perda de focos; respostas sobre essa relação serão tratadas como relatos.
 
 ### Instrumento I02 — Entrevista semiestruturada
 
-**Autor(a):** Guilherme Morais Escudeiro — 24.123.005-1<br>
-**Técnica:** entrevista semiestruturada individual, com roteiro fixo de perguntas e aprofundamentos opcionais.<br>
-**Ferramenta:** Google Meet (ou presencial) para a conversa; Google Forms como formulário de registro, preenchido pelo entrevistador durante a entrevista, com o consentimento na primeira seção.<br>
-**Link, quando aplicável:** [formulário de registro da entrevista (Google Forms)](https://docs.google.com/forms/d/e/1FAIpQLSf5wMcS9f6EITK4B8ClD9sns_RldjQfC5hsAIp1cqbP5VSh9w/viewform)<br>
-**Objetivo:** entender como o agrônomo consultor recebe relatos de campo, decide se há foco, compara com inspeções anteriores, dimensiona a área e repassa a recomendação, e quais informações e garantias precisaria para confiar em uma detecção feita por IA.<br>
-**Público:** agrônomos(as) e técnicos(as) agrícolas que orientam o manejo de pragas em citros (perfil P03).<br>
-**Duração estimada:** 30 a 40 minutos.<br>
-**Situação da aplicação:** instrumento e formulário de registro prontos, mas **a entrevista não foi aplicada** e não será aplicada nesta disciplina. Por isso, P03 permanece como **proto-persona**: H04, H07, H21 e H22 continuam abertas, e as decisões do fluxo do agrônomo (Entregas 8 a 11) são hipóteses de trabalho, não necessidades confirmadas com agrônomos.<br>
-**Justificativa da técnica:** o público é pequeno, especializado e com agenda de campo, o que torna um questionário com muitas respostas pouco viável. As dúvidas do C03 (Q1–Q5) pedem relatos de casos concretos e explicações de raciocínio técnico ("como você decide a área?"), que só aparecem com perguntas de aprofundamento. A entrevista complementa o questionário de Lucas, que cobre o trabalhador de campo, e permite cruzar as duas visões sobre o repasse dos achados (H21).
+**Autor:** Guilherme Morais Escudeiro — 24.123.005-1  
+**Técnica:** entrevista individual com perguntas principais e aprofundamentos opcionais.  
+**Ferramenta:** conversa presencial ou por Google Meet; registro pelo entrevistador em formulário.  
+**Formulário de registro:** [Google Forms da entrevista](https://docs.google.com/forms/d/e/1FAIpQLSf5wMcS9f6EITK4B8ClD9sns_RldjQfC5hsAIp1cqbP5VSh9w/viewform).  
+**Objetivo:** entender como o agrônomo recebe relatos, valida evidências, consulta histórico, delimita uma área e repassa o parecer.  
+**Público:** agrônomos ou técnicos agrícolas ligados ao manejo de pragas em citros.  
+**Duração estimada:** 30 a 40 minutos.  
+**Situação:** roteiro e formulário preparados; a entrevista **não foi aplicada** nesta disciplina. P03 permanece uma proto-persona, e suas necessidades não foram confirmadas com agrônomos.
 
 #### Procedimento padronizado de aplicação
 
-1. **Preparação:** criar o formulário de registro no Google Forms com as seções abaixo, sem campos de nome, e-mail ou login. Fazer uma entrevista piloto com um colega para ajustar tempo e redação. Agendar com o participante, enviando antes o texto de apresentação, e atribuir um código (E01, E02...).
-2. **Apresentação e consentimento:** ler o texto de apresentação, pedir o consentimento e, à parte, a autorização de gravação de áudio. Verificar os critérios de inclusão. Sem consentimento ou elegibilidade, encerrar sem registrar respostas.
-3. **Aplicação:** seguir os blocos na ordem. Fazer sempre a pergunta principal com o texto do roteiro; usar os aprofundamentos apenas quando a resposta não cobrir o ponto, sem sugerir respostas nem citar a solução da equipe antes do Bloco 6. Pedir exemplos de casos reais ("a última vez que..."), não opiniões gerais. Registrar no formulário, com as palavras do participante sempre que possível.
-4. **Encerramento:** perguntar se há algo não abordado, agradecer, informar o código para eventual retirada e oferecer o envio da síntese anônima.
-5. **Armazenamento e anonimização:** em até 48 horas, revisar as anotações, remover nomes de pessoas, clientes e propriedades, e conferir com o áudio (se houver), apagando-o em seguida. Guardar as respostas em pasta restrita à equipe e ao docente.
+1. Preparar o formulário sem nome, e-mail ou login; atribuir o código `E__`.
+2. Apresentar objetivo e duração, obter consentimento e autorização separada para áudio.
+3. Verificar a triagem; encerrar se não houver consentimento ou elegibilidade.
+4. Fazer as perguntas principais na ordem; aprofundar sem sugerir respostas e registrar as palavras do participante.
+5. Agradecer, revisar e anonimizar as anotações. Apagar áudio autorizado após conferência, em até sete dias.
 
 #### Instrumento
 
-**Código:** E__<br>
-**Data:** ____<br>
-**Entrevistador:** ____<br>
-**Modalidade:** ( ) On-line ( ) Presencial<br>
+**Código:** E__  
+**Data:** ____  
+**Entrevistador:** ____  
+**Modalidade:** ( ) On-line ( ) Presencial  
 **Gravação de áudio autorizada:** ( ) Sim ( ) Não
 
-**Apresentação:**
+**Apresentação:** explicar que o objetivo é compreender o trabalho, não avaliar a competência do profissional; participação voluntária, possibilidade de pular perguntas e desistir; não registrar nomes de clientes ou propriedades; áudio somente com autorização específica; divulgação apenas anônima; retirada possível pelo código enquanto houver dados individuais.
 
-"Somos estudantes da FEI e estamos estudando como agrônomos e técnicos acompanham o ácaro-da-leprose em citros, para projetar uma ferramenta de apoio. Queremos entender o seu processo de trabalho; não estamos avaliando o seu conhecimento técnico. A conversa leva cerca de 30 a 40 minutos. Não vamos registrar seu nome nem o nome das propriedades que você atende, e pedimos que não cite nomes de clientes ou colegas. Você pode pular perguntas ou parar a qualquer momento. Só gravamos o áudio se você autorizar, e ele será apagado depois de conferirmos as anotações. As respostas ficam restritas à equipe e ao docente; publicamos apenas um resumo anônimo. Os dados individuais serão apagados até 30 dias após o fim da disciplina, e até lá você pode pedir a exclusão pelo código desta entrevista."
+**Consentimento:** ( ) Sim ( ) Não — encerrar.  
+**Áudio:** ( ) Autorizado ( ) Não autorizado — prosseguir com anotações.
 
-**Consentimento:** concorda em participar? ( ) Sim ( ) Não — encerrar.<br>
-**Gravação:** autoriza a gravação apenas de áudio? ( ) Sim ( ) Não — seguir só com anotações.
-
-**Triagem:**
-
-- Tem 18 anos ou mais? ( ) Sim ( ) Não
-- Emitiu ou orientou alguma recomendação de manejo de pragas em citros nos últimos 12 meses? ( ) Sim ( ) Não
-
-Se alguma resposta for "Não", agradecer e encerrar.
+**Triagem:** tem 18 anos ou mais? ( ) Sim ( ) Não. Orientou manejo de pragas em citros nos últimos 12 meses? ( ) Sim ( ) Não. Se alguma resposta for “Não”, encerrar.
 
 ##### Bloco 1 — O próprio usuário
 
-**1. Qual é a sua formação e há quanto tempo trabalha com citros?**<br>
-Formação: ( ) Agronomia ( ) Técnico agrícola ( ) Outra: ____<br>
-Tempo com citros: ( ) Menos de 2 anos ( ) 2 a 5 anos ( ) 6 a 10 anos ( ) Mais de 10 anos
+**1. Qual é sua formação e há quanto tempo trabalha com citros?**  
+Formação: ( ) Agronomia ( ) Técnico agrícola ( ) Outra: ____  
+Tempo: ( ) Menos de 2 anos ( ) 2 a 5 ( ) 6 a 10 ( ) Mais de 10
 
-**2. Quantas propriedades você acompanha hoje e como é esse acompanhamento?**<br>
-Quantidade aproximada: ____<br>
-( ) Principalmente a distância ( ) Principalmente em visitas ( ) Misto<br>
-*Aprofundamento:* com que frequência visita cada propriedade?
+**2. Quantas propriedades acompanha e como ocorre o atendimento?**  
+Quantidade aproximada: ____  
+( ) Principalmente remoto ( ) Principalmente em visitas ( ) Misto  
+*Aprofundamento:* frequência das visitas.
 
 ##### Bloco 2 — Relação com tecnologia
 
-**3. Que equipamentos e ferramentas você usa para acompanhar as propriedades?**<br>
-[ ] Computador [ ] Celular [ ] Tablet<br>
-[ ] WhatsApp ou outro mensageiro [ ] E-mail [ ] Planilhas [ ] Sistema de gestão agrícola [ ] Mapas/imagens de satélite [ ] Outro: ____<br>
-*Aprofundamento:* em qual equipamento você costuma analisar fotos enviadas pelo campo? Por quê?
+**3. Que equipamentos e ferramentas usa para acompanhar as propriedades?**  
+[ ] Computador [ ] Celular [ ] Tablet [ ] Mensageiro [ ] E-mail [ ] Planilhas [ ] Sistema agrícola [ ] Mapa digital [ ] Outro: ____  
+*Aprofundamento:* em qual equipamento analisa fotos e por quê?
 
-**4. Você já usa mapas digitais da propriedade (talhões, pontos) no seu trabalho?**<br>
-( ) Sim, com frequência ( ) Às vezes ( ) Não<br>
-*Aprofundamento:* se sim, para quê? Se não, como localiza um talhão ou um ponto?
+**4. Usa mapas digitais de talhões e pontos?**  
+( ) Frequentemente ( ) Às vezes ( ) Não  
+*Aprofundamento:* como localiza um ponto quando não usa mapa?
 
-##### Bloco 3 — Conhecimento das tarefas (processo atual)
+##### Bloco 3 — Processo atual
 
-**5. Pense na última vez em que recebeu um relato de possível ácaro ou leprose. Como a informação chegou até você?**<br>
-Quem avisou (função): ____<br>
-Meio: ____<br>
-O que veio junto (fotos, local, data, quantidade): ____<br>
-*Aprofundamento:* isso é comum? Com que frequência acontece por mês?
+**5. Na última vez em que recebeu um relato de possível ácaro ou leprose, como a informação chegou?**  
+Função de quem avisou: ____ Meio: ____ Dados recebidos: ____  
+*Aprofundamento:* frequência desse tipo de relato.
 
-**6. Para dar um parecer em que você confia, quais informações são indispensáveis? E quais ajudam, mas não são obrigatórias?**<br>
-Indispensáveis: ____<br>
-Desejáveis: ____<br>
-*Aprofundamento:* o que costuma faltar? O que faz quando falta?
+**6. Quais informações são indispensáveis para um parecer confiável? Quais apenas ajudam?**  
+Indispensáveis: ____ Desejáveis: ____  
+*Aprofundamento:* o que costuma faltar?
 
-**7. Quando a informação não é suficiente, o que você faz?**<br>
-[ ] Ligo para quem está na propriedade [ ] Peço novas fotos [ ] Agendo visita [ ] Decido com o que tenho [ ] Outro: ____<br>
-*Aprofundamento:* quanto tempo isso costuma atrasar o parecer? Quando você pede uma nova foto, o que pede exatamente (outro ângulo, outro fruto, frutos vizinhos)?
+**7. O que faz quando as informações não bastam?**  
+[ ] Telefona [ ] Pede fotos [ ] Visita [ ] Decide com os dados disponíveis [ ] Outro: ____  
+*Aprofundamento:* atraso e orientação dada para a nova foto.
 
-**8. Você compara o caso atual com inspeções anteriores do mesmo local? Como?**<br>
-( ) Sim, sempre ( ) Às vezes ( ) Não<br>
-Onde busca: ____<br>
-*Aprofundamento:* você costuma lembrar o nome ou código dos talhões de cada propriedade, ou se orienta por outra referência (mapa, nome popular, ponto de referência)?
+**8. Compara o caso com inspeções anteriores do mesmo local? Como?**  
+( ) Sempre ( ) Às vezes ( ) Não  
+Onde busca: ____  
+*Aprofundamento:* lembra os códigos dos talhões ou usa outra referência?
 
-**9. Como você decide o tamanho da área em que recomenda a aplicação?**<br>
-Resposta: ____<br>
-*Aprofundamento:* já aconteceu de a área recomendada se mostrar maior ou menor do que o necessário? O que levou a isso e qual foi a consequência?
+**9. Como decide o tamanho da área em que recomenda uma aplicação?**  
+Resposta: ____  
+*Aprofundamento:* consequências de delimitar área maior ou menor que a necessária.
 
-**10. Como sua recomendação é registrada e chega a quem decide e a quem aplica?**<br>
-Meio: ____<br>
-Quem recebe (função): ____<br>
-Como sabe que foi recebida e seguida: ____<br>
-*Aprofundamento:* você guarda um histórico das recomendações que fez? Como?
+**10. Como registra e repassa a recomendação?**  
+Meio: ____ Função de quem recebe: ____  
+Como verifica o recebimento: ____  
+*Aprofundamento:* guarda histórico dos pareceres?
 
-**11. Quem decide de fato se e onde aplicar: você, o dono ou outra pessoa?**<br>
-Resposta: ____<br>
-*Aprofundamento:* quem define o protocolo de inspeção (intervalo, pontos amostrados)?
+**11. Quem decide se e onde aplicar: você, o dono ou outra pessoa?**  
+Resposta: ____  
+*Aprofundamento:* quem define o protocolo de inspeção?
 
 ##### Bloco 4 — Conhecimento do domínio
 
-**12. Por uma foto, o que permite afirmar que há ácaro ou leprose? O que só é possível confirmar vendo o fruto?**<br>
-Visível em foto: ____<br>
-Só presencialmente: ____
+**12. O que uma foto permite confirmar e o que exige ver o fruto presencialmente?**  
+Foto: ____ Presencialmente: ____
 
-**13. Quais erros de identificação são mais comuns (confusão com outra praga, doença ou dano)?**<br>
+**13. Quais erros de identificação são mais comuns?**  
 Resposta: ____
 
 ##### Bloco 5 — Motivações e valores
 
-**14. O que, para você, torna um parecer técnico bem fundamentado?**<br>
+**14. O que torna um parecer bem fundamentado?**  
 Resposta: ____
 
-**15. Imagine que um sistema indique automaticamente "possível ácaro" em uma foto. Em que situações você confiaria nessa indicação, e em quais não confiaria?**<br>
-Confiaria quando: ____<br>
-Não confiaria quando: ____<br>
-*Aprofundamento:* você preferiria ver a avaliação do sistema antes ou depois de olhar a foto? Por quê?
+**15. Em que situações confiaria ou não em um aviso automático de “possível ácaro”?**  
+Confiaria: ____ Não confiaria: ____  
+*Aprofundamento:* preferiria ver a avaliação da IA antes ou depois de analisar a foto? Por quê?
 
-**16. Que responsabilidade você sente ao assinar uma recomendação baseada em fotos enviadas por outras pessoas?**<br>
+**16. Que responsabilidade sente ao assinar recomendação baseada em fotos enviadas por outras pessoas?**  
 Resposta: ____
 
-##### Bloco 6 — Reação a conceitos (aplicar por último)
+##### Bloco 6 — Reação a conceitos; aplicar por último
 
-Mostrar ao participante, nesta ordem, a lista abaixo sem explicar a solução da equipe:
+Mostrar, sem explicar a solução da equipe: foto original, data e hora, localização no mapa, identificação da árvore, fotos anteriores, indicação automática, grau de confiança, observação do trabalhador e quantidade de pontos sinalizados.
 
-> Foto original do fruto · Data e hora da foto · Localização no mapa (talhão e ponto) · Identificação da árvore · Fotos anteriores do mesmo ponto · Indicação do sistema ("possível ácaro") · Grau de confiança do sistema · Observação de quem tirou a foto · Quantidade de pontos com sinal no talhão
+**17. Quais cinco informações usaria primeiro para validar um caso? Ordene.**  
+1. ____ 2. ____ 3. ____ 4. ____ 5. ____  
+Informação ausente: ____
 
-**17. Destas informações, quais você usaria para validar um caso? Ordene as cinco mais importantes.**<br>
-1. ____ 2. ____ 3. ____ 4. ____ 5. ____<br>
-Alguma informação está faltando? ____
-
-**18. Ao terminar a análise de um caso, o que você precisaria conseguir fazer em seguida?**<br>
+**18. Ao terminar a análise, o que precisaria conseguir fazer em seguida?**  
 Resposta: ____
 
-**Comentário adicional opcional:** ____
-
-**Encerramento:** "Obrigado pela participação. O código desta entrevista é E__. Se quiser retirar suas respostas, basta informar esse código à equipe até 30 dias após o fim da disciplina."
+**Comentário adicional:** ____
 
 #### Como os dados serão analisados
 
-- Revisar as anotações e organizar as respostas por bloco em uma tabela por participante (E01, E02...).
-- Fazer uma análise temática simples: marcar trechos com códigos ligados aos cinco grupos da aula e às hipóteses (H04, H07, H21, H22), e agrupar códigos repetidos entre participantes.
-- Para a pergunta 17, contar quantas vezes cada informação aparece entre as cinco mais importantes, apenas como indicação de prioridade (amostra pequena).
-- Registrar divergências entre participantes, sem forçar consenso, e comparar com o que os trabalhadores relatam no questionário de Lucas (perguntas 15 e 16) sobre o repasse dos achados.
-- Ligar cada achado a uma decisão de design e a uma tela do protótipo (A01–A03 e A05–A07), e marcar no `RASTREABILIDADE.md` se a hipótese ficou sustentada, refutada, refinada ou aberta.
-
-| Hipótese/lacuna | Perguntas | Decisão de design relacionada |
-|---|---|---|
-| H04 (quem decide no dia a dia) | 2, 11 | Destinatário do parecer e papel do agrônomo no fluxo (A07). |
-| H07 (informação necessária para decidir) | 5, 6, 12, 17 | Conteúdo mínimo da tela de detecção (A03) e metadados gravados na captura. |
-| H21 (quem acompanha a evolução) | 10, 11 | Repasse do parecer ao gestor e situação do pedido na lista (A01). |
-| H22 (necessidade de histórico) | 8, 10 | Decidir se o histórico precisa aparecer na tela da detecção (A03) ou se basta o histórico do talhão (A05). |
-| C03 Q1 e Q4 (frequência e atraso) | 5, 7 | Prioridade do fluxo do agrônomo e criticidade de T05 na Entrega 8. |
-| C03 Q2 e Q3 (informação mínima e como supre a falta) | 6, 7 | Pedido de nova foto (A03) e alternativa de visita. |
-| C03 Q5 (consequência de decidir mal) | 9 | Delimitação da área só com pontos confirmados (A06). |
-| GOMS T06, regra SR1 | 4, 8 | Se o histórico deve permitir busca por nome do talhão (M2) ou priorizar o mapa (M1) e o atalho a partir da detecção (M3). |
-| CTT T07, viés de confirmação | 15 | Mostrar a avaliação da IA antes ou depois do veredito (A03). |
-| Plataforma do fluxo do agrônomo | 3 | Computador, tablet ou celular (Entrega 8). |
-
-Relatos de poucos especialistas indicam práticas e necessidades plausíveis, mas não representam todos os agrônomos. Quando um único participante relatar algo, o achado fica como indício, não como fato.
+Organizar registros anônimos `E01`, `E02` etc.; codificar temas ligados a H04, H07, H21 e H22; comparar casos, divergências e informações priorizadas na questão 17. Confrontar o repasse descrito pelo agrônomo com as respostas dos trabalhadores às perguntas 15 e 16 do I01. Cada achado será ligado a uma decisão de design e registrado em `RASTREABILIDADE.md` após a aplicação. Como a entrevista não foi aplicada, nenhuma dessas hipóteses pode ser classificada como confirmada por I02.
 
 ### Instrumento I03 — Observação contextual
 
-**Autor(a):** Pedro Henrique Ferreira Valim — 24.123.048-1<br>
-**Técnica:** observação contextual, com acompanhamento silencioso da revisão do resultado do ciclo e da decisão de manejo, ficha padronizada de registro e perguntas de esclarecimento ao final.<br>
-**Ferramenta:** ficha de observação preenchida pelo observador, impressa ou digital, sem campos de identificação. Se for reproduzida em formulário online para facilitar a consolidação, não deve pedir nome, e-mail nem login.<br>
-**Link, quando aplicável:** não se aplica à ficha impressa; pendente, se o formulário online for criado.<br>
-**Objetivo:** observar como o dono/gestor recebe o resultado de um ciclo de inspeção, o que consulta, como verifica o que foi inspecionado, como compara com ciclos anteriores, em que ordem decide onde e quando aplicar o manejo e como registra e repassa a decisão, e que evidências o fariam confiar num alerta feito por IA.<br>
-**Público:** donos, gerentes ou administradores de propriedades de citros que participam da decisão de manejo (perfil P01).<br>
-**Duração estimada:** 45 a 60 minutos, sendo cerca de 10 minutos de perfil, 20 a 30 de observação, 10 a 15 de esclarecimentos e 5 de motivações.
+**Autor:** Pedro Henrique Ferreira Valim — 24.123.048-1  
+**Técnica:** acompanhamento da revisão do ciclo e da decisão de manejo, com ficha e esclarecimentos ao final.  
+**Ferramenta:** ficha impressa ou digital abaixo; formulário online não é necessário.  
+**Objetivo:** observar quais informações o gestor realmente consulta, em que ordem decide e como repassa a decisão.  
+**Público:** donos, gerentes ou administradores de propriedades de citros.  
+**Duração estimada:** 45 a 60 minutos.
 
-**Justificativa da técnica:** a decisão do gestor acontece em ciclos de cerca de 14 dias, no escritório, e é em boa parte tácita: o C01 descreve que ele decide "por impressão". Um questionário ou uma entrevista captam o que a pessoa diz fazer, e o dono pode não perceber, por exemplo, que não confere a cobertura ou que decide sem olhar o histórico. A observação mostra o que ele realmente consulta, pergunta e hesita em fazer, e os esclarecimentos ao final permitem comparar o observado com o relatado. A técnica complementa o questionário de Lucas (trabalhador) e a entrevista de Guilherme (agrônomo), e a persona P01 foi construída com base em "entrevista / observação".
+A observação complementa o que as pessoas dizem fazer nos outros instrumentos. Quando não for possível acompanhar uma decisão real, a sessão poderá reconstituir uma decisão anterior com os materiais que a pessoa normalmente usaria; essa modalidade será identificada como **retrospectiva**.
 
 #### Procedimento padronizado de aplicação
 
-1. **Preparação:** montar a ficha abaixo, sem campos de identificação. Fazer uma sessão-piloto com um colega que simule a revisão de um ciclo, para ajustar o tempo e a redação dos itens. Agendar com o participante, de preferência para um momento em que ele de fato vá revisar o resultado de um ciclo; enviar antes o texto de apresentação e atribuir um código (O01, O02...).
-2. **Apresentação e consentimento:** ler o texto de apresentação, pedir o consentimento e verificar os critérios de inclusão. Perguntar quem mais estará presente e obter a concordância dessas pessoas ou combinar que a fala delas não será registrada. Sem consentimento ou elegibilidade, encerrar sem registrar nada.
-3. **Aplicação:** preencher o Bloco 1 antes da observação. No Bloco 2, acompanhar em silêncio, sem sugerir, corrigir ou opinar sobre o manejo, e registrar na ficha, com as palavras do participante sempre que possível, o que ele faz, consulta, pergunta e comenta. Não pedir que "pense em voz alta"; registrar apenas o que ele já comentar espontaneamente. Se não houver uma decisão real no período, usar a modalidade retrospectiva (o participante reconstitui a última decisão com o material que tiver, e o observador registra o que ele consulta) e anotar a modalidade. Só depois da decisão fazer as perguntas do Bloco 3 e, por último, as do Bloco 4, sem apresentar a solução da equipe antes da pergunta 15.
-4. **Encerramento:** perguntar se há algo não abordado, agradecer, informar o código para eventual retirada e oferecer o envio da síntese anônima.
-5. **Armazenamento e anonimização:** em até 48 horas, revisar a ficha, remover nomes de pessoas, funcionários e propriedades, e guardá-la em pasta restrita à equipe e ao docente. Apagar o contato de agendamento.
+1. Preparar a ficha sem identificação pessoal, atribuir código `O__` e agendar a sessão, preferencialmente durante a revisão de um ciclo.
+2. Apresentar objetivos e cuidados éticos; obter consentimento do participante e respeitar a privacidade de terceiros presentes.
+3. Preencher o perfil mínimo. Observar sem corrigir, orientar ou opinar sobre o manejo; registrar ações e comentários espontâneos.
+4. Fazer as perguntas de esclarecimento somente depois da atividade; deixar a reação ao conceito de aplicativo para o final.
+5. Agradecer, anonimizar a ficha e armazená-la em pasta restrita.
 
 #### Instrumento
 
-**Código:** O__<br>
-**Data:** ____<br>
-**Observador:** ____<br>
-**Modalidade:** ( ) Observação de uma decisão real ( ) Retrospectiva<br>
-**Local:** ( ) Escritório da propriedade ( ) Outro local: ____ (sem identificar a propriedade)<br>
-**Outras pessoas presentes:** ( ) Ninguém além do participante ( ) Outras pessoas que concordaram em ser observadas ( ) Outras pessoas que não concordaram; registrar apenas o que o participante faz e pergunta<br>
+**Código:** O__  
+**Data:** ____  
+**Observador:** ____  
+**Modalidade:** ( ) Decisão real ( ) Reconstituição retrospectiva  
+**Local:** ( ) Escritório ( ) Outro: ____  
+**Outras pessoas presentes:** ____  
 **Início:** ____ **Término:** ____
 
-**Apresentação:**
+**Apresentação:** explicar que a equipe observará o processo de revisão e decisão, sem avaliar a competência do participante nem interferir no manejo; a duração é de 45 a 60 minutos; não haverá gravação ou fotografia; nomes, valores e identificação da propriedade não serão anotados; participação voluntária, divulgação anônima e possibilidade de retirada pelo código.
 
-"Somos estudantes da FEI e estamos estudando como quem cuida de propriedades de citros acompanha o ácaro-da-leprose e decide o manejo, para projetar uma ferramenta de apoio. Queremos observar como acontece, no seu dia a dia, a revisão do resultado da inspeção e a decisão sobre o que fazer; não estamos avaliando as suas decisões nem o trabalho de ninguém da propriedade. Vamos acompanhar em silêncio, sem interferir e sem dar opinião sobre o manejo, e depois faremos algumas perguntas. A sessão leva cerca de 45 a 60 minutos. Não vamos gravar áudio nem vídeo, nem fotografar pessoas, telas, documentos ou mensagens, e não vamos registrar o seu nome, o nome da propriedade, valores de orçamento ou nomes de funcionários. Você pode pular perguntas, pedir que paremos de observar ou encerrar a qualquer momento. As anotações ficam restritas à equipe e ao docente; publicamos apenas um resumo anônimo. Não há benefício direto garantido. Os dados individuais serão apagados até 30 dias após o fim da disciplina e, até lá, você pode pedir a exclusão pelo código desta sessão."
+**Consentimento:** ( ) Sim ( ) Não — encerrar.
 
-**Consentimento:** concorda em participar? ( ) Sim ( ) Não — encerrar.
+**Triagem:** tem 18 anos ou mais? ( ) Sim ( ) Não. Participou de uma decisão de manejo de pragas em citros nos últimos 12 meses? ( ) Sim ( ) Não. Se alguma resposta for “Não”, encerrar.
 
-**Triagem:**
+##### Bloco 1 — Perfil e tecnologia
 
-- Tem 18 anos ou mais? ( ) Sim ( ) Não
-- Participou de alguma decisão de manejo de pragas em citros (aplicar ou não, onde ou quando) nos últimos 12 meses? ( ) Sim ( ) Não
+**1. Qual é sua função?**  
+( ) Dono ( ) Gerente/administrador ( ) Outra: ____
 
-Se alguma resposta for "Não", agradecer e encerrar.
+**2. Há quanto tempo participa das decisões de manejo?**  
+( ) Menos de 2 anos ( ) 2 a 5 ( ) 6 a 10 ( ) Mais de 10
 
-##### Bloco 1 — Perfil e relação com tecnologia (antes da observação)
+**3. Quantos talhões há aproximadamente?**  
+( ) Até 10 ( ) 11 a 30 ( ) Mais de 30 ( ) Não sei
 
-**1. Qual é a sua função na propriedade?**<br>
-( ) Dono ( ) Gerente ou administrador ( ) Outra: ____
-
-**2. Há quanto tempo participa das decisões de manejo de pragas?**<br>
-( ) Menos de 2 anos ( ) De 2 a 5 anos ( ) De 6 a 10 anos ( ) Mais de 10 anos
-
-**3. Quantos talhões a propriedade tem, aproximadamente?**<br>
-( ) Até 10 ( ) De 11 a 30 ( ) Mais de 30 ( ) Não sei
-
-**4. Que equipamentos usa para acompanhar a propriedade?**<br>
+**4. Que equipamentos usa?**  
 [ ] Celular [ ] Computador [ ] Tablet [ ] Outro: ____
 
-**5. Que ferramentas usa para receber e guardar informações da propriedade?**<br>
-[ ] WhatsApp ou outro mensageiro [ ] E-mail [ ] Planilhas [ ] Caderno ou anotações em papel [ ] Sistema de gestão agrícola [ ] Mapas ou imagens de satélite [ ] Outro: ____
+**5. Que ferramentas usa para receber e guardar informações?**  
+[ ] Mensageiro [ ] E-mail [ ] Planilhas [ ] Caderno [ ] Sistema agrícola [ ] Mapas [ ] Outro: ____
 
-**6. Ao usar um aplicativo novo, com que frequência precisa de ajuda?**<br>
-( ) Nunca ( ) Raramente ( ) Às vezes ( ) Frequentemente ( ) Sempre ( ) Não utilizo aplicativos
+**6. Com que frequência precisa de ajuda para usar um aplicativo novo?**  
+( ) Nunca ( ) Raramente ( ) Às vezes ( ) Frequentemente ( ) Sempre ( ) Não uso aplicativos
 
-**7. Você usa mapas digitais da propriedade (talhões, pontos)?**<br>
-( ) Sim, com frequência ( ) Às vezes ( ) Não<br>
-*Aprofundamento:* se sim, para quê? Se não, como localiza um talhão ou um ponto?
+**7. Usa mapas digitais da propriedade?**  
+( ) Frequentemente ( ) Às vezes ( ) Não  
+Se não, como localiza talhões e pontos? ____
 
-**8. Como avalia o seu conhecimento sobre a praga e seus sinais?**<br>
-( ) Reconheço os sinais no fruto ou na planta<br>
-( ) Reconheço alguns, mas confirmo com outra pessoa<br>
-( ) Não reconheço; dependo de outras pessoas
+**8. Como avalia seu conhecimento sobre a praga?**  
+( ) Reconheço os sinais ( ) Reconheço alguns, mas confirmo com outra pessoa ( ) Dependo de outras pessoas
 
-**9. Como é a internet no local onde costuma revisar as informações da propriedade?**<br>
+**9. Como é a internet no local onde revisa os dados?**  
 ( ) Estável ( ) Instável ( ) Raramente disponível ( ) Não sei
 
-##### Bloco 2 — Observação da revisão do resultado e da decisão
+##### Bloco 2 — Registro da observação
 
-Registrar, para cada item, o que foi observado, com as palavras do participante e o horário aproximado. Marcar "não ocorreu" quando o comportamento não aparecer.
+Marcar o que ocorreu e anotar ações, falas espontâneas e horário aproximado. Separar observação de interpretação.
 
 | Item | O que observar | Registro |
 |---|---|---|
-| O1 | Como o resultado do ciclo chega: meio, quem avisa, momento e nível de detalhe. | ____ |
-| O2 | O que o participante pergunta ou pede a quem relata. | ____ |
-| O3 | Que informações ou materiais consulta (mensagens, fotos, anotações, planilhas, mapa). | ____ |
-| O4 | Se verifica quais áreas foram inspecionadas e como. | ____ |
-| O5 | Se compara com ciclos anteriores e onde busca essa informação. | ____ |
-| O6 | Sinais de dúvida sobre o relato e o que faz diante dela (ligar, pedir foto, ir ao talhão, pedir parecer). | ____ |
-| O7 | Que decisões toma e em que ordem aparecem (onde, em que ordem, quando, mão de obra). | ____ |
-| O8 | Como registra ou repassa a decisão e a quem. | ____ |
-| O9 | Termos que usa e termos que confunde (talhão, foco, ciclo, pragueiro, inspeção). | ____ |
+| O1 | Como e por quem chega o resultado do ciclo. | ____ |
+| O2 | O que o gestor pergunta a quem relata. | ____ |
+| O3 | Que mensagens, fotos, planilhas, mapas ou outros materiais consulta. | ____ |
+| O4 | Se verifica quais áreas foram inspecionadas. | ____ |
+| O5 | Se compara com ciclos anteriores e onde busca dados. | ____ |
+| O6 | Como reage a dúvidas sobre um relato. | ____ |
+| O7 | Que decisões toma e em que ordem. | ____ |
+| O8 | Como registra e repassa a decisão. | ____ |
+| O9 | Termos do domínio que usa ou interpreta de modo diferente. | ____ |
 
-**Tempo total da revisão e da decisão:** ____ **Interrupções:** ____
+**Tempo total:** ____ **Interrupções:** ____
 
-##### Bloco 3 — Esclarecimentos (depois da decisão)
+##### Bloco 3 — Esclarecimentos após a decisão
 
-**10. Como você soube que este ciclo (ou o último) de inspeção terminou?**<br>
+**10. Como soube que o ciclo de inspeção terminou?**  
 Resposta: ____
 
-**11. Como você sabe quais áreas foram realmente inspecionadas neste ciclo?**<br>
-Resposta: ____ ( ) Não sei dizer<br>
-*Aprofundamento:* já aconteceu de descobrir depois que uma área não foi inspecionada? O que fez?
-
-**12. O que fez você confiar, ou não, no que foi relatado?**<br>
-Resposta: ____<br>
-*Aprofundamento:* o que você consegue conferir sozinho?
-
-**13. Como você sabe se a praga está aumentando, estável ou diminuindo? E se a última aplicação funcionou?**<br>
+**11. Como sabe quais áreas foram inspecionadas? Já descobriu depois que uma área ficou de fora?**  
 Resposta: ____
 
-**14. Quem executa a aplicação e como essa pessoa fica sabendo da sua decisão? Como você sabe se foi feita?**<br>
-Quem executa (função): ____<br>
-Meio: ____<br>
-Como sabe que foi feita: ____
+**12. O que fez você confiar, ou não, no relato? O que consegue conferir sozinho?**  
+Resposta: ____
 
-**15. Imagine que um aplicativo apresente automaticamente a mensagem "possível praga neste talhão". O que você precisaria ver para confiar nela e o que faria em seguida?**<br>
-Precisaria ver: ____<br>
-Faria em seguida: ____
+**13. Como sabe se a praga aumentou, ficou estável ou diminuiu? Como avalia uma aplicação anterior?**  
+Resposta: ____
 
-**16. Você prefere que um sistema apenas mostre onde há focos ou que também sugira por onde começar?**<br>
-( ) Só mostrar ( ) Mostrar e sugerir ( ) Depende: ____<br>
-*Aprofundamento:* por quê?
+**14. Quem executa a aplicação e como fica sabendo da decisão? Como você sabe se ela foi executada?**  
+Função: ____ Meio: ____ Verificação: ____
 
-##### Bloco 4 — Motivações e valores (por último)
+**15. Se um aplicativo mostrasse “possível praga neste talhão”, o que precisaria ver e o que faria?**  
+Informação necessária: ____ Ação: ____
 
-**17. Dos fatores abaixo, quais três pesam mais na sua decisão de manejo? Ordene.**<br>
-Custo · Rapidez · Segurança da produção · Impacto ambiental · Disponibilidade de pessoas · Recomendação do agrônomo · Outro: ____<br>
+**16. Prefere que o sistema somente apresente focos ou que também sugira por onde começar? Por quê?**  
+( ) Só mostrar ( ) Mostrar e sugerir ( ) Depende: ____  
+Motivo: ____
+
+##### Bloco 4 — Motivações e valores
+
+**17. Quais três fatores pesam mais na decisão de manejo? Ordene.**  
+Custo; rapidez; segurança da produção; impacto ambiental; disponibilidade de pessoas; recomendação agronômica; outro: ____.  
 1. ____ 2. ____ 3. ____
 
-**18. O que levaria você a usar ou deixar de usar uma nova ferramenta para acompanhar as pragas?**<br>
-Resposta: ____<br>
-*Aprofundamento:* o que mudaria para você se dependesse menos de outras pessoas para saber onde estão os focos?
+**18. O que levaria você a usar ou abandonar uma ferramenta de acompanhamento?**  
+Resposta: ____
 
-**19. Como prefere aprender a usar uma ferramenta nova? Marque as opções aplicáveis.**<br>
-[ ] Explicação de outra pessoa [ ] Demonstração prática [ ] Instruções escritas [ ] Vídeo ou áudio [ ] Experimentando a ferramenta [ ] Outra forma: ____
+**19. Como prefere aprender uma ferramenta nova?**  
+[ ] Explicação de outra pessoa [ ] Demonstração [ ] Texto [ ] Vídeo/áudio [ ] Experimentação [ ] Outra: ____
 
-**Comentário adicional opcional:** ____
-
-**Encerramento:** "Obrigado pela participação. O código desta sessão é O__. Se quiser retirar as suas respostas, basta informar esse código à equipe até 30 dias após o fim da disciplina."
+**Comentário adicional:** ____
 
 #### Como os dados serão analisados
 
-- Revisar as fichas e organizar as respostas por bloco em uma tabela por participante (O01, O02...).
-- Para cada sessão, descrever a sequência real de ações e compará-la com a ordem do HTA T04 (1 a 5) e com as saídas do CTT T09 (aceitar como confiável, pedir parecer, pedir reinspeção), marcando cada passo como confirmado, divergente ou ausente.
-- Para cada item de observação (O1 a O9), marcar se ocorreu, não ocorreu ou ocorreu em parte, e separar o que foi **observado** do que foi **relatado** nos Blocos 3 e 4, registrando as divergências entre os dois, que são o principal valor da técnica.
-- Fazer uma análise temática simples: marcar trechos com códigos ligados aos cinco grupos da aula e às hipóteses (H04, H05, H06, H09, H21, H22) e agrupar códigos repetidos entre participantes.
-- Para a pergunta 17, contar quantas vezes cada fator aparece entre os três mais importantes, apenas como indicação de prioridade (amostra pequena).
-- Comparar os achados com o questionário de Lucas (perguntas 15 e 16) e com a entrevista de Guilherme (perguntas 10 e 11) sobre quem decide e como o resultado chega ao gestor.
-- Ligar cada achado a uma decisão de design e a uma tela do protótipo da Entrega 6 (G01 a G08), e marcar no `RASTREABILIDADE.md` se a hipótese ficou sustentada, refutada, refinada ou aberta.
-
-| Hipótese/lacuna | Perguntas/itens | Decisão de design relacionada |
-|---|---|---|
-| H04 (quem decide no dia a dia) | 1, O7, 14 | Papel do gestor no fluxo e destinatário do repasse (G07/G08). |
-| H05 (como acompanha a evolução) | O5, 13 | Se a evolução entre ciclos (G06) é necessidade real e qual intervalo mostrar. |
-| H06 (decidir onde aplicar é a atividade mais crítica) | O7, 17 | Prioridade do fluxo PF06 e criticidade de T04 na Entrega 8. |
-| H09/H22 (locais inspecionados e histórico) | O4, O5, 11, 13 | Cobertura do ciclo antes dos resultados (G01/G02) e necessidade de histórico. |
-| H21 (o dono acompanha a evolução) | 1, O1, O5 | Quem usa o mapa e a evolução; conteúdo do resumo do ciclo (G01). |
-| H02 (quem aplica é outra pessoa) | O8, 14 | Repasse explícito da decisão (G08). |
-| H03/H20 e H13/H14 (familiaridade, mapas e visão geral) | 4–7, 9, 19, O3 | Linguagem, ajuda, densidade da tela e orientação inicial. |
-| C01 Q1 e Q4 (como recebe o resultado e dependência do pragueiro) | O1, O2, 18 | O que a visão do gestor entrega a mais que o relato e quanta autonomia ele procura. |
-| C01 Q2 (decisões que toma) | O7, 17 | Quais visões macro G03 e G07 devem oferecer. |
-| C01 Q5 e CTT T09 ("sem alerta" × "ninguém passou") | O4, 11 | Rótulos e destaque da cobertura (G02). |
-| CTT T09 e G04 (confiança num alerta) | O6, 12, 15 | Evidência e confiança exibidas em G04 e saídas "parecer" e "reinspeção". |
-| HTA T04, passo 3.1 (dado × recomendação) | 16, 17 | Se G03 só ordena por dado ou também sugere prioridade. |
-| GOMS T08, regra SR1 (ponto de partida) | O3, O5, 13 | Qual método (M1, M2 ou M3) priorizar na visão de evolução. |
-| Vocabulário | O9, 8 | Rótulos das telas (talhão, foco, ciclo). |
-
-Relatos e observações de poucos gestores indicam práticas e necessidades plausíveis, mas não representam todos os donos de propriedade. A presença do observador pode alterar o comportamento. Quando um único participante relatar ou fizer algo, o achado fica como indício, não como fato.
+Organizar as fichas por código `O01`, `O02` etc. e descrever a sequência observada em cada sessão. Comparar essa sequência com a tarefa T04, distinguindo o que ocorreu do que foi relatado nos esclarecimentos. Registrar divergências, comportamentos recorrentes e casos isolados. Relacionar cobertura, histórico, confiança e repasse às hipóteses H02, H04, H05, H06, H09, H21 e H22. Uma reconstituição retrospectiva não será apresentada como observação de uma decisão ocorrida naquele momento.
 
 ## Síntese
 
-O conjunto de técnicas cobre os três perfis das personas, cada um com a técnica mais adequada ao seu acesso e ao tipo de informação buscada:
-
-| Instrumento | Perfil | Lacunas que pretende reduzir | Hipóteses a avaliar |
+| Instrumento | Perfil | Principal lacuna investigada | Hipóteses |
 |---|---|---|---|
-| I01 — Questionário (Lucas) | Trabalhador de campo/pragueiro (P02) | Compreensão de instruções, autonomia digital, conexão em campo, experiência, rotina de inspeção, controle da rota, repasse dos achados e adoção da ferramenta. | H03, H08, H09, H20, H21, H22 |
-| I02 — Entrevista semiestruturada (Guilherme) | Agrônomo consultor (P03) | Como recebe os relatos, informação mínima para um parecer, comparação com inspeções anteriores, delimitação da área, repasse da recomendação e confiança numa detecção por IA; confirma as respostas hipotéticas do C03 (Q1–Q5), a ordem do HTA T05, a regra SR1 do GOMS T06 e o momento de mostrar a avaliação da IA no CTT T07. | H04, H07, H21, H22 |
-| I03 — Observação contextual (Pedro) | Dono/gestor (P01) | Como recebe o resultado do ciclo, se confere a cobertura, como compara ciclos, em que ordem decide e como repassa a decisão; confirma as respostas hipotéticas do C01 (Q1–Q5), a ordem do HTA T04, a regra SR1 do GOMS T08 e as saídas do CTT T09. | H02, H04, H05, H06, H09, H13/H14, H21, H22 |
+| I01 — Questionário de Lucas | Trabalhador de campo, P02 | Tecnologia disponível, rotina, controle da inspeção, interpretação e repasse. | H03, H08, H09, H20, H21, H22 |
+| I02 — Entrevista de Guilherme | Agrônomo, P03 | Informação necessária para validar uma detecção, delimitar área e emitir parecer. | H04, H07, H21, H22 |
+| I03 — Observação de Pedro | Gestor, P01 | Informações efetivamente consultadas e ordem da decisão. | H02, H04, H05, H06, H09, H13/H14, H21, H22 |
 
-As três técnicas se complementam: o questionário alcança mais trabalhadores com perguntas padronizadas; a entrevista aprofunda o raciocínio técnico de um público pequeno e especializado; a observação mostra o que o gestor de fato faz, além do que relata. H04 (quem decide) e H21 (quem acompanha a evolução e como o resultado chega ao gestor) são investigadas pelos três perfis, o que permite cruzar as versões de cada papel.
-
-Após a análise, cada hipótese será marcada como **sustentada**, **refutada**, **refinada** ou mantida **aberta** quando a evidência for insuficiente. Achados relatados por um único participante ficam como indício, não como fato. Quando os dados forem coletados e analisados, o histórico em `RASTREABILIDADE.md` será atualizado com as evidências, as limitações da amostra e as decisões de design afetadas.
+O conjunto foi preparado para confrontar perspectivas dos três perfis. **Ainda não há respostas analisadas**, e a entrevista I02 não foi aplicada nesta disciplina. Portanto, as hipóteses não devem ser apresentadas como sustentadas ou refutadas por esses instrumentos. Quando ocorrer coleta e análise, cada hipótese deverá ser classificada como **sustentada, refutada, refinada ou aberta**, com evidência, limite da amostra e decisão de design registrados em `RASTREABILIDADE.md`.
 
 ## Checklist
 
-- [x] Hipóteses/lacunas prioritárias da Entrega 1 foram revisitadas.
-- [x] Se o escopo de IHC foi derivado de TCC técnico, a coleta investiga a plausibilidade do usuário, tarefa e contexto adotados.
-- [x] Perguntas não pressupõem que dashboard, CRUD, filtros ou relatórios sejam necessários; investigam a necessidade.
-- [x] Cada dado a coletar responde uma dúvida concreta do projeto ou justifica outra necessidade de informação.
-- [x] Parte A identifica dados e perfis de coleta de forma específica.
-- [x] Aspectos éticos são contextualizados para o projeto.
-- [x] Há uma técnica completa por integrante e técnicas distintas.
-- [x] Questionário está incluído entre as técnicas.
-- [x] Cada instrumento possui objetivo, público, procedimento e conteúdo integral.
-- [x] Perguntas evitam indução e coletam apenas dados necessários.
-- [x] Está claro como os dados serão analisados e usados no design.
+- [x] Hipóteses e lacunas prioritárias da Entrega 1 foram revisitadas.
+- [x] O planejamento investiga a plausibilidade dos usuários, tarefas e contextos propostos.
+- [x] As perguntas investigam a necessidade de mapa, histórico e relatórios sem presumir sua utilidade.
+- [x] Os dados a coletar estão ligados a dúvidas e decisões concretas.
+- [x] A Parte A identifica dados e perfis específicos.
+- [x] Os cuidados éticos tratam riscos reais do projeto.
+- [x] Há uma técnica preparada por integrante, com técnicas distintas.
+- [x] O questionário está entre as técnicas.
+- [x] Cada instrumento apresenta objetivo, público, procedimento e conteúdo integral.
+- [x] Os instrumentos evitam solicitar identificação desnecessária.
+- [x] O plano explica como analisar os dados e usá-los no design.
