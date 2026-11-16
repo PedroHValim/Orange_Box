@@ -1,7 +1,7 @@
 # Entrega 14 — Avaliação de usabilidade por observação de usuários
 
 **Data:** 15/11/2026  
-**Status:** 🟨 em andamento — planejamento e parte de Lucas preparados; testes com participantes finais pendentes  
+**Status:** 🟨 em andamento — planejamento e partes de Lucas e Guilherme preparados; testes com participantes finais pendentes  
 **Responsabilidade:** solução consolidada por equipe — Lucas Cabral, Guilherme e Pedro. Serão necessários **3 participantes finais**, um acompanhado por cada integrante.
 
 ## Objetivo da atividade
@@ -35,6 +35,8 @@ flowchart TD
 **Dispositivo e sistema:** {{modelo do iPhone e versão do iOS}}.  
 **Dados de demonstração:** informar aos participantes quais registros são exemplos e manter os mesmos dados iniciais em todas as sessões.
 
+**Versão avaliada por U03 (Guilherme):** o aplicativo não tem perfil de agrônomo; U03 usa o protótipo web do fluxo do agrônomo no Figma, telas FA01–FA07 e seus estados (Entrega 11, MoLIC M01): <https://www.figma.com/proto/gvxtwmmYvnJVONwUOHOMVD/Orange-Box?node-id=10-1255>. **Data da versão do arquivo usada na sessão:** {{registrar no dia da sessão}}. **Dispositivo:** computador ou notebook com navegador, mouse e internet, protótipo em modo de apresentação ajustado à tela. **Dados simulados:** todos os dados das telas FA são fictícios; o veredito, a área de aplicação e o envio do parecer são simulados por links entre quadros, e a foto é uma figura ilustrativa (Entrega 12, seção B).
+
 **Metas de usabilidade a verificar:**
 
 | ID | Meta operacional para esta avaliação | Ligação com o projeto |
@@ -46,6 +48,21 @@ flowchart TD
 
 **Critério de atendimento das metas:** definir antes da coleta a proporção mínima de sucesso por tarefa e o limite aceitável de ajudas/erros, após conferir a duração no piloto. Não classificar uma meta como atingida apenas porque o participante disse que gostou da interface.
 
+**Metas verificadas com U03 (Guilherme):** as metas do agrônomo já definidas na Entrega 12, com os limites fixados antes da coleta. Os IDs são os da Entrega 12 (QA__), para não confundir com MU01–MU04 acima.
+
+| ID | Meta (Entrega 12) | Critério definido antes da coleta | Tarefa |
+|---|---|---|---|
+| QA04 | Concluir sem ajuda: abrir o pedido, validar o ponto, seguir para a área de aplicação e enviar o parecer. | MU04 adaptada: conclui; no máximo uma dica. Validação reduzida ao ponto 3. | UT07, UT05 |
+| QA05 | Não considerar dentro da área de aplicação pontos pendentes ou rejeitados. | MU05 adaptada: zero ocorrência (resposta com o ponto 4 ou o ponto 1 conta como erro). | UT05 |
+| QA06 | Descobrir se o ponto já teve detecção antes. | MU06: ≤ 20 segundos, com resposta correta. | UT06 |
+| QA07 | Fluxo em sessão curta. | MU07 não avaliada como escrita; tempo de UT07 + UT05 só como referência. | UT07, UT05 |
+| QA08 | Saber se o parecer foi enviado ao gestor. | MU08 adaptada: resposta correta, com base em FA01C. | UT05 |
+| QA09 | Considerar as tarefas fáceis. | MU09: nota ≥ 5,5 em cada tarefa. | UT06, UT07, UT05 |
+| QA19 | Distinguir ponto detectado pela IA de ponto validado e entender que o ponto com nova foto pedida continua pendente. | Qualitativa: registrar explicações corretas e equivocadas. | UT05 e pós-teste |
+| QA20 | Observar se a avaliação da IA interfere no julgamento. | Qualitativa, sem critério de aprovação; apenas indício, pois a foto é ilustrativa. | UT07 e pós-teste |
+
+Com um único participante, os limites de “mediana”, “média” e “todos os participantes” da Entrega 12 são comparados com o valor individual de U03; o resultado vale apenas para essa sessão e não é generalizado.
+
 ### Passo 2 — Participantes
 
 O recrutamento deve considerar as tarefas que cada pessoa realmente desempenha. Não é necessário ter uma pessoa de cada persona se os três participantes disponíveis não corresponderem aos três perfis; nesse caso, informar exatamente quais fluxos foram avaliados e quais ficaram sem cobertura.
@@ -54,9 +71,11 @@ O recrutamento deve considerar as tarefas que cada pessoa realmente desempenha. 
 |---|---|---|---|---|
 | U01 | Trabalhador de campo que inspeciona frutos ou realiza atividade próxima. | Já ter feito inspeção, acompanhamento de pragas ou registro de observações em talhões. Registrar experiência com smartphone e ferramentas usadas na rotina. | **Lucas Cabral** | {{nome mantido fora do relatório; recrutamento pendente}} |
 | U02 | Gestor, proprietário ou responsável por acompanhar talhões e decidir ações na fazenda. | Tomar ou apoiar decisões com base em inspeções, ocorrências e relatórios. | **Pedro** | {{recrutamento pendente}} |
-| U03 | Outro profissional relacionado às tarefas efetivamente disponíveis no aplicativo. | {{descrever função real, tarefas e motivo da escolha antes da sessão}}. Se for participante proxy, explicar por que o perfil ideal não foi recrutado e quais conclusões ficam limitadas. | **Guilherme** | {{recrutamento pendente}} |
+| U03 | Engenheiro(a) agrônomo(a) ou técnico(a) agrícola que orienta o manejo de pragas em propriedades de citros (persona P03, cenário C03). | Ter 18 anos ou mais e ter emitido ou orientado recomendação de manejo de pragas em citros nos últimos 12 meses (critério da Entrega 12). Excluídos integrantes da equipe e quem ajudou a produzir as telas FA. Se não houver agrônomo acessível, o substituto (por exemplo, estudante de agronomia) é identificado como proxy e não apresentado como agrônomo consultor. | **Guilherme** | {{recrutamento pendente}} |
 
 **Limite de escopo:** a versão documentada na Entrega 11 não possui perfil próprio de agrônomo. Portanto, não afirmar que o fluxo M01 de emitir parecer foi testado no aplicativo se esse fluxo não existir na versão avaliada. Guilherme pode conduzir um participante em tarefas disponíveis de inspeção, histórico, mapa ou relatório e registrar a diferença em relação à persona ideal.
+
+**Decisão de Guilherme para U03:** o fluxo M01 é avaliado no protótipo FA do Figma, e não no aplicativo, conforme planejado na Entrega 12. Os resultados de U03 valem para o protótipo e não indicam que o aplicativo tem esse fluxo. Ficam sem teste com U03 a validação dos cinco pontos (só o ponto 3 abre), o desenho da área (vem pronto), o tempo do fluxo completo (MU07) e a recuperação após falha no envio.
 
 ### Passo 3 — Consentimento e privacidade
 
@@ -66,12 +85,18 @@ O recrutamento deve considerar as tarefas que cada pessoa realmente desempenha. 
 - **Anonimização:** identificar participantes apenas como `U01`, `U02` e `U03` no relatório. Manter nome e contato, se necessários ao agendamento, separados das respostas.
 - **Dados coletados:** função/experiência pertinente, ações observadas, tempos, erros, pedidos de ajuda, avaliação pós-tarefa e comentários. Não solicitar dados pessoais ou informações sigilosas da fazenda sem necessidade.
 - **Armazenamento:** {{definir pasta de acesso restrito aos integrantes/docente, prazo de retenção e descarte antes da coleta}}. Não publicar gravações ou nomes reais no GitHub.
+- **U03 (Guilherme):** termo específico do teste do protótipo do agrônomo em [`instrumentos/termo_consentimento_modelo.md`](../instrumentos/termo_consentimento_modelo.md) (seção “Termo de consentimento — teste do protótipo do agrônomo (P03)”), com assinatura ou aceite verbal registrado pelo moderador na sessão remota. Sem gravação de tela, áudio ou vídeo; na sessão remota, a tela compartilhada é vista só ao vivo. Anotações individuais acessíveis apenas à equipe e ao docente e apagadas até 30 dias após o fim da disciplina. A planilha de P03 usa o código A__; neste relatório, o participante aparece como U03.
 
 ### Passo 4 — Teste piloto
 
 **Responsável:** Lucas Cabral, com apoio de um integrante da equipe que não contará na amostra final.  
 **Data:** {{preencher após realizar}}.  
 **Objetivo:** verificar se o aplicativo abre no dispositivo, se os dados de demonstração estão consistentes, se as instruções não indicam botões, se as tarefas cabem no tempo previsto e se a planilha permite registrar as observações.  
+**Duração observada:** {{...}}.  
+**Mudanças após o piloto:** {{registrar mudanças reais; se não houver, escrever “nenhuma” após a execução}}.
+
+**Piloto de U03 (Guilherme, protótipo FA):** um colega que não participou da produção das telas FA. Validar se as instruções são entendidas sem explicação, se os links levam aos quadros certos (inclusive os desvios para FA05 e FA02N), se o link abre sem pedir permissão em janela anônima, se o anotador consegue registrar o veredito e se a sessão cabe em 35 minutos.  
+**Data:** {{preencher após realizar}}.  
 **Duração observada:** {{...}}.  
 **Mudanças após o piloto:** {{registrar mudanças reais; se não houver, escrever “nenhuma” após a execução}}.
 
@@ -87,6 +112,11 @@ O moderador lê apenas a instrução da tarefa. Os nomes de controles e os camin
 | UT02 | “Você precisa reencontrar uma inspeção realizada anteriormente e dizer em qual talhão e data ela foi registrada.” | Localiza um registro coerente com os dados preparados e identifica talhão e data sem orientação sobre onde tocar. | Sucesso, tempo, erros de filtro/leitura, ajudas e satisfação. | C02; T01/T03; O04; M02; F03. | U01; U03 se o perfil justificar. |
 | UT03 | “Você precisa descobrir quais talhões merecem atenção no período mostrado. Examine a situação da fazenda e selecione um talhão para conferir as informações disponíveis.” | Usa ou examina o mapa e os filtros, encontra um talhão e explica o significado das informações exibidas sem tratar ausência de inspeção como ausência de praga. | Sucesso, tempo, erros de seleção/interpretação, ajudas e satisfação. | C01; T09; O06/O07; M03; F04. | U02; U03 se o perfil justificar. |
 | UT04 | “Você precisa preparar uma conversa sobre a situação recente da fazenda. Consulte o relatório e encontre as informações sobre ocorrências e irrigação que seriam úteis para essa conversa.” | Localiza o relatório do período e, se a exportação funcionar na versão testada, encontra no arquivo extraído os indicadores de irrigação informados pela equipe. Se a exportação não estiver disponível, registrar essa limitação como impedimento do fluxo, sem indicar ao participante outro caminho. | Sucesso, tempo, erros, ajudas, satisfação e informação localizada. | C01; T04/T08; O09/O10; M03; F06. | U02; U03 se o perfil justificar. |
+| UT06 | (O moderador abre FA03, detecção do ponto 3.) “Esta é a suspeita registrada na árvore L3-27 de um pomar que você atende. Antes de decidir qualquer coisa, descubra se já apareceu suspeita do ácaro nesse mesmo local em outras vistorias, quando e o que foi concluído.” | Informa as três ocorrências anteriores (31/10 confirmada, 17/10 rejeitada, 03/10 confirmada), sem ajuda. | Sucesso, tempo (QA06), erros, ajudas e satisfação. | C03; T06 (método M3); O15; M01 S3/S5; FA03, FA05. | U03. |
+| UT07 | (O moderador reinicia o protótipo em FA01.) “Jaime, dono da Fazenda Boa Vista, pediu sua opinião sobre uma área onde o pessoal do campo encontrou suspeitas do ácaro. Vá até a suspeita da árvore L3-27 e deixe registrada a sua decisão. Considere que, na foto, você reconheceria lesões do ácaro.” | Abre o pedido do Talhão T12, chega ao ponto 3 e o registra como confirmado, sem ajuda. | Sucesso, tempo de referência (QA07), erros, ajudas, satisfação e se/quando abre a avaliação da IA (QA20). | C03; T07; O13/O14; M01 S1–S3; FA01, FA02, FA03. | U03. |
+| UT05 | (Antes, o moderador diz: “Considere que você já avaliou os outros locais dessa área”.) “Agora indique onde deve ser feito o controle, confira sua orientação e faça-a chegar a Jaime.” | Segue para a área de aplicação e o parecer, diz que entram os pontos 2, 3 e 5 e não o ponto 4, e diz corretamente que o parecer foi enviado. | Sucesso, tempo de referência (QA07), erros, ajudas, satisfação, pontos citados (QA05) e resposta sobre o envio (QA08). | C03; T05; O17–O19; M01 S6/S7; FA06, FA07, FA01C. | U03. |
+
+**Tarefas de U03:** aplicadas na ordem UT06, UT07, UT05 (Entrega 12), para que o participante ainda não tenha visto o histórico do ponto ao fazer UT06. As instruções não usam “pedido de parecer”, “confirmar”, “rejeitar”, “nova foto”, “histórico”, “detecção”, “área de aplicação”, “parecer” nem “enviar”, que são rótulos das telas FA. A sessão é encerrada se UT07 e UT05 somarem 16 minutos, e a tarefa em andamento é registrada como não concluída.
 
 **Escala pós-tarefa:** “De 1 a 7, quão fácil ou difícil foi concluir esta tarefa?”, sendo **1 = muito difícil** e **7 = muito fácil**. Em seguida: “O que tornou a tarefa fácil ou difícil?”
 
@@ -113,6 +143,8 @@ O moderador lê apenas a instrução da tarefa. Os nomes de controles e os camin
 10. Agradecer, explicar o uso dos registros e salvar os dados com o ID anônimo.
 
 **Responsável por U01 — Lucas:** conduzir UT01 e UT02 com o participante de campo, mantendo o mesmo roteiro e as mesmas definições acima. Lucas não deve apresentar como observação real o feedback recebido por Vitor na Entrega 6; são atividades e participantes de avaliação diferentes.
+
+**Responsável por U03 — Guilherme:** conduzir UT06, UT07 e UT05 seguindo o [roteiro P03](../instrumentos/roteiro_teste_usabilidade.md) (abertura padronizada, perfil pré-teste, tarefas e perguntas pós-teste) e registrar na [planilha de observação de P03](../instrumentos/planilha_observacao_modelo.md), com um colega anotando. Cliques em áreas sem ligação no protótipo são anotados à parte e não contam como erro; dica de interação é registrada separadamente de intervenção técnica (link do Figma ou conexão da sessão remota). O moderador pode esclarecer que a foto é ilustrativa e que o julgamento já é dado pelo cenário, mas não diz qual pedido abrir, qual ponto clicar nem o rótulo dos botões.
 
 ## C. Resultados — por participante
 
@@ -154,21 +186,25 @@ O moderador lê apenas a instrução da tarefa. Os nomes de controles e os camin
 
 ### U03 — participante acompanhado por Guilherme
 
-**Perfil resumido e justificativa do perfil:** {{...}}  
-**Participante proxy?** {{não / sim; justificar e descrever o limite}}  
-**Data e ambiente:** {{...}}  
-**Versão/dispositivo:** {{...}}  
+**Perfil resumido e justificativa do perfil:** {{formação, faixa de tempo de atuação com citros, tipo de atendimento e como recebe relatos do campo, conforme o pré-teste do roteiro P03, sem nome real}}  
+**Participante proxy?** {{não / sim; se sim, informar a experiência real e que as conclusões não equivalem às de um agrônomo consultor}}  
+**Data e ambiente:** {{data; presencial ou remota (Google Meet); conexão, tamanho da tela, interrupções}}  
+**Versão/dispositivo:** protótipo FA no Figma, versão de {{data}}; {{computador/navegador}}  
 **Moderador:** Guilherme  
-**Tarefas aplicadas conforme a função real da pessoa:** {{UT01/UT02 e/ou UT03/UT04; definir antes da sessão}}
+**Observador, se houver:** {{...}}  
+**Tarefas aplicadas conforme a função real da pessoa:** UT06, UT07 e UT05, nessa ordem (fluxo do agrônomo no protótipo FA).
 
 | Tarefa | Grau de sucesso | Erros | Tipos de erro/dificuldade | Ajudas | Tempo | Satisfação 1–7 | Evidência/observação |
 |---|---|---:|---|---:|---|---:|---|
-| {{UT__}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
-| {{UT__}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| UT06 | {{total/parcial/falha}} | {{n}} | {{...}} | {{n}} | {{ss — comparar com QA06}} | {{n}} | {{resposta dada sobre as ocorrências anteriores}} |
+| UT07 | {{total/parcial/falha}} | {{n}} | {{...}} | {{n}} | {{mm:ss}} | {{n}} | {{veredito registrado; se e quando abriu a avaliação da IA}} |
+| UT05 | {{total/parcial/falha}} | {{n}} | {{...}} | {{n}} | {{mm:ss}} | {{n}} | {{pontos citados como parte da área; resposta sobre o envio}} |
 
-**Link da gravação, se autorizada:** {{...}}  
-**Resposta pós-teste:** {{...}}  
-**Limitações da sessão:** {{...}}
+**Tempo de referência UT07 + UT05 (MU07 não avaliada):** {{mm:ss}}  
+**Link da gravação, se autorizada:** não haverá gravação (termo e roteiro P03).  
+**Resposta pós-teste:** {{respostas às seis perguntas do roteiro P03: diferença entre local avaliado e não avaliado; situação da árvore L5-11; locais da área de controle; se Jaime recebeu a orientação; uso da avaliação automática; informação que faltou}}  
+**Intervenções do moderador:** {{... ou “nenhuma”}}  
+**Limitações da sessão:** {{... ou “nenhuma identificada”}}; limites do protótipo descritos no Passo 2.
 
 ## D. Consolidação por tarefa
 
@@ -180,6 +216,9 @@ Calcular a taxa somente com os participantes que **realmente executaram** cada t
 | UT02 | {{IDs}} | {{n/N}} | {{...}} | {{...}} | {{...}} | {{sim/não/indeterminado}} | {{...}} |
 | UT03 | {{IDs}} | {{n/N}} | {{...}} | {{...}} | {{...}} | {{sim/não/indeterminado}} | {{...}} |
 | UT04 | {{IDs}} | {{n/N}} | {{...}} | {{...}} | {{...}} | {{sim/não/indeterminado}} | {{...}} |
+| UT06 | U03 | {{n/1}} | {{ss}} | {{...}} | {{n}} | {{QA06 e QA09: sim/não/indeterminado}} | {{...}} |
+| UT07 | U03 | {{n/1}} | {{mm:ss (referência)}} | {{...}} | {{n}} | {{QA04 e QA09: sim/não/indeterminado}} | {{...}} |
+| UT05 | U03 | {{n/1}} | {{mm:ss (referência)}} | {{...}} | {{n}} | {{QA04, QA05, QA08 e QA09: sim/não/indeterminado}} | {{...}} |
 
 ## E. Achados e recomendações
 
@@ -192,6 +231,8 @@ Incluir somente problemas sustentados por comportamento, fala ou resultado obser
 
 **Parte de Lucas:** relacionar achados de UT01/UT02 à orientação da câmera, feedback de análise, interpretação do resultado e consulta ao histórico, conforme o que U01 realmente fizer. Se não aparecer problema em uma dessas partes, registrar o resultado observado sem criar um achado artificial.
 
+**Parte de Guilherme:** relacionar achados de UT06, UT07 e UT05 ao histórico do ponto, ao registro do veredito, à situação dos pontos (pendente, confirmado, rejeitado, nova foto pedida), à área de aplicação e ao retorno do envio do parecer, conforme o que U03 realmente fizer, e indicar como artefatos MoLIC M01 e telas FA. QA19 e QA20 entram como evidência qualitativa. Se não aparecer problema em uma dessas partes, registrar o resultado observado sem criar um achado artificial.
+
 ## F. Comparação com a avaliação heurística
 
 A Entrega 13 contém problemas identificados por inspeção; a tabela abaixo só poderá ser concluída após os testes. A ausência de um problema na sessão não demonstra que ele não existe: talvez a condição não tenha ocorrido.
@@ -202,6 +243,11 @@ A Entrega 13 contém problemas identificados por inspeção; a tabela abaixo só
 | V12 — passos adicionais após fotografar um fruto. | Sim; identificado inicialmente no código, a confirmar no aparelho. | {{sim/não/não exposto}} | {{Efeito sobre a continuidade da inspeção em UT01.}} |
 | V02 — talhões sem identificação sempre visível no mapa. | Sim. | {{sim/não/não exposto}} | {{Como U02/U03 localizaram o talhão em UT03.}} |
 | V05 — “detecções confirmadas” pode sugerir validação humana. | Sim. | {{sim/não/não exposto}} | {{Como o participante interpretou o relatório em UT04.}} |
+| V04 (A02) — em FA03, “Confirmar” aparece destacado antes de qualquer escolha, e o estilo de selecionado fica invertido. | Sim. | {{sim/não/não exposto}} | {{Se U03 escolheu o veredito pelo destaque do botão ou percebeu o que estava selecionado em UT07.}} |
+| V05 (A02) — avaliação da IA recolhida em FA03, mas aberta no histórico (FA03 e FA05). | Sim. | {{sim/não/não exposto}} | {{Se e quando U03 viu a avaliação da IA em UT06/UT07 (QA20).}} |
+| V06 (A02) — ponto com nova foto pedida tem o mesmo símbolo dos pendentes no mapa. | Sim. | {{sim/não/não exposto}} | {{Resposta de U03 sobre a árvore L5-11 no pós-teste (QA19).}} |
+| V01 (A02) — em FA01C, pedido “Concluído” com ponto ainda pendente. | Sim. | {{sim/não/não exposto}} | {{Como U03 respondeu se Jaime recebeu a orientação em UT05 (QA08).}} |
+| V13 (A02) — veredito registrado não pode ser desfeito. | Sim. | {{sim/não/não exposto}} | {{Só exposto se U03 errar o veredito em UT07.}} |
 | {{novo problema visto apenas no teste, se houver}} | Não. | {{sim}} | {{...}} |
 
 ## G. Conclusão
