@@ -35,7 +35,7 @@ digraph M03 {
      <tr><td align="left">d: posição do talhão: confiável, parecer<br align="left"/>do agrônomo pedido ou reinspeção pedida<br align="left"/></td></tr></table>>];
   S7 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S7 — Decidir o manejo do ciclo</b></td></tr><hr/>
-     <tr><td align="left">d: talhões e suas posições; talhões sem posição<br align="left"/>d+u: onde, quando e com que urgência aplicar<br align="left"/></td></tr></table>>];
+     <tr><td align="left">d: talhões e suas posições; talhões sem posição<br align="left"/>d: parecer do agrônomo recebido ou<br align="left"/>aguardando parecer, por talhão<br align="left"/>d+u: onde, quando e com que urgência aplicar<br align="left"/></td></tr></table>>];
   S8 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S8 — Conferir o repasse</b></td></tr><hr/>
      <tr><td align="left">d: decisão registrada, repassada<br align="left"/>ou com falha no repasse<br align="left"/>d: destinatário (quem aplica)<br align="left"/></td></tr></table>>];
@@ -65,13 +65,14 @@ digraph M03 {
   P4 -> fimOK [label=" d: decisão repassada\l gcc: decidir o manejo do ciclo\l"];
 
   // alternativas
-  S2 -> P1 [label=" u: pedir nova inspeção\n do talhão não coberto"];
-  P1 -> S2 [label=" d: pedido registrado"];
+  S2 -> P1 [label=" u: pedir reinspeção\n do talhão não coberto"];
+  P1 -> S2 [label=" d: reinspeção pedida"];
   S4 -> S5 [label=" u: ver a evolução"];
   S5 -> S4 [label=" u: voltar ao talhão"];
   S7 -> S3 [label=" u: voltar aos talhões"];
   S8 -> S7 [label=" u: alterar a decisão\n (antes de repassar)"];
   S8 -> fimPend [label=" u: sair sem repassar"];
+  S7 -> fimPend [label=" u: aguardar o parecer\n d: posições e escolhas ficam salvas"];
   U1 -> S2 [label=" u: ver a cobertura do ciclo"];
   U2 -> fimPend [label=" u: interromper a revisão\n d: o que foi registrado fica salvo"];
 
