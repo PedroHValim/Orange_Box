@@ -1,7 +1,7 @@
 # Entrega 14 — Avaliação de usabilidade por observação de usuários
 
 **Data:** 15/11/2026  
-**Status:** 🟨 em andamento — planejamento e partes de Lucas e Guilherme preparados; testes com participantes finais pendentes  
+**Status:** 🟨 em andamento — piloto e sessão U03 (Guilherme) realizados e analisados em 16/11/2026; sessões U01 e U02 e consolidação da equipe pendentes  
 **Responsabilidade:** solução consolidada por equipe — Lucas Cabral, Guilherme e Pedro. Serão necessários **3 participantes finais**, um acompanhado por cada integrante.
 
 ## Objetivo da atividade
@@ -71,7 +71,7 @@ O recrutamento deve considerar as tarefas que cada pessoa realmente desempenha. 
 |---|---|---|---|---|
 | U01 | Trabalhador de campo que inspeciona frutos ou realiza atividade próxima. | Já ter feito inspeção, acompanhamento de pragas ou registro de observações em talhões. Registrar experiência com smartphone e ferramentas usadas na rotina. | **Lucas Cabral** | {{nome mantido fora do relatório; recrutamento pendente}} |
 | U02 | Gestor, proprietário ou responsável por acompanhar talhões e decidir ações na fazenda. | Tomar ou apoiar decisões com base em inspeções, ocorrências e relatórios. | **Pedro** | {{recrutamento pendente}} |
-| U03 | Engenheiro(a) agrônomo(a) ou técnico(a) agrícola que orienta o manejo de pragas em propriedades de citros (persona P03, cenário C03). | Ter 18 anos ou mais e ter emitido ou orientado recomendação de manejo de pragas em citros nos últimos 12 meses (critério da Entrega 12). Excluídos integrantes da equipe e quem ajudou a produzir as telas FA. Se não houver agrônomo acessível, o substituto (por exemplo, estudante de agronomia) é identificado como proxy e não apresentado como agrônomo consultor. | **Guilherme** | {{recrutamento pendente}} |
+| U03 | Engenheiro(a) agrônomo(a) ou técnico(a) agrícola que orienta o manejo de pragas em propriedades de citros (persona P03, cenário C03). | Ter 18 anos ou mais e ter emitido ou orientado recomendação de manejo de pragas em citros nos últimos 12 meses (critério da Entrega 12). Excluídos integrantes da equipe e quem ajudou a produzir as telas FA. Se não houver agrônomo acessível, o substituto (por exemplo, estudante de agronomia) é identificado como proxy e não apresentado como agrônomo consultor. | **Guilherme** | Nenhum agrônomo acessível para a sessão; U03 é um participante substituto (proxy): estudante de engenharia, fora da equipe, sem experiência direta em agronomia e diferente da participante do piloto. Identificado como proxy na seção C. |
 
 **Limite de escopo:** o aplicativo avaliado não possui perfil próprio de agrônomo. Portanto, não afirmar que o fluxo M01 de emitir parecer foi testado no aplicativo: ele é testado apenas no protótipo FA do Figma (Entrega 11), conforme a decisão abaixo.
 
@@ -96,9 +96,11 @@ O recrutamento deve considerar as tarefas que cada pessoa realmente desempenha. 
 **Mudanças após o piloto:** {{registrar mudanças reais; se não houver, escrever “nenhuma” após a execução}}.
 
 **Piloto de U03 (Guilherme, protótipo FA):** um colega que não participou da produção das telas FA. Validar se as instruções são entendidas sem explicação, se os links levam aos quadros certos (inclusive os desvios para FA05 e FA02N), se o link abre sem pedir permissão em janela anônima, se o anotador consegue registrar o veredito e se a sessão cabe em 35 minutos.  
-**Data:** {{preencher após realizar}}.  
-**Duração observada:** {{...}}.  
-**Mudanças após o piloto:** {{registrar mudanças reais; se não houver, escrever “nenhuma” após a execução}}.
+**Participante do piloto:** estudante de engenharia, fora da equipe e sem participação na produção das telas FA. Não conta na amostra final. Registro completo em [`instrumentos/piloto_p03.md`](../instrumentos/piloto_p03.md).  
+**Data:** 16/11/2026, remota (Google Meet), conduzida por Guilherme sem observador.  
+**Duração observada:** cerca de 25 minutos.  
+**O que foi validado:** link aberto sem pedir permissão; nenhum link levou a quadro errado, e os botões sem ligação já são avisados na abertura; UT06 e UT07 entendidas sem explicação; o moderador conseguiu cronometrar e anotar sozinho; a sessão cabe em 35 minutos. Em UT05, foi preciso explicar o que é o controle e que ele corresponde à orientação dada a Jaime.  
+**Mudanças após o piloto:** (1) antes de UT05, o moderador lê também “Controlar o ácaro significa aplicar um produto nas árvores afetadas; a orientação que você dá a Jaime indica onde aplicar, com qual produto, dose e período”, sem alterar a instrução da tarefa nem usar rótulos das telas FA; (2) o roteiro passa a permitir esclarecer o que é o controle, sem indicar botões nem pontos da área; (3) anotar o horário de início de cada tarefa, que ficou sem registro no piloto. Os critérios das metas não foram alterados.
 
 O piloto não fornece resultados de usabilidade dos participantes finais.
 
@@ -186,27 +188,35 @@ O moderador lê apenas a instrução da tarefa. Os nomes de controles e os camin
 
 ### U03 — participante acompanhado por Guilherme
 
-> **Situação:** o piloto e a sessão de U03 **ainda não foram realizados**. Os campos abaixo serão preenchidos somente depois da sessão, com o que for efetivamente observado. O protótipo FA será testado na versão inspecionada na Entrega 13, sem as correções lá apontadas (Entrega 12, QA21).
+> **Situação:** piloto e sessão de U03 realizados em 16/11/2026. Planilha anônima da sessão em [`instrumentos/sessao_u03.md`](../instrumentos/sessao_u03.md). O protótipo FA foi testado na versão inspecionada na Entrega 13, sem as correções lá apontadas (Entrega 12, QA21).
 
-**Perfil resumido e justificativa do perfil:** {{formação, faixa de tempo de atuação com citros, tipo de atendimento e como recebe relatos do campo, conforme o pré-teste do roteiro P03, sem nome real}}  
-**Participante proxy?** {{não / sim; se sim, informar a experiência real e que as conclusões não equivalem às de um agrônomo consultor}}  
-**Data e ambiente:** {{data; presencial ou remota (Google Meet); conexão, tamanho da tela, interrupções}}  
-**Versão/dispositivo:** protótipo FA no Figma, versão de {{data}}; {{computador/navegador}}  
+**Perfil resumido e justificativa do perfil:** estudante de engenharia, fora da equipe, sem experiência direta em agronomia. Não viu o piloto nem as telas FA antes da sessão. As seis perguntas do pré-teste do roteiro P03 (formação, tempo com citros, atendimento, propriedades, relatos do campo, mapas digitais) não se aplicam ao perfil e ficaram sem resposta. Recrutado por conveniência porque nenhum agrônomo ou técnico agrícola estava acessível.  
+**Participante proxy?** Sim. A pessoa não emite parecer agronômico; as conclusões valem para a navegação e a compreensão das telas FA e **não equivalem às de um agrônomo consultor**. Perguntas que dependem de julgamento técnico (QA20 e informação que faltou) são apenas indício.  
+**Data e ambiente:** 16/11/2026; presencial; sem interrupções registradas. Consentimento verbal obtido antes do pré-teste e das tarefas.  
+**Versão/dispositivo:** protótipo FA no Figma, versão de 16/11/2026 (última alteração do arquivo: correção de alguns links de navegação entre quadros, sem aplicar as correções da inspeção heurística); computador com navegador, protótipo no modo de apresentação.  
 **Moderador:** Guilherme  
-**Observador, se houver:** {{...}}  
+**Observador, se houver:** nenhum; o moderador conduziu, cronometrou e anotou.  
 **Tarefas aplicadas conforme a função real da pessoa:** UT06, UT07 e UT05, nessa ordem (fluxo do agrônomo no protótipo FA).
 
 | Tarefa | Grau de sucesso | Erros | Tipos de erro/dificuldade | Ajudas | Tempo | Satisfação 1–7 | Evidência/observação |
 |---|---|---:|---|---:|---|---:|---|
-| UT06 | {{total/parcial/falha}} | {{n}} | {{...}} | {{n}} | {{ss — comparar com QA06}} | {{n}} | {{resposta dada sobre as ocorrências anteriores}} |
-| UT07 | {{total/parcial/falha}} | {{n}} | {{...}} | {{n}} | {{mm:ss}} | {{n}} | {{veredito registrado; se e quando abriu a avaliação da IA}} |
-| UT05 | {{total/parcial/falha}} | {{n}} | {{...}} | {{n}} | {{mm:ss}} | {{n}} | {{pontos citados como parte da área; resposta sobre o envio}} |
+| UT06 | total | 0 | Nenhum erro. Ao comentar a nota, disse não saber se “confirmado” e “rejeitado” eram decisão do agrônomo ou da IA, embora tenha suposto que fosse o esperado. | 0 | 1 min 04 s (QA06: ≤ 20 s) | 6 | Resposta correta: três ocorrências anteriores, 31/10 confirmada, 17/10 rejeitada e 03/10 confirmada. Usou a barra lateral de detecções anteriores em FA03; comentou que ela era óbvia. |
+| UT07 | total | 0 | Dois pedidos de Jaime em FA01; abriu o do Talhão T12 porque o outro não respondia ao clique, não por reconhecer o pedido certo. Clique sem efeito no outro pedido (não conta como erro). | 0 | 47 s | 6 | Veredito registrado: **confirmado** para o ponto 3 (árvore L3-27). Não abriu a avaliação da IA em nenhum momento. Comentou que não ficou claro que tinha de abrir o T12, pois havia dois talhões de Jaime. |
+| UT05 | total | 0 | Nenhum erro. Não voltou para conferir o ponto 4 pendente. | 0 | 1 min 18 s | 7 | Em FA06, citou os pontos 2, 3 e 5 como parte da área de controle. Após FA01C, disse que Jaime recebeu a orientação por causa do aviso verde de envio. A nota veio com o comentário de que não precisou conferir o ponto 4. |
 
-**Tempo de referência UT07 + UT05 (MU07 não avaliada):** {{mm:ss}}  
-**Link da gravação, se autorizada:** não haverá gravação (termo e roteiro P03).  
-**Resposta pós-teste:** {{respostas às seis perguntas do roteiro P03: diferença entre local avaliado e não avaliado; situação da árvore L5-11; locais da área de controle; se Jaime recebeu a orientação; uso da avaliação automática; informação que faltou}}  
-**Intervenções do moderador:** {{... ou “nenhuma”}}  
-**Limitações da sessão:** {{... ou “nenhuma identificada”}}; limites do protótipo descritos no Passo 2.
+**Tempo de referência UT07 + UT05 (MU07 não avaliada):** 2 min 05 s (soma dos tempos das tarefas, sem as perguntas pós-tarefa).  
+**Link da gravação, se autorizada:** não houve gravação (termo e roteiro P03).  
+**Resposta pós-teste:**
+
+1. Diferença entre local avaliado e não avaliado — **não perguntada** (decisão do moderador durante a sessão; ver limitações).
+2. Situação da árvore L5-11 — entendeu que o ponto aguarda uma nova foto para ser avaliado, ou seja, continua sem veredito.
+3. Locais da área de controle — pontos 2, 3 e 5 (mesma resposta dada em UT05).
+4. Se Jaime recebeu a orientação — sim, pelo aviso verde de envio em FA01C (mesma resposta dada em UT05).
+5. Uso da avaliação automática — não abriu a avaliação da IA; confirmou o ponto 3 sem consultá-la. Por ser proxy, não há base para dizer se ela influenciaria a decisão com uma foto real.
+6. Informação que faltou — nenhuma.
+
+**Intervenções do moderador:** nenhuma ajuda ou dica durante as tarefas. Antes de UT06, o moderador levou o participante até FA03, como prevê o roteiro. Antes de UT05, leu o contexto do roteiro revisado após o piloto, sem alterações.  
+**Limitações da sessão:** participante proxy sem experiência agronômica; pré-teste não aplicável ao perfil; sessão conduzida sem observador; pergunta pós-teste 1 não aplicada, o que deixa a parte de QA19 sobre “detectado pela IA” × “validado por” sem resposta direta; horários de início das tarefas não registrados. Limites do protótipo descritos no Passo 2.
 
 ## D. Consolidação por tarefa
 
@@ -218,9 +228,9 @@ Calcular a taxa somente com os participantes que **realmente executaram** cada t
 | UT02 | {{IDs}} | {{n/N}} | {{...}} | {{...}} | {{...}} | {{sim/não/indeterminado}} | {{...}} |
 | UT03 | {{IDs}} | {{n/N}} | {{...}} | {{...}} | {{...}} | {{sim/não/indeterminado}} | {{...}} |
 | UT04 | {{IDs}} | {{n/N}} | {{...}} | {{...}} | {{...}} | {{sim/não/indeterminado}} | {{...}} |
-| UT06 | U03 | {{n/1}} | {{ss}} | {{...}} | {{n}} | {{QA06 e QA09: sim/não/indeterminado}} | {{...}} |
-| UT07 | U03 | {{n/1}} | {{mm:ss (referência)}} | {{...}} | {{n}} | {{QA04 e QA09: sim/não/indeterminado}} | {{...}} |
-| UT05 | U03 | {{n/1}} | {{mm:ss (referência)}} | {{...}} | {{n}} | {{QA04, QA05, QA08 e QA09: sim/não/indeterminado}} | {{...}} |
+| UT06 | U03 | 1/1 | 1 min 04 s | Nenhum erro | 6 | QA06: **não** (64 s > 20 s, com resposta correta). QA09: sim | AU01 — autor do veredito não identificado no histórico |
+| UT07 | U03 | 1/1 | 47 s (referência) | Nenhum erro | 6 | QA04: sim (parte de UT07, sem ajuda). QA09: sim | AU02 — pedido certo escolhido por eliminação em FA01 |
+| UT05 | U03 | 1/1 | 1 min 18 s (referência) | Nenhum erro | 7 | QA04: sim (sem ajuda). QA05: sim. QA08: sim. QA09: sim | Nenhum problema observado |
 
 ## E. Achados e recomendações
 
@@ -228,8 +238,8 @@ Incluir somente problemas sustentados por comportamento, fala ou resultado obser
 
 | ID | Achado observado | Evidência quantitativa e qualitativa | Impacto | Recomendação | Artefatos a revisar |
 |---|---|---|---|---|---|
-| AU01 | {{preencher após os testes}} | {{IDs, tarefas, contagens e comportamento/fala}} | {{...}} | {{...}} | {{MoLIC M02/M03; tela F__; signos; tarefa}} |
-| AU02 | {{...}} | {{...}} | {{...}} | {{...}} | {{...}} |
+| AU01 | No histórico do ponto, “confirmada” e “rejeitada” não indicam quem decidiu: o participante não soube se era a decisão do agrônomo ou da IA. | U03, UT06: concluiu com resposta correta, mas disse não saber se “confirmado” e “rejeitado” eram opinião do agrônomo ou da IA. Caso isolado (1 participante, proxy). | Pode levar a tratar um sinal da IA como validação humana ao consultar o histórico, justamente a distinção de QA19 e de R04/R05. | Em FA03 (detecções anteriores) e FA05, indicar o autor junto da situação, por exemplo “confirmada pelo agrônomo em 31/10”, e mostrar a avaliação da IA em campo separado. | MoLIC M01 (S3 e S5: signos veredito, avaliação da IA e histórico); telas FA03 e FA05; T06. |
+| AU02 | Em FA01, havia dois pedidos de Jaime e o participante não soube qual abrir; escolheu o do Talhão T12 porque o outro não respondia ao clique. | U03, UT07: clique sem efeito no outro pedido; comentou que não ficou claro que tinha de abrir o T12. Caso isolado (1 participante, proxy). Parte da dúvida pode vir da instrução, que cita a árvore L3-27 e não o talhão. | No uso real, com os dois pedidos ativos, o agrônomo pode abrir o pedido errado; no protótipo, o problema foi escondido pelo pedido sem ligação. | Mostrar em cada pedido de FA01 o que o distingue (talhão, quantidade de pontos pendentes, data do pedido) e, se possível, as árvores com suspeita. Confirmar com novo teste antes de tratar como requisito. | MoLIC M01 (S1: signos pedido de parecer, talhão, pontos pendentes); tela FA01; T05. |
 
 **Parte de Lucas:** relacionar achados de UT01/UT02 à orientação da câmera, feedback de análise, interpretação do resultado e consulta ao histórico, conforme o que U01 realmente fizer. Se não aparecer problema em uma dessas partes, registrar o resultado observado sem criar um achado artificial.
 
@@ -245,21 +255,30 @@ A Entrega 13 contém problemas identificados por inspeção; a tabela abaixo só
 | V12 — passos adicionais após fotografar um fruto. | Sim; identificado inicialmente no código, a confirmar no aparelho. | {{sim/não/não exposto}} | {{Efeito sobre a continuidade da inspeção em UT01.}} |
 | V02 — talhões sem identificação sempre visível no mapa. | Sim. | {{sim/não/não exposto}} | {{Como U02/U03 localizaram o talhão em UT03.}} |
 | V05 — “detecções confirmadas” pode sugerir validação humana. | Sim. | {{sim/não/não exposto}} | {{Como o participante interpretou o relatório em UT04.}} |
-| V04 (A02) — em FA03, “Confirmar” aparece destacado antes de qualquer escolha, e o estilo de selecionado fica invertido. | Sim. | {{sim/não/não exposto}} | {{Se U03 escolheu o veredito pelo destaque do botão ou percebeu o que estava selecionado em UT07.}} |
-| V05 (A02) — avaliação da IA recolhida em FA03, mas aberta no histórico (FA03 e FA05). | Sim. | {{sim/não/não exposto}} | {{Se e quando U03 viu a avaliação da IA em UT06/UT07 (QA20).}} |
-| V06 (A02) — ponto com nova foto pedida tem o mesmo símbolo dos pendentes no mapa. | Sim. | {{sim/não/não exposto}} | {{Resposta de U03 sobre a árvore L5-11 no pós-teste (QA19).}} |
-| V01 (A02) — em FA01C, pedido “Concluído” com ponto ainda pendente. | Sim. | {{sim/não/não exposto}} | {{Como U03 respondeu se Jaime recebeu a orientação em UT05 (QA08).}} |
-| V13 (A02) — veredito registrado não pode ser desfeito. | Sim. | {{sim/não/não exposto}} | {{Só exposto se U03 errar o veredito em UT07.}} |
-| {{novo problema visto apenas no teste, se houver}} | Não. | {{sim}} | {{...}} |
+| V04 (A02) — em FA03, “Confirmar” aparece destacado antes de qualquer escolha, e o estilo de selecionado fica invertido. | Sim. | Não exposto. | U03 confirmou o ponto 3, que era a decisão indicada pelo cenário; não dá para separar o efeito do destaque do botão. |
+| V05 (A02) — avaliação da IA recolhida em FA03, mas aberta no histórico (FA03 e FA05). | Sim. | Não como problema. | U03 não abriu a avaliação da IA em UT07 e decidiu sem ela (QA20). Em UT06, a dúvida foi sobre o autor do veredito no histórico (AU01), não sobre a avaliação aberta. |
+| V06 (A02) — ponto com nova foto pedida tem o mesmo símbolo dos pendentes no mapa. | Sim. | Não. | U03 entendeu que a árvore L5-11 aguarda nova foto para ser avaliada. Com um participante, isso não mostra que o símbolo é suficiente. |
+| V01 (A02) — em FA01C, pedido “Concluído” com ponto ainda pendente. | Sim. | Não exposto. | U03 disse corretamente que Jaime recebeu a orientação, pelo aviso verde; a sessão não perguntou o que “Concluído” significa para o ponto 4. |
+| V13 (A02) — veredito registrado não pode ser desfeito. | Sim. | Não exposto. | U03 não errou o veredito em UT07. |
+| AU01 — autor do veredito não identificado no histórico (FA03/FA05). | Não. | Sim. | Problema visto só no teste; reforça a distinção entre sinal da IA e validação humana (QA19). |
+| AU02 — dois pedidos do mesmo gestor sem diferença clara em FA01. | Não. | Sim. | Problema visto só no teste; na inspeção, o pedido sem ligação não foi tratado como ambiguidade. |
 
 ## G. Conclusão
 
 Preencher após consolidar U01–U03:
 
-1. **Metas atingidas:** {{MU01–MU04, com numerador/denominador e evidência de cada tarefa}}. Para U03 (Guilherme): {{QA04, QA05, QA06, QA08 e QA09 classificadas como atingida, parcialmente atingida, não atingida ou não avaliada, com o valor individual de U03; QA07 não avaliada (tempo só de referência); QA19 e QA20 resumidas como evidência qualitativa}}.
-2. **Problemas recorrentes e perfis afetados:** {{IDs AU__, tarefas e participantes}}.
-3. **O que surpreendeu a equipe:** {{resultado efetivamente observado, inclusive diferenças em relação à avaliação heurística}}.
-4. **Mudanças prioritárias:** {{ação, responsável e artefato a alterar}}.
+1. **Metas atingidas:** {{MU01–MU04, com numerador/denominador e evidência de cada tarefa}}. Para U03 (Guilherme, 1 participante proxy, protótipo FA):
+   - **QA04** (concluir sem ajuda) — **atingida**: UT07 e UT05 concluídas, 0 ajudas.
+   - **QA05** (pontos pendentes ou rejeitados fora da área) — **atingida**: citou 2, 3 e 5; 0 erros críticos.
+   - **QA06** (histórico do ponto em ≤ 20 s) — **não atingida**: 64 s, com resposta correta. UT06 é a primeira tarefa, e parte do tempo pode ser de primeiro contato com a interface; no piloto, fora da análise, o tempo também passou de 20 s (27 s).
+   - **QA07** (sessão curta) — **não avaliada**; UT07 + UT05 = 2 min 05 s, só como referência.
+   - **QA08** (saber se o parecer foi enviado) — **atingida**: respondeu pelo aviso verde de FA01C.
+   - **QA09** (tarefas fáceis, ≥ 5,5) — **atingida**: notas 6, 6 e 7.
+   - **QA19** (qualitativa) — **parcial**: entendeu que o ponto com nova foto pedida continua sem veredito, mas não soube se “confirmado” e “rejeitado” no histórico eram decisão do agrônomo ou da IA (AU01). A pergunta direta sobre “detectado pela IA” × “validado por” não foi aplicada.
+   - **QA20** (qualitativa) — confirmou o ponto 3 sem abrir a avaliação da IA. Por ser proxy, não há indício sobre a influência da IA no julgamento técnico.
+2. **Problemas recorrentes e perfis afetados:** {{IDs AU__, tarefas e participantes}}. U03: AU01 (UT06) e AU02 (UT07), cada um observado uma vez, em participante proxy; não são recorrentes.
+3. **O que surpreendeu a equipe:** {{resultado efetivamente observado, inclusive diferenças em relação à avaliação heurística}}. U03: nenhum dos problemas do protótipo FA apontados na inspeção heurística (V01, V04, V05, V06, V13) atrapalhou a sessão; os dois problemas observados (AU01 e AU02) não tinham sido apontados na inspeção.
+4. **Mudanças prioritárias:** {{ação, responsável e artefato a alterar}}. U03: indicar o autor do veredito no histórico (AU01; Guilherme; FA03, FA05 e MoLIC M01 S3/S5); diferenciar os pedidos do mesmo gestor em FA01 (AU02; Guilherme; FA01 e MoLIC M01 S1), a confirmar com novo teste.
 5. **Limitações:** amostra de três pessoas; distribuição real dos perfis; eventual participante proxy; uso de dados de demonstração; funcionalidades ausentes ou não exercitadas; possíveis diferenças entre versões do aplicativo.
 
 **Atualização da rastreabilidade:** depois de analisar os dados, relacionar `UT__ → U__ → AU__ → recomendação/decisão` em `RASTREABILIDADE.md`. Não registrar hipótese como validada apenas pela opinião de um participante ou por um resultado técnico simulado.
