@@ -2,7 +2,9 @@
 
 **Data:** 14/11/2026  
 **Revisão:** 16/11/2026  
-**Status:** 🟨 em andamento — M01 e M02 publicados; pendem a conferência visual dos diagramas no GitHub e os ajustes de M03 por Pedro.**Responsabilidade:** 1 solução completa por integrante.
+**Status:** 🟩 concluída — M01, M02 e M03 publicados, com os ajustes de M03 aplicados.  
+**Responsabilidade:** 1 solução completa por integrante.
+
 ## Objetivo da atividade
 
 Modelar a interação como conversa entre usuário e preposto do designer, incluindo caminhos principais, alternativas, rupturas e recuperação. O MoLIC representa as conversas necessárias aos objetivos dos usuários, não o funcionamento interno do algoritmo.
@@ -147,7 +149,7 @@ Os códigos P01–P07 da Entrega 6 são referências a estados de interface, nã
 - [x] O modelo descreve a conversa, não o interior do algoritmo.
 - [x] Análise, registro e envio incluem falhas e retornos relevantes.
 
-**Situação de M02:** especificação textual, SVG revisado e fonte editável DOT preparados. O ajuste de S1 solicitado na consolidação foi aplicado. A verificação no GitHub só poderá ser marcada após a inclusão dos dois arquivos no repositório.
+**Situação de M02:** especificação textual, SVG revisado e fonte editável DOT preparados. O ajuste de S1 solicitado na consolidação foi aplicado. O SVG foi publicado no repositório.
 
 ## M03 — Revisar o ciclo e decidir o manejo por talhão
 
@@ -169,14 +171,14 @@ Os códigos P01–P07 da Entrega 6 são referências a estados de interface, nã
 |---|---|---|
 | Abertura | Iniciar revisão. | Jaime abre o resultado do ciclo. |
 | S1 — Conhecer o ciclo | “O que foi encontrado?” | Data, talhões inspecionados e talhões com focos. |
-| S2 — Conferir a cobertura | “Todos os talhões foram vistos?” | Inspecionado, não inspecionado e cobertura incompleta. O desenho atual ainda usa “nova inspeção” em parte desse fluxo; deve ser uniformizado para “reinspeção”. |
-| Processamento | Registrar pedido. | Confirmação ou falha com nova tentativa. |
+| S2 — Conferir a cobertura | “Todos os talhões foram vistos?” | Inspecionado, não inspecionado e cobertura incompleta. Para o talhão não coberto, o gestor pode pedir reinspeção. |
+| Processamento | Registrar o pedido de reinspeção. | “Reinspeção pedida” ou falha com nova tentativa. |
 | S3 — Escolher o talhão | “Onde estão os focos?” | Lista por gravidade e tendência, apresentada como dado. |
 | S4 — Avaliar o talhão | “Posso confiar?” | Fotos, local, indicação do resultado e aviso de cobertura incompleta. |
 | S5 — Acompanhar evolução | “Está avançando?” | Tendência, última aplicação e limite de ciclos incompletos. |
 | Processamento | Registrar posição. | Salvar posição ou preservar escolha após falha. |
 | S6 — Confirmar posição | “Minha posição foi registrada?” | Confiável, parecer solicitado ou reinspeção solicitada. |
-| S7 — Decidir manejo | “Onde e quando agir?” | Talhões e posições; o parecer recebido deveria entrar aqui, mas o ajuste ainda não foi aplicado ao diagrama. |
+| S7 — Decidir manejo | “Onde e quando agir?” | Talhões e posições; para os talhões em que foi pedido parecer, mostra “parecer do agrônomo recebido” ou “aguardando parecer”. O parecer informa a decisão, mas quem decide é o gestor. |
 | Processamento | Registrar decisão. | Salvar autoria e data ou comunicar falha. |
 | S8 — Conferir repasse | “Quem aplica recebeu?” | Registrada, repassada ou falha; repassada não significa aplicada. |
 | Processamento | Repassar decisão. | Confirmar repasse ou preservar decisão para nova tentativa. |
@@ -201,12 +203,13 @@ As cenas representam assuntos da conversa. G01–G08 identificam estados planeja
 
 | Situação | Onde ocorre | Feedback | Recuperação/saída |
 |---|---|---|---|
-| Talhão não inspecionado. | S2 | Não inspecionado não significa livre da praga. | Solicitar inspeção/reinspeção ou seguir com limite visível. |
+| Talhão não inspecionado. | S2 | Não inspecionado não significa livre da praga. | Pedir reinspeção ou seguir com limite visível. |
 | Falha no registro do pedido. | Após S2 | Pedido não registrado. | Tentar novamente em S2. |
 | Dúvida sobre resultado. | S4 | Evidência não basta. | Pedir parecer ou reinspeção. |
 | Cobertura incompleta. | S4/S5 | Aviso sobre limite do resultado ou comparação. | Conferir cobertura, pedir reinspeção ou voltar sem tirar conclusão indevida. |
 | Falha ao salvar posição. | Após S4 | Posição não salva. | Voltar a S4 com escolha preservada. |
 | Talhões sem posição. | S7 | Pendências identificadas. | Revisar talhões ou prosseguir ciente delas. |
+| Parecer ainda não recebido. | S7 | “Aguardando parecer” no talhão em que o parecer foi pedido. | Decidir os demais talhões, ou encerrar com pendência e retomar quando o parecer chegar; posições e escolhas ficam salvas. |
 | Falha ao registrar decisão. | Após S7 | Decisão não registrada. | Voltar a S7 mantendo escolhas. |
 | Alteração antes do repasse. | S8 | Decisão registrada, ainda não repassada. | Voltar a S7. |
 | Falha no repasse. | Após S8 | Decisão continua registrada. | Repetir envio ou encerrar com pendência. |
@@ -219,11 +222,11 @@ As cenas representam assuntos da conversa. G01–G08 identificam estados planeja
 - [x] Ponto de abertura, cenas e encerramentos identificados.
 - [x] Falas, processamento e rupturas representados no diagrama existente.
 - [x] Objetivos e signos vinculados à Entrega 9.
-- [ ] Diagrama conferido em tamanho normal no GitHub.
-- [ ] Terminologia “reinspeção” uniformizada em S2 e no SVG/DOT.
-- [ ] Parecer recebido incorporado à decisão em S7 no SVG/DOT.
+- [x] Diagrama conferido em tamanho normal no GitHub.
+- [x] Terminologia “reinspeção” uniformizada em S2 e no SVG/DOT.
+- [x] Parecer recebido incorporado à decisão em S7 no SVG/DOT.
 
-**Situação de M03:** texto e diagrama existentes. A Entrega 6 fotografa somente parte dos estados G01–G08 e registra avaliação formativa; não há fotografia de todos os estados em papel. Os dois ajustes acima continuam com Pedro e não são declarados como aplicados.
+**Situação de M03:** texto e diagrama existentes. A Entrega 6 fotografa somente parte dos estados G01–G08 e registra avaliação formativa; não há fotografia de todos os estados em papel. Os dois ajustes foram aplicados no texto e no diagrama (DOT e SVG): “reinspeção” em S2 e no processamento seguinte, e o parecer do agrônomo (recebido ou aguardando) em S7, com a saída “aguardar o parecer” como encerramento com pendência.
 
 ## Consolidação da equipe
 
@@ -238,9 +241,9 @@ As cenas representam assuntos da conversa. G01–G08 identificam estados planeja
 | O05 — confirmar repasse | M02/S7 | “Enviado” não equivale a “lido” ou “decidido”. | Distinguir envio do trabalhador, parecer do agrônomo e repasse do gestor. |
 | O06 — saber cobertura | M03/S2 | Ponto pendente e talhão não inspecionado são níveis diferentes. | Distinguir situação do ponto de cobertura do talhão. |
 | O07 — avaliar talhão | M03/S4 | Confiança apresentada ao gestor não é validação humana. | Usar linguagem compreensível sem declarar confirmação técnica. |
-| O08 — registrar posição | M03/S4/S6 | M03 usa “nova inspeção” e “reinspeção” para a mesma ação. | **Pendente com Pedro:** uniformizar “reinspeção” no diagrama. A chegada à rota já está em M02. |
+| O08 — registrar posição | M03/S4/S6 | M03 usava “nova inspeção” e “reinspeção” para a mesma ação. | **Aplicado no M03 revisado:** “reinspeção” em todo o diagrama. A chegada à rota já está em M02. |
 | O09 — acompanhar evolução | M03/S5 | M01 também consulta histórico. | M03 apresenta tendência do talhão; M01 apresenta registros de pontos/talhões. |
-| O10 — decidir manejo | M03/S7 | Falta mostrar o parecer enviado por M01 como entrada da decisão. | **Pendente com Pedro:** incluir estado “aguardando parecer” ou parecer recebido em S7, sem decidir pelo gestor. |
+| O10 — decidir manejo | M03/S7 | O parecer enviado por M01 precisava entrar na decisão. | **Aplicado no M03 revisado:** S7 mostra “parecer do agrônomo recebido” ou “aguardando parecer”, sem decidir pelo gestor. |
 | O11 — confirmar repasse | M03/S8 | Repasse não significa aplicação realizada. | Manter estados separados. |
 | O12–O19 — análise e parecer | M01 | Pedido, validação, histórico, nova foto, área, parecer e situação de envio. | Manter; hipóteses do agrônomo seguem abertas porque I02 não foi aplicado. |
 
@@ -270,12 +273,12 @@ As cenas representam assuntos da conversa. G01–G08 identificam estados planeja
 
 - Resumo e cobertura do ciclo — S1/S2.
 - Talhão inspecionado, não inspecionado ou parcialmente coberto — S2.
-- Pedido de reinspeção confirmado ou com falha — processamento após S2, **após uniformização pendente**.
+- Pedido de reinspeção confirmado ou com falha — processamento após S2.
 - Talhões com foco e posição — S3.
 - Fotos, local, confiança e aviso de cobertura incompleta — S4.
 - Evolução e última aplicação com limites da comparação — S5.
 - Posição registrada ou falha — S6.
-- Decisão com pendências e parecer recebido — S7, **parecer ainda pendente no diagrama**.
+- Decisão com pendências, parecer recebido ou aguardando parecer — S7.
 - Decisão registrada, repassada ou com falha — S8.
 
 Esses são estados derivados dos modelos, **não uma declaração de que todos aparecem no aplicativo atual**. A Entrega 12 documenta as diferenças entre os modelos e a versão avaliável.
