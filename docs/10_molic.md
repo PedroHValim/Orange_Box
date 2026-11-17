@@ -2,9 +2,7 @@
 
 **Data:** 14/11/2026  
 **Revisão:** 16/11/2026  
-**Status:** 🟨 em andamento — M02 de Lucas revisado e fonte editável produzida; faltam a inclusão dos arquivos no repositório, a conferência no GitHub e os ajustes de M03 por Pedro.  
-**Responsabilidade:** 1 solução completa por integrante.
-
+**Status:** 🟨 em andamento — M01 e M02 publicados; pendem a conferência visual dos diagramas no GitHub e os ajustes de M03 por Pedro.**Responsabilidade:** 1 solução completa por integrante.
 ## Objetivo da atividade
 
 Modelar a interação como conversa entre usuário e preposto do designer, incluindo caminhos principais, alternativas, rupturas e recuperação. O MoLIC representa as conversas necessárias aos objetivos dos usuários, não o funcionamento interno do algoritmo.
@@ -78,13 +76,11 @@ O diagrama apresenta as cenas S1, S2, S3, S5, S6 e S7 e os processamentos P1–P
 
 ### Diagrama
 
+![MoLIC M02 — Inspecionar a rota e repassar os achados](../assets/10_molic/molic_m02.svg)
+
 O diagrama revisado contém cenas S1–S7, processamentos em caixas pretas, caminhos alternativos, encerramento com objetivo concluído e encerramento com pendência. **S1 inclui pedidos de reinspeção enviados pelo gestor e pedidos de nova foto enviados pelo agrônomo**, identificando a origem de cada um.
 
-![MoLIC M02 — revisão editável](../assets/10_molic/molic_m02.svg)
-
-**Fonte editável:** [`molic_m02.dot`](../assets/10_molic/molic_m02.dot), em Graphviz. Para gerar novamente o SVG: `dot -Tsvg molic_m02.dot -o molic_m02.svg`.
-
-> Copiar `molic_m02.dot` e `molic_m02.svg` para `assets/10_molic/` antes de publicar este documento. O antigo `molic_m02.png` pode permanecer como registro da versão anterior.
+**Fonte editável:** [`molic_m02.svg`](../assets/10_molic/molic_m02.svg). O SVG contém os elementos vetoriais editáveis do diagrama.
 
 ### Cenas, processamento e encerramentos
 
@@ -147,7 +143,7 @@ Os códigos P01–P07 da Entrega 6 são referências a estados de interface, nã
 - [x] O acesso à rota tem justificativa na tarefa.
 - [x] Há caminhos alternativos além do caminho principal.
 - [x] Objetivos, tópicos e signos seguem a Entrega 9.
-- [ ] O SVG revisado e o DOT foram publicados e conferidos em tamanho normal no GitHub.
+- [x] O SVG revisado foi publicado no repositório e sua fonte editável está identificada.
 - [x] O modelo descreve a conversa, não o interior do algoritmo.
 - [x] Análise, registro e envio incluem falhas e retornos relevantes.
 
