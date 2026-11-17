@@ -1,6 +1,7 @@
 # Entrega 13 — Avaliação de IHC por inspeção heurística
 
 **Data:** 16/11/2026  
+**Revisão de A01 — Lucas:** inspeção adicional realizada em versão do aplicativo de aproximadamente 15/11/2026, às 15h  
 **Status:** 🟨 em andamento — inspeções individuais registradas; confirmação de achados de Pedro marcados `[código]` e consolidação final da equipe pendentes.  
 **Responsabilidade:** 1 avaliação completa por integrante, sobre todas as telas/estados relevantes do projeto.
 
@@ -8,7 +9,7 @@
 
 Encontrar problemas de usabilidade por inspeção sistemática da interface com as **10 heurísticas de Nielsen**. Cada avaliador trabalha individualmente primeiro; depois a equipe consolida problemas duplicados e prioridades.
 
-> **Parte de violações:** registre somente problemas reais. Não invente uma violação para “preencher” cada heurística. Para mostrar quais heurísticas foram examinadas, use a **matriz de cobertura H1–H10**. Para heurísticas sem violação observada, registre um exemplo de boa prática quando houver evidência.
+> **Parte de violações:** registre somente problemas reais. Não invente uma violação para “preencher” cada heurística. Para mostrar quais heurísticas foram examinadas, use a **matriz de cobertura H1–H10**. Para heurísticas sem violação, registre exemplo de boa prática quando houver evidência.
 
 ## 1. Heurísticas adotadas
 
@@ -46,12 +47,12 @@ Em TCCs técnicos, observe especialmente se a interface comunica o estado do pro
 
 | Item | Definição |
 |---|---|
-| Versão avaliada | Aplicativo CYF (Clean Your Farm) para iPhone, pasta `ios-native/` de <https://github.com/Cabral100/App_Orange_Box>, commit `a36785f`, de 12/11/2026. As capturas adicionais da inspeção de Lucas mostram estados apresentados até 16/11/2026; o commit exato correspondente a essas capturas não foi registrado. |
+| Versão avaliada | Aplicativo CYF (Clean Your Farm) para iPhone, pasta `ios-native/` de <https://github.com/Cabral100/App_Orange_Box>, commit `a36785f`, de 12/11/2026. As capturas adicionais da inspeção de Lucas mostram estados apresentados até 16/11/2026; o commit exato correspondente não foi identificado. Lucas estima que a versão adicional foi examinada por volta de 15/11/2026, às 15h. |
 | Telas/estados | Acesso (F01), Câmera (F02), Histórico (F03), Mapa (F04), Conta (F05) e Relatórios (F06), da Entrega 11. Foram considerados também ajuda da câmera, confirmação “Imagem capturada”, associação da foto ao talhão, detalhe da inspeção, detalhe do talhão, filtros, exportação em PDF e exclusões, conforme a cobertura descrita por cada avaliador. Telas FA do fluxo do agrônomo no Figma: FA01–FA03 e FA05–FA07, incluindo estados alternativos. |
 | Fluxos | M02 (perfil de inspeção) e M03 (perfil administrador). O aplicativo não tem perfil de agrônomo; M01 foi inspecionado nas telas FA do Figma. |
 | Dispositivo/viewport | Aplicativo em iPhone; telas FA em layout de computador. |
 | Avaliadores | Lucas Tonoli Cabral Duarte (A01); Guilherme Morais Escudeiro (A02); Pedro Henrique Ferreira Valim (A03). |
-| Limite da evidência | Capturas documentam os estados mostrados, mas não comprovam, por si sós, todos os comportamentos dinâmicos, estados vazios, erros e caminhos de recuperação. Achados de Pedro identificados apenas no código estão marcados expressamente. |
+| Limite da evidência | Capturas documentam os estados mostrados, mas não comprovam, por si sós, todos os comportamentos dinâmicos, estados vazios, erros e caminhos de recuperação. Achados de Pedro identificados apenas no código estão marcados expressamente. Acesso e Conta não foram examinados por Lucas. |
 
 ## 3. Procedimento individual
 
@@ -81,28 +82,30 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 
 **Autor(a):** Lucas Tonoli Cabral Duarte — 24.123.032-5
 
-**Situação da inspeção individual:** encerrada para os estados e fluxos observados, com os limites de verificação descritos abaixo.
+**Situação da inspeção individual:** encerrada para os estados dos fluxos de inspeção examinados e descritos nesta seção. As telas Acesso e Conta não foram examinadas. O commit exato da versão adicional não foi identificado.
 
-**Como a inspeção foi feita:** Lucas examinou no aplicativo a câmera antes e depois da captura, o detalhe da inspeção, a associação da foto ao talhão, o filtro do mapa e a montagem de relatório. Aplicou as dez heurísticas aos estados observados e registrou as capturas correspondentes. A avaliação trata da comunicação e do controle oferecidos pela interface, não da acurácia científica do detector.
+**Como a inspeção foi feita:** Lucas examinou a câmera antes e depois da captura, a ajuda da câmera, o detalhe da inspeção, a associação da foto ao talhão, o filtro do mapa, o Histórico — incluindo consulta e ações de refazer foto, editar informações e excluir imagem — e a montagem, exportação e compartilhamento do relatório PDF. O PDF foi examinado e compartilhado com um funcionário de uma fazenda parceira, que gostou do relatório. Esse comentário é registrado como retorno informal, sem identificação do funcionário e sem ser tratado como uma sessão formal de avaliação com usuário.
 
-**Versão examinada:** aplicativo CYF para iPhone, conforme as capturas incluídas nesta seção, registradas até 16/11/2026. O commit exato correspondente às capturas não foi registrado; por isso, as imagens e a data identificam a versão examinada nesta avaliação.
+Lucas também examinou os estados de ausência de GPS e de indicação abaixo de 85%. Aplicou H1–H10 aos estados observados e registrou as capturas correspondentes. A avaliação trata da comunicação e do controle oferecidos pela interface, não da acurácia científica do detector.
+
+**Versão examinada:** aplicativo CYF para iPhone, conforme as capturas desta seção e a inspeção adicional feita por volta de **15/11/2026, às 15h**. O commit exato correspondente não foi identificado.
 
 ### 4. Matriz de cobertura das 10 heurísticas
 
 | Heurística | Telas/estados examinados | Violação observada? | Achados | Resultado da inspeção |
 |---|---|---|---|---|
-| H1 — Visibilidade do status | Câmera, orientação de enquadramento e confirmação da captura | não | — | A câmera mostra a porcentagem da indicação e orienta a ajustar a distância do celular conforme o estado apresentado. Depois de uma captura permitida, informa “Imagem capturada — Registro salvo neste aparelho”. |
-| H2 — Compatibilidade com o mundo real | Câmera, detalhe da inspeção e associação ao talhão | sim | A01-V01, A01-V02, A01-V04 | Nomes técnicos da implementação, data em inglês e sigla EXIF não estão adequados ao vocabulário da tarefa. |
-| H3 — Controle e liberdade | Câmera, detalhe da inspeção e associação ao talhão | não nos estados observados | — | Há retorno na câmera, opção “Depois” na associação e controles para alterar ou marcar o talhão no detalhe. |
+| H1 — Visibilidade do status | Câmera, orientação de enquadramento, confirmação da captura, Histórico e exportação do relatório | não | — | A câmera informa a porcentagem e orienta a ajustar a distância do celular. Após uma captura permitida, informa “Imagem capturada — Registro salvo neste aparelho”. O PDF foi gerado e aberto. |
+| H2 — Compatibilidade com o mundo real | Câmera, ajuda, detalhe da inspeção e associação ao talhão | sim | A01-V01, A01-V02, A01-V04 | Foram observados nomes técnicos da implementação, data em inglês e a sigla EXIF sem explicação. |
+| H3 — Controle e liberdade | Câmera, detalhe, associação ao talhão e Histórico | não nos estados observados | — | Há retorno na câmera, opção “Depois” na associação e, no Histórico, ações para refazer foto, editar informações e excluir a imagem. |
 | H4 — Consistência e padrões | Filtros do Mapa e montagem de relatório | sim | A01-V03 | O filtro nomeia situações pelas cores, enquanto outras partes do aplicativo usam termos para os níveis dos talhões. |
-| H5 — Prevenção de erros | Câmera antes da captura | não no comportamento observado | — | Segundo o uso observado por Lucas, o aplicativo impede o registro quando a indicação está abaixo de 85%. |
-| H6 — Reconhecimento em vez de memorização | Filtros do Mapa e montagem de relatório | não nos estados observados | — | A lista e a busca permitem encontrar um talhão pelo nome. |
-| H7 — Flexibilidade e eficiência | Câmera, filtros e relatório | não nos estados observados | — | A câmera oferece acesso à galeria, e a montagem do relatório apresenta escolhas diretas de período, talhão e conteúdo. |
-| H8 — Design minimalista | Câmera e filtros | não nos estados observados | — | A área central da câmera permanece dedicada ao enquadramento. |
-| H9 — Reconhecimento e recuperação de erros | Orientações exibidas na câmera | não foi possível avaliar uma falha de captura | — | Durante a inspeção, Lucas não reproduziu uma falha de captura. As orientações para aproximar ou afastar o celular ajudam a ajustar o enquadramento, mas não são mensagens de erro. |
-| H10 — Ajuda e documentação | Câmera | não demonstrada | — | Há um ícone de informação visível. As capturas não documentam o conteúdo aberto por esse controle. |
+| H5 — Prevenção de erros | Câmera antes da captura | não no comportamento observado | — | O aplicativo bloqueia a captura quando a indicação está abaixo de 85% e informa que é necessário alcançar pelo menos 85%. |
+| H6 — Reconhecimento em vez de memorização | Filtros do Mapa e Histórico | não nos estados observados | — | A lista e a busca permitem localizar talhões pelo nome; as inspeções também ficam consultáveis no Histórico. |
+| H7 — Flexibilidade e eficiência | Câmera, filtros, Histórico e relatório | não nos estados observados | — | A câmera oferece acesso à galeria; o Histórico oferece ações sobre a foto; o relatório permite selecionar período, talhão e conteúdo e exportar o PDF. |
+| H8 — Design minimalista | Câmera, filtros, Histórico e relatório | não nos estados observados | — | A área central da câmera permanece dedicada ao enquadramento; Lucas não identificou excesso de informação que impedisse as tarefas examinadas. |
+| H9 — Reconhecimento e recuperação de erros | Câmera com indicação abaixo de 85% e estado sem GPS | sim | A01-V05 | A orientação para alcançar 85% ajuda a recuperar a captura. Sem GPS, no estado examinado, não foi possível associar a inspeção a um talhão. |
+| H10 — Ajuda e documentação | Ajuda da câmera | não | — | A ajuda explica como usar a câmera e informa a porcentagem mínima necessária para tirar a foto. |
 
-**Limite da matriz:** “nenhuma violação observada” descreve os estados examinados por Lucas; não significa que todas as falhas possíveis do aplicativo tenham sido reproduzidas.
+**Limite da matriz:** a avaliação cobre os estados listados e não as telas Acesso e Conta, que Lucas não examinou. “Nenhuma violação observada” não significa que todas as falhas possíveis do aplicativo tenham sido reproduzidas.
 
 ### 5. Declaração de violações
 
@@ -112,6 +115,7 @@ Ao justificar, considere **frequência, impacto e persistência** do problema no
 | A01-V02 | H2 | Detalhe da inspeção | A data é apresentada em inglês, como “12 November 2026 at 13:15”, embora a interface esteja em português. | [Figura 3](#figura-3--detalhe-da-inspecao) | 1 | A informação ainda pode ser interpretada, mas a troca de idioma dificulta a leitura do registro. | Apresentar data e hora no padrão local, por exemplo “12/11/2026 às 13h15”. |
 | A01-V03 | H4 | Filtros do Mapa, campo “Situação” | As opções “Verde”, “Amarelo” e “Vermelho” nomeiam cores em vez das situações correspondentes aos talhões. | [Figura 4](#figura-4--filtros-do-mapa) | 2 | O usuário precisa associar a cor ao significado e conciliar esses rótulos com os usados nos relatórios. É semelhante a V09 de Pedro. | Usar os mesmos nomes de situação em filtros, mapa e relatórios, mantendo a cor como apoio visual. |
 | A01-V04 | H2 | Mapa, etapa “Qual é a área?” após a foto | A orientação menciona “coordenadas GPS/EXIF da foto” sem explicar a sigla EXIF ou sua relação com a escolha da área. | [Figura 6](#figura-6--associacao-da-foto-a-area) | 2 | A mensagem aparece quando o trabalhador precisa associar a inspeção a um local. A sigla pode dificultar a compreensão da ação seguinte. | Informar que a localização da foto posicionou o mapa e explicar diretamente como selecionar ou informar a área. |
+| A01-V05 | H9 | Associação da inspeção ao talhão, com GPS indisponível | No estado examinado sem GPS, não foi possível marcar ou associar a inspeção a um talhão. A inspeção não permitiu concluir essa etapa naquele estado. | Relato da inspeção de Lucas; não há captura específica do estado sem GPS. | 2 | A indisponibilidade da localização interrompe a associação ao talhão. Como não foi registrada uma mensagem de recuperação ou uma alternativa manual nesse estado, o usuário pode não saber como prosseguir. | Informar claramente que o GPS está indisponível e oferecer tentativa novamente ou seleção manual do talhão, se essa opção for compatível com o sistema. |
 
 #### Evidências fotográficas de A01
 
@@ -139,9 +143,9 @@ O campo “Situação” mostra “Todas”, “Verde”, “Amarelo” e “Ver
 
 ![Filtro do mapa com situações nomeadas por cores](../assets/13_heuristica/Filtros_Mapa.jpeg)
 
-##### Figura 5 — Montagem de relatório
+##### Figura 5 — Montagem e exportação do relatório
 
-A tela permite selecionar período, talhão e tipos de informação para o relatório. Esta foto documenta a montagem; o conteúdo gerado deve ser examinado no arquivo exportado.
+Lucas montou o relatório, gerou e abriu o PDF. Examinou o conteúdo e compartilhou o arquivo com um funcionário de uma fazenda parceira, que gostou do relatório. O retorno foi informal e não é tratado como uma sessão de teste com usuário.
 
 ![Montagem de relatório por período, talhão e conteúdo](../assets/13_heuristica/Filtros_Realatorio.jpeg)
 
@@ -157,35 +161,39 @@ O detalhe mostra uma inspeção registrada e os controles “Alterar talhão ass
 
 ![Resultado da inspeção e controles para alterar ou marcar talhão](../assets/13_heuristica/Resultado_e_alteracao_ft.jpeg)
 
+**Ajuda da câmera:** Lucas abriu a ajuda e verificou que ela explica como usar a câmera e que a indicação deve chegar a **85% ou mais** para permitir a captura. Não foi fornecida uma captura específica do conteúdo da ajuda; o registro corresponde à inspeção realizada.
+
 #### Limite de captura e estados de erro
 
-No uso examinado por Lucas, **não foi possível registrar uma foto com indicação abaixo de 85%**, porque o aplicativo bloqueia a captura nessa condição. Por isso, não existe uma foto salva abaixo do limite a ser anexada. A Figura 1 mostra a câmera em 57% antes da captura; a Figura 2 mostra a confirmação de uma captura permitida.
+No uso examinado por Lucas, **não foi possível registrar uma foto com indicação abaixo de 85%**, porque o aplicativo bloqueia a captura e informa que é necessário chegar a pelo menos 85%. Por isso, não existe uma foto salva abaixo do limite a ser anexada. A Figura 1 mostra a câmera em 57% antes da captura; a Figura 2 mostra a confirmação de uma captura permitida.
 
 Lucas também não identificou, nos exemplos que examinou, uma indicação de **85% ou mais** que reconhecesse como algo diferente de ácaro. Essa observação não comprova a ausência de falsos positivos nem valida a precisão do modelo.
 
-**Não foi reproduzida uma falha de captura** durante esta inspeção. O retorno observado na câmera foi a orientação para **aproximar ou afastar o celular conforme a indicação exibida**, buscando um enquadramento adequado. Trata-se de orientação para continuar a tarefa, e não de um erro de captura. Assim, Lucas não atribuiu uma violação de H9 a uma mensagem de falha que não conseguiu observar.
+Quando o GPS estava indisponível, não foi possível associar a inspeção a um talhão no estado examinado. Esse bloqueio foi registrado em A01-V05; não se presume que a interface ofereça ou deixe de oferecer uma alternativa em outros estados sem evidência.
+
+As mensagens e os indicadores da câmera orientam a aproximar ou afastar o celular para obter uma indicação de pelo menos 85%. Lucas não reproduziu uma falha de captura depois de seguir essa orientação. O bloqueio abaixo do limiar é prevenção prevista pelo aplicativo; a orientação para ajustar a distância é feedback para continuar a tarefa, não uma mensagem de erro de captura.
 
 ### 6. Boas práticas — heurísticas sem violação observada
 
 | Heurística | Exemplo no estado examinado | Evidência | Por que atende |
 |---|---|---|---|
 | H1 | A captura concluída gera a mensagem “Imagem capturada — Registro salvo neste aparelho”. | [Figura 2](#figura-2--confirmacao-de-captura) | Informa que a ação terminou e onde o registro foi salvo. |
-| H3 | O detalhe oferece “Alterar talhão associado” e “Marcar talhão no mapa”. | [Figura 7](#figura-7--resultado-e-alteracao-do-talhao) | Torna visíveis ações para rever a localização associada ao registro. |
-| H5 | O aplicativo bloqueia a captura abaixo de 85%, conforme o uso observado por Lucas. | [Figura 1](#figura-1--camera-com-deteccao), junto ao relato de uso | Evita salvar uma indicação abaixo do limite definido pelo aplicativo. A figura mostra o estado anterior à captura. |
-| H6 | O filtro apresenta busca e lista de talhões. | [Figura 4](#figura-4--filtros-do-mapa) | Permite reconhecer o talhão pelo nome. |
-| H7 | A câmera oferece acesso à galeria. | [Figura 1](#figura-1--camera-com-deteccao) | Oferece outra forma de fornecer uma imagem. |
+| H3 | O Histórico permite refazer a foto, editar informações associadas e excluir a imagem. | Inspeção do Histórico por Lucas; sem captura específica indicada. | Permite rever e corrigir informações do registro conforme as ações disponíveis. |
+| H5 | O aplicativo bloqueia a captura abaixo de 85% e a ajuda explica o limiar mínimo. | [Figura 1](#figura-1--camera-com-deteccao) e ajuda da câmera | Previne uma captura abaixo do limite definido e informa ao usuário o que precisa atingir. |
+| H6 | O filtro apresenta busca e lista de talhões; o Histórico lista inspeções para consulta. | [Figura 4](#figura-4--filtros-do-mapa) e inspeção do Histórico | Permite reconhecer os itens por nome e consultar registros existentes. |
+| H7 | A câmera oferece acesso à galeria; o relatório pode ser configurado e exportado como PDF. | [Figura 1](#figura-1--camera-com-deteccao) e [Figura 5](#figura-5--montagem-e-exportacao-do-relatorio) | Oferece alternativas para fornecer imagem e para compartilhar o resumo das informações. |
 | H8 | A área central da câmera é dedicada ao enquadramento. | [Figura 1](#figura-1--camera-com-deteccao) | Mantém o foco visual na tarefa de fotografar. |
-| H9 | A câmera orienta o usuário a ajustar a distância do celular quando a indicação ainda não permite a captura. | [Figura 1](#figura-1--camera-com-deteccao), junto ao relato de uso | Oferece uma ação para continuar a tarefa. Não substitui a análise de uma falha de captura, que não foi reproduzida. |
-| H10 | Há um ícone de informação na câmera. | [Figura 1](#figura-1--camera-com-deteccao) | Indica onde procurar ajuda; o conteúdo dessa ajuda não está documentado nas capturas. |
+| H10 | A ajuda da câmera explica como usá-la e qual porcentagem permite tirar a foto. | Inspeção direta da ajuda por Lucas; captura específica não fornecida. | Dá instruções contextuais para a tarefa de captura. |
 
 ### Síntese individual — Lucas
 
-- **Total:** 4 problemas registrados: três de H2 e um de H4; três com severidade 2 e um com severidade 1.
-- **Prioridades:** traduzir a mensagem técnica da câmera (A01-V01), padronizar os nomes das situações no filtro (A01-V03) e explicar a associação da foto à área sem a sigla EXIF (A01-V04).
+- **Total:** 5 problemas registrados: três de H2, um de H4 e um de H9; quatro com severidade 2 e um com severidade 1.
+- **Prioridades:** traduzir a mensagem técnica da câmera (A01-V01), padronizar os nomes das situações no filtro (A01-V03), explicar a associação da foto à área sem a sigla EXIF (A01-V04) e oferecer orientação ou recuperação quando o GPS não está disponível (A01-V05).
 - **Duplicidades candidatas:** A01-V01 é semelhante a V07 de Pedro; A01-V03 é semelhante a V09 de Pedro. A consolidação deve preservar o registro de ambos os avaliadores.
-- **Captura abaixo do limite:** o aplicativo bloqueia o registro abaixo de 85%; a imagem em 57% é do estado anterior à captura.
-- **Falhas:** Lucas não reproduziu falha de captura durante a inspeção. As orientações para aproximar ou afastar o aparelho são feedback de enquadramento e foram descritas como tal.
-- **Limitação:** a inspeção individual está encerrada para os estados observados. Ela não permite concluir que todas as falhas possíveis foram testadas nem que a precisão do detector foi validada.
+- **Histórico e relatório:** Lucas examinou as ações de refazer foto, editar informações e excluir a imagem no Histórico. Também gerou, abriu e compartilhou o PDF; um funcionário de uma fazenda parceira gostou do relatório. Esse retorno é informal e não substitui avaliação sistemática com participantes.
+- **Captura abaixo do limite:** o aplicativo bloqueia o registro abaixo de 85% e informa o limiar. A imagem em 57% é do estado anterior à captura.
+- **Limite de GPS:** sem GPS, não foi possível associar a inspeção a um talhão no estado examinado.
+- **Limitação da cobertura:** Acesso e Conta não foram examinados por Lucas. O commit da versão usada nas capturas adicionais não foi identificado; a inspeção foi por volta de 15/11/2026, às 15h.
 
 ## Avaliador A02 — Guilherme
 
@@ -315,21 +323,21 @@ Os demais achados ainda precisam ser comparados pela equipe para eliminar duplic
 
 ## 8. Síntese e plano de melhoria
 
-Nas inspeções individuais registradas, Lucas encontrou 4 problemas, Guilherme 13 e Pedro 16. **A soma de 33 registros não é o total consolidado**, pois inclui ao menos os dois pares de duplicidades candidatas acima.
+Nas inspeções individuais registradas, Lucas encontrou **5 problemas**, Guilherme 13 e Pedro 16. **A soma de 34 registros não é o total consolidado**, pois inclui ao menos os dois pares de duplicidades candidatas acima.
 
-As prioridades propostas pelos avaliadores incluem: comunicar corretamente situações e números que afetam decisões de manejo; permitir correção de vereditos e ações com impacto no mapa; esclarecer a diferença entre indicação do modelo e confirmação humana; e traduzir os termos técnicos apresentados durante a inspeção. A equipe ainda precisa decidir quais correções entram antes da avaliação com usuários e atribuir responsáveis.
+As prioridades propostas pelos avaliadores incluem: comunicar corretamente situações e números que afetam decisões de manejo; permitir correção de vereditos e ações com impacto no mapa; esclarecer a diferença entre indicação do modelo e confirmação humana; traduzir os termos técnicos apresentados durante a inspeção; e orientar a recuperação quando a localização não está disponível.
 
-A evidência de Lucas documenta a câmera abaixo do limite de captura, a confirmação de uma captura permitida, detalhes do registro, associação ao talhão e filtros. **Não há foto salva abaixo de 85% porque o aplicativo bloqueia essa ação.** A orientação para aproximar ou afastar o aparelho é feedback de enquadramento; Lucas não reproduziu uma falha de captura para avaliar uma mensagem de erro.
+A evidência de Lucas documenta a câmera abaixo do limite de captura, a confirmação de uma captura permitida, detalhes do registro, associação ao talhão, filtros e relatório PDF. **Não há foto salva abaixo de 85% porque o aplicativo bloqueia essa ação e informa o limite mínimo.** A orientação para aproximar ou afastar o aparelho é feedback para atingir o limite. Sem GPS, no estado examinado, Lucas não conseguiu associar a inspeção a um talhão. O PDF foi aberto e compartilhado com um funcionário de uma fazenda parceira, que gostou do documento; esse comentário foi informal e não substitui uma avaliação de usabilidade com participantes.
 
 ## Checklist
 
-- [ ] Cada integrante fez uma inspeção completa e identificada. — As três partes estão identificadas. Lucas encerrou a inspeção dos estados observados; a confirmação de achados de Pedro marcados `[código]` permanece pendente.
-- [ ] Todas as telas/estados relevantes foram examinados. — Há estados dinâmicos não demonstrados pelas capturas e verificações de Pedro pendentes no aparelho.
-- [ ] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes. — A cobertura completa dos estados de erro e processamento ainda não está demonstrada.
+- [ ] Cada integrante fez uma inspeção completa e identificada. — As três partes estão identificadas. Lucas concluiu os estados do fluxo de inspeção que examinou; Acesso e Conta não foram examinados por ele. A confirmação de achados de Pedro marcados `[código]` permanece pendente.
+- [ ] Todas as telas/estados relevantes foram examinados. — Acesso e Conta não foram examinados por Lucas; há estados dinâmicos e verificações de Pedro pendentes no aparelho.
+- [ ] Estados administrativos, filtros, relatórios, históricos, processamento e erros foram incluídos quando existentes. — Lucas examinou Histórico, filtros, PDF e os estados de câmera informados nesta seção. A cobertura completa dos estados de erro e processamento ainda não está demonstrada para toda a equipe.
 - [x] A inspeção avaliou a interface/protótipo, não o mérito técnico do algoritmo/modelo.
 - [x] H1–H10 aparecem na matriz de cobertura de cada avaliador.
 - [x] A parte de violações não força um problema para cada heurística.
-- [ ] Todo problema tem print/localização e contexto. — Lucas e Guilherme têm imagens para os achados; seis achados de Pedro ainda indicam captura pendente.
+- [ ] Todo problema tem print/localização e contexto. — Lucas e Guilherme têm imagens para os achados; A01-V05 tem relato sem captura específica. Seis achados de Pedro ainda indicam captura pendente.
 - [x] A severidade dos achados registrados possui justificativa.
 - [x] As recomendações individuais indicam como resolver a causa ou reduzir o impacto dos problemas registrados.
 - [ ] Achados duplicados foram consolidados ao final. — Dois pares foram identificados; a decisão final e a consolidação dos demais achados dependem da equipe.
