@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1480" viewBox="0 0 1800 1480" role="img" aria-labelledby="ttl ds"><title id="ttl">M02 — Inspecionar a rota e repassar os achados</title><desc id="ds">MoLIC de Lucas Cabral com sete cenas, três processamentos, alternativas e rupturas.</desc><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#222"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#666"/></marker></defs><style>text{font-family:Arial,Helvetica,sans-serif;fill:#222} .box{fill:white;stroke:#222;stroke-width:2}.main{fill:none;stroke:#222;stroke-width:2;marker-end:url(#a)}.rec{fill:none;stroke:#666;stroke-width:2;stroke-dasharray:7 6;marker-end:url(#b)}.t{font-size:26px;font-weight:bold}.h{font-size:19px;font-weight:bold}.body{font-size:17px}.lab{font-size:15px;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}.p{fill:#161616}.pt{fill:#fff;font-size:15px;font-weight:bold}.gray{fill:#ddd;stroke:#777;stroke-width:2}</style><rect width="1800" height="1480" fill="white"/>
+<text x="900" y="46" class="t" text-anchor="middle">M02 — Inspecionar a rota e repassar os achados</text>
+<circle cx="94" cy="117" r="10" fill="#222"/>
+<text x="114" y="123" class="lab" text-anchor="start">gc: inspecionar a rota</text>
+<rect class="gray" x="735" y="96" width="330" height="50" rx="13"/>
+<text x="900" y="127" class="h" text-anchor="middle">Rota durante a inspeção</text>
+<rect class="box" x="80" y="210" width="500" height="150" rx="18"/><line x1="80" y1="249" x2="580" y2="249" stroke="#222"/>
+<text x="330" y="237" class="h" text-anchor="middle">S1 · Orientar a rota</text>
+<text x="97" y="273" class="body" text-anchor="start">d+u: próximo ponto (talhão, linha, árvore)</text>
+<text x="97" y="296" class="body" text-anchor="start">d+u: planejados, registrados e pendentes</text>
+<text x="97" y="319" class="body" text-anchor="start">d: reinspeção do gestor / nova foto do agrônomo</text>
+<text x="97" y="342" class="body" text-anchor="start">d: origem de cada pedido</text>
+<rect class="box" x="80" y="455" width="500" height="126" rx="18"/><line x1="80" y1="494" x2="580" y2="494" stroke="#222"/>
+<text x="330" y="482" class="h" text-anchor="middle">S2 · Preparar a foto</text>
+<text x="97" y="518" class="body" text-anchor="start">d: orientação de foco, distância e iluminação</text>
+<text x="97" y="541" class="body" text-anchor="start">u: ajustar enquadramento e fotografar</text>
+<text x="97" y="564" class="body" text-anchor="start">u: voltar à rota</text>
+<rect class="box" x="80" y="833" width="500" height="127" rx="18"/><line x1="80" y1="872" x2="580" y2="872" stroke="#222"/>
+<text x="330" y="860" class="h" text-anchor="middle">S3 · Interpretar o resultado</text>
+<text x="97" y="896" class="body" text-anchor="start">d: sinal suspeito / nenhum sinal / inconclusivo</text>
+<text x="97" y="919" class="body" text-anchor="start">d: indicação automática não confirma a praga</text>
+<text x="97" y="942" class="body" text-anchor="start">u: refazer foto ou guardar a indicação</text>
+<rect class="box" x="660" y="833" width="500" height="127" rx="18"/><line x1="660" y1="872" x2="1160" y2="872" stroke="#222"/>
+<text x="910" y="860" class="h" text-anchor="middle">S4 · Identificar o achado</text>
+<text x="677" y="896" class="body" text-anchor="start">d: local obtido por GPS ou não identificado</text>
+<text x="677" y="919" class="body" text-anchor="start">u: conferir talhão, linha e árvore / informar</text>
+<text x="677" y="942" class="body" text-anchor="start">d: origem do local e campos obrigatórios</text>
+<rect class="box" x="1220" y="455" width="500" height="126" rx="18"/><line x1="1220" y1="494" x2="1720" y2="494" stroke="#222"/>
+<text x="1470" y="482" class="h" text-anchor="middle">S5 · Confirmar o registro</text>
+<text x="1237" y="518" class="body" text-anchor="start">d: foto, resultado, data, hora e local salvos</text>
+<text x="1237" y="541" class="body" text-anchor="start">d: salvo no celular não significa enviado</text>
+<text x="1237" y="564" class="body" text-anchor="start">u: examinar registro / continuar a rota</text>
+<rect class="box" x="1220" y="210" width="500" height="126" rx="18"/><line x1="1220" y1="249" x2="1720" y2="249" stroke="#222"/>
+<text x="1470" y="237" class="h" text-anchor="middle">S6 · Conferir a rota</text>
+<text x="1237" y="273" class="body" text-anchor="start">d: pontos registrados e pendentes</text>
+<text x="1237" y="296" class="body" text-anchor="start">d: cobertura completa ou incompleta</text>
+<text x="1237" y="319" class="body" text-anchor="start">u: retomar ponto ou encerrar a rota</text>
+<rect class="box" x="1220" y="833" width="500" height="127" rx="18"/><line x1="1220" y1="872" x2="1720" y2="872" stroke="#222"/>
+<text x="1470" y="860" class="h" text-anchor="middle">S7 · Conferir o repasse</text>
+<text x="1237" y="896" class="body" text-anchor="start">d: aguardando / enviando / enviado / falha</text>
+<text x="1237" y="919" class="body" text-anchor="start">d: enviado não significa lido pelo gestor</text>
+<text x="1237" y="942" class="body" text-anchor="start">u: tentar novamente / encerrar com pendência</text>
+<rect class="p" x="265" y="675" width="130" height="56"/>
+<text x="330" y="699" class="pt" text-anchor="middle">P1</text>
+<text x="330" y="719" class="pt" text-anchor="middle">Analisar foto</text>
+<rect class="p" x="1405" y="675" width="130" height="56"/>
+<text x="1470" y="699" class="pt" text-anchor="middle">P2</text>
+<text x="1470" y="719" class="pt" text-anchor="middle">Salvar registro</text>
+<rect class="p" x="1405" y="1060" width="130" height="56"/>
+<text x="1470" y="1084" class="pt" text-anchor="middle">P3</text>
+<text x="1470" y="1104" class="pt" text-anchor="middle">Enviar registros</text>
+<path d="M94 127V184H210V210" class="main"/>
+<text x="111" y="173" class="lab" text-anchor="start">u: abrir rota</text>
+<path d="M330 360V455" class="main"/>
+<text x="346" y="413" class="lab" text-anchor="start">u: selecionar ponto</text>
+<path d="M330 581V675" class="main"/>
+<text x="347" y="632" class="lab" text-anchor="start">u: fotografar</text>
+<path d="M330 731V833" class="main"/>
+<text x="349" y="789" class="lab" text-anchor="start">d: análise concluída</text>
+<path d="M580 896H660" class="main"/>
+<text x="618" y="877" class="lab" text-anchor="middle">u: guardar</text>
+<path d="M1160 870H1190V703H1405" class="main"/>
+<text x="1198" y="760" class="lab" text-anchor="start">u: salvar</text>
+<path d="M1470 675V581" class="main"/>
+<text x="1489" y="636" class="lab" text-anchor="start">d: registro salvo</text>
+<path d="M1470 455V336" class="main"/>
+<text x="1492" y="407" class="lab" text-anchor="start">u: conferir rota</text>
+<path d="M1720 278H1765V897H1720" class="main"/>
+<text x="1734" y="630" class="lab" text-anchor="end">u: conferir repasse</text>
+<path d="M1470 960V1060" class="main"/>
+<text x="1489" y="1023" class="lab" text-anchor="start">u: enviar</text>
+<path d="M1470 1116V1201" class="main"/>
+<text x="1490" y="1174" class="lab" text-anchor="start">d: envio confirmado</text>
+<circle cx="1470" cy="1224" r="19" fill="white" stroke="#222" stroke-width="2"/><circle cx="1470" cy="1224" r="13" fill="white" stroke="#222" stroke-width="2"/>
+<text x="1500" y="1230" class="lab" text-anchor="start">objetivo concluído</text>
+<path d="M80 518H45V301H80" class="main"/>
+<text x="48" y="420" class="lab" text-anchor="start">u: voltar</text>
+<path d="M80 869H26V551H80" class="main"/>
+<text x="28" y="742" class="lab" text-anchor="start">u: refazer foto</text>
+<path d="M1220 547H1190V610H615V547H580" class="main"/>
+<text x="823" y="597" class="lab" text-anchor="start">u: examinar outro fruto</text>
+<path d="M1220 241H1090V175H580V241" class="main"/>
+<text x="817" y="167" class="lab" text-anchor="start">u: retomar pendências</text>
+<path d="M580 282H630V122H735" class="main"/>
+<text x="590" y="273" class="lab" text-anchor="start">u: rever rota</text>
+<path d="M1065 122H1120V288H1220" class="main"/>
+<text x="1127" y="225" class="lab" text-anchor="start">u: ver pendências</text>
+<circle cx="1150" cy="1224" r="19" fill="white" stroke="#222" stroke-width="2"/><circle cx="1150" cy="1224" r="13" fill="white" stroke="#222" stroke-width="2"/>
+<text x="980" y="1217" class="lab" text-anchor="start">encerramento com pendência</text>
+<path d="M1220 923H1150V1204" class="main"/>
+<text x="985" y="1090" class="lab" text-anchor="start">u: encerrar aguardando conexão</text>
+<path d="M1720 315H1770V1155H1170V1224" class="main"/>
+<text x="1384" y="1143" class="lab" text-anchor="middle">u: encerrar com rota incompleta</text>
+<path d="M395 703H462V609H515V581" class="rec"/>
+<text x="410" y="666" class="lab" text-anchor="start">[RA] falha/cancelamento: tentar outra foto</text>
+<path d="M580 930H632V767H544V581" class="rec"/>
+<text x="645" y="810" class="lab" text-anchor="start">[RA] inconclusivo: refazer</text>
+<path d="M1138 960H1190V1000H682V960" class="rec"/>
+<text x="910" y="1020" class="lab" text-anchor="middle">[RA] GPS ausente/campo incompleto: corrigir sem perder foto</text>
+<path d="M1405 705H1210V803H1138V833" class="rec"/>
+<text x="1213" y="693" class="lab" text-anchor="start">[RA] falha ao salvar</text>
+<path d="M1535 1088H1668V980H1590V960" class="rec"/>
+<text x="1534" y="1042" class="lab" text-anchor="start">[RA] envio falhou: dados preservados</text>
+<rect x="80" y="1290" width="1150" height="150" fill="#f8f8f8" stroke="#bcbcbc"/>
+<text x="100" y="1320" class="h" text-anchor="start">Legenda — notação MoLIC</text>
+<text x="100" y="1350" class="lab" text-anchor="start">● abertura   ◎ encerramento   caixa arredondada: cena de conversa   ■ processamento   caixa cinza: acesso à rota</text>
+<text x="100" y="1380" class="lab" text-anchor="start">linha contínua: fala de transição   linha tracejada [RA]: ruptura/recuperação   u: usuário   d: sistema</text>
+<text x="100" y="1410" class="lab" text-anchor="start">Modelo da conversa planejada; diferenças em relação ao app atual são documentadas na Entrega 12</text>
+</svg>
