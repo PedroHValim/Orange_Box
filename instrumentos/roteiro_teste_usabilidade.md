@@ -56,7 +56,7 @@ Aplicar UT01, UT02 e UT03 **nessa ordem**. Ler uma instrução por vez. As expli
 - **UT02:** verificar se conclui o registro, percebe o feedback de salvamento local e distingue registro salvo de associação a um talhão. Medir o tempo da Câmera pronta até a confirmação de salvamento.
 - **UT03:** verificar se encontra a vistoria recente, interpreta o resultado como informação experimental e não presume que o registro já foi enviado.
 
-**Tarefas de Pedro (P01):** {{manter o roteiro UT09, UT08 e UT04 definido por Pedro na Entrega 12}}  
+**Tarefas de Pedro (P01):** UT03, UT08 e UT04 na versão web, com as instruções registradas na Entrega 14 (Passo 5, “Tarefas de U02”). O moderador não diz o nome das abas (“Relatórios”, “Mapa”) nem explica o que é “Sem ocorrência”; após cada tarefa, aplica a escala de 1 a 7.  
 **Tarefas de Guilherme (P03):** ver o roteiro P03 abaixo.
 
 ### Roteiro P03 — agrônomo (Guilherme Morais Escudeiro)
