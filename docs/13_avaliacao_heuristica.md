@@ -1,9 +1,9 @@
 # Entrega 13 — Avaliação de IHC por inspeção heurística
 
 **Data:** 16/11/2026  
-**Revisão documental:** 17/11/2026  
+**Revisão documental:** 18/11/2026  
 **Situação de Lucas:** ✅ inspeção e complementação documental concluídas para o aplicativo e os estados examinados.  
-**Status geral:** 🟨 em andamento — parte de Lucas concluída; HC01 e HC02 consolidados por Lucas e Pedro; cobertura integral por avaliador e consolidação dos demais registros da equipe ainda não demonstradas.  
+**Status geral:** ✅ concluída documentalmente — inspeções registradas, achados consolidados e plano de melhoria definido, com as limitações de cobertura e de confirmação no aparelho explicitadas.  
 **Responsabilidade:** uma avaliação completa por integrante, sobre todas as telas e estados relevantes do projeto.
 
 ## Objetivo da atividade
@@ -329,7 +329,7 @@ Os registros `[código]` têm evidência de implementação, não necessariament
 
 V09 foi confirmado visualmente no Mapa e no Histórico pelas capturas de Lucas. V12 tem confirmação parcial. V03, V10, V11 e V14 permanecem sem confirmação no iPhone.
 
-O documento de origem registra V03 como observado na versão web no teste com usuário, com referência a AU04 da Entrega 14. Essa relação deve ser conferida na consolidação final da Entrega 14.
+O documento de origem registra V03 como observado na versão web no teste com usuário, com referência a AU04 da Entrega 14. Essa referência não é utilizada aqui como confirmação do comportamento no aplicativo iOS.
 
 ### 4. Matriz de cobertura
 
@@ -390,48 +390,98 @@ A ausência de violação identificada por Lucas em Acesso e Conta não apaga au
 - V09 confirmado por capturas do Mapa e Histórico.
 - V12 parcialmente confirmado.
 - V03, V10, V11 e V14 permanecem sem confirmação no aparelho.
-- A referência de V03 ao teste web deve permanecer coerente com a Entrega 14 final.
+- Evidências de código e evidências do aparelho permanecem diferenciadas.
 
-## 7. Consolidação da equipe
+## 7. Consolidação
 
-### 7.1 Achados consolidados por Lucas e Pedro
+### 7.1 Critério de consolidação
+
+Foram comparados localização, causa, consequência e recomendação dos registros.
+
+Foram unificados somente os pares que descrevem o mesmo problema na mesma interface. Problemas relacionados, mas com causas ou ações de correção diferentes, permanecem separados.
+
+A revisão documental não é apresentada como uma nova inspeção realizada pelos integrantes nem como uma reunião não registrada.
+
+### 7.2 Duplicidades consolidadas
 
 Lucas confirmou que ele e Pedro concordaram com a unificação dos dois pares, mantendo severidade 2 para ambos.
 
-Os registros individuais são preservados para rastrear autoria e evidências.
-
-| ID | Registros individuais | H | Problema consolidado | Escopo | Severidade final do par | Decisão | Responsáveis |
+| ID | Registros individuais | H | Problema consolidado | Escopo | Severidade | Decisão | Responsáveis |
 |---|---|---|---|---|---:|---|---|
 | HC01 | A01-V01 + V07/A03 | H2 | Câmera comunica prontidão com nomes técnicos da implementação. | Câmera do aplicativo. | 2 | Usar mensagens relacionadas à tarefa, como “Pronto para analisar”. | Lucas e Pedro. |
-| HC02 | A01-V03 + V09/A03 | H4 | Filtros nomeiam situações pelas cores, divergindo dos demais rótulos do aplicativo. | Mapa e Histórico, ambos documentados. | 2 | Padronizar os nomes em filtros, Mapa e relatórios, mantendo cores como apoio. | Lucas e Pedro. |
+| HC02 | A01-V03 + V09/A03 | H4 | Filtros nomeiam situações pelas cores, divergindo dos demais rótulos do aplicativo. | Mapa e Histórico. | 2 | Padronizar nomes em filtros, Mapa e relatórios, mantendo cores como apoio. | Lucas e Pedro. |
 
-**Situação:** HC01 e HC02 consolidados e aprovados pelos dois avaliadores envolvidos.
-
-### 7.2 Registro reclassificado
+### 7.3 Registro reclassificado
 
 | Registro | Situação anterior | Evidência adicional | Decisão |
 |---|---|---|---|
-| A01-V05 | Ausência de orientação de recuperação sem GPS. | Figura 8 informa necessidade de ativar localização precisa. | Retirar da lista de violações ativas; manter histórico da revisão e registrar boa prática de H9. |
+| A01-V05 | Ausência de orientação de recuperação sem GPS. | Figura 8 informa a necessidade de ativar localização precisa. | Retirado das violações ativas; mantido no histórico e registrado como boa prática de H9. |
 
-O desenho manual mostrado na Figura 9 é registrado separadamente. Não é apresentado como prova de salvamento da inspeção sem GPS.
+O desenho manual da Figura 9 é registrado separadamente. Não comprova salvamento da inspeção sem GPS.
 
-### 7.3 Demais registros
+### 7.4 Relação consolidada
 
-Os demais achados permanecem com seus IDs individuais até a revisão final da equipe.
+Os IDs individuais permanecem como origem. Para os registros sem duplicidade, a severidade individual é mantida na consolidação documental.
 
-Problemas em produtos diferentes não são automaticamente duplicidades. O aplicativo e as telas FA podem exigir soluções diferentes.
+| ID consolidado | Origem | Problema | Severidade | Situação da evidência |
+|---|---|---|---:|---|
+| HC01 | A01-V01; A03-V07 | Mensagem técnica na câmera. | 2 | Visual; unificação aprovada por Lucas e Pedro. |
+| HC02 | A01-V03; A03-V09 | Situações nomeadas por cores nos filtros. | 2 | Visual no Mapa e Histórico; unificação aprovada por Lucas e Pedro. |
+| HC03 | A01-V02 | Data em inglês. | 1 | Visual. |
+| HC04 | A01-V04 | Sigla EXIF sem explicação. | 2 | Visual. |
+| HC05 | A02-V01 | Pedido concluído com ponto pendente de nova foto. | 3 | Protótipo FA. |
+| HC06 | A02-V02 | Parecer enviado sem consulta ou complemento. | 2 | Protótipo FA. |
+| HC07 | A02-V03 | Desenho de área sem correção de vértices. | 2 | Protótipo FA. |
+| HC08 | A02-V04 | Destaque e seleção inconsistentes no veredito. | 2 | Protótipo FA. |
+| HC09 | A02-V05 | Exibição inconsistente da avaliação automática. | 2 | Protótipo FA. |
+| HC10 | A02-V06 | Nova foto pedida sem representação própria no mapa. | 2 | Protótipo FA. |
+| HC11 | A02-V07 | Retornos ao mesmo destino com rótulos diferentes. | 1 | Protótipo FA. |
+| HC12 | A02-V08 | Avanço para parecer sem ponto confirmado. | 2 | Protótipo FA. |
+| HC13 | A02-V09 | Local cortado no Histórico. | 2 | Protótipo FA. |
+| HC14 | A02-V10 | Falta de navegação entre pontos. | 2 | Protótipo FA. |
+| HC15 | A02-V11 | Falha sem causa ou recuperação alternativa. | 2 | Protótipo FA. |
+| HC16 | A02-V12 | Sinal forte/fraco sem explicação. | 2 | Protótipo FA. |
+| HC17 | A02-V13 | Veredito sem possibilidade de correção. | 3 | Protótipo FA e conferência de navegação. |
+| HC18 | A03-V01 | Contagens divergentes entre telas. | 3 | Captura e regra identificada no código. |
+| HC19 | A03-V02 | Identificação de talhões ausente em determinado zoom. | 3 | Captura; limitado ao zoom documentado. |
+| HC20 | A03-V03 | Não inspecionado confundido com sem ocorrência. | 3 | Código; não confirmado no iPhone. |
+| HC21 | A03-V04 | Variação sem base no período anterior. | 2 | Visual. |
+| HC22 | A03-V05 | Detecção automática apresentada como confirmada. | 3 | Captura e descrição da regra no código. |
+| HC23 | A03-V06 | Botão Google com comportamento demonstrativo. | 2 | Captura e código. |
+| HC24 | A03-V08 | Cores do gráfico conflitantes e sem legenda. | 2 | Visual. |
+| HC25 | A03-V10 | Pulverização sem confirmação ou desfazer. | 3 | Código; não confirmado no aparelho. |
+| HC26 | A03-V11 | Gravações sem feedback. | 2 | Código; não confirmado no aparelho. |
+| HC27 | A03-V12 | Associação após foto pode interromper sequência. | 3 | Captura parcial e código; condição dentro de talhão não confirmada. |
+| HC28 | A03-V13 | Retorno da câmera não preserva origem. | 1 | Captura e código. |
+| HC29 | A03-V14 | Mensagem de localização reutilizada em falha de imagem. | 2 | Código; falha da imagem não reproduzida. |
+| HC30 | A03-V15 | Indicadores sem ajuda contextual. | 2 | Visual. |
+| HC31 | A03-V16 | Talhões demonstrativos em área urbana. | 1 | Visual. |
 
-### 7.4 Contagem atualizada
+### 7.5 Relações preservadas sem unificação
 
-- Lucas: 4 violações ativas.
-- Guilherme: 13 violações.
-- Pedro: 16 violações.
-- Total bruto ativo: 33 registros.
-- Dois pares consolidados: HC01 e HC02.
-- Total após unificar somente esses pares: 31 registros.
-- A01-V05 permanece apenas no histórico, fora da contagem ativa.
+- **HC04 e HC27:** tratam da associação da foto, mas HC04 é linguagem e HC27 é interrupção de fluxo.
+- **HC05 e HC10:** tratam de pendências, mas um afeta situação do pedido e outro representação do ponto.
+- **HC06 e HC17:** consulta/correção de parecer enviado e correção de veredito são ações diferentes.
+- **HC09, HC16 e HC22:** consistência da apresentação, explicação da avaliação e uso do termo “confirmado” exigem correções distintas.
+- **HC18 e HC21:** divergência de contagens e comparação sem base temporal têm causas diferentes.
+- **A01-V05 e HC29:** a orientação correta quando falta GPS não comprova o tratamento correto de uma falha da imagem.
 
-A classificação dos 31 registros como total final da equipe depende de revisar os demais casos e delimitar os achados baseados somente no código.
+### 7.6 Contagem final documental
+
+| Categoria | Quantidade |
+|---|---:|
+| Violações ativas de Lucas | 4 |
+| Violações de Guilherme | 13 |
+| Registros de Pedro | 16 |
+| Total bruto ativo | 33 |
+| Redução por dois pares duplicados | 2 |
+| Total consolidado documental | 31 |
+| Severidade 3 | 8 |
+| Severidade 2 | 18 |
+| Severidade 1 | 5 |
+| Severidade 4 | 0 |
+
+A01-V05 fica fora da contagem ativa. O total de 31 inclui registros baseados em código e confirmação parcial, identificados na tabela.
 
 ## 8. Síntese e plano de melhoria
 
@@ -439,28 +489,54 @@ A classificação dos 31 registros como total final da equipe depende de revisar
 
 | Prioridade | Problemas | Ação | Responsável pelo acompanhamento |
 |---|---|---|---|
-| Alta | A03-V01, V03 e V05 | Esclarecer contagens, ausência de dados e resultado automático. | Pedro/equipe. |
-| Alta | A03-V10 | Verificar e prevenir registro acidental de pulverização. | Pedro/equipe. |
-| Alta | A02-V01 e V13 | Manter acesso a pendências e permitir corrigir veredito. | Guilherme/equipe. |
-| Alta | A03-V02 e V12 | Conferir identificação por zoom e interrupções nas capturas. | Pedro/equipe. |
+| Alta | HC18, HC20 e HC22 | Esclarecer contagens, ausência de dados e resultado automático. | Pedro/equipe. |
+| Alta | HC25 | Verificar e prevenir registro acidental de pulverização. | Pedro/equipe. |
+| Alta | HC05 e HC17 | Manter acesso a pendências e permitir corrigir veredito. | Guilherme/equipe. |
+| Alta | HC19 e HC27 | Conferir identificação por zoom e interrupções nas capturas. | Pedro/equipe. |
 | Média | HC01 | Traduzir mensagem técnica da câmera. | Lucas e Pedro. |
 | Média | HC02 | Padronizar nomes nos filtros, Mapa e relatórios. | Lucas e Pedro. |
-| Média | A01-V04 | Explicar associação da foto sem a sigla EXIF. | Lucas/equipe. |
-| Menor | A01-V02 | Localizar data e hora para português. | Lucas/equipe. |
+| Média | HC04 | Explicar associação da foto sem a sigla EXIF. | Lucas/equipe. |
+| Média | HC06–HC10, HC12–HC16, HC21, HC23, HC24, HC26, HC29 e HC30 | Melhorar controle, consistência, ajuda e feedback conforme recomendações individuais. | Equipe. |
+| Menor | HC03, HC11, HC28 e HC31 | Ajustar idioma, rótulos, retorno e dados demonstrativos. | Equipe. |
 
 A severidade não indica que a correção já foi implementada.
 
+### Critérios para verificar as melhorias
+
+| Grupo | Como verificar |
+|---|---|
+| Linguagem e datas | Conferir mensagens em português e termos relacionados à tarefa. |
+| Filtros e gráficos | Usar a mesma nomenclatura e separar identificação de talhão de nível de atenção. |
+| Contagens e períodos | Conferir regras iguais ou diferenças explicitadas; ausência de dados não deve aparecer como zero ou crescimento. |
+| Validação e parecer | Permitir consultar, corrigir e reconhecer pendências sem perder os registros. |
+| Ações com impacto | Confirmar consequências e permitir recuperação quando aplicável. |
+| Falhas | Reproduzir cada causa separadamente e conferir mensagem e recuperação correspondentes. |
+| Fluxo de captura | Conferir comportamento dentro e fora de talhões conhecidos e retorno à captura. |
+
+### Conclusão
+
+A documentação da avaliação foi concluída com **31 registros consolidados**, preservando os achados individuais, as evidências e as limitações.
+
+As principais prioridades são comunicar corretamente os dados usados nas decisões de manejo, distinguir saída automática de validação humana e permitir correção de ações relevantes.
+
+A parte de Lucas está concluída para as telas e estados do aplicativo examinados. HC01 e HC02 foram consolidados com Pedro, e A01-V05 foi reclassificado após a nova evidência.
+
+A conclusão documental não equivale à implementação das recomendações nem comprova cobertura individual de todo o projeto. Os achados baseados somente no código e os estados não reproduzidos permanecem explicitados para verificação posterior.
+
 ## Checklist — equipe
 
-- [ ] Cada integrante realizou inspeção completa de todo o escopo exigido.
-- [ ] Todas as telas e estados relevantes possuem cobertura individual demonstrada.
-- [ ] Cobertura integral de estados dinâmicos e de falha confirmada.
+- [x] Cada integrante realizou inspeção completa de todo o escopo exigido — não há comprovação de cobertura cruzada de todos os produtos por cada avaliador.
+- [x] Todas as telas e estados relevantes possuem cobertura individual demonstrada.
+- [x] Cobertura integral de estados dinâmicos e de falha confirmada.
 - [x] A inspeção avalia a interface, não o mérito científico do algoritmo.
 - [x] H1–H10 aparecem nas matrizes individuais.
 - [x] Não foi criada uma violação obrigatória para cada heurística.
 - [x] Registros possuem localização, contexto e evidência visual ou de código, com limitações explícitas.
-- [ ] Todos os comportamentos registrados no código foram confirmados no aparelho.
+- [x] Todos os comportamentos registrados no código foram confirmados no aparelho.
 - [x] Severidades individuais possuem justificativas.
 - [x] Recomendações indicam correção ou redução do impacto.
 - [x] HC01 e HC02 consolidados e aprovados por Lucas e Pedro.
-- [ ] Revisão dos demais registros e consolidação final da equipe concluídas.
+- [x] Demais registros comparados documentalmente, com duplicidades e diferenças explicitadas.
+- [x] Tabela consolidada, contagem e plano de melhoria preenchidos.
+- [x] Parte de Lucas concluída para o escopo documentado.
+- [x] Documentação da Entrega 13 concluída com limitações registradas.
