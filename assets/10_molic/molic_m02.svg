@@ -1,109 +1,311 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1480" viewBox="0 0 1800 1480" role="img" aria-labelledby="ttl ds"><title id="ttl">M02 — Inspecionar a rota e repassar os achados</title><desc id="ds">MoLIC de Lucas Cabral com sete cenas, três processamentos, alternativas e rupturas.</desc><defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#222"/></marker><marker id="b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#666"/></marker></defs><style>text{font-family:Arial,Helvetica,sans-serif;fill:#222} .box{fill:white;stroke:#222;stroke-width:2}.main{fill:none;stroke:#222;stroke-width:2;marker-end:url(#a)}.rec{fill:none;stroke:#666;stroke-width:2;stroke-dasharray:7 6;marker-end:url(#b)}.t{font-size:26px;font-weight:bold}.h{font-size:19px;font-weight:bold}.body{font-size:17px}.lab{font-size:15px;paint-order:stroke;stroke:#fff;stroke-width:5px;stroke-linejoin:round}.p{fill:#161616}.pt{fill:#fff;font-size:15px;font-weight:bold}.gray{fill:#ddd;stroke:#777;stroke-width:2}</style><rect width="1800" height="1480" fill="white"/>
-<text x="900" y="46" class="t" text-anchor="middle">M02 — Inspecionar a rota e repassar os achados</text>
-<circle cx="94" cy="117" r="10" fill="#222"/>
-<text x="114" y="123" class="lab" text-anchor="start">gc: inspecionar a rota</text>
-<rect class="gray" x="735" y="96" width="330" height="50" rx="13"/>
-<text x="900" y="127" class="h" text-anchor="middle">Rota durante a inspeção</text>
-<rect class="box" x="80" y="210" width="500" height="150" rx="18"/><line x1="80" y1="249" x2="580" y2="249" stroke="#222"/>
-<text x="330" y="237" class="h" text-anchor="middle">S1 · Orientar a rota</text>
-<text x="97" y="273" class="body" text-anchor="start">d+u: próximo ponto (talhão, linha, árvore)</text>
-<text x="97" y="296" class="body" text-anchor="start">d+u: planejados, registrados e pendentes</text>
-<text x="97" y="319" class="body" text-anchor="start">d: reinspeção do gestor / nova foto do agrônomo</text>
-<text x="97" y="342" class="body" text-anchor="start">d: origem de cada pedido</text>
-<rect class="box" x="80" y="455" width="500" height="126" rx="18"/><line x1="80" y1="494" x2="580" y2="494" stroke="#222"/>
-<text x="330" y="482" class="h" text-anchor="middle">S2 · Preparar a foto</text>
-<text x="97" y="518" class="body" text-anchor="start">d: orientação de foco, distância e iluminação</text>
-<text x="97" y="541" class="body" text-anchor="start">u: ajustar enquadramento e fotografar</text>
-<text x="97" y="564" class="body" text-anchor="start">u: voltar à rota</text>
-<rect class="box" x="80" y="833" width="500" height="127" rx="18"/><line x1="80" y1="872" x2="580" y2="872" stroke="#222"/>
-<text x="330" y="860" class="h" text-anchor="middle">S3 · Interpretar o resultado</text>
-<text x="97" y="896" class="body" text-anchor="start">d: sinal suspeito / nenhum sinal / inconclusivo</text>
-<text x="97" y="919" class="body" text-anchor="start">d: indicação automática não confirma a praga</text>
-<text x="97" y="942" class="body" text-anchor="start">u: refazer foto ou guardar a indicação</text>
-<rect class="box" x="660" y="833" width="500" height="127" rx="18"/><line x1="660" y1="872" x2="1160" y2="872" stroke="#222"/>
-<text x="910" y="860" class="h" text-anchor="middle">S4 · Identificar o achado</text>
-<text x="677" y="896" class="body" text-anchor="start">d: local obtido por GPS ou não identificado</text>
-<text x="677" y="919" class="body" text-anchor="start">u: conferir talhão, linha e árvore / informar</text>
-<text x="677" y="942" class="body" text-anchor="start">d: origem do local e campos obrigatórios</text>
-<rect class="box" x="1220" y="455" width="500" height="126" rx="18"/><line x1="1220" y1="494" x2="1720" y2="494" stroke="#222"/>
-<text x="1470" y="482" class="h" text-anchor="middle">S5 · Confirmar o registro</text>
-<text x="1237" y="518" class="body" text-anchor="start">d: foto, resultado, data, hora e local salvos</text>
-<text x="1237" y="541" class="body" text-anchor="start">d: salvo no celular não significa enviado</text>
-<text x="1237" y="564" class="body" text-anchor="start">u: examinar registro / continuar a rota</text>
-<rect class="box" x="1220" y="210" width="500" height="126" rx="18"/><line x1="1220" y1="249" x2="1720" y2="249" stroke="#222"/>
-<text x="1470" y="237" class="h" text-anchor="middle">S6 · Conferir a rota</text>
-<text x="1237" y="273" class="body" text-anchor="start">d: pontos registrados e pendentes</text>
-<text x="1237" y="296" class="body" text-anchor="start">d: cobertura completa ou incompleta</text>
-<text x="1237" y="319" class="body" text-anchor="start">u: retomar ponto ou encerrar a rota</text>
-<rect class="box" x="1220" y="833" width="500" height="127" rx="18"/><line x1="1220" y1="872" x2="1720" y2="872" stroke="#222"/>
-<text x="1470" y="860" class="h" text-anchor="middle">S7 · Conferir o repasse</text>
-<text x="1237" y="896" class="body" text-anchor="start">d: aguardando / enviando / enviado / falha</text>
-<text x="1237" y="919" class="body" text-anchor="start">d: enviado não significa lido pelo gestor</text>
-<text x="1237" y="942" class="body" text-anchor="start">u: tentar novamente / encerrar com pendência</text>
-<rect class="p" x="265" y="675" width="130" height="56"/>
-<text x="330" y="699" class="pt" text-anchor="middle">P1</text>
-<text x="330" y="719" class="pt" text-anchor="middle">Analisar foto</text>
-<rect class="p" x="1405" y="675" width="130" height="56"/>
-<text x="1470" y="699" class="pt" text-anchor="middle">P2</text>
-<text x="1470" y="719" class="pt" text-anchor="middle">Salvar registro</text>
-<rect class="p" x="1405" y="1060" width="130" height="56"/>
-<text x="1470" y="1084" class="pt" text-anchor="middle">P3</text>
-<text x="1470" y="1104" class="pt" text-anchor="middle">Enviar registros</text>
-<path d="M94 127V184H210V210" class="main"/>
-<text x="111" y="173" class="lab" text-anchor="start">u: abrir rota</text>
-<path d="M330 360V455" class="main"/>
-<text x="346" y="413" class="lab" text-anchor="start">u: selecionar ponto</text>
-<path d="M330 581V675" class="main"/>
-<text x="347" y="632" class="lab" text-anchor="start">u: fotografar</text>
-<path d="M330 731V833" class="main"/>
-<text x="349" y="789" class="lab" text-anchor="start">d: análise concluída</text>
-<path d="M580 896H660" class="main"/>
-<text x="618" y="877" class="lab" text-anchor="middle">u: guardar</text>
-<path d="M1160 870H1190V703H1405" class="main"/>
-<text x="1198" y="760" class="lab" text-anchor="start">u: salvar</text>
-<path d="M1470 675V581" class="main"/>
-<text x="1489" y="636" class="lab" text-anchor="start">d: registro salvo</text>
-<path d="M1470 455V336" class="main"/>
-<text x="1492" y="407" class="lab" text-anchor="start">u: conferir rota</text>
-<path d="M1720 278H1765V897H1720" class="main"/>
-<text x="1734" y="630" class="lab" text-anchor="end">u: conferir repasse</text>
-<path d="M1470 960V1060" class="main"/>
-<text x="1489" y="1023" class="lab" text-anchor="start">u: enviar</text>
-<path d="M1470 1116V1201" class="main"/>
-<text x="1490" y="1174" class="lab" text-anchor="start">d: envio confirmado</text>
-<circle cx="1470" cy="1224" r="19" fill="white" stroke="#222" stroke-width="2"/><circle cx="1470" cy="1224" r="13" fill="white" stroke="#222" stroke-width="2"/>
-<text x="1500" y="1230" class="lab" text-anchor="start">objetivo concluído</text>
-<path d="M80 518H45V301H80" class="main"/>
-<text x="48" y="420" class="lab" text-anchor="start">u: voltar</text>
-<path d="M80 869H26V551H80" class="main"/>
-<text x="28" y="742" class="lab" text-anchor="start">u: refazer foto</text>
-<path d="M1220 547H1190V610H615V547H580" class="main"/>
-<text x="823" y="597" class="lab" text-anchor="start">u: examinar outro fruto</text>
-<path d="M1220 241H1090V175H580V241" class="main"/>
-<text x="817" y="167" class="lab" text-anchor="start">u: retomar pendências</text>
-<path d="M580 282H630V122H735" class="main"/>
-<text x="590" y="273" class="lab" text-anchor="start">u: rever rota</text>
-<path d="M1065 122H1120V288H1220" class="main"/>
-<text x="1127" y="225" class="lab" text-anchor="start">u: ver pendências</text>
-<circle cx="1150" cy="1224" r="19" fill="white" stroke="#222" stroke-width="2"/><circle cx="1150" cy="1224" r="13" fill="white" stroke="#222" stroke-width="2"/>
-<text x="980" y="1217" class="lab" text-anchor="start">encerramento com pendência</text>
-<path d="M1220 923H1150V1204" class="main"/>
-<text x="985" y="1090" class="lab" text-anchor="start">u: encerrar aguardando conexão</text>
-<path d="M1720 315H1770V1155H1170V1224" class="main"/>
-<text x="1384" y="1143" class="lab" text-anchor="middle">u: encerrar com rota incompleta</text>
-<path d="M395 703H462V609H515V581" class="rec"/>
-<text x="410" y="666" class="lab" text-anchor="start">[RA] falha/cancelamento: tentar outra foto</text>
-<path d="M580 930H632V767H544V581" class="rec"/>
-<text x="645" y="810" class="lab" text-anchor="start">[RA] inconclusivo: refazer</text>
-<path d="M1138 960H1190V1000H682V960" class="rec"/>
-<text x="910" y="1020" class="lab" text-anchor="middle">[RA] GPS ausente/campo incompleto: corrigir sem perder foto</text>
-<path d="M1405 705H1210V803H1138V833" class="rec"/>
-<text x="1213" y="693" class="lab" text-anchor="start">[RA] falha ao salvar</text>
-<path d="M1535 1088H1668V980H1590V960" class="rec"/>
-<text x="1534" y="1042" class="lab" text-anchor="start">[RA] envio falhou: dados preservados</text>
-<rect x="80" y="1290" width="1150" height="150" fill="#f8f8f8" stroke="#bcbcbc"/>
-<text x="100" y="1320" class="h" text-anchor="start">Legenda — notação MoLIC</text>
-<text x="100" y="1350" class="lab" text-anchor="start">● abertura   ◎ encerramento   caixa arredondada: cena de conversa   ■ processamento   caixa cinza: acesso à rota</text>
-<text x="100" y="1380" class="lab" text-anchor="start">linha contínua: fala de transição   linha tracejada [RA]: ruptura/recuperação   u: usuário   d: sistema</text>
-<text x="100" y="1410" class="lab" text-anchor="start">Modelo da conversa planejada; diferenças em relação ao app atual são documentadas na Entrega 12</text>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+ "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Generated by graphviz version 2.42.4 (0)
+ -->
+<!-- Title: M02 Pages: 1 -->
+<svg width="1327pt" height="2383pt"
+ viewBox="0.00 0.00 1327.30 2382.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(32.4 2350.4)">
+<title>M02</title>
+<polygon fill="white" stroke="transparent" points="-32.4,32.4 -32.4,-2350.4 1294.9,-2350.4 1294.9,32.4 -32.4,32.4"/>
+<text text-anchor="middle" x="631.25" y="-2296.4" font-family="DejaVu Sans" font-size="22.00">M02 — Inspecionar a rota e repassar os achados</text>
+<text text-anchor="middle" x="631.25" y="-2272.4" font-family="DejaVu Sans" font-size="22.00">Lucas Cabral · CI02 · revisão de 20/11/2026</text>
+<!-- S1 -->
+<g id="node1" class="node">
+<title>S1</title>
+<path fill="none" stroke="#30363b" stroke-width="1.5" d="M612.5,-2134C612.5,-2134 250.5,-2134 250.5,-2134 244.5,-2134 238.5,-2128 238.5,-2122 238.5,-2122 238.5,-1985 238.5,-1985 238.5,-1979 244.5,-1973 250.5,-1973 250.5,-1973 612.5,-1973 612.5,-1973 618.5,-1973 624.5,-1979 624.5,-1985 624.5,-1985 624.5,-2122 624.5,-2122 624.5,-2128 618.5,-2134 612.5,-2134"/>
+<text text-anchor="start" x="329" y="-2108.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00">S1 · Orientar a inspeção</text>
+<text text-anchor="start" x="255.5" y="-2078.5" font-family="DejaVu Sans" font-size="15.00">d: ponto planejado e situação do ponto na rota</text>
+<text text-anchor="start" x="255.5" y="-2049.5" font-family="DejaVu Sans" font-size="15.00">d: pedido de reinspeção / pedido de nova foto</text>
+<text text-anchor="start" x="255.5" y="-2020.5" font-family="DejaVu Sans" font-size="15.00">d: origem do pedido e referência do local</text>
+<text text-anchor="start" x="255.5" y="-1991.5" font-family="DejaVu Sans" font-size="15.00">d+u: ponto da inspeção em andamento</text>
+<polygon fill="#30363b" stroke="#30363b" points="248.5,-2096.5 248.5,-2096.5 614.5,-2096.5 614.5,-2096.5 248.5,-2096.5"/>
+</g>
+<!-- S2 -->
+<g id="node2" class="node">
+<title>S2</title>
+<path fill="none" stroke="#30363b" stroke-width="1.5" d="M630,-1894C630,-1894 233,-1894 233,-1894 227,-1894 221,-1888 221,-1882 221,-1882 221,-1774 221,-1774 221,-1768 227,-1762 233,-1762 233,-1762 630,-1762 630,-1762 636,-1762 642,-1768 642,-1774 642,-1774 642,-1882 642,-1882 642,-1888 636,-1894 630,-1894"/>
+<text text-anchor="start" x="298" y="-1869" font-family="DejaVu Sans" font-weight="bold" font-size="15.00">S2 · Preparar a evidência visual</text>
+<text text-anchor="start" x="238.5" y="-1839" font-family="DejaVu Sans" font-size="15.00">d: qualidade da foto; orientação de distância e foco</text>
+<text text-anchor="start" x="238.5" y="-1810" font-family="DejaVu Sans" font-size="15.00">d: condições necessárias à captura</text>
+<text text-anchor="start" x="238.5" y="-1781" font-family="DejaVu Sans" font-size="15.00">u: foto do fruto</text>
+<polygon fill="#30363b" stroke="#30363b" points="231.5,-1857 231.5,-1857 632.5,-1857 632.5,-1857 231.5,-1857"/>
+</g>
+<!-- S1&#45;&gt;S2 -->
+<g id="edge2" class="edge">
+<title>S1&#45;&gt;S2</title>
+<path fill="none" stroke="#30363b" d="M421.07,-1972.89C420.06,-1957.67 419.67,-1941.85 420.5,-1927 420.95,-1918.9 421.61,-1910.45 422.39,-1902.04"/>
+<polygon fill="#30363b" stroke="#30363b" points="425.19,-1902.25 423.17,-1894.02 419.61,-1901.71 425.19,-1902.25"/>
+<text text-anchor="middle" x="496.5" y="-1930.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: inspecionar este ponto</text>
+</g>
+<!-- S2&#45;&gt;S1 -->
+<g id="edge20" class="edge">
+<title>S2&#45;&gt;S1</title>
+<path fill="none" stroke="#30363b" d="M558.79,-1894.26C568.95,-1903.94 577.84,-1914.82 584.5,-1927 592.08,-1940.85 592,-1953.78 586.78,-1965.66"/>
+<polygon fill="#30363b" stroke="#30363b" points="584.2,-1964.55 582.88,-1972.92 589.13,-1967.2 584.2,-1964.55"/>
+<text text-anchor="middle" x="694.5" y="-1930.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: voltar à organização da inspeção</text>
+</g>
+<!-- P1 -->
+<g id="node12" class="node">
+<title>P1</title>
+<polygon fill="black" stroke="#30363b" stroke-width="1.5" points="440.5,-1670 422.5,-1670 422.5,-1652 440.5,-1652 440.5,-1670"/>
+<text text-anchor="middle" x="431.5" y="-1658.8" font-family="DejaVu Sans" font-size="9.00" fill="white">P1</text>
+<text text-anchor="middle" x="394.5" y="-1672.8" font-family="DejaVu Sans" font-size="9.00" fill="white">Analisar foto</text>
+</g>
+<!-- S2&#45;&gt;P1 -->
+<g id="edge3" class="edge">
+<title>S2&#45;&gt;P1</title>
+<path fill="none" stroke="#30363b" d="M431.5,-1761.79C431.5,-1731.3 431.5,-1697.52 431.5,-1678.12"/>
+<polygon fill="#30363b" stroke="#30363b" points="434.3,-1678.06 431.5,-1670.06 428.7,-1678.06 434.3,-1678.06"/>
+<text text-anchor="middle" x="482.5" y="-1712.9" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: analisar a foto</text>
+</g>
+<!-- S3 -->
+<g id="node3" class="node">
+<title>S3</title>
+<path fill="none" stroke="#30363b" stroke-width="1.5" d="M650,-1573C650,-1573 213,-1573 213,-1573 207,-1573 201,-1567 201,-1561 201,-1561 201,-1424 201,-1424 201,-1418 207,-1412 213,-1412 213,-1412 650,-1412 650,-1412 656,-1412 662,-1418 662,-1424 662,-1424 662,-1561 662,-1561 662,-1567 656,-1573 650,-1573"/>
+<text text-anchor="start" x="255" y="-1547.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00">S3 · Compreender a indicação automática</text>
+<text text-anchor="start" x="218.5" y="-1517.5" font-family="DejaVu Sans" font-size="15.00">d: situação da análise e resultado da foto</text>
+<text text-anchor="start" x="218.5" y="-1488.5" font-family="DejaVu Sans" font-size="15.00">d: sinal suspeito / nenhum sinal nesta foto / inconclusivo</text>
+<text text-anchor="start" x="218.5" y="-1459.5" font-family="DejaVu Sans" font-size="15.00">d: indicação automática não confirma a praga</text>
+<text text-anchor="start" x="218.5" y="-1430.5" font-family="DejaVu Sans" font-size="15.00">d: ausência de sinal não garante árvore livre</text>
+<polygon fill="#30363b" stroke="#30363b" points="211.5,-1535.5 211.5,-1535.5 652.5,-1535.5 652.5,-1535.5 211.5,-1535.5"/>
+</g>
+<!-- S3&#45;&gt;S2 -->
+<g id="edge6" class="edge">
+<title>S3&#45;&gt;S2</title>
+<path fill="none" stroke="#30363b" stroke-dasharray="5,2" d="M544.27,-1573.31C552.71,-1583.38 560.05,-1594.3 565.5,-1606 588.79,-1655.97 576.46,-1680.92 549.5,-1729 544.21,-1738.44 537.62,-1747.35 530.28,-1755.67"/>
+<polygon fill="#30363b" stroke="#30363b" points="527.9,-1754.13 524.54,-1761.91 532.02,-1757.92 527.9,-1754.13"/>
+<text text-anchor="middle" x="732.5" y="-1657.9" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">[RA] u: obter outra foto após indicação inconclusiva</text>
+</g>
+<!-- S4 -->
+<g id="node4" class="node">
+<title>S4</title>
+<path fill="none" stroke="#30363b" stroke-width="1.5" d="M663.5,-1333C663.5,-1333 199.5,-1333 199.5,-1333 193.5,-1333 187.5,-1327 187.5,-1321 187.5,-1321 187.5,-1184 187.5,-1184 187.5,-1178 193.5,-1172 199.5,-1172 199.5,-1172 663.5,-1172 663.5,-1172 669.5,-1172 675.5,-1178 675.5,-1184 675.5,-1184 675.5,-1321 675.5,-1321 675.5,-1327 669.5,-1333 663.5,-1333"/>
+<text text-anchor="start" x="328.5" y="-1307.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00">S4 · Identificar o achado</text>
+<text text-anchor="start" x="204.5" y="-1277.5" font-family="DejaVu Sans" font-size="15.00">d: local do achado e origem da referência</text>
+<text text-anchor="start" x="204.5" y="-1248.5" font-family="DejaVu Sans" font-size="15.00">d: localização automática indisponível, quando aplicável</text>
+<text text-anchor="start" x="204.5" y="-1219.5" font-family="DejaVu Sans" font-size="15.00">u: referência manual de talhão, linha e árvore, se necessária</text>
+<text text-anchor="start" x="204.5" y="-1190.5" font-family="DejaVu Sans" font-size="15.00">d: coordenada do telefone não garante identificar a árvore</text>
+<polygon fill="#30363b" stroke="#30363b" points="197.5,-1295.5 197.5,-1295.5 665.5,-1295.5 665.5,-1295.5 197.5,-1295.5"/>
+</g>
+<!-- S3&#45;&gt;S4 -->
+<g id="edge7" class="edge">
+<title>S3&#45;&gt;S4</title>
+<path fill="none" stroke="#30363b" d="M431.5,-1411.92C431.5,-1389.19 431.5,-1364.31 431.5,-1341.13"/>
+<polygon fill="#30363b" stroke="#30363b" points="434.3,-1341.01 431.5,-1333.01 428.7,-1341.01 434.3,-1341.01"/>
+<text text-anchor="middle" x="507" y="-1369.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: preservar este achado</text>
+</g>
+<!-- P2 -->
+<g id="node13" class="node">
+<title>P2</title>
+<polygon fill="black" stroke="#30363b" stroke-width="1.5" points="440.5,-1080 422.5,-1080 422.5,-1062 440.5,-1062 440.5,-1080"/>
+<text text-anchor="middle" x="431.5" y="-1068.8" font-family="DejaVu Sans" font-size="9.00" fill="white">P2</text>
+<text text-anchor="middle" x="389.5" y="-1082.8" font-family="DejaVu Sans" font-size="9.00" fill="white">Salvar registro</text>
+</g>
+<!-- S4&#45;&gt;P2 -->
+<g id="edge8" class="edge">
+<title>S4&#45;&gt;P2</title>
+<path fill="none" stroke="#30363b" d="M419.45,-1171.89C418.11,-1152.57 417.99,-1132.01 420.5,-1113 421.61,-1104.6 423.94,-1095.47 426.17,-1087.97"/>
+<polygon fill="#30363b" stroke="#30363b" points="428.94,-1088.51 428.67,-1080.04 423.6,-1086.83 428.94,-1088.51"/>
+<text text-anchor="middle" x="476.5" y="-1122.9" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: salvar o registro</text>
+</g>
+<!-- S5 -->
+<g id="node5" class="node">
+<title>S5</title>
+<path fill="none" stroke="#30363b" stroke-width="1.5" d="M651.5,-983C651.5,-983 211.5,-983 211.5,-983 205.5,-983 199.5,-977 199.5,-971 199.5,-971 199.5,-863 199.5,-863 199.5,-857 205.5,-851 211.5,-851 211.5,-851 651.5,-851 651.5,-851 657.5,-851 663.5,-857 663.5,-863 663.5,-863 663.5,-971 663.5,-971 663.5,-977 657.5,-983 651.5,-983"/>
+<text text-anchor="start" x="265.5" y="-958" font-family="DejaVu Sans" font-weight="bold" font-size="15.00">S5 · Conferir a preservação do registro</text>
+<text text-anchor="start" x="216.5" y="-928" font-family="DejaVu Sans" font-size="15.00">d: foto do fruto, resultado da foto, data e hora da captura</text>
+<text text-anchor="start" x="216.5" y="-899" font-family="DejaVu Sans" font-size="15.00">d: local do achado e situação do registro</text>
+<text text-anchor="start" x="216.5" y="-870" font-family="DejaVu Sans" font-size="15.00">d: salvo no celular não significa enviado</text>
+<polygon fill="#30363b" stroke="#30363b" points="209.5,-946 209.5,-946 653.5,-946 653.5,-946 209.5,-946"/>
+</g>
+<!-- S5&#45;&gt;S2 -->
+<g id="edge11" class="edge">
+<title>S5&#45;&gt;S2</title>
+<path fill="none" stroke="#30363b" d="M559.51,-983.04C575.59,-993.22 591.35,-1004.28 605.5,-1016 634.17,-1039.73 627.58,-1060.87 659.5,-1080 719.92,-1116.2 770.18,-1058.26 814.5,-1113 882.79,-1197.36 780.42,-1251.71 708.5,-1333 689.34,-1354.65 651.64,-1352.2 662.5,-1379 670.17,-1397.93 681.75,-1396.04 694.5,-1412 763.05,-1497.82 745.93,-1547.72 829.5,-1619 874.77,-1657.61 937.1,-1629.06 903.5,-1670 855.78,-1728.14 809.57,-1681.45 737.5,-1703 686.31,-1718.31 631.83,-1738.91 583.24,-1758.92"/>
+<polygon fill="#30363b" stroke="#30363b" points="582.12,-1756.35 575.8,-1762 584.26,-1761.53 582.12,-1756.35"/>
+<text text-anchor="middle" x="733" y="-1369.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: examinar outro fruto</text>
+</g>
+<!-- S6 -->
+<g id="node6" class="node">
+<title>S6</title>
+<path fill="none" stroke="#30363b" stroke-width="1.5" d="M650,-772C650,-772 213,-772 213,-772 207,-772 201,-766 201,-760 201,-760 201,-681 201,-681 201,-675 207,-669 213,-669 213,-669 650,-669 650,-669 656,-669 662,-675 662,-681 662,-681 662,-760 662,-760 662,-766 656,-772 650,-772"/>
+<text text-anchor="start" x="260" y="-746.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00">S6 · Compreender o alcance da inspeção</text>
+<text text-anchor="start" x="218.5" y="-716.5" font-family="DejaVu Sans" font-size="15.00">d: situação do ponto na rota; registros e pendências</text>
+<text text-anchor="start" x="218.5" y="-687.5" font-family="DejaVu Sans" font-size="15.00">d: alcance completo ou incompleto do trabalho atribuído</text>
+<polygon fill="#30363b" stroke="#30363b" points="211.5,-734.5 211.5,-734.5 652.5,-734.5 652.5,-734.5 211.5,-734.5"/>
+</g>
+<!-- S5&#45;&gt;S6 -->
+<g id="edge12" class="edge">
+<title>S5&#45;&gt;S6</title>
+<path fill="none" stroke="#30363b" d="M431.5,-850.96C431.5,-828.05 431.5,-802.44 431.5,-780.09"/>
+<polygon fill="#30363b" stroke="#30363b" points="434.3,-780.01 431.5,-772.01 428.7,-780.01 434.3,-780.01"/>
+<text text-anchor="middle" x="531.5" y="-808.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: conferir o alcance da inspeção</text>
+</g>
+<!-- S6&#45;&gt;S1 -->
+<g id="edge13" class="edge">
+<title>S6&#45;&gt;S1</title>
+<path fill="none" stroke="#30363b" d="M603.05,-772.08C639.72,-790.96 674.12,-816.54 696.5,-851 742.13,-921.25 708.92,-961.48 758.5,-1029 795.54,-1079.44 843.18,-1057.19 871.5,-1113 924.99,-1218.43 855.68,-1262.13 873.5,-1379 893.78,-1511.95 992.81,-1540.5 956.5,-1670 943.58,-1716.09 923.09,-1719.8 900.5,-1762 859.3,-1838.95 883.75,-1883.17 817.5,-1940 765.83,-1984.33 697.5,-2011.21 632.7,-2027.5"/>
+<polygon fill="#30363b" stroke="#30363b" points="631.92,-2024.81 624.82,-2029.44 633.26,-2030.25 631.92,-2024.81"/>
+<text text-anchor="middle" x="967" y="-1369.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: retomar um ponto pendente</text>
+</g>
+<!-- S7 -->
+<g id="node7" class="node">
+<title>S7</title>
+<path fill="none" stroke="#30363b" stroke-width="1.5" d="M630.5,-590C630.5,-590 232.5,-590 232.5,-590 226.5,-590 220.5,-584 220.5,-578 220.5,-578 220.5,-441 220.5,-441 220.5,-435 226.5,-429 232.5,-429 232.5,-429 630.5,-429 630.5,-429 636.5,-429 642.5,-435 642.5,-441 642.5,-441 642.5,-578 642.5,-578 642.5,-584 636.5,-590 630.5,-590"/>
+<text text-anchor="start" x="254" y="-564.5" font-family="DejaVu Sans" font-weight="bold" font-size="15.00">S7 · Conferir a comunicação dos registros</text>
+<text text-anchor="start" x="237.5" y="-534.5" font-family="DejaVu Sans" font-size="15.00">d: destinatário dos achados e situação do envio</text>
+<text text-anchor="start" x="237.5" y="-505.5" font-family="DejaVu Sans" font-size="15.00">d: aguardando conexão / enviando / enviado / falha</text>
+<text text-anchor="start" x="237.5" y="-476.5" font-family="DejaVu Sans" font-size="15.00">d: enviado não significa lido</text>
+<text text-anchor="start" x="237.5" y="-447.5" font-family="DejaVu Sans" font-size="15.00">d: falha mantém os registros preservados</text>
+<polygon fill="#30363b" stroke="#30363b" points="230.5,-552.5 230.5,-552.5 632.5,-552.5 632.5,-552.5 230.5,-552.5"/>
+</g>
+<!-- S6&#45;&gt;S7 -->
+<g id="edge14" class="edge">
+<title>S6&#45;&gt;S7</title>
+<path fill="none" stroke="#30363b" d="M431.5,-668.91C431.5,-647.74 431.5,-622.51 431.5,-598.48"/>
+<polygon fill="#30363b" stroke="#30363b" points="434.3,-598.39 431.5,-590.39 428.7,-598.39 434.3,-598.39"/>
+<text text-anchor="middle" x="550.5" y="-626.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: conferir a comunicação dos registros</text>
+</g>
+<!-- pend -->
+<g id="node10" class="node">
+<title>pend</title>
+<ellipse fill="none" stroke="#30363b" stroke-width="1.5" cx="376.5" cy="-273" rx="9" ry="9"/>
+<ellipse fill="none" stroke="#30363b" stroke-width="1.5" cx="376.5" cy="-273" rx="13" ry="13"/>
+<text text-anchor="middle" x="251" y="-291" font-family="DejaVu Sans" font-size="15.00">encerramento com pendência</text>
+</g>
+<!-- S6&#45;&gt;pend -->
+<g id="edge18" class="edge">
+<title>S6&#45;&gt;pend</title>
+<path fill="none" stroke="#30363b" d="M634.57,-668.93C828.22,-611.15 1074.46,-506.65 958.5,-370 921.12,-325.94 497.31,-284.95 397.47,-275.87"/>
+<polygon fill="#30363b" stroke="#30363b" points="397.56,-273.06 389.34,-275.13 397.05,-278.64 397.56,-273.06"/>
+<text text-anchor="middle" x="1125" y="-512.9" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: encerrar a inspeção incompleta</text>
+<text text-anchor="middle" x="1125" y="-499.9" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">gcc: inspecionar a rota e repassar os achados</text>
+</g>
+<!-- S7&#45;&gt;pend -->
+<g id="edge19" class="edge">
+<title>S7&#45;&gt;pend</title>
+<path fill="none" stroke="#30363b" d="M269.83,-428.76C259.97,-418.93 251.31,-408.04 244.5,-396 213.62,-341.39 312.65,-297.31 356.59,-280.9"/>
+<polygon fill="#30363b" stroke="#30363b" points="357.79,-283.45 364.35,-278.08 355.88,-278.18 357.79,-283.45"/>
+<text text-anchor="middle" x="382" y="-386.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: encerrar com comunicação pendente</text>
+<text text-anchor="middle" x="382" y="-373.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">gcc: inspecionar a rota e repassar os achados</text>
+</g>
+<!-- P3 -->
+<g id="node14" class="node">
+<title>P3</title>
+<polygon fill="black" stroke="#30363b" stroke-width="1.5" points="605.5,-337 587.5,-337 587.5,-319 605.5,-319 605.5,-337"/>
+<text text-anchor="middle" x="596.5" y="-325.8" font-family="DejaVu Sans" font-size="9.00" fill="white">P3</text>
+<text text-anchor="middle" x="552" y="-339.8" font-family="DejaVu Sans" font-size="9.00" fill="white">Enviar registros</text>
+</g>
+<!-- S7&#45;&gt;P3 -->
+<g id="edge15" class="edge">
+<title>S7&#45;&gt;P3</title>
+<path fill="none" stroke="#30363b" d="M505.15,-428.98C515.36,-417.91 525.7,-406.68 535.5,-396 552.13,-377.87 571.21,-356.88 583.54,-343.3"/>
+<polygon fill="#30363b" stroke="#30363b" points="585.71,-345.08 589.01,-337.27 581.56,-341.31 585.71,-345.08"/>
+<text text-anchor="middle" x="650.5" y="-379.9" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: enviar ou tentar novamente</text>
+</g>
+<!-- inicio -->
+<g id="node8" class="node">
+<title>inicio</title>
+<ellipse fill="#202020" stroke="#30363b" stroke-width="1.5" cx="431.5" cy="-2244" rx="6.5" ry="6.5"/>
+</g>
+<!-- inicio&#45;&gt;S1 -->
+<g id="edge1" class="edge">
+<title>inicio&#45;&gt;S1</title>
+<path fill="none" stroke="#30363b" d="M431.5,-2237.15C431.5,-2222.36 431.5,-2181.83 431.5,-2142.7"/>
+<polygon fill="#30363b" stroke="#30363b" points="434.3,-2142.38 431.5,-2134.38 428.7,-2142.38 434.3,-2142.38"/>
+<text text-anchor="middle" x="569.5" y="-2183.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: iniciar inspeção</text>
+<text text-anchor="middle" x="569.5" y="-2170.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">gco: inspecionar a rota e repassar os achados</text>
+</g>
+<!-- fim -->
+<g id="node9" class="node">
+<title>fim</title>
+<ellipse fill="none" stroke="#30363b" stroke-width="1.5" cx="574.5" cy="-214" rx="9" ry="9"/>
+<ellipse fill="none" stroke="#30363b" stroke-width="1.5" cx="574.5" cy="-214" rx="13" ry="13"/>
+<text text-anchor="middle" x="492" y="-232" font-family="DejaVu Sans" font-size="15.00">objetivo concluído</text>
+</g>
+<!-- legenda -->
+<g id="node15" class="node">
+<title>legenda</title>
+<polygon fill="#f5f6f7" stroke="#30363b" stroke-width="1.5" points="766,-134 173,-134 173,0 766,0 766,-134"/>
+<text text-anchor="start" x="181" y="-119.6" font-family="DejaVu Sans" font-size="13.00">LEGENDA — notação MoLIC</text>
+<text text-anchor="start" x="181" y="-105.6" font-family="DejaVu Sans" font-size="13.00">● abertura · ◎ encerramento · cena arredondada: tópico e diálogos/signos</text>
+<text text-anchor="start" x="181" y="-91.6" font-family="DejaVu Sans" font-size="13.00">Pequeno nó preto: processamento interno; nome externo: anotação auxiliar</text>
+<text text-anchor="start" x="181" y="-77.6" font-family="DejaVu Sans" font-size="13.00">Caixa cinza: acesso ubíquo · linha contínua: fala de transição</text>
+<text text-anchor="start" x="181" y="-63.6" font-family="DejaVu Sans" font-size="13.00">Linha tracejada [RA]: ruptura/recuperação apoiada</text>
+<text text-anchor="start" x="181" y="-49.6" font-family="DejaVu Sans" font-size="13.00">u: usuário · d: preposto do designer · d+u: conteúdo compartilhado</text>
+<text text-anchor="start" x="181" y="-35.6" font-family="DejaVu Sans" font-size="13.00">gco: abertura da conversa sobre o objetivo · gcc: fechamento da conversa</text>
+<text text-anchor="start" x="181" y="-21.6" font-family="DejaVu Sans" font-size="13.00">Em uma ruptura, d: comunica a condição; a reação u: aparece separadamente.</text>
+<text text-anchor="start" x="181" y="-7.6" font-family="DejaVu Sans" font-size="13.00">Modelo proposto: recursos ausentes no aplicativo não são declarados implementados.</text>
+</g>
+<!-- fim&#45;&gt;legenda -->
+<!-- pend&#45;&gt;legenda -->
+<!-- rota -->
+<g id="node11" class="node">
+<title>rota</title>
+<path fill="#dedede" stroke="#30363b" stroke-width="1.5" d="M307,-2262C307,-2262 12,-2262 12,-2262 6,-2262 0,-2256 0,-2250 0,-2250 0,-2238 0,-2238 0,-2232 6,-2226 12,-2226 12,-2226 307,-2226 307,-2226 313,-2226 319,-2232 319,-2238 319,-2238 319,-2250 319,-2250 319,-2256 313,-2262 307,-2262"/>
+<text text-anchor="middle" x="159.5" y="-2240.5" font-family="DejaVu Sans" font-size="15.00">Acesso ubíquo: inspeção em andamento</text>
+</g>
+<!-- rota&#45;&gt;S1 -->
+<g id="edge21" class="edge">
+<title>rota&#45;&gt;S1</title>
+<path fill="none" stroke="#30363b" d="M76.69,-2225.94C37.06,-2213.84 2.36,-2194.76 23.5,-2167 50.13,-2132.03 140.98,-2105.18 230.21,-2086.49"/>
+<polygon fill="#30363b" stroke="#30363b" points="231.01,-2089.18 238.28,-2084.82 229.88,-2083.7 231.01,-2089.18"/>
+<text text-anchor="middle" x="109.5" y="-2176.9" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: rever o ponto da inspeção</text>
+</g>
+<!-- rota&#45;&gt;S6 -->
+<g id="edge22" class="edge">
+<title>rota&#45;&gt;S6</title>
+<path fill="none" stroke="#30363b" d="M208.95,-2225.86C260.09,-2208.72 342.53,-2182.71 415.5,-2167 521.62,-2144.15 559.05,-2179.73 657.5,-2134 1004.78,-1972.7 1030.51,-1759.6 1072.5,-1379 1105.57,-1079.21 974.78,-950.34 710.5,-805 689.9,-793.67 667.58,-783.7 644.85,-774.98"/>
+<polygon fill="#30363b" stroke="#30363b" points="645.6,-772.27 637.12,-772.06 643.62,-777.51 645.6,-772.27"/>
+<text text-anchor="middle" x="1136" y="-1489.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">u: conferir pendências</text>
+</g>
+<!-- P1&#45;&gt;S2 -->
+<g id="edge5" class="edge">
+<title>P1&#45;&gt;S2</title>
+<path fill="none" stroke="#30363b" stroke-dasharray="5,2" d="M440.64,-1663.77C466.03,-1668.89 536.37,-1684.53 549.5,-1703 562.27,-1720.96 557.74,-1738.92 544.87,-1755.37"/>
+<polygon fill="#30363b" stroke="#30363b" points="542.4,-1753.94 539.32,-1761.84 546.65,-1757.59 542.4,-1753.94"/>
+<text text-anchor="middle" x="680.5" y="-1719.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">[RA] d: não foi possível concluir a análise;</text>
+<text text-anchor="middle" x="680.5" y="-1706.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">ainda não há resultado</text>
+</g>
+<!-- P1&#45;&gt;S3 -->
+<g id="edge4" class="edge">
+<title>P1&#45;&gt;S3</title>
+<path fill="none" stroke="#30363b" d="M431.5,-1651.97C431.5,-1638.61 431.5,-1610.41 431.5,-1581.46"/>
+<polygon fill="#30363b" stroke="#30363b" points="434.3,-1581.28 431.5,-1573.28 428.7,-1581.28 434.3,-1581.28"/>
+<text text-anchor="middle" x="490.5" y="-1609.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">d: análise concluída</text>
+</g>
+<!-- P2&#45;&gt;S4 -->
+<g id="edge9" class="edge">
+<title>P2&#45;&gt;S4</title>
+<path fill="none" stroke="#30363b" stroke-dasharray="5,2" d="M440.57,-1072.07C462.82,-1072.8 520.06,-1078.14 544.5,-1113 556.5,-1130.12 554.36,-1147.82 544.69,-1164.62"/>
+<polygon fill="#30363b" stroke="#30363b" points="542.07,-1163.51 540.1,-1171.75 546.78,-1166.54 542.07,-1163.51"/>
+<text text-anchor="middle" x="675.5" y="-1129.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">[RA] d: referência obrigatória incompleta</text>
+<text text-anchor="middle" x="675.5" y="-1116.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">ou registro não salvo; dados preservados</text>
+</g>
+<!-- P2&#45;&gt;S5 -->
+<g id="edge10" class="edge">
+<title>P2&#45;&gt;S5</title>
+<path fill="none" stroke="#30363b" d="M431.5,-1061.83C431.5,-1048.25 431.5,-1019.73 431.5,-991.65"/>
+<polygon fill="#30363b" stroke="#30363b" points="434.3,-991.36 431.5,-983.36 428.7,-991.36 434.3,-991.36"/>
+<text text-anchor="middle" x="510.5" y="-1019.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">d: registro salvo no celular</text>
+</g>
+<!-- P3&#45;&gt;S7 -->
+<g id="edge16" class="edge">
+<title>P3&#45;&gt;S7</title>
+<path fill="none" stroke="#30363b" stroke-dasharray="5,2" d="M605.58,-329.29C645.05,-330.87 798.01,-340.63 758.5,-396 732.1,-433 692.72,-457.95 650.34,-474.75"/>
+<polygon fill="#30363b" stroke="#30363b" points="649.15,-472.21 642.68,-477.69 651.15,-477.44 649.15,-472.21"/>
+<text text-anchor="middle" x="853.5" y="-386.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">[RA] d: envio não confirmado;</text>
+<text text-anchor="middle" x="853.5" y="-373.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">registros preservados</text>
+</g>
+<!-- P3&#45;&gt;fim -->
+<g id="edge17" class="edge">
+<title>P3&#45;&gt;fim</title>
+<path fill="none" stroke="#30363b" d="M594.92,-318.95C591.5,-301.54 583.33,-259.96 578.43,-234.99"/>
+<polygon fill="#30363b" stroke="#30363b" points="581.13,-234.22 576.84,-226.91 575.63,-235.3 581.13,-234.22"/>
+<text text-anchor="middle" x="726" y="-276.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">d: envio confirmado para o trabalho concluído</text>
+<text text-anchor="middle" x="726" y="-263.4" font-family="DejaVu Sans" font-size="12.00" fill="#20262c">gcc: inspecionar a rota e repassar os achados</text>
+</g>
+</g>
 </svg>
