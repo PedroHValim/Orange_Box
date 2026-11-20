@@ -19,7 +19,7 @@ No fluxo do agrônomo, “probabilidade/score do modelo”, “caixa delimitador
 
 **Limite do modelo:** esta entrega descreve uma concepção de interação. Recursos propostos não devem ser apresentados como implementados apenas por constarem do cenário, do DCC ou da tabela de signos. A correspondência com a versão disponível deve permanecer explícita nas Entregas 11 e 12.
 
-A revisão de Lucas abrange CI02, DCC, objetivos O01–O05, seu ramo no mapa integrado e os signos relacionados ao trabalhador. As partes dos demais integrantes permanecem sujeitas às correções indicadas ao final.
+A revisão de Lucas abrange CI02, DCC, objetivos O01–O05, seu ramo no mapa integrado e os signos relacionados ao trabalhador. A revisão de Pedro abrange CI01, objetivos O06–O11, seu ramo no mapa integrado e os signos de P01. As partes de Guilherme permanecem sujeitas às correções indicadas ao final.
 
 ## 1. Cenários de interação
 
@@ -28,17 +28,19 @@ A revisão de Lucas abrange CI02, DCC, objetivos O01–O05, seu ramo no mapa int
 **Autor(a):** Pedro — 24.123.048-1  
 **Origem:** cenário de problema C01, “Planejamento do manejo sem visão consolidada da propriedade ao longo dos ciclos”.
 
-Jaime é dono de uma fazenda de citros e cuida da parte administrativa e estratégica da propriedade. Ele conhece pouco a praga e depende do pragueiro para saber se há infestação e onde. A propriedade conta com poucos pragueiros, e a inspeção se repete em ciclos de cerca de 14 dias. **Quando o ciclo termina, o sistema avisa Jaime no escritório e mostra um resumo com a data do ciclo, quantos talhões foram inspecionados e quantos têm focos. Ele não precisa esperar o relato do pragueiro.**
+Jaime é dono de uma fazenda de citros e cuida da parte administrativa e estratégica da propriedade. Ele conhece pouco a praga e depende de quem inspeciona para saber se há infestação e onde. *Hipóteses ainda não confirmadas com gestores reais (P01 é proto-persona; H05 e H21 abertas): a inspeção é feita por poucas pessoas, em ciclos de cerca de duas semanas, e cabe ao gestor decidir o manejo e repassar a decisão a quem aplica.* **Quando um ciclo termina, a solução informa Jaime e apresenta um resumo do alcance do ciclo e de onde houve indicações, sem depender do relato verbal de quem inspecionou.**
 
-Antes, Jaime recebia uma impressão geral (“tem uns focos no fundo da fazenda”), sem um quadro do que aconteceu em cada talhão. **Agora ele abre a cobertura do ciclo, onde os talhões inspecionados, os não inspecionados e os que têm focos aparecem claramente distintos. Um talhão “não inspecionado” nunca é apresentado como “sem focos”; se algum talhão ficou de fora, Jaime pode pedir nova inspeção sem sair da tela.** Se o pragueiro não pôde passar em alguma área, Jaime passa a saber disso na hora, e não depois.
+Antes, Jaime recebia uma impressão geral (“tem uns focos no fundo da fazenda”), sem um quadro do que aconteceu em cada talhão. **A solução distingue os talhões inspecionados, os não inspecionados e os que tiveram indicações, de modo que a ausência de inspeção nunca seja apresentada como ausência de praga. Diante de um talhão que ficou de fora, Jaime pode solicitar que ele seja examinado.**
 
-Como não sabe identificar a praga sozinho, Jaime não tem como conferir o que vê. **Ao abrir um talhão com focos, encontra as fotos, o local e um grau de confiança em linguagem simples, sem números técnicos. O sistema não diz se a praga existe: Jaime decide em quem confiar e registra sua posição para o talhão, que pode ser “confiável”, “parecer do agrônomo” ou “reinspeção”. A dúvida não bloqueia a revisão; ele pode encerrá-la a qualquer momento, e as posições já registradas permanecem salvas.**
+Como não sabe identificar a praga sozinho, Jaime não tem como conferir o que vê. **Ao examinar um talhão com indicações, tem acesso às fotos, ao local e a uma expressão compreensível do grau de segurança da indicação automática, que não é apresentada como confirmação. Jaime registra seu julgamento sobre o talhão: aceitar o resultado, solicitar avaliação especializada ou solicitar nova inspeção. A dúvida não impede a continuidade, e uma revisão interrompida preserva o que já foi registrado.**
 
-Jaime não sabia se a infestação estava crescendo, estável ou diminuindo, nem se a última aplicação funcionou. **Pela evolução do talhão, vê os ciclos mais recentes indicados como “avançando”, “estável” ou “recuando”, com a última aplicação marcada. Se algum ciclo comparado teve cobertura incompleta, o sistema avisa, para que ele não conclua que a praga recuou quando, na verdade, ninguém passou.**
+Jaime não sabia se a infestação estava crescendo ou diminuindo, nem se a última aplicação funcionou. **A solução mostra a evolução do talhão entre ciclos e a última aplicação, e alerta quando a comparação envolve um ciclo com cobertura incompleta, para que uma aparente melhora não seja confundida com falta de inspeção.**
 
-No fim, Jaime planejava o manejo com base em impressão. **Agora registra a decisão do ciclo (onde e quando aplicar, e com que urgência) a partir das posições de cada talhão. O sistema ordena os talhões por gravidade e tendência, mas não recomenda produto, dose nem prioridade. A decisão aparece como “registrada” e só passa a “repassada” quando chega a quem aplica o produto; se o repasse falhar, a decisão continua salva e Jaime pode tentar de novo.**
+No fim, Jaime planejava o manejo com base em impressão. **Agora registra a decisão do ciclo a partir dos julgamentos sobre os talhões. A solução pode organizar os talhões por um critério que ela própria explica, mas não recomenda produto, dose nem prioridade. Jaime consegue saber se a decisão foi apenas registrada ou se chegou a quem aplica; se essa comunicação falhar, a decisão é preservada e pode ser comunicada de novo.**
 
-Os trechos em **negrito** descrevem a interação proposta. Eles ainda precisam ser avaliados com usuários; não são observações de uso real. A tela de cada passo corresponde a G01–G08 da Entrega 6, ainda não desenhadas em papel nem simuladas.
+Os trechos em **negrito** descrevem a intervenção em relação ao problema C01. São uma proposta de design, não um relato de uso real. Os nomes dos julgamentos, dos estados da tendência e das mensagens ficam no DCC e no esquema de signos.
+
+**Delimitação:** a correspondência com a Entrega 6 é parcial. G01, G03 e G04 têm desenho em papel (`Tela3.jpeg`, `Relatorio.jpeg`, `Mapa.jpeg`); G02 e G05–G08 ficaram apenas planejados, sem desenho próprio. Aviso de ciclo, estado “não inspecionado”, julgamento por talhão, evolução por ciclo, decisão e repasse não são apresentados como implementados no aplicativo.
 
 ### Diferenças relevantes — CI01
 
@@ -46,10 +48,10 @@ Os trechos em **negrito** descrevem a interação proposta. Eles ainda precisam 
 |---|---|---|
 | Aviso e resumo do ciclo concluído. | Jaime não depender do relato do pragueiro para saber que o ciclo acabou. | C01; HTA T04, passo 1.1 (Entrega 5). |
 | Cobertura que separa “inspecionado”, “não inspecionado” e “com focos”. | Evitar confundir “sem alerta” com “ninguém passou”. | C01, Q5; CTT T09; hipótese H09. |
-| Fotos e confiança em linguagem simples, com saídas “parecer do agrônomo” e “reinspeção”. | Jaime não valida a praga; precisa decidir em quem confiar. | Persona P01; HTA T04, passo 2.3; CTT T09. |
-| Evolução por ciclo com última aplicação marcada e aviso de cobertura incompleta. | Responder se a praga avança e se a aplicação funcionou, sem conclusão enganosa. | C01, Q3; GOMS T08; hipóteses H05 e H09. |
-| Ordenação por gravidade apresentada como dado, não como recomendação. | Não invadir o papel do agrônomo (P03). | HTA T04, passo 3.1; fronteira ainda em aberto. |
-| Estados distintos para decisão “registrada” e “repassada”. | A decisão precisa chegar a quem aplica, que pode não usar o sistema. | C01; hipótese H02; protótipo G08 (Entrega 6). |
+| Evidência com grau de segurança compreensível e julgamento do talhão com saídas para avaliação especializada ou nova inspeção. | Jaime não valida a praga; precisa decidir em quem confiar. | Persona P01; HTA T04, passo 2.3; CTT T09. |
+| Evolução entre ciclos com última aplicação e alerta de cobertura incompleta. | Responder se a praga avança e se a aplicação funcionou, sem conclusão enganosa. | C01, Q3; GOMS T08; hipóteses H05 e H09. |
+| Ordenação dos talhões por critério explicado, apresentada como dado, não como recomendação. | Não invadir o papel do gestor nem do agrônomo (P03). | HTA T04, passo 3.1; fronteira ainda em aberto (H21). |
+| Distinção entre decisão registrada e decisão comunicada a quem aplica. | A decisão precisa chegar a quem aplica, que pode não usar o sistema. | C01; hipótese H02; protótipo G08 (Entrega 6). |
 
 ### CI02 — Inspeção dos frutos e repasse dos achados
 
@@ -151,10 +153,10 @@ Os textos abaixo são propostas de comunicação. Os assuntos de rota, pedidos i
 | Registrar a posição > escolher a saída | `U: Eu não sei se é a praga.` / `D: Aceitar como confiável, pedir parecer do agrônomo ou pedir nova inspeção.` | Permitir a dúvida sem bloquear a revisão. |
 | Acompanhar a evolução > ler a tendência | `U: A praga está se espalhando?` / `D: Neste talhão: avançando / estável / recuando. Última aplicação marcada no ciclo [data].` | Responder com o histórico, sem exigir memória. |
 | > cobertura incompleta | `U: Posso concluir que recuou?` / `D: Atenção: o ciclo [data] não cobriu todo o talhão. A comparação pode não ser confiável.` | Evitar conclusão enganosa na comparação. |
-| Decidir o manejo > registrar a decisão | `U: Onde e quando aplico?` / `D: Talhões em ordem de gravidade. Escolha onde, quando e com que urgência aplicar.` | Apresentar dados sem recomendar produto, dose nem prioridade. |
+| Decidir o manejo > registrar a decisão | `U: Onde e quando aplico?` / `D: Talhões ordenados por detecções no ciclo e tendência [critério exibido]. Escolha onde, quando e com que urgência aplicar.` | Apresentar dados sem recomendar produto, dose nem prioridade. |
 | Repassar a decisão > conferir o repasse | `U: Quem vai aplicar já sabe?` / `D: Decisão registrada / repassada a [quem aplica] / falha no repasse: tentar novamente.` | Diferenciar registro, repasse e falha. |
 
-Os rótulos de confiança (“alta”, “média” e “baixa”) são uma proposta inicial, a testar com usuários.
+Os rótulos de confiança (“alta”, “média” e “baixa”), os nomes das posições e os estados da tendência são propostas iniciais, a testar com usuários. Eles foram retirados do CI01 e permanecem aqui, no artefato adequado.
 
 ### Design centrado na comunicação — Guilherme
 
@@ -217,27 +219,38 @@ O01 mantém a ligação com T01 e CI02. O02–O05 mantêm seus IDs para rastreab
 
 ### Mapa individual — Pedro
 
-**Objetivo principal:** decidir o manejo do ciclo com base em dados confiáveis sobre cada talhão.
+**Objetivo final de P01 — O10:** decidir o manejo do ciclo com base no que se sabe sobre cada talhão.
 
-- **O06 — Saber o que o ciclo cobriu**
-  - Receber o aviso e o resumo do ciclo.
-  - Distinguir talhão sem focos de talhão não inspecionado.
-  - Pedir nova inspeção dos talhões não cobertos.
-- **O07 — Avaliar o resultado de um talhão**
-  - Ver fotos, local e confiança.
-  - Decidir em quem confiar, sem validar a praga.
-- **O08 — Registrar a posição de cada talhão**
-  - Aceitar como confiável.
-  - Pedir parecer do agrônomo ou reinspeção.
-- **O09 — Acompanhar a evolução do talhão**
-  - Ler a tendência entre ciclos.
-  - Ver a última aplicação e o aviso de cobertura incompleta.
-- **O10 — Decidir o manejo do ciclo**
-  - Escolher onde, quando e com que urgência aplicar.
-  - Usar a ordem por gravidade como dado, não como recomendação.
-- **O11 — Confirmar o repasse da decisão**
-  - Distinguir decisão registrada de repassada.
-  - Recuperar-se de falha no repasse.
+Os IDs O06–O11 foram mantidos. A revisão expressa finalidades e indica qual objetivo cada um instrumenta. Passos como receber o aviso, abrir fotos ou escolher uma saída deixaram de ser listados como objetivos; pertencem às tarefas, ao CI01 e ao MoLIC M03.
+
+| ID | Objetivo revisado | Classificação | Relação com o objetivo final |
+|---|---|---|---|
+| O10 | Decidir o manejo do ciclo com base no que se sabe sobre cada talhão. | Final. | Motiva o uso da solução pelo gestor. Depende da hipótese H21 (o gestor decide); se ela for refutada, o objetivo final de P01 deve ser revisto. |
+| O07 | Formar um julgamento sobre o resultado de cada talhão sem precisar reconhecer a praga. | Instrumental direto. | Fornece a base da decisão de O10 durante a interação. |
+| O09 | Compreender se a infestação do talhão avança ou recua entre ciclos. | Instrumental direto. | Informa a urgência e o efeito da última aplicação para O10. |
+| O11 | Assegurar que a decisão chegue a quem executa a aplicação. | Instrumental direto. | Permite encerrar a decisão sabendo se ela foi comunicada, apoiando O10. |
+| O06 | Conhecer o alcance do ciclo: quais talhões foram e quais não foram inspecionados. | Instrumental indireto. | Prepara O07 e O09, evitando que ausência de dados seja lida como ausência de praga. |
+| O08 | Manter registrado o julgamento de cada talhão, inclusive quando depende de outra avaliação. | Instrumental indireto. | Prepara O10 e permite retomar a revisão; origina as ligações L3 e L4. |
+
+#### Hierarquia individual revisada
+
+```mermaid
+flowchart TD
+    O10["O10 — Final: decidir o manejo do ciclo com base no que se sabe sobre cada talhão"]
+    O07["O07 — Direto: formar um julgamento sobre cada talhão"]
+    O09["O09 — Direto: compreender a evolução do talhão"]
+    O11["O11 — Direto: assegurar que a decisão chegue a quem aplica"]
+    O06["O06 — Indireto: conhecer o alcance do ciclo"]
+    O08["O08 — Indireto: manter registrado o julgamento de cada talhão"]
+    O10 --> O07
+    O10 --> O09
+    O10 --> O11
+    O10 --> O08
+    O07 --> O06
+    O09 --> O06
+```
+
+As ligações indicam instrumentação, não ordem de execução.
 
 ### Mapa individual — Guilherme
 
@@ -254,13 +267,13 @@ O01 mantém a ligação com T01 e CI02. O02–O05 mantêm seus IDs para rastreab
 
 ### Mapa de objetivos do projeto — integrado
 
-O mapa revisado incorpora a hierarquia de Lucas: O01 como objetivo final, O03/O05 como instrumentais diretos e O02/O04 como instrumentais indiretos.
+O mapa revisado incorpora a hierarquia de Lucas (O01 final; O03/O05 diretos; O02/O04 indiretos) e a de Pedro (O10 final; O07/O09/O11 diretos; O06/O08 indiretos).
 
-Os blocos de Pedro e Guilherme foram preservados e estão identificados como pendentes de classificação. O mapa completo ainda depende da revisão desses blocos.
+O bloco de Guilherme foi preservado e está identificado como pendente de classificação. O mapa completo ainda depende da revisão desse bloco.
 
 **Propósito comum do domínio:** apoiar o controle do ácaro da leprose na propriedade com base em inspeções registradas e avaliadas. Esse propósito organizacional não substitui o objetivo final de cada persona.
 
-![Mapa de objetivos integrado — hierarquia de Lucas revisada](../assets/09_modelo_conceitual/mapa_objetivos_integrado.svg)
+![Mapa de objetivos integrado — hierarquias de Lucas e Pedro revisadas](../assets/09_modelo_conceitual/mapa_objetivos_integrado.svg)
 
 **Fonte editável:** [mapa_objetivos_integrado.svg](../assets/09_modelo_conceitual/mapa_objetivos_integrado.svg).
 
@@ -271,6 +284,12 @@ Os blocos de Pedro e Guilherme foram preservados e estão identificados como pen
 - O02 prepara a interpretação de O03 e a documentação de O04.
 - O04 prepara a comunicação de O05.
 - As setas azuis ligam o objetivo apoiado ao objetivo que o instrumenta.
+
+**Leitura do ramo de Pedro:**
+
+- O10 representa a finalidade principal do gestor.
+- O07, O09 e O11 apoiam diretamente O10.
+- O06 prepara O07 e O09; O08 prepara O10.
 - As posições dos elementos não representam uma sequência de telas.
 
 As ligações L1–L7 representam dependências de informação entre fluxos. Não substituem as relações de instrumentação dos objetivos.
@@ -296,12 +315,12 @@ L4 e L5 foram incorporadas conceitualmente ao CI02 e ao DCC de Lucas. A hipótes
 | O03 | Compreender o significado e os limites da indicação automática. | P02 | CI02 | Instrumental direto; apoia O01. | Alta |
 | O04 | Preservar um achado identificável pelo conteúdo, momento e local. | P02 | CI02 | Instrumental indireto; apoia O05 e O01. | Alta |
 | O05 | Assegurar a comunicação dos registros ao responsável pela continuidade. | P02 | CI02 | Instrumental direto; apoia O01. | Alta |
-| O06 | Saber o que o ciclo cobriu. | P01 | CI01 | A classificar por Pedro. | Alta |
-| O07 | Avaliar o resultado de um talhão. | P01 | CI01 | A classificar por Pedro. | Alta |
-| O08 | Registrar a posição de cada talhão. | P01 | CI01 | A classificar por Pedro. | Alta |
-| O09 | Acompanhar a evolução do talhão. | P01 | CI01 | A classificar por Pedro. | Alta |
-| O10 | Decidir o manejo do ciclo. | P01 | CI01 | A classificar por Pedro. | Alta |
-| O11 | Confirmar o repasse da decisão. | P01 | CI01 | A classificar por Pedro. | Alta |
+| O06 | Conhecer o alcance do ciclo: quais talhões foram e quais não foram inspecionados. | P01 | CI01 | Instrumental indireto; apoia O07/O09 e O10. | Alta |
+| O07 | Formar um julgamento sobre o resultado de cada talhão sem precisar reconhecer a praga. | P01 | CI01 | Instrumental direto; apoia O10. | Alta |
+| O08 | Manter registrado o julgamento de cada talhão, inclusive quando depende de outra avaliação. | P01 | CI01 | Instrumental indireto; apoia O10. | Alta |
+| O09 | Compreender se a infestação do talhão avança ou recua entre ciclos. | P01 | CI01 | Instrumental direto; apoia O10. | Alta |
+| O10 | Decidir o manejo do ciclo com base no que se sabe sobre cada talhão. | P01 | CI01 | Final (depende de H21). | Alta |
+| O11 | Assegurar que a decisão chegue a quem executa a aplicação. | P01 | CI01 | Instrumental direto; apoia O10. | Alta |
 | O12 | Emitir parecer técnico sobre um foco de infestação. | P03 | CI03 | A classificar por Guilherme. | Alta |
 | O13 | Escolher o foco a avaliar a partir dos pedidos de parecer e das detecções novas. | P03 | CI03 | A classificar por Guilherme. | Alta |
 | O14 | Validar as detecções do talhão. | P03 | CI03 | A classificar por Guilherme. | Alta |
@@ -321,7 +340,7 @@ A coluna **Fluxo** identifica P02 (Lucas), P01 (Pedro) e P03 (Guilherme).
 
 **Escopo de Lucas:** estados de rota, pedidos integrados, resultados alternativos e envio entre papéis são propostas conceituais quando ausentes do aplicativo. Restrições, valores padrão e mensagens referentes a esses recursos são decisões de aplicação, não regras profissionais confirmadas.
 
-Nos signos compartilhados, a interpretação relativa a P02 respeita esse limite. As partes de P01/P03 continuam sujeitas à revisão dos responsáveis.
+Nos signos compartilhados, a interpretação relativa a P02 respeita esse limite. Os signos de P01 foram revisados por Pedro em 20/11/2026; aviso de ciclo, cobertura, posição, tendência, decisão e repasse são propostas de aplicação, ausentes do aplicativo atual. As partes de P03 continuam sujeitas à revisão do responsável.
 
 | Grupo | Signo | Fluxo | Origem | Observações/semântica | Tipo de conteúdo | Restrição | Valor padrão | Prevenção | Recuperação |
 |---|---|---|---|---|---|---|---|---|---|
@@ -338,7 +357,7 @@ Nos signos compartilhados, a interpretação relativa a P02 respeita esse limite
 | Análise | situação da análise | P02 | aplicação | “Analisando”, “concluída” ou “falhou”, como estados conceituais. | estado ou mensagem | não representar conclusão inexistente | aguardando foto | PP: andamento compreensível | RA: nova tentativa preservando o que estiver disponível |
 | Análise | resultado da foto | P02, P01 | aplicação | Para P02, indicação automática vinculada à imagem; “sinal suspeito”, “nenhum sinal nesta foto” e “inconclusivo” são propostas de comunicação. | texto e símbolo | não equivale a confirmação humana nem a diagnóstico da árvore | nenhum | PP: explicar alcance e incerteza | RA: nova captura ou conferência posterior |
 | Análise | avaliação da IA | P03 | aplicação | Intensidade em faixas e região indicada. Probabilidade numérica não exibida; triagem, não diagnóstico. | texto e destaque na imagem | — | recolhida até consulta | PP: indicação automática separada da validação humana, a testar | — |
-| Análise | confiança do resultado | P01 | aplicação | Indicação em linguagem simples de quão confiável é a detecção; não é validação humana. | texto, alta/média/baixa como proposta | sem números técnicos; vinculada às fotos | nenhum | PP: mostrar fotos e local | RA: pedir parecer ou reinspeção |
+| Análise | confiança do resultado | P01 | aplicação | Faixa calculada a partir da pontuação que o modelo atribui às detecções do talhão. Indica quão nítido foi o sinal nas fotos analisadas; não é a probabilidade de a praga estar presente na árvore nem validação humana. Serve ao gestor para decidir se aceita o resultado ou pede outra avaliação. Os limites das faixas dependem do modelo do TCC e ainda não foram definidos. | texto, alta/média/baixa como proposta | sem números técnicos; vinculada às fotos | nenhum | PP: mostrar fotos e local | RA: pedir parecer ou reinspeção |
 | Registro | data e hora da captura | P02, P03 | domínio | Momento da obtenção da foto; distinto do envio e da sincronização. | data e hora | não nula | captura atual | PP: informação junto ao registro | RA: conferir a origem ou obter novo registro, sem alterar silenciosamente o momento original |
 | Registro | local do achado | P02, P03 | domínio | Posição obtida automaticamente ou referência informada manualmente. Para P02, preservar a distinção entre coordenada, talhão e identificação da árvore. | coordenada ou referência espacial | origem explícita; não presumir precisão não demonstrada | tentar localização automática | PP: indicar origem e disponibilidade | RA: usar alternativa manual oferecida, sem inventar coordenadas |
 | Registro | situação do registro | P02 | aplicação | “Salvo no celular”; não comprova envio, recebimento ou leitura. | estado ou mensagem | confirmar apenas o salvamento efetivo | não salvo | PP: confirmação | RA: nova tentativa sem descarte silencioso da foto |
@@ -371,7 +390,8 @@ Nos signos compartilhados, a interpretação relativa a P02 respeita esse limite
 | Parecer | parecer técnico | P03, P01 | domínio | Recomendação com justificativa; entrada da decisão do ciclo. | texto | não vazio | vazio | PA: impedir envio vazio; AL: confirmar área e destinatário | RA: editar |
 | Parecer | pontos vinculados | P03 | aplicação | Pontos confirmados usados na área. | lista | gerada pelo sistema | confirmados da área | — | — |
 | Parecer | destinatário do parecer | P03 | domínio | Gestor solicitante ou gestor da propriedade. | texto | não nulo | solicitante | PP: destinatário visível | RA: alterar |
-| Decisão do ciclo | decisão do ciclo | P01 | domínio | Onde, quando e com que urgência aplicar; não é recomendação automática. | talhões, data e urgência | gestor registra; autoria e data | nenhuma | PP: ordem por gravidade como dado | RA: alterar antes de repassar |
+| Decisão do ciclo | ordem dos talhões | P01 | aplicação | Ordenação dos talhões inspecionados pela quantidade de detecções no ciclo e pela tendência. É um dado calculado das inspeções registradas, não confirmação nem recomendação. Substitui o termo “gravidade”, que não é usado como signo. | lista ordenada com o critério exibido | só talhões inspecionados; não usa a confiança do resultado como peso | por detecções no ciclo | PP: exibir o critério da ordem | RA: reordenar por talhão ou por tendência |
+| Decisão do ciclo | decisão do ciclo | P01 | domínio | Onde, quando e com que urgência aplicar; não é recomendação automática. | talhões, data e urgência | gestor registra; autoria e data | nenhuma | PP: ordem dos talhões com critério exibido, como dado | RA: alterar antes de repassar |
 | Decisão do ciclo | destinatário da decisão | P01 | domínio | Quem aplica o produto; pode não usar o sistema. | função ou nome | definido para o repasse | — | PP: mostrar antes de repassar | RA: corrigir |
 | Decisão do ciclo | situação do repasse | P01 | aplicação | Registrada, repassada ou falha; repassada não significa aplicada. | estado ou mensagem | separada do registro da decisão | registrada | PP: estado e destinatário | RA: nova tentativa mantendo decisão |
 
@@ -406,7 +426,7 @@ Os signos do trabalhador distinguem indicação automática, documentação, ref
 
 Na atualização da Entrega 10, o M02 deverá reutilizar os objetivos revisados e representar conversas, alternativas e rupturas, sem se reduzir a uma sequência de telas.
 
-**Pedro:** os diagramas MoLIC deverão contemplar O06–O11 e as conversas sobre receber o resumo do ciclo, conferir a cobertura, avaliar evidência e confiança, registrar a posição do talhão, ler a evolução, registrar a decisão e conferir o repasse. Devem incluir os retornos para talhão não inspecionado, dúvida sobre resultado, cobertura incompleta e falha no repasse.
+**Pedro:** CI01 foi revisado para descrever a intervenção sem fixar rótulos e para marcar como hipótese o que ainda não foi confirmado sobre P01. O10 foi identificado como objetivo final; O07/O09/O11, como instrumentais diretos; e O06/O08, como instrumentais indiretos. “Gravidade” foi substituída pelo signo “ordem dos talhões”, com critério definido, e a confiança do resultado passou a dizer de onde vem e o que não significa. Os diagramas MoLIC deverão contemplar O06–O11 e as conversas sobre receber o resumo do ciclo, conferir a cobertura, avaliar evidência e confiança, registrar a posição do talhão, ler a evolução, registrar a decisão e conferir o repasse. Devem incluir os retornos para talhão não inspecionado, dúvida sobre resultado, cobertura incompleta e falha no repasse.
 
 **Guilherme:** os diagramas MoLIC deverão contemplar O12–O19: escolher o foco, validar cada ponto, consultar histórico, pedir nova foto, delimitar área, redigir e enviar parecer e acompanhar pedido. Devem incluir retornos para foto insuficiente, revisão interrompida, histórico sem resultados, área sem ponto confirmado ou campos vazios e falha no envio.
 
@@ -424,13 +444,23 @@ Na atualização da Entrega 10, o M02 deverá reutilizar os objetivos revisados 
 | Signos | Explicitação do limite da IA, da origem da referência espacial e da distinção entre salvar e enviar. |
 | Evidência | Propostas futuras mantidas como propostas, sem atribuir implementação ou validação inexistente. |
 
+## Registro da revisão de Pedro
+
+| Item | Alteração realizada |
+|---|---|
+| CI01 | Retirada de rótulos e mensagens (“confiável”, “avançando/estável/recuando”, “registrada/repassada”); hipóteses de P01 explicitadas; frase sobre G01–G08 corrigida conforme a Entrega 6. |
+| DCC | Mantido como local das propostas de comunicação; ordenação por critério exibido no lugar de “gravidade”. |
+| O06–O11 | Classificação em final, instrumental direto e instrumental indireto, com relações explícitas; passos operacionais retirados do mapa. |
+| Mapa integrado | Ramo de Pedro atualizado no SVG; bloco de Guilherme preservado. |
+| Signos | Novo signo “ordem dos talhões”; semântica de “confiança do resultado” precisada (origem, significado, limite e uso). |
+
 ## Pendências para conclusão geral
 
 | Responsável | Correção necessária |
 |---|---|
-| Pedro | Abstrair os rótulos do CI01; explicitar as hipóteses de P01; conferir a frase desatualizada sobre G01–G08; classificar O06–O11 e retirar passos operacionais do mapa. |
+| Pedro | Concluído na revisão de 20/11/2026 (ver registro acima). |
 | Guilherme | Abstrair o detalhamento do CI03; remover ou reformular como risco o episódio sem evidência de aplicação excessiva; preservar a condição hipotética de P03; classificar O12–O19 e identificar restrições provisórias da aplicação. |
-| Equipe | Incorporar ao SVG a revisão dos objetivos dos demais perfis, preservando o ramo corrigido de Lucas e L1–L7; revisar “foco” e a semântica de “confiança do resultado”. |
+| Equipe | Incorporar ao SVG a revisão dos objetivos dos demais perfis, preservando o ramo corrigido de Lucas e L1–L7; revisar “foco”. A semântica de “confiança do resultado” foi precisada por Pedro e precisa ser compatibilizada com “sinal forte/fraco” de P03. |
 
 O episódio passado de aplicação excessiva preservado no CI03 não está sustentado por evidência apresentada e continua pendente de correção pelo autor. Sua presença não deve ser interpretada como confirmação de ocorrência real.
 
@@ -456,10 +486,11 @@ A atualização das entregas dependentes e da rastreabilidade deverá preservar 
 - [x] A referência espacial de P02 não garante identificação da árvore apenas por GPS.
 - [x] O esquema de signos permanece em tabela única.
 - [x] A síntese de Lucas orienta a atualização do M02.
-- [ ] CI01 foi revisado para retirar rótulos e explicitar hipóteses.
+- [x] CI01 foi revisado para retirar rótulos e explicitar hipóteses.
 - [ ] CI03 foi revisado para retirar detalhamento excessivo e o acontecimento sem evidência.
-- [ ] O06–O19 foram classificados pelos responsáveis.
-- [ ] O SVG integrado incorpora a hierarquia revisada dos três perfis.
+- [x] O06–O11 foram classificados por Pedro.
+- [ ] O12–O19 foram classificados por Guilherme.
+- [ ] O SVG integrado incorpora a hierarquia revisada dos três perfis (Lucas e Pedro concluídos).
 - [ ] As restrições provisórias de P03 foram explicitadas.
 - [ ] As definições compartilhadas de foco e confiança foram consolidadas.
 - [ ] Os nomes revisados foram propagados às entregas dependentes e à rastreabilidade.
