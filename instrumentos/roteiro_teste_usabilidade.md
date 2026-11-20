@@ -56,7 +56,7 @@ Aplicar UT01, UT02 e UT03 **nessa ordem**. Ler uma instrução por vez. As expli
 - **UT02:** verificar se conclui o registro, percebe o feedback de salvamento local e distingue registro salvo de associação a um talhão. Medir o tempo da Câmera pronta até a confirmação de salvamento.
 - **UT03:** verificar se encontra a vistoria recente, interpreta o resultado como informação experimental e não presume que o registro já foi enviado.
 
-**Tarefas de Pedro (P01):** UT03, UT08 e UT04 na versão web, com as instruções registradas na Entrega 14 (Passo 5, “Tarefas de U02”). O moderador não diz o nome das abas (“Relatórios”, “Mapa”) nem explica o que é “Sem ocorrência”; após cada tarefa, aplica a escala de 1 a 7.  
+**Tarefas de Pedro (P01):** em U02 (17/11/2026), UT09, UT08 e UT04 na versão web, com as instruções registradas na Entrega 14 (Passo 5, “Instruções aplicadas a U02”); a tarefa de P01 chamada antes de UT03 foi renomeada para UT09, o ID planejado na Entrega 12, para não colidir com UT03 de P02. O moderador não disse o nome das abas (“Relatórios”, “Mapa”) nem explicou o que é “Sem ocorrência”. Para novas sessões, usar o roteiro P01 abaixo.  
 **Tarefas de Guilherme (P03):** ver o roteiro P03 abaixo.
 
 ### Roteiro P03 — agrônomo (Guilherme Morais Escudeiro)
@@ -132,6 +132,51 @@ A sessão é encerrada se UT07 e UT05 somarem 16 minutos, e a tarefa em andament
 Agradecer, informar o código A__ para eventual retirada dos dados (até 30 dias após o fim da disciplina) e completar a planilha com limitações de perfil, modalidade e protótipo.
 
 **Condições para a análise:** comparar os resultados com MU04–MU09 conforme as adaptações da Entrega 12. Não afirmar que foram avaliados a validação dos cinco pontos, o desenho da área, o tempo do fluxo com cinco pontos (MU07) ou a recuperação após falha no envio: essas partes não estão no protótipo.
+
+### Roteiro P01 — gestor (Pedro)
+
+> Acrescentado na revisão de 20/11/2026 para o reteste de P01 e para o piloto que não foi feito antes de U02. **Não foi o roteiro usado em U02**; a sessão U02 está descrita na Entrega 14 e na Entrega 12, seção H.
+
+**Versão:** registrar o commit e o dispositivo antes da sessão (aplicativo iOS, perfil Administrador, ou versão web com dados de demonstração).  
+**Aplicador:** Pedro, com um colega anotando e cronometrando.  
+**Participantes:** um piloto que não entra nos resultados e, depois, o participante final. Preferir gestor ou administrador de propriedade; se for proxy, registrar o perfil e a relação com o aplicador.  
+**Duração prevista:** cerca de 20 minutos.
+
+**Antes da sessão (lista de verificação):**
+
+1. Versão e commit anotados; dados preparados com um talhão sem inspeção no período e um inspecionado sem ocorrência.
+2. Gravação: só com consentimento específico, que diga finalidade, quem terá acesso, onde fica guardada, prazo de descarte e que a recusa não impede a participação. Se a gravação for publicada (YouTube, não listado), pedir esse consentimento à parte e mostrar só a tela do aplicativo, sem rosto, voz identificável ou dados pessoais.
+3. Microfone, compartilhamento de tela e cronômetro testados; planilha com o código U__ aberta.
+4. Instruções de UT09, UT08 e UT04 separadas, sem objetivos ocultos nem critérios de sucesso.
+5. Ao final, restaurar os dados para a sessão seguinte.
+
+**Abertura padronizada (ler ao participante):**
+
+> Obrigado por participar. Você vai fazer três tarefas no aplicativo CYF enquanto observamos se as informações estão claras. Estamos avaliando o aplicativo, não você. Os dados da fazenda são exemplos. Você pode pular uma tarefa ou parar quando quiser. Enquanto usa o aplicativo, peço que pense em voz alta: diga o que está procurando, o que está entendendo e o que espera que aconteça. Se ficar em silêncio, posso lembrar você de continuar falando. Não vou dizer onde clicar. [Se houver gravação consentida: a tela será gravada só para a análise da equipe.] Alguma dúvida antes de começar?
+
+Obter o consentimento **antes** do pré-teste.
+
+**Pré-teste (registrar as respostas):**
+
+1. Qual é a sua função em relação à propriedade ou ao trabalho que você faz hoje?
+2. Há quanto tempo participa de decisões de manejo de pragas? (nenhum, < 1 ano, 1–5 anos, > 5 anos)
+3. Quantos talhões, aproximadamente? (faixas; não se aplica para proxy)
+4. Que aparelhos usa para acompanhar a propriedade ou relatórios no trabalho?
+5. Usa iPhone no dia a dia?
+
+**Tarefas:** UT09, UT08 e UT04 da Entrega 12, uma por vez, com cronômetro do fim da leitura até a resposta. Se o participante parar de falar, lembrar uma vez: “O que você está pensando agora?”. Ajuda só após dois pedidos ou cerca de um minuto sem progresso, anotando **exatamente** o que foi dito.
+
+**Pós-tarefa (após cada tarefa):** “Quão fácil foi realizar esta tarefa?” (1 = muito difícil; 7 = muito fácil) e “O que facilitou ou dificultou?”. Registrar uma nota **por tarefa**.
+
+**Pós-teste (registrar pergunta e resposta):**
+
+1. “Alguma área ficou sem ser vista? Como você sabe?”
+2. “O que significa, para você, um talhão com ‘Sem ocorrência’?”
+3. “A última aplicação funcionou? Onde você procuraria essa resposta?”
+4. “Quem vai aplicar já recebeu a situação da fazenda?”
+5. “Como você entendeu a ordem em que as áreas apareceram? Sentiu falta de uma sugestão do aplicativo?”
+
+**Encerramento:** agradecer, informar o código U__ para eventual retirada dos dados (até 30 dias após o fim da disciplina) e completar a planilha com limitações de perfil, versão e ambiente.
 
 ## 5. Durante cada tarefa
 
