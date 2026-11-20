@@ -1,134 +1,168 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1080" viewBox="0 0 1500 1080" font-family="Arial, sans-serif">
-<rect width="100%" height="100%" fill="#ffffff"/>
-<text x="750.0" y="34" text-anchor="middle" font-size="22" font-weight="bold" fill="#24292f">Mapa de objetivos do projeto — versão integrada</text>
-<rect x="450" y="56" width="600" height="60" rx="10" fill="#24292f"/>
-<text x="750.0" y="82" text-anchor="middle" font-size="16" font-weight="bold" fill="#ffffff">Controlar o ácaro da leprose na propriedade</text>
-<text x="750.0" y="102" text-anchor="middle" font-size="14" fill="#ffffff">com base em inspeções registradas e validadas</text>
-<path d="M750.0 116 V134" stroke="#24292f" stroke-width="2" fill="none"/>
-<path d="M260 134 H1200" stroke="#24292f" stroke-width="2" fill="none"/>
-<path d="M260 134 V152" stroke="#24292f" stroke-width="2" fill="none"/>
-<path d="M730 134 V152" stroke="#24292f" stroke-width="2" fill="none"/>
-<path d="M1200 134 V152" stroke="#24292f" stroke-width="2" fill="none"/>
-<text x="260" y="176" text-anchor="middle" font-size="15" font-weight="bold" fill="#0969da">Lucas — P02 (trabalhador) · CI02</text>
-<rect x="60" y="186" width="400" height="62" rx="8" fill="#0969da"/>
-<text x="260" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Inspecionar a rota e repassar</text>
-<text x="260" y="232" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">os achados com confiança</text>
-<rect x="60" y="280" width="400" height="56" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
-<text x="230.0" y="303" text-anchor="middle" font-size="14" font-weight="bold" fill="#0969da">O01</text>
-<text x="230.0" y="323" text-anchor="middle" font-size="14" fill="#24292f">Inspecionar os pontos da rota</text>
-<rect x="400.0" y="297" width="52.0" height="22" rx="11" fill="#6639ba"/>
-<text x="426.0" y="312" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L4 L5</text>
-<rect x="60" y="356" width="400" height="56" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
-<text x="260.0" y="379" text-anchor="middle" font-size="14" font-weight="bold" fill="#0969da">O02</text>
-<text x="260.0" y="399" text-anchor="middle" font-size="14" fill="#24292f">Obter uma foto analisável</text>
-<rect x="60" y="432" width="400" height="56" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
-<text x="260.0" y="455" text-anchor="middle" font-size="14" font-weight="bold" fill="#0969da">O03</text>
-<text x="260.0" y="475" text-anchor="middle" font-size="14" fill="#24292f">Entender o resultado da foto</text>
-<rect x="60" y="508" width="400" height="56" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
-<text x="260.0" y="531" text-anchor="middle" font-size="14" font-weight="bold" fill="#0969da">O04</text>
-<text x="260.0" y="551" text-anchor="middle" font-size="14" fill="#24292f">Registrar o achado e seu local</text>
-<rect x="60" y="584" width="400" height="56" rx="8" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
-<text x="230.0" y="607" text-anchor="middle" font-size="14" font-weight="bold" fill="#0969da">O05</text>
-<text x="230.0" y="627" text-anchor="middle" font-size="14" fill="#24292f">Confirmar o repasse dos registros</text>
-<rect x="400.0" y="601" width="52.0" height="22" rx="11" fill="#6639ba"/>
-<text x="426.0" y="616" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L1 L2</text>
-<path d="M60 248 V262 H50 V612" fill="none" stroke="#0969da" stroke-width="2"/>
-<path d="M50 308 H60" stroke="#0969da" stroke-width="2"/>
-<path d="M50 384 H60" stroke="#0969da" stroke-width="2"/>
-<path d="M50 460 H60" stroke="#0969da" stroke-width="2"/>
-<path d="M50 536 H60" stroke="#0969da" stroke-width="2"/>
-<path d="M50 612 H60" stroke="#0969da" stroke-width="2"/>
-<text x="730" y="176" text-anchor="middle" font-size="15" font-weight="bold" fill="#1a7f37">Pedro — P01 (gestor) · CI01</text>
-<rect x="530" y="186" width="400" height="62" rx="8" fill="#1a7f37"/>
-<text x="730" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Decidir o manejo do ciclo com</text>
-<text x="730" y="232" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">dados confiáveis por talhão</text>
-<rect x="530" y="280" width="400" height="56" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
-<text x="700.0" y="303" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a7f37">O06</text>
-<text x="700.0" y="323" text-anchor="middle" font-size="14" fill="#24292f">Saber o que o ciclo cobriu</text>
-<rect x="891.6" y="297" width="30.4" height="22" rx="11" fill="#6639ba"/>
-<text x="906.8" y="312" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L1</text>
-<rect x="530" y="356" width="400" height="56" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
-<text x="730.0" y="379" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a7f37">O07</text>
-<text x="730.0" y="399" text-anchor="middle" font-size="14" fill="#24292f">Avaliar o resultado de um talhão</text>
-<rect x="530" y="432" width="400" height="56" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
-<text x="700.0" y="455" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a7f37">O08</text>
-<text x="700.0" y="475" text-anchor="middle" font-size="14" fill="#24292f">Registrar a posição de cada talhão</text>
-<rect x="870.0" y="449" width="52.0" height="22" rx="11" fill="#6639ba"/>
-<text x="896.0" y="464" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L3 L4</text>
-<rect x="530" y="508" width="400" height="56" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
-<text x="700.0" y="531" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a7f37">O09</text>
-<text x="700.0" y="551" text-anchor="middle" font-size="14" fill="#24292f">Acompanhar a evolução do talhão</text>
-<rect x="891.6" y="525" width="30.4" height="22" rx="11" fill="#6639ba"/>
-<text x="906.8" y="540" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L7</text>
-<rect x="530" y="584" width="400" height="56" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
-<text x="700.0" y="607" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a7f37">O10</text>
-<text x="700.0" y="627" text-anchor="middle" font-size="14" fill="#24292f">Decidir o manejo do ciclo</text>
-<rect x="891.6" y="601" width="30.4" height="22" rx="11" fill="#6639ba"/>
-<text x="906.8" y="616" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L6</text>
-<rect x="530" y="660" width="400" height="56" rx="8" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
-<text x="730.0" y="683" text-anchor="middle" font-size="14" font-weight="bold" fill="#1a7f37">O11</text>
-<text x="730.0" y="703" text-anchor="middle" font-size="14" fill="#24292f">Confirmar o repasse da decisão</text>
-<path d="M530 248 V262 H520 V688" fill="none" stroke="#1a7f37" stroke-width="2"/>
-<path d="M520 308 H530" stroke="#1a7f37" stroke-width="2"/>
-<path d="M520 384 H530" stroke="#1a7f37" stroke-width="2"/>
-<path d="M520 460 H530" stroke="#1a7f37" stroke-width="2"/>
-<path d="M520 536 H530" stroke="#1a7f37" stroke-width="2"/>
-<path d="M520 612 H530" stroke="#1a7f37" stroke-width="2"/>
-<path d="M520 688 H530" stroke="#1a7f37" stroke-width="2"/>
-<text x="1200" y="176" text-anchor="middle" font-size="15" font-weight="bold" fill="#bc4c00">Guilherme — P03 (agrônomo) · CI03</text>
-<rect x="1000" y="186" width="400" height="62" rx="8" fill="#bc4c00"/>
-<text x="1200" y="212" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Emitir parecer técnico sobre um</text>
-<text x="1200" y="232" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">foco de infestação (O12)</text>
-<rect x="1000" y="280" width="400" height="56" rx="8" fill="#fff1e5" stroke="#bc4c00" stroke-width="2"/>
-<text x="1170.0" y="303" text-anchor="middle" font-size="14" font-weight="bold" fill="#bc4c00">O13</text>
-<text x="1170.0" y="323" text-anchor="middle" font-size="14" fill="#24292f">Escolher o foco a avaliar</text>
-<rect x="1340.0" y="297" width="52.0" height="22" rx="11" fill="#6639ba"/>
-<text x="1366.0" y="312" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L2 L3</text>
-<rect x="1000" y="356" width="400" height="56" rx="8" fill="#fff1e5" stroke="#bc4c00" stroke-width="2"/>
-<text x="1200.0" y="379" text-anchor="middle" font-size="14" font-weight="bold" fill="#bc4c00">O14</text>
-<text x="1200.0" y="399" text-anchor="middle" font-size="14" fill="#24292f">Validar as detecções do talhão</text>
-<rect x="1040" y="432" width="360" height="56" rx="8" fill="#fff1e5" stroke="#bc4c00" stroke-width="2"/>
-<text x="1190.0" y="455" text-anchor="middle" font-size="14" font-weight="bold" fill="#bc4c00">O16</text>
-<text x="1190.0" y="475" text-anchor="middle" font-size="14" fill="#24292f">Pedir nova foto ao campo</text>
-<rect x="1361.6" y="449" width="30.4" height="22" rx="11" fill="#6639ba"/>
-<text x="1376.8" y="464" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L5</text>
-<path d="M1020 412 V460 H1040" stroke="#bc4c00" stroke-width="2" fill="none"/>
-<rect x="1000" y="508" width="400" height="56" rx="8" fill="#fff1e5" stroke="#bc4c00" stroke-width="2"/>
-<text x="1170.0" y="531" text-anchor="middle" font-size="14" font-weight="bold" fill="#bc4c00">O15</text>
-<text x="1170.0" y="551" text-anchor="middle" font-size="14" fill="#24292f">Consultar o histórico de detecções</text>
-<rect x="1361.6" y="525" width="30.4" height="22" rx="11" fill="#6639ba"/>
-<text x="1376.8" y="540" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L7</text>
-<rect x="1000" y="584" width="400" height="56" rx="8" fill="#fff1e5" stroke="#bc4c00" stroke-width="2"/>
-<text x="1200.0" y="607" text-anchor="middle" font-size="14" font-weight="bold" fill="#bc4c00">O17</text>
-<text x="1200.0" y="627" text-anchor="middle" font-size="14" fill="#24292f">Delimitar a área de aplicação</text>
-<rect x="1000" y="660" width="400" height="56" rx="8" fill="#fff1e5" stroke="#bc4c00" stroke-width="2"/>
-<text x="1170.0" y="683" text-anchor="middle" font-size="14" font-weight="bold" fill="#bc4c00">O18</text>
-<text x="1170.0" y="703" text-anchor="middle" font-size="14" fill="#24292f">Registrar e repassar o parecer</text>
-<rect x="1361.6" y="677" width="30.4" height="22" rx="11" fill="#6639ba"/>
-<text x="1376.8" y="692" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L6</text>
-<rect x="1000" y="736" width="400" height="56" rx="8" fill="#fff1e5" stroke="#bc4c00" stroke-width="2"/>
-<text x="1200.0" y="759" text-anchor="middle" font-size="14" font-weight="bold" fill="#bc4c00">O19</text>
-<text x="1200.0" y="779" text-anchor="middle" font-size="14" fill="#24292f">Acompanhar a situação dos pedidos</text>
-<path d="M1000 248 V262 H990 V764" fill="none" stroke="#bc4c00" stroke-width="2"/>
-<path d="M990 308 H1000" stroke="#bc4c00" stroke-width="2"/>
-<path d="M990 384 H1000" stroke="#bc4c00" stroke-width="2"/>
-<path d="M990 536 H1000" stroke="#bc4c00" stroke-width="2"/>
-<path d="M990 612 H1000" stroke="#bc4c00" stroke-width="2"/>
-<path d="M990 688 H1000" stroke="#bc4c00" stroke-width="2"/>
-<path d="M990 764 H1000" stroke="#bc4c00" stroke-width="2"/>
-<text x="56" y="850" font-size="15" font-weight="bold" fill="#6639ba">Ligações entre os fluxos</text>
-<rect x="56" y="861" width="34" height="20" rx="10" fill="#6639ba"/><text x="73" y="876" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L1</text>
-<text x="100" y="876" font-size="14" font-weight="bold" fill="#24292f">O05 → O06</text><text x="200" y="876" font-size="14" fill="#24292f">os achados enviados pelo trabalhador formam o resumo e a cobertura do ciclo.</text>
-<rect x="56" y="887" width="34" height="20" rx="10" fill="#6639ba"/><text x="73" y="902" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L2</text>
-<text x="100" y="902" font-size="14" font-weight="bold" fill="#24292f">O05 → O13</text><text x="200" y="902" font-size="14" fill="#24292f">os achados enviados aparecem ao agrônomo como detecções novas.</text>
-<rect x="56" y="913" width="34" height="20" rx="10" fill="#6639ba"/><text x="73" y="928" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L3</text>
-<text x="100" y="928" font-size="14" font-weight="bold" fill="#24292f">O08 → O13</text><text x="200" y="928" font-size="14" fill="#24292f">a posição “parecer do agrônomo” gera o pedido de parecer.</text>
-<rect x="56" y="939" width="34" height="20" rx="10" fill="#6639ba"/><text x="73" y="954" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L4</text>
-<text x="100" y="954" font-size="14" font-weight="bold" fill="#24292f">O08 → O01</text><text x="200" y="954" font-size="14" fill="#24292f">a posição “reinspeção” entra na rota do trabalhador.</text>
-<rect x="56" y="965" width="34" height="20" rx="10" fill="#6639ba"/><text x="73" y="980" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L5</text>
-<text x="100" y="980" font-size="14" font-weight="bold" fill="#24292f">O16 → O01</text><text x="200" y="980" font-size="14" fill="#24292f">o pedido de nova foto entra na rota do trabalhador, ligado ao ponto.</text>
-<rect x="56" y="991" width="34" height="20" rx="10" fill="#6639ba"/><text x="73" y="1006" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L6</text>
-<text x="100" y="1006" font-size="14" font-weight="bold" fill="#24292f">O18 → O10</text><text x="200" y="1006" font-size="14" fill="#24292f">o parecer recebido apoia a decisão do ciclo; quem decide é o gestor.</text>
-<rect x="56" y="1017" width="34" height="20" rx="10" fill="#6639ba"/><text x="73" y="1032" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">L7</text>
-<text x="100" y="1032" font-size="14" font-weight="bold" fill="#24292f">O15 ↔ O09</text><text x="200" y="1032" font-size="14" fill="#24292f">histórico de detecções e evolução do talhão usam os mesmos registros.</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1500" viewBox="0 0 1800 1500" role="img" aria-labelledby="title desc">
+<title id="title">Mapa de objetivos integrado — ramo de Lucas revisado</title>
+<desc id="desc">Propósito comum do domínio acima dos três perfis. Lucas possui O01 final, O03 e O05 instrumentais diretos e O02 e O04 indiretos. Blocos de Pedro e Guilherme preservados, com classificação pendente. Ligações L1 a L7 são dependências de informação.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4L0 8" fill="none" stroke="#1769c2" stroke-width="1.4"/></marker></defs>
+<rect width="1800" height="1500" fill="white"/>
+<text x="900" y="47" font-family="DejaVu Sans,Arial,sans-serif" font-size="28" font-weight="700" text-anchor="middle" fill="#243244">Mapa de objetivos do projeto — versão integrada</text>
+<text x="900" y="78" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="middle" fill="#596779">Revisão de 20/11/2026 · hierarquia de Lucas corrigida; demais blocos preservados</text>
+<rect x="340" y="107" width="1120" height="86" rx="12" fill="#252c34" stroke="none" stroke-width="1.8"/>
+<text x="900" y="137" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="middle" fill="#cbd5e1">PROPÓSITO COMUM DO DOMÍNIO</text>
+<text x="900" y="170" font-family="DejaVu Sans,Arial,sans-serif" font-size="21" font-weight="700" text-anchor="middle" fill="white">Controlar o ácaro da leprose com base em inspeções registradas e avaliadas</text>
+<path d="M900 193V215H400V242" fill="none" stroke="#a0a8b2" stroke-width="2"/>
+<path d="M900 215H1000V242" fill="none" stroke="#a0a8b2" stroke-width="2"/>
+<path d="M900 215H1490V242" fill="none" stroke="#a0a8b2" stroke-width="2"/>
+<rect x="45" y="242" width="720" height="660" rx="12" fill="#f7fbff" stroke="#d4e6fa" stroke-width="1.8"/>
+<text x="70" y="274" font-family="DejaVu Sans,Arial,sans-serif" font-size="19" font-weight="700" text-anchor="start" fill="#075fc7">LUCAS · P02 — trabalhador · CI02</text>
+<text x="70" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#506176">Objetivo final e instrumentação revisados</text>
+<rect x="70" y="322" width="670" height="120" rx="12" fill="#deefff" stroke="#1769c2" stroke-width="1.8"/>
+<text x="86" y="349" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1769c2">O01 · FINAL</text>
+<text x="86" y="377" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">Concluir a inspeção dos locais atribuídos com os achados</text>
+<text x="86" y="400" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">documentados e disponíveis ao responsável.</text>
+<rect x="664" y="409" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="694.5" y="426" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L4 L5</text>
+<path d="M405 442V470H225V495" fill="none" stroke="#1769c2" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M405 470H580V495" fill="none" stroke="#1769c2" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="70" y="495" width="310" height="130" rx="12" fill="#eaf5ff" stroke="#1769c2" stroke-width="1.8"/>
+<text x="86" y="522" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1769c2">O03 · DIRETO</text>
+<text x="86" y="550" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">Compreender o significado e</text>
+<text x="86" y="573" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">os limites da indicação</text>
+<text x="86" y="596" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">automática.</text>
+<rect x="425" y="495" width="315" height="130" rx="12" fill="#eaf5ff" stroke="#1769c2" stroke-width="1.8"/>
+<text x="441" y="522" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1769c2">O05 · DIRETO</text>
+<text x="441" y="550" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">Assegurar a comunicação dos</text>
+<text x="441" y="573" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">registros ao responsável pela</text>
+<text x="441" y="596" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">continuidade.</text>
+<rect x="664" y="592" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="694.5" y="609" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L1 L2</text>
+<path d="M582 625V675" fill="none" stroke="#1769c2" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="425" y="675" width="315" height="125" rx="12" fill="#f3f9ff" stroke="#1769c2" stroke-width="1.8"/>
+<text x="441" y="702" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1769c2">O04 · INDIRETO</text>
+<text x="441" y="730" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">Preservar um achado</text>
+<text x="441" y="753" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">identificável pelo conteúdo,</text>
+<text x="441" y="776" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">momento e local.</text>
+<path d="M225 625V750" fill="none" stroke="#1769c2" stroke-width="2" marker-end="url(#arrow)"/>
+<rect x="70" y="750" width="310" height="125" rx="12" fill="#f3f9ff" stroke="#1769c2" stroke-width="1.8"/>
+<text x="86" y="777" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="700" text-anchor="start" fill="#1769c2">O02 · INDIRETO</text>
+<text x="86" y="805" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">Dispor de evidência visual</text>
+<text x="86" y="828" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">adequada do fruto</text>
+<text x="86" y="851" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="400" text-anchor="start" fill="#243244">inspecionado.</text>
+<path d="M425 737H401V812H380" fill="none" stroke="#1769c2" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="70" y="929" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#1769c2">Seta azul: objetivo apoiado → objetivo que o instrumenta.</text>
+<text x="70" y="954" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#596779">As posições não representam sequência de telas ou de execução.</text>
+<rect x="795" y="242" width="435" height="660" rx="12" fill="#f7fcf8" stroke="#d8eadb" stroke-width="1.8"/>
+<text x="815" y="274" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#187c36">PEDRO · P01 — gestor · CI01</text>
+<text x="815" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#596779">Conteúdo preservado; classificação a revisar</text>
+<rect x="815" y="322" width="395" height="72" rx="12" fill="#187c36" stroke="none" stroke-width="1.8"/>
+<text x="1012" y="351" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="white">Decidir o manejo do ciclo com</text>
+<text x="1012" y="377" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="white">dados confiáveis por talhão</text>
+<path d="M815 394H805V861" fill="none" stroke="#187c36" stroke-width="2"/>
+<path d="M805 446H815" fill="none" stroke="#187c36" stroke-width="2"/>
+<rect x="815" y="418" width="395" height="62" rx="12" fill="#e5f5e8" stroke="#279246" stroke-width="1.8"/>
+<text x="830" y="441" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#187c36">O06</text>
+<text x="830" y="465" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Saber o que o ciclo cobriu</text>
+<rect x="1133" y="425" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="1163.5" y="442" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L1</text>
+<path d="M805 524H815" fill="none" stroke="#187c36" stroke-width="2"/>
+<rect x="815" y="496" width="395" height="62" rx="12" fill="#e5f5e8" stroke="#279246" stroke-width="1.8"/>
+<text x="830" y="519" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#187c36">O07</text>
+<text x="830" y="543" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Avaliar o resultado de um talhão</text>
+<path d="M805 602H815" fill="none" stroke="#187c36" stroke-width="2"/>
+<rect x="815" y="574" width="395" height="62" rx="12" fill="#e5f5e8" stroke="#279246" stroke-width="1.8"/>
+<text x="830" y="597" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#187c36">O08</text>
+<text x="830" y="621" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Registrar a posição de cada talhão</text>
+<rect x="1133" y="581" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="1163.5" y="598" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L3 L4</text>
+<path d="M805 680H815" fill="none" stroke="#187c36" stroke-width="2"/>
+<rect x="815" y="652" width="395" height="62" rx="12" fill="#e5f5e8" stroke="#279246" stroke-width="1.8"/>
+<text x="830" y="675" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#187c36">O09</text>
+<text x="830" y="699" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Acompanhar a evolução do talhão</text>
+<rect x="1133" y="659" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="1163.5" y="676" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L7</text>
+<path d="M805 758H815" fill="none" stroke="#187c36" stroke-width="2"/>
+<rect x="815" y="730" width="395" height="62" rx="12" fill="#e5f5e8" stroke="#279246" stroke-width="1.8"/>
+<text x="830" y="753" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#187c36">O10</text>
+<text x="830" y="777" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Decidir o manejo do ciclo</text>
+<rect x="1133" y="737" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="1163.5" y="754" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L6</text>
+<path d="M805 836H815" fill="none" stroke="#187c36" stroke-width="2"/>
+<rect x="815" y="808" width="395" height="62" rx="12" fill="#e5f5e8" stroke="#279246" stroke-width="1.8"/>
+<text x="830" y="831" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#187c36">O11</text>
+<text x="830" y="855" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Confirmar o repasse da decisão</text>
+<rect x="1260" y="242" width="495" height="740" rx="12" fill="#fffbf7" stroke="#f3dfcc" stroke-width="1.8"/>
+<text x="1280" y="274" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" text-anchor="start" fill="#b65300">GUILHERME · P03 — agrônomo · CI03</text>
+<text x="1280" y="300" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="400" text-anchor="start" fill="#596779">Conteúdo preservado; classificação a revisar</text>
+<rect x="1280" y="322" width="455" height="72" rx="12" fill="#b65300" stroke="none" stroke-width="1.8"/>
+<text x="1507" y="351" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="white">Emitir parecer técnico sobre um</text>
+<text x="1507" y="377" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="700" text-anchor="middle" fill="white">foco de infestação — O12</text>
+<path d="M1280 394H1270V920" fill="none" stroke="#b65300" stroke-width="2"/>
+<path d="M1270 446H1280" fill="none" stroke="#b65300" stroke-width="2"/>
+<rect x="1280" y="418" width="455" height="62" rx="12" fill="#fff0e3" stroke="#c76a16" stroke-width="1.8"/>
+<text x="1295" y="441" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#b65300">O13</text>
+<text x="1295" y="465" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Escolher o foco a avaliar</text>
+<rect x="1658" y="425" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="1688.5" y="442" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L2 L3</text>
+<path d="M1270 524H1280" fill="none" stroke="#b65300" stroke-width="2"/>
+<rect x="1280" y="496" width="455" height="62" rx="12" fill="#fff0e3" stroke="#c76a16" stroke-width="1.8"/>
+<text x="1295" y="519" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#b65300">O14</text>
+<text x="1295" y="543" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Validar as detecções do talhão</text>
+<path d="M1295 543V602H1310" fill="none" stroke="#b65300" stroke-width="2"/>
+<rect x="1310" y="574" width="425" height="62" rx="12" fill="#fff0e3" stroke="#c76a16" stroke-width="1.8"/>
+<text x="1325" y="597" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#b65300">O16</text>
+<text x="1325" y="621" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Pedir nova foto ao campo</text>
+<rect x="1658" y="581" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="1688.5" y="598" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L5</text>
+<path d="M1270 680H1280" fill="none" stroke="#b65300" stroke-width="2"/>
+<rect x="1280" y="652" width="455" height="62" rx="12" fill="#fff0e3" stroke="#c76a16" stroke-width="1.8"/>
+<text x="1295" y="675" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#b65300">O15</text>
+<text x="1295" y="699" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Consultar o histórico de detecções</text>
+<rect x="1658" y="659" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="1688.5" y="676" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L7</text>
+<path d="M1270 758H1280" fill="none" stroke="#b65300" stroke-width="2"/>
+<rect x="1280" y="730" width="455" height="62" rx="12" fill="#fff0e3" stroke="#c76a16" stroke-width="1.8"/>
+<text x="1295" y="753" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#b65300">O17</text>
+<text x="1295" y="777" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Delimitar a área de aplicação</text>
+<path d="M1270 836H1280" fill="none" stroke="#b65300" stroke-width="2"/>
+<rect x="1280" y="808" width="455" height="62" rx="12" fill="#fff0e3" stroke="#c76a16" stroke-width="1.8"/>
+<text x="1295" y="831" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#b65300">O18</text>
+<text x="1295" y="855" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Registrar e repassar o parecer</text>
+<rect x="1658" y="815" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="1688.5" y="832" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L6</text>
+<path d="M1270 914H1280" fill="none" stroke="#b65300" stroke-width="2"/>
+<rect x="1280" y="886" width="455" height="62" rx="12" fill="#fff0e3" stroke="#c76a16" stroke-width="1.8"/>
+<text x="1295" y="909" font-family="DejaVu Sans,Arial,sans-serif" font-size="14" font-weight="700" text-anchor="start" fill="#b65300">O19</text>
+<text x="1295" y="933" font-family="DejaVu Sans,Arial,sans-serif" font-size="15" font-weight="400" text-anchor="start" fill="#243244">Acompanhar a situação dos pedidos</text>
+<rect x="45" y="1010" width="1710" height="355" rx="12" fill="#faf9fd" stroke="#e0dbea" stroke-width="1.8"/>
+<text x="70" y="1046" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#6331a0">Ligações entre os fluxos — dependências de informação</text>
+<text x="70" y="1075" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#596779">L1–L7 são preservadas e não representam a classificação final/instrumental dos objetivos.</text>
+<rect x="70" y="1100" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="100.5" y="1117" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L1</text>
+<text x="150" y="1118" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start" fill="#6331a0">O05 → O06</text>
+<text x="310" y="1118" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#243244">Os achados enviados pelo trabalhador formam o resumo e a cobertura do ciclo.</text>
+<rect x="70" y="1134" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="100.5" y="1151" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L2</text>
+<text x="150" y="1152" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start" fill="#6331a0">O05 → O13</text>
+<text x="310" y="1152" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#243244">Os achados enviados aparecem ao agrônomo como detecções novas.</text>
+<rect x="70" y="1168" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="100.5" y="1185" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L3</text>
+<text x="150" y="1186" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start" fill="#6331a0">O08 → O13</text>
+<text x="310" y="1186" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#243244">A posição “parecer do agrônomo” gera o pedido de parecer.</text>
+<rect x="70" y="1202" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="100.5" y="1219" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L4</text>
+<text x="150" y="1220" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start" fill="#6331a0">O08 → O01</text>
+<text x="310" y="1220" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#243244">A solicitação de reinspeção chega ao trabalhador vinculada ao local.</text>
+<rect x="70" y="1236" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="100.5" y="1253" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L5</text>
+<text x="150" y="1254" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start" fill="#6331a0">O16 → O01</text>
+<text x="310" y="1254" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#243244">O pedido de nova foto chega ao trabalhador vinculado ao ponto.</text>
+<rect x="70" y="1270" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="100.5" y="1287" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L6</text>
+<text x="150" y="1288" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start" fill="#6331a0">O18 → O10</text>
+<text x="310" y="1288" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#243244">O parecer recebido apoia a decisão do ciclo; quem decide é o gestor.</text>
+<rect x="70" y="1304" width="61" height="25" rx="12" fill="#7040b4" stroke="none" stroke-width="1.8"/>
+<text x="100.5" y="1321" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle" fill="white">L7</text>
+<text x="150" y="1322" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="700" text-anchor="start" fill="#6331a0">O15 ↔ O09</text>
+<text x="310" y="1322" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#243244">Histórico de detecções e evolução do talhão utilizam os mesmos registros.</text>
+<text x="70" y="1399" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#243244">Legenda de Lucas: FINAL = finalidade principal; DIRETO = apoio à finalidade; INDIRETO = preparação dos demais objetivos.</text>
+<text x="70" y="1430" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#596779">O propósito do domínio é compartilhado. Cada persona mantém sua própria finalidade de uso.</text>
+<text x="70" y="1461" font-family="DejaVu Sans,Arial,sans-serif" font-size="16" font-weight="400" text-anchor="start" fill="#596779">A revisão dos objetivos de Pedro e Guilherme e a consolidação da equipe permanecem pendentes.</text>
 </svg>
