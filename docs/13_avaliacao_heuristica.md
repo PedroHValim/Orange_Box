@@ -3,7 +3,8 @@
 **Data:** 16/11/2026  
 **Revisão documental:** 18/11/2026  
 **Situação de Lucas:** ✅ inspeção e complementação documental concluídas para o aplicativo e os estados examinados.  
-**Status geral:** ✅ concluída documentalmente — inspeções registradas, achados consolidados e plano de melhoria definido, com as limitações de cobertura e de confirmação no aparelho explicitadas.  
+**Revisão após o feedback (A03 — Pedro):** 20/11/2026.  
+**Status geral:** 🟨 em revisão após o feedback — parte de A03 revisada (achados só de código separados, V02, V06 e V16 revistos, contagem recalculada e checklist corrigido). Permanecem pendentes da equipe a cobertura cruzada do escopo por avaliador e a reavaliação coletiva das severidades.  
 **Responsabilidade:** uma avaliação completa por integrante, sobre todas as telas e estados relevantes do projeto.
 
 ## Objetivo da atividade
@@ -56,7 +57,7 @@ A inspeção avalia a comunicação da interface, não a precisão científica d
 | Fluxos | M02 e M03 no aplicativo; M01 no Figma, pois o aplicativo não possui perfil de agrônomo. |
 | Dispositivos | Aplicativo em iPhone; protótipo FA em computador. |
 | Avaliadores | A01: Lucas Tonoli Cabral Duarte; A02: Guilherme Morais Escudeiro; A03: Pedro Henrique Ferreira Valim. |
-| Limitações | Capturas não comprovam todos os comportamentos dinâmicos. Alguns achados de Pedro vieram do código. A inspeção de Guilherme concentrou-se no protótipo FA. Não há comprovação de que cada avaliador tenha inspecionado individualmente todos os produtos e estados do projeto. |
+| Limitações | Capturas não comprovam todos os comportamentos dinâmicos. Alguns achados de Pedro vieram do código; na revisão de 20/11/2026 eles foram separados como problemas potenciais pendentes de reprodução. A inspeção de Guilherme concentrou-se no protótipo FA. A03 (Pedro) não inspecionou as telas FA. Não há comprovação de que cada avaliador tenha inspecionado individualmente todos os produtos e estados do projeto; o requisito de inspeção completa por integrante **não foi atendido**. |
 
 ## 3. Procedimento individual
 
@@ -323,55 +324,71 @@ Os dados e interações são simulados. Os pontos QA21 da Entrega 12 foram consi
 
 ### Procedimento
 
-Inspeção das seis capturas da Entrega 11 e leitura do código, aplicando H1–H10.
+Inspeção das seis capturas da Entrega 11, das capturas adicionais de Lucas e leitura do código, aplicando H1–H10.
 
-Os registros `[código]` têm evidência de implementação, não necessariamente confirmação de comportamento no aparelho.
+**Escopo de A03:** aplicativo iOS (perfis Administrador e Inspeção). As telas FA do protótipo do agrônomo não foram inspecionadas por A03; esta não é uma inspeção completa do escopo do projeto.
 
-V09 foi confirmado visualmente no Mapa e no Histórico pelas capturas de Lucas. V12 tem confirmação parcial. V03, V10, V11 e V14 permanecem sem confirmação no iPhone.
+**Revisão de 20/11/2026:** somente problemas visíveis na interface ficam como violações. Os registros vistos apenas no código (V03, V10, V11 e V14) foram movidos para “Problemas potenciais pendentes de reprodução”: mantêm o ID para rastreabilidade, mas não entram na contagem de violações até haver captura do estado. V16 passou a ser observação sobre os dados de demonstração. V06 foi reclassificado de H2 para H4 e V02 teve a severidade revista para 2. Essas revisões são individuais de A03; a severidade final coletiva continua pendente.
 
-O documento de origem registra V03 como observado na versão web no teste com usuário, com referência a AU04 da Entrega 14. Essa referência não é utilizada aqui como confirmação do comportamento no aplicativo iOS.
+V09 foi confirmado visualmente no Mapa e no Histórico pelas capturas de Lucas. V12 tem confirmação parcial.
 
 ### 4. Matriz de cobertura
 
 | H | Telas/fluxos | Violação? | IDs |
 |---|---|---|---|
-| H1 | Relatórios, detalhe do talhão, câmera | Sim | V03, V04, V11 |
-| H2 | Acesso, câmera, relatórios, Mapa | Sim | V05, V06, V07, V16 |
+| H1 | Relatórios, detalhe do talhão, câmera | Sim | V04 (hipóteses V03 e V11 pendentes de reprodução) |
+| H2 | Acesso, câmera, relatórios | Sim | V05, V07 |
 | H3 | Câmera, desenho, exclusões | Sim | V13 |
-| H4 | Mapa, Conta, relatórios, filtros | Sim | V01, V08, V09 |
-| H5 | Talhão, exclusões, Acesso | Sim | V10 |
-| H6 | Mapa, Histórico, relatórios | Sim | V02 |
-| H7 | Câmera, associação e filtros | Sim | V12 |
-| H8 | Todas as capturas | Não | — |
-| H9 | Câmera, Acesso, Mapa | Sim | V14 |
+| H4 | Acesso, Mapa, Conta, relatórios, filtros | Sim | V01, V06, V08, V09 |
+| H5 | Talhão, exclusões, Acesso | Não nos estados observados | — (hipótese V10 pendente de reprodução) |
+| H6 | Mapa, Histórico, relatórios | Sim, condicional ao zoom | V02 |
+| H7 | Câmera, associação e filtros | Sim, confirmação parcial | V12 |
+| H8 | Todas as capturas | Não nos estados observados | — |
+| H9 | Câmera, Acesso, Mapa | Não nos estados observados | — (hipótese V14 pendente de reprodução) |
 | H10 | Câmera, Mapa, relatórios | Sim | V15 |
+
+A matriz descreve o escopo observado por A03 nas capturas do aplicativo iOS. “Não nos estados observados” não significa que a heurística é atendida pelo sistema inteiro.
 
 ### 5. Declaração de violações
 
 | ID | H | Tela/estado | Problema | Evidência | Severidade | Justificativa | Recomendação |
 |---|---|---|---|---|---:|---|---|
 | V01 | H4 | Mapa, Conta e Relatórios | Contagens diferentes sem explicar que Mapa considera detecções posteriores à última pulverização. | ![V01](../assets/13_heuristica/v01.jpeg) | 3 | Gestor recebe números distintos sem conhecer a regra. | Unificar contagem ou explicitar período e critério. |
-| V02 | H6 | Mapa | Polígonos sem nome/contagem visíveis no zoom capturado; acesso depende do rótulo. | ![V02](../assets/13_heuristica/v02.jpeg) | 3 | Exige memória e pode impedir abertura do talhão. | Exibir identificação e permitir tocar no polígono; conferir outros níveis de zoom. |
-| V03 | H1 | Relatórios [código] | Talhão não inspecionado recebe indicação semelhante a inspecionado sem ocorrência; lista inicial limitada. | `DashboardView.swift`; referência a AU04 da Entrega 14 na versão web. | 3 | Ausência de dado pode ser entendida como ausência de praga. | Distinguir “Não inspecionado no período” de “Sem ocorrência”. |
+| V02 | H6 | Mapa | Polígonos sem nome/contagem visíveis no zoom capturado. **Confirmação parcial:** a Figura 9 mostra nomes e contagens em outro zoom. | ![V02](../assets/13_heuristica/v02.jpeg) | 2 | Revisão de 20/11/2026 (antes 3): o problema depende do nível de zoom e não há evidência de que impeça abrir o talhão. Não foram verificados o zoom em que os rótulos somem nem se o polígono é tocável. | Manter identificação visível em todos os níveis de zoom e permitir tocar no polígono; verificar os pontos acima antes de nova revisão da severidade. |
 | V04 | H1 | Relatórios | Variação positiva exibida sem dados no período anterior. | ![V04](../assets/13_heuristica/v04.jpeg) | 2 | Pode sugerir crescimento sem base comparativa. | Mostrar “Sem dados no período anterior”. |
 | V05 | H2 | Relatórios e ajuda | “Detecções confirmadas” nomeia saída do modelo com confiança alta. | ![V05](../assets/13_heuristica/v05.jpeg) | 3 | Pode ser confundida com confirmação profissional. | Identificar resultado do modelo e separar validação humana. |
-| V06 | H2 | Acesso | “Continuar com Google” entra em conta de teste pelo código, sem autenticação Google real. | ![V06](../assets/13_heuristica/v06.jpeg) | 2 | Promete comportamento diferente do implementado. | Rotular como demonstração ou implementar autenticação real. |
+| V06 | H4 | Acesso | “Continuar com Google” entra em conta de teste, sem autenticação Google real. | ![V06](../assets/13_heuristica/v06.jpeg) | 2 | Reclassificado de H2 para H4 em 20/11/2026: “Continuar com Google” é um padrão conhecido de login, e o botão não segue o comportamento que esse padrão promete. | Rotular como demonstração ou implementar autenticação real. |
 | V07 | H2 | Câmera | “UltralyticsYOLO · Core ML pronto” usa termos de implementação. | ![V07](../assets/13_heuristica/v07.jpeg) | 2 | Usuário pode não compreender se deve agir. | Usar “Pronto para analisar”. |
 | V08 | H4 | Gráfico do relatório | Cores identificam talhões, mas também significam severidade em outras telas; gráfico sem legenda. | ![V08](../assets/13_heuristica/v08.jpeg) | 2 | Vermelho pode ser interpretado como crítico. | Usar paleta adequada e legenda. |
 | V09 | H4 | Filtros do Mapa e Histórico | Cores no filtro diferem dos nomes usados nos relatórios e na legenda do Mapa. | ![Mapa](../assets/13_heuristica/Filtros_Mapa.jpeg) ![Histórico](../assets/13_heuristica/filtro_hist.png) | 2 | Exige traduzir cores para situações. | Padronizar rótulos, mantendo cor como apoio. |
-| V10 | H5 | Registrar pulverização [código] | Um toque registra aplicação, muda contagem e datas sem confirmação ou desfazer. | `MapView.swift`; não confirmado no aparelho. | 3 | Toque acidental pode alterar indicação de manejo. | Confirmar talhão/data, permitir data real e desfazer. |
-| V11 | H1 | Salvar nome/leitura/pulverização [código] | Gravações sem mensagem de confirmação. | `MapView.swift`; não confirmado no aparelho. | 2 | Usuário pode repetir ação sem saber se salvou. | Feedback curto após gravação. |
 | V12 | H7 | Após foto [código] | Saída da câmera para associação de área pode interromper capturas sucessivas. | ![Área](../assets/13_heuristica/mapa_selecionando.jpeg) Pergunta confirmada fora de talhão; caso dentro de talhão não confirmado. | 3 | Pode adicionar passos repetidos à inspeção. | Associar quando possível e perguntar apenas quando necessário; confirmar comportamento no aparelho. |
 | V13 | H3 | Câmera | Retorno leva ao Histórico, independentemente da origem, segundo código. | ![V13](../assets/13_heuristica/v13.jpeg) | 1 | Impõe navegação adicional, sem perda de dados. | Voltar à origem ou manter navegação disponível. |
-| V14 | H9 | Falha de captura [código] | Mensagem de localização também usada quando falha a captura da imagem. | `CameraView.swift`; falha da imagem não reproduzida no aparelho. | 2 | Recuperação sugerida pode não corresponder à causa. | Separar verificações e mensagens. |
 | V15 | H10 | Relatórios | Sem ajuda para indicadores e limites. | ![V15](../assets/13_heuristica/v15.jpeg) | 2 | Indicadores podem não ser compreendidos. | Ajuda contextual com definições e limites. |
-| V16 | H2 | Mapa demonstrativo | Talhões de exemplo sobre área urbana. | ![V16](../assets/13_heuristica/v02.jpeg) | 1 | Prejudica coerência da demonstração e dos testes. | Reposicionar exemplos em área agrícola. |
+
+### Problemas potenciais encontrados na inspeção do código — pendentes de reprodução
+
+Possíveis violações identificadas por inspeção de implementação. **Requerem reprodução na interface.** Não fazem parte da contagem de violações nem da priorização do plano de melhoria até serem reproduzidos. Para cada um, falta: reproduzir o estado no aparelho, fazer a captura, confirmar a heurística e revisar a severidade.
+
+| ID | H provisória | Tela/estado | Comportamento esperado pela leitura do código | Evidência | Severidade provisória do autor | O que falta para confirmar |
+|---|---|---|---|---|---:|---|
+| V03 | H1 | Relatórios | Talhão não inspecionado recebe indicação semelhante a talhão inspecionado sem ocorrência; lista inicial limitada. | `DashboardView.swift`. | 3 | Captura no iPhone de um talhão sem inspeção no período ao lado de um inspecionado sem ocorrência. |
+| V10 | H5 | Registrar pulverização | Um toque registra aplicação, muda contagem e datas sem confirmação ou desfazer. | `MapView.swift`. | 3 | Captura antes e depois do toque, mostrando ausência de confirmação e de desfazer. |
+| V11 | H1 | Salvar nome/leitura/pulverização | Gravações sem mensagem de confirmação. | `MapView.swift`. | 2 | Captura imediatamente após cada gravação. |
+| V14 | H9 | Falha de captura | Mensagem de localização também usada quando falha a captura da imagem. | `CameraView.swift`; a Figura 8 confirma só o caso sem localização. | 2 | Provocar falha da imagem com localização ativa e capturar a mensagem. |
+
+**Evidência posterior, de outra versão:** na versão web, U02 não identificou o talhão sem inspeção (AU04, Entrega 14, 17/11/2026). Isso não reproduz V03 no aplicativo iOS inspecionado e não é usado aqui como confirmação; serve apenas para a comparação entre as Entregas 13 e 14.
+
+### Observação sobre os dados de demonstração (fora da contagem heurística)
+
+| ID | Tela | Observação | Evidência | Tratamento |
+|---|---|---|---|---|
+| V16 | Mapa demonstrativo | Talhões de exemplo desenhados sobre área urbana. | ![V16](../assets/13_heuristica/v02.jpeg) | Retirado das violações em 20/11/2026: é limitação dos dados de demonstração e da preparação da avaliação, não da interface que um usuário real veria com seus próprios talhões. Recomenda-se reposicionar os exemplos em área agrícola antes de novos testes. |
 
 ### Observações sobre as novas evidências
 
-A Figura 9 mostra nomes e contagens no zoom apresentado. Isso delimita V02: a ausência de rótulos não pode ser generalizada para todos os níveis de zoom.
+A Figura 9 mostra nomes e contagens no zoom apresentado. Isso delimita V02: a ausência de rótulos não pode ser generalizada para todos os níveis de zoom, e por isso V02 passou a confirmação parcial, com severidade 2.
 
-A Figura 8 confirma a mensagem quando falta localização. Não confirma que a mesma mensagem apareça em uma falha da imagem com localização disponível; por isso V14 permanece identificado como achado de código.
+A Figura 8 confirma a mensagem quando falta localização. Não confirma que a mesma mensagem apareça em uma falha da imagem com localização disponível; por isso V14 está entre os problemas pendentes de reprodução.
 
 A ausência de violação identificada por Lucas em Acesso e Conta não apaga automaticamente V06 ou V01 de Pedro. São resultados individuais, com métodos e evidências diferentes.
 
@@ -383,14 +400,15 @@ A ausência de violação identificada por Lucas em Acesso e Conta não apaga au
 
 ### Síntese individual — Pedro
 
-- Dezesseis problemas: seis de severidade 3, oito de severidade 2 e dois de severidade 1.
-- H2: quatro; H1 e H4: três cada; H3, H5, H6, H7, H9 e H10: um cada.
-- Prioridades: V01, V03, V05, V10, V02 e V12.
-- Padrões principais: ausência de dados confundida com zero e saída automática apresentada como confirmação.
-- V09 confirmado por capturas do Mapa e Histórico.
-- V12 parcialmente confirmado.
-- V03, V10, V11 e V14 permanecem sem confirmação no aparelho.
-- Evidências de código e evidências do aparelho permanecem diferenciadas.
+Revisada em 20/11/2026.
+
+- Onze violações com evidência visual, uma delas (V12) com confirmação parcial e outra (V02) condicional ao zoom: três de severidade 3, sete de severidade 2 e uma de severidade 1.
+- H4: quatro; H2: duas; H1, H3, H6, H7 e H10: uma cada.
+- Quatro problemas potenciais pendentes de reprodução (V03, V10, V11 e V14), fora da contagem.
+- Uma observação sobre os dados de demonstração (V16), fora da contagem heurística.
+- Prioridades entre as violações confirmadas: V01, V05 e V12.
+- Padrões principais: números e estados sem critério explicado e saída automática apresentada como confirmação.
+- Escopo limitado ao aplicativo iOS; telas FA não inspecionadas por A03.
 
 ## 7. Consolidação
 
@@ -421,7 +439,7 @@ O desenho manual da Figura 9 é registrado separadamente. Não comprova salvamen
 
 ### 7.4 Relação consolidada
 
-Os IDs individuais permanecem como origem. Para os registros sem duplicidade, a severidade individual é mantida na consolidação documental.
+Os IDs individuais permanecem como origem. Para os registros sem duplicidade, a severidade é a do autor (com as revisões individuais de A03 de 20/11/2026); a reavaliação coletiva das severidades de HC03 em diante ainda não foi feita e continua pendente da equipe. Os registros de A03 que dependiam só do código e a observação sobre dados de demonstração saíram desta tabela e estão em 7.4.1.
 
 | ID consolidado | Origem | Problema | Severidade | Situação da evidência |
 |---|---|---|---:|---|
@@ -443,19 +461,26 @@ Os IDs individuais permanecem como origem. Para os registros sem duplicidade, a 
 | HC16 | A02-V12 | Sinal forte/fraco sem explicação. | 2 | Protótipo FA. |
 | HC17 | A02-V13 | Veredito sem possibilidade de correção. | 3 | Protótipo FA e conferência de navegação. |
 | HC18 | A03-V01 | Contagens divergentes entre telas. | 3 | Captura e regra identificada no código. |
-| HC19 | A03-V02 | Identificação de talhões ausente em determinado zoom. | 3 | Captura; limitado ao zoom documentado. |
-| HC20 | A03-V03 | Não inspecionado confundido com sem ocorrência. | 3 | Código; não confirmado no iPhone. |
+| HC19 | A03-V02 | Identificação de talhões ausente em determinado zoom. | 2 | **Parcial** — captura; condicional ao zoom (revisão individual de A03, antes 3). |
 | HC21 | A03-V04 | Variação sem base no período anterior. | 2 | Visual. |
 | HC22 | A03-V05 | Detecção automática apresentada como confirmada. | 3 | Captura e descrição da regra no código. |
-| HC23 | A03-V06 | Botão Google com comportamento demonstrativo. | 2 | Captura e código. |
+| HC23 | A03-V06 | Botão Google com comportamento demonstrativo (H4). | 2 | Captura e código. |
 | HC24 | A03-V08 | Cores do gráfico conflitantes e sem legenda. | 2 | Visual. |
-| HC25 | A03-V10 | Pulverização sem confirmação ou desfazer. | 3 | Código; não confirmado no aparelho. |
-| HC26 | A03-V11 | Gravações sem feedback. | 2 | Código; não confirmado no aparelho. |
-| HC27 | A03-V12 | Associação após foto pode interromper sequência. | 3 | Captura parcial e código; condição dentro de talhão não confirmada. |
+| HC27 | A03-V12 | Associação após foto pode interromper sequência. | 3 | **Parcial** — captura fora de talhão e código; condição dentro de talhão não confirmada. |
 | HC28 | A03-V13 | Retorno da câmera não preserva origem. | 1 | Captura e código. |
-| HC29 | A03-V14 | Mensagem de localização reutilizada em falha de imagem. | 2 | Código; falha da imagem não reproduzida. |
 | HC30 | A03-V15 | Indicadores sem ajuda contextual. | 2 | Visual. |
-| HC31 | A03-V16 | Talhões demonstrativos em área urbana. | 1 | Visual. |
+
+#### 7.4.1 Registros fora da contagem de violações
+
+Os IDs foram mantidos para preservar a rastreabilidade.
+
+| ID consolidado | Origem | Problema | Estado |
+|---|---|---|---|
+| HC20 | A03-V03 | Não inspecionado confundido com sem ocorrência. | Pendente de reprodução no aplicativo iOS (só código). Problema equivalente observado depois na versão web (AU04, Entrega 14). |
+| HC25 | A03-V10 | Pulverização sem confirmação ou desfazer. | Pendente de reprodução (só código). |
+| HC26 | A03-V11 | Gravações sem feedback. | Pendente de reprodução (só código). |
+| HC29 | A03-V14 | Mensagem de localização reutilizada em falha de imagem. | Pendente de reprodução (só código). |
+| HC31 | A03-V16 | Talhões demonstrativos em área urbana. | Fora da heurística: limitação dos dados de demonstração. |
 
 ### 7.5 Relações preservadas sem unificação
 
@@ -468,20 +493,27 @@ Os IDs individuais permanecem como origem. Para os registros sem duplicidade, a 
 
 ### 7.6 Contagem final documental
 
+Recalculada em 20/11/2026, separando violações confirmadas de registros pendentes.
+
 | Categoria | Quantidade |
 |---|---:|
 | Violações ativas de Lucas | 4 |
 | Violações de Guilherme | 13 |
-| Registros de Pedro | 16 |
-| Total bruto ativo | 33 |
+| Violações de Pedro com evidência visual | 11 |
+| Total bruto ativo | 28 |
 | Redução por dois pares duplicados | 2 |
-| Total consolidado documental | 31 |
-| Severidade 3 | 8 |
+| **Total consolidado de violações** | **26** |
+| — aplicativo, evidência visual | 11 |
+| — protótipo FA, evidência visual | 13 |
+| — confirmação parcial (HC19, HC27) | 2 |
+| Severidade 3 | 5 |
 | Severidade 2 | 18 |
-| Severidade 1 | 5 |
+| Severidade 1 | 3 |
 | Severidade 4 | 0 |
+| Problemas potenciais pendentes de reprodução (fora do total) | 4 |
+| Observação sobre dados de demonstração (fora do total) | 1 |
 
-A01-V05 fica fora da contagem ativa. O total de 31 inclui registros baseados em código e confirmação parcial, identificados na tabela.
+A01-V05 fica fora da contagem ativa. As severidades são as dos autores, ainda sem reavaliação coletiva. A quantidade de registros não é um indicador da qualidade da interface: ela mistura protótipo e aplicativo e depende do escopo examinado por cada avaliador.
 
 ## 8. Síntese e plano de melhoria
 
@@ -489,15 +521,17 @@ A01-V05 fica fora da contagem ativa. O total de 31 inclui registros baseados em 
 
 | Prioridade | Problemas | Ação | Responsável pelo acompanhamento |
 |---|---|---|---|
-| Alta | HC18, HC20 e HC22 | Esclarecer contagens, ausência de dados e resultado automático. | Pedro/equipe. |
-| Alta | HC25 | Verificar e prevenir registro acidental de pulverização. | Pedro/equipe. |
+| Alta | HC18 e HC22 | Esclarecer contagens e resultado automático. | Pedro/equipe. |
+| A reproduzir antes de priorizar | HC20, HC25, HC26 e HC29 | Reproduzir no aparelho e capturar; só então confirmar heurística e severidade. HC20 tem problema equivalente observado na versão web (AU04), o que justifica reproduzi-lo primeiro. | Pedro. |
 | Alta | HC05 e HC17 | Manter acesso a pendências e permitir corrigir veredito. | Guilherme/equipe. |
-| Alta | HC19 e HC27 | Conferir identificação por zoom e interrupções nas capturas. | Pedro/equipe. |
+| Alta (confirmação parcial) | HC27 | Conferir interrupções nas capturas dentro de talhão. | Pedro/equipe. |
+| Média | HC19 | Verificar em que zoom os rótulos somem e se o polígono é tocável. | Pedro/equipe. |
 | Média | HC01 | Traduzir mensagem técnica da câmera. | Lucas e Pedro. |
 | Média | HC02 | Padronizar nomes nos filtros, Mapa e relatórios. | Lucas e Pedro. |
 | Média | HC04 | Explicar associação da foto sem a sigla EXIF. | Lucas/equipe. |
-| Média | HC06–HC10, HC12–HC16, HC21, HC23, HC24, HC26, HC29 e HC30 | Melhorar controle, consistência, ajuda e feedback conforme recomendações individuais. | Equipe. |
-| Menor | HC03, HC11, HC28 e HC31 | Ajustar idioma, rótulos, retorno e dados demonstrativos. | Equipe. |
+| Média | HC06–HC10, HC12–HC16, HC21, HC23, HC24 e HC30 | Melhorar controle, consistência, ajuda e feedback conforme recomendações individuais. | Equipe. |
+| Menor | HC03, HC11 e HC28 | Ajustar idioma, rótulos e retorno. | Equipe. |
+| Preparação de testes | HC31 | Reposicionar os talhões demonstrativos em área agrícola. | Equipe. |
 
 A severidade não indica que a correção já foi implementada.
 
@@ -515,7 +549,7 @@ A severidade não indica que a correção já foi implementada.
 
 ### Conclusão
 
-A documentação da avaliação foi concluída com **31 registros consolidados**, preservando os achados individuais, as evidências e as limitações.
+A revisão de 20/11/2026 deixou **26 violações consolidadas** (11 do aplicativo com evidência visual, 13 do protótipo FA e 2 com confirmação parcial), além de **4 problemas potenciais pendentes de reprodução** e **1 observação sobre os dados de demonstração**, preservando os achados individuais, as evidências e as limitações.
 
 As principais prioridades são comunicar corretamente os dados usados nas decisões de manejo, distinguir saída automática de validação humana e permitir correção de ações relevantes.
 
@@ -525,18 +559,20 @@ A conclusão documental não equivale à implementação das recomendações nem
 
 ## Checklist — equipe
 
-- [x] Cada integrante realizou inspeção completa de todo o escopo exigido — não há comprovação de cobertura cruzada de todos os produtos por cada avaliador.
-- [x] Todas as telas e estados relevantes possuem cobertura individual demonstrada.
-- [x] Cobertura integral de estados dinâmicos e de falha confirmada.
+- [ ] Cada integrante realizou inspeção completa de todo o escopo exigido — não atendido: A01 e A03 cobriram principalmente o aplicativo e A02 o protótipo FA.
+- [ ] Todas as telas e estados relevantes possuem cobertura individual demonstrada.
+- [ ] Cobertura integral de estados dinâmicos e de falha confirmada — V03, V10, V11 e V14 não foram reproduzidos.
 - [x] A inspeção avalia a interface, não o mérito científico do algoritmo.
 - [x] H1–H10 aparecem nas matrizes individuais.
 - [x] Não foi criada uma violação obrigatória para cada heurística.
-- [x] Registros possuem localização, contexto e evidência visual ou de código, com limitações explícitas.
-- [x] Todos os comportamentos registrados no código foram confirmados no aparelho.
+- [x] Violações confirmadas possuem localização, contexto e evidência visual; achados só de código estão separados como pendentes de reprodução.
+- [ ] Todos os comportamentos registrados no código foram confirmados no aparelho — não; ver problemas pendentes de reprodução.
 - [x] Severidades individuais possuem justificativas.
 - [x] Recomendações indicam correção ou redução do impacto.
 - [x] HC01 e HC02 consolidados e aprovados por Lucas e Pedro.
+- [ ] Severidades de HC03 em diante reavaliadas coletivamente pela equipe.
 - [x] Demais registros comparados documentalmente, com duplicidades e diferenças explicitadas.
-- [x] Tabela consolidada, contagem e plano de melhoria preenchidos.
+- [x] Tabela consolidada, contagem e plano de melhoria preenchidos e recalculados, separando confirmados, parciais e pendentes.
 - [x] Parte de Lucas concluída para o escopo documentado.
-- [x] Documentação da Entrega 13 concluída com limitações registradas.
+- [x] Parte de A03 revisada após o feedback (20/11/2026).
+- [ ] Documentação da Entrega 13 concluída — pendem cobertura cruzada e consolidação coletiva das severidades.
