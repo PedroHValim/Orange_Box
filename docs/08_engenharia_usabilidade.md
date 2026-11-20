@@ -49,21 +49,42 @@ Capacidades técnicas, restrições, funcionalidades e contexto são diferenciad
 
 Não foram fornecidas medições de memória, capacidade mínima de câmera ou limite técnico de processamento. Esses valores não serão inventados.
 
-### 1.2 Agrônomo e gestor — conteúdo a revisar pelos responsáveis
+### 1.2 Gestor — P01 — Pedro
 
-A classificação abaixo preserva o conteúdo dos demais perfis. Ainda precisa ser reorganizada pelos responsáveis para separar capacidades técnicas, restrições, funcionalidades e contexto, conforme o feedback.
+Mesma separação usada para P02. As versões consideradas são o aplicativo iOS no perfil Administrador (Entrega 11) e a versão web do mesmo repositório usada depois na sessão U02 (Entrega 14). Uma capacidade do dispositivo não comprova que a funcionalidade correspondente exista.
 
-| Característica | Agrônomo — P03 | Gestor — P01 | Consequência para IHC |
-|---|---|---|---|
-| Software | Fluxo proposto no protótipo FA em Figma; não há perfil de agrônomo no aplicativo iOS. | Aplicativo CYF para iPhone no perfil Administrador. | P03 precisa de foto, localização e histórico organizados; P01, de resumo e talhões compreensíveis. |
-| Hardware/dispositivos | Computador ou notebook para o protótipo FA; uso móvel durante visitas segue como hipótese. | iPhone na versão avaliável; outros dispositivos são hipótese. | Evidências ampliáveis para P03 e filtros legíveis para P01. |
-| Capacidades previstas | Examinar foto, local e histórico, validar detecções e emitir parecer. | Ver talhões, consultar resultados e apoiar a decisão de manejo. | Separar indicação da IA de confirmação humana e comunicar o significado dos resultados. |
-| Restrições | Depende da qualidade das fotos enviadas e da possibilidade de examinar seu contexto. | Não valida a praga sozinho e depende do que foi registrado na inspeção. | Pedir outra evidência quando necessário e explicar limites dos dados. |
-| Conectividade | Fotos podem chegar depois da captura. | Dados podem depender do envio feito pelo campo. | Distinguir estados locais, envio e recebimento quando o fluxo os oferecer. |
-| Segurança/privacidade | Fotos, mapas e pareceres podem identificar propriedades e o profissional. | Cobertura pode ser entendida como controle individual do trabalhador. | Limitar acesso e mostrar apenas identificação necessária à tarefa. |
-| Volume/histórico | Pontos de vários talhões e períodos podem ser consultados. | Pode ser necessário comparar ciclos e talhões. | Oferecer consulta por local e período quando confirmada a necessidade. |
-| Tempo de processamento | Fotos e pareceres podem exigir carregamento e envio. | Mapa e relatório podem demorar a carregar ou exportar. | Comunicar processamento, sucesso e falha com caminho de recuperação. |
-| Papéis | Analisa evidências e propõe orientação técnica. | Acompanha resultados e toma ou encaminha decisões de manejo. | Explicitar a autoria e o estado dos registros e distinguir os papéis. |
+| Categoria | Característica | Consequência para IHC |
+|---|---|---|
+| Capacidade técnica | Exibição de mapa com camada de satélite e polígonos georreferenciados dos talhões. | Permitir localizar o talhão pelo espaço, sem depender apenas do nome. |
+| Capacidade técnica | Armazenamento e consulta de registros por data e por talhão. | Viabilizar comparação entre períodos e acesso à evidência de cada número. |
+| Capacidade técnica | Geração de gráficos e de arquivo exportável do relatório (PDF na versão web). | Comunicar processamento, conclusão e falha da exportação. |
+| Capacidade técnica | Separação de acesso por perfil (Administrador e Inspeção). | Mostrar ao gestor apenas o que pertence à sua tarefa. |
+| Restrição da plataforma | Tela de celular pequena para comparar vários talhões e períodos ao mesmo tempo. | Priorizar o resumo e permitir aprofundar por talhão, sem tabelas extensas. |
+| Restrição da plataforma | Aplicativo nativo disponível só para iPhone; a versão web depende de conexão com o servidor. | Identificar a versão usada em cada avaliação e não generalizar para outros dispositivos. |
+| Restrição da plataforma | O sistema só conhece o que foi registrado e enviado pela inspeção. | Indicar quando não há registro no período, em vez de exibir zero. |
+| Funcionalidade atual | Mapa de talhões com contagem, relatório por período com variação em relação ao período anterior e talhões críticos, histórico de inspeções, exportação do relatório (web) e registro de pulverização (iOS). | São as partes avaliáveis nas Entregas 13 e 14. |
+| Funcionalidade futura | Aviso e resumo do ciclo, estado “não inspecionado no período”, posição por talhão, pedido de parecer ou reinspeção, evolução por ciclo com aviso de cobertura incompleta, decisão e repasse (G01–G08). | Não atribuir ao aplicativo atual; metas que dependem delas ficam “não avaliadas”. |
+| Papel do usuário | O gestor não valida a praga sozinho e decide ou encaminha o manejo. | Distinguir indicação automática, validação humana e decisão do gestor. |
+| Contexto de uso | Revisão a cada ciclo de inspeção, fora do talhão, com intervalos entre usos. | Favorecer a retomada após intervalo: rótulos estáveis e resumo na entrada. |
+| Hipótese de contexto | Rotina de ciclo, quem decide o manejo e uso de celular ou computador pelo gestor (H05, H21). | Investigar com gestores reais (I03, Entrega 7, ainda não aplicado) antes de tratar como fato. |
+
+Não foram medidos tempo de carregamento do mapa, tempo de exportação nem limite de registros. Esses valores não serão inventados.
+
+### 1.3 Agrônomo — P03 — conteúdo a revisar pelo responsável
+
+A classificação abaixo preserva o conteúdo do perfil P03. Ainda precisa ser reorganizada pelo responsável para separar capacidades técnicas, restrições, funcionalidades e contexto, conforme o feedback.
+
+| Característica | Agrônomo — P03 | Consequência para IHC |
+|---|---|---|
+| Software | Fluxo proposto no protótipo FA em Figma; não há perfil de agrônomo no aplicativo iOS. | P03 precisa de foto, localização e histórico organizados; P01, de resumo e talhões compreensíveis. |
+| Hardware/dispositivos | Computador ou notebook para o protótipo FA; uso móvel durante visitas segue como hipótese. | Evidências ampliáveis para P03 e filtros legíveis para P01. |
+| Capacidades previstas | Examinar foto, local e histórico, validar detecções e emitir parecer. | Separar indicação da IA de confirmação humana e comunicar o significado dos resultados. |
+| Restrições | Depende da qualidade das fotos enviadas e da possibilidade de examinar seu contexto. | Pedir outra evidência quando necessário e explicar limites dos dados. |
+| Conectividade | Fotos podem chegar depois da captura. | Distinguir estados locais, envio e recebimento quando o fluxo os oferecer. |
+| Segurança/privacidade | Fotos, mapas e pareceres podem identificar propriedades e o profissional. | Limitar acesso e mostrar apenas identificação necessária à tarefa. |
+| Volume/histórico | Pontos de vários talhões e períodos podem ser consultados. | Oferecer consulta por local e período quando confirmada a necessidade. |
+| Tempo de processamento | Fotos e pareceres podem exigir carregamento e envio. | Comunicar processamento, sucesso e falha com caminho de recuperação. |
+| Papéis | Analisa evidências e propõe orientação técnica. | Explicitar a autoria e o estado dos registros e distinguir os papéis. |
 
 **Hipóteses a confirmar:** dispositivos disponíveis na rotina, estabilidade da conexão, volume real de registros, comunicação entre papéis e necessidade de histórico.
 
@@ -90,20 +111,45 @@ A classificação abaixo preserva o conteúdo dos demais perfis. Ainda precisa s
 | Usar texto e símbolos além de cor. | Cores isoladas podem dificultar a interpretação. | Identificar estados com rótulos compreensíveis. |
 | Manter termos e controles consistentes. | Consistência reduz esforço de aprendizagem. | Reutilizar os signos e objetivos das Entregas 9 e 10. |
 
-### 2.2 Demais princípios — conteúdo preservado para revisão da equipe
+### 2.2 Princípios relacionados ao gestor — Pedro
+
+O contexto de P01 (revisão a cada ciclo, sem reconhecer a praga sozinho) funciona como justificativa; os princípios abaixo são as regras que orientam o design.
+
+#### Princípios direcionados ao negócio
+
+| Princípio | Justificativa | Decisão decorrente |
+|---|---|---|
+| A decisão de manejo pertence ao gestor (ou ao agrônomo, conforme H21). | O sistema não tem competência para recomendar produto, dose ou prioridade. | Apresentar e ordenar dados com critério explicado, sem recomendar o manejo. |
+| Ausência de registro não é ausência de praga. | Um talhão não inspecionado no período não fornece evidência. | Tratar “não inspecionado” como estado próprio, separado de “sem ocorrência”. |
+| Resultado automático não é confirmação. | A indicação do modelo não equivale a validação humana ou profissional. | Não chamar saídas do modelo de “confirmadas”; identificar a origem de cada número. |
+| Cobertura por talhão, sem vigilância individual. | Informações da rota podem ser lidas como controle do trabalhador. | Mostrar o que foi coberto por talhão e período, não o desempenho por pessoa. |
+| Registrar autoria e data das decisões. | Posição, decisão e repasse precisam ser atribuíveis quando questionados depois. | Guardar quem registrou e quando, nos fluxos futuros de posição e decisão. |
+| Minimizar dados em relatórios exportados. | O arquivo pode circular fora do sistema. | Exportar apenas talhões, períodos e indicadores necessários. |
+
+#### Princípios direcionados à interface
+
+| Princípio | Justificativa | Decisão decorrente |
+|---|---|---|
+| Tornar a cobertura visível antes do resultado. | O gestor precisa saber o que o ciclo cobriu para confiar nos números. | Mostrar inspecionados e não inspecionados com rótulo, não apenas com zero ou cor. |
+| Um indicador, um nome e um critério. | O gestor compara números entre Mapa, Relatórios e Conta. | Rotular o período e a regra de cada contagem; não usar o mesmo nome para medidas diferentes. |
+| Não depender só de cor e manter a semântica das cores. | Mapas e gráficos são lidos rapidamente e por pessoas com diferentes percepções de cor. | Usar rótulo, número ou legenda vinculada; reservar vermelho para alerta. |
+| Explicar o critério da ordenação. | Uma lista ordenada influencia a prioridade mesmo sem recomendar. | Informar por que um talhão aparece primeiro. |
+| Levar do número à evidência. | O gestor não valida a praga sozinho e precisa ver fotos e local. | Permitir abrir, a partir do talhão, as fotos, o local e as datas. |
+| Facilitar a retomada após intervalos. | O uso ocorre a cada ciclo, não diariamente. | Manter navegação e termos estáveis e um resumo na entrada. |
+| Comunicar processamento, sucesso e falha. | Exportar ou registrar sem retorno leva a repetir a ação ou a supor que foi feito. | Confirmar a conclusão e indicar a recuperação em caso de falha. |
+
+### 2.3 Demais princípios — conteúdo preservado para revisão da equipe
 
 A equipe ainda deverá organizar os itens abaixo em princípios de negócio e de interface. Descrições de contexto devem funcionar como justificativas, não como princípios por si mesmas.
 
 | Princípio/norma | Aplicabilidade ao contexto | Decisão/requisito decorrente | Fonte |
 |---|---|---|---|
 | Contexto de uso — P03 | Análise a distância, dependente do que foi registrado em campo. | Organizar fotos, locais e histórico; oferecer saída quando a evidência for insuficiente. | Persona e cenário C03. |
-| Contexto de uso — P01 | Revisão da situação da propriedade sem necessariamente reconhecer a praga. | Mostrar talhões e indicadores com significado claro e acesso à evidência. | Persona e cenário C01. |
 | Prevenção e recuperação de erros | Foto inadequada, dúvida sobre o resultado e falhas de carregamento ou envio. | Permitir ajuste ou repetição e comunicar como recuperar a tarefa. | Entregas 5 e 6; heurísticas de Nielsen. |
 | Privacidade e minimização | Fotos, locais e autoria podem identificar pessoas e propriedades. | Coletar apenas dados necessários e limitar o acesso. | Planejamento ético da Entrega 7. |
 | Acessibilidade | Uso sob luz forte; mapas e estados que não devem depender só de cor. | Combinar texto, símbolo e cor; verificar contraste e tamanho dos controles. | Diretrizes de acessibilidade adotadas no projeto. |
 | Responsabilidade pelo parecer | Orientação de manejo exige julgamento profissional. | Não apresentar o resultado do modelo como parecer agronômico. | Requisitos do fluxo P03. |
 | Cobertura sem vigilância individual | Informações da rota podem ser interpretadas como controle do trabalhador. | Apresentar o necessário para cobertura sem exposição desnecessária da pessoa. | Cenário C02; minimização de dados. |
-| Dado e recomendação | Ordenação de talhões pode ser lida como recomendação de manejo. | Explicar o que o indicador mostra e preservar a decisão humana. | Cenário C01; tarefa T04. |
 | Interação humano–IA | O profissional pode aceitar automaticamente uma indicação da IA. | Distinguir sinal do modelo e veredito humano; permitir revisar e rejeitar. | Diretrizes de interação humano–IA adotadas no projeto. |
 | Visibilidade do estado | Usuários precisam saber se análise, registro ou exportação terminaram. | Mostrar andamento, conclusão, falha e recuperação. | Heurísticas de Nielsen. |
 
@@ -126,13 +172,13 @@ Não apresentar funcionalidade ausente como erro do participante.
 | Avaliar suficiência do contexto. | P03 / T05/T06 | Consulta foto, local e histórico ou pede outra evidência. |
 | Observar influência da IA no julgamento. | P03 / T07 | Explica quando consultou a indicação automática e como a usou. |
 | Identificar estados sem depender só da cor. | P03 / T07 | Diferencia pendente, confirmado e rejeitado por texto/símbolo. |
-| Distinguir “sem focos” de “não inspecionado”. | P01 / T09 | Explica que ausência de inspeção não significa ausência de praga. |
-| Compreender saídas diante de dúvida. | P01 / T09 | Distingue pedir parecer e pedir reinspeção, se essas ações existirem na versão. |
-| Interpretar evolução entre ciclos. | P01 / T08 | Identifica tendência e limites de cobertura quando disponíveis. |
-| Interpretar ordenação como dado. | P01 / T04 | Explica o significado da ordem da lista sem presumir recomendação automática. |
-| Distinguir decisão registrada e repassada. | P01 / T04 | Identifica a situação real do repasse quando o fluxo existir. |
+| Distinguir “sem focos” de “não inspecionado”. | P01 / T09 — versão atual: o talhão sem inspeção existe nos dados; o estado explícito ainda não. | Explica que ausência de inspeção não significa ausência de praga. |
+| Compreender saídas diante de dúvida. | P01 / T09 — versão futura; depende de H21. | Distingue pedir parecer e pedir reinspeção, se essas ações existirem na versão. |
+| Interpretar evolução entre ciclos. | P01 / T08 — versão atual parcial (comparação com o período anterior); evolução por ciclo e cobertura são futuras. | Identifica tendência e limites de cobertura quando disponíveis. |
+| Interpretar ordenação como dado. | P01 / T04 — versão atual (talhões críticos em Relatórios). | Explica o significado da ordem da lista sem presumir recomendação automática. |
+| Distinguir decisão registrada e repassada. | P01 / T04 — versão futura; depende de H21. | Identifica a situação real do repasse quando o fluxo existir. |
 
-As metas de P01 e P03 ainda precisam da classificação explícita entre versão atual, versão futura e hipótese, conforme o feedback.
+As metas de P01 foram classificadas na revisão de 20/11/2026. “Depende de H21” indica que, além de ausente na versão, a meta pressupõe que o gestor decide e repassa o manejo, hipótese ainda não confirmada com gestores reais. As metas de P03 ainda precisam da mesma classificação.
 
 ### 3.2 Metas quantitativas
 
@@ -151,13 +197,15 @@ Uma observação isolada não permite generalização estatística.
 | MU07 | Eficiência | Tempo do fluxo completo para cinco pontos. | P03 / T07/T05. | Mediana ≤ 8 minutos somente numa versão com cinco pontos; não avaliável como escrita no FA atual, que usa um ponto. | Tempo registrado apenas como referência na versão atual. |
 | MU08 | Compreensão | Identificar se o parecer foi enviado, inclusive após falha simulada. | P03 / T05. | Todos os participantes expostos ao estado; informar `n/N`. | Pergunta e observação. |
 | MU09 | Satisfação | Facilidade em escala de 1 a 7. | P03 / T05–T07. | Nota ≥ 5 por participante; informar média somente com amostra comparável. | Pergunta pós-tarefa. |
-| MU10 | Eficácia | Rever situação do ciclo e registrar posição e decisão. | P01 / T09/T04. | Todos os participantes P01 que executarem o fluxo; informar `n/N` e ajudas. Registro de posição não é avaliável no app atual. | Conclusão e intervenções. |
-| MU11 | Prevenção de erro | Tratar talhão não inspecionado como “sem focos”. | P01 / T09. | Zero ocorrência quando a diferença estiver visível no cenário. | Pergunta com resposta conhecida. |
-| MU12 | Eficiência | Identificar tendência do talhão entre ciclos. | P01 / T08. | Tempo ≤ 30 segundos por participante numa versão que apresente a evolução; registrar como não avaliável se ausente. | Cronômetro até a resposta. |
-| MU13 | Compreensão | Dizer se a última aplicação funcionou com base em dados suficientes. | P01 / T08. | Todos os participantes expostos aos dados; não avaliável na versão atual se a informação não existir. | Resposta comparada ao cenário. |
-| MU14 | Eficiência | Tempo da revisão completa do ciclo. | P01 / T09/T04. | Mediana ≤ 10 minutos numa versão com o fluxo completo; na versão parcial, relatar apenas o tempo da tarefa adaptada. | Cronômetro. |
-| MU15 | Compreensão | Diferenciar decisão registrada e repassada, inclusive após falha. | P01 / T04. | Todos os participantes expostos ao estado; não avaliável se o repasse não existir. | Pergunta pós-tarefa. |
-| MU16 | Satisfação | Facilidade em escala de 1 a 7. | P01 / T09/T08/T04. | Nota ≥ 5 por participante; informar média somente com amostra comparável. | Pergunta pós-tarefa. |
+| MU10 | Eficácia | Proporção que revê a situação do ciclo e registra posição e decisão sem ajuda. | P01 / T09/T04 — atual adaptada (ver situação, identificar o talhão sem inspeção, obter o relatório); posição e decisão são futuras. | Todos os participantes P01 que executarem o fluxo; informar `n/N` e ajudas. Registro de posição não é avaliável no app atual. | Conclusão e intervenções. |
+| MU11 | Prevenção de erro | Número de participantes que tratam talhão não inspecionado como “sem focos”. | P01 / T09 — versão atual. | Zero ocorrência quando a diferença estiver visível no cenário. | Pergunta com resposta conhecida. |
+| MU12 | Eficiência | Tempo para identificar a tendência do talhão entre ciclos. | P01 / T08 — atual adaptada (comparação com o período anterior). | Tempo ≤ 30 segundos por participante numa versão que apresente a evolução; registrar como não avaliável se ausente. | Cronômetro até a resposta. |
+| MU13 | Compreensão | Proporção de participantes expostos à evolução e à última aplicação que respondem corretamente se os dados bastam para concluir sobre a aplicação (`n` corretas / `N` expostos). | P01 / T08 — versão futura. | `n/N = N/N`: todos os expostos respondem corretamente; registrar respostas erradas por tipo. Não avaliável na versão atual. | Resposta comparada à resposta conhecida do cenário. |
+| MU14 | Eficiência | Tempo da revisão completa do ciclo. | P01 / T09/T04 — completa futura; tarefa adaptada na versão atual. | Mediana ≤ 10 minutos numa versão com o fluxo completo; na versão parcial, relatar apenas o tempo da tarefa adaptada. | Cronômetro. |
+| MU15 | Compreensão | Proporção de participantes expostos ao estado de repasse que distinguem corretamente decisão registrada e repassada, inclusive após falha (`n` corretas / `N` expostos). | P01 / T04 — versão futura; depende de H21. | `n/N = N/N`; registrar cada confusão entre “registrada” e “repassada”. Não avaliável enquanto o repasse não existir. | Pergunta pós-tarefa com resposta conhecida. |
+| MU16 | Satisfação | Facilidade em escala de 1 a 7. | P01 / T09/T08/T04 — versão atual, nas tarefas disponíveis. | Nota ≥ 5 por participante; informar média somente com amostra comparável. | Pergunta pós-tarefa. |
+
+**Hierarquia de MU10–MU16:** as medidas essenciais do gestor na versão atual são MU11 (não confundir ausência de inspeção com ausência de praga) e MU10 adaptada, porque um erro nelas leva a decisão de manejo sem dados. MU12, MU14 e MU16 são complementares: orientam ajustes, mas não decidem sozinhas se o fluxo atende. MU13 e MU15 são metas de versão futura e não entram no resultado da versão atual. Esta revisão acrescentou a classificação e a forma de contagem; os limites originais foram mantidos.
 
 **Interpretação de MU01–MU03:** captura e salvamento constituem as medidas essenciais do trabalhador na versão atual. Tempo e facilidade complementam a análise. Cobertura da rota e envio não serão incluídos no resultado quando ausentes.
 
@@ -208,6 +256,23 @@ A facilidade de memorização é um objetivo de design. Não será apresentada c
 
 **Consolidação pendente:** Pedro e Guilherme deverão acrescentar a perspectiva dos seus perfis e consolidar a prioridade geral dos cinco atributos. Essa consolidação não poderá ser substituída pelos pesos de MU01–MU16.
 
+### 3.5 Contribuição de Pedro à priorização de Nielsen
+
+Para o gestor P01, a prioridade proposta considera os cinco atributos exigidos, sem substituir a consolidação da equipe.
+
+| Atributo | Peso proposto para P01 | Justificativa |
+|---|---:|---|
+| Baixa taxa de erros | 30% | Ler “não inspecionado” como “sem praga” ou um número automático como confirmado leva a uma decisão de manejo errada. |
+| Facilidade de memorização | 30% | O gestor usa o sistema a cada ciclo, com intervalos; precisa reencontrar o caminho sem reaprender. |
+| Facilidade de aprendizado | 20% | O gestor conhece pouco a praga e não é usuário técnico; a primeira revisão deve ser compreensível sem treinamento. |
+| Eficiência | 10% | A revisão não é repetida dezenas de vezes por dia; tempo importa menos que interpretação correta. |
+| Satisfação positiva do usuário | 10% | Indica esforço percebido e apoia a adoção, mas não substitui a interpretação correta. |
+| **Total** | **100%** | |
+
+A memorização é um objetivo de design. Não será apresentada como medida sem uma avaliação de retorno após intervalo.
+
+Falta a contribuição de P03 e a consolidação dos três perfis.
+
 ## 4. Ciclo de vida
 
 ### 4.1 Contribuição de Lucas — Ciclo de Vida da Engenharia de Usabilidade
@@ -226,7 +291,23 @@ O ciclo não é linear. Uma dificuldade observada na câmera pode exigir revisã
 
 As metas originais permanecem identificadas. A reorganização desta revisão não será apresentada como planejamento que já existia antes das avaliações anteriores.
 
-### 4.2 Relação anterior entre entregas — preservada para consolidação
+### 4.2 Contribuição de Pedro — Ciclo de Vida da Engenharia de Usabilidade
+
+O fluxo do gestor é relacionado ao mesmo modelo teórico.
+
+| Etapa | Aplicação ao fluxo de P01 | Artefatos relacionados |
+|---|---|---|
+| Análise de requisitos | Perfil do gestor (proto-persona), tarefas T04, T08 e T09, capacidades e restrições, princípios e metas MU10–MU16. O Estudo de Campo I03 foi planejado para confirmar quem decide o manejo, mas ainda não foi aplicado. | Entregas 3, 5, 7 e 8. |
+| Nível 1 — projeto essencial | Rever como o gestor passa a ver cobertura, evidência e evolução por talhão; definir conceitos e conversas (CI01, DCC, signos, M03); explorar a maquete G01–G08. | Entregas 6, 9 e 10. |
+| Nível 2 — padrões de telas e diálogos | Definir padrões de resumo, mapa, relatório e estados; materializar no perfil Administrador do aplicativo e planejar a avaliação. | Entregas 11 e 12. |
+| Nível 3 — projeto detalhado | Integrar detalhes, estados de falha e exportação; inspecionar (A03) e observar o uso (U02). | Entregas 13 e 14. |
+| Instalação e uso | Acompanhar gestores reais ao longo de vários ciclos e orientar correções e novas versões. | Etapa futura; não apresentada como concluída. |
+
+O ciclo não é linear. Um problema de interpretação da cobertura retorna ao signo (Entrega 9), à cena S2 do M03 (Entrega 10) e ao padrão de tela (Entrega 11), e deve ser avaliado de novo pela meta MU11. Se o Estudo de Campo mostrar que o gestor não decide o manejo (H21), o retorno é à análise de requisitos e à própria persona.
+
+As metas originais de P01 permanecem identificadas. A reorganização desta revisão não será apresentada como planejamento que já existia antes das avaliações.
+
+### 4.3 Relação anterior entre entregas — preservada para consolidação
 
 A relação abaixo indica o uso dos artefatos, mas não substitui a descrição do ciclo teórico para os demais perfis.
 
@@ -242,7 +323,7 @@ A relação abaixo indica o uso dos artefatos, mas não substitui a descrição 
 | Responsável | Correção |
 |---|---|
 | Guilherme | Separar capacidades, restrições, funcionalidades e contexto de P03; reorganizar seus princípios em negócio e interface; classificar suas metas entre atuais, futuras e hipóteses; explicitar a proporção de respostas corretas em MU08 e hierarquizar as medidas. |
-| Pedro | Separar capacidades, restrições, funcionalidades e contexto de P01; reorganizar seus princípios; classificar as metas por versão; explicitar as proporções de respostas corretas em MU13/MU15 e hierarquizar as medidas. |
+| Pedro | Concluído na revisão de 20/11/2026: seções 1.2, 2.2, 3.1, 3.2 (MU10–MU16), 3.5 e 4.2. |
 | Equipe | Consolidar a priorização dos cinco atributos de Nielsen e a aplicação do Ciclo de Vida da Engenharia de Usabilidade aos três perfis. |
 
 As metas e os limites originais dos colegas foram preservados para que os responsáveis realizem essas correções.
@@ -253,16 +334,20 @@ As metas e os limites originais dos colegas foram preservados para que os respon
 - [x] Resultados simulados estão diferenciados de evidência de desempenho técnico.
 - [x] Metas avaliam a interação, sem substituir métricas técnicas do TCC.
 - [x] Capacidades, restrições, funcionalidades e contexto de P02 foram separados.
-- [ ] A mesma separação foi concluída para P01 e P03.
+- [x] Capacidades, restrições, funcionalidades e contexto de P01 foram separados.
+- [ ] A mesma separação foi concluída para P03.
 - [x] Princípios de P02 estão separados em negócio e interface.
-- [ ] Os princípios dos demais perfis foram reorganizados nos dois grupos.
+- [x] Princípios de P01 estão separados em negócio e interface.
+- [ ] Os princípios de P03 foram reorganizados nos dois grupos.
 - [x] Metas qualitativas e quantitativas estão separadas.
 - [x] MU01–MU03 distinguem o escopo atual das partes futuras.
-- [ ] A classificação de escopo e a hierarquia das metas dos demais perfis foram concluídas.
-- [ ] MU08, MU13 e MU15 apresentam explicitamente a variável quantitativa de compreensão.
-- [x] A contribuição de P02 à priorização dos cinco atributos de Nielsen está documentada.
+- [x] MU10–MU16 e as metas qualitativas de P01 distinguem versão atual, futura e hipótese, com hierarquia.
+- [ ] A classificação de escopo e a hierarquia das metas de P03 foram concluídas.
+- [x] MU13 e MU15 apresentam explicitamente a variável quantitativa de compreensão.
+- [ ] MU08 apresenta explicitamente a variável quantitativa de compreensão.
+- [x] As contribuições de P02 e P01 à priorização dos cinco atributos de Nielsen estão documentadas.
 - [ ] A priorização dos cinco atributos foi consolidada para a equipe.
-- [x] O fluxo de P02 foi relacionado ao Ciclo de Vida da Engenharia de Usabilidade.
+- [x] Os fluxos de P02 e P01 foram relacionados ao Ciclo de Vida da Engenharia de Usabilidade.
 - [ ] A aplicação do ciclo foi consolidada para os três perfis.
 - [x] A revisão distingue metas planejadas de evidências coletadas posteriormente.
 - [x] A Entrega 12 permanece como referência para adaptações e partes não avaliáveis.
