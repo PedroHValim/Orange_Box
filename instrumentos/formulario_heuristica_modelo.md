@@ -152,3 +152,72 @@ Escala de severidade: a mesma do formulário de P02 acima. Para P03, nota 4 incl
 **Limitações da inspeção:** protótipo com quadros prontos, figura no lugar da foto, avaliador que participou do projeto das telas.
 
 > A inspeção heurística não substitui o teste com participantes.
+
+---
+
+# Formulário de avaliação heurística — P01, fluxo do gestor (perfil Administrador)
+
+> Seção acrescentada na revisão de 20/11/2026, depois da inspeção de A03 registrada na Entrega 13. Documenta o escopo e o procedimento para a reinspeção; não comprova que estava formalizada antes da execução.
+
+**Avaliador:** Pedro Henrique Ferreira Valim (A03)  
+**Perfil/fluxo avaliado:** P01 — gestor; revisão do período, comparação entre períodos e envio do relatório (MoLIC M03)  
+**Versão planejada:** aplicativo iOS nativo (`ios-native/`), commit `a36785f` (12/11/2026), perfil Administrador  
+**Versão efetivamente examinada:** ____  
+**Data da inspeção:** ____/____/________  
+**Dispositivo/iOS:** ____
+
+**Telas a examinar:** Acesso (perfil Administrador), Relatórios, Mapa, detalhe do talhão, Histórico e Conta.
+
+**Estados a examinar:** talhão sem inspeção no período; talhão inspecionado sem ocorrência; variação sem dados no período anterior; lista de talhões recolhida e expandida; filtros combinados e sem resultados; registro de pulverização e sua confirmação; exportação do relatório (processamento, sucesso e cancelamento); mensagens de erro e retorno existentes.
+
+> Esta inspeção avalia a comunicação e o uso da interface. Não determina se o modelo identifica corretamente ácaros nem se a decisão de manejo é correta. Os dados da fazenda são demonstrativos.
+
+## Procedimento
+
+1. Registrar versão, aparelho e condições da inspeção.
+2. Percorrer UT09, UT08 e UT04 da Entrega 12 no perfil Administrador.
+3. Preparar o talhão sem inspeção (Entrega 12, “Preparação dos dados de P01”) e examinar cada estado acima.
+4. Para cada possível problema, anotar a ação, o que apareceu na tela e a consequência para a tarefa do gestor, com **captura da tela**.
+5. Criar um único ID por problema distinto (`A03-Vxx`), relacionado a uma ou mais heurísticas.
+6. Atribuir severidade considerando frequência provável, impacto e recuperação.
+7. Comportamento visto só no código vai para “Problemas potenciais pendentes de reprodução”, sem severidade final e fora da contagem, até ser reproduzido e capturado.
+8. Restaurar os dados demonstrativos ao final.
+
+## Cobertura
+
+| H | Heurística | Fluxos/estados a examinar em P01 | Violação? | IDs dos problemas |
+|---:|---|---|---|---|
+| 1 | Visibilidade do status do sistema | Talhão sem inspeção versus sem ocorrência; retorno após registrar pulverização e após exportar. | sim / não nos estados observados / não examinado | |
+| 2 | Compatibilidade sistema–mundo real | “Detecções confirmadas”, “pragas”, “Sem ocorrência”, “reentrada”, nomes técnicos. | sim / não nos estados observados / não examinado | |
+| 3 | Controle e liberdade do usuário | Desfazer pulverização registrada; cancelar exportação; voltar do detalhe do talhão. | sim / não nos estados observados / não examinado | |
+| 4 | Consistência e padrões | Mesmos números em Mapa, Conta e Relatórios; mesma semântica de cor no mapa e no gráfico; nomes dos filtros. | sim / não nos estados observados / não examinado | |
+| 5 | Prevenção de erros | Registro de pulverização com um toque; variação calculada sem dados anteriores. | sim / não nos estados observados / não examinado | |
+| 6 | Reconhecimento em vez de memorização | Identificação dos talhões no mapa em diferentes zooms; lista de talhões recolhida. | sim / não nos estados observados / não examinado | |
+| 7 | Flexibilidade e eficiência de uso | Filtros por período e talhão; atalhos entre relatório, mapa e histórico. | sim / não nos estados observados / não examinado | |
+| 8 | Estética e design minimalista | Controles de cadastro (Desenhar, GeoJSON) junto da informação gerencial. | sim / não nos estados observados / não examinado | |
+| 9 | Reconhecer, diagnosticar e recuperar erros | Falhas de exportação, de carregamento do mapa e de gravação. | sim / não nos estados observados / não examinado | |
+| 10 | Ajuda e documentação | Explicação dos indicadores, da variação e dos critérios de contagem. | sim / não nos estados observados / não examinado | |
+
+## Problemas encontrados
+
+| ID | H | Tela/estado | Ação/condição | Problema observado | Consequência para a tarefa | Evidência (captura) | Severidade 0–4 | Justificativa da severidade | Recomendação |
+|---|---|---|---|---|---|---|---:|---|---|
+| A03-V01 | | | | | | | | | |
+
+## Problemas potenciais pendentes de reprodução
+
+| ID | H provisória | Local no código | Comportamento esperado | O que falta para confirmar |
+|---|---|---|---|---|
+| | | | | captura, estado, heurística e severidade |
+
+Escala de severidade: a mesma do formulário de P02 acima. Para P01, nota 3 ou 4 inclui levar o gestor a tratar talhão não inspecionado como livre da praga ou a decidir com números divergentes sem saber o critério.
+
+## Síntese após a inspeção
+
+**Estados examinados / não examinados:** ____  
+**Quantidade de violações por severidade:** 0: __ · 1: __ · 2: __ · 3: __ · 4: __  
+**Problemas potenciais pendentes de reprodução:** ____  
+**Problemas a observar durante UT09, UT08 e UT04:** ____  
+**Limitações da inspeção:** avaliador participou do projeto; protótipo FA fora do escopo de A03.
+
+> A inspeção heurística não substitui o teste com participantes.
