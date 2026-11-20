@@ -1,7 +1,8 @@
 # Entrega 11 — Protótipo no Figma
 
 **Data:** 15/11/2026  
-**Status:** 🟩 concluído  
+**Revisão:** 20/11/2026 (parte de Pedro, após o feedback)  
+**Status:** 🟨 em andamento — cobertura MoLIC revisada cena por cena para M03; demais fluxos a revisar pelos responsáveis  
 **Responsabilidade:** 1 protótipo integrado por equipe cobrindo os fluxos MoLIC. Se a turma exigir divisão individual, identifique o responsável por cada fluxo/tela.
 
 ## Objetivo da atividade
@@ -31,8 +32,32 @@ Para M02 e M03, a tabela relaciona o MoLIC às telas do aplicativo; as telas F01
 | MoLIC | Objetivo | Fluxo/telas no aplicativo | Estados de erro/recuperação | Responsável |
 |---|---|---|---|---|
 | M02 — Inspecionar a rota e repassar os achados | O01–O05 | `F01 → F02 → F03`, com consulta a `F04` e `F05` | Na câmera: confiança baixa, localização desativada e falha ao salvar a imagem, com mensagem e nova tentativa. Sem captura nesta entrega. | Lucas Cabral |
-| M03 — Revisar o ciclo e decidir o manejo por talhão | O06–O11 | `F01 → F06 → F04 → F03`. A aba Relatórios (F06) só aparece no perfil administrador. | Não há estados de falha específicos do gestor no aplicativo. As diferenças em relação ao M03 estão registradas na Entrega 12. | Pedro |
+| M03 — Revisar o ciclo e decidir o manejo por talhão | O06–O11 | **Cobertura parcial.** `F01 → F06 → F04 → F03`. A aba Relatórios (F06) só aparece no perfil administrador. S1, S3, S4 e S5 estão parcialmente materializadas; S2, S6, S7, S8, os processamentos e as rupturas não aparecem nas telas (ver “Cobertura do M03 cena por cena”). | Não há estados de falha específicos do gestor no aplicativo. As diferenças em relação ao M03 estão registradas na Entrega 12. | Pedro |
 | M01 — Validar detecções a distância e enviar o parecer ao gestor | O12–O19 | O aplicativo não tem perfil de agrônomo; telas web no Figma (ver “Fluxo do agrônomo”): `FA01 → FA02 → FA03 → FA02V (por ponto) → FA06 → FA07 → FA01C`; desvios `FA03 → FA05 → FA03` e `FA02 → FA05 → FA02`; pedir nova foto em `FA03` volta a `FA02N`; encerrar revisão em `FA02` volta a `FA01`; acesso a `FA01` e `FA05` em qualquer tela. | `FA01V, FA02R, FA02N, FA03E, FA05V, FA06E, FA07E` | Guilherme Morais Escudeiro |
+
+### Cobertura do M03 cena por cena — Pedro
+
+Revisão de 20/11/2026. Uma cena só é considerada coberta quando a tela mostra os signos, o feedback e as alternativas daquela conversa, não apenas um assunto parecido. A base são as capturas F01–F06 desta entrega (aplicativo iOS, perfil Administrador).
+
+| Elemento do M03 | Tela/estado no aplicativo | Situação | O que falta |
+|---|---|---|---|
+| Abertura (`u: ver o resultado do ciclo`, `gco`) | F01 (perfil Administrador) → F06 | Coberta | — |
+| S1 — Conhecer o ciclo | F06: período, detecções com variação em relação ao período anterior, talhões críticos | Parcial | Não há aviso de ciclo concluído nem número de talhões inspecionados; o recorte é um período de dias, não o ciclo. |
+| S2 — Conferir a cobertura | Nenhuma | Não coberta | Nenhuma captura distingue talhão “não inspecionado no período” de talhão “sem ocorrência”. Não há como pedir reinspeção; F06 apenas conta “reinspeções vencidas”. |
+| Processamento — registrar pedido de reinspeção (e falha) | Nenhuma | Não coberto | Ação inexistente no aplicativo. |
+| S3 — Escolher o talhão | F04 (mapa com cor por nível e “Total de pragas”) e lista de talhões em F06 | Parcial | Não há ordem dos talhões com critério exibido nem posição do talhão. O estado no mapa depende só da cor. |
+| S4 — Avaliar o talhão | F03 (foto, talhão, quantidade, data) | Parcial | Não aparecem a confiança do resultado nem o aviso de cobertura incompleta. O detalhe de um registro ao tocá-lo não foi capturado nesta entrega. |
+| S5 — Acompanhar a evolução | F06 (variação em relação ao período anterior) | Parcial | A comparação é da fazenda ou do filtro, não do talhão por ciclo. A última aplicação (registro de pulverização no mapa) não tem captura. |
+| Processamento — registrar posição / S6 — Confirmar a posição | Nenhuma | Não coberta | Posição do talhão não existe no aplicativo. |
+| S7 — Decidir o manejo / processamento — registrar decisão | Nenhuma | Não coberta | Não há decisão do ciclo nem parecer recebido. O registro de pulverização informa uma aplicação feita; não é a decisão do ciclo. |
+| S8 — Conferir o repasse / processamento — repassar | Nenhuma | Não coberta | Não há destinatário nem situação do repasse. |
+| Encerramentos (concluído e com pendência) | Nenhuma | Não cobertos | O usuário apenas sai da tela; não há estado final nem `gcc` perceptível. |
+| Rupturas (pedido, posição, decisão e repasse não registrados) | Nenhuma | Não cobertas | Sem estados de falha do gestor. |
+| Acesso ubíquo à cobertura e interrupção | Barra inferior (Mapa, Histórico, Relatórios) | Parcial | A barra dá acesso permanente a S1/S3/S4, mas não a uma visão de cobertura. |
+
+**Conclusão:** o M03 está **parcialmente coberto**. As telas apoiam a leitura gerencial (resumo, mapa, histórico), mas a conversa central do M03 — cobertura, posição, decisão, repasse e suas recuperações — não está materializada. Essas cenas existem apenas no modelo (M03) e no planejamento da Entrega 6, em que G02 e G05–G08 não têm desenho. Esta entrega não acrescenta telas novas para elas; isso fica para a próxima iteração do protótipo do gestor.
+
+**F04 no fluxo do gestor:** “Desenhar” e “GeoJSON” servem ao cadastro de talhões, função administrativa transversal do mesmo perfil. Para a tarefa de revisar o ciclo, competem visualmente com a informação principal; a próxima versão deve avaliar ocultá-los fora do modo de cadastro.
 
 ## Catálogo de telas/estados
 
@@ -58,7 +83,7 @@ Para M02 e M03, a tabela relaciona o MoLIC às telas do aplicativo; as telas F01
 
 **Objetivo do usuário:** conferir as inspeções já registradas, por dia e por talhão.  
 **Signos principais:** período do filtro (“Últimos 14 dias”), quantidade de registros, talhão, número de ácaros detectados, data e hora, etiqueta “EXEMPLO” nos dados de demonstração e marcador de localização.  
-**Origem no MoLIC:** M02, cenas S5 e S6 (confirmar o registro e conferir a rota); M03, cena S4 (avaliar o talhão pelas fotos).
+**Origem no MoLIC:** M02, cenas S5 e S6 (confirmar o registro e conferir a rota); M03, cena S4 (avaliar o talhão pelas fotos) — cobertura parcial no M03.
 
 ### F04 — Mapa
 
@@ -66,7 +91,7 @@ Para M02 e M03, a tabela relaciona o MoLIC às telas do aplicativo; as telas F01
 
 **Objetivo do usuário:** ver a situação dos talhões na fazenda.  
 **Signos principais:** “Total de pragas”, talhões desenhados sobre a imagem de satélite com cor por nível (verde e amarelo nesta captura), filtros, camada de satélite, ajuda e os botões “Desenhar” e “GeoJSON” para cadastrar talhões.  
-**Origem no MoLIC:** M02, cena S6 (conferir a rota); M03, cena S3 (escolher o talhão).
+**Origem no MoLIC:** M02, cena S6 (conferir a rota); M03, cena S3 (escolher o talhão) — cobertura parcial no M03; “Desenhar” e “GeoJSON” pertencem ao cadastro de talhões, não à revisão do ciclo.
 
 ### F05 — Conta
 
@@ -82,7 +107,7 @@ Para M02 e M03, a tabela relaciona o MoLIC às telas do aplicativo; as telas F01
 
 **Objetivo do usuário:** entender a situação da fazenda no período e decidir a próxima ação.  
 **Signos principais:** filtro de talhões e período (“Todos os talhões · 30 dias”), “Detecções confirmadas” com a variação em relação ao período anterior, indicadores de talhões críticos, reentrada bloqueada e reinspeções vencidas, e o gráfico “Detecções por talhão”, seguido da lista de talhões com contagem.  
-**Origem no MoLIC:** M03, cenas S1 (conhecer o ciclo), S3 (escolher o talhão) e S5 (acompanhar a evolução); O06, O07 e O09.
+**Origem no MoLIC:** M03, cenas S1 (conhecer o ciclo), S3 (escolher o talhão) e S5 (acompanhar a evolução), todas com cobertura parcial; O07 e O09. O06 (alcance do ciclo) não é atendido, porque a tela não mostra talhões não inspecionados.
 
 ## Fluxo do agrônomo (M01) — telas FA
 
@@ -234,15 +259,26 @@ Verificação feita apenas pelas capturas, sem teste com tecnologias assistivas.
 
 - O Mapa mostra “Total de pragas: 25”, enquanto a Conta mostra “64 pragas” e a aba Relatórios mostra “64 detecções confirmadas” para a mesma fazenda. Pela leitura do código, o Mapa conta apenas as detecções posteriores à última pulverização de cada talhão. A diferença deve ser avaliada na inspeção heurística (Entrega 12, QA17).
 - A foto do perfil não aparece na tela Conta (círculo vazio).
+- Nas telas usadas pelo gestor, “Total de pragas”, “pragas”, “ácaros detectados” e “Detecções confirmadas” não seguem o vocabulário da Entrega 9, em que **detecção** é a indicação automática ainda sem veredito humano. “Confirmadas” pode ser lido como validação humana. Se os números medem coisas diferentes (25 e 64), os rótulos precisam dizer o período e o critério de cada um. Registrado em 20/11/2026 para a próxima versão; as capturas desta entrega não foram alteradas.
 - Na aba Relatórios, as cores do gráfico “Detecções por talhão” (azul, verde, vermelho, roxo e outras) identificam talhões, e não o nível de cada um. O vermelho do gráfico pode ser lido como talhão crítico, embora o indicador mostre zero talhões críticos.
+
+## Pendências após o feedback
+
+| Responsável | Pendência |
+|---|---|
+| Pedro | Concluído na revisão de 20/11/2026: cobertura do M03 cena por cena, situação parcial declarada na tabela e no checklist, origem das telas F03, F04 e F06 ajustada e divergência de vocabulário registrada. As telas que faltam (S2, S6–S8) ficam para a próxima iteração do protótipo. |
+| Lucas | Revisar a cobertura do M02 cena por cena e versionar os estados de resultado, localização, salvamento e erro da câmera. |
+| Guilherme | Ligar FA07E ao caminho navegável ou deixar explícito que a recuperação da falha de envio não é testável. |
+| Equipe | Preservar no repositório da disciplina a referência à versão avaliada do aplicativo (commit), sem depender só do link externo; padronizar praga/detecção/detecção confirmada nas telas. |
 
 ## Checklist
 
 - [x] Link do Figma está acessível. — protótipo do agrônomo (telas FA) no Figma; telas do aplicativo no repositório público.
 - [x] Há screenshots representativos no repositório.
-- [x] Todos os MoLIC relevantes estão cobertos. — M02 e M03 pelas telas do aplicativo; M01 pelas telas FA01–FA07 e seus estados no Figma.
+- [ ] Todos os MoLIC relevantes estão cobertos. — M01: cobertura alta pelas telas FA01–FA07 e seus estados. M03: cobertura parcial (S2, S6, S7, S8, processamentos e rupturas sem tela; ver seção cena por cena). M02: a revisar pelo responsável cena por cena.
+- [x] A cobertura do M03 foi verificada cena por cena, com lacunas declaradas.
 - [x] Estados de erro, feedback e recuperação foram prototipados. — no aplicativo e nas telas FA (FA02V, FA02N, FA03E, FA05V, FA06E, FA07E).
-- [x] Terminologia/signos são consistentes com Entrega 9.
+- [ ] Terminologia/signos são consistentes com Entrega 9. — não nas telas do gestor: “pragas” e “detecções confirmadas” divergem do vocabulário (ver Pontos observados).
 - [x] Componentes equivalentes se comportam de forma consistente.
 - [x] Fluxos críticos são clicáveis do início ao fim. — aplicativo funcional e caminho principal das telas FA ligado no protótipo do Figma; o estado de falha no envio (FA07E) está desenhado, mas fora do caminho navegável.
 - [x] O protótipo está pronto para inspeção e testes, sem “links mortos” nas tarefas avaliadas.
