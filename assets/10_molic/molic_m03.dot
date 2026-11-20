@@ -17,28 +17,28 @@ digraph M03 {
   node [shape=plain];
   S1 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S1 — Conhecer o ciclo</b></td></tr><hr/>
-     <tr><td align="left">d: data do ciclo, talhões inspecionados<br align="left"/>e talhões com focos<br align="left"/></td></tr></table>>];
+     <tr><td align="left">d: aviso de ciclo concluído: data do ciclo,<br align="left"/>talhões inspecionados e talhões com focos<br align="left"/></td></tr></table>>];
   S2 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S2 — Conferir a cobertura</b></td></tr><hr/>
-     <tr><td align="left">d: talhão inspecionado, não inspecionado<br align="left"/>ou com cobertura incompleta<br align="left"/>d: não inspecionado não significa sem focos<br align="left"/></td></tr></table>>];
+     <tr><td align="left">d: cobertura do talhão: inspecionado,<br align="left"/>não inspecionado ou incompleta<br align="left"/>d: situação do talhão no ciclo: não inspecionado<br align="left"/>não significa sem focos<br align="left"/></td></tr></table>>];
   S3 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S3 — Escolher o talhão</b></td></tr><hr/>
-     <tr><td align="left">d: talhões com focos, em ordem de<br align="left"/>gravidade e tendência (dado, não recomendação)<br align="left"/>d: posição já registrada em cada talhão<br align="left"/></td></tr></table>>];
+     <tr><td align="left">d: talhões com focos na ordem dos talhões<br align="left"/>(critério exibido: detecções no ciclo e tendência)<br align="left"/>d: a ordem é dado, não recomendação<br align="left"/>d: posição do talhão já registrada<br align="left"/></td></tr></table>>];
   S4 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S4 — Avaliar o talhão</b></td></tr><hr/>
-     <tr><td align="left">d: fotos, local e confiança do resultado<br align="left"/>d: o sistema não confirma a praga<br align="left"/>d: aviso se a cobertura foi incompleta<br align="left"/></td></tr></table>>];
+     <tr><td align="left">d: fotos, local e confiança do resultado<br align="left"/>d: confiança do resultado não é validação humana<br align="left"/>d: aviso se a cobertura do talhão foi incompleta<br align="left"/></td></tr></table>>];
   S5 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S5 — Acompanhar a evolução</b></td></tr><hr/>
-     <tr><td align="left">d: avançando, estável ou recuando<br align="left"/>d: última aplicação marcada<br align="left"/>d: aviso se um ciclo comparado teve<br align="left"/>cobertura incompleta<br align="left"/></td></tr></table>>];
+     <tr><td align="left">d: tendência do talhão: avançando,<br align="left"/>estável ou recuando<br align="left"/>d: última aplicação<br align="left"/>d: aviso se um ciclo comparado teve<br align="left"/>cobertura incompleta<br align="left"/></td></tr></table>>];
   S6 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S6 — Confirmar a posição</b></td></tr><hr/>
      <tr><td align="left">d: posição do talhão: confiável, parecer<br align="left"/>do agrônomo pedido ou reinspeção pedida<br align="left"/></td></tr></table>>];
   S7 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S7 — Decidir o manejo do ciclo</b></td></tr><hr/>
-     <tr><td align="left">d: talhões e suas posições; talhões sem posição<br align="left"/>d: parecer do agrônomo recebido ou<br align="left"/>aguardando parecer, por talhão<br align="left"/>d+u: onde, quando e com que urgência aplicar<br align="left"/></td></tr></table>>];
+     <tr><td align="left">d: talhões e suas posições; talhões sem posição<br align="left"/>d: parecer do agrônomo recebido ou<br align="left"/>aguardando parecer, por talhão<br align="left"/>d+u: decisão do ciclo: onde, quando e<br align="left"/>com que urgência aplicar<br align="left"/></td></tr></table>>];
   S8 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S8 — Conferir o repasse</b></td></tr><hr/>
-     <tr><td align="left">d: decisão registrada, repassada<br align="left"/>ou com falha no repasse<br align="left"/>d: destinatário (quem aplica)<br align="left"/></td></tr></table>>];
+     <tr><td align="left">d: situação do repasse: registrada,<br align="left"/>repassada ou falha<br align="left"/>d: destinatário da decisão (quem aplica)<br align="left"/></td></tr></table>>];
 
   // processamentos do sistema (caixa preta)
   node [shape=box, style=filled, fillcolor=black, label="", width=0.3, height=0.3, fixedsize=true];
