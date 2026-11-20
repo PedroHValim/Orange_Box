@@ -1,13 +1,15 @@
 # Entrega 10 — MoLIC
 
 **Data:** 14/11/2026  
-**Revisão:** 16/11/2026  
-**Status:** 🟩 concluída — M01, M02 e M03 publicados, com os ajustes de M03 aplicados.  
+**Revisão:** 20/11/2026  
+**Status:** 🟨 em andamento  
 **Responsabilidade:** 1 solução completa por integrante.
 
 ## Objetivo da atividade
 
-Modelar a interação como conversa entre usuário e preposto do designer, incluindo caminhos principais, alternativas, rupturas e recuperação. O MoLIC representa as conversas necessárias aos objetivos dos usuários, não o funcionamento interno do algoritmo.
+Modelar a interação como conversa entre usuário e preposto do designer, incluindo caminhos principais, alternativas, rupturas e recuperação.
+
+O MoLIC representa as conversas necessárias aos objetivos dos usuários, não o funcionamento interno do algoritmo.
 
 ## M01 — Emitir parecer técnico sobre um foco de infestação
 
@@ -21,13 +23,15 @@ Modelar a interação como conversa entre usuário e preposto do designer, inclu
 
 ![MoLIC M01](../assets/10_molic/molic_m01.svg)
 
-**Fonte editável:** [`molic_m01.svg`](../assets/10_molic/molic_m01.svg) — SVG com formas e texto editáveis.
+**Fonte editável:** [molic_m01.svg](../assets/10_molic/molic_m01.svg) — SVG com formas e texto editáveis.
 
 ### Leitura do diagrama
 
 O diagrama apresenta as cenas S1, S2, S3, S5, S6 e S7 e os processamentos P1–P5. A antiga cena S4 de pedir nova foto foi incorporada como ação em S3, acompanhada do processamento P2. A numeração restante foi mantida para preservar as referências.
 
-**Hipóteses ainda não validadas:** Marcelo é uma proto-persona. A conversa supõe que o agrônomo recomenda e o gestor decide a execução (H04); que foto, localização e histórico bastam para parte da análise a distância (H07/H22); e que o parecer precisa de produto, dose e período. A entrevista I02 da Entrega 7 não foi realizada. Portanto, essas decisões permanecem hipóteses de design.
+**Hipóteses ainda não validadas:** Marcelo é uma proto-persona. A conversa supõe que o agrônomo recomenda e o gestor decide a execução (H04); que foto, localização e histórico bastam para parte da análise a distância (H07/H22); e que o parecer precisa de produto, dose e período.
+
+A entrevista I02 da Entrega 7 não foi realizada. Portanto, essas decisões permanecem hipóteses de design.
 
 #### Caminho principal
 
@@ -71,85 +75,152 @@ O diagrama apresenta as cenas S1, S2, S3, S5, S6 e S7 e os processamentos P1–P
 ## M02 — Inspecionar a rota e repassar os achados
 
 **Autor:** Lucas Tonoli Cabral Duarte — 24.123.032-5  
-**Cenário de origem:** CI02 — inspeção dos frutos e repasse dos achados.  
-**Objetivos:** O01 — inspecionar os pontos da rota; O02 — obter uma foto analisável; O03 — entender o resultado da foto; O04 — registrar o achado e seu local; O05 — confirmar o repasse.  
-**Tarefas relacionadas:** T01 — inspecionar a rota e repassar achados; T02 — verificar um fruto e encaminhar o resultado; T03 — relação temporal entre inspeção e repasse.  
-**Signos relevantes:** ponto planejado, situação do ponto, pedido de reinspeção, pedido de nova foto, origem do pedido, foto do fruto, qualidade da foto, situação da análise, resultado da foto, data e hora, local, situação do registro, destinatário e situação do envio.
+**Cenário de origem:** CI02 — inspeção dos frutos e repasse dos achados.
+
+**Objetivo final:**
+
+- **O01:** concluir a inspeção dos locais atribuídos com os achados documentados e disponíveis ao responsável.
+
+**Objetivos instrumentais:**
+
+- **O02 — indireto:** dispor de evidência visual adequada do fruto inspecionado.
+- **O03 — direto:** compreender o significado e os limites da indicação automática.
+- **O04 — indireto:** preservar um achado identificável pelo conteúdo, momento e local.
+- **O05 — direto:** assegurar a comunicação dos registros ao responsável pela continuidade.
+
+**Tarefas relacionadas:** T01 — inspecionar a rota e repassar achados; T02 — verificar um fruto e encaminhar o resultado; T03 — relação temporal entre inspeção e repasse.
+
+**Signos relevantes:** ponto planejado, situação do ponto na rota, pedido de reinspeção, pedido de nova foto, origem do pedido, foto do fruto, qualidade da foto, situação da análise, resultado da foto, data e hora da captura, local do achado, situação do registro, destinatário dos achados e situação do envio.
 
 ### Diagrama
 
 ![MoLIC M02 — Inspecionar a rota e repassar os achados](../assets/10_molic/molic_m02.svg)
 
-O diagrama revisado contém cenas S1–S7, processamentos em caixas pretas, caminhos alternativos, encerramento com objetivo concluído e encerramento com pendência. **S1 inclui pedidos de reinspeção enviados pelo gestor e pedidos de nova foto enviados pelo agrônomo**, identificando a origem de cada um.
+**Fonte editável:** [molic_m02.dot](../assets/10_molic/molic_m02.dot), em Graphviz.  
+**Versão vetorial:** [molic_m02.svg](../assets/10_molic/molic_m02.svg).
 
-**Fonte editável:** [`molic_m02.svg`](../assets/10_molic/molic_m02.svg). O SVG contém os elementos vetoriais editáveis do diagrama.
+Os arquivos revisados foram preparados para substituição em `assets/10_molic/`. A geração dos arquivos não significa que tenham sido automaticamente publicados no GitHub.
 
-### Cenas, processamento e encerramentos
+### Correções aplicadas ao M02
 
-| Elemento | Tópico da conversa | Conteúdo |
+- A notação própria `gc:` foi substituída por `gco:` e `gcc:`.
+- P1, P2 e P3 passaram a pequenos elementos pretos de processamento.
+- As saídas dos processamentos identificam a comunicação do sistema com `d:`.
+- Falha e ação de recuperação foram separadas: o sistema informa a condição e o usuário decide como continuar.
+- A legenda utiliza texto escuro sobre fundo claro.
+- Os signos seguem a nomenclatura consolidada da Entrega 9.
+- As informações fornecidas nas cenas foram separadas das falas de transição.
+- Os objetivos O01–O05 seguem a revisão da Entrega 9.
+- Pedidos de reinspeção e de nova foto permanecem em S1, com origem identificada.
+
+### Escopo conceitual e versão disponível
+
+M02 representa a conversa proposta para o trabalhador. Rota completa, integração de pedidos, resultados alternativos e envio entre papéis não são declarados implementados apenas por aparecerem no diagrama.
+
+As diferenças entre o modelo e o aplicativo devem permanecer identificadas nas Entregas 11 e 12.
+
+O modelo também não afirma que a posição do telefone identifique com certeza uma árvore nem comprova funcionamento integral sem conexão.
+
+### Cenas, processamentos e encerramentos
+
+| Elemento | Tópico da conversa | Conteúdo e relação com os objetivos |
 |---|---|---|
-| Abertura | Iniciar inspeção. | Antônio abre a rota do dia. |
-| S1 — Orientar a rota | “Qual ponto devo inspecionar?” | Próximo ponto por talhão, linha e árvore; pontos planejados, registrados e pendentes. Reinspeção pedida pelo gestor e nova foto pedida pelo agrônomo entram como pontos planejados, com origem indicada. |
-| S2 — Preparar a foto | “A imagem está adequada?” | Orientação de foco, distância e iluminação; fotografar, ajustar ou voltar. |
-| Processamento P1 | Analisar a foto. | Indicar andamento; permitir cancelamento e recuperação após falha. |
-| S3 — Interpretar o resultado | “O que esta foto indica?” | Sinal suspeito, nenhum sinal nesta foto ou resultado inconclusivo; indicação automática não é confirmação humana. |
-| S4 — Identificar o achado | “Onde foi tirada?” | Local por GPS ou identificação manual de talhão, linha e árvore; mostrar a origem do local. |
-| Processamento P2 | Salvar registro. | Preservar foto, resultado e local em caso de falha. |
-| S5 — Confirmar o registro | “Ficou salvo?” | Foto, resultado, data, hora e local salvos no celular; ainda não significa envio. |
-| S6 — Conferir a rota | “O que falta?” | Pontos com registro e pendentes; rota completa ou incompleta. |
-| S7 — Conferir o repasse | “Chegou ao gestor?” | Aguardando conexão, enviando, enviado ou falha. “Enviado” não significa “lido”. |
-| Processamento P3 | Enviar registros. | Confirmar envio ou preservar registros para nova tentativa. |
-| Encerramento concluído | Rota conferida e registros enviados. | O usuário conhece cobertura e situação do repasse. |
-| Encerramento com pendência | Rota interrompida, incompleta ou aguardando conexão. | Dados locais preservados para retomada. |
+| Abertura | Iniciar a inspeção. | `u: iniciar inspeção` e `gco: inspecionar a rota e repassar os achados`. Abertura da conversa relacionada a O01. |
+| S1 — Orientar a inspeção | Compreender o trabalho atribuído. | Ponto planejado, situação do ponto na rota, pedidos de reinspeção e nova foto, origem do pedido e referência do local. |
+| S2 — Preparar a evidência visual | Obter evidência adequada. | Qualidade da foto, orientações de distância e foco e foto do fruto fornecida pelo usuário. Relacionada a O02. |
+| P1 | Analisar a foto. | Processamento interno compacto, seguido de fala `d:` de conclusão ou ruptura. |
+| S3 — Compreender a indicação automática | Entender resultado e limites. | Situação da análise, resultado da foto e distinção entre indicação automática e confirmação humana. Relacionada a O03. |
+| S4 — Identificar o achado | Preservar o contexto espacial. | Local do achado, origem da referência e identificação manual quando necessária. Relacionada a O04. |
+| P2 | Salvar o registro. | Processamento interno compacto; comunica salvamento ou impossibilidade de concluir. |
+| S5 — Conferir a preservação do registro | Conhecer o que foi salvo. | Foto, resultado, data e hora da captura, local e situação do registro. Salvo não significa enviado. Relacionada a O04. |
+| S6 — Compreender o alcance da inspeção | Reconhecer registros e pendências. | Situação do ponto na rota e alcance do trabalho atribuído. Relacionada a O01. |
+| S7 — Conferir a comunicação dos registros | Conhecer o alcance do envio. | Destinatário dos achados e situação do envio. Enviado não significa lido. Relacionada a O05. |
+| P3 | Enviar registros. | Processamento interno compacto; comunica confirmação ou falha, preservando os registros. |
+| Encerramento concluído | Fechar a conversa após conclusão. | Envio confirmado para o trabalho concluído, com `gcc:` e ponto de encerramento. |
+| Encerramento com pendência | Fechar a conversa sem declarar sucesso completo. | Inspeção incompleta ou comunicação pendente, com `gcc:` e encerramento distinto. |
 
-Os códigos P01–P07 da Entrega 6 são referências a estados de interface, não nomes das cenas MoLIC. Nem todos esses estados foram fotografados em papel ou implementados no aplicativo, conforme as Entregas 6, 11 e 12.
+Os códigos P01–P07 da Entrega 6 são referências a estados de interface, não nomes de cenas MoLIC.
 
 ### Leitura do diagrama
 
 #### Caminho principal
 
-1. Antônio abre a rota. Em **S1**, vê o próximo ponto e os registros existentes. Se houver pedido do gestor ou agrônomo, ele aparece com sua origem.
-2. Seleciona o ponto e vai a **S2**. O sistema orienta a captura; Antônio ajusta a imagem e fotografa.
-3. O sistema processa a foto em **P1**. Ao terminar, apresenta **S3** com a indicação do resultado e seu limite.
-4. Antônio decide guardar a indicação. Em **S4**, confere o local automático ou o informa manualmente.
-5. O sistema salva em **P2** e comunica em **S5** que o registro está no celular.
-6. Antônio fotografa outro fruto ou vai a **S6** conferir os pontos registrados e pendentes.
-7. Ao encerrar, consulta **S7**. O sistema envia em **P3** quando possível; a conversa termina com envio confirmado ou com pendência explicitada e dados preservados.
+1. Antônio inicia a inspeção. A transição abre a conversa com `gco: inspecionar a rota e repassar os achados`.
+2. Em **S1**, compreende o trabalho atribuído, a situação do ponto na rota e a origem de eventuais pedidos recebidos.
+3. Ao comunicar que deseja inspecionar o ponto, passa a **S2** e obtém uma foto do fruto orientado pelas informações de captura.
+4. Solicita a análise. **P1** executa o processamento e comunica `d: análise concluída`, retomando a conversa em **S3**.
+5. Em **S3**, interpreta a indicação e seus limites. Se decidir preservar o achado, segue para **S4**.
+6. Em **S4**, confere o local do achado e fornece uma referência manual quando necessária. A referência não é tratada como identificação garantida da árvore por GPS.
+7. Ao solicitar salvamento, **P2** processa e comunica `d: registro salvo no celular`. Em **S5**, Antônio compreende o que foi preservado.
+8. Pode examinar outro fruto ou seguir para **S6**, reconhecendo registros e pendências.
+9. Em **S7**, confere destinatário dos achados e situação do envio. Pode solicitar envio ou nova tentativa.
+10. **P3** comunica o resultado. A confirmação para o trabalho concluído leva a `gcc: inspecionar a rota e repassar os achados` e ao encerramento concluído.
+11. Se encerrar com inspeção incompleta ou comunicação pendente, a conversa é fechada por uma saída distinta, sem afirmar que todo o objetivo foi alcançado.
 
 #### Alternativas e rupturas
 
-| Situação | Onde ocorre | Como o usuário percebe | Recuperação/saída |
+| Situação | Onde ocorre | Comunicação do sistema | Reação do usuário e recuperação |
 |---|---|---|---|
-| Foto inadequada. | S2 | `D: Ajuste o foco ou a distância.` | Reposicionar a câmera em S2 ou voltar à rota. |
-| Cancelamento da análise. | P1 | `D: Análise cancelada; ainda não há resultado.` | Voltar a S2 ou abandonar o ponto mantendo-o pendente. |
-| Falha na análise. | P1 | `D: Não foi possível analisar esta foto.` | Tentar novamente ou refazer a foto. |
-| Nenhum sinal na foto. | S3 | `D: Nenhum sinal nesta foto; isso não garante árvore livre.` | Registrar corretamente a indicação ou seguir para outro fruto. |
-| Resultado inconclusivo. | S3 | `D: Não foi possível concluir.` | Refazer foto ou guardar como inconclusivo. |
-| GPS indisponível. | S4 | `D: Informe talhão, linha e árvore.` | Identificar o local manualmente e sinalizar sua origem. |
-| Local manual incompleto. | S4 | Campo faltante identificado. | Corrigir sem perder foto e resultado. |
-| Falha ao salvar. | P2 | `D: Registro não salvo; tente novamente.` | Repetir salvamento; ponto continua pendente até confirmação. |
-| Rota com pontos pendentes. | S6 | `D: Há pontos sem registro.` | Retomar em S1 ou encerrar com rota incompleta. |
-| Sem internet. | S7 | `D: Salvo no celular; aguardando conexão.` | Encerrar com dados locais preservados. |
-| Falha no envio. | P3/S7 | `D: Não foi possível enviar; seus registros continuam salvos.` | Tentar novamente sem duplicar os enviados. |
+| Captura inadequada. | S2 | `d:` orientação sobre qualidade da foto e condições necessárias à captura. | Ajustar a imagem antes de solicitar análise ou voltar à organização da inspeção. |
+| Análise não concluída. | P1 → S2 | `[RA] d: não foi possível concluir a análise; ainda não há resultado.` | Em S2, obter outra imagem e solicitar nova análise. |
+| Nenhum sinal na foto. | S3 | `d: ausência de sinal não garante árvore livre.` | Preservar a indicação correspondente ou obter outra imagem. |
+| Resultado inconclusivo. | S3 | `d:` resultado da foto identificado como inconclusivo. | `[RA] u: obter outra foto após indicação inconclusiva`, retornando a S2. |
+| Localização automática indisponível. | S4 | `d:` indisponibilidade e origem da referência explicitadas. | Informar referência manual quando necessária e disponível no fluxo proposto. |
+| Referência obrigatória incompleta. | P2 → S4 | `[RA] d: referência obrigatória incompleta; dados preservados.` | Corrigir a referência em S4 e solicitar salvamento novamente. |
+| Falha ao salvar. | P2 → S4 | `[RA] d: registro não salvo; dados preservados.` | Conferir os dados e comunicar `u: salvar o registro` para nova tentativa. |
+| Trabalho com pendências. | S6 | `d:` situação dos registros e alcance incompleto. | Retomar um ponto em S1 ou encerrar com pendência explícita. |
+| Comunicação aguardando conexão. | S7 | `d:` situação do envio identificada como aguardando. | Encerrar com comunicação pendente, sem afirmar recebimento. |
+| Envio não confirmado. | P3 → S7 | `[RA] d: envio não confirmado; registros preservados.` | Em S7, comunicar `u: enviar ou tentar novamente` ou encerrar com pendência. |
 
-**Acesso à rota durante a inspeção:** o atalho cinza do diagrama permite rever o ponto atual em S1 ou as pendências em S6. Sua finalidade é apoiar a inspeção em andamento; os registros já salvos permanecem preservados.
+As setas tracejadas representam rupturas ou recuperação apoiada. Não combinam uma mensagem do sistema e uma decisão do usuário como se fossem uma única fala.
+
+### Acesso ubíquo
+
+O acesso cinza **“Inspeção em andamento”** permite:
+
+- Rever o ponto da inspeção em S1.
+- Conferir pendências em S6.
+
+Sua existência é justificada pela necessidade de retomar o contexto durante uma tarefa de campo. Não representa uma etapa obrigatória da sequência principal.
+
+### Legenda e consistência
+
+- Ponto preto: abertura.
+- Ponto de encerramento: fechamento da conversa.
+- Cena arredondada e compartimentada: tópico e diálogos/signos.
+- Pequeno elemento preto: processamento interno.
+- Caixa cinza: acesso ubíquo.
+- Linha contínua: fala de transição.
+- Linha tracejada com `[RA]`: ruptura ou recuperação apoiada.
+- `u:`: usuário.
+- `d:`: preposto do designer.
+- `d+u:`: conteúdo compartilhado.
+- `gco:`: abertura da conversa relacionada ao objetivo.
+- `gcc:`: fechamento da conversa relacionada ao objetivo.
+
+Dentro das cenas aparecem informações e signos. As falas que mudam o assunto da conversa aparecem nas transições.
 
 ### Checklist específico — M02
 
 - [x] Há ponto de abertura coerente com o objetivo.
+- [x] A abertura utiliza explicitamente `gco:`.
+- [x] Os encerramentos utilizam explicitamente `gcc:`.
+- [x] A notação própria `gc:` foi retirada.
 - [x] As cenas representam assuntos da conversa.
-- [x] Falas e transições indicam o que usuário e sistema comunicam.
-- [x] Há encerramento para conclusão e para interrupção com pendência.
-- [x] O processamento está desenhado como caixa preta, separado das falas do usuário.
-- [x] Rupturas têm feedback e recuperação.
-- [x] O acesso à rota tem justificativa na tarefa.
-- [x] Há caminhos alternativos além do caminho principal.
-- [x] Objetivos, tópicos e signos seguem a Entrega 9.
-- [x] O SVG revisado foi publicado no repositório e sua fonte editável está identificada.
+- [x] Os diálogos e signos estão separados das falas de transição.
+- [x] P1, P2 e P3 são pequenos elementos pretos de processamento.
+- [x] As saídas principais dos processamentos usam `d:`.
+- [x] As comunicações de ruptura do sistema usam `d:`.
+- [x] A reação do usuário está separada da mensagem de erro.
+- [x] Rupturas têm caminho de recuperação.
+- [x] O acesso ubíquo tem justificativa na tarefa.
+- [x] Há caminhos alternativos e encerramento com pendência.
+- [x] Objetivos e signos foram alinhados à revisão da Entrega 9.
+- [x] A legenda foi redesenhada com contraste legível.
+- [x] SVG revisado e fonte DOT foram preparados e conferidos visualmente.
 - [x] O modelo descreve a conversa, não o interior do algoritmo.
-- [x] Análise, registro e envio incluem falhas e retornos relevantes.
 
-**Situação de M02:** especificação textual, SVG revisado e fonte editável DOT preparados. O ajuste de S1 solicitado na consolidação foi aplicado. O SVG foi publicado no repositório.
+**Publicação:** substituir `molic_m02.svg` e adicionar ou substituir `molic_m02.dot` em `assets/10_molic/`. A referência Markdown permanece a mesma.
 
 ## M03 — Revisar o ciclo e decidir o manejo por talhão
 
@@ -163,7 +234,7 @@ Os códigos P01–P07 da Entrega 6 são referências a estados de interface, nã
 
 ![MoLIC M03](../assets/10_molic/molic_m03.svg)
 
-**Fonte editável:** [`molic_m03.dot`](../assets/10_molic/molic_m03.dot), em Graphviz.
+**Fonte editável:** [molic_m03.dot](../assets/10_molic/molic_m03.dot), em Graphviz.
 
 ### Cenas, processamento e encerramentos
 
@@ -185,7 +256,9 @@ Os códigos P01–P07 da Entrega 6 são referências a estados de interface, nã
 | Encerramento concluído | Decisão registrada e repassada. | Gestor compreende a situação final. |
 | Encerramento com pendência | Revisão interrompida ou decisão não repassada. | Escolhas já salvas permanecem disponíveis. |
 
-As cenas representam assuntos da conversa. G01–G08 identificam estados planejados e parcialmente fotografados na Entrega 6; não são nomes das cenas MoLIC nem prova de que todos os desenhos em papel foram produzidos. A Entrega 11 usa o aplicativo para o gestor, com diferenças registradas na Entrega 12.
+As cenas representam assuntos da conversa. G01–G08 identificam estados planejados e parcialmente fotografados na Entrega 6; não são nomes das cenas MoLIC nem prova de que todos os desenhos em papel foram produzidos.
+
+A Entrega 11 usa o aplicativo para o gestor, com diferenças registradas na Entrega 12.
 
 ### Leitura do diagrama
 
@@ -209,7 +282,7 @@ As cenas representam assuntos da conversa. G01–G08 identificam estados planeja
 | Cobertura incompleta. | S4/S5 | Aviso sobre limite do resultado ou comparação. | Conferir cobertura, pedir reinspeção ou voltar sem tirar conclusão indevida. |
 | Falha ao salvar posição. | Após S4 | Posição não salva. | Voltar a S4 com escolha preservada. |
 | Talhões sem posição. | S7 | Pendências identificadas. | Revisar talhões ou prosseguir ciente delas. |
-| Parecer ainda não recebido. | S7 | “Aguardando parecer” no talhão em que o parecer foi pedido. | Decidir os demais talhões, ou encerrar com pendência e retomar quando o parecer chegar; posições e escolhas ficam salvas. |
+| Parecer ainda não recebido. | S7 | “Aguardando parecer” no talhão em que o parecer foi pedido. | Decidir os demais talhões ou encerrar com pendência e retomar quando o parecer chegar; posições e escolhas ficam salvas. |
 | Falha ao registrar decisão. | Após S7 | Decisão não registrada. | Voltar a S7 mantendo escolhas. |
 | Alteração antes do repasse. | S8 | Decisão registrada, ainda não repassada. | Voltar a S7. |
 | Falha no repasse. | Após S8 | Decisão continua registrada. | Repetir envio ou encerrar com pendência. |
@@ -226,7 +299,9 @@ As cenas representam assuntos da conversa. G01–G08 identificam estados planeja
 - [x] Terminologia “reinspeção” uniformizada em S2 e no SVG/DOT.
 - [x] Parecer recebido incorporado à decisão em S7 no SVG/DOT.
 
-**Situação de M03:** texto e diagrama existentes. A Entrega 6 fotografa somente parte dos estados G01–G08 e registra avaliação formativa; não há fotografia de todos os estados em papel. Os dois ajustes foram aplicados no texto e no diagrama (DOT e SVG): “reinspeção” em S2 e no processamento seguinte, e o parecer do agrônomo (recebido ou aguardando) em S7, com a saída “aguardar o parecer” como encerramento com pendência.
+O texto e o diagrama existentes registram os ajustes anteriores: “reinspeção” em S2 e no processamento seguinte e parecer recebido ou aguardando em S7.
+
+A definição de “gravidade” e a padronização dos signos indicadas no novo feedback permanecem sob responsabilidade do autor.
 
 ## Consolidação da equipe
 
@@ -234,31 +309,35 @@ As cenas representam assuntos da conversa. G01–G08 identificam estados planeja
 
 | Objetivo | MoLIC | Lacuna ou relação entre fluxos | Decisão e situação |
 |---|---|---|---|
-| O01 — inspecionar a rota | M02/S1 | Pedidos de reinspeção de M03 e nova foto de M01 chegam ao campo. | **Aplicado no M02 revisado:** ambos entram como ponto planejado, com origem identificada. |
-| O02 — obter foto analisável | M02/S2 | Foto inadequada. | Manter ajuste e nova tentativa. |
-| O03 — entender resultado | M02/S3 | Indicação automática pode ser confundida com veredito. | Resultado da foto/avaliação da IA são automáticos; veredito é humano. |
-| O04 — registrar achado e local | M02/S4–S5 | Dados usados pelos outros perfis. | Foto, resultado, data, hora e local seguem para as conversas que precisam deles. |
-| O05 — confirmar repasse | M02/S7 | “Enviado” não equivale a “lido” ou “decidido”. | Distinguir envio do trabalhador, parecer do agrônomo e repasse do gestor. |
+| O01 — concluir a inspeção com achados documentados e disponíveis | M02/S1–S7 | Pedidos de reinspeção de M03 e nova foto de M01 chegam ao campo. | Ambos são contextualizados em S1; conclusão e pendência possuem encerramentos distintos. |
+| O02 — dispor de evidência visual adequada | M02/S2 | Captura inadequada ou análise não concluída. | Orientação de captura e nova tentativa. |
+| O03 — compreender a indicação e seus limites | M02/S3 | Resultado automático pode ser confundido com confirmação. | Resultado da foto não equivale a veredito humano. |
+| O04 — preservar um achado identificável | M02/S4–S5 | Contexto utilizado pelos demais perfis. | Preservar foto, resultado, momento e referência espacial, explicitando sua origem. |
+| O05 — assegurar comunicação dos registros | M02/S7 | Enviado não equivale a lido ou decidido. | Destinatário dos achados e situação do envio separados da situação do registro. |
 | O06 — saber cobertura | M03/S2 | Ponto pendente e talhão não inspecionado são níveis diferentes. | Distinguir situação do ponto de cobertura do talhão. |
 | O07 — avaliar talhão | M03/S4 | Confiança apresentada ao gestor não é validação humana. | Usar linguagem compreensível sem declarar confirmação técnica. |
-| O08 — registrar posição | M03/S4/S6 | M03 usava “nova inspeção” e “reinspeção” para a mesma ação. | **Aplicado no M03 revisado:** “reinspeção” em todo o diagrama. A chegada à rota já está em M02. |
+| O08 — registrar posição | M03/S4/S6 | M03 usava “nova inspeção” e “reinspeção” para a mesma ação. | Ajuste anterior aplicado: “reinspeção” em todo o diagrama. A chegada ao trabalhador está em M02. |
 | O09 — acompanhar evolução | M03/S5 | M01 também consulta histórico. | M03 apresenta tendência do talhão; M01 apresenta registros de pontos/talhões. |
-| O10 — decidir manejo | M03/S7 | O parecer enviado por M01 precisava entrar na decisão. | **Aplicado no M03 revisado:** S7 mostra “parecer do agrônomo recebido” ou “aguardando parecer”, sem decidir pelo gestor. |
+| O10 — decidir manejo | M03/S7 | O parecer enviado por M01 precisava entrar na decisão. | S7 mostra parecer recebido ou aguardando parecer, sem decidir pelo gestor. |
 | O11 — confirmar repasse | M03/S8 | Repasse não significa aplicação realizada. | Manter estados separados. |
-| O12–O19 — análise e parecer | M01 | Pedido, validação, histórico, nova foto, área, parecer e situação de envio. | Manter; hipóteses do agrônomo seguem abertas porque I02 não foi aplicado. |
+| O12–O19 — análise e parecer | M01 | Pedido, validação, histórico, nova foto, área, parecer e envio. | Manter como proposta; hipóteses do agrônomo seguem abertas porque I02 não foi aplicado. |
+
+Os IDs e objetivos revisados de Lucas foram incorporados a esta tabela. A consolidação completa depende também das revisões dos demais perfis na Entrega 9.
 
 ### Preparação das interfaces a partir das conversas
 
 **Lucas — M02:**
 
-- Rota com próximo ponto, pendências e pedidos recebidos com origem — S1.
-- Orientação e ajuste da câmera — S2.
-- Processamento, cancelamento e falha de análise — P1.
-- Sinal suspeito, ausência de sinal nesta foto e inconclusivo — S3.
-- Local por GPS ou identificação manual, inclusive campo incompleto — S4.
+- Trabalho atribuído, situação do ponto na rota e pedidos recebidos com origem — S1.
+- Qualidade da foto e orientação de captura — S2.
+- Andamento e resultado do processamento da análise — P1/S3.
+- Indicação automática e seus limites — S3.
+- Local do achado e origem da referência — S4.
 - Registro salvo ou falha ao salvar — P2/S5.
-- Rota completa ou incompleta — S6.
-- Aguardando conexão, enviando, enviado e falha — P3/S7.
+- Alcance da inspeção e pendências — S6.
+- Destinatário dos achados e situação do envio — S7.
+- Confirmação ou falha de comunicação — P3/S7.
+- Encerramento concluído ou com pendência explícita.
 
 **Guilherme — M01:**
 
@@ -281,13 +360,28 @@ As cenas representam assuntos da conversa. G01–G08 identificam estados planeja
 - Decisão com pendências, parecer recebido ou aguardando parecer — S7.
 - Decisão registrada, repassada ou com falha — S8.
 
-Esses são estados derivados dos modelos, **não uma declaração de que todos aparecem no aplicativo atual**. A Entrega 12 documenta as diferenças entre os modelos e a versão avaliável.
+Esses estados derivam dos modelos. Não representam uma declaração de que todos aparecem no aplicativo atual.
+
+A Entrega 12 documenta as diferenças entre os modelos e a versão avaliável.
+
+## Pendências para conclusão geral
+
+| Responsável | Correção ou cuidado |
+|---|---|
+| Pedro | Definir formalmente “gravidade” no esquema de signos ou retirar o conceito do M03; manter explícita a diferença entre ordenação dos dados e recomendação de manejo. |
+| Guilherme | Preservar a natureza hipotética das regras profissionais de M01 e compatibilizar seus objetivos/signos com a revisão de sua parte na Entrega 9. |
+| Equipe | Consolidar a nomenclatura dos signos e objetivos dos três fluxos após as revisões individuais, preservando a distinção entre informação automática, julgamento humano e decisão. |
+
+O M02 corrigido foi preparado com SVG e fonte editável. Sua substituição no repositório deve usar os arquivos da revisão de 20/11/2026.
 
 ## Erros frequentes a evitar
 
-- Reduzir o MoLIC a caixas com nomes de telas e setas.
-- Omitir falha, cancelamento, volta e recuperação.
-- Confundir processamento interno com fala do usuário.
-- Usar rótulos sem tópico de conversa.
+- Reduzir MoLIC a caixas com nomes de telas.
+- Omitir falhas, retorno ou recuperação.
+- Usar `gc:` em lugar de `gco:` e `gcc:`.
+- Representar processamento como caixa de atividade de fluxograma.
+- Confundir comunicação de erro do sistema com decisão de recuperação do usuário.
+- Misturar signos dentro das cenas com falas de transição.
 - Declarar como implementado um estado que existe apenas no modelo.
-- Publicar o diagrama sem legenda, fonte editável ou conferência de legibilidade.
+- Tratar uma hipótese profissional como fato confirmado.
+- Publicar diagrama sem legenda legível ou fonte editável.
