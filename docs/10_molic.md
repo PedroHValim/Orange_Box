@@ -226,15 +226,25 @@ Dentro das cenas aparecem informações e signos. As falas que mudam o assunto d
 
 **Autor:** Pedro — 24.123.048-1  
 **Cenário de origem:** CI01 — revisão do ciclo e decisão do manejo por talhão.  
-**Objetivos:** O06 — saber o que o ciclo cobriu; O07 — avaliar o resultado; O08 — registrar a posição de cada talhão; O09 — acompanhar evolução; O10 — decidir manejo; O11 — confirmar repasse.  
+**Objetivos (revisados na Entrega 9):** O10 — decidir o manejo do ciclo com base no que se sabe sobre cada talhão (final); O07 — formar um julgamento sobre cada talhão, O09 — compreender a evolução do talhão e O11 — assegurar que a decisão chegue a quem aplica (instrumentais diretos); O06 — conhecer o alcance do ciclo e O08 — manter registrado o julgamento de cada talhão (instrumentais indiretos).  
 **Tarefas relacionadas:** T04, T08 e T09.  
-**Signos relevantes:** aviso de ciclo concluído, cobertura, situação do talhão, confiança do resultado, posição, tendência, última aplicação, decisão e situação do repasse.
+**Signos relevantes (nomes da Entrega 9):** aviso de ciclo concluído, cobertura do talhão, situação do talhão no ciclo, ordem dos talhões, confiança do resultado, posição do talhão, tendência do talhão, última aplicação, decisão do ciclo, destinatário da decisão e situação do repasse.
+
+**Condição do modelo:** M03 é um modelo de interação proposto. P01 continua proto-persona e a hipótese H21 (o gestor decide e repassa o manejo) segue aberta; a forma correta do diagrama não confirma que o trabalho do gestor ocorre dessa maneira.
 
 ### Diagrama
 
 ![MoLIC M03](../assets/10_molic/molic_m03.svg)
 
 **Fonte editável:** [molic_m03.dot](../assets/10_molic/molic_m03.dot), em Graphviz.
+
+### Correções aplicadas ao M03
+
+- “Gravidade” foi retirada. S3 apresenta a **ordem dos talhões**, signo definido na Entrega 9: quantidade de detecções no ciclo e tendência, com o critério exibido ao gestor.
+- S3 declara que a ordem é um dado, não uma recomendação. Quem define onde, quando e com que urgência aplicar é o gestor, em S7.
+- As cenas usam os nomes exatos dos signos da Entrega 9: cobertura do talhão, situação do talhão no ciclo, posição do talhão, tendência do talhão, decisão do ciclo, destinatário da decisão e situação do repasse.
+- S4 explicita que a confiança do resultado não é validação humana.
+- Os objetivos seguem a classificação revisada de O06–O11 na Entrega 9.
 
 ### Cenas, processamento e encerramentos
 
@@ -244,7 +254,7 @@ Dentro das cenas aparecem informações e signos. As falas que mudam o assunto d
 | S1 — Conhecer o ciclo | “O que foi encontrado?” | Data, talhões inspecionados e talhões com focos. |
 | S2 — Conferir a cobertura | “Todos os talhões foram vistos?” | Inspecionado, não inspecionado e cobertura incompleta. Para o talhão não coberto, o gestor pode pedir reinspeção. |
 | Processamento | Registrar o pedido de reinspeção. | “Reinspeção pedida” ou falha com nova tentativa. |
-| S3 — Escolher o talhão | “Onde estão os focos?” | Lista por gravidade e tendência, apresentada como dado. |
+| S3 — Escolher o talhão | “Onde estão os focos?” | Ordem dos talhões com o critério exibido (detecções no ciclo e tendência), apresentada como dado, não como recomendação. |
 | S4 — Avaliar o talhão | “Posso confiar?” | Fotos, local, indicação do resultado e aviso de cobertura incompleta. |
 | S5 — Acompanhar evolução | “Está avançando?” | Tendência, última aplicação e limite de ciclos incompletos. |
 | Processamento | Registrar posição. | Salvar posição ou preservar escolha após falha. |
@@ -266,7 +276,7 @@ A Entrega 11 usa o aplicativo para o gestor, com diferenças registradas na Entr
 
 1. Jaime abre o ciclo em **S1** e consulta os números gerais.
 2. Em **S2**, confere o que foi e não foi inspecionado.
-3. Em **S3**, escolhe um talhão com foco.
+3. Em **S3**, vê os talhões na ordem calculada, com o critério exibido, e escolhe um talhão com foco. A escolha é dele; a ordem não recomenda prioridade.
 4. Em **S4**, examina fotos, local e limites da evidência. Pode ir a **S5** para consultar evolução.
 5. Registra sua posição e recebe a confirmação em **S6**; pode revisar outro talhão.
 6. Em **S7**, decide onde e quando agir. O sistema registra a decisão.
@@ -301,7 +311,8 @@ A Entrega 11 usa o aplicativo para o gestor, com diferenças registradas na Entr
 
 O texto e o diagrama existentes registram os ajustes anteriores: “reinspeção” em S2 e no processamento seguinte e parecer recebido ou aguardando em S7.
 
-A definição de “gravidade” e a padronização dos signos indicadas no novo feedback permanecem sob responsabilidade do autor.
+- [x] “Gravidade” substituída pelo signo “ordem dos talhões”, definido na Entrega 9, e diferença entre dado e recomendação explícita em S3.
+- [x] Nomes dos signos padronizados conforme a Entrega 9 no texto e no SVG/DOT.
 
 ## Consolidação da equipe
 
@@ -314,15 +325,15 @@ A definição de “gravidade” e a padronização dos signos indicadas no novo
 | O03 — compreender a indicação e seus limites | M02/S3 | Resultado automático pode ser confundido com confirmação. | Resultado da foto não equivale a veredito humano. |
 | O04 — preservar um achado identificável | M02/S4–S5 | Contexto utilizado pelos demais perfis. | Preservar foto, resultado, momento e referência espacial, explicitando sua origem. |
 | O05 — assegurar comunicação dos registros | M02/S7 | Enviado não equivale a lido ou decidido. | Destinatário dos achados e situação do envio separados da situação do registro. |
-| O06 — saber cobertura | M03/S2 | Ponto pendente e talhão não inspecionado são níveis diferentes. | Distinguir situação do ponto de cobertura do talhão. |
-| O07 — avaliar talhão | M03/S4 | Confiança apresentada ao gestor não é validação humana. | Usar linguagem compreensível sem declarar confirmação técnica. |
-| O08 — registrar posição | M03/S4/S6 | M03 usava “nova inspeção” e “reinspeção” para a mesma ação. | Ajuste anterior aplicado: “reinspeção” em todo o diagrama. A chegada ao trabalhador está em M02. |
-| O09 — acompanhar evolução | M03/S5 | M01 também consulta histórico. | M03 apresenta tendência do talhão; M01 apresenta registros de pontos/talhões. |
-| O10 — decidir manejo | M03/S7 | O parecer enviado por M01 precisava entrar na decisão. | S7 mostra parecer recebido ou aguardando parecer, sem decidir pelo gestor. |
-| O11 — confirmar repasse | M03/S8 | Repasse não significa aplicação realizada. | Manter estados separados. |
+| O06 — conhecer o alcance do ciclo | M03/S2 | Ponto pendente e talhão não inspecionado são níveis diferentes. | Distinguir situação do ponto de cobertura do talhão. |
+| O07 — formar um julgamento sobre cada talhão | M03/S4 | Confiança apresentada ao gestor não é validação humana. | Usar linguagem compreensível sem declarar confirmação técnica. |
+| O08 — manter registrado o julgamento de cada talhão | M03/S4/S6 | M03 usava “nova inspeção” e “reinspeção” para a mesma ação. | Ajuste anterior aplicado: “reinspeção” em todo o diagrama. A chegada ao trabalhador está em M02. |
+| O09 — compreender a evolução do talhão | M03/S5 | M01 também consulta histórico. | M03 apresenta tendência do talhão; M01 apresenta registros de pontos/talhões. |
+| O10 — decidir o manejo do ciclo | M03/S3/S7 | O parecer enviado por M01 precisava entrar na decisão; a ordem dos talhões em S3 poderia ser lida como recomendação. | S7 mostra parecer recebido ou aguardando parecer, sem decidir pelo gestor; S3 exibe o critério da ordem como dado. |
+| O11 — assegurar que a decisão chegue a quem aplica | M03/S8 | Repasse não significa aplicação realizada. | Manter estados separados. |
 | O12–O19 — análise e parecer | M01 | Pedido, validação, histórico, nova foto, área, parecer e envio. | Manter como proposta; hipóteses do agrônomo seguem abertas porque I02 não foi aplicado. |
 
-Os IDs e objetivos revisados de Lucas foram incorporados a esta tabela. A consolidação completa depende também das revisões dos demais perfis na Entrega 9.
+Os IDs e objetivos revisados de Lucas e Pedro foram incorporados a esta tabela. A consolidação completa depende também das revisões dos demais perfis na Entrega 9.
 
 ### Preparação das interfaces a partir das conversas
 
@@ -353,7 +364,7 @@ Os IDs e objetivos revisados de Lucas foram incorporados a esta tabela. A consol
 - Resumo e cobertura do ciclo — S1/S2.
 - Talhão inspecionado, não inspecionado ou parcialmente coberto — S2.
 - Pedido de reinspeção confirmado ou com falha — processamento após S2.
-- Talhões com foco e posição — S3.
+- Ordem dos talhões com o critério exibido e posição do talhão — S3.
 - Fotos, local, confiança e aviso de cobertura incompleta — S4.
 - Evolução e última aplicação com limites da comparação — S5.
 - Posição registrada ou falha — S6.
@@ -368,7 +379,7 @@ A Entrega 12 documenta as diferenças entre os modelos e a versão avaliável.
 
 | Responsável | Correção ou cuidado |
 |---|---|
-| Pedro | Definir formalmente “gravidade” no esquema de signos ou retirar o conceito do M03; manter explícita a diferença entre ordenação dos dados e recomendação de manejo. |
+| Pedro | Concluído na revisão de 20/11/2026: “gravidade” substituída pelo signo “ordem dos talhões” (Entrega 9), diferença entre dado e recomendação explícita em S3 e signos padronizados no M03. |
 | Guilherme | Preservar a natureza hipotética das regras profissionais de M01 e compatibilizar seus objetivos/signos com a revisão de sua parte na Entrega 9. |
 | Equipe | Consolidar a nomenclatura dos signos e objetivos dos três fluxos após as revisões individuais, preservando a distinção entre informação automática, julgamento humano e decisão. |
 
