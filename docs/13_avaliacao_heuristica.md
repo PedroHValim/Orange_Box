@@ -1,10 +1,9 @@
 # Entrega 13 — Avaliação de IHC por inspeção heurística
 
 **Data:** 16/11/2026  
-**Revisão documental:** 18/11/2026  
-**Situação de Lucas:** ✅ inspeção e complementação documental concluídas para o aplicativo e os estados examinados.  
+**Revisão documental:** 21/11/2026  
 **Revisão após o feedback (A03 — Pedro):** 20/11/2026.  
-**Status geral:** 🟨 em revisão após o feedback — parte de A03 revisada (achados só de código separados, V02, V06 e V16 revistos, contagem recalculada e checklist corrigido). Permanecem pendentes da equipe a cobertura cruzada do escopo por avaliador e a reavaliação coletiva das severidades.  
+**Status geral:** 🟨 em andamento — registros de A01 revisados e parte de A03 revisada após o feedback. Permanecem pendentes a cobertura individual de todo o escopo e a reavaliação coletiva das severidades.  
 **Responsabilidade:** uma avaliação completa por integrante, sobre todas as telas e estados relevantes do projeto.
 
 ## Objetivo da atividade
@@ -49,7 +48,7 @@ A inspeção avalia a comunicação da interface, não a precisão científica d
 | Item | Definição |
 |---|---|
 | Versão de referência | Aplicativo CYF para iPhone, pasta `ios-native/` de <https://github.com/Cabral100/App_Orange_Box>, commit `a36785f`, de 12/11/2026. |
-| Versão de Lucas | Aplicativo disponível durante a inspeção. Lucas confirmou Acesso, Conta, filtro do Histórico e comportamento sem GPS em 14/11/2026, na mesma versão que examinou. O registro anterior citava aproximadamente 15/11/2026, às 15h; essa data era uma estimativa. O hash exato da versão adicional não foi anotado. |
+| Versão de Lucas | Aplicativo disponível durante a inspeção. Lucas confirmou Acesso, Conta, filtro do Histórico e comportamento sem GPS em 14/11/2026, na mesma versão que examinou. O registro anterior citava aproximadamente 15/11/2026, às 15h; essa data era uma estimativa. O hash exato da instalação examinada por Lucas não foi anotado; não se comprova sua equivalência exata ao commit de referência. |
 | Capturas adicionais | Documentam os estados enviados posteriormente. A data de envio das imagens não é tratada como data da inspeção. |
 | Telas do aplicativo | Acesso F01, Câmera F02, Histórico F03, Mapa F04, Conta F05 e Relatórios F06. |
 | Estados considerados | Ajuda da câmera, confirmação de captura, detalhe da inspeção, associação ao talhão, filtros, desenho manual, ausência de localização, relatório PDF e ações sobre registros, conforme cobertura individual. |
@@ -57,7 +56,7 @@ A inspeção avalia a comunicação da interface, não a precisão científica d
 | Fluxos | M02 e M03 no aplicativo; M01 no Figma, pois o aplicativo não possui perfil de agrônomo. |
 | Dispositivos | Aplicativo em iPhone; protótipo FA em computador. |
 | Avaliadores | A01: Lucas Tonoli Cabral Duarte; A02: Guilherme Morais Escudeiro; A03: Pedro Henrique Ferreira Valim. |
-| Limitações | Capturas não comprovam todos os comportamentos dinâmicos. Alguns achados de Pedro vieram do código; na revisão de 20/11/2026 eles foram separados como problemas potenciais pendentes de reprodução. A inspeção de Guilherme concentrou-se no protótipo FA. A03 (Pedro) não inspecionou as telas FA. Não há comprovação de que cada avaliador tenha inspecionado individualmente todos os produtos e estados do projeto; o requisito de inspeção completa por integrante **não foi atendido**. |
+| Limitações | Capturas não comprovam todos os comportamentos dinâmicos. Alguns achados de Pedro vieram do código; na revisão de 20/11/2026 eles foram separados como problemas potenciais pendentes de reprodução. A inspeção de Guilherme concentrou-se no protótipo FA. A03 (Pedro) não inspecionou as telas FA. A01 (Lucas) não possui inspeção individual das telas FA registrada. Não há comprovação de que cada avaliador tenha inspecionado individualmente todos os produtos e estados do projeto; o requisito de inspeção completa por integrante **não foi atendido**. |
 
 ## 3. Procedimento individual
 
@@ -80,8 +79,7 @@ A inspeção avalia a comunicação da interface, não a precisão científica d
 
 ## Avaliador A01 — Lucas
 
-**Autor:** Lucas Tonoli Cabral Duarte — 24.123.032-5.  
-**Situação:** ✅ parte individual concluída para as seis telas do aplicativo e os estados descritos.
+**Autor:** Lucas Tonoli Cabral Duarte — 24.123.032-5.
 
 ### Procedimento e cobertura
 
@@ -105,6 +103,8 @@ Acesso e Conta foram examinados sem identificação de novas violações. Isso r
 
 O PDF foi compartilhado com um funcionário de uma fazenda parceira, que gostou do relatório. O retorno foi informal e não substitui uma sessão sistemática com usuário.
 
+**Limite de cobertura:** esta inspeção abrange o aplicativo e os estados descritos. Não há inspeção individual de Lucas das telas FA registrada. Portanto, os registros disponíveis não atendem ao requisito de avaliação completa de todo o projeto por integrante. Os achados de Guilherme no protótipo FA não serão apresentados como achados independentes de Lucas.
+
 ### 4. Matriz de cobertura H1–H10
 
 | Heurística | Telas/estados examinados | Violação? | IDs | Resultado |
@@ -120,16 +120,18 @@ O PDF foi compartilhado com um funcionário de uma fazenda parceira, que gostou 
 | H9 — Recuperação | Acesso, Conta, orientação da câmera e ausência de GPS | Não nos estados observados | — | A câmera orienta ajuste da distância; sem localização, mensagem explica a necessidade de ativá-la. |
 | H10 — Ajuda | Acesso, Conta, ajuda da câmera e desenho | Não nos estados observados | — | Ajuda explica captura e limiar; desenho informa como marcar os vértices. |
 
-**Limite da matriz:** “nenhuma violação observada” se refere aos estados examinados e não comprova ausência de todas as falhas possíveis.
+**Limite da matriz:** “nenhuma violação observada” se refere aos estados examinados e não comprova ausência de todas as falhas possíveis. As telas FA e os estados de falha não reproduzidos não estão cobertos por essa conclusão.
 
 ### 5. Declaração de violações ativas
 
-| ID | H | Tela/estado | Problema | Evidência | Severidade | Justificativa | Recomendação |
+| ID | H | Tela/estado | Problema | Evidência | Severidade individual | Justificativa | Recomendação |
 |---|---|---|---|---|---:|---|---|
 | A01-V01 | H2 | Câmera | “UltralyticsYOLO · Core ML pronto” comunica a implementação, sem traduzir o significado para a tarefa. | Figura 1 | 2 | Aparece na captura frequente; não impede a ação, mas pode ser incompreensível ao trabalhador. | Usar “Pronto para analisar” ou mensagem equivalente. |
-| A01-V02 | H2 | Detalhe da inspeção | Data em inglês em interface portuguesa. | Figura 3 | 1 | Mudança de idioma dificulta leitura do registro. | Usar data e hora no padrão local. |
+| A01-V02 | H2 | Detalhe da inspeção | Data em inglês em interface portuguesa. | Figura 3 | 1 | Mudança de idioma dificulta leitura do registro. Também se relaciona à consistência de idioma, H4, sem constituir outro achado. | Usar data e hora no padrão local. |
 | A01-V03 | H4 | Filtros do Mapa e Histórico | “Verde”, “Amarelo” e “Vermelho” nomeiam situações, enquanto outras telas usam nomes de níveis. | Figuras 4 e 10 | 2 | Exige relacionar cores e significados e conciliar rótulos diferentes. | Adotar nomenclatura única e manter cores como apoio. |
 | A01-V04 | H2 | Associação da foto à área | Mensagem usa “coordenadas GPS/EXIF” sem explicar EXIF ou a ação necessária. | Figura 6 | 2 | Termo técnico aparece durante associação do registro ao local. | Explicar que a localização da foto posicionou o mapa e orientar seleção da área. |
+
+As severidades representam o julgamento individual de Lucas. HC01 e HC02 possuem concordância registrada de Lucas e Pedro; os demais registros ainda dependem da reavaliação coletiva.
 
 ### Revisão de A01-V05
 
@@ -221,9 +223,9 @@ A imagem confirma o escopo de A01-V03 e HC02 no Histórico.
 
 ### Captura e estados de recuperação
 
-Não foi possível salvar captura abaixo de 85%, pois o aplicativo bloqueia essa ação e informa o limiar.
+Não foi possível salvar captura abaixo de 85%, pois o aplicativo bloqueia essa ação e informa o limiar. Esse bloqueio é uma condição de captura, não uma falha reproduzida de salvamento.
 
-As orientações de aproximação e afastamento ajudam a ajustar a captura. Lucas não reproduziu falha depois de seguir essas orientações.
+As orientações de aproximação e afastamento ajudam a ajustar a captura. Lucas não reproduziu falha depois de seguir essas orientações. Estados de erro não reproduzidos permanecem não verificados.
 
 Nos exemplos examinados, Lucas não identificou indicação maior ou igual a 85% que reconhecesse como algo diferente de ácaro. Isso não demonstra ausência de falsos positivos nem valida a precisão do detector.
 
@@ -244,16 +246,17 @@ Sem localização, a mensagem informa que é necessário ativar a localização 
 
 ### Síntese individual — Lucas
 
-- **Parte individual concluída para o aplicativo e os estados descritos.**
-- Quatro violações ativas: três de severidade 2 e uma de severidade 1.
+- Quatro violações ativas: três de severidade individual 2 e uma de severidade individual 1.
 - Três violações de H2 e uma de H4.
 - A01-V05 reclassificado após evidência da orientação para ativar localização.
 - Acesso e Conta examinados sem novas violações observadas por Lucas.
 - Filtro do Histórico confirmado por relato e captura.
 - HC01 e HC02 aprovados por Lucas e Pedro com severidade 2.
 - PDF gerado e examinado; retorno do funcionário mantido como informal.
-- Commit da versão adicional não anotado.
-- Não há inspeção individual de Lucas das telas FA registrada neste documento.
+- Commit da instalação examinada não anotado.
+- Os registros do aplicativo foram revisados conforme o feedback.
+- A avaliação completa por integrante permanece pendente: falta registrar a inspeção individual de Lucas das telas FA.
+- A severidade coletiva dos demais problemas não foi definida; não será substituída automaticamente pela severidade do autor.
 
 ## Avaliador A02 — Guilherme
 
@@ -445,8 +448,8 @@ Os IDs individuais permanecem como origem. Para os registros sem duplicidade, a 
 |---|---|---|---:|---|
 | HC01 | A01-V01; A03-V07 | Mensagem técnica na câmera. | 2 | Visual; unificação aprovada por Lucas e Pedro. |
 | HC02 | A01-V03; A03-V09 | Situações nomeadas por cores nos filtros. | 2 | Visual no Mapa e Histórico; unificação aprovada por Lucas e Pedro. |
-| HC03 | A01-V02 | Data em inglês. | 1 | Visual. |
-| HC04 | A01-V04 | Sigla EXIF sem explicação. | 2 | Visual. |
+| HC03 | A01-V02 | Data em inglês. | 1 | Visual; severidade individual de Lucas, sem reavaliação coletiva. |
+| HC04 | A01-V04 | Sigla EXIF sem explicação. | 2 | Visual; severidade individual de Lucas, sem reavaliação coletiva. |
 | HC05 | A02-V01 | Pedido concluído com ponto pendente de nova foto. | 3 | Protótipo FA. |
 | HC06 | A02-V02 | Parecer enviado sem consulta ou complemento. | 2 | Protótipo FA. |
 | HC07 | A02-V03 | Desenho de área sem correção de vértices. | 2 | Protótipo FA. |
@@ -553,7 +556,7 @@ A revisão de 20/11/2026 deixou **26 violações consolidadas** (11 do aplicativ
 
 As principais prioridades são comunicar corretamente os dados usados nas decisões de manejo, distinguir saída automática de validação humana e permitir correção de ações relevantes.
 
-A parte de Lucas está concluída para as telas e estados do aplicativo examinados. HC01 e HC02 foram consolidados com Pedro, e A01-V05 foi reclassificado após a nova evidência.
+Na revisão de 21/11/2026, foram preservados os quatro achados de Lucas e a reclassificação de A01-V05. HC01 e HC02 possuem concordância registrada de Lucas e Pedro. A cobertura de Lucas permanece limitada ao aplicativo e aos estados documentados; falta sua inspeção individual do protótipo FA e sua participação na reavaliação coletiva das demais severidades.
 
 A conclusão documental não equivale à implementação das recomendações nem comprova cobertura individual de todo o projeto. Os achados baseados somente no código e os estados não reproduzidos permanecem explicitados para verificação posterior.
 
@@ -573,6 +576,7 @@ A conclusão documental não equivale à implementação das recomendações nem
 - [ ] Severidades de HC03 em diante reavaliadas coletivamente pela equipe.
 - [x] Demais registros comparados documentalmente, com duplicidades e diferenças explicitadas.
 - [x] Tabela consolidada, contagem e plano de melhoria preenchidos e recalculados, separando confirmados, parciais e pendentes.
-- [x] Parte de Lucas concluída para o escopo documentado.
+- [x] Registros de Lucas revisados para o aplicativo e os estados documentados, preservando as limitações da evidência.
+- [ ] Lucas realizou e registrou inspeção individual das telas FA.
 - [x] Parte de A03 revisada após o feedback (20/11/2026).
 - [ ] Documentação da Entrega 13 concluída — pendem cobertura cruzada e consolidação coletiva das severidades.
