@@ -1,8 +1,8 @@
 # Entrega 9 — Modelo conceitual e design centrado na comunicação
 
 **Data:** 01/11/2026  
-**Revisão:** 20/11/2026  
-**Status:** 🟨 em andamento  
+**Revisão:** 22/11/2026  
+**Status:** 🟩 concluído  
 **Responsabilidade:** soluções individuais, com consolidação da equipe para mapa de objetivos e esquema de signos.
 
 ## Objetivo da atividade
@@ -19,7 +19,7 @@ No fluxo do agrônomo, “probabilidade/score do modelo”, “caixa delimitador
 
 **Limite do modelo:** esta entrega descreve uma concepção de interação. Recursos propostos não devem ser apresentados como implementados apenas por constarem do cenário, do DCC ou da tabela de signos. A correspondência com a versão disponível deve permanecer explícita nas Entregas 11 e 12.
 
-A revisão de Lucas abrange CI02, DCC, objetivos O01–O05, seu ramo no mapa integrado e os signos relacionados ao trabalhador. A revisão de Pedro abrange CI01, objetivos O06–O11, seu ramo no mapa integrado e os signos de P01. As partes de Guilherme permanecem sujeitas às correções indicadas ao final.
+A revisão de Lucas abrange CI02, DCC, objetivos O01–O05, seu ramo no mapa integrado e os signos relacionados ao trabalhador. A revisão de Pedro abrange CI01, objetivos O06–O11, seu ramo no mapa integrado e os signos de P01. A revisão de Guilherme (22/11/2026) abrange CI03, DCC, objetivos O12–O19, seu ramo no mapa integrado e os signos de P03.
 
 ## 1. Cenários de interação
 
@@ -47,7 +47,7 @@ Os trechos em **negrito** descrevem a intervenção em relação ao problema C01
 | Alteração | Por que foi necessária | Evidência/artefato que justifica |
 |---|---|---|
 | Aviso e resumo do ciclo concluído. | Jaime não depender do relato do pragueiro para saber que o ciclo acabou. | C01; HTA T04, passo 1.1 (Entrega 5). |
-| Cobertura que separa “inspecionado”, “não inspecionado” e “com focos”. | Evitar confundir “sem alerta” com “ninguém passou”. | C01, Q5; CTT T09; hipótese H09. |
+| Cobertura que separa “inspecionado”, “não inspecionado” e “com detecções”. | Evitar confundir “sem alerta” com “ninguém passou”. | C01, Q5; CTT T09; hipótese H09. |
 | Evidência com grau de segurança compreensível e julgamento do talhão com saídas para avaliação especializada ou nova inspeção. | Jaime não valida a praga; precisa decidir em quem confiar. | Persona P01; HTA T04, passo 2.3; CTT T09. |
 | Evolução entre ciclos com última aplicação e alerta de cobertura incompleta. | Responder se a praga avança e se a aplicação funcionou, sem conclusão enganosa. | C01, Q3; GOMS T08; hipóteses H05 e H09. |
 | Ordenação dos talhões por critério explicado, apresentada como dado, não como recomendação. | Não invadir o papel do gestor nem do agrônomo (P03). | HTA T04, passo 3.1; fronteira ainda em aberto (H21). |
@@ -87,36 +87,39 @@ As justificativas ligam decisões aos artefatos anteriores. Não representam com
 
 **Autor(a):** Guilherme Morais Escudeiro — 24.123.005-1  
 **Origem:** cenário de problema C03, “Parecer técnico remoto sem contexto suficiente sobre o foco de infestação”.  
-**Atores:** Marcelo (agrônomo consultor, P03), Jaime (dono e gestor da Fazenda Boa Vista, P01) e o trabalhador de campo (P02).
+**Atores:** Marcelo (agrônomo consultor, P03), Jaime (dono e gestor da propriedade, P01) e o trabalhador de campo (P02).
 
-Marcelo é o agrônomo consultor de uma propriedade de citros. Ele atende a mais de uma propriedade e costuma revisar relatos de campo pelo menos algumas vezes por mês, geralmente quando o dono percebe algo fora do padrão durante a rotina da fazenda. ~~Certa manhã, o dono da fazenda liga para ele preocupado, dizendo que um dos trabalhadores encontrou "alguns frutos estranhos" durante a inspeção da plantação. Pouco depois, Marcelo recebe pelo celular algumas fotos soltas enviadas por mensagem, tiradas por diferentes trabalhadores em momentos diferentes do dia.~~ **[ALTERADO] Certa manhã, ao abrir o sistema no computador do escritório, Marcelo vê na lista de pedidos que Jaime, o dono da Fazenda Boa Vista, pediu um parecer sobre o talhão T12, com 5 pontos pendentes de validação. A mesma lista mostra outras detecções novas, separadas por propriedade e talhão, que ainda não têm pedido de parecer.**
+Marcelo é o agrônomo consultor de uma propriedade de citros. *Hipóteses ainda não confirmadas com agrônomos reais (P03 é proto-persona; a entrevista I02 não foi aplicada; H04, H07 e H21 abertas): Marcelo atende mais de uma propriedade, revisa à distância relatos de campo algumas vezes por mês, geralmente quando o dono percebe algo fora do padrão, e seu parecer orienta onde e como aplicar, cabendo ao dono decidir a execução.* ~~Certa manhã, o dono da fazenda liga para ele preocupado, dizendo que um dos trabalhadores encontrou "alguns frutos estranhos" durante a inspeção da plantação. Pouco depois, Marcelo recebe pelo celular algumas fotos soltas enviadas por mensagem, tiradas por diferentes trabalhadores em momentos diferentes do dia.~~ **[ALTERADO] Na solução proposta, Marcelo consulta as solicitações de parecer feitas pelos gestores das propriedades que atende e as detecções recentes que ainda não foram objeto de solicitação, organizadas por propriedade e talhão. A solução distingue a solicitação formal do gestor de uma detecção nova e indica quanto ainda falta avaliar em cada caso.**
 
-~~Para emitir um parecer em que confia, Marcelo precisaria minimamente saber onde cada foto foi tirada dentro da propriedade, em que data e horário, e se os frutos fotografados pertencem à mesma árvore ou a árvores distintas (nenhuma dessas informações acompanha as fotos que recebe). Ele tenta reconstruir o cenário por telefone, perguntando ao dono onde exatamente cada trabalhador estava, mas as respostas são baseadas na memória de quem estava em campo horas antes, e nem sempre são precisas.~~ **[ALTERADO] Ao abrir o pedido, o sistema leva Marcelo direto ao mapa do talhão T12, com os pontos marcados pela situação de cada um: os 5 ainda estão pendentes. Os pontos que já tiveram detecção em ciclos anteriores aparecem destacados. Ele abre o ponto 3 e vê a foto original, que pode ampliar, com a data e hora da captura, a árvore (L3-27) e a localização registradas automaticamente quando o trabalhador fotografou. Não precisa mais ligar para ninguém para saber onde a foto foi tirada.**
+~~Para emitir um parecer em que confia, Marcelo precisaria minimamente saber onde cada foto foi tirada dentro da propriedade, em que data e horário, e se os frutos fotografados pertencem à mesma árvore ou a árvores distintas (nenhuma dessas informações acompanha as fotos que recebe). Ele tenta reconstruir o cenário por telefone, perguntando ao dono onde exatamente cada trabalhador estava, mas as respostas são baseadas na memória de quem estava em campo horas antes, e nem sempre são precisas.~~ **[ALTERADO] Ao escolher uma solicitação, Marcelo vê onde estão, no talhão, os pontos com detecção, em que situação cada um se encontra quanto à validação e quais já tiveram detecção em inspeções anteriores. Ao examinar um ponto, tem acesso à foto original, que pode ampliar, ao momento da captura e à referência espacial registrada em campo, com a origem dessa informação explicitada. Não precisa reconstruir por telefone onde a foto foi tirada, embora a posição do telefone, sozinha, não garanta qual árvore foi fotografada.**
 
-~~Ele também não tem como comparar essas fotos com inspeções de semanas anteriores, porque não existe um registro histórico organizado, apenas mensagens soltas que se perdem na conversa.~~ **[ALTERADO] Na mesma tela, abaixo da foto, aparecem as inspeções anteriores daquele ponto: em 31/10 e em 03/10 houve sinal confirmado, e em 17/10 a detecção foi rejeitada. Quando quer ver mais, Marcelo pede o histórico daquele ponto e o sistema mostra as detecções já filtradas pelo ponto, nas últimas 8 semanas; ele amplia o período sem perder a seleção do local. A avaliação da IA não aparece de início: Marcelo examina a foto primeiro e só depois consulta a avaliação, que informa que o sinal é forte e qual região do fruto motivou a detecção.**
+~~Ele também não tem como comparar essas fotos com inspeções de semanas anteriores, porque não existe um registro histórico organizado, apenas mensagens soltas que se perdem na conversa.~~ **[ALTERADO] Junto da evidência, Marcelo vê o resultado das inspeções anteriores daquele ponto e, quando precisa, consulta o histórico do ponto ou do talhão por um período que ele mesmo ajusta, sem perder o local que estava analisando. A indicação automática só é apresentada quando ele a solicita, depois de examinar a foto (decisão ainda a testar). Ela informa a intensidade do sinal e a região do fruto que a motivou, sem se apresentar como diagnóstico.**
 
-**[ALTERADO] Para cada ponto, Marcelo escolhe entre confirmar, rejeitar ou pedir nova foto. Ele confirma o ponto 3, que passa a aparecer como "validado por humano", e o sistema indica o próximo ponto pendente. No ponto 1, conclui que a marca na casca não é do ácaro e rejeita a detecção; os pontos 2 e 5 também são confirmados. No ponto 4, a foto está desfocada:** ~~quando a resposta não é suficiente, ele chega a pedir que um trabalhador volte ao local para tirar novas fotos, ou, em casos mais sérios, agenda uma visita presencial extra à propriedade, o que pode levar mais de um dia para acontecer.~~ **em vez de decidir sem certeza, Marcelo pede uma nova foto sem sair da detecção: o pedido, já ligado ao ponto e à árvore, entra na rota do trabalhador no celular. O ponto continua "pendente" até a nova foto chegar e ser avaliada, e por isso não entra na área de aplicação. A visita presencial continua possível, mas deixa de ser o único recurso.**
+**[ALTERADO] Para cada ponto, Marcelo registra seu julgamento: confirma a presença da praga, descarta a detecção ou indica que a evidência não basta para julgar. Cada julgamento fica registrado com sua autoria, e a solução indica o que ainda falta avaliar. Quando a foto não permite decidir,** ~~quando a resposta não é suficiente, ele chega a pedir que um trabalhador volte ao local para tirar novas fotos, ou, em casos mais sérios, agenda uma visita presencial extra à propriedade, o que pode levar mais de um dia para acontecer.~~ **Marcelo solicita nova captura sem sair do ponto. A solicitação chega ao trabalhador de campo vinculada ao mesmo local, e o ponto continua aguardando avaliação, sem compor a área de aplicação. A visita presencial continua possível, mas deixa de ser o único recurso. Se Marcelo interromper a revisão, o que já registrou é preservado.**
 
-~~Sem saber com certeza a extensão da área afetada, nem se o problema já havia aparecido antes naquele ponto da propriedade, Marcelo precisa decidir se recomenda a aplicação de um produto de controle, e onde.~~ **[ALTERADO] Com os pontos validados e o histórico consultado, Marcelo passa à delimitação da área de aplicação. O mapa mostra apenas os pontos confirmados (2, 3 e 5), e o sistema avisa que o ponto 4 ainda está pendente. Marcelo decide seguir assim mesmo, delimita a área em torno dos pontos confirmados (1,8 ha do talhão T12) e preenche produto, dose e período, que o sistema apenas registra. O parecer é montado com a área e os pontos vinculados listados automaticamente; ele escreve a justificativa técnica e envia para Jaime.** Ele sabe que recomendar a aplicação em uma área maior do que o necessário gera custo e impacto ambiental evitáveis, mas que recomendar pouco, ou no lugar errado, corre o risco de deixar a praga se espalhar sem controle. **[ALTERADO] Por isso, a área desenhada sobre os pontos confirmados substitui a estimativa feita de memória que, numa ocasião anterior, levou a uma aplicação maior do que a necessária.**
+~~Sem saber com certeza a extensão da área afetada, nem se o problema já havia aparecido antes naquele ponto da propriedade, Marcelo precisa decidir se recomenda a aplicação de um produto de controle, e onde.~~ **[ALTERADO] Com os pontos avaliados, Marcelo define a extensão da área que o parecer deve abranger, tomando como base apenas os pontos que confirmou. A solução avisa quando ainda há pontos aguardando avaliação, e ele decide se segue assim mesmo. Em seguida, registra sua orientação técnica, que pode incluir o que aplicar, em que quantidade e quando (*conteúdo do parecer ainda em aberto: Q7 do C03*). A solução apenas registra essas informações, sem sugerir produto nem dose, e associa ao parecer a área e os pontos que a fundamentam.** Ele sabe que recomendar a aplicação em uma área maior do que o necessário gera custo e impacto ambiental evitáveis, mas que recomendar pouco, ou no lugar errado, corre o risco de deixar a praga se espalhar sem controle. **[ALTERADO] A delimitação baseada em pontos confirmados procura reduzir esse risco, que permanece uma possibilidade a investigar (Q5 do C03), e não um caso já ocorrido.**
 
-**[ALTERADO] Ao enviar, Marcelo volta à lista de pedidos, onde o pedido da Fazenda Boa Vista aparece como "concluído". Na primeira tentativa a conexão falha; o sistema avisa, mantém o texto do parecer e Marcelo envia de novo. Quando a nova foto do ponto 4 chegar, o ponto aparece de novo para avaliação, ligado ao mesmo talhão.**
+**[ALTERADO] Marcelo encaminha o parecer ao gestor que fez a solicitação (*destinatário condicionado a H04*). A solução distingue um parecer apenas registrado de um parecer comunicado ao gestor e, se o envio falhar, preserva o conteúdo e permite nova tentativa. Marcelo consegue saber quais solicitações já foram atendidas e quais continuam aguardando parecer. Quando a nova foto solicitada chegar, o ponto volta a aguardar sua avaliação, ligado ao mesmo talhão. A decisão sobre a execução continua com o gestor.**
 
-Os trechos marcados como **[ALTERADO]** descrevem a interação proposta e substituem os trechos riscados do cenário de problema C03. Eles ainda precisam ser avaliados com usuários; não são observações de uso real. Os passos correspondem às telas A01–A03 e A05–A07 do protótipo em papel (Entrega 6), revisadas para o Figma (Entrega 11, telas FA); os números de pontos, datas e áreas são os mesmos dados fictícios do protótipo FA.
+Os trechos marcados como **[ALTERADO]** descrevem a intervenção proposta e substituem os trechos riscados do cenário de problema C03. São uma proposta de design, não um relato de uso real. Os nomes das situações dos pontos, dos julgamentos e das mensagens ficam no DCC e no esquema de signos.
+
+**Delimitação:** a correspondência com a Entrega 6 é parcial: A01–A03 e A05–A07 têm desenho em papel (`prototipo_fluxo_2-1.jpeg` e `prototipo_fluxo_2-2.jpeg`). O aplicativo iOS não possui perfil de agrônomo. Solicitação de parecer, julgamento por ponto, pedido de nova foto, delimitação da área, parecer e envio não são apresentados como implementados. Todo o fluxo permanece condicionado à confirmação do papel do agrônomo (H04, H07; I02 não aplicada).
 
 ### Diferenças relevantes — CI03
 
 | Alteração | Por que foi necessária | Evidência/artefato que justifica |
 |---|---|---|
-| O pedido de parecer chega como item no sistema, agrupado por propriedade e talhão, em vez de ligação e fotos soltas. | Marcelo atende várias propriedades e hoje recebe relatos informais sem contexto. | C03 (cenário inicial e Q1); HTA T05, passo 1; P03 (dores). |
-| Entrada direta no mapa do talhão com a situação de cada ponto. | Do geral para o específico: primeiro onde está o foco, sem procurar o talhão. | HTA T05, plano 2; protótipo A02. |
-| Local, data, hora e árvore gravados automaticamente com a foto. | Hoje o local depende da memória de quem estava em campo. | C03 refinado (Q2); HTA T05, 2.1 e 2.2; síntese de P03 (Entrega 5). |
-| Histórico do ponto na mesma tela da detecção e atalho para o histórico filtrado. | Comparar com inspeções anteriores era impossível; M3 é o método mais curto e mais frequente. | GOMS T06 (M3, SR1); CTT T07; H22. |
-| Avaliação da IA recolhida até o agrônomo abrir. | Reduzir o possível viés de confirmação; decisão ainda a testar. | CTT T07; pergunta 15 da entrevista I02 (Entrega 7). |
-| Três saídas para cada ponto: confirmar, rejeitar ou pedir nova foto. | Quando a foto não basta, o agrônomo não é forçado a decidir. | CTT T07; C03 refinado (Q3). |
-| Pedido de nova foto ligado ao ponto e à árvore; o ponto continua pendente. | Ligar P03 a P02 sem perder o ponto. | CTT T07; protótipo A03 e P01 (Entrega 6). |
-| Delimitação apenas com pontos confirmados e aviso de pendências. | Só focos validados por humano devem entrar [H07]. | C03 (Q5); HTA T05, 3 e 4.1; protótipo A06. |
-| Parecer com pontos vinculados e repasse ao gestor. | O parecer fica associado à evidência; quem decide a execução é P01. | HTA T05, passo 5; síntese da Entrega 3; [F24]; H21. |
-| Produto, dose e período como campos livres. | O sistema registra o julgamento técnico, não recomenda. | HTA T05, 4.2; Entrega 8. |
+| A solicitação de parecer chega pela solução, organizada por propriedade e talhão e distinta de detecção nova. | Na hipótese de P03, Marcelo atende várias propriedades e recebe relatos informais sem contexto. | C03 (cenário inicial e Q1); HTA T05, passo 1; P03 (dores, proto-persona). |
+| Entrada no talhão com a situação de validação de cada ponto. | Do geral para o específico: primeiro onde estão as detecções, sem procurar o talhão. | HTA T05, plano 2; protótipo A02 (Entrega 6). |
+| Foto associada ao momento da captura e à referência espacial registrada em campo, com origem explícita. | Hoje o local depende da memória de quem estava em campo; a coordenada não identifica a árvore com certeza. | C03 refinado (Q2); HTA T05, 2.1 e 2.2; signos de P02 (local do achado, árvore). |
+| Resultado das inspeções anteriores junto da evidência e histórico com período ajustável. | Comparar com inspeções anteriores era impossível; M3 é o método mais curto e mais frequente. | GOMS T06 (M3, SR1); CTT T07; H22 (parcialmente investigada). |
+| Indicação automática apresentada somente quando solicitada. | Reduzir o possível viés de confirmação; decisão ainda a testar. | CTT T07; pergunta 15 do roteiro I02 (Entrega 7), ainda não aplicada. |
+| Três julgamentos possíveis para cada ponto, com autoria. | Quando a foto não basta, o agrônomo não é forçado a decidir. | CTT T07; C03 refinado (Q3). |
+| Solicitação de nova captura ligada ao ponto; o ponto continua aguardando avaliação. | Ligar P03 a P02 sem perder o ponto (L5). | CTT T07; protótipo A03 e P01 (Entrega 6); CI02. |
+| Área definida apenas com pontos confirmados e aviso de pontos em aberto. | Decisão de design: só a presença confirmada por humano fundamenta a área. O conteúdo mínimo de que o profissional precisa depende de H07. | C03 (Q5); HTA T05, 3 e 4.1; protótipo A06. |
+| Parecer associado aos pontos e encaminhado ao gestor, distinguindo registro e comunicação. | O parecer fica associado à evidência; na hipótese adotada, quem decide a execução é P01. | HTA T05, passo 5; síntese da Entrega 3; [F24]; H04 e H21 abertas. |
+| Orientação técnica registrada pelo agrônomo, sem sugestão do sistema. | O sistema registra o julgamento técnico, não recomenda; o conteúdo do parecer ainda está em aberto. | HTA T05, 4.2; princípios de P03 (Entrega 8); Q7 do C03. |
+| Retirada do episódio de aplicação em área maior que a necessária. | Não havia relato real que o sustentasse; a Entrega 4 já o havia removido. | C03, nota de rastreabilidade e Q5 (Entrega 4). |
 
 ## 2. Design centrado na comunicação
 
@@ -146,8 +149,8 @@ Os textos abaixo são propostas de comunicação. Os assuntos de rota, pedidos i
 
 | Tópico > subtópico | Falas e signos envolvidos | Intenção/efeito esperado |
 |---|---|---|
-| Saber do ciclo > aviso e resumo | `U: O ciclo terminou?` / `D: Ciclo concluído em [data]: X talhões inspecionados, Y com focos.` | Dispensar o relato do pragueiro e informar o alcance do ciclo. |
-| Conferir a cobertura > talhão não inspecionado | `U: Todos os talhões foram vistos?` / `D: Não inspecionado: talhão [nome]. Isso não significa que esteja livre da praga.` | Impedir que “não inspecionado” seja lido como “sem focos”. |
+| Saber do ciclo > aviso e resumo | `U: O ciclo terminou?` / `D: Ciclo concluído em [data]: X talhões inspecionados, Y com detecções.` | Dispensar o relato do pragueiro e informar o alcance do ciclo. |
+| Conferir a cobertura > talhão não inspecionado | `U: Todos os talhões foram vistos?` / `D: Não inspecionado: talhão [nome]. Isso não significa que esteja livre da praga.` | Impedir que “não inspecionado” seja lido como “sem detecções”. |
 | > pedir nova inspeção | `U: E o que falta?` / `D: Pedir nova inspeção deste talhão?` | Dar uma saída sem sair da tela de cobertura. |
 | Avaliar o talhão > evidência e confiança | `U: Posso confiar neste resultado?` / `D: Confiança [alta/média/baixa]. Veja as fotos e o local; o sistema não confirma a praga.` | Mostrar a evidência e o limite da indicação. |
 | Registrar a posição > escolher a saída | `U: Eu não sei se é a praga.` / `D: Aceitar como confiável, pedir parecer do agrônomo ou pedir nova inspeção.` | Permitir a dúvida sem bloquear a revisão. |
@@ -162,22 +165,25 @@ Os rótulos de confiança (“alta”, “média” e “baixa”), os nomes das
 
 **Nome do cenário:** CI03 — Emitir parecer técnico sobre um foco de infestação.
 
+Os textos abaixo são propostas de comunicação, a testar com usuários. Colchetes indicam valores variáveis. Delimitação da área, produto, dose, período e parecer dependem da confirmação do papel do agrônomo (H04, H07, Q7 do C03; I02 não aplicada) e permanecem como proposta, não como regra do domínio. Os nomes das situações (“pendente”, “confirmado”, “rejeitado”, “concluído”) foram retirados do CI03 e ficam aqui, no artefato adequado.
+
 | Tópico > subtópico | Falas e signos envolvidos | Intenção/efeito esperado |
 |---|---|---|
-| Emitir parecer técnico sobre um foco (O12) | `U: O que tenho para analisar?` / `D: Estes são os pedidos de parecer e as detecções novas das propriedades que você atende.` Signos: pedido de parecer, propriedade, talhão, solicitante, pontos pendentes. | Distinguir pedido do gestor de detecção sem pedido. |
-| > Escolher o foco a avaliar (O13) | `U: Quero ver o pedido do talhão T12.` / `D: Aqui está o talhão T12. Estes 5 pontos têm detecção e estão pendentes. Os pontos destacados já tiveram detecção antes.` Signos: mapa do talhão, ponto, situação da validação, detecção anterior. | Entrada direta no foco; a contagem por situação mostra quanto falta. |
-| Validar as detecções do talhão (O14) | `U: Quero examinar o ponto 3.` / `D: Esta é a foto original do ponto 3, árvore L3-27, tirada em 14/11 às 09:35, com a localização registrada. Antes, neste ponto, houve detecções confirmadas em 31/10 e 03/10 e uma rejeitada em 17/10.` Signos: foto do fruto, data e hora da captura, árvore, local do achado, detecções anteriores do ponto. | Reunir evidências na mesma conversa. |
-| > Examinar a foto | `U: Quero ampliar a foto.` / `D: Foto ampliada, com a mesma identificação do ponto.` | Julgamento técnico sem sair do contexto. |
-| > Consultar a avaliação da IA | `U: Quero ver o que a IA avaliou.` / `D: A IA detectou sinal forte de ácaro nesta região do fruto. Esta é uma indicação automática; a validação é sua.` Signos: avaliação da IA, intensidade do sinal, região indicada. | Separar detecção automática de validação humana. |
-| > Registrar o veredito | `U: Confirmo que há sinal da praga neste ponto.` / `D: Ponto 3 validado por você. O próximo pendente é o ponto 1.` Ou `U: Não há sinal da praga no ponto 1.` / `D: Ponto 1 rejeitado por você. Restam 3 pontos pendentes.` Signos: veredito, validado por, observação técnica. | Feedback do registro, com autoria. |
-| > Pedir nova foto ao campo (O16) | `U: A foto não é suficiente; quero outra.` / `D: Pedido de nova foto do ponto 4, árvore L5-11, enviado à rota do campo. O ponto continua pendente.` Signo: pedido de nova foto. | Manter o ponto pendente até nova avaliação. |
-| > Encerrar a revisão sem concluir | `U: Vou parar por agora.` / `D: Os vereditos registrados foram mantidos. Restam 3 pontos pendentes no talhão T12.` | Interromper sem perda de trabalho. |
-| Consultar o histórico de um ponto ou talhão (O15) | `U: Quero ver o histórico deste ponto.` / `D: Detecções do ponto 3 nas últimas 8 semanas.` / `U: Quero ampliar para 6 meses.` / `D: Detecções do ponto 3 nos últimos 6 meses.` Ou `D: Não há detecções neste período para o ponto 3.` Signos: histórico de detecções, período, local do filtro. | A mesma lista é acessada por caminhos diferentes, com filtro coerente e resultado vazio comunicado. |
-| Delimitar a área de aplicação (O17) | `U: Quero definir a área de aplicação.` / `D: Estes são os pontos confirmados do talhão T12. Atenção: o ponto 4 ainda está pendente; ele não entra na área.` / `U: Esta é a área; produto, dose e período são estes.` / `D: Área de 1,8 ha registrada.` Signos: área de aplicação, pontos confirmados, produto, dose, período de aplicação. | Apoiar a delimitação e comunicar pendências. |
-| > Talhão sem ponto confirmado | `U: Quero definir a área de aplicação.` / `D: Ainda não há pontos confirmados no talhão T12. Valide ao menos um ponto antes de delimitar a área.` | Impedir área sem base em validação humana [H07]. |
-| Registrar e repassar o parecer (O18) | `D: Este é o parecer: área de 1,8 ha, pontos 2, 3 e 5 vinculados, destinatário Jaime. Escreva a justificativa técnica.` / `U: Enviar.` / `D: Parecer enviado a Jaime. O pedido do talhão T12 está concluído.` Signos: parecer técnico, pontos vinculados, destinatário do parecer, situação do pedido. | Associar parecer, pontos e destinatário. |
-| > Campos obrigatórios vazios | `U: Quero enviar o parecer.` / `D: Para enviar, informe produto, dose e a justificativa técnica.` | Evitar envio incompleto. |
-| > Acompanhar a situação do pedido (O19) | `D: Não foi possível enviar o parecer. O texto foi mantido.` / `U: Enviar.` / `D: Parecer enviado. Pedido concluído.` | Comunicar falha e recuperação. |
+| Emitir parecer técnico sobre um foco (O12) > saber o que aguarda avaliação (O13) | `U: O que aguarda minha avaliação?` / `D: Estes são os pedidos de parecer e as detecções novas das propriedades que você atende.` Signos: pedido de parecer, propriedade, talhão, solicitante, pontos pendentes. | Distinguir pedido do gestor de detecção sem pedido. |
+| > abrir um pedido | `U: Quero começar por este pedido.` / `D: Talhão [nome]: [n] pontos com detecção aguardam sua validação. Os pontos destacados já tiveram detecção antes.` Signos: talhão, ponto, situação da validação, detecção anterior. | Entrada direta no talhão; a contagem por situação mostra quanto falta. |
+| Validar as detecções do talhão (O14) > reunir a evidência do ponto | `U: Quero examinar este ponto.` / `D: Foto original do ponto [id], capturada em [data e hora], com a referência espacial registrada em campo ([automática/manual]). Antes, neste ponto: [n] detecções confirmadas e [n] rejeitadas.` Signos: foto do fruto, data e hora da captura, árvore, local do achado, detecções anteriores do ponto. | Reunir evidências na mesma conversa, com a origem do local explícita. |
+| > examinar a foto | `U: Preciso ver o fruto em detalhe.` / `D: Foto ampliada, com a mesma identificação do ponto.` | Julgamento técnico sem sair do contexto. |
+| > consultar a avaliação da IA | `U: O que a IA indicou?` / `D: A indicação automática apontou sinal [forte/fraco] nesta região do fruto. Isso não é diagnóstico; a validação é sua.` Signo: avaliação da IA. | Separar indicação automática de validação humana. |
+| > registrar o veredito | `U: Há sinal da praga neste ponto.` / `D: Ponto [id] confirmado por você. Próximo pendente: ponto [id].` Ou `U: Não é o ácaro.` / `D: Detecção do ponto [id] rejeitada por você. Restam [n] pontos pendentes.` Signos: veredito, situação da validação, validado por, observação técnica. | Feedback do registro, com autoria. |
+| > evidência insuficiente (O16) | `U: Esta foto não permite julgar.` / `D: Nova foto do ponto [id] solicitada ao campo. O ponto continua pendente e não entra na área de aplicação.` Signo: pedido de nova foto. | Manter o ponto pendente até nova avaliação, sem forçar veredito. |
+| > interromper a revisão | `U: Vou continuar depois.` / `D: Os vereditos registrados foram mantidos. Restam [n] pontos pendentes no talhão [nome].` | Interromper sem perda de trabalho. |
+| Comparar com inspeções anteriores (O15) > consultar o histórico | `U: Este ponto já teve a praga antes?` / `D: Detecções do ponto [id] no período [padrão].` / `U: Preciso de um período maior.` / `D: Detecções do ponto [id] em [novo período], mantido o mesmo local.` Ou `D: Não há detecções neste período para este local. Amplie o período.` Signos: histórico de detecções, período, local do filtro. | A mesma lista é acessada por caminhos diferentes, com filtro coerente e resultado vazio comunicado. |
+| Delimitar a área de aplicação (O17) > definir a extensão | `U: Onde a aplicação é necessária?` / `D: Estes são os pontos confirmados do talhão [nome]. Atenção: [n] pontos ainda estão pendentes e não entram na área.` / `U: A área afetada é esta, com esta orientação técnica.` / `D: Área de [x] ha registrada.` Signos: área de aplicação, pontos confirmados, produto, dose, período de aplicação. | Apoiar a delimitação e comunicar pendências, sem sugerir produto nem dose. |
+| > talhão sem ponto confirmado | `U: Onde a aplicação é necessária?` / `D: Ainda não há pontos confirmados neste talhão. Valide ao menos um ponto antes de delimitar a área.` | Impedir área sem base em validação humana (decisão provisória de aplicação). |
+| Comunicar o parecer ao gestor (O18) > revisar e encaminhar | `D: Parecer: área de [x] ha, pontos [ids] vinculados, destinatário [gestor solicitante]. Falta a justificativa técnica.` / `U: O parecer está pronto para o gestor.` / `D: Parecer enviado a [gestor]. O pedido está concluído.` Signos: parecer técnico, pontos vinculados, destinatário do parecer, situação do pedido. | Associar parecer, pontos e destinatário; enviado não significa lido nem executado. |
+| > campos obrigatórios vazios | `U: O parecer está pronto para o gestor.` / `D: Para enviar, informe produto, dose e a justificativa técnica.` | Evitar envio incompleto (obrigatoriedade provisória). |
+| > falha no envio | `D: Não foi possível enviar o parecer. O texto foi mantido.` / `U: Quero tentar de novo.` / `D: Parecer enviado a [gestor].` | Comunicar falha e recuperação sem perda do conteúdo. |
+| Acompanhar os pedidos (O19) > conferir a situação | `U: O que ainda falta atender?` / `D: [n] pedidos aguardam parecer e [n] estão concluídos. No talhão [nome], o ponto [id] aguarda nova foto.` Signos: situação do pedido, pedido de nova foto. | Saber o que foi atendido e o que depende do campo.
 
 ## 3. Mapa de objetivos
 
@@ -254,26 +260,52 @@ As ligações indicam instrumentação, não ordem de execução.
 
 ### Mapa individual — Guilherme
 
-**Objetivo principal (O12):** emitir parecer técnico sobre um foco de infestação.
+**Objetivo final de P03 — O12:** emitir parecer técnico fundamentado sobre um foco de infestação.
 
-- **O12 — Emitir parecer técnico sobre um foco de infestação**
-  - **O13 — Escolher o foco a avaliar** (pedidos de parecer e detecções novas).
-  - **O14 — Validar as detecções do talhão** (confirmar ou rejeitar cada ponto).
-    - **O16 — Pedir nova foto de um ponto ao campo**, quando a foto não basta.
-  - **O15 — Consultar o histórico de detecções** de um ponto ou talhão.
-  - **O17 — Delimitar a área de aplicação** com os pontos confirmados.
-  - **O18 — Registrar e repassar o parecer ao gestor.**
-  - **O19 — Acompanhar a situação dos pedidos de parecer.**
+Os IDs O12–O19 foram mantidos. A revisão expressa finalidades e indica qual objetivo cada um instrumenta. Passos como abrir o pedido, ampliar a foto, escolher entre confirmar e rejeitar, preencher campos ou reenviar deixaram de ser listados como objetivos; pertencem às tarefas (HTA T05, GOMS T06, CTT T07), ao CI03 e ao MoLIC M01.
+
+| ID | Objetivo revisado | Classificação | Relação com o objetivo final |
+|---|---|---|---|
+| O12 | Emitir parecer técnico fundamentado sobre um foco de infestação. | Final. | Motiva o uso da solução pelo agrônomo. Depende da existência do papel de P03 e de H04 (P03 proto-persona; I02 não aplicada); se refutadas, o objetivo final de P03 deve ser revisto. |
+| O14 | Distinguir, em cada ponto, a indicação automática da presença confirmada da praga. | Instrumental direto. | Fornece, durante a interação, a base validada por humano de que O12 e O17 dependem. |
+| O15 | Compreender a recorrência da praga no ponto ou no talhão entre inspeções. | Instrumental direto. | Contextualiza o julgamento de O14 e a fundamentação de O12. Necessidade parcialmente investigada (H22); origina L7. |
+| O17 | Definir a extensão do foco que o parecer deve abranger. | Instrumental direto. | Dá ao parecer de O12 a sua abrangência, a partir dos pontos confirmados em O14. Conteúdo condicionado a H07 e Q7 do C03. |
+| O18 | Assegurar que o parecer chegue ao responsável pela decisão, associado às evidências. | Instrumental direto. | Permite encerrar O12 sabendo se o parecer foi comunicado. Destinatário condicionado a H04; origina L6. |
+| O13 | Saber quais solicitações e detecções aguardam sua avaliação. | Instrumental indireto. | Prepara O14, distinguindo pedido formal de detecção nova; recebe L2 e L3. |
+| O16 | Dispor de evidência suficiente quando a foto não permite julgar. | Instrumental indireto. | Prepara uma nova avaliação em O14 sem forçar um veredito; origina L5. |
+| O19 | Manter conhecimento dos pedidos atendidos e pendentes. | Instrumental indireto. | Prepara a retomada de O13 e confirma, em interações futuras, o encerramento de O18. |
+
+#### Hierarquia individual revisada
+
+```mermaid
+flowchart TD
+    O12["O12 — Final: emitir parecer técnico fundamentado sobre um foco"]
+    O14["O14 — Direto: distinguir indicação automática de presença confirmada"]
+    O15["O15 — Direto: compreender a recorrência da praga"]
+    O17["O17 — Direto: definir a extensão do foco"]
+    O18["O18 — Direto: assegurar que o parecer chegue ao responsável"]
+    O13["O13 — Indireto: saber o que aguarda avaliação"]
+    O16["O16 — Indireto: dispor de evidência suficiente"]
+    O19["O19 — Indireto: manter conhecimento dos pedidos"]
+    O12 --> O14
+    O12 --> O15
+    O12 --> O17
+    O12 --> O18
+    O14 --> O13
+    O14 --> O16
+    O17 --> O14
+    O18 --> O19
+```
+
+As ligações indicam instrumentação, não ordem de execução. Todo o ramo permanece condicionado à confirmação do papel do agrônomo.
 
 ### Mapa de objetivos do projeto — integrado
 
-O mapa revisado incorpora a hierarquia de Lucas (O01 final; O03/O05 diretos; O02/O04 indiretos) e a de Pedro (O10 final; O07/O09/O11 diretos; O06/O08 indiretos).
-
-O bloco de Guilherme foi preservado e está identificado como pendente de classificação. O mapa completo ainda depende da revisão desse bloco.
+O mapa revisado incorpora as hierarquias de Lucas (O01 final; O03/O05 diretos; O02/O04 indiretos), de Pedro (O10 final; O07/O09/O11 diretos; O06/O08 indiretos) e de Guilherme (O12 final; O14/O15/O17/O18 diretos; O13/O16/O19 indiretos).
 
 **Propósito comum do domínio:** apoiar o controle do ácaro da leprose na propriedade com base em inspeções registradas e avaliadas. Esse propósito organizacional não substitui o objetivo final de cada persona.
 
-![Mapa de objetivos integrado — hierarquias de Lucas e Pedro revisadas](../assets/09_modelo_conceitual/mapa_objetivos_integrado.svg)
+![Mapa de objetivos integrado — hierarquias dos três perfis revisadas](../assets/09_modelo_conceitual/mapa_objetivos_integrado.svg)
 
 **Fonte editável:** [mapa_objetivos_integrado.svg](../assets/09_modelo_conceitual/mapa_objetivos_integrado.svg).
 
@@ -290,6 +322,13 @@ O bloco de Guilherme foi preservado e está identificado como pendente de classi
 - O10 representa a finalidade principal do gestor.
 - O07, O09 e O11 apoiam diretamente O10.
 - O06 prepara O07 e O09; O08 prepara O10.
+- As posições dos elementos não representam uma sequência de telas.
+
+**Leitura do ramo de Guilherme:**
+
+- O12 representa a finalidade principal do agrônomo, condicionada à confirmação do papel de P03 (H04).
+- O14, O15, O17 e O18 apoiam diretamente O12; O17 depende dos pontos confirmados em O14.
+- O13 e O16 preparam O14; O19 prepara a retomada de O13 e o acompanhamento de O18.
 - As posições dos elementos não representam uma sequência de telas.
 
 As ligações L1–L7 representam dependências de informação entre fluxos. Não substituem as relações de instrumentação dos objetivos.
@@ -321,14 +360,14 @@ L4 e L5 foram incorporadas conceitualmente ao CI02 e ao DCC de Lucas. A hipótes
 | O09 | Compreender se a infestação do talhão avança ou recua entre ciclos. | P01 | CI01 | Instrumental direto; apoia O10. | Alta |
 | O10 | Decidir o manejo do ciclo com base no que se sabe sobre cada talhão. | P01 | CI01 | Final (depende de H21). | Alta |
 | O11 | Assegurar que a decisão chegue a quem executa a aplicação. | P01 | CI01 | Instrumental direto; apoia O10. | Alta |
-| O12 | Emitir parecer técnico sobre um foco de infestação. | P03 | CI03 | A classificar por Guilherme. | Alta |
-| O13 | Escolher o foco a avaliar a partir dos pedidos de parecer e das detecções novas. | P03 | CI03 | A classificar por Guilherme. | Alta |
-| O14 | Validar as detecções do talhão. | P03 | CI03 | A classificar por Guilherme. | Alta |
-| O15 | Consultar o histórico de detecções de um ponto ou talhão. | P03 | CI03 | A classificar por Guilherme. | Alta |
-| O16 | Pedir nova foto de um ponto ao campo. | P03 | CI03 | A classificar por Guilherme. | Média |
-| O17 | Delimitar a área de aplicação com os pontos confirmados. | P03 | CI03 | A classificar por Guilherme. | Alta |
-| O18 | Registrar e repassar o parecer ao gestor. | P03 | CI03 | A classificar por Guilherme. | Alta |
-| O19 | Acompanhar a situação dos pedidos de parecer. | P03 | CI03 | A classificar por Guilherme. | Média |
+| O12 | Emitir parecer técnico fundamentado sobre um foco de infestação. | P03 | CI03 | Final (depende de H04 e da confirmação do papel de P03). | Alta |
+| O13 | Saber quais solicitações e detecções aguardam sua avaliação. | P03 | CI03 | Instrumental indireto; apoia O14 e O12. | Alta |
+| O14 | Distinguir, em cada ponto, a indicação automática da presença confirmada da praga. | P03 | CI03 | Instrumental direto; apoia O12 e O17. | Alta |
+| O15 | Compreender a recorrência da praga no ponto ou no talhão entre inspeções. | P03 | CI03 | Instrumental direto; apoia O12 (H22 parcialmente investigada). | Alta |
+| O16 | Dispor de evidência suficiente quando a foto não permite julgar. | P03 | CI03 | Instrumental indireto; apoia O14 e O12. | Média |
+| O17 | Definir a extensão do foco que o parecer deve abranger. | P03 | CI03 | Instrumental direto; apoia O12 (H07 e Q7 abertas). | Alta |
+| O18 | Assegurar que o parecer chegue ao responsável pela decisão, associado às evidências. | P03 | CI03 | Instrumental direto; apoia O12 (destinatário depende de H04). | Alta |
+| O19 | Manter conhecimento dos pedidos atendidos e pendentes. | P03 | CI03 | Instrumental indireto; apoia O13, O18 e O12. | Média |
 
 **Numeração:** O01–O05 identificam o mapa de Lucas; O06–O11, o de Pedro; e O12–O19, o de Guilherme. Os objetivos de Guilherme foram renumerados anteriormente para evitar colisões.
 
@@ -340,7 +379,9 @@ A coluna **Fluxo** identifica P02 (Lucas), P01 (Pedro) e P03 (Guilherme).
 
 **Escopo de Lucas:** estados de rota, pedidos integrados, resultados alternativos e envio entre papéis são propostas conceituais quando ausentes do aplicativo. Restrições, valores padrão e mensagens referentes a esses recursos são decisões de aplicação, não regras profissionais confirmadas.
 
-Nos signos compartilhados, a interpretação relativa a P02 respeita esse limite. Os signos de P01 foram revisados por Pedro em 20/11/2026; aviso de ciclo, cobertura, posição, tendência, decisão e repasse são propostas de aplicação, ausentes do aplicativo atual. As partes de P03 continuam sujeitas à revisão do responsável.
+Nos signos compartilhados, a interpretação relativa a P02 respeita esse limite. Os signos de P01 foram revisados por Pedro em 20/11/2026; aviso de ciclo, cobertura, posição, tendência, decisão e repasse são propostas de aplicação, ausentes do aplicativo atual.
+
+**Escopo de Guilherme:** os signos de P03 foram revisados em 22/11/2026. Como P03 é proto-persona e a entrevista I02 não foi aplicada, as restrições e os valores padrão marcados como *decisão provisória* são decisões de aplicação, não regras confirmadas do trabalho do agrônomo. Área de aplicação, produto, dose, período e parecer são conceitos do domínio agronômico, mas o fato de o agrônomo defini-los neste fluxo depende de H04, H07 e Q7 do C03. O aplicativo iOS não possui perfil de agrônomo.
 
 | Grupo | Signo | Fluxo | Origem | Observações/semântica | Tipo de conteúdo | Restrição | Valor padrão | Prevenção | Recuperação |
 |---|---|---|---|---|---|---|---|---|---|
@@ -356,7 +397,7 @@ Nos signos compartilhados, a interpretação relativa a P02 respeita esse limite
 | Captura | qualidade da foto | P02 | aplicação | Orientação sobre condições da captura; não equivale à certeza de identificação da praga. | estado ou mensagem | não confundir qualidade com confiança do modelo | aguardando captura | PP: orientação antes da captura | RA: reposicionar e tentar novamente |
 | Análise | situação da análise | P02 | aplicação | “Analisando”, “concluída” ou “falhou”, como estados conceituais. | estado ou mensagem | não representar conclusão inexistente | aguardando foto | PP: andamento compreensível | RA: nova tentativa preservando o que estiver disponível |
 | Análise | resultado da foto | P02, P01 | aplicação | Para P02, indicação automática vinculada à imagem; “sinal suspeito”, “nenhum sinal nesta foto” e “inconclusivo” são propostas de comunicação. | texto e símbolo | não equivale a confirmação humana nem a diagnóstico da árvore | nenhum | PP: explicar alcance e incerteza | RA: nova captura ou conferência posterior |
-| Análise | avaliação da IA | P03 | aplicação | Intensidade em faixas e região indicada. Probabilidade numérica não exibida; triagem, não diagnóstico. | texto e destaque na imagem | — | recolhida até consulta | PP: indicação automática separada da validação humana, a testar | — |
+| Análise | avaliação da IA | P03 | aplicação | Indicação automática sobre uma foto: intensidade do sinal em faixas (“forte”/“fraco”, como proposta) e região do fruto que a motivou. **Origem:** pontuação que o modelo do TCC atribui à detecção naquela foto, a mesma base da confiança do resultado de P01, que agrega as detecções do talhão. **Significa** quão nítido foi o sinal reconhecido pelo modelo na imagem. **Não significa** probabilidade de infestação na árvore, diagnóstico nem veredito. **Uso:** apoia o agrônomo no exame da foto; só o veredito humano altera a situação da validação. Os limites das faixas dependem do modelo do TCC e ainda não foram definidos. | texto e destaque na imagem | sem probabilidade numérica; não altera a situação da validação | recolhida até consulta (decisão provisória, a testar) | PP: identificada como indicação automática, separada da validação humana | — |
 | Análise | confiança do resultado | P01 | aplicação | Faixa calculada a partir da pontuação que o modelo atribui às detecções do talhão. Indica quão nítido foi o sinal nas fotos analisadas; não é a probabilidade de a praga estar presente na árvore nem validação humana. Serve ao gestor para decidir se aceita o resultado ou pede outra avaliação. Os limites das faixas dependem do modelo do TCC e ainda não foram definidos. | texto, alta/média/baixa como proposta | sem números técnicos; vinculada às fotos | nenhum | PP: mostrar fotos e local | RA: pedir parecer ou reinspeção |
 | Registro | data e hora da captura | P02, P03 | domínio | Momento da obtenção da foto; distinto do envio e da sincronização. | data e hora | não nula | captura atual | PP: informação junto ao registro | RA: conferir a origem ou obter novo registro, sem alterar silenciosamente o momento original |
 | Registro | local do achado | P02, P03 | domínio | Posição obtida automaticamente ou referência informada manualmente. Para P02, preservar a distinção entre coordenada, talhão e identificação da árvore. | coordenada ou referência espacial | origem explícita; não presumir precisão não demonstrada | tentar localização automática | PP: indicar origem e disponibilidade | RA: usar alternativa manual oferecida, sem inventar coordenadas |
@@ -364,32 +405,32 @@ Nos signos compartilhados, a interpretação relativa a P02 respeita esse limite
 | Repasse dos achados | destinatário dos achados | P02 | domínio | Papel responsável pela continuidade do trabalho. O gestor é o destinatário adotado no cenário, sujeito à investigação das responsabilidades. | função | definido antes da comunicação | gestor da rota, se definido | PP: função visível | RA: corrigir antes do envio |
 | Repasse dos achados | situação do envio | P02 | aplicação | “Aguardando conexão”, “enviando”, “enviado” ou “falha”, como proposta; enviado não significa lido. | estado ou mensagem | separada do salvamento e do reconhecimento humano | aguardando, se houver fila offline implementada | PP: pendência explícita | RA: nova tentativa mantendo os registros |
 | Ciclo | aviso de ciclo concluído | P01 | aplicação | Informa término com data; não garante cobertura de todos os talhões. | mensagem e data | associado ao ciclo | nenhum | PP: apresentar cobertura | RA: reabrir resumo |
-| Ciclo | cobertura do talhão | P01 | domínio | Inspecionado, não inspecionado ou cobertura incompleta. | estado | não confundir com sem focos | não inspecionado | PP: texto, símbolo e limite | RA: pedir nova inspeção |
-| Ciclo | situação do talhão no ciclo | P01 | aplicação | Com focos, sem focos nesta inspeção ou não inspecionado. | estado | sem focos somente para talhão inspecionado | não inspecionado | PP: distinguir os estados | RA: conferir cobertura |
+| Ciclo | cobertura do talhão | P01 | domínio | Inspecionado, não inspecionado ou cobertura incompleta. | estado | não confundir com sem detecções | não inspecionado | PP: texto, símbolo e limite | RA: pedir nova inspeção |
+| Ciclo | situação do talhão no ciclo | P01 | aplicação | Com detecções, sem detecções nesta inspeção ou não inspecionado. Não usa “foco”, porque as detecções do ciclo ainda não foram confirmadas pelo agrônomo. | estado | sem detecções somente para talhão inspecionado | não inspecionado | PP: distinguir os estados | RA: conferir cobertura |
 | Posição do gestor | posição do talhão | P01 | aplicação | Escolha: confiável, parecer do agrônomo ou reinspeção; não valida a praga. | estado escolhido | uma posição por talhão e ciclo | sem posição | PP: saídas claras | RA: alterar antes da decisão |
 | Evolução | tendência do talhão | P01 | aplicação | Avançando, estável ou recuando entre ciclos; mesma base do histórico. | estado e ciclos | avisar cobertura incompleta | sem comparação | PP: texto e símbolo; AL: cobertura incompleta | RA: consultar cobertura |
 | Evolução | última aplicação | P01 | domínio | Marca no histórico o ciclo com aplicação. | data ou ciclo | não indica produto nem dose | nenhuma | PP: marca na linha do tempo | RA: corrigir registro |
 | Pedido de parecer | + pedido de parecer | P01, P03 | aplicação | Solicitação do gestor para avaliar talhão; distinta de detecção nova. | registro composto | ligado a um talhão | — | — | — |
 | Pedido de parecer | solicitante | P03 | domínio | Função e nome de quem pediu o parecer. | texto | — | — | — | — |
 | Pedido de parecer | pontos pendentes | P03 | aplicação | Quantidade de pontos com detecção sem veredito. | inteiro | ≥ 0 | — | — | — |
-| Pedido de parecer | situação do pedido | P03 | aplicação | Pendente ou concluído após envio do parecer. | estado | — | pendente | PP: texto além de cor | RA: preservar texto e pendência após falha |
-| Validação | situação da validação | P03 | aplicação | Pendente, confirmado por humano ou rejeitado; nova foto mantém pendência. | estado | um por vez | pendente | PP: legenda, símbolo e texto | RA: alterar até enviar parecer |
-| Validação | veredito | P03 | domínio | Confirmar, rejeitar ou pedir nova foto. | escolha | confirmar ou rejeitar remove pendência | nenhum | PP: efeito das opções | RA: alterar até enviar |
+| Pedido de parecer | situação do pedido | P03 | aplicação | Pendente ou concluído após envio do parecer; concluído não significa lido nem executado. | estado | — | pendente | PP: texto além de cor | RA: preservar texto e pendência após falha |
+| Validação | situação da validação | P03 | aplicação | Pendente, confirmado ou rejeitado pelo agrônomo; o pedido de nova foto mantém o ponto pendente. | estado | um por vez | pendente | PP: legenda, símbolo e texto | RA: alterar até enviar o parecer (decisão provisória) |
+| Validação | veredito | P03 | domínio | Julgamento do agrônomo sobre o ponto: confirmar ou rejeitar. Pedir nova foto adia o veredito. | escolha | confirmar ou rejeitar remove a pendência | nenhum | PP: efeito das opções | RA: alterar até enviar o parecer (decisão provisória) |
 | Validação | validado por | P03 | aplicação | Nome e função de quem registrou, com data e hora. | texto e data/hora | automático | usuário conectado | — | — |
-| Validação | observação técnica | P03 | domínio | Nota opcional sobre o ponto. | texto | até 500 caracteres | vazio | PA: contador e limite | RA: editar |
+| Validação | observação técnica | P03 | domínio | Nota opcional sobre o ponto. | texto | até 500 caracteres (decisão provisória) | vazio | PA: contador e limite | RA: editar |
 | Validação | pedido de nova foto | P03, P02 | aplicação | Solicitação para fotografar novamente um ponto; para P02, chegada contextualizada por L5, sem presumir integração implementada. | solicitação | ligada ao ponto e à origem | — | PP: identificar local e finalidade; ponto continua pendente na proposta | RA: obter nova imagem e associá-la ao pedido |
 | Histórico | detecção anterior | P03 | aplicação | Indica detecção em inspeções anteriores. | indicador visual | — | — | — | — |
-| Histórico | detecções anteriores do ponto | P03 | aplicação | Resumo de inspeções na mesma tela da foto. | lista | até três itens | últimas três | — | — |
+| Histórico | detecções anteriores do ponto | P03 | aplicação | Resumo de inspeções junto da evidência do ponto. | lista | até três itens (decisão provisória) | últimas três (decisão provisória) | — | — |
 | Histórico | histórico de detecções | P03 | aplicação | Lista única, acessível por caminhos diferentes; base da tendência de P01. | lista | mais recente primeiro | — | — | RA: ausência de resultados e ampliação do período |
-| Histórico | período | P03 | domínio | Intervalo de datas do filtro. | intervalo | início ≤ fim | últimas oito semanas | PA: fim anterior indisponível | RA: alterar |
+| Histórico | período | P03 | domínio | Intervalo de datas do filtro. | intervalo | início ≤ fim | últimas oito semanas (decisão provisória) | PA: fim anterior indisponível | RA: alterar |
 | Histórico | local do filtro | P03 | domínio | Propriedade, talhão ou ponto conforme origem. | seleção | — | conforme origem | PP: filtro ativo visível | RA: remover |
-| Parecer | área de aplicação | P03 | domínio | Região delimitada pelo agrônomo no mapa. | polígono e hectares | ao menos um ponto confirmado | — | PA: base de confirmados; AL: pendências | RA: redesenhar |
-| Parecer | produto | P03 | domínio | Produto indicado pelo agrônomo; sistema registra. | texto | obrigatório para enviar | vazio | PP: não substitui receituário; PA: bloquear envio incompleto | RA: editar |
-| Parecer | dose | P03 | domínio | Dose indicada pelo agrônomo. | texto | obrigatório para enviar | vazio | PA: bloquear envio sem dose | RA: editar |
-| Parecer | período de aplicação | P03 | domínio | Quando aplicar, indicado pelo agrônomo. | data ou intervalo | início ≥ hoje | — | PA: datas passadas indisponíveis | RA: editar |
-| Parecer | parecer técnico | P03, P01 | domínio | Recomendação com justificativa; entrada da decisão do ciclo. | texto | não vazio | vazio | PA: impedir envio vazio; AL: confirmar área e destinatário | RA: editar |
-| Parecer | pontos vinculados | P03 | aplicação | Pontos confirmados usados na área. | lista | gerada pelo sistema | confirmados da área | — | — |
-| Parecer | destinatário do parecer | P03 | domínio | Gestor solicitante ou gestor da propriedade. | texto | não nulo | solicitante | PP: destinatário visível | RA: alterar |
+| Parecer | área de aplicação | P03 | domínio | Região delimitada pelo agrônomo. Que o agrônomo delimite a área neste fluxo é hipótese (H07, Q7). | polígono e hectares | ao menos um ponto confirmado (decisão provisória) | — | PA: base de confirmados; AL: pendências | RA: redesenhar |
+| Parecer | produto | P03 | domínio | Produto indicado pelo agrônomo; o sistema registra, sem sugerir. Que o parecer inclua produto é hipótese (Q7). | texto | obrigatório para enviar (decisão provisória) | vazio | PP: não substitui receituário; PA: bloquear envio incompleto | RA: editar |
+| Parecer | dose | P03 | domínio | Dose indicada pelo agrônomo; o sistema registra, sem sugerir. Inclusão no parecer é hipótese (Q7). | texto | obrigatório para enviar (decisão provisória) | vazio | PA: bloquear envio sem dose | RA: editar |
+| Parecer | período de aplicação | P03 | domínio | Quando aplicar, indicado pelo agrônomo. Inclusão no parecer é hipótese (Q7). | data ou intervalo | início ≥ hoje (decisão provisória) | — | PA: datas passadas indisponíveis | RA: editar |
+| Parecer | parecer técnico | P03, P01 | domínio | Recomendação com justificativa; entrada da decisão do ciclo, sem substituir a decisão do gestor nem o receituário agronômico. Conteúdo e destinatário dependem de H04 e Q7. | texto | não vazio (decisão provisória) | vazio | PA: impedir envio vazio; AL: confirmar área e destinatário | RA: editar |
+| Parecer | pontos vinculados | P03 | aplicação | Pontos confirmados usados na área. | lista | gerada pelo sistema; somente confirmados (decisão provisória) | confirmados da área | — | — |
+| Parecer | destinatário do parecer | P03 | domínio | Gestor solicitante ou gestor da propriedade; destinatário condicionado a H04. | texto | não nulo | solicitante | PP: destinatário visível | RA: alterar |
 | Decisão do ciclo | ordem dos talhões | P01 | aplicação | Ordenação dos talhões inspecionados pela quantidade de detecções no ciclo e pela tendência. É um dado calculado das inspeções registradas, não confirmação nem recomendação. Substitui o termo “gravidade”, que não é usado como signo. | lista ordenada com o critério exibido | só talhões inspecionados; não usa a confiança do resultado como peso | por detecções no ciclo | PP: exibir o critério da ordem | RA: reordenar por talhão ou por tendência |
 | Decisão do ciclo | decisão do ciclo | P01 | domínio | Onde, quando e com que urgência aplicar; não é recomendação automática. | talhões, data e urgência | gestor registra; autoria e data | nenhuma | PP: ordem dos talhões com critério exibido, como dado | RA: alterar antes de repassar |
 | Decisão do ciclo | destinatário da decisão | P01 | domínio | Quem aplica o produto; pode não usar o sistema. | função ou nome | definido para o repasse | — | PP: mostrar antes de repassar | RA: corrigir |
@@ -407,7 +448,8 @@ Nos signos compartilhados, a interpretação relativa a P02 respeita esse limite
 |---|---|---|
 | achado | Registro do trabalhador com foto, indicação automática, momento e referência espacial disponível. | Praga confirmada. |
 | detecção | Indicação automática associada ao achado, ainda sem veredito humano. | Diagnóstico. |
-| foco | Talhão ou região com pontos confirmados pelo agrônomo, ou com detecções que o gestor está avaliando. **Definição compartilhada pendente de revisão por misturar níveis de confirmação.** | Ponto isolado sem validação. |
+| foco | Região de um talhão com pontos confirmados pelo agrônomo. | Talhão ou ponto com detecções ainda sem veredito humano. |
+| detecções em avaliação | Talhão ou região com detecções ainda sem veredito humano, inclusive as que o gestor está avaliando. | Foco ou praga confirmada. |
 | ponto | Local amostrado; pode ter referência de talhão, linha e árvore, cuja origem deve ser explícita. | Talhão ou árvore identificada com certeza apenas pelo GPS. |
 | situação do ponto na rota | Com registro ou pendente na rota proposta de P02. | Situação da validação. |
 | situação da validação | Pendente, confirmado ou rejeitado pelo agrônomo. | Situação do ponto na rota. |
@@ -428,9 +470,9 @@ Na atualização da Entrega 10, o M02 deverá reutilizar os objetivos revisados 
 
 **Pedro:** CI01 foi revisado para descrever a intervenção sem fixar rótulos e para marcar como hipótese o que ainda não foi confirmado sobre P01. O10 foi identificado como objetivo final; O07/O09/O11, como instrumentais diretos; e O06/O08, como instrumentais indiretos. “Gravidade” foi substituída pelo signo “ordem dos talhões”, com critério definido, e a confiança do resultado passou a dizer de onde vem e o que não significa. Os diagramas MoLIC deverão contemplar O06–O11 e as conversas sobre receber o resumo do ciclo, conferir a cobertura, avaliar evidência e confiança, registrar a posição do talhão, ler a evolução, registrar a decisão e conferir o repasse. Devem incluir os retornos para talhão não inspecionado, dúvida sobre resultado, cobertura incompleta e falha no repasse.
 
-**Guilherme:** os diagramas MoLIC deverão contemplar O12–O19: escolher o foco, validar cada ponto, consultar histórico, pedir nova foto, delimitar área, redigir e enviar parecer e acompanhar pedido. Devem incluir retornos para foto insuficiente, revisão interrompida, histórico sem resultados, área sem ponto confirmado ou campos vazios e falha no envio.
+**Guilherme:** CI03 foi revisado para descrever a intervenção sem fixar rótulos, estados nem dados fictícios do protótipo; o episódio passado de aplicação em área maior, sem evidência, foi retirado e o risco voltou a ser possibilidade a investigar (Q5); as hipóteses de P03 foram explicitadas. O12 foi identificado como objetivo final; O14/O15/O17/O18, como instrumentais diretos; e O13/O16/O19, como instrumentais indiretos. As restrições de P03 que dependem de hipóteses foram marcadas como decisões provisórias, e a avaliação da IA passou a dizer de onde vem, o que significa, o que não significa e quem a utiliza. Os diagramas MoLIC deverão contemplar O12–O19 e as conversas sobre saber o que aguarda avaliação, reunir a evidência do ponto, consultar a avaliação da IA, registrar o veredito, consultar o histórico, delimitar a área e encaminhar o parecer. Devem incluir os retornos para foto insuficiente, revisão interrompida, histórico sem resultados, área sem ponto confirmado ou campos vazios e falha no envio, mantendo o fluxo condicionado à confirmação do papel do agrônomo.
 
-**Equipe:** IDs e vocabulário devem permanecer rastreáveis. A classificação dos objetivos dos demais perfis e as definições compartilhadas ainda precisam de consolidação.
+**Equipe:** IDs e vocabulário devem permanecer rastreáveis. Os objetivos dos três perfis estão classificados. “Foco” passa a designar apenas região com pontos confirmados pelo agrônomo; detecções ainda sem veredito são “detecções em avaliação”. “Confiança do resultado” (P01, por talhão) e “avaliação da IA” (P03, por foto) permanecem como dois signos distintos, com a mesma origem declarada.
 
 ## Registro da revisão de Lucas
 
@@ -454,15 +496,23 @@ Na atualização da Entrega 10, o M02 deverá reutilizar os objetivos revisados 
 | Mapa integrado | Ramo de Pedro atualizado no SVG; bloco de Guilherme preservado. |
 | Signos | Novo signo “ordem dos talhões”; semântica de “confiança do resultado” precisada (origem, significado, limite e uso). |
 
+## Registro da revisão de Guilherme
+
+| Item | Alteração realizada |
+|---|---|
+| CI03 | Retirada de rótulos, estados e dados fictícios do protótipo (talhão, pontos, árvore, datas, período e área); retirada do episódio passado de aplicação maior, sem evidência; hipóteses de P03 explicitadas; referência à Entrega 11 substituída pela delimitação em relação à Entrega 6. |
+| DCC | Mantido como local das propostas de comunicação; dados fictícios substituídos por valores variáveis; falas `U` menos roteirizadas; base hipotética de área, produto, dose, período e parecer explicitada. |
+| O12–O19 | Classificação em final, instrumental direto e instrumental indireto, com relações explícitas; passos operacionais retirados do mapa; IDs preservados. |
+| Mapa integrado | Ramo de Guilherme atualizado no SVG com a hierarquia revisada; L1–L7 preservadas. |
+| Signos | Restrições e valores padrão dependentes de hipóteses marcados como decisão provisória; semântica da avaliação da IA precisada (origem, significado, limite e uso); “veredito” limitado a confirmar ou rejeitar. |
+
 ## Pendências para conclusão geral
 
 | Responsável | Correção necessária |
 |---|---|
 | Pedro | Concluído na revisão de 20/11/2026 (ver registro acima). |
-| Guilherme | Abstrair o detalhamento do CI03; remover ou reformular como risco o episódio sem evidência de aplicação excessiva; preservar a condição hipotética de P03; classificar O12–O19 e identificar restrições provisórias da aplicação. |
-| Equipe | Incorporar ao SVG a revisão dos objetivos dos demais perfis, preservando o ramo corrigido de Lucas e L1–L7; revisar “foco”. A semântica de “confiança do resultado” foi precisada por Pedro e precisa ser compatibilizada com “sinal forte/fraco” de P03. |
-
-O episódio passado de aplicação excessiva preservado no CI03 não está sustentado por evidência apresentada e continua pendente de correção pelo autor. Sua presença não deve ser interpretada como confirmação de ocorrência real.
+| Guilherme | Concluído na revisão de 22/11/2026 (ver registro acima). |
+| Equipe | Concluído em 22/11/2026: “foco” restrito a pontos confirmados, com o termo “detecções em avaliação” para o restante; “confiança do resultado” e “avaliação da IA” mantidos como dois signos com a mesma origem; nomes revisados registrados na rastreabilidade. |
 
 Não há entrevista futura tratada como condição automaticamente cumprida ou como evidência existente.
 
@@ -487,10 +537,10 @@ A atualização das entregas dependentes e da rastreabilidade deverá preservar 
 - [x] O esquema de signos permanece em tabela única.
 - [x] A síntese de Lucas orienta a atualização do M02.
 - [x] CI01 foi revisado para retirar rótulos e explicitar hipóteses.
-- [ ] CI03 foi revisado para retirar detalhamento excessivo e o acontecimento sem evidência.
+- [x] CI03 foi revisado para retirar detalhamento excessivo e o acontecimento sem evidência.
 - [x] O06–O11 foram classificados por Pedro.
-- [ ] O12–O19 foram classificados por Guilherme.
-- [ ] O SVG integrado incorpora a hierarquia revisada dos três perfis (Lucas e Pedro concluídos).
-- [ ] As restrições provisórias de P03 foram explicitadas.
-- [ ] As definições compartilhadas de foco e confiança foram consolidadas.
-- [ ] Os nomes revisados foram propagados às entregas dependentes e à rastreabilidade.
+- [x] O12–O19 foram classificados por Guilherme.
+- [x] O SVG integrado incorpora a hierarquia revisada dos três perfis.
+- [x] As restrições provisórias de P03 foram explicitadas.
+- [x] As definições compartilhadas de foco e confiança foram consolidadas.
+- [x] Os nomes revisados foram registrados na rastreabilidade; a Entrega 10 deverá reutilizá-los na sua revisão.
