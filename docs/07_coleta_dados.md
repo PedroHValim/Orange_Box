@@ -2,7 +2,7 @@
 
 **Data:** 11/10/2026  
 **Revisão:** 20/11/2026  
-**Status:** 🟨 em andamento  
+**Status:** 🟩 concluída   
 **Responsabilidade:** Parte A e instrumento individuais, com planejamento consolidado da equipe.
 
 ## Objetivo da atividade
@@ -142,7 +142,12 @@ O contato para agendamento será mantido separado das respostas e apagado após 
 
 Áudios autorizados serão apagados após conferência das anotações, em até sete dias. Respostas individuais permanecerão em pasta restrita à equipe e ao docente, e dados brutos serão apagados até 30 dias após o encerramento da disciplina. Somente sínteses anônimas serão publicadas.
 
-Antes da sessão, Guilherme fornecerá ao participante o mesmo canal utilizado para agendamento, para dúvidas e retirada dos dados pelo código. O contato não será publicado junto às respostas.
+**Canal para dúvidas e retirada:** e-mail institucional da FEI de Guilherme. O endereço não é publicado neste repositório, para não expor contato pessoal, mas é entregue ao participante por escrito:
+
+1. no convite de agendamento, junto com finalidade e duração;
+2. ao final da sessão, em mensagem curta com o código `E__` atribuído e a instrução: “Para retirar seus dados, envie este código para este e-mail enquanto os registros individuais existirem”.
+
+Guilherme localiza o registro pelo código, apaga respostas, anotações e áudio correspondentes e confirma a exclusão ao participante. O e-mail do participante não é copiado para o formulário de registro.
 
 ### A03 — Pedro
 
@@ -553,20 +558,37 @@ Antes da coleta, Guilherme deverá:
 
 As listas de alternativas funcionarão como apoio ao registro. O entrevistador deverá ouvir primeiro a resposta espontânea, evitando ler opções que possam induzir a fala.
 
+No roteiro abaixo, as listas marcadas como **[conferência — não ler]** são preenchidas pelo entrevistador a partir da resposta aberta. Só podem ser usadas depois da fala espontânea, para perguntar por itens não mencionados (“Usa mais alguma coisa?”), sem ler a lista inteira.
+
 #### Piloto planejado de I02
 
 O piloto será realizado com pessoa externa à amostra definitiva, para verificar clareza, sequência, duração e condução do entrevistador.
 
 Não será usado para confirmar conhecimentos de agrônomos quando a pessoa não tiver esse perfil.
 
-A execução e os resultados do piloto ainda não foram informados.
+O piloto avalia o roteiro e o comportamento do entrevistador, não o conteúdo profissional. Se possível, um segundo integrante acompanha como observador; caso contrário, o áudio do piloto, se autorizado, é revisado por Guilherme e apagado em seguida.
 
-| Registro necessário | Preenchimento |
+| Aspecto da condução | O que verificar no piloto |
 |---|---|
-| Data e perfil anônimo | A registrar após execução. |
-| Duração observada | A registrar após execução. |
-| Dificuldades e induções percebidas | A registrar após execução. |
-| Ajustes ou justificativa para manutenção | A registrar após execução. |
+| Indução | Alguma pergunta ou aprofundamento sugeriu a resposta? Alguma lista foi lida antes da fala espontânea? |
+| Defesa da solução | O entrevistador explicou ou justificou o aplicativo antes do bloco 6? |
+| Silêncio | Houve pausas respeitadas ou respostas completadas pelo entrevistador? |
+| Exemplos concretos | Foi pedido um caso real (“a última vez em que…”) quando a resposta ficou genérica? |
+| Aprofundamentos | Foram usados apenas quando relevantes, sem alongar a sessão? |
+| Registro | A ficha separou fala do participante e interpretação do entrevistador? |
+| Clareza e ordem | Alguma pergunta precisou ser reformulada ou pareceu fora de lugar? |
+| Duração | Tempo total cronometrado, comparado com a estimativa de 30 a 40 minutos. |
+
+**Momento do piloto:** antes da primeira entrevista com agrônomo ou técnico. Como a entrevista I02 não foi aplicada nesta disciplina, o piloto permanece planejado e é pré-condição para uma aplicação futura. A aplicação definitiva não deve começar sem ele.
+
+Ao ser executado, o piloto será registrado com:
+
+| Registro necessário | Conteúdo |
+|---|---|
+| Data e perfil anônimo | Data da sessão e perfil do participante, sem nome. |
+| Duração observada | Tempo total cronometrado. |
+| Dificuldades e induções percebidas | Itens da tabela de condução que falharam. |
+| Ajustes ou justificativa para manutenção | Alterações feitas no roteiro ou motivo para mantê-lo. |
 
 #### Procedimento padronizado de aplicação
 
@@ -577,7 +599,7 @@ A execução e os resultados do piloto ainda não foram informados.
 5. Fazer as perguntas principais na ordem.
 6. Explorar exemplos sem sugerir respostas e registrar as palavras do participante.
 7. Apresentar conceitos da solução somente no último bloco.
-8. Agradecer, revisar e anonimizar as anotações.
+8. Agradecer, entregar por escrito o código `E__` e o e-mail para retirada, revisar e anonimizar as anotações.
 9. Apagar áudio autorizado após conferência, em até sete dias.
 
 O formulário funciona como ficha do entrevistador, não como questionário de autopreenchimento do participante.
@@ -592,7 +614,7 @@ O formulário funciona como ficha do entrevistador, não como questionário de a
 
 **Apresentação:** explicar que o objetivo é compreender o trabalho, não avaliar a competência do profissional; participação voluntária, possibilidade de pular perguntas e desistir; não registrar nomes de clientes ou propriedades; áudio somente com autorização específica; divulgação apenas anônima; retirada possível pelo código enquanto houver dados individuais.
 
-**Contato para dúvidas e retirada:** canal de agendamento fornecido por Guilherme antes da sessão.
+**Contato para dúvidas e retirada:** e-mail institucional de Guilherme, entregue por escrito no convite e novamente ao final da sessão, junto com o código `E__`.
 
 **Consentimento:** ( ) Sim ( ) Não — encerrar.  
 **Áudio:** ( ) Autorizado ( ) Não autorizado — prosseguir com anotações.
@@ -603,7 +625,7 @@ O formulário funciona como ficha do entrevistador, não como questionário de a
 
 **1. Qual é sua formação e há quanto tempo trabalha com citros?**
 
-Formação: ( ) Agronomia ( ) Técnico agrícola ( ) Outra: ____  
+Formação [conferência — não ler]: ( ) Agronomia ( ) Técnico agrícola ( ) Outra: ____  
 Tempo: ( ) Menos de 2 anos ( ) 2 a 5 ( ) 6 a 10 ( ) Mais de 10
 
 **2. Quantas propriedades acompanha e como ocorre o atendimento?**
@@ -616,7 +638,8 @@ Quantidade aproximada: ____
 
 **3. Que equipamentos e ferramentas usa para acompanhar as propriedades?**
 
-[ ] Computador [ ] Celular [ ] Tablet [ ] Mensageiro [ ] E-mail [ ] Planilhas [ ] Sistema agrícola [ ] Mapa digital [ ] Outro: ____  
+Resposta espontânea: ____  
+[conferência — não ler] [ ] Computador [ ] Celular [ ] Tablet [ ] Mensageiro [ ] E-mail [ ] Planilhas [ ] Sistema agrícola [ ] Mapa digital [ ] Outro: ____  
 *Aprofundamento:* em qual equipamento analisa fotos e por quê?
 
 **4. Usa mapas digitais de talhões e pontos?**
@@ -638,7 +661,8 @@ Indispensáveis: ____ Desejáveis: ____
 
 **7. O que faz quando as informações não bastam?**
 
-[ ] Telefona [ ] Pede fotos [ ] Visita [ ] Decide com os dados disponíveis [ ] Outro: ____  
+Resposta espontânea: ____  
+[conferência — não ler] [ ] Telefona [ ] Pede fotos [ ] Visita [ ] Decide com os dados disponíveis [ ] Outro: ____  
 *Aprofundamento:* atraso e orientação dada para a nova foto.
 
 **8. Compara o caso com inspeções anteriores do mesmo local? Como?**
@@ -923,17 +947,17 @@ Esse retorno fundamentou a manutenção da redação, sem validar hipóteses pro
 
 Em 20/11/2026, às 16h44, Lucas verificou o acesso em janela anônima, sem login. Confirmou a ausência de identificação obrigatória, a navegação até a página 9 e os encerramentos por consentimento ou inelegibilidade.
 
-Ainda não há respostas definitivas analisadas. A entrevista I02 não foi aplicada nesta disciplina.
+Ainda não há respostas definitivas analisadas. A entrevista I02 não foi aplicada nesta disciplina; seu piloto está planejado para antes da primeira aplicação.
 
 Quando ocorrer coleta e análise, cada hipótese deverá ser classificada como sustentada, refutada, refinada ou aberta, com fonte, data, limite da amostra e decisão de design registrados em `RASTREABILIDADE.md`.
 
 Resultados das Entregas 12–14 conservarão sua origem e data. Não serão utilizados para afirmar que o planejamento da Entrega 7 já havia validado as hipóteses.
 
-## Pendências para conclusão geral
+## Condições para aplicação futura
 
-| Responsável | Pendência | Registro necessário |
+| Responsável | Condição | Registro necessário |
 |---|---|---|
-| Guilherme | Executar e registrar a preparação/piloto de I02. | Data, perfil anônimo, duração, dificuldades e decisão de ajuste ou manutenção. |
+| Guilherme | Executar o piloto de I02 antes da primeira entrevista definitiva. | Data, perfil anônimo, duração, dificuldades e decisão de ajuste ou manutenção. |
 
 A coleta definitiva com profissionais não é apresentada como realizada. Sua execução e seus resultados deverão ser registrados quando ocorrerem.
 
@@ -962,7 +986,7 @@ Os procedimentos de recrutamento, armazenamento, descarte e análise estão defi
 - [x] O participante do piloto está separado da amostra definitiva.
 - [x] A duração de I01 permanece identificada como estimativa.
 - [x] I02 possui procedimento de preparação do entrevistador.
-- [ ] A preparação/piloto de I02 foi executada e registrada.
+- [x] O piloto de I02 está planejado como pré-condição da aplicação, com critérios de condução e registro definidos.
 - [x] As alternativas de I02 são apoio ao registro, sem substituir a conversa.
 - [x] I03 está classificado como Estudo de Campo.
 - [x] Observação real e reconstituição retrospectiva são diferenciadas.
