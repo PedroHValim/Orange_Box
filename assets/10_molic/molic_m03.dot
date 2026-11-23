@@ -17,13 +17,13 @@ digraph M03 {
   node [shape=plain];
   S1 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S1 — Conhecer o ciclo</b></td></tr><hr/>
-     <tr><td align="left">d: aviso de ciclo concluído: data do ciclo,<br align="left"/>talhões inspecionados e talhões com focos<br align="left"/></td></tr></table>>];
+     <tr><td align="left">d: aviso de ciclo concluído: data do ciclo,<br align="left"/>talhões inspecionados e talhões com detecções<br align="left"/></td></tr></table>>];
   S2 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S2 — Conferir a cobertura</b></td></tr><hr/>
-     <tr><td align="left">d: cobertura do talhão: inspecionado,<br align="left"/>não inspecionado ou incompleta<br align="left"/>d: situação do talhão no ciclo: não inspecionado<br align="left"/>não significa sem focos<br align="left"/></td></tr></table>>];
+     <tr><td align="left">d: cobertura do talhão: inspecionado,<br align="left"/>não inspecionado ou incompleta<br align="left"/>d: situação do talhão no ciclo: não inspecionado<br align="left"/>não significa sem detecções<br align="left"/></td></tr></table>>];
   S3 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S3 — Escolher o talhão</b></td></tr><hr/>
-     <tr><td align="left">d: talhões com focos na ordem dos talhões<br align="left"/>(critério exibido: detecções no ciclo e tendência)<br align="left"/>d: a ordem é dado, não recomendação<br align="left"/>d: posição do talhão já registrada<br align="left"/></td></tr></table>>];
+     <tr><td align="left">d: talhões com detecções na ordem dos talhões<br align="left"/>(critério exibido: detecções no ciclo e tendência)<br align="left"/>d: a ordem é dado, não recomendação<br align="left"/>d: posição do talhão já registrada<br align="left"/></td></tr></table>>];
   S4 [label=<<table border="1" cellborder="0" cellspacing="0" cellpadding="5" style="rounded" bgcolor="#FFFFFF">
      <tr><td><b>S4 — Avaliar o talhão</b></td></tr><hr/>
      <tr><td align="left">d: fotos, local e confiança do resultado<br align="left"/>d: confiança do resultado não é validação humana<br align="left"/>d: aviso se a cobertura do talhão foi incompleta<br align="left"/></td></tr></table>>];
@@ -52,7 +52,7 @@ digraph M03 {
   // caminho principal
   ini -> S1 [label=" u: ver o resultado do ciclo\l gco: decidir o manejo do ciclo\l"];
   S1 -> S2 [label=" u: conferir a cobertura"];
-  S2 -> S3 [label=" u: ver os talhões com focos"];
+  S2 -> S3 [label=" u: ver os talhões com detecções"];
   S3 -> S4 [label=" u: abrir um talhão"];
   S4 -> P2 [label=" u: registrar posição (confiável,\n parecer do agrônomo ou reinspeção)"];
   P2 -> S6 [label=" d: posição registrada"];

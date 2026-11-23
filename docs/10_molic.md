@@ -1,8 +1,8 @@
 # Entrega 10 — MoLIC
 
 **Data:** 14/11/2026  
-**Revisão:** 20/11/2026  
-**Status:** 🟨 em andamento  
+**Revisão:** 22/11/2026  
+**Status:** 🟩 concluída  
 **Responsabilidade:** 1 solução completa por integrante.
 
 ## Objetivo da atividade
@@ -15,9 +15,11 @@ O MoLIC representa as conversas necessárias aos objetivos dos usuários, não o
 
 **Autor:** Guilherme Morais Escudeiro — 24.123.005-1  
 **Cenário de origem:** CI03  
-**Objetivos:** O12–O19  
+**Objetivos (revisados na Entrega 9):** O12 — emitir parecer técnico fundamentado sobre um foco de infestação (final); O14 — distinguir, em cada ponto, a indicação automática da presença confirmada da praga, O15 — compreender a recorrência da praga no ponto ou no talhão entre inspeções, O17 — definir a extensão do foco que o parecer deve abranger e O18 — assegurar que o parecer chegue ao responsável pela decisão, associado às evidências (instrumentais diretos); O13 — saber quais solicitações e detecções aguardam sua avaliação, O16 — dispor de evidência suficiente quando a foto não permite julgar e O19 — manter conhecimento dos pedidos atendidos e pendentes (instrumentais indiretos).  
 **Tarefas relacionadas:** T05, T06 (método M3) e T07  
-**Signos relevantes:** pedido de parecer, propriedade, talhão, solicitante, pontos pendentes, situação do pedido, ponto, situação da validação, detecção anterior, foto original, data e hora da captura, árvore, local do achado, avaliação da IA, veredito, histórico, área de aplicação, produto, dose, período de aplicação, parecer técnico, pontos vinculados e destinatário.
+**Signos relevantes (nomes da Entrega 9):** pedido de parecer, propriedade, talhão, solicitante, pontos pendentes, situação do pedido, detecção, ponto, situação da validação, detecção anterior, foto do fruto, data e hora da captura, árvore, local do achado, detecções anteriores do ponto, avaliação da IA, veredito, validado por, observação técnica, pedido de nova foto, histórico de detecções, período, local do filtro, área de aplicação, produto, dose, período de aplicação, parecer técnico, pontos vinculados e destinatário do parecer.
+
+**Condição do modelo:** M01 é um modelo de interação proposto. P03 continua proto-persona, a entrevista I02 não foi aplicada e H04, H07 e Q7 do C03 seguem abertas; a forma correta do diagrama não confirma que o trabalho do agrônomo ocorre dessa maneira.
 
 ### Diagrama
 
@@ -25,23 +27,33 @@ O MoLIC representa as conversas necessárias aos objetivos dos usuários, não o
 
 **Fonte editável:** [molic_m01.svg](../assets/10_molic/molic_m01.svg) — SVG com formas e texto editáveis.
 
+### Correções aplicadas ao M01
+
+- S1 passou a “Saber o que aguarda avaliação” (O13). Pela revisão do vocabulário na Entrega 9, “foco” designa só região com pontos confirmados pelo agrônomo; em S1 ainda há pedidos e detecções sem veredito.
+- As cenas usam os nomes exatos dos signos da Entrega 9: situação da validação, foto do fruto, local do achado, local do filtro, data e hora da captura, avaliação da IA e destinatário do parecer.
+- “Ampliar foto” saiu de S3: é ação do usuário, não signo. Dentro das cenas, `u:` indica apenas valores fornecidos pelo usuário.
+- Os objetivos seguem a classificação revisada de O12–O19 na Entrega 9.
+- Regras do parecer que dependem de hipóteses de P03 estão marcadas como decisões provisórias.
+
 ### Leitura do diagrama
 
 O diagrama apresenta as cenas S1, S2, S3, S5, S6 e S7 e os processamentos P1–P5. A antiga cena S4 de pedir nova foto foi incorporada como ação em S3, acompanhada do processamento P2. A numeração restante foi mantida para preservar as referências.
 
-**Hipóteses ainda não validadas:** Marcelo é uma proto-persona. A conversa supõe que o agrônomo recomenda e o gestor decide a execução (H04); que foto, localização e histórico bastam para parte da análise a distância (H07/H22); e que o parecer precisa de produto, dose e período.
+**Hipóteses ainda não validadas:** Marcelo é uma proto-persona. A conversa supõe que o agrônomo recomenda e o gestor decide a execução (H04); que foto, local do achado e histórico bastam para parte da análise a distância (H07/H22); que o agrônomo valida ponto a ponto e delimita a área; e que o parecer inclui produto, dose e período (Q7 do C03).
 
-A entrevista I02 da Entrega 7 não foi realizada. Portanto, essas decisões permanecem hipóteses de design.
+A entrevista I02 da Entrega 7 não foi realizada. Portanto, essas conversas permanecem hipóteses de design, e não regras do trabalho do agrônomo.
+
+**Decisões provisórias assumidas por M01 (Entrega 9):** avaliação da IA recolhida até consulta (S3); veredito alterável até o envio do parecer (P1); período padrão do histórico (S5); área com ao menos um ponto confirmado e produto, dose e período obrigatórios para seguir (P4); parecer técnico não vazio para enviar (P5).
 
 #### Caminho principal
 
-1. **Abertura → S1 — Escolher o foco:** Marcelo abre pedidos de parecer. O sistema mostra propriedade, talhão, solicitante, pontos pendentes e situação do pedido.
-2. **S1 → S2 — Examinar o talhão:** ao abrir um pedido, encontra o mapa dos pontos e suas situações.
-3. **S2 → S3 — Validar a detecção:** seleciona um ponto e examina foto, data, hora, árvore, local e registros anteriores. Pode ampliar a foto, consultar a indicação da IA e anotar observação.
+1. **Abertura → S1 — Saber o que aguarda avaliação:** Marcelo abre pedidos de parecer (`gco: Emitir parecer técnico`). O sistema mostra os pedidos de parecer — propriedade, talhão, solicitante, pontos pendentes e situação do pedido — separados das detecções novas sem pedido.
+2. **S1 → S2 — Examinar o talhão:** ao abrir um pedido ou uma detecção nova, encontra o mapa dos pontos e a situação da validação de cada um.
+3. **S2 → S3 — Validar a detecção:** seleciona um ponto e examina foto do fruto, data e hora da captura, árvore, local do achado e detecções anteriores do ponto. Pode ampliar a foto, consultar a avaliação da IA e anotar observação técnica.
 4. **S3 → P1 → S2:** confirma ou rejeita. O sistema registra o veredito e destaca o próximo ponto pendente.
 5. **S2 → S6 — Delimitar a área:** seleciona emitir parecer, examina pontos confirmados, delimita a área e informa produto, dose e período.
 6. **S6 → P4 → S7 — Redigir o parecer:** o sistema registra a área e apresenta pontos vinculados, destinatário e aviso sobre o receituário agronômico. Marcelo escreve a justificativa.
-7. **S7 → P5 → encerramento:** envia ao gestor; o pedido passa a concluído na lista S1.
+7. **S7 → P5 → encerramento:** envia ao gestor (`gcc: Emitir parecer técnico`); o pedido passa a concluído na lista S1. Enviado não significa lido nem executado.
 
 #### Alternativas e rupturas
 
@@ -51,11 +63,11 @@ A entrevista I02 da Entrega 7 não foi realizada. Portanto, essas decisões perm
 | Falha ao enviar pedido de foto. | P2 | Pedido não enviado. | Voltar a S3 e tentar novamente, preservando a detecção. |
 | Falha ao registrar veredito. | P1 | Veredito não registrado. | Voltar a S3 mantendo a observação. |
 | Revisão interrompida. | S2 | Pontos já avaliados permanecem registrados. | Encerrar com pendências; retomar por S1. |
-| Troca de foco. | Qualquer cena | Lista de pedidos acessível. | Acesso ubíquo a S1 sem apagar vereditos registrados. |
+| Troca de pedido. | Qualquer cena | Lista de pedidos acessível. | Acesso ubíquo a S1 sem apagar vereditos registrados. |
 | Consulta de histórico. | S2/S3 | Histórico por ponto, talhão ou sem filtro. | Ir a S5; abrir detecção ou voltar. |
 | Histórico sem resultados. | S5/P3 | Nenhum registro no período. | Manter filtros e permitir ampliar período ou trocar local. |
 | Pontos ainda pendentes. | S6 | Aviso antes da delimitação. | Voltar a S2 ou continuar apenas com pontos confirmados. |
-| Área sem ponto confirmado ou campos incompletos. | S6/P4 | Campo ou condição inválida identificada. | Corrigir em S6 sem perder os demais dados. |
+| Área sem ponto confirmado ou campos incompletos (decisão provisória). | S6/P4 | Campo ou condição inválida identificada. | Corrigir em S6 sem perder os demais dados. |
 | Revisão da área. | S7 | Resumo da área e pontos vinculados. | Voltar a S6 mantendo o texto do parecer. |
 | Falha no envio do parecer. | S7/P5 | Parecer não enviado. | Permanecer em S7 com texto salvo e tentar novamente. |
 
@@ -71,6 +83,9 @@ A entrevista I02 da Entrega 7 não foi realizada. Portanto, essas decisões perm
 - [x] Objetivos e signos seguem a Entrega 9.
 - [x] Diagrama e fonte editável estão identificados.
 - [x] O modelo descreve interação, não o interior do algoritmo.
+- [x] Nomes dos signos padronizados conforme a Entrega 9 no texto e no SVG; “foco” não designa detecções sem veredito.
+- [x] Dentro das cenas, `u:` representa signos fornecidos pelo usuário; ações ficam nas transições.
+- [x] Hipóteses de P03 e decisões provisórias mantidas explícitas.
 
 ## M02 — Inspecionar a rota e repassar os achados
 
@@ -96,10 +111,7 @@ A entrevista I02 da Entrega 7 não foi realizada. Portanto, essas decisões perm
 
 ![MoLIC M02 — Inspecionar a rota e repassar os achados](../assets/10_molic/molic_m02.svg)
 
-**Fonte editável:** [molic_m02.dot](../assets/10_molic/molic_m02.dot), em Graphviz.  
-**Versão vetorial:** [molic_m02.svg](../assets/10_molic/molic_m02.svg).
-
-Os arquivos revisados foram preparados para substituição em `assets/10_molic/`. A geração dos arquivos não significa que tenham sido automaticamente publicados no GitHub.
+**Fonte editável:** [molic_m02.svg](../assets/10_molic/molic_m02.svg) — SVG com formas e texto editáveis.
 
 ### Correções aplicadas ao M02
 
@@ -217,10 +229,8 @@ Dentro das cenas aparecem informações e signos. As falas que mudam o assunto d
 - [x] Há caminhos alternativos e encerramento com pendência.
 - [x] Objetivos e signos foram alinhados à revisão da Entrega 9.
 - [x] A legenda foi redesenhada com contraste legível.
-- [x] SVG revisado e fonte DOT foram preparados e conferidos visualmente.
+- [x] SVG revisado conferido visualmente.
 - [x] O modelo descreve a conversa, não o interior do algoritmo.
-
-**Publicação:** substituir `molic_m02.svg` e adicionar ou substituir `molic_m02.dot` em `assets/10_molic/`. A referência Markdown permanece a mesma.
 
 ## M03 — Revisar o ciclo e decidir o manejo por talhão
 
@@ -245,17 +255,18 @@ Dentro das cenas aparecem informações e signos. As falas que mudam o assunto d
 - As cenas usam os nomes exatos dos signos da Entrega 9: cobertura do talhão, situação do talhão no ciclo, posição do talhão, tendência do talhão, decisão do ciclo, destinatário da decisão e situação do repasse.
 - S4 explicita que a confiança do resultado não é validação humana.
 - Os objetivos seguem a classificação revisada de O06–O11 na Entrega 9.
+- Revisão da equipe (22/11/2026): “talhões com focos” passou a “talhões com detecções” em S1, S2, S3 e na transição S2 → S3, conforme o vocabulário da Entrega 9 (“foco” só com pontos confirmados pelo agrônomo); S4 usa “confiança do resultado”.
 
 ### Cenas, processamento e encerramentos
 
 | Elemento | Tópico da conversa | Conteúdo |
 |---|---|---|
 | Abertura | Iniciar revisão. | Jaime abre o resultado do ciclo. |
-| S1 — Conhecer o ciclo | “O que foi encontrado?” | Data, talhões inspecionados e talhões com focos. |
+| S1 — Conhecer o ciclo | “O que foi encontrado?” | Data, talhões inspecionados e talhões com detecções. |
 | S2 — Conferir a cobertura | “Todos os talhões foram vistos?” | Inspecionado, não inspecionado e cobertura incompleta. Para o talhão não coberto, o gestor pode pedir reinspeção. |
 | Processamento | Registrar o pedido de reinspeção. | “Reinspeção pedida” ou falha com nova tentativa. |
-| S3 — Escolher o talhão | “Onde estão os focos?” | Ordem dos talhões com o critério exibido (detecções no ciclo e tendência), apresentada como dado, não como recomendação. |
-| S4 — Avaliar o talhão | “Posso confiar?” | Fotos, local, indicação do resultado e aviso de cobertura incompleta. |
+| S3 — Escolher o talhão | “Onde estão as detecções?” | Ordem dos talhões com o critério exibido (detecções no ciclo e tendência), apresentada como dado, não como recomendação. |
+| S4 — Avaliar o talhão | “Posso confiar?” | Fotos, local, confiança do resultado (não é validação humana) e aviso de cobertura incompleta. |
 | S5 — Acompanhar evolução | “Está avançando?” | Tendência, última aplicação e limite de ciclos incompletos. |
 | Processamento | Registrar posição. | Salvar posição ou preservar escolha após falha. |
 | S6 — Confirmar posição | “Minha posição foi registrada?” | Confiável, parecer solicitado ou reinspeção solicitada. |
@@ -276,7 +287,7 @@ A Entrega 11 usa o aplicativo para o gestor, com diferenças registradas na Entr
 
 1. Jaime abre o ciclo em **S1** e consulta os números gerais.
 2. Em **S2**, confere o que foi e não foi inspecionado.
-3. Em **S3**, vê os talhões na ordem calculada, com o critério exibido, e escolhe um talhão com foco. A escolha é dele; a ordem não recomenda prioridade.
+3. Em **S3**, vê os talhões na ordem calculada, com o critério exibido, e escolhe um talhão com detecções. A escolha é dele; a ordem não recomenda prioridade.
 4. Em **S4**, examina fotos, local e limites da evidência. Pode ir a **S5** para consultar evolução.
 5. Registra sua posição e recebe a confirmação em **S6**; pode revisar outro talhão.
 6. Em **S7**, decide onde e quando agir. O sistema registra a decisão.
@@ -331,9 +342,16 @@ O texto e o diagrama existentes registram os ajustes anteriores: “reinspeção
 | O09 — compreender a evolução do talhão | M03/S5 | M01 também consulta histórico. | M03 apresenta tendência do talhão; M01 apresenta registros de pontos/talhões. |
 | O10 — decidir o manejo do ciclo | M03/S3/S7 | O parecer enviado por M01 precisava entrar na decisão; a ordem dos talhões em S3 poderia ser lida como recomendação. | S7 mostra parecer recebido ou aguardando parecer, sem decidir pelo gestor; S3 exibe o critério da ordem como dado. |
 | O11 — assegurar que a decisão chegue a quem aplica | M03/S8 | Repasse não significa aplicação realizada. | Manter estados separados. |
-| O12–O19 — análise e parecer | M01 | Pedido, validação, histórico, nova foto, área, parecer e envio. | Manter como proposta; hipóteses do agrônomo seguem abertas porque I02 não foi aplicado. |
+| O12 — emitir parecer técnico fundamentado sobre um foco | M01/S1–S7 | O parecer alimenta a decisão de M03/S7 (L6). | Proposta; depende de H04 e da confirmação do papel de P03 (I02 não aplicada). |
+| O13 — saber o que aguarda avaliação | M01/S1 | Pedido de parecer de M03 e detecções novas de M02 chegam ao agrônomo (L2, L3). | Pedido de parecer separado de detecção nova sem pedido. |
+| O14 — distinguir indicação automática de presença confirmada | M01/S2–S3/P1 | Avaliação da IA pode ser lida como veredito. | Avaliação da IA não altera a situação da validação; só o veredito humano a altera. |
+| O15 — compreender a recorrência da praga | M01/S3/S5 | M03 também consulta a evolução (L7). | Histórico de detecções e tendência do talhão usam os mesmos registros; resultado vazio comunicado. H22 parcialmente investigada. |
+| O16 — dispor de evidência suficiente | M01/S3/P2 | O pedido de nova foto chega ao trabalhador em M02/S1 (L5). | Ponto continua pendente até nova avaliação. |
+| O17 — definir a extensão do foco | M01/S6/P4 | Só pontos confirmados compõem a área. | Decisão provisória; H07 e Q7 abertas. |
+| O18 — assegurar que o parecer chegue ao responsável | M01/S7/P5 | Enviado não equivale a lido nem executado. | Destinatário do parecer condicionado a H04. |
+| O19 — manter conhecimento dos pedidos | M01/S1 | Retomada após revisão interrompida. | Situação do pedido em S1; pontos aguardando nova foto visíveis. |
 
-Os IDs e objetivos revisados de Lucas e Pedro foram incorporados a esta tabela. A consolidação completa depende também das revisões dos demais perfis na Entrega 9.
+Os IDs e objetivos revisados de Lucas, Pedro e Guilherme foram incorporados a esta tabela.
 
 ### Preparação das interfaces a partir das conversas
 
@@ -352,9 +370,9 @@ Os IDs e objetivos revisados de Lucas e Pedro foram incorporados a esta tabela. 
 
 **Guilherme — M01:**
 
-- Lista de pedidos e estado vazio — S1.
-- Talhão, pontos e estados após veredito ou nova foto — S2.
-- Foto, contexto, IA recolhida/aberta e falhas — S3.
+- Pedidos de parecer, detecções novas sem pedido e estado vazio — S1.
+- Talhão, pontos e situação da validação após veredito ou nova foto — S2.
+- Foto do fruto, contexto, avaliação da IA recolhida/aberta e falhas — S3.
 - Histórico filtrado e estado sem resultados — S5.
 - Área delimitada, pendências e entradas inválidas — S6.
 - Parecer, destinatário, confirmação e falha de envio — S7/P5.
@@ -380,10 +398,8 @@ A Entrega 12 documenta as diferenças entre os modelos e a versão avaliável.
 | Responsável | Correção ou cuidado |
 |---|---|
 | Pedro | Concluído na revisão de 20/11/2026: “gravidade” substituída pelo signo “ordem dos talhões” (Entrega 9), diferença entre dado e recomendação explícita em S3 e signos padronizados no M03. |
-| Guilherme | Preservar a natureza hipotética das regras profissionais de M01 e compatibilizar seus objetivos/signos com a revisão de sua parte na Entrega 9. |
-| Equipe | Consolidar a nomenclatura dos signos e objetivos dos três fluxos após as revisões individuais, preservando a distinção entre informação automática, julgamento humano e decisão. |
-
-O M02 corrigido foi preparado com SVG e fonte editável. Sua substituição no repositório deve usar os arquivos da revisão de 20/11/2026.
+| Guilherme | Concluído na revisão de 22/11/2026: objetivos O12–O19 classificados conforme a Entrega 9; signos de M01 padronizados no texto e no SVG; S1 renomeada para não usar “foco” antes da validação; ações retiradas de dentro das cenas; hipóteses de P03 e decisões provisórias explicitadas. |
+| Equipe | Concluído em 22/11/2026: nomenclatura dos signos e objetivos dos três fluxos consolidada após as revisões individuais; “foco” não designa detecções sem veredito em M01 e M03; distinção entre informação automática, julgamento humano e decisão preservada. |
 
 ## Erros frequentes a evitar
 
