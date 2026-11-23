@@ -3,6 +3,7 @@
 **Data:** 16/11/2026  
 **Revisão documental:** 23/11/2026 — estados FA restantes conferidos diretamente no arquivo Figma, relatos complementares de Lucas incorporados e consolidação documental atualizada; registros individuais de A02 e A03 preservados.  
 **Revisão após o feedback (A03 — Pedro):** 20/11/2026; inspeção de A03 nas telas FA acrescentada em 22/11/2026.  
+**Revisão após o feedback (A02 — Guilherme):** 22/11/2026 — inspeção do aplicativo por A02, só pelas capturas existentes.  
 **Status geral:** 🟨 em andamento — parte individual de Lucas finalizada para o escopo documentado; permanecem limitações de cobertura individual e a reavaliação coletiva das severidades não documentadas, conforme checklist.  
 **Responsabilidade:** uma avaliação completa por integrante, sobre todas as telas e estados relevantes do projeto.
 
@@ -56,7 +57,7 @@ A inspeção avalia a comunicação da interface, não a precisão científica d
 | Fluxos | M02 e M03 no aplicativo; M01 no Figma, pois o aplicativo não possui perfil de agrônomo. |
 | Dispositivos | Aplicativo em iPhone; protótipo FA em computador. |
 | Avaliadores | A01: Lucas Tonoli Cabral Duarte; A02: Guilherme Morais Escudeiro; A03: Pedro Henrique Ferreira Valim. |
-| Limitações | Capturas não comprovam todos os comportamentos dinâmicos. Alguns achados de Pedro vieram do código; na revisão de 20/11/2026 eles foram separados como problemas potenciais pendentes de reprodução. A inspeção formal de Guilherme documenta o protótipo FA. Lucas confirmou posteriormente que Guilherme também explorou o aplicativo e seus caminhos; não foram fornecidos uma matriz individual adicional ou achados específicos dessa exploração. A03 (Pedro) inspecionou as telas FA só em 22/11/2026, pelas capturas versionadas e depois de conhecer os registros de A02; essa inspeção não é independente. A01 documenta navegação própria pelo fluxo e exame visual dos dezesseis estados FA. A comparação posterior com achados conhecidos não constitui nova descoberta independente; resultados dinâmicos sem descrição específica não são presumidos. Não há comprovação de que cada avaliador tenha inspecionado individualmente todos os produtos e estados do projeto; o atendimento integral ao requisito de inspeção completa por integrante **não está demonstrado pelos registros disponíveis**. |
+| Limitações | Capturas não comprovam todos os comportamentos dinâmicos. Alguns achados de Pedro vieram do código; na revisão de 20/11/2026 eles foram separados como problemas potenciais pendentes de reprodução. A02 (Guilherme) inspecionou o protótipo FA em 15/11/2026 e o aplicativo em 22/11/2026, este só pelas capturas existentes, sem commit comprovado e já conhecendo os registros de A01 e A03; Lucas também relatou essa exploração do aplicativo. A03 (Pedro) inspecionou as telas FA só em 22/11/2026, pelas capturas versionadas e depois de conhecer os registros de A02; essa inspeção não é independente. A01 documenta navegação própria pelo fluxo e exame visual dos dezesseis estados FA. A comparação posterior com achados conhecidos não constitui nova descoberta independente; resultados dinâmicos sem descrição específica não são presumidos. Não há comprovação de que cada avaliador tenha inspecionado individualmente todos os produtos e estados do projeto; o atendimento integral ao requisito de inspeção completa por integrante **não está demonstrado pelos registros disponíveis**. |
 
 ## 3. Procedimento individual
 
@@ -344,30 +345,36 @@ Sem localização, a mensagem informa que é necessário ativar a localização 
 
 Inspeção das telas FA01, FA01V, FA01C, FA02, FA02V, FA02R, FA02N, FA03, FA03A, FA03E, FA05, FA05V, FA06, FA06E, FA07 e FA07E.
 
-O fluxo principal foi percorrido, incluindo Histórico, estados vazios e falhas. Depois, cada tela foi examinada com H1–H10.
+O fluxo principal foi percorrido, incluindo Histórico, estados vazios e falhas. Depois, cada tela foi examinada com H1–H10. FA07E foi examinado como quadro desenhado: está fora do caminho navegável do protótipo (Entrega 11), então a recuperação da falha no envio não foi percorrida.
 
 Os dados e interações são simulados. Os pontos QA21 da Entrega 12 foram considerados. Os IDs V01–V13 desta seção pertencem a A02.
+
+**Versão inspecionada:** protótipo FA no Figma, inspeção registrada em 15/11/2026 (commit `ed4dbdc`). A data da versão do arquivo não foi anotada. As capturas desta seção são as da versão inspecionada. Os links de navegação foram corrigidos em 16/11/2026, depois da inspeção e antes do teste (Entrega 12, seção I); as violações abaixo não foram reexaminadas nessa versão.
+
+**Limite de cobertura:** a inspeção original (V01–V13) abrange somente o protótipo FA. O aplicativo foi inspecionado depois por Guilherme, em 22/11/2026, só pelas capturas existentes (ver “Inspeção do aplicativo”). Nenhum outro avaliador inspecionou as telas FA: os treze problemas abaixo refletem uma única inspeção, e não se sabe se outro avaliador encontraria os mesmos problemas, outras violações, outra heurística ou outra severidade.
 
 ### 4. Matriz de cobertura
 
 | H | Telas/estados | Violação? | IDs |
 |---|---|---|---|
 | H1 | FA01, FA01C, FA02, FA02V, FA02N | Sim | V01 |
-| H2 | FA01, FA03, FA06, FA07 | Não | — |
+| H2 | FA01, FA03, FA06, FA07 | Não nos estados observados | — |
 | H3 | FA01C, FA02V, FA02R, FA03E, FA06, FA07E | Sim | V02, V03, V13 |
 | H4 | FA02, FA02N, FA03, FA03E, FA05, FA06, FA07 | Sim | V04–V07 |
 | H5 | FA02, FA06, FA07 | Sim | V08 |
 | H6 | FA02, FA03, FA05, FA06 | Sim | V09 |
 | H7 | FA02, FA03, FA05, FA06 | Sim | V10 |
-| H8 | Todas as telas FA | Não | — |
+| H8 | Todas as telas FA | Não nos estados observados | — |
 | H9 | FA03E, FA05V, FA06E, FA07E | Sim | V11 |
 | H10 | Todas as telas FA | Sim | V12 |
 
+A matriz descreve o escopo observado por A02 nas telas FA da versão inspecionada. “Não nos estados observados” não significa que a heurística é atendida pelo protótipo inteiro nem pelo aplicativo, que não foi inspecionado por A02.
+
 ### 5. Declaração de violações
 
-| ID | H | Tela/estado | Problema | Evidência | Severidade | Justificativa | Recomendação |
+| ID | H | Tela/estado | Problema | Evidência | Severidade individual | Justificativa | Recomendação |
 |---|---|---|---|---|---:|---|---|
-| V01 | H1 | FA01C | Pedido aparece concluído com ponto aguardando nova foto, sem ação para reabrir. | ![V01](../assets/13_heuristica/a02_v01.png) | 3 | Ponto pode permanecer sem avaliação após envio do parecer. | Separar situação do parecer e do pedido; manter acesso e aviso da nova foto. |
+| V01 | H1 | FA01C | Pedido aparece concluído com ponto aguardando nova foto, sem ação para reabrir. | ![V01](../assets/13_heuristica/a02_v01.png) | 3 | Ponto pode permanecer sem avaliação após envio do parecer. Também se relaciona à consistência entre o estado real e o apresentado, H4, sem constituir outro achado. | Separar situação do parecer e do pedido; manter acesso e aviso da nova foto. |
 | V02 | H3 | FA01C | Parecer enviado não pode ser aberto, revisto ou complementado. | ![V02](../assets/13_heuristica/a02_v02.png) | 2 | Correções precisam ocorrer fora do sistema. | Permitir consulta e envio de correção ou complemento. |
 | V03 | H3 | FA06 | Desenho sem desfazer vértice, mover ponto ou limpar área. | ![V03](../assets/13_heuristica/a02_v03.png) | 2 | Clique errado dificulta corrigir área calculada. | Incluir desfazer, limpar e ajuste de vértices. |
 | V04 | H4 | FA03/FA03E | “Confirmar” recebe destaque antes da seleção; estilo selecionado fica mais claro. | ![V04](../assets/13_heuristica/a02_v04.png) | 2 | Pode confundir seleção e influenciar confirmação. | Mesmo peso inicial e estilo único de seleção. |
@@ -380,6 +387,8 @@ Os dados e interações são simulados. Os pontos QA21 da Entrega 12 foram consi
 | V11 | H9 | FA03E/FA07E | Falhas pedem nova tentativa, sem causa ou alternativa persistente. | ![V11](../assets/13_heuristica/a02_v11.png) | 2 | Repetir ação pode não resolver. | Explicar causa e recuperação, preservando dados. |
 | V12 | H10 | FA03A/FA03/FA05 | “Sinal forte/fraco” sem explicação. | ![V12](../assets/13_heuristica/a02_v12.png) | 2 | Pode atribuir peso indevido ao modelo. | Explicar termos e responsabilidade da validação humana. |
 | V13 | H3 | FA02V/FA02 | Veredito não pode ser desfeito ou alterado. | ![V13](../assets/13_heuristica/a02_v13.png) | 3 | Erro de confirmação ou rejeição altera área e não tem correção. | Desfazer e reabrir ponto até envio, com autoria registrada. |
+
+As severidades representam o julgamento individual de Guilherme. A01 e A03 inspecionaram depois as telas FA (A03 de forma não independente), e as equivalências estão na seção 7.4. Só HC05 teve a severidade revista (de 3 para 2), com concordância da equipe relatada por Lucas; a reavaliação coletiva das demais continua pendente.
 
 ### 6. Boas práticas
 
@@ -395,9 +404,72 @@ Os dados e interações são simulados. Os pontos QA21 da Entrega 12 foram consi
 - H2 e H8 sem violação observada.
 - Prioridades: V01, V13, V04 e V05.
 - Estados intermediários e avaliação automática não seguem a mesma regra em todo o fluxo.
-- QA21: aviso de pendentes aparece em FA06/FA07; situação do parecer gerou V01/V02; avaliação recolhida gerou V05; foco por teclado não conferido nas capturas.
+- QA21: aviso de pendentes aparece em FA06/FA07; situação do parecer gerou V01/V02; avaliação recolhida gerou V05; ordem de navegação por teclado não conferida nas capturas.
 - Inspeção baseada nas telas FA, com conferência no Figma da impossibilidade de reabrir ponto validado.
 - O desenho manual mostrado na Figura 9 pertence ao aplicativo e não elimina V03 do protótipo FA.
+- Revisão de 22/11/2026: versão inspecionada e limite de cobertura registrados; FA07E examinado só como quadro desenhado; matriz limitada aos estados observados; V01 relacionado também a H4.
+- A inspeção do aplicativo foi feita em 22/11/2026, só por capturas, com os limites registrados abaixo.
+- Severidades individuais; registros FA de A01 e A03 relacionados depois (seção 7.4); reavaliação coletiva pendente, exceto HC05.
+
+### Inspeção do aplicativo — Guilherme
+
+**Data:** 22/11/2026, depois do feedback da Entrega 13.
+
+**Procedimento:** Guilherme não executou o aplicativo. Examinou as 25 capturas disponíveis no repositório, aplicando H1–H10:
+
+- as seis telas da Entrega 11 (F01 Acesso, F02 Câmera, F03 Histórico, F04 Mapa, F05 Conta e F06 Relatórios);
+- as dez capturas de Lucas (Figuras 1–10);
+- as nove capturas de Pedro (`v01`–`v15`), algumas com marcações de A03.
+
+**Versão:** as capturas não têm commit anotado. A referência continua sendo `a36785f`, mas a equivalência não está comprovada.
+
+**Limites:**
+- Guilherme já conhecia os registros de A01 e A03 quando fez esta inspeção, então ela não é independente desses avaliadores. Achados coincidentes estão marcados como “também encontrado”.
+- Estados que não aparecem em nenhuma captura não foram avaliados, como falhas de captura, registro de pulverização, gravações, edição em Conta e conteúdo do PDF.
+- Os IDs A02-A01 a A02-A08 pertencem a esta inspeção e não se confundem com V01–V13 do FA.
+
+#### Matriz de cobertura — aplicativo
+
+| H | Telas/estados | Violação? | IDs |
+|---|---|---|---|
+| H1 | Câmera, confirmação de captura, Histórico, filtros, Relatórios | Não nos estados observados | — (A02-A08 também se relaciona) |
+| H2 | Câmera, detalhe da inspeção, resultado, associação, Relatórios | Sim | A02-A02, A02-A03, A02-A04, A02-A05, A02-A08 |
+| H3 | Acesso, Câmera, associação, desenho, Conta | Não nos estados observados | — |
+| H4 | Câmera, resultado, Mapa, desenho, filtros, Relatórios | Sim | A02-A01, A02-A06 |
+| H5 | Câmera, desenho, Acesso | Não nos estados observados | — |
+| H6 | Mapa, Histórico, filtros | Não nos estados observados | — |
+| H7 | Câmera, filtros, relatório PDF | Não nos estados observados | — |
+| H8 | Todas as capturas | Sim | A02-A07 |
+| H9 | Sem localização, câmera | Não nos estados observados | — |
+| H10 | Câmera, desenho, Relatórios | Não nos estados observados | — |
+
+“Não nos estados observados” se refere às capturas examinadas e não significa que a heurística é atendida pelo aplicativo inteiro.
+
+#### Violações — aplicativo
+
+| ID | H | Tela/estado | Problema | Evidência | Severidade individual | Justificativa | Recomendação | Relação com outros avaliadores |
+|---|---|---|---|---|---:|---|---|---|
+| A02-A01 | H4 | Câmera e resultado | A mesma confiança aparece em formatos e arredondamentos diferentes: “Ácaro 57%” no indicador e “Acaro 56.6” na caixa; no resultado, “Acaro 91.6” na caixa e “Confiança 91%” no cartão. | ![A02-A01](../assets/13_heuristica/a02_app_v01.png) | 1 | Duas regras para o mesmo número, uma delas sem % e sem acento. Não impede a tarefa. | Mostrar a confiança num único formato, com %, em todos os lugares. | Novo. |
+| A02-A02 | H2 | Câmera | “UltralyticsYOLO · Core ML pronto” usa termos de implementação. | ![A02-A02](../assets/13_heuristica/a02_app_v02.png) | 2 | Aparece em toda captura; o usuário não sabe o que significa nem se precisa agir. | Usar “Pronto para analisar”. | Também encontrado (HC01: A01-V01, A03-V07). |
+| A02-A03 | H2 | Detalhe da inspeção e resultado | Localização exibida como coordenadas cruas (“-22.56500, -47.41120 · GPS”). | ![A02-A03](../assets/13_heuristica/a02_app_v03.png) | 1 | Números de sistema sem uso para a tarefa; o talhão, que é a informação útil, já aparece acima. Repete-se no resultado (Figura 7). | Mostrar o talhão e, se necessário, “Ver no mapa” no lugar das coordenadas. | Novo. |
+| A02-A04 | H2 | Detalhe da inspeção e resultado | Data em inglês (“12 November 2026 at 13:15”). | ![A02-A04](../assets/13_heuristica/a02_app_v04.png) | 1 | Mudança de idioma em interface portuguesa; repete-se no resultado. | Usar data e hora no padrão local. | Também encontrado (HC03: A01-V02). |
+| A02-A05 | H2 | Detalhe da inspeção e resultado | “4 ácaro(s) detectado(s)”, com alerta vermelho, apresenta a saída automática como constatação, sem indicar que ainda não foi validada por uma pessoa. | ![A02-A05](../assets/13_heuristica/a02_app_v05.png) | 3 | Aparece em todo registro com detecção; o usuário pode tomar o resultado do modelo como diagnóstico e agir com base nele. | Identificar o resultado como automático e mostrar a situação da validação humana separadamente. | Novo; relacionado a HC22 (A03-V05), em outra tela e com outra causa. |
+| A02-A06 | H4 | Desenho de talhão no Mapa | Pinos e contorno do novo talhão usam laranja-avermelhado próximo ao vermelho de “Alta”, cuja legenda está visível na mesma tela. | ![A02-A06](../assets/13_heuristica/a02_app_v06.png) | 1 | Cor de alerta usada para outro significado. Durante o desenho o usuário sabe o que está fazendo; a captura não mostra se a cor permanece no talhão salvo. | Usar no desenho uma cor fora da escala de atenção. | Novo; relacionado a HC24 (A03-V08). |
+| A02-A07 | H8 (H2 relacionada) | Associação da foto à área | “O mapa foi centralizado nas coordenadas GPS/EXIF da foto” informa um procedimento técnico desnecessário à escolha da área. | ![A02-A07](../assets/13_heuristica/a02_app_v07.png) | 2 | O pino “Foto” já indica o local; a frase ocupa o topo do painel durante a associação de cada foto. | Trocar por “O ponto marca onde a foto foi tirada” ou retirar. | Também encontrado (HC04: A01-V04), com heurística divergente: A01 classificou em H2, A02 em H8. |
+| A02-A08 | H2 (H1 relacionada) | Câmera | “Buscando 0%” não indica que o número é a confiança da detecção nem que a captura exige 85%; pode ser lido como progresso de carregamento. | ![A02-A08](../assets/13_heuristica/a02_app_v08.png) | 2 | O avaliador não identificou o significado sem comparar com outra captura. O usuário pode esperar a barra encher sem aproximar a câmera. A ajuda (i) explica o limiar, mas só se for aberta. | Rotular como “Confiança”, mostrar “Nenhuma praga no quadro” quando for 0 e marcar 85% na barra. | Novo. |
+
+#### Boas práticas — aplicativo
+
+Guilherme não registrou boas práticas no aplicativo.
+
+#### Síntese — aplicativo
+
+- Oito violações: uma de severidade 3, três de severidade 2 e quatro de severidade 1.
+- H2: cinco; H4: duas; H8: uma.
+- Três coincidem com registros de outros avaliadores (HC01, HC03 e HC04). Em HC04 a heurística diverge.
+- Cinco são novas: A02-A01, A02-A03, A02-A05, A02-A06 e A02-A08.
+- Prioridade: A02-A05, por apresentar a saída automática como constatação.
+- Inspeção só por capturas, sem commit comprovado e sem independência em relação a A01 e A03.
 
 ## Avaliador A03 — Pedro
 
@@ -581,12 +653,14 @@ O desenho manual da Figura 9 é registrado separadamente. Não comprova salvamen
 
 **Participação e cronologia:** Lucas informou reunião com Pedro e Guilherme em **04/11/2026**, com discussão de fontes, usabilidade e acesso por perfil. Não se atribuem a essa reunião quadros ou achados documentados posteriormente. Na conversa de revisão de 23/11/2026, Lucas informou concordância da equipe com três propostas: severidade 2 para conclusão com pendência, H10 para explicação de sinal e separação entre preservação positiva de dados e diagnóstico insuficiente de falhas. A confirmação é um relato de Lucas; não há ata independente. A elaboração da tabela restante é consolidação documental, sem presumir deliberação coletiva de cada severidade.
 
+**Inspeção do aplicativo por A02 (22/11/2026):** em HC01, HC03 e HC04, A02 encontrou o mesmo problema e atribuiu a mesma severidade individual; isso é concordância entre avaliadores, não reavaliação coletiva. As outras cinco violações de A02 no aplicativo foram consolidadas como HC36–HC40, numeradas após HC32–HC35 de A03.
+
 | ID consolidado | Origem | Problema | Severidade | Situação da evidência |
 |---|---|---|---:|---|
-| HC01 | A01-V01; A03-V07 | Mensagem técnica na câmera. | 2 | Visual; unificação aprovada por Lucas e Pedro. |
+| HC01 | A01-V01; A03-V07; A02-A02 | Mensagem técnica na câmera. | 2 | Visual; unificação aprovada por Lucas e Pedro. Também encontrado por A02 (22/11/2026), com a mesma heurística e severidade individual 2. |
 | HC02 | A01-V03; A03-V09 | Situações nomeadas por cores nos filtros. | 2 | Visual no Mapa e Histórico; unificação aprovada por Lucas e Pedro. |
-| HC03 | A01-V02 | Data em inglês. | 1 | Visual; severidade individual de Lucas, sem reavaliação coletiva. |
-| HC04 | A01-V04 | Sigla EXIF sem explicação. | 2 | Visual; severidade individual de Lucas, sem reavaliação coletiva. |
+| HC03 | A01-V02; A02-A04 | Data em inglês. | 1 | Visual; também encontrado por A02 com severidade individual 1; sem reavaliação coletiva. |
+| HC04 | A01-V04; A02-A07 | Mensagem técnica na associação da foto (“GPS/EXIF”). | 2 | Visual; também encontrado por A02 com severidade individual 2. **Heurística divergente:** A01 classificou em H2 (sigla sem explicação); A02 em H8 (informação técnica desnecessária), com H2 relacionada. Sem reavaliação coletiva. |
 | HC05 | A02-V01; A01-FA01; A03-VF01 | Pedido concluído com ponto pendente de nova foto. | 2 | Contradição visual; concordância da equipe relatada por Lucas. |
 | HC06 | A02-V02; A01-FA02; A03-VF05 | Parecer enviado sem consulta ou complemento. | 2 | Protótipo FA. |
 | HC07 | A02-V03; A01-FA03 | Desenho da área FA06 sem controles explícitos de correção; edição no aplicativo não comprova edição no Figma. | 2 | Protótipo FA. |
@@ -613,6 +687,11 @@ O desenho manual da Figura 9 é registrado separadamente. Não comprova salvamen
 | HC33 | A03-VF06 | Terminologia “pendente” reúne pedido, ponto sem veredito e ponto aguardando nova foto. | 2 | Visual; separado de HC10, que trata da representação no mapa. |
 | HC34 | A03-VF08 | Ausência de acento em “Ponto 4 ainda esta pendente” em FA06. | 1 | Visual; proposta individual de A03. |
 | HC35 | A03-VF11 | Não fica explícito quando a observação técnica é registrada com o veredito. | 2 | Ambiguidade visual; persistência e ordem de edição não verificadas. |
+| HC36 | A02-A01 | Mesma confiança em formatos e arredondamentos diferentes (câmera e resultado). | 1 | Visual (captura); severidade individual de Guilherme, sem reavaliação coletiva. |
+| HC37 | A02-A03 | Localização exibida como coordenadas cruas no detalhe e no resultado. | 1 | Visual (captura); severidade individual de Guilherme, sem reavaliação coletiva. |
+| HC38 | A02-A05 | Detecção automática apresentada como constatação no detalhe e no resultado, sem situação da validação humana. | 3 | Visual (captura); severidade individual de Guilherme, sem reavaliação coletiva. |
+| HC39 | A02-A06 | Cor do desenho de talhão próxima ao vermelho de “Alta”. | 1 | Visual (captura); severidade individual de Guilherme, sem reavaliação coletiva. |
+| HC40 | A02-A08 | “Buscando 0%” sem indicar que é confiança nem o limiar de 85%. | 2 | Visual (captura); severidade individual de Guilherme, sem reavaliação coletiva. |
 
 #### 7.4.1 Registros fora da contagem de violações
 
@@ -637,6 +716,9 @@ Os IDs foram mantidos para preservar a rastreabilidade.
 - **HC06 e HC17:** consulta/correção de parecer enviado e correção de veredito são ações diferentes.
 - **HC09, HC16 e HC22:** consistência da apresentação, explicação da avaliação e uso do termo “confirmado” exigem correções distintas.
 - **HC18 e HC21:** divergência de contagens e comparação sem base temporal têm causas diferentes.
+- **HC22 e HC38:** ambos tratam a saída automática como resultado definitivo, mas HC22 é o termo “confirmadas” em Relatórios e HC38 é a apresentação do registro no detalhe da inspeção.
+- **HC24 e HC39:** ambos usam vermelho fora do sentido de alerta, mas um está no gráfico do relatório e o outro no desenho de talhão.
+- **HC36 e HC40:** ambos tratam do indicador de confiança, mas HC36 é inconsistência de formato e HC40 é o significado do número.
 - **A01-V05 e HC29:** a orientação correta quando falta GPS não comprova o tratamento correto de uma falha da imagem.
 
 ### 7.6 Contagem documental atualizada
@@ -645,20 +727,21 @@ Os IDs foram mantidos para preservar a rastreabilidade.
 |---|---:|
 | Núcleo anterior | 26 |
 | Novos problemas visuais de A03 (HC32–HC35) | 4 |
-| **Total documental após unificação** | **30** |
-| Aplicativo, evidência visual | 11 |
+| Novos problemas visuais de A02 no aplicativo (HC36–HC40) | 5 |
+| **Total documental após unificação** | **35** |
+| Aplicativo, evidência visual | 16 |
 | Protótipo FA, evidência visual | 17 |
 | Confirmação parcial (HC19, HC27) | 2 |
-| Severidade 3 | 4 |
-| Severidade 2 | 21 |
-| Severidade 1 | 5 |
+| Severidade 3 | 5 |
+| Severidade 2 | 22 |
+| Severidade 1 | 8 |
 | Severidade 4 | 0 |
 | Hipóteses de código pendentes de reprodução | 4 |
 | Hipótese de validação de dose/formato (A03-VF10) | 1 |
 | Observação de dados demonstrativos, fora do total | 1 |
 | Correção de acesso por perfil relatada, fora do total ativo | 1 |
 
-A soma é 30 = 11 + 17 + 2. HC05 passou de 3 para 2; HC32–HC35 acrescentam dois itens de grau 1 e dois de grau 2. As demais severidades são as propostas individuais, sem atribuição automática de consenso. A01-V05 continua retirado. Os treze registros FA de A01 e oito equivalências FA de A03 não são contados novamente. Os quatro potenciais de código e VF10 não entram no total. A quantidade de registros não mede isoladamente a qualidade da interface.
+A soma é 35 = 16 + 17 + 2. HC05 passou de 3 para 2; HC32–HC35 acrescentam dois itens de grau 1 e dois de grau 2; HC36–HC40 (A02, aplicativo, só por capturas) acrescentam três de grau 1, um de grau 2 e um de grau 3. As demais severidades são as propostas individuais, sem atribuição automática de consenso. A01-V05 continua retirado. Os treze registros FA de A01, oito equivalências FA de A03 e os registros A02-A02, A02-A04 e A02-A07 (coincidentes com HC01, HC03 e HC04) não são contados novamente. Os quatro potenciais de código e VF10 não entram no total. A quantidade de registros não mede isoladamente a qualidade da interface.
 
 ## 8. Síntese e plano de melhoria
 
@@ -666,7 +749,7 @@ A soma é 30 = 11 + 17 + 2. HC05 passou de 3 para 2; HC32–HC35 acrescentam doi
 
 | Prioridade | Problemas | Ação | Responsável pelo acompanhamento |
 |---|---|---|---|
-| Alta | HC18 e HC22 | Esclarecer contagens e resultado automático. | Pedro/equipe. |
+| Alta | HC18, HC22 e HC38 | Esclarecer contagens e distinguir resultado automático de validação humana. | Pedro, Guilherme/equipe. |
 | A reproduzir antes de priorizar | HC20, HC25, HC26 e HC29 | Reproduzir no aparelho e capturar; só então confirmar heurística e severidade. HC20 tem problema equivalente observado na versão web (AU04), o que justifica reproduzi-lo primeiro. | Pedro. |
 | Alta | HC05 e HC17 | Manter acesso a pendências e permitir corrigir veredito. | Guilherme/equipe. |
 | Alta (confirmação parcial) | HC27 | Conferir interrupções nas capturas dentro de talhão. | Pedro/equipe. |
@@ -674,10 +757,10 @@ A soma é 30 = 11 + 17 + 2. HC05 passou de 3 para 2; HC32–HC35 acrescentam doi
 | Média | HC01 | Traduzir mensagem técnica da câmera. | Lucas e Pedro. |
 | Média | HC02 | Padronizar nomes nos filtros, Mapa e relatórios. | Lucas e Pedro. |
 | Média | HC04 | Explicar associação da foto sem a sigla EXIF. | Lucas/equipe. |
-| Média | HC06–HC10, HC12–HC16, HC21, HC23, HC24 e HC30 | Melhorar controle, consistência, ajuda e feedback conforme recomendações individuais. | Equipe. |
+| Média | HC06–HC10, HC12–HC16, HC21, HC23, HC24, HC30 e HC40 | Melhorar controle, consistência, ajuda e feedback conforme recomendações individuais. | Equipe. |
 | Média | HC33 e HC35 | Distinguir pendências e explicar quando a observação é registrada. | Equipe. |
 | Menor | HC32 e HC34 | Explicar a saída da revisão e corrigir a grafia. | Equipe. |
-| Menor | HC03, HC11 e HC28 | Ajustar idioma, rótulos e retorno. | Equipe. |
+| Menor | HC03, HC11, HC28, HC36, HC37 e HC39 | Ajustar idioma, rótulos, retorno, formato da confiança, exibição da localização e cor do desenho. | Equipe. |
 | Preparação de testes | HC31 | Reposicionar os talhões demonstrativos em área agrícola. | Equipe. |
 
 A severidade não indica que a correção já foi implementada.
@@ -696,11 +779,13 @@ A severidade não indica que a correção já foi implementada.
 
 ### Conclusão
 
-A revisão documental de 23/11/2026 organiza **30 problemas**, sendo 28 sustentados visualmente e dois com confirmação parcial. Cinco hipóteses permanecem fora da contagem: quatro dependem de reprodução no aplicativo e uma de verificar validação de dose/formato. Os achados individuais, imagens referenciadas e limitações foram preservados.
+A revisão documental de 23/11/2026 organiza **35 problemas**, sendo 33 sustentados visualmente e dois com confirmação parcial. Cinco hipóteses permanecem fora da contagem: quatro dependem de reprodução no aplicativo e uma de verificar validação de dose/formato. Os achados individuais, imagens referenciadas e limitações foram preservados.
 
-A parte de Lucas inclui seus quatro achados ativos no aplicativo, treze registros relacionados aos de A02, confirmação de navegação própria e cobertura visual dos dezesseis estados FA. Guilherme também explorou o aplicativo, conforme relato de Lucas; não foi fornecido um relatório individual adicional dessa exploração. A análise FA complementar de Pedro e a comparação posterior dos registros de Lucas não constituem descobertas independentes dos achados anteriores.
+A parte de Lucas inclui seus quatro achados ativos no aplicativo, treze registros relacionados aos de A02, confirmação de navegação própria e cobertura visual dos dezesseis estados FA. Guilherme também inspecionou o aplicativo, só por capturas (HC36–HC40 e coincidências com HC01, HC03 e HC04). A análise FA complementar de Pedro e a comparação posterior dos registros de Lucas não constituem descobertas independentes dos achados anteriores.
 
 As prioridades continuam sendo comunicar corretamente as contagens e o resultado automático, distinguir validação humana e permitir reconhecer e corrigir decisões relevantes. A edição do nome, a consulta à foto e o redesenho no aplicativo não demonstram correção de veredito, reabertura de parecer enviado ou edição no Figma. Nova tentativa após falha foi relatada, sem detalhamento suficiente para comprovar todos os cenários de recuperação.
+
+Na revisão de 22/11/2026, Guilherme inspecionou também o aplicativo, só pelas capturas existentes: oito violações, das quais três coincidem com HC01, HC03 e HC04 e cinco foram consolidadas como HC36–HC40. Essa inspeção não tem commit comprovado e não é independente de A01 e A03.
 
 O documento pode ser apresentado com essas limitações. Não se declara uma inspeção independente integral por cada integrante, implementação de todas as recomendações nem unanimidade em severidades não discutidas explicitamente.
 
@@ -719,7 +804,7 @@ O documento pode ser apresentado com essas limitações. Não se declara uma ins
 - [x] Contagem documental atualizada e rastreável.
 - [x] Reunião de 04/11/2026 separada das análises posteriores.
 - [ ] Inspeção independente completa de todo o escopo por cada integrante — não demonstrada; permanece limitação metodológica.
-- [ ] Cobertura individual detalhada de Guilherme no aplicativo — exploração relatada, sem matriz e evidências adicionais.
+- [x] Inspeção de Guilherme no aplicativo registrada (22/11/2026; só por capturas, sem commit comprovado; HC36–HC40).
 - [ ] Todos os comportamentos de falha, persistência e edição confirmados — não; limites descritos no texto.
 - [ ] Reavaliação coletiva individualizada de todas as severidades — não documentada; propostas individuais preservadas.
 - [ ] Todas as melhorias implementadas e verificadas — não faz parte do fechamento documental da avaliação.
