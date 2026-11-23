@@ -2,7 +2,7 @@
 
 **Data:** 16/11/2026  
 **Revisão documental:** 21/11/2026  
-**Revisão após o feedback (A03 — Pedro):** 20/11/2026.  
+**Revisão após o feedback (A03 — Pedro):** 20/11/2026; inspeção de A03 nas telas FA acrescentada em 22/11/2026.  
 **Status geral:** 🟨 em andamento — registros de A01 revisados e parte de A03 revisada após o feedback. Permanecem pendentes a cobertura individual de todo o escopo e a reavaliação coletiva das severidades.  
 **Responsabilidade:** uma avaliação completa por integrante, sobre todas as telas e estados relevantes do projeto.
 
@@ -56,7 +56,7 @@ A inspeção avalia a comunicação da interface, não a precisão científica d
 | Fluxos | M02 e M03 no aplicativo; M01 no Figma, pois o aplicativo não possui perfil de agrônomo. |
 | Dispositivos | Aplicativo em iPhone; protótipo FA em computador. |
 | Avaliadores | A01: Lucas Tonoli Cabral Duarte; A02: Guilherme Morais Escudeiro; A03: Pedro Henrique Ferreira Valim. |
-| Limitações | Capturas não comprovam todos os comportamentos dinâmicos. Alguns achados de Pedro vieram do código; na revisão de 20/11/2026 eles foram separados como problemas potenciais pendentes de reprodução. A inspeção de Guilherme concentrou-se no protótipo FA. A03 (Pedro) não inspecionou as telas FA. A01 (Lucas) não possui inspeção individual das telas FA registrada. Não há comprovação de que cada avaliador tenha inspecionado individualmente todos os produtos e estados do projeto; o requisito de inspeção completa por integrante **não foi atendido**. |
+| Limitações | Capturas não comprovam todos os comportamentos dinâmicos. Alguns achados de Pedro vieram do código; na revisão de 20/11/2026 eles foram separados como problemas potenciais pendentes de reprodução. A inspeção de Guilherme concentrou-se no protótipo FA. A03 (Pedro) inspecionou as telas FA só em 22/11/2026, pelas capturas versionadas e depois de conhecer os registros de A02; essa inspeção não é independente. A01 (Lucas) não possui inspeção individual das telas FA registrada. Não há comprovação de que cada avaliador tenha inspecionado individualmente todos os produtos e estados do projeto; o requisito de inspeção completa por integrante **não foi atendido**. |
 
 ## 3. Procedimento individual
 
@@ -329,7 +329,7 @@ Os dados e interações são simulados. Os pontos QA21 da Entrega 12 foram consi
 
 Inspeção das seis capturas da Entrega 11, das capturas adicionais de Lucas e leitura do código, aplicando H1–H10.
 
-**Escopo de A03:** aplicativo iOS (perfis Administrador e Inspeção). As telas FA do protótipo do agrônomo não foram inspecionadas por A03; esta não é uma inspeção completa do escopo do projeto.
+**Escopo de A03:** aplicativo iOS (perfis Administrador e Inspeção), de 16 a 20/11/2026, e telas FA do protótipo do agrônomo, em 22/11/2026 (seção “Inspeção de A03 nas telas FA”).
 
 **Revisão de 20/11/2026:** somente problemas visíveis na interface ficam como violações. Os registros vistos apenas no código (V03, V10, V11 e V14) foram movidos para “Problemas potenciais pendentes de reprodução”: mantêm o ID para rastreabilidade, mas não entram na contagem de violações até haver captura do estado. V16 passou a ser observação sobre os dados de demonstração. V06 foi reclassificado de H2 para H4 e V02 teve a severidade revista para 2. Essas revisões são individuais de A03; a severidade final coletiva continua pendente.
 
@@ -411,7 +411,64 @@ Revisada em 20/11/2026.
 - Uma observação sobre os dados de demonstração (V16), fora da contagem heurística.
 - Prioridades entre as violações confirmadas: V01, V05 e V12.
 - Padrões principais: números e estados sem critério explicado e saída automática apresentada como confirmação.
-- Escopo limitado ao aplicativo iOS; telas FA não inspecionadas por A03.
+- Telas FA inspecionadas depois, em 22/11/2026, de forma não independente (ver seção seguinte).
+
+### Inspeção de A03 nas telas FA (22/11/2026)
+
+**Procedimento:** inspeção das 16 capturas FA versionadas em `assets/11_figma/` (FA01, FA01V, FA01C, FA02, FA02V, FA02N, FA02R, FA03, FA03A, FA03E, FA05, FA05V, FA06, FA06E, FA07 e FA07E), aplicando H1–H10, sem navegar no protótipo clicável. Comportamentos que dependem de navegação não foram verificados.
+
+**Independência:** a inspeção foi feita depois de A03 conhecer os registros de A02 (seção anterior) e o feedback do professor. Por isso **não é independente**: concordâncias com A02 podem ter sido influenciadas, e esta seção não comprova que outro avaliador encontraria os mesmos problemas sem esse conhecimento. Ela reduz, mas não elimina, a lacuna de cobertura de A03.
+
+#### Matriz de cobertura — telas FA
+
+| H | Telas/estados | Violação? | IDs |
+|---|---|---|---|
+| H1 | FA01C, FA02, FA02R | Sim | VF01, VF02 |
+| H2 | FA03A, FA05 | Sim | VF03 |
+| H3 | FA01C, FA02V, FA03 | Sim | VF04, VF05 |
+| H4 | FA02N, FA06, FA07 | Sim | VF06, VF07, VF08 |
+| H5 | FA02, FA03, FA06 | Sim | VF09, VF10, VF11 |
+| H6 | FA05 | Sim | VF12 |
+| H7 | FA03 | Sim | VF13 |
+| H8 | Todas as capturas FA | Não nos estados observados | — |
+| H9 | FA03E, FA05V, FA06E, FA07E | Não nos estados observados | — |
+| H10 | FA02 (legenda), FA03 | Não nos estados observados | — |
+
+#### Declaração de violações — telas FA
+
+| ID | H | Tela/estado | Problema | Evidência | Severidade | Justificativa | Recomendação | Relação com A02 |
+|---|---|---|---|---|---:|---|---|---|
+| VF01 | H1 | FA01C | O pedido do T12 aparece “Concluído” enquanto a mesma linha mostra “1 · nova foto pedida”. | ![FA01C](../assets/11_figma/fa01_parecer.png) | 2 | O estado do pedido contradiz a pendência visível. O parecer enviado registra o ponto 4, o que reduz a perda da informação. | Mostrar “Parecer enviado · 1 ponto aguardando nova foto” e manter acesso ao ponto. | Equivalente a A02-V01 (A02 atribuiu severidade 3). |
+| VF02 | H1 | FA02 | “Encerrar revisão” não informa o que acontece com os vereditos já registrados; só FA02R, ao retomar, mostra que foram mantidos. | ![FA02](../assets/11_figma/fa02_mapa.png) ![FA02R](../assets/11_figma/fa02_retorno.png) | 1 | Gera dúvida antes da ação, mas o estado é preservado e a retomada informa isso. | Indicar no próprio comando ou em confirmação curta que os vereditos ficam salvos. | Novo. |
+| VF03 | H2 | FA03A, FA05 | “Sinal forte/fraco” é explicado como “Intensidade do sinal: forte”, sem dizer o que o sinal mede. | ![FA03A](../assets/11_figma/fa03_foto.png) ![FA05](../assets/11_figma/fa05_historico.png) | 2 | O termo não corresponde a um conceito do agrônomo e pode receber peso indevido. | Explicar em linguagem do domínio o que o valor indica e o que não indica. | Equivalente a A02-V12 (A02 classificou em H10). |
+| VF04 | H3 | FA02V, FA02 | Pontos confirmados ou rejeitados não oferecem ação para alterar o veredito. | ![FA02V](../assets/11_figma/fa02_ponto.png) | 3 | Um veredito errado altera a área de aplicação e não tem correção visível. | Permitir revisar o veredito antes do envio do parecer, registrando a alteração. | Equivalente a A02-V13. |
+| VF05 | H3 | FA01C | Pedido concluído mostra só “Parecer enviado em 15/11”, sem ação para abrir o parecer. | ![FA01C](../assets/11_figma/fa01_parecer.png) | 2 | O agrônomo não consegue conferir o que enviou. | Permitir abrir o parecer enviado e, se necessário, complementá-lo. | Equivalente a A02-V02. |
+| VF06 | H4 | FA01, FA02N, FA06, FA07 | “Pendente” tem sentidos diferentes: pedido sem resposta, ponto sem veredito e ponto com nova foto pedida. O ponto 4 aparece como “Nova foto pedida” em FA02N e como “pendente” em FA06 e FA07. | ![FA02N](../assets/11_figma/fa02_pedido.png) ![FA06](../assets/11_figma/fa06.png) | 2 | O mesmo termo muda de significado entre telas e o mesmo ponto recebe nomes diferentes. | Reservar “pendente” para ponto sem veredito e usar sempre “aguardando nova foto” para o ponto 4. | Relacionado a A02-V06 (símbolo), com causa diferente (terminologia). |
+| VF07 | H4 | FA06 | Dois comandos de retorno: “‹ Voltar ao mapa do talhão” e “‹ Voltar”. | ![FA06](../assets/11_figma/fa06.png) | 1 | Não fica claro se levam ao mesmo lugar. | Manter um único retorno com destino explícito. | Equivalente a A02-V07. |
+| VF08 | H4 | FA06 | Aviso com erro de grafia: “Ponto 4 ainda esta pendente”. | ![FA06](../assets/11_figma/fa06.png) | 1 | Problema cosmético que reduz a credibilidade da mensagem. | Corrigir para “está”. | Novo. |
+| VF09 | H5 | FA02 | “Emitir parecer” aparece como ação principal com 0 pontos confirmados. | ![FA02](../assets/11_figma/fa02_mapa.png) | 2 | Convida a um caminho que ainda não pode ser concluído. | Desativar até haver ponto confirmado, explicando a condição. | Equivalente a A02-V08. |
+| VF10 | H5 | FA06 | Produto e dose são campos de texto livre, sem unidade nem formato; a validação de FA06E só trata campo vazio. | ![FA06](../assets/11_figma/fa06.png) ![FA06E](../assets/11_figma/fa06e.png) | 2 | Uma dose digitada errada não é prevenida. A obrigatoriedade desses campos continua hipótese do domínio (P03). | Separar valor e unidade e conferir o formato antes de continuar. | Novo. |
+| VF11 | H5 | FA03 | A observação técnica fica em painel separado, sem indicar que é registrada junto com o veredito; só FA03E sugere isso. | ![FA03](../assets/11_figma/fa03_deteccao.png) ![FA03E](../assets/11_figma/fa03_falha.png) | 2 | Quem escrever a observação depois de escolher o veredito pode não saber se ela foi salva. O comportamento real não foi verificado na navegação. | Indicar que a observação é enviada com o veredito ou oferecer salvamento próprio. | Novo. |
+| VF12 | H6 | FA05 | Coluna “Local” cortada (“Talhão…”). | ![FA05](../assets/11_figma/fa05_historico.png) | 2 | Sem o filtro, os registros não se distinguem pelo local. | Ampliar a coluna ou quebrar o texto. | Equivalente a A02-V09. |
+| VF13 | H7 | FA03 | “Ponto 3 de 5” sem ir ao próximo ou ao anterior; é preciso voltar ao mapa. | ![FA03](../assets/11_figma/fa03_deteccao.png) | 2 | Acrescenta passos repetidos na validação de vários pontos. | Oferecer “próximo pendente” e “anterior”. | Equivalente a A02-V10. |
+
+#### Boas práticas — telas FA
+
+| H | Exemplo | Evidência | Justificativa |
+|---|---|---|---|
+| H9 | Os erros de FA06E e FA07E dizem o que falhou e que a área, os pontos ou o texto foram mantidos. | ![FA06E](../assets/11_figma/fa06e.png) ![FA07E](../assets/11_figma/fa07_falha.png) | O usuário sabe o que corrigir sem perder o trabalho. A02 registrou em V11 que a causa da falha não é explicada; as duas leituras coexistem e vão para a consolidação. |
+| H8 | Cada pedido em FA01 mostra só propriedade, solicitante, pontos pendentes e situação, com uma ação por linha. | ![FA01](../assets/11_figma/fa01_pedidos.png) | Mantém o necessário para escolher o foco. |
+
+#### Comparação com A02 — insumo para a consolidação coletiva
+
+- **Equivalentes (8):** VF01↔V01, VF03↔V12, VF04↔V13, VF05↔V02, VF07↔V07, VF09↔V08, VF12↔V09 e VF13↔V10.
+- **Divergências a discutir:** VF01 com severidade 2 (A02: 3); VF03 classificado em H2 (A02: H10); H9 sem violação para A03 (A02: V11).
+- **Novos de A03 (5):** VF02, VF06, VF08, VF10 e VF11.
+- **Registros de A02 não encontrados por A03 nas capturas:** V03 (desenho sem desfazer), V04 (destaque de “Confirmar”), V05 (avaliação da IA recolhida/aberta), V06 (símbolo de nova foto) e V11 (causa da falha).
+
+Nenhuma unificação foi feita aqui. A consolidação desses registros com A02, a severidade final e a inclusão dos novos itens na tabela 7.4 dependem da reunião da equipe.
+
+**Síntese de A03 nas telas FA:** treze violações (uma de severidade 3, nove de severidade 2 e três de severidade 1), oito equivalentes a A02 e cinco novas, todas com captura; inspeção não independente e sem navegação no protótipo.
 
 ## 7. Consolidação
 
@@ -514,6 +571,7 @@ Recalculada em 20/11/2026, separando violações confirmadas de registros penden
 | Severidade 1 | 3 |
 | Severidade 4 | 0 |
 | Problemas potenciais pendentes de reprodução (fora do total) | 4 |
+| Registros de A03 nas telas FA, aguardando consolidação (fora do total) | 13 (8 equivalentes a A02, 5 novos) |
 | Observação sobre dados de demonstração (fora do total) | 1 |
 
 A01-V05 fica fora da contagem ativa. As severidades são as dos autores, ainda sem reavaliação coletiva. A quantidade de registros não é um indicador da qualidade da interface: ela mistura protótipo e aplicativo e depende do escopo examinado por cada avaliador.
@@ -562,7 +620,7 @@ A conclusão documental não equivale à implementação das recomendações nem
 
 ## Checklist — equipe
 
-- [ ] Cada integrante realizou inspeção completa de todo o escopo exigido — não atendido: A01 e A03 cobriram principalmente o aplicativo e A02 o protótipo FA.
+- [ ] Cada integrante realizou inspeção completa de todo o escopo exigido — não atendido: A01 cobriu o aplicativo e A02 o protótipo FA; A03 cobriu o aplicativo e, em 22/11/2026, as telas FA, de forma não independente e só pelas capturas.
 - [ ] Todas as telas e estados relevantes possuem cobertura individual demonstrada.
 - [ ] Cobertura integral de estados dinâmicos e de falha confirmada — V03, V10, V11 e V14 não foram reproduzidos.
 - [x] A inspeção avalia a interface, não o mérito científico do algoritmo.
@@ -579,4 +637,6 @@ A conclusão documental não equivale à implementação das recomendações nem
 - [x] Registros de Lucas revisados para o aplicativo e os estados documentados, preservando as limitações da evidência.
 - [ ] Lucas realizou e registrou inspeção individual das telas FA.
 - [x] Parte de A03 revisada após o feedback (20/11/2026).
+- [x] A03 registrou inspeção das telas FA (22/11/2026), com a limitação de independência declarada.
+- [ ] Registros FA de A03 consolidados com A02 (equivalências, divergências e novos itens).
 - [ ] Documentação da Entrega 13 concluída — pendem cobertura cruzada e consolidação coletiva das severidades.
