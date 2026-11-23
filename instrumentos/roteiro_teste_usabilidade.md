@@ -105,7 +105,7 @@ Se a pessoa for substituta, registrar essa limitação na análise; não apresen
 
 **Para o aplicador, sem leitura ao participante:**
 
-- **UT06:** resposta esperada: três ocorrências anteriores (31/10 confirmada, 17/10 rejeitada, 03/10 confirmada). Parar o cronômetro na resposta (MU06: mediana ≤ 20 s).
+- **UT06:** resposta esperada: três ocorrências anteriores (31/10 confirmada, 17/10 rejeitada, 03/10 confirmada). Parar o cronômetro na resposta (MU06: com um participante, tempo observado ≤ 20 s).
 - **UT07:** verificar se abre o pedido do Talhão T12, chega ao ponto 3 e o registra como confirmado. Anotar se e quando abre a avaliação da IA (QA20) e cliques sem efeito (à parte, sem contar como erro).
 - **UT05:** em FA06, perguntar: “Quais locais entram na área de controle?” (esperado: 2, 3 e 5, e não o 4). Após FA01C, perguntar: “Jaime já recebeu sua orientação? Como você sabe?”. O tempo de UT07 + UT05 é só referência (MU07 não avaliada).
 
@@ -118,7 +118,7 @@ A sessão é encerrada se UT07 e UT05 somarem 16 minutos, e a tarefa em andament
 - percepção do aviso de que o ponto 4 continua pendente em FA06 e FA07;
 - leitura do retorno “parecer enviado” e da situação do pedido em FA01.
 
-**Pós-tarefa:** após UT06, UT07 e UT05, perguntar “Quão fácil foi realizar esta tarefa?” (1 = muito difícil; 7 = muito fácil) e “O que facilitou ou dificultou?”. A média por tarefa é comparada com MU09 (≥ 5,5).
+**Pós-tarefa:** após UT06, UT07 e UT05, perguntar “Quão fácil foi realizar esta tarefa?” (1 = muito difícil; 7 = muito fácil) e “O que facilitou ou dificultou?”. Com um participante, a nota de cada tarefa é comparada individualmente com o limite de MU09 (≥ 5,5), sem média.
 
 **Encerramento — perguntas pós-teste (sem indicar a resposta esperada)**
 
@@ -202,7 +202,7 @@ Após **cada** tarefa, perguntar:
    **1 = muito difícil; 7 = muito fácil.**
 2. “O que facilitou ou dificultou?”
 
-Registrar a nota após UT01, UT02 e UT03. As medianas de **UT02 e UT03** serão comparadas com MU03. Não explicar previamente qual nota seria considerada satisfatória.
+Registrar a nota após UT01, UT02 e UT03. Com um participante, a nota individual de **UT02 e UT03** é comparada com o limite de MU03, sem mediana. Não explicar previamente qual nota seria considerada satisfatória.
 
 ## 7. Encerramento
 

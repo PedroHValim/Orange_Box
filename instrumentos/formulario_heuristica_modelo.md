@@ -107,7 +107,7 @@ A nota deve ser justificada pela **consequência observada ou plausível na tare
 2. Percorrer UT06, UT07 e UT05 da Entrega 12 no modo de apresentação.
 3. Examinar os estados acima pelo modo de apresentação ou, quando não estiverem ligados no caminho do protótipo, diretamente no arquivo, anotando de qual forma cada um foi examinado.
 4. Para cada possível problema, anotar a tela, o que aparece e a consequência para a tarefa do agrônomo.
-5. Criar **um único ID para cada problema distinto** (VA01, VA02...), relacionado a uma ou mais heurísticas.
+5. Criar **um único ID para cada problema distinto** (`A02-V01`, `A02-V02`...), relacionado a uma ou mais heurísticas.
 6. Atribuir severidade considerando frequência provável, impacto na tarefa e recuperação.
 7. Separar limitações do protótipo (quadros sem ligação, figura no lugar da foto) de problemas de design.
 
@@ -140,7 +140,7 @@ Os itens abaixo **não são violações confirmadas**; vêm do planejamento (Ent
 
 | ID | H | Tela/estado | Ação/condição | Problema observado | Consequência para a tarefa | Evidência | Severidade 0–4 | Justificativa da severidade | Recomendação |
 |---|---|---|---|---|---|---|---:|---|---|
-| VA01 | | | | | | | | | |
+| A02-V01 | | | | | | | | | |
 
 Escala de severidade: a mesma do formulário de P02 acima. Para P03, nota 4 inclui levar o agrônomo a considerar ponto não confirmado dentro da área ou a supor que um parecer não enviado chegou ao gestor.
 
@@ -148,6 +148,7 @@ Escala de severidade: a mesma do formulário de P02 acima. Para P03, nota 4 incl
 
 **Estados examinados no modo de apresentação / só no arquivo:** ____  
 **Quantidade de problemas por severidade:** 0: __ · 1: __ · 2: __ · 3: __ · 4: __  
+**Problemas a corrigir antes do teste ou mantidos para comparação, com justificativa:** ____  
 **Problemas a observar durante UT06, UT07 e UT05:** ____  
 **Limitações da inspeção:** protótipo com quadros prontos, figura no lugar da foto, avaliador que participou do projeto das telas.
 

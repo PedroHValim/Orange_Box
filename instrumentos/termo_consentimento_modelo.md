@@ -3,7 +3,7 @@
 **Projeto:** CYF (Clean Your Farm) — aplicativo de apoio à vistoria de citros  
 **Atividade:** teste de usabilidade do aplicativo para iPhone  
 **Responsáveis:** Lucas Cabral, Pedro e Guilherme  
-**Contato institucional:** {{e-mail institucional da equipe ou do docente}}
+**Contato institucional:** unifgescudeiro@fei.edu.br
 
 ## Convite e objetivo
 
@@ -24,9 +24,9 @@ Os dados da fazenda exibidos no aplicativo são demonstrativos. Não solicitarem
 - [ ] Haverá gravação de áudio.
 - [ ] Haverá gravação de vídeo.
 
-A equipe fará anotações sobre o uso do aplicativo, incluindo conclusão das tarefas, tempo, dificuldades e comentários. Apenas os integrantes responsáveis pela avaliação terão acesso às anotações individuais. Os resultados divulgados serão anônimos, identificados por códigos como L1, L2 e L3.
+A equipe fará anotações sobre o uso do aplicativo, incluindo conclusão das tarefas, tempo, dificuldades e comentários. Apenas os integrantes responsáveis pela avaliação terão acesso às anotações individuais. Os resultados divulgados serão anônimos, identificados por códigos como L1, L2 e L3 (U01 nos resultados publicados).
 
-A foto e a localização produzidas durante a tarefa ficarão temporariamente no iPhone de teste e serão apagadas ao preparar o aparelho para a próxima sessão. As anotações serão mantidas até a conclusão e avaliação da disciplina e depois descartadas conforme a orientação institucional. {{Confirmar prazo ou regra de descarte com o docente.}}
+A foto e a localização produzidas durante a tarefa ficarão temporariamente no iPhone de teste e serão apagadas ao preparar o aparelho para a próxima sessão. As anotações serão mantidas até a conclusão e avaliação da disciplina e apagadas até 30 dias após o fim da disciplina; até lá, você pode pedir a exclusão informando seu código.
 
 ## Privacidade
 
@@ -41,10 +41,11 @@ Sua participação é voluntária. Você pode deixar de responder uma pergunta, 
 Declaro que recebi informações sobre a atividade, pude fazer perguntas e concordo em participar nos termos acima.
 
 **Código do participante:** L__  
-**Participante — assinatura ou mecanismo de aceite exigido pela instituição:** {{preencher somente no momento do consentimento}}  
+**Forma de aceite:** ( ) assinatura ( ) aceite verbal registrado pelo moderador  
+**Assinatura (se houver):** ______________________  
 **Data:** ____/____/________
 
-> Antes da aplicação, confirmar com o docente o contato institucional, a forma de aceite e o prazo de descarte. Não marcar este termo como assinado antes da participação.
+> Contato, forma de aceite e prazo de descarte preenchidos na revisão de 22/11/2026, depois das sessões U01–U03. Não marcar este termo como assinado antes da participação.
 
 ---
 
@@ -82,7 +83,7 @@ Não registraremos seu nome nas planilhas de resultados. Se a instituição exig
 Declaro que recebi informações sobre a atividade, pude fazer perguntas e concordo em participar nos termos acima.
 
 **Código do participante:** A__  
-**Forma de aceite:** ( ) assinatura ( ) aceite verbal registrado pelo moderador (sessão remota)  
+**Forma de aceite:** ( ) assinatura ( ) aceite verbal registrado pelo moderador (sessão presencial ou remota)  
 **Data:** ____/____/________
 
 > Não marcar este termo como aceito antes da participação.
