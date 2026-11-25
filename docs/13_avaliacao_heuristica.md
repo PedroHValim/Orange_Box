@@ -3,7 +3,7 @@
 **Data:** 16/11/2026  
 **Revisão documental:** 23/11/2026 — estados FA restantes conferidos diretamente no arquivo Figma, relatos complementares de Lucas incorporados e consolidação documental atualizada; registros individuais de A02 e A03 preservados.  
 **Revisão após o feedback (A03 — Pedro):** 20/11/2026; inspeção de A03 nas telas FA acrescentada em 22/11/2026.  
-**Revisão após o feedback (A02 — Guilherme):** 22/11/2026 — inspeção do aplicativo por A02, só pelas capturas existentes.  
+**Revisão após o feedback (A02 — Guilherme):** 22/11/2026 — inspeção do aplicativo por A02, pelas capturas existentes, com confirmação posterior no aparelho.  
 **Status geral:** 🟨 em andamento — parte individual de Lucas finalizada para o escopo documentado; permanecem limitações de cobertura individual e a reavaliação coletiva das severidades não documentadas, conforme checklist.  
 **Responsabilidade:** uma avaliação completa por integrante, sobre todas as telas e estados relevantes do projeto.
 
@@ -57,7 +57,7 @@ A inspeção avalia a comunicação da interface, não a precisão científica d
 | Fluxos | M02 e M03 no aplicativo; M01 no Figma, pois o aplicativo não possui perfil de agrônomo. |
 | Dispositivos | Aplicativo em iPhone; protótipo FA em computador. |
 | Avaliadores | A01: Lucas Tonoli Cabral Duarte; A02: Guilherme Morais Escudeiro; A03: Pedro Henrique Ferreira Valim. |
-| Limitações | Capturas não comprovam todos os comportamentos dinâmicos. Alguns achados de Pedro vieram do código; na revisão de 20/11/2026 eles foram separados como problemas potenciais pendentes de reprodução. A02 (Guilherme) inspecionou o protótipo FA em 15/11/2026 e o aplicativo em 22/11/2026, este só pelas capturas existentes, sem commit comprovado e já conhecendo os registros de A01 e A03; Lucas também relatou essa exploração do aplicativo. A03 (Pedro) inspecionou as telas FA só em 22/11/2026, pelas capturas versionadas e depois de conhecer os registros de A02; essa inspeção não é independente. A01 documenta navegação própria pelo fluxo e exame visual dos dezesseis estados FA. A comparação posterior com achados conhecidos não constitui nova descoberta independente; resultados dinâmicos sem descrição específica não são presumidos. Não há comprovação de que cada avaliador tenha inspecionado individualmente todos os produtos e estados do projeto; o atendimento integral ao requisito de inspeção completa por integrante **não está demonstrado pelos registros disponíveis**. |
+| Limitações | Capturas não comprovam todos os comportamentos dinâmicos. Alguns achados de Pedro vieram do código; na revisão de 20/11/2026 eles foram separados como problemas potenciais pendentes de reprodução. A02 (Guilherme) inspecionou o protótipo FA em 15/11/2026 e o aplicativo em 22/11/2026, pelas capturas existentes e, em seguida, navegando no aparelho (aparelho e commit não anotados) e já conhecendo os registros de A01 e A03; Lucas também relatou essa exploração do aplicativo. A03 (Pedro) inspecionou as telas FA só em 22/11/2026, pelas capturas versionadas e depois de conhecer os registros de A02; essa inspeção não é independente. A01 documenta navegação própria pelo fluxo e exame visual dos dezesseis estados FA. A comparação posterior com achados conhecidos não constitui nova descoberta independente; resultados dinâmicos sem descrição específica não são presumidos. Não há comprovação de que cada avaliador tenha inspecionado individualmente todos os produtos e estados do projeto; o atendimento integral ao requisito de inspeção completa por integrante **não está demonstrado pelos registros disponíveis**. |
 
 ## 3. Procedimento individual
 
@@ -351,7 +351,7 @@ Os dados e interações são simulados. Os pontos QA21 da Entrega 12 foram consi
 
 **Versão inspecionada:** protótipo FA no Figma, inspeção registrada em 15/11/2026 (commit `ed4dbdc`). A data da versão do arquivo não foi anotada. As capturas desta seção são as da versão inspecionada. Os links de navegação foram corrigidos em 16/11/2026, depois da inspeção e antes do teste (Entrega 12, seção I); as violações abaixo não foram reexaminadas nessa versão.
 
-**Limite de cobertura:** a inspeção original (V01–V13) abrange somente o protótipo FA. O aplicativo foi inspecionado depois por Guilherme, em 22/11/2026, só pelas capturas existentes (ver “Inspeção do aplicativo”). Nenhum outro avaliador inspecionou as telas FA: os treze problemas abaixo refletem uma única inspeção, e não se sabe se outro avaliador encontraria os mesmos problemas, outras violações, outra heurística ou outra severidade.
+**Limite de cobertura:** a inspeção original (V01–V13) abrange somente o protótipo FA. O aplicativo foi inspecionado depois por Guilherme, em 22/11/2026, pelas capturas existentes, com confirmação posterior no aparelho (ver “Inspeção do aplicativo”). Nenhum outro avaliador inspecionou as telas FA: os treze problemas abaixo refletem uma única inspeção, e não se sabe se outro avaliador encontraria os mesmos problemas, outras violações, outra heurística ou outra severidade.
 
 ### 4. Matriz de cobertura
 
@@ -408,20 +408,22 @@ As severidades representam o julgamento individual de Guilherme. A01 e A03 inspe
 - Inspeção baseada nas telas FA, com conferência no Figma da impossibilidade de reabrir ponto validado.
 - O desenho manual mostrado na Figura 9 pertence ao aplicativo e não elimina V03 do protótipo FA.
 - Revisão de 22/11/2026: versão inspecionada e limite de cobertura registrados; FA07E examinado só como quadro desenhado; matriz limitada aos estados observados; V01 relacionado também a H4.
-- A inspeção do aplicativo foi feita em 22/11/2026, só por capturas, com os limites registrados abaixo.
+- A inspeção do aplicativo foi feita em 22/11/2026, pelas capturas e com confirmação no aparelho, com os limites registrados abaixo.
 - Severidades individuais; registros FA de A01 e A03 relacionados depois (seção 7.4); reavaliação coletiva pendente, exceto HC05.
 
 ### Inspeção do aplicativo — Guilherme
 
 **Data:** 22/11/2026, depois do feedback da Entrega 13.
 
-**Procedimento:** Guilherme não executou o aplicativo. Examinou as 25 capturas disponíveis no repositório, aplicando H1–H10:
+**Procedimento:** Guilherme examinou as 25 capturas disponíveis no repositório, aplicando H1–H10, e em seguida percorreu o aplicativo no aparelho:
 
 - as seis telas da Entrega 11 (F01 Acesso, F02 Câmera, F03 Histórico, F04 Mapa, F05 Conta e F06 Relatórios);
 - as dez capturas de Lucas (Figuras 1–10);
 - as nove capturas de Pedro (`v01`–`v15`), algumas com marcações de A03.
 
-**Versão:** as capturas não têm commit anotado. A referência continua sendo `a36785f`, mas a equivalência não está comprovada.
+A navegação no aparelho, no mesmo dia, confirmou os mesmos achados, sem violação nova nem mudança de severidade. As evidências continuam sendo as capturas.
+
+**Versão:** as capturas não têm commit anotado, e o aparelho e a versão instalada usados na navegação não foram anotados. A referência continua sendo `a36785f`, mas a equivalência não está comprovada.
 
 **Limites:**
 - Guilherme já conhecia os registros de A01 e A03 quando fez esta inspeção, então ela não é independente desses avaliadores. Achados coincidentes estão marcados como “também encontrado”.
@@ -443,7 +445,7 @@ As severidades representam o julgamento individual de Guilherme. A01 e A03 inspe
 | H9 | Sem localização, câmera | Não nos estados observados | — |
 | H10 | Câmera, desenho, Relatórios | Não nos estados observados | — |
 
-“Não nos estados observados” se refere às capturas examinadas e não significa que a heurística é atendida pelo aplicativo inteiro.
+“Não nos estados observados” se refere às capturas examinadas e às telas percorridas no aparelho e não significa que a heurística é atendida pelo aplicativo inteiro.
 
 #### Violações — aplicativo
 
@@ -469,7 +471,7 @@ Guilherme não registrou boas práticas no aplicativo.
 - Três coincidem com registros de outros avaliadores (HC01, HC03 e HC04). Em HC04 a heurística diverge.
 - Cinco são novas: A02-A01, A02-A03, A02-A05, A02-A06 e A02-A08.
 - Prioridade: A02-A05, por apresentar a saída automática como constatação.
-- Inspeção só por capturas, sem commit comprovado e sem independência em relação a A01 e A03.
+- Inspeção pelas capturas, confirmada no aparelho, sem commit comprovado e sem independência em relação a A01 e A03.
 
 ## Avaliador A03 — Pedro
 
@@ -741,7 +743,7 @@ Os IDs foram mantidos para preservar a rastreabilidade.
 | Observação de dados demonstrativos, fora do total | 1 |
 | Correção de acesso por perfil relatada, fora do total ativo | 1 |
 
-A soma é 35 = 16 + 17 + 2. HC05 passou de 3 para 2; HC32–HC35 acrescentam dois itens de grau 1 e dois de grau 2; HC36–HC40 (A02, aplicativo, só por capturas) acrescentam três de grau 1, um de grau 2 e um de grau 3. As demais severidades são as propostas individuais, sem atribuição automática de consenso. A01-V05 continua retirado. Os treze registros FA de A01, oito equivalências FA de A03 e os registros A02-A02, A02-A04 e A02-A07 (coincidentes com HC01, HC03 e HC04) não são contados novamente. Os quatro potenciais de código e VF10 não entram no total. A quantidade de registros não mede isoladamente a qualidade da interface.
+A soma é 35 = 16 + 17 + 2. HC05 passou de 3 para 2; HC32–HC35 acrescentam dois itens de grau 1 e dois de grau 2; HC36–HC40 (A02, aplicativo) acrescentam três de grau 1, um de grau 2 e um de grau 3. As demais severidades são as propostas individuais, sem atribuição automática de consenso. A01-V05 continua retirado. Os treze registros FA de A01, oito equivalências FA de A03 e os registros A02-A02, A02-A04 e A02-A07 (coincidentes com HC01, HC03 e HC04) não são contados novamente. Os quatro potenciais de código e VF10 não entram no total. A quantidade de registros não mede isoladamente a qualidade da interface.
 
 ## 8. Síntese e plano de melhoria
 
@@ -781,11 +783,11 @@ A severidade não indica que a correção já foi implementada.
 
 A revisão documental de 23/11/2026 organiza **35 problemas**, sendo 33 sustentados visualmente e dois com confirmação parcial. Cinco hipóteses permanecem fora da contagem: quatro dependem de reprodução no aplicativo e uma de verificar validação de dose/formato. Os achados individuais, imagens referenciadas e limitações foram preservados.
 
-A parte de Lucas inclui seus quatro achados ativos no aplicativo, treze registros relacionados aos de A02, confirmação de navegação própria e cobertura visual dos dezesseis estados FA. Guilherme também inspecionou o aplicativo, só por capturas (HC36–HC40 e coincidências com HC01, HC03 e HC04). A análise FA complementar de Pedro e a comparação posterior dos registros de Lucas não constituem descobertas independentes dos achados anteriores.
+A parte de Lucas inclui seus quatro achados ativos no aplicativo, treze registros relacionados aos de A02, confirmação de navegação própria e cobertura visual dos dezesseis estados FA. Guilherme também inspecionou o aplicativo, pelas capturas e com confirmação no aparelho (HC36–HC40 e coincidências com HC01, HC03 e HC04). A análise FA complementar de Pedro e a comparação posterior dos registros de Lucas não constituem descobertas independentes dos achados anteriores.
 
 As prioridades continuam sendo comunicar corretamente as contagens e o resultado automático, distinguir validação humana e permitir reconhecer e corrigir decisões relevantes. A edição do nome, a consulta à foto e o redesenho no aplicativo não demonstram correção de veredito, reabertura de parecer enviado ou edição no Figma. Nova tentativa após falha foi relatada, sem detalhamento suficiente para comprovar todos os cenários de recuperação.
 
-Na revisão de 22/11/2026, Guilherme inspecionou também o aplicativo, só pelas capturas existentes: oito violações, das quais três coincidem com HC01, HC03 e HC04 e cinco foram consolidadas como HC36–HC40. Essa inspeção não tem commit comprovado e não é independente de A01 e A03.
+Na revisão de 22/11/2026, Guilherme inspecionou também o aplicativo, pelas capturas existentes, e confirmou os achados navegando no aparelho: oito violações, das quais três coincidem com HC01, HC03 e HC04 e cinco foram consolidadas como HC36–HC40. Essa inspeção não tem commit comprovado e não é independente de A01 e A03.
 
 O documento pode ser apresentado com essas limitações. Não se declara uma inspeção independente integral por cada integrante, implementação de todas as recomendações nem unanimidade em severidades não discutidas explicitamente.
 
@@ -804,7 +806,7 @@ O documento pode ser apresentado com essas limitações. Não se declara uma ins
 - [x] Contagem documental atualizada e rastreável.
 - [x] Reunião de 04/11/2026 separada das análises posteriores.
 - [ ] Inspeção independente completa de todo o escopo por cada integrante — não demonstrada; permanece limitação metodológica.
-- [x] Inspeção de Guilherme no aplicativo registrada (22/11/2026; só por capturas, sem commit comprovado; HC36–HC40).
+- [x] Inspeção de Guilherme no aplicativo registrada (22/11/2026; capturas confirmadas no aparelho, sem commit comprovado; HC36–HC40).
 - [ ] Todos os comportamentos de falha, persistência e edição confirmados — não; limites descritos no texto.
 - [ ] Reavaliação coletiva individualizada de todas as severidades — não documentada; propostas individuais preservadas.
 - [ ] Todas as melhorias implementadas e verificadas — não faz parte do fechamento documental da avaliação.
