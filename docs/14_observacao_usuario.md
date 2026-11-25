@@ -2,7 +2,7 @@
 
 **Data:** 17/11/2026  
 **Revisão documental:** 21/11/2026 (U01); 22/11/2026 (U03, IDs de U02, comparação com a Entrega 13, fluxograma e evidências)  
-**Status:** 🟨 em andamento — três sessões finais registradas; documentação de U01 e U03 corrigida após o feedback e parte de P01 (U02) revisada em 22/11/2026. Permanecem pendências de protocolo, instrumentos, evidências e ajustes dos demais responsáveis.  
+**Status:** 🟩 concluída com limitações — três sessões finais registradas e documentação revisada após o feedback; vídeo, TCE assinado, pré-teste, pilotos completos e padronização do protocolo não foram realizados e permanecem como limitações declaradas no checklist.  
 **Responsabilidade:** solução consolidada por equipe — Lucas Cabral, Guilherme e Pedro. São necessários três participantes finais, um acompanhado por cada integrante.
 
 ## Objetivo da atividade

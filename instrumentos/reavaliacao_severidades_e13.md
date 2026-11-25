@@ -66,8 +66,6 @@ Legenda das colunas A01/A02/A03: número = nota individual já registrada no doc
 | HC39 | Cor do desenho próxima ao vermelho de “Alta” | A02-A06 | 1 | 1 | 1 | sim/sim/sim | 1 | Avaliador único. A03: violação sim · H4 (concorda) · cor de alerta com outro sentido; durante o desenho o significado é claro. A01: violação sim · H4 (concorda) · reutilizar uma cor próxima à de alta atenção para o desenho pode gerar associação indevida. Severidade 1 porque o contexto de edição ajuda a distinguir o significado. **Reunião:** nota confirmada por unanimidade. |
 | HC40 | “Buscando 0%” sem indicar confiança nem limiar | A02-A08 | 2 | 2 | 2 | sim/sim/sim | 2 | Avaliador único. A03: violação sim · H2 (concorda; H1 relacionada) · “0%” pode ser lido como progresso; a ajuda só explica o limiar se for aberta. A01: violação sim · H2 (concorda; H1 relacionada) · a mensagem não diferencia busca, confiança e progresso. Severidade 2; identificar o significado do percentual e orientar a captura no contexto. **Reunião:** nota confirmada por unanimidade. |
 
-**A preencher antes da reunião:** Lucas 0 · Guilherme 0 · Pedro 0.
-
 ## Pauta da reunião (a partir das notas individuais)
 
 1. **Só confirmar (três notas iguais, 27):** HC01, HC02, HC03, HC04, HC06, HC07, HC08, HC10, HC11, HC12, HC13, HC14, HC16, HC17, HC18, HC21, HC22, HC28, HC30, HC32, HC33, HC34, HC36, HC37, HC38, HC39, HC40.
