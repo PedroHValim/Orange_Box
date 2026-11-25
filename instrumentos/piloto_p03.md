@@ -33,7 +33,7 @@ O horário de início de cada tarefa não foi anotado; os tempos foram medidos p
 
 ## Mudanças após o piloto
 
-1. **Contexto de UT05:** antes da instrução, além de "Considere que você já avaliou os outros locais dessa área", o moderador lê: "Controlar o ácaro significa aplicar um produto nas árvores afetadas; a orientação que você dá a Jaime indica onde aplicar, com qual produto, dose e período." A instrução de UT05 não muda, e a frase não usa os rótulos das telas FA.
+1. **Contexto de UT05:** antes da instrução, além de "Considere que você já avaliou os outros locais dessa área", o moderador lê: "Controlar o ácaro significa aplicar um produto nas árvores afetadas; a orientação que você dá a Jaime indica onde aplicar, com qual produto, dose e período." A instrução de UT05 não muda, e a frase não usa os rótulos de botões das telas FA. Revisão de 22/11/2026: a frase cita produto, dose e período, que são campos de FA06; em nova sessão, ler a frase sem “com qual produto, dose e período”.
 2. **Esclarecimento permitido em UT05:** incluído no roteiro que o moderador pode esclarecer o que é o controle e que a orientação a Jaime é o registro final da decisão, sem indicar botões nem os pontos da área.
 3. **Anotação:** registrar também o horário em que a tela inicial de cada tarefa fica visível, como já pede a planilha (campo "Início").
 
