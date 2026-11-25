@@ -1,8 +1,8 @@
 # Entrega 14 — Avaliação de usabilidade por observação de usuários
 
 **Data:** 17/11/2026  
-**Revisão documental:** 21/11/2026  
-**Status:** 🟨 em andamento — três sessões finais registradas; documentação de U01 corrigida após o feedback e parte de P01 (U02) revisada em 22/11/2026. Permanecem pendências de protocolo, instrumentos, evidências e ajustes dos demais responsáveis.  
+**Revisão documental:** 21/11/2026 (U01); 22/11/2026 (U03, IDs de U02, comparação com a Entrega 13, fluxograma e evidências)  
+**Status:** 🟨 em andamento — três sessões finais registradas; documentação de U01 e U03 corrigida após o feedback e parte de P01 (U02) revisada em 22/11/2026. Permanecem pendências de protocolo, instrumentos, evidências e ajustes dos demais responsáveis.  
 **Responsabilidade:** solução consolidada por equipe — Lucas Cabral, Guilherme e Pedro. São necessários três participantes finais, um acompanhado por cada integrante.
 
 ## Objetivo da atividade
@@ -13,15 +13,9 @@ A avaliação trata da interação com o aplicativo ou protótipo, não da preci
 
 ## A. Fluxograma do processo — equipe
 
-```mermaid
-flowchart TD
-    A["Planejamento e recrutamento"] --> B["Consentimento e preparação"]
-    B --> C["Execução das tarefas e observação"]
-    C --> D["Pós-teste e análise"]
-    D --> E["Recomendações e rastreabilidade"]
-```
+![Fluxograma](../assets/14_testes/fluxograma_avaliacao.svg)
 
-**Fonte editável:** diagrama Mermaid incluído neste documento.
+**Fonte editável:** [`assets/14_testes/fluxograma_avaliacao.dot`](../assets/14_testes/fluxograma_avaliacao.dot). O teste piloto faz parte da preparação. O fluxograma mostra o processo planejado; os desvios de cada sessão estão no Passo 6 e na seção C.
 
 ## B. Procedimento de preparação e execução — equipe
 
@@ -117,24 +111,24 @@ Com um participante, os resultados dessas metas valem somente para a sessão obs
 |---|---|---|---|---|
 | U01 | Estudante de Ciência da Computação, 21 anos, sem experiência em inspeção agrícola; amigo de Lucas. | Participante proxy, fora da equipe. Permite observar navegação inicial, mas não representa trabalhador de campo experiente. A relação pessoal pode favorecer respostas positivas. | Lucas Cabral | Sessão realizada em 14/11/2026. |
 | U02 | Profissional de tecnologia que trabalha com gestão de ferramentas de IA em um centro de IA; experiência com gestão e interfaces digitais, sem atuação na agricultura. | Participante proxy, fora da equipe, pois nenhum gestor de propriedade estava acessível. Permite observar a leitura do relatório, mas não representa um gestor de citros. | Pedro | Sessão realizada em 17/11/2026. |
-| U03 | Estudante de engenharia, sem experiência direta em agronomia. | Proxy recrutado por conveniência, pois não havia agrônomo acessível. Não participou da elaboração das telas nem do piloto. | Guilherme | Sessão realizada em 16/11/2026. |
+| U03 | Estudante de engenharia, sem experiência direta em agronomia; conhecido de Guilherme. | Proxy recrutado por conveniência, pois não havia agrônomo acessível. Não participou da elaboração das telas nem do piloto. A relação pessoal pode favorecer respostas positivas. | Guilherme | Sessão realizada em 16/11/2026. |
 
 **Limitação de U01:** não possui experiência agrícola e tem relação de amizade com o aplicador. As observações permitem discutir o primeiro contato com a interface, mas não validar o processo de trabalho ou o uso real em campo. O perfil resumido não comprova a aplicação completa das quatro perguntas pré-teste previstas no roteiro.
 
 **Limitação de U02:** não tem experiência agrícola; a sessão usou a versão web com dados de demonstração, e não o aplicativo iOS.
 
-**Limitação de U03:** somente o ponto 3 permite validação no protótipo; a área de aplicação vem pronta. Não foram avaliados o desenho da área, o fluxo completo de cinco pontos ou a recuperação após falha no envio.
+**Limitação de U03:** somente o ponto 3 permite validação no protótipo; a área de aplicação vem pronta. Não foram avaliados o desenho da área, o fluxo completo de cinco pontos ou a recuperação após falha no envio. Sem experiência agronômica, U03 permite discutir a navegação e a leitura das telas, mas não validar que o fluxo corresponde ao trabalho real de um agrônomo.
 
 ### Passo 3 — Consentimento e privacidade
 
 - **U01:** aceite verbal antes da sessão, segundo Lucas; não há TCE preenchido e assinado nem arquivo separado de consentimento. Não houve gravação, apenas anotações. O registro narrativo não será apresentado como TCE formal preservado.
-- **U03:** consentimento verbal obtido antes do pré-teste e das tarefas; sem gravação.
+- **U03:** o moderador leu o termo do protótipo do agrônomo e obteve aceite verbal antes das tarefas, sem assinatura; não há TCE preenchido preservado. Na data da sessão, o termo previa aceite verbal só na sessão remota e o campo de contato ainda não estava preenchido; os dois pontos foram ajustados em 22/11/2026, depois da sessão (Entrega 12, seção I). Sem gravação.
 - **U02:** informado por mensagem, antes da chamada, do objetivo do teste e da gravação da tela. Sessão remota ao vivo por chamada de vídeo do WhatsApp, com a tela do celular compartilhada; a gravação fica só com o moderador, para apoio à análise, não é publicada e será descartada até 30 dias após o fim da disciplina. Nenhum dado real de propriedade foi usado. Não houve termo escrito; o termo-modelo previa ausência de gravação e não foi atualizado antes da sessão (emenda registrada na Entrega 12, seção H). Como o consentimento cobre só o uso pelo moderador, a gravação não foi publicada no YouTube; publicá-la exigiria novo consentimento específico.
 - **Anonimização:** usar somente U01, U02 e U03 nos resultados publicados.
 - **Dados necessários:** experiência pertinente, ações observadas, conclusão das tarefas, dificuldades, ajudas, tempos e comentários.
 - **Registro de U01:** os resultados disponíveis foram consolidados neste documento de forma anônima. O local de guarda e o prazo originalmente informado para descarte das anotações não foram registrados.
 - **Política para os registros de Lucas a partir desta revisão:** manter eventuais anotações originais sob acesso restrito ao responsável, à equipe e ao docente; não publicar dados identificáveis; descartar os registros originais até 30 dias após o encerramento da disciplina. Essa definição posterior não comprova que a política foi apresentada antes da sessão.
-- **Armazenamento de U03:** anotações acessíveis somente à equipe e ao docente, com descarte até 30 dias após o fim da disciplina.
+- **Armazenamento de U03:** anotações originais em arquivo pessoal de Guilherme, fora do repositório, acessíveis somente à equipe e ao docente, com descarte até 30 dias após o fim da disciplina. No repositório fica apenas a síntese anônima ([`instrumentos/sessao_u03.md`](../instrumentos/sessao_u03.md)).
 - Não publicar nomes, contatos ou dados identificáveis no GitHub.
 
 **Termo de referência de U03:** [`instrumentos/termo_consentimento_modelo.md`](../instrumentos/termo_consentimento_modelo.md), seção do protótipo do agrônomo.
@@ -181,6 +175,8 @@ Em UT05, foi necessário esclarecer o significado de controle e sua relação co
 3. Registrar o horário de início das tarefas.
 
 Os critérios das metas não foram alterados.
+
+**Limite da mudança 1:** a frase lida antes de UT05 também cita produto, dose e período, que são campos de FA06. Nesta versão esses campos já vinham preenchidos e a frase não indica os pontos da área, mas vai além do conceito de controle. Em nova sessão, ler a frase sem “com qual produto, dose e período”.
 
 **Registro:** [`instrumentos/piloto_p03.md`](../instrumentos/piloto_p03.md).
 
@@ -258,7 +254,7 @@ Não se adotam os valores pontuais anteriores de 40 segundos e 2 minutos e 30 se
 
 **Pedro:** conduziu UT09, UT08 e UT04 remotamente, sem observador, lendo cada instrução sem indicar abas ou botões. Não havia abertura padronizada escrita para P01, o pré-teste não foi aplicado e não há registro de instrução para pensar em voz alta.
 
-**Guilherme:** conduziu UT06, UT07 e UT05 sem observador. Cliques em áreas sem ligação foram anotados separadamente e não classificados como erro. Não houve dicas durante as tarefas.
+**Guilherme:** conduziu UT06, UT07 e UT05 sem observador. Leu o termo e a abertura do roteiro P03; o pré-teste não foi aplicado (ver U03). Pediu ao participante que pensasse em voz alta, explicando no início e lembrando durante as tarefas; essa instrução não estava escrita no roteiro P03 e seu texto exato não foi anotado. Cliques em áreas sem ligação foram anotados separadamente e não classificados como erro. Não houve dicas durante as tarefas. O pós-teste foi aplicado, exceto a pergunta 1.
 
 **Roteiro de U03:** [`instrumentos/roteiro_teste_usabilidade.md`](../instrumentos/roteiro_teste_usabilidade.md).  
 **Planilha de U03:** [`instrumentos/planilha_observacao_modelo.md`](../instrumentos/planilha_observacao_modelo.md).
@@ -360,18 +356,19 @@ O Talhão 05, que não teve inspeção no período, não foi identificado. No ca
 
 **Situação:** piloto e sessão final realizados em 16/11/2026.
 
-**Perfil:** estudante de engenharia, fora da equipe, sem experiência direta em agronomia. Não viu o piloto nem as telas FA antes da sessão. Recrutado por conveniência porque nenhum agrônomo ou técnico agrícola estava acessível.
+**Perfil:** estudante de engenharia, fora da equipe, sem experiência direta em agronomia. Não viu o piloto nem as telas FA antes da sessão. Recrutado por conveniência porque nenhum agrônomo ou técnico agrícola estava acessível. Conhecido de Guilherme, o que pode favorecer respostas positivas.
 
 **Proxy:** sim. As conclusões tratam da navegação e compreensão das telas, não equivalendo às de um agrônomo consultor. As perguntas técnicas fornecem somente indícios.
 
-**Pré-teste:** as seis perguntas sobre formação, citros, atendimento, propriedades, relatos do campo e mapas digitais ficaram sem resposta por não se aplicarem ao perfil.
+**Pré-teste:** não aplicado. O moderador considerou que as seis perguntas (formação, citros, atendimento, propriedades, relatos do campo e mapas digitais) não se aplicavam ao perfil proxy e registrou apenas o perfil acima e a classificação “participante substituto”. A caracterização pré-teste de U03 ficou, portanto, parcial.
 
 **Data e ambiente:** 16/11/2026, presencialmente, sem interrupções registradas.  
-**Consentimento:** verbal, antes do pré-teste e das tarefas.  
+**Consentimento:** termo P03 lido pelo moderador e aceite verbal antes das tarefas, sem assinatura (Passo 3).  
 **Versão:** protótipo FA de 16/11/2026, com links corrigidos e sem as correções da inspeção heurística.  
 **Dispositivo:** computador com navegador, em modo de apresentação.  
 **Moderador:** Guilherme.  
-**Observador:** nenhum; o moderador conduziu, cronometrou e anotou.
+**Observador:** nenhum; o moderador conduziu, cronometrou e anotou.  
+**Pensar em voz alta:** explicado no início e lembrado durante as tarefas, segundo o moderador; o texto da instrução não foi anotado. As falas da tabela são as anotadas pelo moderador, sem transcrição.
 
 | Tarefa | Grau de sucesso | Erros | Dificuldade | Ajudas | Tempo | Satisfação 1–7 | Evidência |
 |---|---|---:|---|---:|---|---:|---|
@@ -390,9 +387,20 @@ O Talhão 05, que não teve inspeção no período, não foi identificado. No ca
 5. Avaliação automática: não a abriu; não é possível inferir sua influência em julgamento técnico real.
 6. Informação que faltou: nenhuma.
 
-**Intervenções:** nenhuma ajuda durante as tarefas. A abertura de FA03 antes de UT06 e a leitura do contexto antes de UT05 seguiram o roteiro.
+**Intervenções:** nenhuma ajuda durante as tarefas. A abertura de FA03 antes de UT06 e a leitura do contexto antes de UT05 seguiram o roteiro.  
+**Limitações:** participante proxy sem experiência agronômica e conhecido do moderador; sem observador; pré-teste e pergunta pós-teste 1 não aplicados; horários de início das tarefas não registrados, apesar da mudança após o piloto; sem gravação; protótipo com navegação limitada (Passo 2).
 
-**Gravação:** não houve.
+**Gravação:** não houve; por isso não há link de vídeo para U03.
+
+**Evidências:** telas da versão testada em que ocorreram AU01 e AU02, com o local marcado. São capturas do protótipo, não registros da sessão.
+
+![FA03 — detecções anteriores do ponto](../assets/14_testes/u03_fa03_deteccoes_anteriores.png)
+
+*FA03: a lista de detecções anteriores mostra “Confirmado” e “Rejeitado” sem indicar quem validou (AU01).*
+
+![FA01 — dois pedidos de Jaime](../assets/14_testes/u03_fa01_pedidos.png)
+
+*FA01: dois pedidos de Jaime; o do Talhão T04 não tinha ligação no protótipo (AU02).*
 
 **Registro:** [`instrumentos/sessao_u03.md`](../instrumentos/sessao_u03.md).
 
@@ -417,10 +425,10 @@ São casos isolados, sem evidência suficiente para afirmar recorrência.
 
 | ID | Achado | Evidência | Impacto | Recomendação | Artefatos |
 |---|---|---|---|---|---|
-| AU01 | Histórico não deixa claro quem confirmou ou rejeitou a ocorrência. | U03/UT06 respondeu corretamente, mas não soube se o veredito era do agrônomo ou da IA. | Confusão entre indicação automática e validação humana. | Indicar autor e data do veredito; separar a avaliação automática. | FA03, FA05; M01 S3/S5; T06. |
-| AU02 | Dois pedidos do mesmo gestor não foram distinguidos com clareza. | U03/UT07 escolheu T12 porque o outro pedido não respondia ao clique. | Possibilidade de abrir o pedido errado em uma implementação completa. | Diferenciar pedidos por talhão, data e pontos pendentes; testar novamente. | FA01; M01 S1; T05. |
+| AU01 | A lista de detecções anteriores não deixa claro quem confirmou ou rejeitou a ocorrência. | U03/UT06 respondeu corretamente, mas não soube se o veredito era do agrônomo ou da IA. | Confusão entre avaliação da IA e validação humana, distinção central do projeto. | Na lista de detecções anteriores de FA03, indicar em cada veredito quem validou e quando, deixando claro que é validação humana, separada da avaliação da IA; conferir o mesmo em FA05. Retestar UT06. | FA03, FA05; M01 S3/S5; T06. |
+| AU02 | Dois pedidos do mesmo gestor não foram distinguidos com clareza. | U03/UT07 comentou que havia dois pedidos de Jaime e não estava claro qual abrir; escolheu T12 porque o outro pedido não respondia ao clique. FA01 já mostra talhão, data e quantidade de pontos de cada pedido, mas não as árvores incluídas, e a instrução identificava a suspeita só pela árvore L3-27. | Possibilidade de abrir o pedido errado em uma implementação completa. Evidência parcial: a falta de ligação de um dos pedidos influenciou a escolha. | Mostrar em cada pedido as árvores ou pontos incluídos; ligar os dois pedidos no protótipo e retestar UT07, anotando que informação o participante usou para escolher. | FA01; M01 S1; T05. |
 | AU03 | Dificuldade inicial para localizar a inspeção anterior. | U01/UT01 concluiu com ajuda após não encontrar a funcionalidade; duração estimada de 2–3 min. O conteúdo da ajuda não foi registrado. | Redução de autonomia ao consultar registros; intensidade da dificuldade não plenamente verificável. | Revisar acesso e rótulos do histórico; retestar com participante representativo e registrar exatamente qualquer intervenção. | Histórico do aplicativo; F03; M02; R10. |
-| AU04 | O talhão sem nenhuma inspeção no período não foi percebido. | U02/UT09: perguntado se alguma área ficou sem ser vista, não apontou nenhuma e não mencionou o Talhão 05, que aparecia como “Sem ocorrência · 0 · −5 · 100%”, igual ao Talhão 01, inspecionado sem detecção. | É o erro central do cenário C01: o gestor pode deixar de tratar uma área que ninguém inspecionou; a variação “−5 · 100%” pode ser lida como melhora. | Mostrar “Não inspecionado no período” como estado próprio, com símbolo e cor diferentes de “Sem ocorrência”, na tabela e no mapa; incluir a quantidade de fotos por talhão; não calcular variação para talhão sem inspeção; testar novamente. | Relatórios (F06) e Mapa (F04); CI01; M03 S2; V03 de A03; T09. |
+| AU04 | O talhão sem nenhuma inspeção no período não foi percebido. | U02/UT09: perguntado se alguma área ficou sem ser vista, não apontou nenhuma e não mencionou o Talhão 05, que aparecia como “Sem ocorrência · 0 · −5 · 100%”, igual ao Talhão 01, inspecionado sem detecção. | É o erro central do cenário C01: o gestor pode deixar de tratar uma área que ninguém inspecionou; a variação “−5 · 100%” pode ser lida como melhora. | Mostrar “Não inspecionado no período” como estado próprio, com símbolo e cor diferentes de “Sem ocorrência”, na tabela e no mapa; incluir a quantidade de fotos por talhão; não calcular variação para talhão sem inspeção; testar novamente. | Relatórios (F06) e Mapa (F04); CI01; M03 S2; HC20 (A03-V03, pendente de reprodução no iOS); T09. |
 
 **Sugestão de U01:** refazer foto, editar informações e excluir imagem pelo histórico. Registrar como proposta, sem concluir que todas essas funções estavam ausentes ou falharam.
 
@@ -432,20 +440,22 @@ São casos isolados, sem evidência suficiente para afirmar recorrência.
 
 | Problema da inspeção | Na heurística? | Nas sessões? | Aprendizado |
 |---|---|---|---|
-| V07 — termos técnicos na câmera, como “Core ML pronto”. | Sim. | Não determinado em U01. | U01 acompanhou a orientação de distância em UT02, mas não foi anotada a interpretação desse termo técnico. |
-| V12 — passos adicionais após fotografar. | Sim; inicialmente identificado no código. | Não determinado em U01. | A captura em UT02 ocorreu sem ajuda, mas o efeito dos passos posteriores não foi documentado. |
-| V02 — identificação dos talhões no mapa. | Sim. | Não exposto. | U02 resolveu UT09 pela aba Relatórios, sem abrir o Mapa. Na versão web, os nomes dos talhões aparecem no mapa. |
-| V03/A03 — talhão sem inspeção com o mesmo rótulo “Sem ocorrência”. | Sim, como problema potencial identificado no código do aplicativo iOS, pendente de reprodução no aparelho (Entrega 13). | Sim, U02 (AU04). | O mesmo rótulo existe na versão web, e U02 não identificou o talhão sem inspeção. Problema apontado na inspeção e observado no teste. |
-| V05 — “detecções confirmadas” sugerir validação humana. | Sim. | Não determinado em U01. | A interpretação detalhada do resultado não foi anotada; não afirmar compreensão ou confusão sem evidência. |
-| V04/A02 — destaque inicial de “Confirmar”. | Sim. | Efeito não isolado. | U03 confirmou conforme o cenário; não é possível atribuir influência ao destaque. |
-| V05/A02 — avaliação da IA recolhida na validação e aberta no histórico. | Sim. | Não como dificuldade. | U03 decidiu sem abrir a avaliação; a dúvida foi sobre o autor do veredito. |
-| V06/A02 — símbolo de nova foto igual ao de pendência. | Sim. | Não. | U03 entendeu que o ponto aguardava nova foto; um caso não comprova suficiência do símbolo. |
-| V01/A02 — pedido concluído com ponto pendente. | Sim. | Não exposto diretamente. | U03 reconheceu o envio; o significado de “Concluído” para o ponto 4 não foi perguntado. |
-| V13/A02 — impossibilidade de desfazer o veredito. | Sim. | Não exposto. | U03 não precisou corrigir o veredito. |
+| HC01 (A01-V01; A03-V07) — termos técnicos na câmera, como “Core ML pronto”. | Sim. | Não determinado em U01. | U01 acompanhou a orientação de distância em UT02, mas não foi anotada a interpretação desse termo técnico. |
+| HC27 (A03-V12) — passos adicionais após fotografar. | Sim, com confirmação parcial (captura fora de talhão e código). | Não determinado em U01. | A captura em UT02 ocorreu sem ajuda, mas o efeito dos passos posteriores não foi documentado. |
+| HC19 (A03-V02) — identificação dos talhões no mapa em determinado zoom. | Sim, com confirmação parcial (condicional ao zoom). | Não exposto. | U02 resolveu UT09 pela aba Relatórios, sem abrir o Mapa. Na versão web, os nomes dos talhões aparecem no mapa. |
+| HC20 (A03-V03) — talhão sem inspeção com o mesmo rótulo “Sem ocorrência”. | Só como hipótese de código, pendente de reprodução no aplicativo iOS. | Sim, U02 (AU04), na versão web. | O mesmo rótulo existe na versão web, e U02 não identificou o talhão sem inspeção. A hipótese da inspeção foi observada no teste em outra versão do produto; isso não reproduz HC20 no iOS. |
+| HC22 (A03-V05) — “detecções confirmadas” sugerir validação humana. | Sim. | Não determinado em U01. | A interpretação detalhada do resultado não foi anotada; não afirmar compreensão ou confusão sem evidência. |
+| HC08 (A02-V04) — destaque inicial de “Confirmar”. | Sim. | Efeito não isolado. | U03 confirmou conforme o cenário; não é possível atribuir influência ao destaque. |
+| HC09 (A02-V05) — avaliação da IA recolhida na validação e aberta no histórico. | Sim. | Não como dificuldade. | U03 decidiu sem abrir a avaliação; a dúvida foi sobre o autor do veredito. |
+| HC10 (A02-V06) — símbolo de nova foto igual ao de pendência. | Sim. | Não. | U03 entendeu que o ponto aguardava nova foto; um caso não comprova suficiência do símbolo. |
+| HC05 (A02-V01) — pedido concluído com ponto pendente. | Sim. | Não exposto diretamente. | U03 reconheceu o envio; o significado de “Concluído” para o ponto 4 não foi perguntado. |
+| HC17 (A02-V13) — impossibilidade de desfazer o veredito. | Sim. | Não exposto. | U03 não precisou corrigir o veredito. |
 | AU01 — autor do veredito no histórico. | Não. | Sim, U03. | Reforça a necessidade de separar IA e validação humana. |
 | AU02 — pedidos semelhantes do mesmo gestor. | Não. | Sim, U03. | O pedido sem ligação mascarou a ambiguidade do protótipo. |
 | AU03 — dificuldade para localizar inspeção anterior. | Sem correspondência confirmada no registro disponível. | Sim, U01/UT01. | Revisar a descoberta do histórico e retestar, registrando precisamente a ajuda. |
-| AU04 — talhão sem inspeção não percebido. | Sim, como hipótese de código (V03/A03). | Sim, U02. | Confirma no teste um problema já apontado na inspeção. |
+| AU04 — talhão sem inspeção não percebido. | Como hipótese de código (HC20). | Sim, U02. | Observa no teste, na versão web, um problema que a inspeção só tinha inferido do código do iOS. |
+
+Os IDs HC são os da consolidação corrigida da Entrega 13 (seção 7.4), que separa problemas confirmados, parciais e pendentes de reprodução. HC36–HC40 vêm da inspeção do aplicativo feita por A02 em 22/11/2026, depois das sessões; não orientaram as tarefas e não entram nesta comparação como previsão.
 
 A comparação depende das versões e dos estados examinados. No caso de U01, a ausência de hash e gravação impede comprovar correspondência exata com a interface da inspeção. Uma resposta ou estado não registrado não é tratado como confirmação ou refutação do achado heurístico.
 
@@ -466,6 +476,8 @@ A comparação depende das versões e dos estados examinados. No caso de U01, a 
 - Os resultados sustentam revisar o acesso ao histórico, não uma aprovação geral do aplicativo.
 
 **U03 — Guilherme:**
+
+Os resultados valem para esta sessão com um participante proxy; não validam que o fluxo corresponda ao trabalho real de um agrônomo.
 
 - QA04: atingida; UT07 e UT05 concluídas sem ajuda.
 - QA05: atingida; citou pontos 2, 3 e 5, excluindo os demais.
@@ -501,12 +513,12 @@ U01 fotografou sem ajuda, mas precisou de apoio para localizar o histórico. A o
 
 U03 concluiu as tarefas e revelou duas ambiguidades não identificadas na inspeção: autoria do veredito e distinção entre pedidos.
 
-U02 resolveu todas as tarefas pela aba Relatórios, sem abrir o Mapa, e o único problema observado é o mesmo apontado na inspeção heurística (V03/A03).
+U02 resolveu todas as tarefas pela aba Relatórios, sem abrir o Mapa, e o único problema observado corresponde à hipótese de código da inspeção heurística (HC20).
 
 ### 4. Mudanças prioritárias
 
 - **Lucas:** revisar o acesso às inspeções no histórico e retestar UT01, registrando a intervenção exata, o tempo e a resposta pós-tarefa. Avaliar as sugestões de manutenção dos registros sem presumir ausência das funções.
-- **Guilherme:** explicitar o autor do veredito em FA03/FA05 e diferenciar os pedidos em FA01.
+- **Guilherme:** indicar quem validou e quando na lista de detecções anteriores de FA03, conferindo FA05, e mostrar as árvores de cada pedido em FA01; ligar os dois pedidos no protótipo e retestar UT06 (AU01) e UT07 (AU02).
 - **Pedro:** distinguir “não inspecionado no período” de “sem ocorrência” nos Relatórios e no Mapa e não calcular variação para talhão sem inspeção (AU04; M03 S2; F04/F06), a confirmar com novo teste.
 - **Equipe:** consolidar os resultados das três sessões e manter os mesmos identificadores nos artefatos.
 
@@ -520,7 +532,7 @@ Os intervalos de U01 são estimativas, não tempos medidos. A correção dos IDs
 
 Em U02, os tempos e as notas não foram registrados por tarefa, a resposta sobre a redução em UT08 não foi registrada e as perguntas pós-teste não foram aplicadas.
 
-Em U03, o protótipo tinha navegação limitada e uma pergunta pós-teste não foi aplicada.
+Em U03, o protótipo tinha navegação limitada; o pré-teste e uma pergunta pós-teste não foram aplicados; não houve observador nem gravação; os horários de início não foram registrados; e o participante era conhecido do moderador.
 
 Esses fatores impedem generalizações sobre profissionais de campo ou agrônomos e comparações estatísticas entre os três perfis.
 
@@ -532,16 +544,16 @@ Os achados envolvem descoberta de registros, autoria do veredito, distinção en
 
 **Achados consolidados:** cada achado foi observado uma única vez, em participante proxy, e por isso nenhum é classificado como recorrente. A gravidade 0–4 é usada como prioridade interna para os achados observados, considerando impacto, ajuda e risco de interpretação. Não equivale automaticamente à severidade de Nielsen nem fornece frequência de ocorrência.
 
-| ID | Achado | Participante e tarefa | Na inspeção heurística? | Gravidade | Prioridade | Responsável | Artefatos a alterar |
+| ID | Achado | Participante e tarefa | Na inspeção heurística? | Gravidade (prioridade da equipe, 0–4) | Prioridade | Responsável | Artefatos a alterar |
 |---|---|---|---|---:|---|---|---|
-| AU04 | Talhão sem inspeção no período não percebido; aparece como “Sem ocorrência”. | U02, UT09 | Sim, como hipótese de código (V03/A03) | 3 | 1 | Pedro | Relatórios (F06), Mapa (F04); M03 S2 |
+| AU04 | Talhão sem inspeção no período não percebido; aparece como “Sem ocorrência”. | U02, UT09 | Como hipótese de código (HC20) | 3 | 1 | Pedro | Relatórios (F06), Mapa (F04); M03 S2 |
 | AU01 | Histórico não mostra quem confirmou ou rejeitou a ocorrência. | U03, UT06 | Não | 3 | 2 | Guilherme | FA03, FA05; M01 S3/S5 |
 | AU03 | Dificuldade inicial para localizar a inspeção anterior. | U01, UT01 | Sem correspondência confirmada | 2 | 3 | Lucas | Histórico (F03); M02 |
 | AU02 | Dois pedidos do mesmo gestor não se distinguem com clareza. | U03, UT07 | Não | 2 | 4 | Guilherme | FA01; M01 S1 |
 
 **Justificativa da ordem:** AU04 e AU01 vêm primeiro porque podem levar a uma decisão de manejo errada: tratar como limpa uma área que ninguém inspecionou, ou tomar a indicação da IA por validação humana. Os dois tocam o princípio, definido nas Entregas 8 e 9, de separar o que o sistema indica do que uma pessoa confirmou. AU03 reduz a autonomia, mas a tarefa foi concluída com ajuda; a falta de registro da intervenção limita o diagnóstico. AU02 foi parcialmente mascarado pela navegação limitada do protótipo e precisa ser testado com os dois pedidos funcionando.
 
-**Inspeção e teste:** dos quatro achados, apenas AU04 tinha sido apontado na inspeção heurística; AU01, AU02 e AU03 só apareceram com os participantes. Por outro lado, vários problemas da inspeção não foram expostos nas tarefas (seção F). As duas avaliações se complementam: nenhuma delas substitui a outra.
+**Inspeção e teste:** dos quatro achados, apenas AU04 tinha correspondência na inspeção heurística, e só como hipótese de código pendente de reprodução no iOS (HC20); AU01, AU02 e AU03 só apareceram com os participantes. Por outro lado, vários problemas da inspeção não foram expostos nas tarefas (seção F). As duas avaliações se complementam: nenhuma delas substitui a outra.
 
 **O que os três testes não permitem concluir:** que trabalhadores de campo, gestores ou agrônomos reais teriam os mesmos resultados; que os problemas são frequentes; que a precisão do modelo é adequada; ou que o fluxo do agrônomo, testado só no protótipo, funciona no aplicativo.
 
@@ -558,7 +570,7 @@ Relações corrigidas neste relatório:
 - `UT09 → U02 → AU04 → R01 → distinguir talhão não inspecionado`.
 - `UT08/UT04 → U02 → R02 → manter comparação entre períodos e exportação`.
 
-A troca dos IDs de Lucas precisa ser propagada ao registro de sessão e à matriz de rastreabilidade. Esta revisão do relatório não altera automaticamente esses arquivos.
+A troca dos IDs de Lucas foi propagada à matriz de rastreabilidade em 22/11/2026 (R09, R10 e tempos de U01). Os instrumentos de P02 já usavam os IDs do planejamento, e não há registro de sessão de U01 separado no repositório.
 
 ## H. Evidências e pendências de execução
 
@@ -566,7 +578,7 @@ A troca dos IDs de Lucas precisa ser propagada ao registro de sessão e à matri
 
 A ausência de gravação de U01 não pode ser resolvida com a criação de um vídeo apresentado como registro da sessão original. Uma nova sessão gravada exige consentimento específico e identificação como nova coleta.
 
-**Evidências no repositório:** preservar instrumentos finais e registros anonimizados autorizados. Não afirmar que anotações, vídeo ou termos foram publicados sem confirmar sua presença.
+**Evidências no repositório:** `assets/14_testes/` guarda o fluxograma exportado, com sua fonte, e as telas da versão testada em que ocorreram AU01 e AU02 (U03). Os instrumentos e as sínteses anônimas das sessões estão em `instrumentos/`; as anotações originais de U03 ficam fora do repositório (Passo 3). Preservar os demais registros anonimizados autorizados. Não afirmar que anotações, vídeo ou termos foram publicados sem confirmar sua presença.
 
 **Para nova aplicação de P02:** finalizar o TCE, repetir o piloto com o roteiro completo, registrar pré-teste, pensar em voz alta, intervenções, tempos, satisfação e pós-teste. A documentação atual explicita os limites da sessão realizada; não comprova execução retroativa dessas etapas.
 
@@ -593,7 +605,7 @@ A ausência de gravação de U01 não pode ser resolvida com a criação de um v
 - [x] Resultados disponíveis separados por participante e tarefa, com ausências declaradas.
 - [x] Tempos de U01 mantidos como intervalos estimados, sem valores pontuais inventados.
 - [x] Achados disponíveis geraram recomendações e limitações de interpretação.
-- [ ] Atualização dos IDs de Lucas propagada aos instrumentos e à matriz de rastreabilidade.
+- [x] Atualização dos IDs de Lucas propagada aos instrumentos e à matriz de rastreabilidade.
 - [ ] Link obrigatório do vídeo no YouTube disponibilizado com autorização adequada.
 - [ ] Evidências autorizadas preservadas no repositório conforme o requisito da atividade.
 - [x] Síntese dos achados disponíveis apresentada.

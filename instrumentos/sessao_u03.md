@@ -1,17 +1,18 @@
 # Planilha da sessão U03 — P03, agrônomo (Guilherme Morais Escudeiro)
 
-> Síntese anônima da sessão do participante final A1, que aparece como U03 na Entrega 14. Sem nome nem contato do participante.
+> Síntese anônima da sessão do participante final A1, que aparece como U03 na Entrega 14. Sem nome nem contato do participante. As anotações originais ficam em arquivo pessoal do moderador, fora do repositório.
 
 **Participante:** A1 (U03)  
-**Perfil:** (x) substituto — estudante de engenharia, fora da equipe, sem experiência direta em agronomia; não viu o piloto nem as telas FA antes da sessão  
-**Pré-teste:** as seis perguntas do roteiro P03 não se aplicam ao perfil e ficaram sem resposta  
+**Perfil:** (x) substituto — estudante de engenharia, fora da equipe, sem experiência direta em agronomia; não viu o piloto nem as telas FA antes da sessão; conhecido do moderador  
+**Pré-teste:** não aplicado; o moderador considerou que as seis perguntas do roteiro P03 não se aplicavam ao perfil proxy  
 **Data:** 16/11/2026  
 **Moderador:** Guilherme Morais Escudeiro  
 **Observador:** nenhum  
 **Versão do protótipo:** Figma, telas FA01–FA07 (Entrega 11), versão de 16/11/2026 (última alteração do arquivo)  
 **Modalidade:** presencial  
 **Computador/navegador/condições:** computador com navegador, protótipo no modo de apresentação; sem interrupções registradas  
-**Consentimento obtido antes das tarefas:** sim, aceite verbal
+**Consentimento obtido antes das tarefas:** sim, aceite verbal após leitura do termo P03, sem assinatura  
+**Pensar em voz alta:** explicado no início e lembrado durante as tarefas; texto da instrução não anotado
 
 ## Observação das tarefas
 
@@ -61,5 +62,5 @@ Nenhuma dica de interação foi dada durante as tarefas.
 
 **Principais dificuldades observadas:** dúvida sobre quem decidiu “confirmado” e “rejeitado” no histórico (AU01); dois pedidos do mesmo gestor sem diferença clara em FA01 (AU02); tempo de UT06 acima da meta de 20 s.  
 **Comentários positivos ou sugestões:** barra lateral de detecções anteriores considerada óbvia; aviso verde de envio usado para saber que Jaime recebeu a orientação.  
-**Limitações do perfil, modalidade ou protótipo:** participante proxy sem experiência agronômica; sem observador; pergunta pós-teste 1 não aplicada; horários de início não registrados; limites do protótipo descritos na Entrega 14, Passo 2.  
+**Limitações do perfil, modalidade ou protótipo:** participante proxy sem experiência agronômica e conhecido do moderador; sem observador; pré-teste não aplicado; pergunta pós-teste 1 não aplicada; sem gravação; horários de início não registrados; limites do protótipo descritos na Entrega 14, Passo 2.  
 **Problemas a agrupar na análise de MU04–MU09 (por tela FA01–FA07):** FA01 — AU02; FA03/FA05 — AU01.

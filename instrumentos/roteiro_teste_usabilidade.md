@@ -24,7 +24,9 @@ Ler ao participante:
 
 > Obrigado por participar. Você realizará algumas tarefas no aplicativo CYF enquanto observamos se as informações e os caminhos de uso estão claros. Estamos avaliando o aplicativo, não seu desempenho. Você pode fazer perguntas, pular uma tarefa ou encerrar a participação a qualquer momento. Os dados exibidos sobre a fazenda são exemplos, e o resultado da análise é experimental. Hoje não estamos testando se o modelo identifica corretamente uma praga. Não faremos gravações; anotaremos apenas o necessário para analisar a interação, sem seu nome nos resultados. Antes de começar, você gostaria de esclarecer algo?
 
-Obter o consentimento **antes** do pré-teste e das tarefas. Não explicar onde ficam os comandos. Se for solicitado que a pessoa comente o que está pensando, esclarecer que isso é opcional; não exigir fala contínua.
+Obter o consentimento **antes** do pré-teste e das tarefas. Não explicar onde ficam os comandos.
+
+**Pensar em voz alta:** em U01 não houve instrução padronizada (Entrega 14). Em nova sessão, ler após a abertura o mesmo texto dos roteiros P01 e P03: “Enquanto usa o aplicativo, peço que pense em voz alta: diga o que está procurando, o que está entendendo e o que espera que aconteça. Se ficar em silêncio, posso lembrar você de continuar falando.” (Revisão de 22/11/2026; substitui a orientação anterior de tratar o comentário como opcional.)
 
 ## 3. Perfil pré-teste — P02
 
@@ -74,6 +76,7 @@ Aplicar UT01, UT02 e UT03 **nessa ordem**. Ler uma instrução por vez. As expli
 3. Preparar a planilha de observação com o código A__ e a modalidade da sessão.
 4. Separar as instruções de UT06, UT07 e UT05, sem mostrar objetivos ocultos ou critérios de sucesso.
 5. Disponibilizar o termo de consentimento. **Não haverá gravação de tela, áudio ou vídeo**; na sessão remota, a tela compartilhada é vista ao vivo e não é gravada.
+6. Testar o cronômetro e, na sessão remota, microfone e compartilhamento de tela; conferir que o protótipo abre em FA01 e que FA03 está acessível para UT06. (Incluído na revisão de 22/11/2026.)
 
 **Restauração entre sessões:** reiniciar o protótipo; o Figma não guarda as escolhas do participante.
 
@@ -82,6 +85,8 @@ Aplicar UT01, UT02 e UT03 **nessa ordem**. Ler uma instrução por vez. As expli
 > Obrigado por participar. Você realizará algumas tarefas em um protótipo de um painel para agrônomos, enquanto observamos se as informações e os caminhos de uso estão claros. Estamos avaliando o protótipo, não o seu conhecimento técnico. Todos os dados são fictícios: a fazenda, os pontos, a foto e o parecer. A foto é apenas uma figura ilustrativa, e o parecer que aparecer não será enviado a ninguém nem vale como recomendação agronômica. Algumas partes da tela não respondem ao clique, porque o protótipo não está completo; isso não é erro seu. Você pode fazer perguntas, pular uma tarefa ou encerrar a participação a qualquer momento. Não faremos gravações e não registraremos seu nome; pedimos que não cite clientes, propriedades ou colegas. Antes de começar, você gostaria de esclarecer algo?
 
 Obter o consentimento **antes** do pré-teste e das tarefas.
+
+**Pensar em voz alta:** em U03, o pedido foi feito oralmente, sem texto no roteiro. Em nova sessão, ler após a abertura o mesmo texto do roteiro P01: “Enquanto usa o protótipo, peço que pense em voz alta: diga o que está procurando, o que está entendendo e o que espera que aconteça. Se ficar em silêncio, posso lembrar você de continuar falando.” (Incluído na revisão de 22/11/2026.)
 
 **Perfil pré-teste — P03 (registrar apenas)**
 
@@ -93,7 +98,7 @@ Obter o consentimento **antes** do pré-teste e das tarefas.
 6. Usa mapas digitais no trabalho? ( ) sim ( ) não
 
 **Classificação do perfil:** ( ) agrônomo/técnico que orienta manejo em citros ( ) participante substituto  
-Se a pessoa for substituta, registrar essa limitação na análise; não apresentá-la como agrônomo consultor.
+Se a pessoa for substituta, registrar essa limitação na análise; não apresentá-la como agrônomo consultor. Aplicar as seis perguntas também a participante substituto, registrando cada resposta (inclusive “outra” ou “não”). Em U03, o pré-teste não foi aplicado. (Incluído na revisão de 22/11/2026.)
 
 **Tarefas — aplicar UT06, UT07 e UT05 nessa ordem**
 
@@ -101,7 +106,7 @@ Se a pessoa for substituta, registrar essa limitação na análise; não apresen
 |---|---|---|---|---|
 | UT06 | Navegar até FA03 (detecção do ponto 3) antes de ler a instrução. Iniciar o cronômetro quando a tela estiver visível. | “Esta é a suspeita registrada na árvore L3-27 de um pomar que você atende. Antes de decidir qualquer coisa, descubra se já apareceu suspeita do ácaro nesse mesmo local em outras vistorias, quando e o que foi concluído.” | Que “local” é o mesmo ponto da árvore L3-27. | Onde está o histórico, o nome do quadro “Detecções anteriores” ou o botão “Ver histórico deste ponto”. |
 | UT07 | Reiniciar o protótipo em FA01. | “Jaime, dono da Fazenda Boa Vista, pediu sua opinião sobre uma área onde o pessoal do campo encontrou suspeitas do ácaro. Vá até a suspeita da árvore L3-27 e deixe registrada a sua decisão. Considere que, na foto, você reconheceria lesões do ácaro.” | Que a foto é ilustrativa e que o julgamento já é dado pelo cenário. Se o participante clicar em outro ponto sem resposta, que só a árvore L3-27 pode ser aberta neste protótipo. | Qual pedido abrir, que deve clicar no ponto 3, o rótulo “Confirmar” ou se deve abrir a avaliação da IA. |
-| UT05 | Antes da instrução, dizer: “Considere que você já avaliou os outros locais dessa área. Controlar o ácaro significa aplicar um produto nas árvores afetadas; a orientação que você dá a Jaime indica onde aplicar, com qual produto, dose e período.” (Segunda frase incluída após o piloto.) | “Agora indique onde deve ser feito o controle, confira sua orientação e faça-a chegar a Jaime.” | Que a área e os campos já vêm preenchidos neste protótipo e que o participante pode apenas conferi-los. O que é o controle e que a orientação a Jaime é o registro final da decisão. | Que deve clicar em “Emitir parecer”, “Continuar” ou “Enviar ao gestor”, ou quais pontos entram na área. |
+| UT05 | Antes da instrução, dizer: “Considere que você já avaliou os outros locais dessa área. Controlar o ácaro significa aplicar um produto nas árvores afetadas; a orientação que você dá a Jaime indica onde aplicar, com qual produto, dose e período.” (Segunda frase incluída após o piloto. Em nova sessão, ler sem “com qual produto, dose e período”, que são campos de FA06 — revisão de 22/11/2026.) | “Agora indique onde deve ser feito o controle, confira sua orientação e faça-a chegar a Jaime.” | Que a área e os campos já vêm preenchidos neste protótipo e que o participante pode apenas conferi-los. O que é o controle e que a orientação a Jaime é o registro final da decisão. | Que deve clicar em “Emitir parecer”, “Continuar” ou “Enviar ao gestor”, ou quais pontos entram na área. |
 
 **Para o aplicador, sem leitura ao participante:**
 
@@ -121,6 +126,8 @@ A sessão é encerrada se UT07 e UT05 somarem 16 minutos, e a tarefa em andament
 **Pós-tarefa:** após UT06, UT07 e UT05, perguntar “Quão fácil foi realizar esta tarefa?” (1 = muito difícil; 7 = muito fácil) e “O que facilitou ou dificultou?”. Com um participante, a nota de cada tarefa é comparada individualmente com o limite de MU09 (≥ 5,5), sem média.
 
 **Encerramento — perguntas pós-teste (sem indicar a resposta esperada)**
+
+Aplicar todas as perguntas e registrar pergunta e resposta. Em U03, a pergunta 1 não foi aplicada. (Incluído na revisão de 22/11/2026.)
 
 1. “Qual a diferença entre um local que você já avaliou e um que ainda não avaliou?”
 2. “O que acontece com o local da árvore L5-11, para o qual foi pedida outra foto?”
@@ -182,7 +189,7 @@ Obter o consentimento **antes** do pré-teste.
 
 O observador anota horário de início e fim, conclusão, erros, hesitações observáveis, comentários, pedidos de ajuda e intervenções. Não classificar silêncio, por si só, como dificuldade.
 
-O aplicador não oferece dicas espontâneas. Pode oferecer uma dica somente após **dois pedidos de ajuda** ou aproximadamente **um minuto sem progresso**, registrando o momento e o conteúdo da intervenção. Problemas técnicos de câmera, modelo, GPS ou aparelho devem ser anotados separadamente das dificuldades de interação.
+Se o participante parar de falar, lembrar uma vez: “O que você está pensando agora?” (revisão de 22/11/2026, igual ao roteiro P01). O aplicador não oferece dicas espontâneas. Pode oferecer uma dica somente após **dois pedidos de ajuda** ou aproximadamente **um minuto sem progresso**, registrando o momento e o conteúdo da intervenção. Problemas técnicos de câmera, modelo, GPS ou aparelho devem ser anotados separadamente das dificuldades de interação.
 
 Se a captura ficar bloqueada por uma condição técnica ou pela amostra de teste, registrar o impedimento. Não declarar UT02 concluída nem atribuir um tempo de execução inventado. Após aproximadamente dois minutos sem possibilidade de prosseguir, seguir o procedimento de recuperação definido no piloto ou encerrar a tarefa como impedida.
 

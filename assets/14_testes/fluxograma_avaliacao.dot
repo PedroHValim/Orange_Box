@@ -1,0 +1,18 @@
+// Fonte editável do fluxograma da Entrega 14. Gerar o SVG com:
+// dot -Tsvg fluxograma_avaliacao.dot -o fluxograma_avaliacao.svg
+digraph avaliacao {
+  rankdir=TB;
+  node [shape=box, style="rounded,filled", fillcolor="#F3F4EF", color="#1F5F3A", fontname="Helvetica", fontsize=11, width=3.6];
+  edge [color="#1F5F3A"];
+
+  a [label="1. Planejamento\nobjetivos, versão avaliada, metas e tarefas (Entrega 12)"];
+  b [label="2. Recrutamento\num participante final por integrante, fora da equipe"];
+  c [label="3. Consentimento\nleitura do termo e aceite antes da coleta"];
+  d [label="4. Preparação\nroteiro, planilha, dados de exemplo e teste piloto"];
+  e [label="5. Execução das tarefas e observação\ninstrução sem indicar o caminho, tempo, erros e ajudas"];
+  f [label="6. Pós-teste\nfacilidade por tarefa e perguntas finais"];
+  g [label="7. Consolidação e análise\npor participante, por tarefa e achados AU"];
+  h [label="8. Recomendações\nartefatos a revisar e rastreabilidade"];
+
+  a -> b -> c -> d -> e -> f -> g -> h;
+}
